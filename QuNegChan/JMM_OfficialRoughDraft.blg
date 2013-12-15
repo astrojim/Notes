@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: JMM_OfficialRoughDraft.aux
+A level-1 auxiliary file: Section1.aux
+A level-1 auxiliary file: Section2.aux
+A level-1 auxiliary file: Section3.aux
+A level-1 auxiliary file: Section4.aux
+A level-1 auxiliary file: AppendixORD.aux
+The style file: abbrv.bst
+Database file #1: ThesisNotes_GMUFormat.bib
+You've used 103 entries,
+            2118 wiz_defined-function locations,
+            1148 strings with 17905 characters,
+and the built_in function-call counts, 31120 in all, are:
+= -- 3011
+> -- 1376
+< -- 7
++ -- 552
+- -- 440
+* -- 2099
+:= -- 5349
+add.period$ -- 329
+call.type$ -- 103
+change.case$ -- 487
+chr.to.int$ -- 0
+cite$ -- 103
+duplicate$ -- 1223
+empty$ -- 2560
+format.name$ -- 440
+if$ -- 6494
+int.to.chr$ -- 0
+int.to.str$ -- 103
+missing$ -- 137
+newline$ -- 518
+num.names$ -- 212
+pop$ -- 538
+preamble$ -- 1
+purify$ -- 424
+quote$ -- 0
+skip$ -- 773
+stack$ -- 0
+substring$ -- 1835
+swap$ -- 150
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 338
+warning$ -- 0
+while$ -- 283
+width$ -- 106
+write$ -- 1122

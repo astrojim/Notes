@@ -1,0 +1,558 @@
+\begin{thebibliography}{100}
+
+\bibitem{Aharonov2008}
+D.~Aharonov and M.~Ben-Or.
+\newblock Fault-tolerant quantum computation with constant error rate.
+\newblock {\em SIAM Journal on Computing}, 38(4):1207--1282, 2008.
+
+\bibitem{Kitaev1998}
+D.~Aharonov, A.~Kitaev, and N.~Nisan.
+\newblock Quantum circuits with mixed states.
+\newblock In {\em Proceedings of the thirtieth annual ACM symposium on Theory
+  of computing}, STOC '98, pages 20--30, New York, NY, USA, 1998. ACM.
+
+\bibitem{Alicki1995}
+R.~Alicki.
+\newblock Comment on ``reduced dynamics need not be completely positive''.
+\newblock {\em Phys. Rev. Lett.}, 75:3020--3020, Oct 1995.
+
+\bibitem{Alicki2001}
+R.~Alicki and M.~Fannes.
+\newblock {\em Quantum Dynamical Systems}.
+\newblock Oxford University Press, 2001.
+
+\bibitem{Alicki2007}
+R.~Alicki and K.~Lendi.
+\newblock Recent developments.
+\newblock In {\em Quantum Dynamical Semigroups and Applications}, volume 717 of
+  {\em Lecture Notes in Physics}, pages 109--121. Springer Berlin Heidelberg,
+  2007.
+
+\bibitem{Barnett2002}
+S.~Barnett and P.~Radmore.
+\newblock {\em Methods in Theoretical Quantum Optics}.
+\newblock Oxford Series in Optical and Imaging Sciences. Oxford University
+  Press, Incorporated, 2002.
+
+\bibitem{Shabani2009}
+A.~S. Barzegar.
+\newblock {\em Open Quantum Systems and Error Correction}.
+\newblock PhD thesis, University of Southern California, 2009.
+
+\bibitem{Aroya2009}
+A.~Ben-Aroya and A.~Ta-Shma.
+\newblock On the complexity of approximating the diamond norm.
+\newblock {\em arXiv pre-print (quant-ph)}, arXiv:0902.3397, 2009.
+
+\bibitem{Benatti1996}
+F.~Benatti and R.~Floreanini.
+\newblock Complete positivity and the k-k system.
+\newblock {\em Physics Letters B}, 389(1):100 -- 106, 1996.
+
+\bibitem{Benatti1997}
+F.~Benatti and R.~Floreanini.
+\newblock Completely positive dynamical maps and the neutral kaon system.
+\newblock {\em Nuclear Physics B}, 488(1â€“2):335 -- 363, 1997.
+
+\bibitem{Benatti1997a}
+F.~Benatti and R.~Floreanini.
+\newblock Testing complete positivity.
+\newblock {\em Modern Physics Letters A}, 12(20):1465--1472, 1997.
+
+\bibitem{Benatti1998}
+F.~Benatti and R.~Floreanini.
+\newblock Completely positive dynamics of correlated neutral kaons.
+\newblock {\em Nuclear Physics B}, 511(3):550 -- 576, 1998.
+
+\bibitem{Benatti1999}
+F.~Benatti and R.~Floreanini.
+\newblock Complete positivity and neutron interferometry.
+\newblock {\em Physics Letters B}, 451(3â€“4):422 -- 429, 1999.
+
+\bibitem{Benatti2005}
+F.~Benatti and R.~Floreanini.
+\newblock Open quantum dynamics: Complete positivity and entanglement.
+\newblock {\em International Journal of Modern Physics B}, 19(19):3063--3139,
+  2005.
+
+\bibitem{Bloch1946}
+F.~Bloch.
+\newblock Nuclear induction.
+\newblock {\em Phys. Rev.}, 70:460--474, Oct 1946.
+
+\bibitem{blum1996}
+K.~Blum.
+\newblock {\em Density Matrix Theory and Applications}.
+\newblock Physics of Atoms and Molecules. Springer, 1996.
+
+\bibitem{Boulant2004}
+N.~Boulant, J.~Emerson, T.~F. Havel, D.~G. Cory, and S.~Furuta.
+\newblock Incoherent noise and quantum information processing.
+\newblock {\em The Journal of Chemical Physics}, 121(7):2955--2961, 2004.
+
+\bibitem{Breuer2007}
+H.~Breuer and F.~Petruccione.
+\newblock {\em The Theory of Open Quantum Systems}.
+\newblock Oxford University Press, 2007.
+
+\bibitem{Cesar2013}
+A.~Brodutch, A.~Datta, K.~Modi, A.~Rivas, and C.~A. Rodriguez-Rosario.
+\newblock Vanishing quantum discord is not necessary for completely positive
+  maps.
+\newblock {\em Phys. Rev. A}, 87:042301, Apr 2013.
+
+\bibitem{Skinner1987}
+J.~Budimir and J.~Skinner.
+\newblock On the relationship between t1 and t2 for stochastic relaxation
+  models.
+\newblock {\em Journal of Statistical Physics}, 49:1029--1042, 1987.
+
+\bibitem{Busch1990}
+P.~Busch and P.~Lahti.
+\newblock Completely positive mappings in quantum dynamics and measurement
+  theory.
+\newblock {\em Foundations of Physics}, 20(12):1429--1439, 1990.
+
+\bibitem{Byron1992}
+F.~Byron and R.~Fuller.
+\newblock {\em Mathematics of Classical and Quantum Physics}.
+\newblock Dover Books on Physics Series. Dover Publ., 1992.
+
+\bibitem{Carlen2010}
+E.~Carlen.
+\newblock Trace inequalities and quantum entropy: an introductory course.
+\newblock In D.~Ueltschi, editor, {\em Entropy and the Quantum}, Contemporary
+  mathematics. American Mathematical Society, 2010.
+
+\bibitem{Carteret2008}
+H.~A. Carteret, D.~R. Terno, and K.~Zyczkowski.
+\newblock Dynamics beyond completely positive maps: Some properties and
+  applications.
+\newblock {\em Phys. Rev. A}, 77:042113, Apr 2008.
+
+\bibitem{Cernoch2008}
+A.~Cernoch, J.~Soubusta, L.~Bartuskov\'a, M.~Dusek, and J.~Fiur\'asek.
+\newblock Experimental realization of linear-optical partial swap gates.
+\newblock {\em Phys. Rev. Lett.}, 100:180501, May 2008.
+
+\bibitem{Choi1972}
+M.-D. Choi.
+\newblock Positive linear maps on c*-algebras.
+\newblock {\em Canadian Journal of Mathematics}, 24(3):520 -- 529, 1972.
+
+\bibitem{Choi1975}
+M.-D. Choi.
+\newblock Completely positive linear maps on complex matrices.
+\newblock {\em Linear Algebra and its Applications}, 10(3):285 -- 290, 1975.
+
+\bibitem{Cohen1992}
+C.~Cohen-Tannoudji, B.~Diu, and F.~Laloe.
+\newblock {\em Quantum Mechanics}.
+\newblock Wiley, 1992.
+
+\bibitem{Cohen1997}
+C.~Cohen-Tannoudji, J.~Dupont-Roc, and G.~Grynberg.
+\newblock {\em Photons and atoms: introduction to quantum electrodynamics}.
+\newblock Wiley professional paperback series. Wiley, 1997.
+
+\bibitem{Eidelman2004}
+Y.~Eidelman, V.~Milman, and A.~Tsolomitis.
+\newblock {\em Functional Analysis: An Introduction}.
+\newblock Graduate studies in mathematics, v. 66. American Math. Soc., 2004.
+
+\bibitem{Engel1999}
+K.~Engel and R.~Nagel.
+\newblock {\em One-Parameter Semigroups for Linear Evolution Equations}.
+\newblock Graduate Texts in Mathematics. Springer, 1999.
+
+\bibitem{Faisal1987}
+F.~Faisal.
+\newblock {\em Theory of Multiphoton Processes}.
+\newblock Advances in the Study of Communication and Affect. Springer, 1987.
+
+\bibitem{Ferraro2010}
+A.~Ferraro, L.~Aolita, D.~Cavalcanti, F.~M. Cucchietti, and A.~Acin.
+\newblock Almost all quantum states have nonclassical correlations.
+\newblock {\em Phys. Rev. A}, 81:052318, May 2010.
+
+\bibitem{Feynman1963}
+R.~Feynman, R.~Leighton, and M.~Sands.
+\newblock {\em Mainly mechanics, radiation, and heat}.
+\newblock The Feynman Lectures on Physics. Addison-Wesley, 1963.
+
+\bibitem{Fleming2012}
+C.~Fleming and B.~Hu.
+\newblock Non-markovian dynamics of open quantum systems: Stochastic equations
+  and their perturbative solutions.
+\newblock {\em Annals of Physics}, 327(4):1238 -- 1276, 2012.
+
+\bibitem{Fraleigh2003}
+J.~Fraleigh and V.~Katz.
+\newblock {\em A first course in abstract algebra}.
+\newblock Addison-Wesley world student series. Addison-Wesley, 2003.
+
+\bibitem{Frank2006}
+J.~Frank.
+\newblock {\em Electron Tomography: Methods for Three-Dimensional Visualization
+  of Structures in the Cell}.
+\newblock Springer, 2006.
+
+\bibitem{Sudarshan1978}
+V.~Gorini, A.~Frigerio, M.~Verri, A.~Kossakowski, and E.~Sudarshan.
+\newblock Properties of quantum markovian master equations.
+\newblock {\em Reports on Mathematical Physics}, 13(2):149 -- 173, 1978.
+
+\bibitem{Sudarshan1976}
+V.~Gorini, A.~Kossakowski, and E.~C.~G. Sudarshan.
+\newblock Completely positive dynamical semigroups of n-level systems.
+\newblock {\em Journal of Mathematical Physics}, 17(5):821--825, 1976.
+
+\bibitem{Havel2003}
+T.~F. Havel.
+\newblock Robust procedures for converting among lindblad, kraus and matrix
+  representations of quantum dynamical semigroups.
+\newblock {\em Journal of Mathematical Physics}, 44(2):534--557, 2003.
+
+\bibitem{Hayashi2003}
+H.~Hayashi, G.~Kimura, and Y.~Ota.
+\newblock Kraus representation in the presence of initial correlations.
+\newblock {\em Phys. Rev. A}, 67:062109, Jun 2003.
+
+\bibitem{Hofmann2002}
+H.~F. Hofmann and S.~Takeuchi.
+\newblock Quantum phase gate for photonic qubits using only beam splitters and
+  postselection.
+\newblock {\em Phys. Rev. A}, 66:024308, Aug 2002.
+
+\bibitem{Horn1990}
+R.~Horn and C.~Johnson.
+\newblock {\em Matrix Analysis}.
+\newblock Cambridge University Press, 1990.
+
+\bibitem{Howard2006}
+M.~Howard, J.~Twamley, C.~Wittmann, T.~Gaebel, F.~Jelezko, and J.~Wrachtrup.
+\newblock Quantum process tomography and linblad estimation of a solid-state
+  qubit.
+\newblock {\em New Journal of Physics}, 8(3):33, 2006.
+
+\bibitem{Paris2004}
+Z.~Hradil, J.~Rehacek, J.~Fiurasek, and M.~Jezek.
+\newblock 3 maximum-likelihood methods in quantum mechanics.
+\newblock In M.~Paris and J.~Rehacek, editors, {\em Quantum state estimation},
+  Lecture Notes in Physics, pages 59--112. Springer, 2004.
+
+\bibitem{Jacobs2013}
+K.~Jacobs.
+\newblock {\em An Introduction to Quantum Measurement Theory}.
+\newblock (in preparation) \url{http://www.quantum.umb.edu/Jacobs/books.html},
+  2013.
+
+\bibitem{Jordan2004}
+T.~F. Jordan, A.~Shaji, and E.~C.~G. Sudarshan.
+\newblock Dynamics of initially entangled open quantum systems.
+\newblock {\em Phys. Rev. A}, 70:052110, Nov 2004.
+
+\bibitem{Kieling2012}
+K.~Kieling, J.~L. O'Brien, and J.~Eisert.
+\newblock On photonic controlled phase gates.
+\newblock {\em New Journal of Physics}, 12(1):013003, 2010.
+
+\bibitem{Kiesel2005}
+N.~Kiesel, C.~Schmid, U.~Weber, R.~Ursin, and H.~Weinfurter.
+\newblock Linear optics controlled-phase gate made simple.
+\newblock {\em Phys. Rev. Lett.}, 95:210505, Nov 2005.
+
+\bibitem{Kok2010}
+P.~Kok and B.~Lovett.
+\newblock {\em Introduction to Optical Quantum Information Processing}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{Kraus1983}
+K.~Kraus.
+\newblock {\em States, Effects, and Operations, Vol. 190 of Lecture Notes in
+  Physics}.
+\newblock Springer-Verlag, Berlin, 1983.
+
+\bibitem{Sudarshen2007}
+A.-m. Kuah, K.~Modi, C.~A. Rodriguez-Rosario, and E.~C.~G. Sudarshan.
+\newblock How state preparation can affect a quantum experiment: Quantum
+  process tomography for open systems.
+\newblock {\em Phys. Rev. A}, 76:042113, Oct 2007.
+
+\bibitem{Skinner1991}
+B.~B. Laird, J.~Budimir, and J.~L. Skinner.
+\newblock Quantum-mechanical derivation of the bloch equations: Beyond the
+  weak-coupling limit.
+\newblock {\em The Journal of Chemical Physics}, 94(6):4391--4404, 1991.
+
+\bibitem{Landau1977}
+L.~Landau and E.~Lifshits.
+\newblock {\em Quantum Mechanics: Non-Relativistic Theory}.
+\newblock Teoreticheskaiï¸ aï¸¡ fizika (Izd. 3-e) (Landau, L. D,
+  1908-1968). Pergamon Press, 1977.
+
+\bibitem{Leung2003}
+D.~W. Leung.
+\newblock Choi's proof as a recipe for quantum process tomography.
+\newblock {\em Journal of Mathematical Physics}, 44(2):528--533, 2003.
+
+\bibitem{Lo1994}
+T.~Lo and P.~Inderwiesen.
+\newblock {\em Fundamentals of Seismic Tomography}.
+\newblock Geophysical Monograph Series, No 6. American Geophysical Union, 1994.
+
+\bibitem{Loudon2000}
+R.~Loudon.
+\newblock {\em The Quantum Theory of Light}.
+\newblock OUP Oxford, 2000.
+
+\bibitem{Luhmann1995}
+N.~Luhmann.
+\newblock {\em Social Systems}.
+\newblock Stanford University Press, 1995.
+
+\bibitem{Mandel1995}
+L.~Mandel and E.~Wolf.
+\newblock {\em Optical Coherence and Quantum Optics}.
+\newblock Cambridge University Press, 1995.
+
+\bibitem{Masillo2011}
+F.~Masillo, G.~Scolarici, and L.~Solombrino.
+\newblock Some remarks on assignment maps.
+\newblock {\em Journal of Mathematical Physics}, 52(1):012101, 2011.
+
+\bibitem{Merzbacher1998}
+E.~Merzbacher.
+\newblock {\em Quantum Mechanics}.
+\newblock Wiley, 1998.
+
+\bibitem{Messiah1999}
+A.~Messiah.
+\newblock {\em Quantum Mechanics:}.
+\newblock Dover books on physics. Dover, 1999.
+
+\bibitem{Mikio2008}
+T.~Mikio~Nakahara and T.~{\=O}mi.
+\newblock {\em Quantum Computing: From Linear Algebra To Physical
+  Realizations}.
+\newblock Taylor \& Francis Group, 2008.
+
+\bibitem{Nielsen2010}
+M.~Nielsen and I.~Chuang.
+\newblock {\em Quantum Computation and Quantum Information: 10th Anniversary
+  Edition}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{Ollivier2001}
+H.~Ollivier and W.~H. Zurek.
+\newblock Quantum discord: a measure of the quantumness of correlations.
+\newblock {\em Physical review letters}, 88(1):17901, 2001.
+
+\bibitem{Orszag2008}
+M.~Orszag.
+\newblock {\em Quantum Optics: Including Noise Reduction, Trapped Ions, Quantum
+  Trajectories, and Decoherence}.
+\newblock Springer-Verlag Berlin Heidelberg 1997, 2008.
+
+\bibitem{Paris2012}
+M.~G. Paris.
+\newblock The modern tools of quantum mechanics.
+\newblock {\em The European Physical Journal-Special Topics}, 203(1):61--86,
+  2012.
+
+\bibitem{Pechukas1994}
+P.~Pechukas.
+\newblock Reduced dynamics need not be completely positive.
+\newblock {\em Phys. Rev. Lett.}, 73:1060--1062, Aug 1994.
+
+\bibitem{Pechukas1995}
+P.~Pechukas.
+\newblock Pechukas replies:.
+\newblock {\em Phys. Rev. Lett.}, 75:3021--3021, Oct 1995.
+
+\bibitem{Preskill2004}
+J.~Preskill.
+\newblock {\em Quantum Computation Lecture Notes}.
+\newblock online notes:
+  \url{http://www.theory.caltech.edu/~preskill/ph219/index.html#lecture}, 2004.
+
+\bibitem{Ralph2010}
+T.~C. Ralph and G.~J. Pryde.
+\newblock Optical quantum computation.
+\newblock In E.~Wolf, editor, {\em Progress in Optics}, volume~54 of {\em
+  Progress in Optics}, pages 209 -- 269. Elsevier, 2010.
+
+\bibitem{Rodriguez2008}
+C.~A. Rodriguez-Rosario.
+\newblock {\em The Theory of Non-Markovian Open Quantum Systems}.
+\newblock PhD thesis, University of Texas, 2008.
+
+\bibitem{Rodriguez2010}
+C.~A. Rodriguez-Rosario, K.~Modi, and A.~Aspuru-Guzik.
+\newblock Linear assignment maps for correlated system-environment states.
+\newblock {\em Phys. Rev. A}, 81:012313, Jan 2010.
+
+\bibitem{Rodriguez2008A}
+C.~A. Rodriguez-Rosario, K.~Modi, A.~Kuah, A.~Shaji, and E.~C.~G. Sudarshan.
+\newblock Completely positive maps and classical correlations.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  41(20):205301, 2008.
+
+\bibitem{Royer1996}
+A.~Royer.
+\newblock Reduced dynamics with initial correlations, and time-dependent
+  environment and hamiltonians.
+\newblock {\em Phys. Rev. Lett.}, 77:3272--3275, Oct 1996.
+
+\bibitem{Simon2013}
+K.~K. Sabapathy, J.~S. Ivan, and S.~G. nad R.~Simon.
+\newblock Quantum discord plays no distinguished role in characterization of
+  complete positivity: Robustness of the traditional scheme.
+\newblock {\em arXiv preprint arXiv:1304.4857}, 2013.
+
+\bibitem{Sakurai2010}
+J.~Sakurai and J.~Napolitano.
+\newblock {\em Modern Quantum Mechanics}.
+\newblock Addison-Wesley, 2010.
+
+\bibitem{Schirmer2004}
+S.~G. Schirmer and A.~I. Solomon.
+\newblock Constraints on relaxation rates for $n$-level quantum systems.
+\newblock {\em Phys. Rev. A}, 70:022107, Aug 2004.
+
+\bibitem{Schwabl2007}
+F.~Schwabl.
+\newblock {\em Quantum Mechanics}.
+\newblock Springer, 2007.
+
+\bibitem{Sewell2002}
+G.~Sewell.
+\newblock {\em Quantum Mechanics and Its Emergent Macrophysics}.
+\newblock Princeton University Press, 2002.
+
+\bibitem{Lidar2009}
+A.~Shabani and D.~A. Lidar.
+\newblock Maps for general open quantum systems and a theory of linear quantum
+  error correction.
+\newblock {\em Phys. Rev. A}, 80:012309, Jul 2009.
+
+\bibitem{Lidar2009a}
+A.~Shabani and D.~A. Lidar.
+\newblock Vanishing quantum discord is necessary and sufficient for completely
+  positive maps.
+\newblock {\em Physical review letters}, 102(10):100402, 2009.
+
+\bibitem{Shaji2005}
+A.~Shaji.
+\newblock {\em Dynamics of initially entangled open quantum systems}.
+\newblock PhD thesis, University of Texas, 2005.
+
+\bibitem{Sudarshan2005}
+A.~Shaji and E.~Sudarshan.
+\newblock Who's afraid of not completely positive maps?
+\newblock {\em Physics Letters A}, 341(1â€“4):48 -- 54, 2005.
+
+\bibitem{Gisin2001}
+C.~Simon, V.~Bu\ifmmode~\check{z}\else \v{z}\fi{}ek, and N.~Gisin.
+\newblock No-signaling condition and quantum dynamics.
+\newblock {\em Phys. Rev. Lett.}, 87:170405, Oct 2001.
+
+\bibitem{Slichter1996}
+C.~Slichter.
+\newblock {\em Principles of Magnetic Resonance}.
+\newblock Springer Series in Solid-State Sciences. Springer, 1996.
+
+\bibitem{Buzek2001}
+P.~Stelmachovic and V.~Buzek.
+\newblock Dynamics of open quantum systems initially entangled with
+  environment: Beyond the kraus representation.
+\newblock {\em Phys. Rev. A}, 64:062106, Nov 2001.
+
+\bibitem{Stinespring1955}
+W.~F. Stinespring.
+\newblock Positive functions on c*-algebras.
+\newblock {\em Proceedings of the American Mathematical Society}, 6(2):pp.
+  211--216, 1955.
+
+\bibitem{Sudarshan1961}
+E.~C.~G. Sudarshan, P.~M. Mathews, and J.~Rau.
+\newblock Stochastic dynamics of quantum-mechanical systems.
+\newblock {\em Phys. Rev.}, 121:920--924, Feb 1961.
+
+\bibitem{Suter1997}
+D.~Suter.
+\newblock {\em The Physics of Laser-Atom Interactions}.
+\newblock Cambridge Studies in Modern Optics. Cambridge University Press, 1997.
+
+\bibitem{Taylor1997}
+J.~Taylor.
+\newblock {\em An Introduction to Error Analysis: The Study of Uncertainties in
+  Physical Measurements}.
+\newblock Physics - chemistry - engineering. University Science Books, 1997.
+
+\bibitem{Terno2006}
+D.~Terno.
+\newblock Non completely positive maps in physics.
+\newblock {\em Conference on Quantum Information and Quantum Control II}, 2006.
+
+\bibitem{Devi2011}
+A.~R. Usha~Devi, A.~K. Rajagopal, and Sudha.
+\newblock Open-system quantum dynamics with correlated initial states, not
+  completely positive maps, and non-markovianity.
+\newblock {\em Phys. Rev. A}, 83:022109, Feb 2011.
+
+\bibitem{Lendi2000}
+A.~J. van Wonderen and K.~Lendi.
+\newblock Reduced dynamics for entangled initial state of the full density
+  operator.
+\newblock {\em Journal of Physics A: Mathematical and General}, 33(32):5757,
+  2000.
+
+\bibitem{vonNeumann1947}
+J.~von Neumann.
+\newblock {\em The Mathematical Foundations of Quantum Mechanics}.
+\newblock Felix Alcan, Paris, France, 1947.
+
+\bibitem{Cory2004}
+Y.~S. Weinstein, T.~F. Havel, J.~Emerson, N.~Boulant, M.~Saraceno, S.~Lloyd,
+  and D.~G. Cory.
+\newblock Quantum process tomography of the quantum fourier transform.
+\newblock {\em The Journal of Chemical Physics}, 121(13):6117--6133, 2004.
+
+\bibitem{Wilde2013}
+M.~Wilde.
+\newblock {\em Quantum Information Theory}.
+\newblock Cambridge University Press, 2013.
+
+\bibitem{Wood2009}
+C.~Wood.
+\newblock Non-completely positive maps: properties and applications.
+\newblock {\em arXiv pre-print (quant-ph)}, arXiv:0911.3199, 2009.
+
+\bibitem{Yuen2005}
+H.~P. Yuen.
+\newblock Uncertainty principle and the standard quantum limits.
+\newblock {\em arXiv pre-print (quant-ph)}, arXiv:quant-ph/0510069, 2005.
+
+\bibitem{Zettili2009}
+N.~Zettili.
+\newblock {\em Quantum Mechanics}.
+\newblock Wiley, 2009.
+
+\bibitem{Zurek2002}
+W.~H. Zurek.
+\newblock Einselection and decoherence from an information theory perspective.
+\newblock {\em Quantum Communication, Computing, and Measurement 3}, pages
+  115--125, 2002.
+
+\bibitem{Zurek2003}
+W.~H. Zurek.
+\newblock Decoherence, einselection, and the quantum origins of the classical.
+\newblock {\em Rev. Mod. Phys.}, 75:715--775, May 2003.
+
+\bibitem{Zyczkowski2004}
+K.~Zyczkowski and I.~Bengtsson.
+\newblock On duality between quantum maps and quantum states.
+\newblock {\em Open systems \& information dynamics}, 11(01):3--42, 2004.
+
+\end{thebibliography}

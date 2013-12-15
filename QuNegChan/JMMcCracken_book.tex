@@ -1,0 +1,57 @@
+
+% please see read.me for details
+
+\documentclass{book}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{xcolor,colortbl} 
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{morgan}
+\usepackage[square,comma,sort]{natbib}
+\usepackage[raggedsec]{morplay}
+\usepackage[draft]{ttdefs}
+
+\usetikzlibrary{backgrounds,fit,decorations.pathreplacing,calc,,shadows}
+
+\newcommand{\bra}[1]{\ensuremath{\left\langle#1\right|}}
+\newcommand{\ket}[1]{\ensuremath{\left|#1\right\rangle}}
+\newcommand{\braket}[2]{\langle #1|#2\rangle}
+\newcommand{\ketbra}[2]{|#1\rangle\langle#2|}
+\newcommand{\mean}[1]{\langle #1\rangle}
+\newcommand{\trace}{\operatorname{Tr}}
+\newcommand{\Hcol}{\operatorname{col}}
+\newcommand{\Hmat}{\operatorname{mat}}
+
+\setcounter{secnumdepth}{2}
+\makeindex                      % produce the index in book.idx
+
+\begin{document}
+
+ \frontmatter
+      \input{fm}                % sample front matter
+
+\mainmatter                     % sample chapters
+    \input{Section1}
+    \input{Section2}
+    \input{Section3}
+    \input{Section4}
+    \input{AppendixORD}
+
+    %\input{biblio}              % bibliography
+    \bibliographystyle{abbrv}
+	 \bibliography{ThesisNotes_GMUFormat}
+
+
+ \backmatter                    % back matter
+    \input{bio}                 % author(s)'s short bio(s)
+%   \input{book.ind}            % if the author has Index
+
+\end{document}
