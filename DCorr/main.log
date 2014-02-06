@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.6)  29 JAN 2014 11:50
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.6)  6 FEB 2014 11:57
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -250,20 +250,125 @@ LaTeX Warning: Citation `mainref' on page 1 undefined on input line 23.
 
 LaTeX Warning: Citation `suppref' on page 1 undefined on input line 23.
 
+
+LaTeX Warning: Citation `something' on page 1 undefined on input line 23.
+
+
+LaTeX Warning: Citation `otherSugref' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `mainref' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `mainref' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `mainref' on page 1 undefined on input line 34.
+
+
+LaTeX Warning: Reference `sec:appA' on page 1 undefined on input line 34.
+
+
+LaTeX Warning: Citation `A. L. LLOYD 1995' on page 1 undefined on input line 46
+.
+
+
+LaTeX Warning: Reference `fig:' on page 1 undefined on input line 48.
+
 [1
 
-] [2] (./main.aux)
+]
+
+LaTeX Warning: Citation `mainref' on page 2 undefined on input line 50.
+
+
+LaTeX Warning: Reference `fig:' on page 2 undefined on input line 50.
+
+
+LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 53.
+
+
+LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 53.
+
+
+LaTeX Warning: Reference `sec:appA' on page 2 undefined on input line 58.
+
+
+LaTeX Warning: Reference `eqn:2pop' on page 2 undefined on input line 58.
+
+
+LaTeX Warning: Reference `fig:' on page 2 undefined on input line 58.
+
+
+LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 61.
+
+
+LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 61.
+
+
+LaTeX Warning: Citation `DOI 10.1007/s11460-005-0023-7' on page 2 undefined on 
+input line 64.
+
+
+LaTeX Warning: Citation `STATE SPACE RECONSTRUCTION FROM MULTIPLE TIME SERIES' 
+on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `State Space Reconstruction for Multivariate Time Serie
+s Prediction' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `10.1016/j.physd.2004.03.006(links in email)' on page 2
+ undefined on input line 64.
+
+
+LaTeX Warning: Citation `suppmat' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `suppref' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `10.1016/j.physd.2004.03.006' on page 2 undefined on in
+put line 70.
+
+
+LaTeX Warning: Citation `embedding_dimension.pdf' on page 2 undefined on input 
+line 72.
+
+
+LaTeX Warning: Reference `sec:appB' on page 2 undefined on input line 72.
+
+
+LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 75.
+
+[2]
+
+LaTeX Warning: Reference `sec:2Pop' on page 3 undefined on input line 86.
+
+
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 86.
+
+
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 91.
+
+
+LaTeX Warning: Reference `sec:2Pop' on page 3 undefined on input line 91.
+
+[3] [4] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3348 strings out of 495062
- 47925 string characters out of 1182645
- 130423 words of memory out of 3000000
- 6512 multiletter control sequences out of 15000+50000
- 11824 words of font info for 43 fonts, out of 3000000 for 9000
+ 3382 strings out of 495062
+ 48476 string characters out of 1182645
+ 132423 words of memory out of 3000000
+ 6538 multiletter control sequences out of 15000+50000
+ 14341 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 36i,6n,38p,1094b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,38p,1092b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (2 pages, 9632 bytes).
+Output written on main.dvi (4 pages, 23452 bytes).
