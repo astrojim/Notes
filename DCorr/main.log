@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.6)  6 FEB 2014 11:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.6)  5 MAR 2014 19:27
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -179,7 +179,23 @@ Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
 Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
 \c@subfigure=\count105
 \c@subtable=\count106
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -194,8 +210,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-
-(/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
+ (/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 )
 *geometry auto-detecting driver*
@@ -266,11 +281,12 @@ LaTeX Warning: Citation `mainref' on page 1 undefined on input line 25.
 LaTeX Warning: Citation `mainref' on page 1 undefined on input line 34.
 
 
-LaTeX Warning: Reference `sec:appA' on page 1 undefined on input line 34.
-
-
 LaTeX Warning: Citation `A. L. LLOYD 1995' on page 1 undefined on input line 46
 .
+
+
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 1 undefined on input line 48.
@@ -282,28 +298,18 @@ LaTeX Warning: Reference `fig:' on page 1 undefined on input line 48.
 LaTeX Warning: Citation `mainref' on page 2 undefined on input line 50.
 
 
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
+
+
 LaTeX Warning: Reference `fig:' on page 2 undefined on input line 50.
 
 
-LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 53.
-
-
-LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 53.
-
-
-LaTeX Warning: Reference `sec:appA' on page 2 undefined on input line 58.
-
-
-LaTeX Warning: Reference `eqn:2pop' on page 2 undefined on input line 58.
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 2 undefined on input line 58.
-
-
-LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 61.
-
-
-LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 61.
 
 
 LaTeX Warning: Citation `DOI 10.1007/s11460-005-0023-7' on page 2 undefined on 
@@ -335,40 +341,75 @@ put line 70.
 LaTeX Warning: Citation `embedding_dimension.pdf' on page 2 undefined on input 
 line 72.
 
-
-LaTeX Warning: Reference `sec:appB' on page 2 undefined on input line 72.
-
-
-LaTeX Warning: Reference `eqn:delta' on page 2 undefined on input line 75.
-
 [2]
 
-LaTeX Warning: Reference `sec:2Pop' on page 3 undefined on input line 86.
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 3 undefined on input line 86.
 
 
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
+
+
 LaTeX Warning: Reference `fig:' on page 3 undefined on input line 91.
 
 
-LaTeX Warning: Reference `sec:2Pop' on page 3 undefined on input line 91.
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
 
-[3] [4] (./main.aux)
+
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 111.
+
+
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 116.
+
+
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 119.
+
+
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 119.
+
+
+Package caption Warning: \label before \caption on input line 129.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 127.
+
+[3]
+
+LaTeX Warning: Citation `suppref' on page 4 undefined on input line 169.
+
+[4] [5] [6] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3382 strings out of 495062
- 48476 string characters out of 1182645
- 132423 words of memory out of 3000000
- 6538 multiletter control sequences out of 15000+50000
+ 3386 strings out of 495062
+ 48512 string characters out of 1182645
+ 133423 words of memory out of 3000000
+ 6542 multiletter control sequences out of 15000+50000
  14341 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  36i,8n,38p,1092b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (4 pages, 23452 bytes).
+Output written on main.dvi (6 pages, 32060 bytes).
