@@ -1,0 +1,75 @@
+\begin{thebibliography}{10}
+
+\bibitem{Granger1980}
+C.W.J. Granger.
+\newblock Testing for causality: A personal viewpoint.
+\newblock {\em Journal of Economic Dynamics and Control}, 2(0):329 -- 352,
+  1980.
+
+\bibitem{halliday2013}
+D.~Halliday, R.~Resnick, and J.~Walker.
+\newblock {\em Fundamentals of Physics Extended, 10th Edition}.
+\newblock Wiley Global Education, 2013.
+
+\bibitem{Kennel1992}
+Matthew~B. Kennel, Reggie Brown, and Henry D.~I. Abarbanel.
+\newblock Determining embedding dimension for phase-space reconstruction using
+  a geometrical construction.
+\newblock {\em Phys. Rev. A}, 45:3403--3411, Mar 1992.
+
+\bibitem{liu2012}
+Yan Liu and Mohammad~Taha Bahadori.
+\newblock A survey on granger causality: A computational view.
+\newblock {\em University of Southern California, http://www-bcf. usc. edu/\~{}
+  liu32/granger. pdf (12. 03.2013)}, 2012.
+
+\bibitem{Lloyd1995}
+Alun~L. Lloyd.
+\newblock The coupled logistic map: a simple model for the effects of spatial
+  heterogeneity on population dynamics.
+\newblock {\em Journal of Theoretical Biology}, 173(3):217 -- 230, 1995.
+
+\bibitem{Hong2006}
+Hong-guang Ma and Chong-zhao Han.
+\newblock Selection of embedding dimension and delay time in phase space
+  reconstruction.
+\newblock {\em Frontiers of Electrical and Electronic Engineering in China},
+  1(1):111--114, 2006.
+
+\bibitem{Roberts1985}
+David~L. Roberts and Stephen Nord.
+\newblock Causality tests and functional form sensitivity.
+\newblock {\em Applied Economics}, 17(1):135--141, 1985.
+
+\bibitem{Small2004}
+Michael Small and C.K. Tse.
+\newblock Optimal embedding parameters: a modelling paradigm.
+\newblock {\em Physica D: Nonlinear Phenomena}, 194(3–4):283 -- 296, 2004.
+
+\bibitem{Sugihara1990a}
+G.~{Sugihara} and R.~M. {May}.
+\newblock {Nonlinear forecasting as a way of distinguishing chaos from
+  measurement error in time series}.
+\newblock {\em Nature}, 344:734--741, April 1990.
+
+\bibitem{Sugihara1990}
+George Sugihara, Bryan Grenfell, Robert~M. May, P.~Chesson, H.~M. Platt, and
+  M.~Williamson.
+\newblock Distinguishing error from chaos in ecological time series [and
+  discussion].
+\newblock {\em Philosophical Transactions of the Royal Society of London.
+  Series B: Biological Sciences}, 330(1257):235--251, 1990.
+
+\bibitem{Sugihara2012}
+George Sugihara, Robert May, Hao Ye, Chih-hao Hsieh, Ethan Deyle, Michael
+  Fogarty, and Stephan Munch.
+\newblock Detecting causality in complex ecosystems.
+\newblock {\em Science}, 338(6106):496--500, 2012.
+
+\bibitem{vlachos2009}
+I~Vlachos and D~Kugiumtzis.
+\newblock State space reconstruction from multiple time series.
+\newblock In {\em Topics on Chaotic Systems: Selected Papers from Chaos 2008
+  International Conference}, page 378. World Scientific, 2009.
+
+\end{thebibliography}
