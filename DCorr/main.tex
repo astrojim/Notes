@@ -15,12 +15,18 @@
 \maketitle
 
 \abstract{
-Convergent Cross-Mapping is a technique, introduced by Sugihara {\em et al.\ } \cite{Sugihara2012}, reported to be ``a necessary condition for causation'' capable of distinguishing causality from correlation in sets of time series data.  We will show that CCM correlations do not in general agree with intuitive concepts of ``driving'' and ``response'', and as such, relationships among CCM correlations should not be considered indicative of causality.  It is shown that CCM correlations can, however, be used to identify asymmetric inferences between pairs of time series data.  We introduce a 2-vector called the ``pairwise asymmetric inference'' (PAI) and present examples of its use in inferring relationships within complex systems.  The sensitivity of CCM correlations (and consequently, directed correlations) on embedding dimensions and lag times will be discussed and mitigation will be presented.
+Convergent Cross-Mapping is a technique, introduced by Sugihara {\em et al.\ }\cite{Sugihara2012}, reported to be ``a necessary condition for causation'' capable of distinguishing causality from correlation in sets of time series data.  We will show that CCM correlations do not in general agree with intuitive concepts of ``driving'' and ``response'', and as such, relationships among CCM correlations should not be considered indicative of causality.  It is shown that CCM correlations can, however, be used to identify asymmetric relationships between pairs of time series data.  We introduce a 2-vector called the ``pairwise asymmetric inference'' (PAI) and present examples of its use in inferring relationships within complex systems.  The sensitivity of CCM correlations (and consequently, directed correlations) on embedding dimensions and lag times will be discussed and mitigation will be presented.
 }
 
 \section{Introduction}
+Modern time series analysis includes a handful of techniques meant to discren "driving" or "cause and effect" relationships between different data sets.  These techniques have found application in a wide range of fields including neuroscience (e.g.\ \cite{Kaminski2001}), economics (e.g.\ \cite{dufour1998,dufour2006}), climatology (e.g.\ \cite{mosedale2006}), and others.  General casual relationships in time series data are also being studied in an effort to understand causality itself (e.g.\ \cite{eichler2012}).  
+
+To date, most techniques for ``causal inference'' in time series data fall into two broad categories, those related to transfer entropy and those related to Granger causality.  Transfer entropy (introduced in \cite{Schreiber2000}) and Granger causality (introduced in \cite{granger1969}) are known to be equivalent under certain conditions \cite{Barnett2009}.  In this article, we investiagte a casual inference technique, called Convergent cross-mapping (CCM), that was recently introduced by Sugihara {\em et al.\ } in \cite{Sugihara2012}.  Currently, there is no evidence that CCM is related to either transfer entropy or Granger causality.
+
+We will begin with a review of the work of Sugihara {\em et al.}, including working through the coupled logistic map example presented in \cite{Sugihara2012}.  We will then illustrate the dependence of CCM correlations on the embedding dimension and lag time parameters of the CCM algorithm.  Finally, we will introduce ``pairwise asymmetric inference'' (PAI) and use it to show that, even though CCM causality may not be physical caulsality, it can still be a useful tool in the analysis of complex time series data.
+
 \section{Convergent Cross-Mapping}
-Convergent cross-mapping (CCM) is introduced in \cite{Sugihara2012} by Sugihara {\em et al.\ }.  CCM is described as a technique used to identify ``causality'' between time series and is intended to be useful in situations where Granger causality is known to be invalid (i.e.\ in dynamic systems that are ``nonseperable'' \cite{Sugihara2012}).  The authors state that CCM is a ``necessary condition for causation''.  It is well known \cite{Granger1980,liu2012,Roberts1985} that Granger causality is not causality as it is typically understood in physics.  It will be shown that a similar conclusion can be drawn regarding CCM causality. 
+CCM is described as a technique used to identify ``causality'' between time series and is intended to be useful in situations where Granger causality is known to be invalid (i.e.\ in dynamic systems that are ``nonseperable'' \cite{Sugihara2012}).  The authors state that CCM is a ``necessary condition for causation''.  It is well known \cite{Granger1980,liu2012,Roberts1985} that Granger causality is not causality as it is typically understood in physics.  It will be shown that a similar conclusion can be drawn regarding CCM causality. 
 
 CCM is closely related to simplex projection \cite{Sugihara1990,Sugihara1990a}, which predicts a point in the times series $X$ at a time $t+1$, i.e.\ $X_{t+1}$, by using the points with the most similar histories to $X_t$.  Similarly, CCM uses points with the most similar histories to $X_t$ to estimate $Y_t$.  The CCM correlation is the squared correlation coefficient\footnote{This definition differs slightly from the original definition in \cite{Sugihara2012}, which just uses Pearson’s correlation coefficient.  We use the square of this value to avoid dealing with negative correlation values.  This subtle change in the definition does not affect the conclusions drawn in \cite{Sugihara2012}, as can be seen in our reproduction of key plots from that work.} between the original time series $Y$ and estimate of $Y$ made using the convergent cross-mapping with $X$, which is labelled as $Y|X$; i.e.\ the CCM correlation is given as 
 $$
@@ -33,7 +39,7 @@ where $\rho(A,B)$ is the Pearson correlation coefficient between $A$ and $B$ \ci
 \end{equation}
 and use the sign of $\Delta$ to determine the CCM causality between $X$ and $Y$ \cite{Sugihara2012}.  The CCM algorithm is explained in more detail in Appendix \ref{sec:appA}.
 
-If $X$ can be estimated from the shadow manifold of $Y$ better than $Y$ can be estimated from the shadow manifold of $X$ (i.e.\ $\Delta < 0$), then $X$ is said to ``CCM cause'' $Y$.
+If $X$ can be estimated from the shadow manifold of $Y$ better than $Y$ can be estimated from the shadow manifold of $X$ (e.g.\ if $\Delta < 0$), then $X$ is said to ``CCM cause'' $Y$.
 
 \subsection{Simplified Two Population Dynamics}
 \label{sec:2Pop}
@@ -50,15 +56,11 @@ In this example, the CCM causality of this system is determined by sampling both
 Sugihara {\em et al. }consider convergence to be critically important to determining CCM causality, identifying it as ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 \begin{figure}[ht]
 \label{fig:}
-\begin{subfigure}[b]{0.5\textwidth}
-\includegraphics[scale=0.6]{Fig1_draft.png}
-\end{subfigure}
-\begin{subfigure}[b]{0.5\textwidth}
-\includegraphics[scale=1.0]{Fig1_ref.png}
-\end{subfigure}
+\includegraphics[scale=0.6]{Figure1.eps}
+%\includegraphics[scale=1.0]{Fig1_ref.png}
 \caption{These plots show the dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  See the text for details on how these plots were created along with a discussion of the interpretation of these plots in terms of the CCM causality.}
 \end{figure}
-The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $Y$ ``drives'' $X$ more than $X$ ``drives'' $Y$.  Stated more formally, $\beta_{yx}>\beta_{xy}\Rightarrow\Delta>0$, which is reported as ``$Y$ CCM causes $X$''.  Likewise, $\beta_{xy}<\beta_{yx}$ implies $X$ CCM causes $Y$ and $\beta_{xy}=\beta_{yx}$ implies no CCM causality in the system.  It will be shown below that CCM causality is not necessarily related to causality as it is typically understood in physics.
+The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $Y$ ``drives'' $X$ more than $X$ ``drives'' $Y$.  Stated more formally, $\beta_{xy}>\beta_{yx}\Rightarrow\Delta>0$, which is reported as ``$Y$ CCM causes $X$''.  Likewise, $\beta_{xy}<\beta_{yx}$ implies $X$ CCM causes $Y$ and $\beta_{xy}=\beta_{yx}$ implies no CCM causality in the system.  It will be shown below that CCM causality is not necessarily related to causality as it is typically understood in physics.
 
 \section{Embedding Dimension and Lag Time}
 The CCM algorithm depends on the embedding dimension $E$ and the lag time step $\tau$ (see Appendix \ref{sec:appA}).  Consider the simplified two population system (Eqn.\ \ref{eqn:2pop}) with $r_x=3.8$, $r_y=3.5$, $\beta_{xy}=0.01$, $\beta_{yx}=0.2$, $X_0=0.4$, and $Y_0=0.2$ with $X$ and $Y$ library lengths of $L=1000$.  Figure \ref{fig:} shows the effect of varying $E$ and $\tau$ on $\Delta$ for this system.  $E$ is varied over the interval $[2,20]$ (in steps of 1), and $\tau$ is varied over the interval $[1,50]$ (also in steps of 1).  This figure makes it clear that a statement of CCM causality (and, subsequently, that statement's agreement with ``intuition'') depends strongly upon how the CCM technique is used.

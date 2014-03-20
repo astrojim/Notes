@@ -1,5 +1,33 @@
 \begin{thebibliography}{10}
 
+\bibitem{Barnett2009}
+Lionel Barnett, Adam~B. Barrett, and Anil~K. Seth.
+\newblock Granger causality and transfer entropy are equivalent for gaussian
+  variables.
+\newblock {\em Phys. Rev. Lett.}, 103:238701, Dec 2009.
+
+\bibitem{dufour2006}
+Jean-Marie Dufour, Denis Pelletier, and {\'E}ric Renault.
+\newblock Short run and long run causality in time series: inference.
+\newblock {\em Journal of Econometrics}, 132(2):337--362, 2006.
+
+\bibitem{dufour1998}
+Jean-Marie Dufour and Eric Renault.
+\newblock Short run and long run causality in time series: theory.
+\newblock {\em Econometrica}, pages 1099--1125, 1998.
+
+\bibitem{eichler2012}
+Michael Eichler and Vanessa Didelez.
+\newblock Causal reasoning in graphical time series models.
+\newblock {\em arXiv preprint arXiv:1206.5246}, 2012.
+
+\bibitem{granger1969}
+Clive~WJ Granger.
+\newblock Investigating causal relations by econometric models and
+  cross-spectral methods.
+\newblock {\em Econometrica: Journal of the Econometric Society}, pages
+  424--438, 1969.
+
 \bibitem{Granger1980}
 C.W.J. Granger.
 \newblock Testing for causality: A personal viewpoint.
@@ -10,6 +38,12 @@ C.W.J. Granger.
 D.~Halliday, R.~Resnick, and J.~Walker.
 \newblock {\em Fundamentals of Physics Extended, 10th Edition}.
 \newblock Wiley Global Education, 2013.
+
+\bibitem{Kaminski2001}
+Maciej Kaminski, Mingzhou Ding, Wilson~A. Truccolo, and Steven~L. Bressler.
+\newblock Evaluating causal relations in neural systems: Granger causality,
+  directed transfer function and statistical assessment of significance.
+\newblock {\em Biological Cybernetics}, 85(2):145--157, 2001.
 
 \bibitem{Kennel1992}
 Matthew~B. Kennel, Reggie Brown, and Henry D.~I. Abarbanel.
@@ -36,10 +70,21 @@ Hong-guang Ma and Chong-zhao Han.
 \newblock {\em Frontiers of Electrical and Electronic Engineering in China},
   1(1):111--114, 2006.
 
+\bibitem{mosedale2006}
+Timothy~J Mosedale, David~B Stephenson, Matthew Collins, and Terence~C Mills.
+\newblock Granger causality of coupled climate processes: Ocean feedback on the
+  north atlantic oscillation.
+\newblock {\em Journal of climate}, 19(7), 2006.
+
 \bibitem{Roberts1985}
 David~L. Roberts and Stephen Nord.
 \newblock Causality tests and functional form sensitivity.
 \newblock {\em Applied Economics}, 17(1):135--141, 1985.
+
+\bibitem{Schreiber2000}
+Thomas Schreiber.
+\newblock Measuring information transfer.
+\newblock {\em Phys. Rev. Lett.}, 85:461--464, Jul 2000.
 
 \bibitem{Small2004}
 Michael Small and C.K. Tse.
