@@ -57,14 +57,9 @@ Sugihara {\em et al. }consider convergence to be critically important to determi
 \begin{figure}[ht]
 \label{fig:}
 \includegraphics[scale=0.5]{Figure1.eps}
+%\includegraphics[scale=1.0]{Fig1_ref.png}
 \caption{These plots show the dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  See the text for details on how these plots were created along with a discussion of the interpretation of these plots in terms of the CCM causality.}
 \end{figure}
-\begin{figure}[ht]
-\label{fig:}
-\includegraphics[scale=0.5]{RefFigure.eps}
-\caption{Reference figure.}
-\end{figure}
-
 The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $Y$ ``drives'' $X$ more than $X$ ``drives'' $Y$.  Stated more formally, $\beta_{xy}>\beta_{yx}\Rightarrow\Delta>0$, which is reported as ``$Y$ CCM causes $X$''.  Likewise, $\beta_{xy}<\beta_{yx}$ implies $X$ CCM causes $Y$ and $\beta_{xy}=\beta_{yx}$ implies no CCM causality in the system.  It will be shown below that CCM causality is not necessarily related to causality as it is typically understood in physics.
 
 \section{Embedding Dimension and Lag Time}

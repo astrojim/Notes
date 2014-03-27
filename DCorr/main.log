@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  25 MAR 2014 19:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  26 MAR 2014 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -202,6 +202,9 @@ LaTeX Warning: Label `fig:' multiply defined.
 
 LaTeX Warning: Label `fig:' multiply defined.
 
+
+LaTeX Warning: Label `fig:' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -262,14 +265,14 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 
 ]
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 2 undefined on input line 54.
 
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
@@ -277,69 +280,81 @@ LaTeX Warning: Reference `fig:' on page 2 undefined on input line 56.
 
 File: Figure1.eps Graphic file (type eps)
 <Figure1.eps>
-Overfull \hbox (132.4258pt too wide) in paragraph at lines 59--61
+Overfull \hbox (22.8096pt too wide) in paragraph at lines 59--60
+[][] 
+ []
+
+File: RefFigure.eps Graphic file (type eps)
+<RefFigure.eps>
+Overfull \hbox (22.8096pt too wide) in paragraph at lines 64--65
 [][] 
  []
 
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 2 undefined on input line 66.
+LaTeX Warning: Reference `fig:' on page 2 undefined on input line 71.
+
+File: Figure2.eps Graphic file (type eps)
+<Figure2.eps>
+Overfull \hbox (22.8096pt too wide) in paragraph at lines 74--75
+[][] 
+ []
 
 [2]
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 3 undefined on input line 94.
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 100.
 
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 3 undefined on input line 99.
+LaTeX Warning: Reference `fig:' on page 3 undefined on input line 105.
 
 [3]
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 119.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 125.
 
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 124.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 130.
 
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 127.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 133.
 
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 127.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 133.
 
 
-Package caption Warning: \label without proper \caption on input line 137.
+Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 135.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 141.
 
-[4] [5] (./main.bbl [6]) [7] (./main.aux)
+[4] [5] [6] (./main.bbl [7]) [8] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -348,12 +363,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3687 strings out of 494044
- 53649 string characters out of 6155041
+ 3691 strings out of 494044
+ 53697 string characters out of 6155041
  137736 words of memory out of 5000000
- 7062 multiletter control sequences out of 15000+600000
+ 7064 multiletter control sequences out of 15000+600000
  14033 words of font info for 50 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
  36i,8n,38p,1076b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (7 pages, 38660 bytes).
+Output written on main.dvi (8 pages, 38980 bytes).
