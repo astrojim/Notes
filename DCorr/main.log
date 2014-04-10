@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  2 APR 2014 20:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  9 APR 2014 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,14 +265,14 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 
 ]
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 2 undefined on input line 54.
 
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
@@ -287,7 +287,7 @@ Overfull \hbox (132.4258pt too wide) in paragraph at lines 59--60
 File: RefFigure.eps Graphic file (type eps)
 <RefFigure.eps>
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
@@ -301,7 +301,7 @@ Overfull \hbox (22.8096pt too wide) in paragraph at lines 74--75
 
 [2]
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
@@ -310,7 +310,7 @@ LaTeX Warning: Reference `fig:' on page 3 undefined on input line 100.
 File: Figure3.eps Graphic file (type eps)
 <Figure3.eps>
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
@@ -318,41 +318,45 @@ LaTeX Warning: Reference `fig:' on page 3 undefined on input line 106.
 
 [3]
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 4 undefined on input line 126.
 
+File: Figure4.eps Graphic file (type eps)
+<Figure4.eps>
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 131.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 132.
 
+File: Figure5.eps Graphic file (type eps)
+<Figure5.eps>
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 134.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 136.
 
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 134.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 136.
 
 
-Package caption Warning: \label without proper \caption on input line 144.
+Package caption Warning: \label without proper \caption on input line 146.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 4 undefined on input line 142.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 144.
 
-[4] [5] [6] (./main.bbl [7]) [8] (./main.aux)
+[4] [5] [6] [7] (./main.bbl [8]) [9] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -361,12 +365,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3693 strings out of 494044
- 53719 string characters out of 6155041
+ 3697 strings out of 494044
+ 53763 string characters out of 6155041
  137736 words of memory out of 5000000
- 7065 multiletter control sequences out of 15000+600000
+ 7067 multiletter control sequences out of 15000+600000
  14033 words of font info for 50 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
  36i,8n,38p,1076b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (8 pages, 39036 bytes).
+Output written on main.dvi (9 pages, 39244 bytes).

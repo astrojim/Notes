@@ -15,7 +15,7 @@
 \maketitle
 
 \abstract{
-Convergent Cross-Mapping is a technique, introduced by Sugihara {\em et al.\ }\cite{Sugihara2012}, reported to be ``a necessary condition for causation'' capable of distinguishing causality from correlation in sets of time series data.  We will show that CCM correlations do not in general agree with intuitive concepts of ``driving'' and ``response'', and as such, relationships among CCM correlations should not be considered indicative of causality.  It is shown that CCM correlations can, however, be used to identify asymmetric relationships between pairs of time series data.  We introduce a 2-vector called the ``pairwise asymmetric inference'' (PAI) and present examples of its use in inferring relationships within complex systems.  The sensitivity of CCM correlations (and consequently, directed correlations) on embedding dimensions and lag times will be discussed and mitigation will be presented.
+Convergent Cross-Mapping is a technique, introduced by Sugihara {\em et al.\ }\cite{Sugihara2012}, reported to be ``a necessary condition for causation'' capable of distinguishing causality from correlation in sets of time series data.  We will show that CCM correlations do not in general agree with intuitive concepts of ``driving'' and ``response'', and as such, relationships among CCM correlations should not be considered indicative of causality.  It is shown that CCM correlations can, however, be used to identify asymmetric relationships between pairs of time series data.  We introduce a 2-vector called the ``pairwise asymmetric inference'' (PAI) and present examples of its use in inferring relationships within complex systems.  The sensitivity of CCM correlations (and consequently, PAI) on embedding dimensions and lag times will be discussed and mitigation will be presented.
 }
 
 \section{Introduction}
@@ -56,7 +56,7 @@ In this example, the CCM causality of this system is determined by sampling both
 Sugihara {\em et al. }consider convergence to be critically important to determining CCM causality, identifying it as ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 \begin{figure}[ht]
 \label{fig:}
-\includegraphics[scale=0.45]{Figure1.eps}
+\includegraphics[scale=0.6]{Figure1.eps}
 \caption{These plots show the dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  See the text for details on how these plots were created along with a discussion of the interpretation of these plots in terms of the CCM causality.}
 \end{figure}
 \begin{figure}[ht]
@@ -97,21 +97,21 @@ and its angle with the base of the square is
 P_\theta = \arctan\left(\frac{C_{YX}}{C_{XY}}\right)\;\;.
 \end{equation}
 
-As an example, the directed correlation for the simplified two population example discuss in Section \ref{sec:2Pop} is shown in Figure \ref{fig:}.  The same sampling procedures described in that section were used and the coupling constants were set to $\beta_{xy}=0.02$ and $\beta_{yx}=0.1$.
+As an example, the PAI for the simplified two population example discuss in Section \ref{sec:2Pop} is shown in Figure \ref{fig:}.  The same sampling procedures described in that section were used and the coupling constants were set to $\beta_{xy}=0.02$ and $\beta_{yx}=0.1$.
 \begin{figure}[ht]
 \label{fig:}
 \includegraphics[scale=0.45]{Figure3.eps}
 \caption{The PAI can be used to study the CCM causality in a system.  See the text for an explanation of the dynamics that yield the $\vec{D}$ shown here.}
 \end{figure}
-Figure \ref{fig:} shows $\vec{D}$ lies in the lower triangular quadrant on the unit square, which indicates $X$ CCM causes $Y$.  This conclusion, as discussed in Section \ref{sec:2Pop}, seems to agree with intuition.  Notice that a $\vec{D}$ aligned along the unit square bisector (i.e. the line $C_{YX}=C_{XY}$) would indicate no CCM causality in the system.
+Figure \ref{fig:} shows $\vec{P}$ lies in the lower triangular quadrant on the unit square, which indicates $X$ CCM causes $Y$.  This conclusion, as discussed in Section \ref{sec:2Pop}, seems to agree with intuition.  Notice that a $\vec{D}$ aligned along the unit square bisector (i.e. the line $C_{YX}=C_{XY}$) would indicate no CCM causality in the system.
 
 \section{Driven System Example: RL Circuit}
 A circuit containing only a resistor and a inductor is described by the following differiential equation \cite{halliday2013}:
 \begin{equation}
 \label{eqn:it}
-\frac{dI}{dt} = \frac{V(t)}{L} - \frac{R(t)}{L} I(t)\;\;,
+\frac{dI}{dt} = \frac{V(t)}{L} - \frac{R(t)}{L} I\;\;,
 \end{equation}
-where $I(t)$ is the current at time $t$, $V(t)$ is the voltage at time $t$, $R(t)$ is the resistance at time $t$, and $L$ is the inductance.  The voltage and resistance are considered to be under the control of the experimenter.  Consider, for example, that the resistance $R$ is provided by a potentiometer controlled by the experimenter.  The inductance is considered fixed.  This scenario outline implies that the times series for $V$ and $R$ should be considered the driving time series and $I$ is the response times series.  
+where $I$ is the current at time $t$, $V(t)$ is the voltage at time $t$, $R(t)$ is the resistance at time $t$, and $L$ is the inductance.  The voltage and resistance are considered to be under the control of the experimenter.  Consider, for example, that the resistance $R$ is provided by a potentiometer controlled by the experimenter.  The inductance is considered fixed.  This scenario outline implies that the times series for $V$ and $R$ should be considered the driving time series and $I$ is the response times series.  
 
 Consider the scenario where the voltage is described by a simple sine wave, i.e.\
 \begin{equation}
@@ -123,15 +123,16 @@ and the resistance is given by
 \label{eqn:rt}
 R(t) = A\sin(\omega t + \phi) + R_0\;\;.
 \end{equation}
-Consider $A=R_0=0.5$ with $\omega=1$ and $\phi=0$.  These values lead to the directed correlations $\vec{D}$ in Figure \ref{fig:}.  
+Consider $A=R_0=0.5$ with $\omega=1$ and $\phi=0$.  These values lead to the PAIs $\vec{P}$ in Figure \ref{fig:}.  
 \begin{figure}[ht]
 \label{fig:}
+%\includegraphics[scale=0.45]{Figure4.eps}
 \caption{The PAI of an RL circuit with $V(t)$ and $R(t)$ given by Eqn. \ref{eqn:vt} and Eqn. \ref{eqn:rt}, respectively, can be calculated for each of the three parameters pairs; i.e.\ $(V,I)$, $(R,I)$, and $(V,R)$.  The parameters used to produce these plots are explained in the text.  Notice that these results imply {\bf ????}, which agrees with the physical "intuition" for this situation.}
 \end{figure}
 These PAIs seem to imply CCM causality is at least representative of physical causality.  Notice, however, that changing the phase, $\omega$, of the resistance $R(t)$ can lead to situations that do not support the intuitive result of $R$ CCM causes $I$.  For example, consider $A=R_0=\omega=0.5$.  These values lead the the PAIs in Figure \ref{fig:}.
 \begin{figure}[ht]
 \label{fig:}
-\caption{The PAIs of Figure \ref{fig:} change dramatically when the phase between $R(t)$ and $V(t)$ is changed.  See the text for the parameters used to produce $\vec{D}$.}
+\caption{The PAIs of Figure \ref{fig:} change dramatically when the phase between $R(t)$ and $V(t)$ is changed.  See the text for the parameters used to produce $\vec{P}$.}
 \end{figure}
 
 Consider the situation where the voltage is driven with the sinusoidal signal shown in Eqn. \ref{eqn:vt} and the resistance is driven by the triangular pulse 
@@ -146,7 +147,7 @@ where $\ldots$.  Such a scenario leads to the PAIs shown in Figure \ref{fig:}.
 \end{figure}
 These results imply $V$ CCM causes $I$ as expected, but they also imply $I$ CCM causes $R$ and $V$ CCM causes $R$ which obeys transitivity but seems counter-intuitive.  These results seem to imply that the voltage is the primary driver of the system and can, under certain scenarios, even be seen as a ``driver'' of the resistance through the current.  Consider approximating Eqn. \ref{eqn:it} as
 \begin{equation}
-\dot{I} = \frac{V}{L} - \frac{R}{L} I\Rightarrow I_{t+1}-I_t = \frac{V_t}{L} - \frac{R_t}{L} I_t\;\;.
+\dot{I} = \frac{V(t)}{L} - \frac{R(t)}{L} I\Rightarrow I_{t+1}-I_t = \frac{V_t}{L} - \frac{R_t}{L} I_t\;\;.
 \end{equation}
 Rearranging leads to
 \begin{eqnarray}
@@ -159,7 +160,7 @@ R_t = L\left(I_t-I_{t+1}+\frac{V_t}{L}\right)\;\;.
 \end{equation}
 These equations imply that if the amplitude of the voltage is significantly larger than both the resistance and the current, then it can appear to drive both the current and the resistance, as seen above.
 
-These examples help put a fine point on the problem of using language should as ``driving'' and ``causality'' to describe the relationship indicated by the PAI (and CCM causality in general).  If the voltage, resistance, and current were all completely out of the experimenter's control and the only data available is the time series described above.  Then, it is reasonable that certain scenarios would allow the voltage to be used to predict both the resistance and the current because the voltage physically drives the current and shares a similar, repetitive mathematical structure with the resistance.  The prediction ability of the voltage for the two quantities may come from different mechanisms (i.e.\ physical driving or mathematical structure), but the prediction ability itself is what is of interest to us here.  It is not reasonable to state that the voltage physically drives the resistance in this particular case because by construction, the voltage and the resistance are independent.  
+These examples help put a fine point on the problem of using language should as ``driving'' and ``causality'' to describe the relationship indicated by the PAI (and CCM causality in general).  Suppose the voltage, resistance, and current were all completely out of the experimenter's control, and the only data available is the time series described above.  In such a setting, it is reasonable that certain scenarios would allow the voltage to be used to predict both the resistance and the current because the voltage physically drives the current and shares a similar, repetitive mathematical structure with the resistance.  The prediction ability of the voltage for the two quantities may come from different mechanisms (i.e.\ physical driving or mathematical structure), but the prediction ability itself is what is of interest to us here.  It is not reasonable to state that the voltage physically drives the resistance in this particular case because by construction, the voltage and the resistance are independent.  
 
 \section{PAI and Non-Linear Data Sets}
 The PAI does not need a physical causality interpretation to be useful.  It is can helpful in inferring relationships between time series from complicated, non-linear dynamics.  
@@ -249,4 +250,6 @@ It is assumed that the lag time step $\tau$ is determined (e.g.\ with the autoco
 \bibliography{main}
 
 \end{document}
+
+
 
