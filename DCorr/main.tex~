@@ -6,7 +6,8 @@
 \usepackage{graphicx}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{caption}
-\usepackage{subcaption}
+\usepackage{subfig}
+\usepackage{epstopdf}
 
 \title{Convergent Cross-Mapping and Causality Detection}
 \author{McCracken,Weigel}
@@ -68,12 +69,24 @@ Sugihara {\em et al. }consider convergence to be critically important to determi
 The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $Y$ ``drives'' $X$ more than $X$ ``drives'' $Y$.  Stated more formally, $\beta_{xy}>\beta_{yx}\Rightarrow\Delta>0$, which is reported as ``$Y$ CCM causes $X$''.  Likewise, $\beta_{xy}<\beta_{yx}$ implies $X$ CCM causes $Y$ and $\beta_{xy}=\beta_{yx}$ implies no CCM causality in the system.  It will be shown below that CCM causality is not necessarily related to causality as it is typically understood in physics.
 
 \section{Embedding Dimension and Lag Time}
-The CCM algorithm depends on the embedding dimension $E$ and the lag time step $\tau$ (see Appendix \ref{sec:appA}).  Consider the simplified two population system (Eqn.\ \ref{eqn:2pop}) with $r_x=3.8$, $r_y=3.5$, $\beta_{xy}=0.01$, $\beta_{yx}=0.2$, $X_0=0.4$, and $Y_0=0.2$ with $X$ and $Y$ library lengths of $L=1000$.  Figure \ref{fig:} shows the effect of varying $E$ and $\tau$ on $\Delta$ for this system.  $E$ is varied over the interval $[2,20]$ (in steps of 1), and $\tau$ is varied over the interval $[1,50]$ (also in steps of 1).  This figure makes it clear that a statement of CCM causality (and, subsequently, that statement's agreement with ``intuition'') depends strongly upon how the CCM technique is used.
+The CCM algorithm depends on the embedding dimension $E$ and the lag time step $\tau$ (see Appendix \ref{sec:appA}).  Consider the simplified two population system (Eqn.\ \ref{eqn:2pop}) with $r_x=3.8$, $r_y=3.5$, $\beta_{xy}=0.01$, $\beta_{yx}=0.2$, $X_0=0.4$, and $Y_0=0.2$ with $X$ and $Y$ library lengths of $L=2000$.  Figure \ref{fig:} shows the effect of varying $E$ and $\tau$ on $\Delta$ for this system.  $E$ is varied over the interval $[2,20]$ (in steps of 1), and $\tau$ is varied over the interval $[1,50]$ (also in steps of 1).  This figure makes it clear that a statement of CCM causality (and, subsequently, that statement's agreement with ``intuition'') depends strongly upon how the CCM technique is used.
+\newpage
 \begin{figure}[ht]
 \label{fig:}
 \includegraphics[scale=0.5]{Figure2.eps}
 \caption{The determination of CCM causality in a system is dependent on the CCM parameters of embedding dimension $E$ and lag time step $\tau$.  This plot show the dependence of Eqn.\ \ref{eqn:delta} on $E$ and $\tau$ for the example system discussed in the text.}
 \end{figure}
+\begin{figure}[ht]
+\label{fig:}
+\includegraphics[scale=0.5]{Figure2_alt.eps}
+\caption{ALT code comparison for Fig 2.}
+\end{figure}
+\begin{figure}[ht]
+\label{fig:}
+\includegraphics[scale=0.5]{Figure2_diff.eps}
+\caption{diff for ALT code comparison for Fig 2.}
+\end{figure}
+\newpage
 
 A dependence $E$ and $\tau$ is a feature of most state space reconstruction (SSR) methods \cite{Hong2006,vlachos2009,Small2004}.  CCM is related to state space reconstruction \cite{Sugihara2012}, so the $E$ and $\tau$ dependence seen here is not unexpected.  Sugihara {\em et al.\ }do not discuss in depth how to determine $E$ and $\tau$, but they do mention that ``optimal embedding dimensions'' are found using univariate SSR \cite{Sugihara2012} (supplementary material).  
 
@@ -126,12 +139,13 @@ R(t) = A\sin(\omega t + \phi) + R_0\;\;.
 Consider $A=R_0=0.5$ with $\omega=1$ and $\phi=0$.  These values lead to the PAIs $\vec{P}$ in Figure \ref{fig:}.  
 \begin{figure}[ht]
 \label{fig:}
-%\includegraphics[scale=0.45]{Figure4.eps}
+\includegraphics[scale=0.45]{Figure4.eps}
 \caption{The PAI of an RL circuit with $V(t)$ and $R(t)$ given by Eqn. \ref{eqn:vt} and Eqn. \ref{eqn:rt}, respectively, can be calculated for each of the three parameters pairs; i.e.\ $(V,I)$, $(R,I)$, and $(V,R)$.  The parameters used to produce these plots are explained in the text.  Notice that these results imply {\bf ????}, which agrees with the physical "intuition" for this situation.}
 \end{figure}
 These PAIs seem to imply CCM causality is at least representative of physical causality.  Notice, however, that changing the phase, $\omega$, of the resistance $R(t)$ can lead to situations that do not support the intuitive result of $R$ CCM causes $I$.  For example, consider $A=R_0=\omega=0.5$.  These values lead the the PAIs in Figure \ref{fig:}.
 \begin{figure}[ht]
 \label{fig:}
+\includegraphics[scale=0.45]{Figure5.eps}
 \caption{The PAIs of Figure \ref{fig:} change dramatically when the phase between $R(t)$ and $V(t)$ is changed.  See the text for the parameters used to produce $\vec{P}$.}
 \end{figure}
 
