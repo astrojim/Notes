@@ -1,36 +1,38 @@
 \chapter{Introduction and Definition of Terms}
 
 \begin{table}[h!t]
-\centering
-\begin{tabular}{c|cp{9cm}}
-\toprule
-&$Notation$ & $Meaning$ \\
-\midrule
-\multirow{4}{*}{{\bf SETS}}&$\mathbb{C}$ & set of all complex numbers\\
-&$\mathbb{R}$ & set of all real numbers\\
-&$\mathbb{R_+}$ & set of all positive real numbers\\
-&$\mathbb{Z}$ & set of all integers\\
-\midrule
-\multirow{5}{*}{{\bf SPACES}}&$\mathcal{H}^S$ & reduced system Hilbert space\\
-&$\mathcal{H}^B$ & bath Hilbert space\\
-&$\mathcal{H}^{SB}$ & composite system Hilbert space\\
-&$\mathcal{S}(\mathcal{H}^X)$ & set of all valid density matrices on the Hilbert space called $X$\\
-&$\mathcal{B}(\mathcal{H}^X)$ & set of all bounded operators on the Hilbert space called $X$\\
-\midrule
-\multirow{4}{*}{{\bf OPERATIONS}}&$\trace$ & trace of an operator or matrix\\
-&$\sharp$ & assignment of composite system states to reduced system states(see Sec.\ \ref{sec:sharpop})\\
-&$\flat$ & partial trace over the bath (see Sec.\ \ref{sec:parttrace}\\
-&$\mathbf{A}\odot$ & ``constructor'' called $A$ that takes vectors of states to other objects, e.g.\ matrices (see Sec.\ \ref{sec:notation})\\
-\bottomrule
-\end{tabular}
 \caption{These are some of the commonly used notations for this work.  Most of the non-standard notation is introduced and explained in dedicated sections of the introduction chapter, but this table is a quick reference for the sets and spaces used throughout.}
 \label{tab:note}
+
+\begin{tabular}{c|cp{9cm}}
+\cb &
+\cb & 
+\cb Meaning 
+    \upstrut{4mm}
+    \\
+\cw \multirow{4}{*}{{\bf SETS}}&\cw $\mathbb{C}$ &\cw set of all complex numbers\\
+&\cy $\mathbb{R}$ &\cy set of all real numbers\\
+&\cw $\mathbb{R_+}$ &\cw set of all positive real numbers\\
+&\cy $\mathbb{Z}$ &\cy set of all integers\\
+\hline
+\cw \multirow{5}{*}{ {\bf SPACES}}&\cw $\mathcal{H}^S$ &\cw reduced system Hilbert space\\
+&\cy $\mathcal{H}^B$ &\cy bath Hilbert space\\
+&\cw $\mathcal{H}^{SB}$ &\cw composite system Hilbert space\\
+&\cy $\mathcal{S}(\mathcal{H}^X)$ &\cy set of all valid density matrices on the Hilbert space called $X$\\
+&\cw $\mathcal{B}(\mathcal{H}^X)$ &\cw set of all bounded operators on the Hilbert space called $X$\\
+\hline
+\cw \multirow{4}{*}{{\bf OPERATIONS}}&\cy $\trace$ &\cy trace of an operator or matrix\\
+&\cw $\sharp$ &\cw assignment of composite system states to reduced system states(see Sec.\ \ref{sec:sharpop})\\
+&\cy $\flat$ &\cy partial trace over the bath (see Sec.\ \ref{sec:parttrace}\\
+&\cw $\mathbf{A}\odot$ &\cw ``constructor'' called $A$ that takes vectors of states to other objects, e.g.\ matrices (see Sec.\ \ref{sec:notation})\\
+\hline
+\end{tabular}
 \end{table}
 
 
 \section{Motivation}
 
-A ``quantum operation'' was originally introduced in 1961 in a discussion of the stochastic dynamics of quantum systems \cite{Sudarshan1961}.  Quantum operations have become increasingly important as sub-fields of quantum information move towards experimental verification of key concepts and technologies.  In quantum information theory, quantum operations are called ``quantum channels'' and are formally represented by linear, trace-preserving, completely positive maps (commonly abbreviated as ``CPTP'').  The ``completely positive'' qualifier in the definition of a quantum channel can be removed.  Such channels are called ``negative channels'' and are the topic of this work.  A negative quantum channel (or quantum operation) is mathematically represented by a linear, trace-preserving map with a consistent assignment of reduced system states to composite system states.  It will be shown that the complete positivity requirement is not necessary and may, in many cases, not be a valid physical assumption.  
+A ``quantum operation'' was originally introduced in 1961 with a discussion of the stochastic dynamics of quantum systems \cite{Sudarshan1961}.  Quantum operations have become increasingly important as sub-fields of quantum information move towards experimental verification of key concepts and technologies.  In quantum information theory, quantum operations are called ``quantum channels'' and are formally represented by linear, trace-preserving, completely positive maps (commonly abbreviated as ``CPTP'').  The ``completely positive'' qualifier in the definition of a quantum channel can be removed.  Such channels are called ``negative channels'' and are the topic of this work.  A negative quantum channel (or quantum operation) is mathematically represented by a linear, trace-preserving map with a consistent assignment of reduced system states to composite system states.  It will be shown that the complete positivity requirement is not necessary and may, in many cases, not be a valid physical assumption.  
 
 We will use the tools of open quantum systems and quantum information.  The theory of open quantum systems provides the most general framework for discussions of quantum dynamics, and quantum information theory provides useful concepts that will help make the discussion more lucid.  Several concepts from quantum information will be used without modification (such as qubits\footnote{Qubits are ideal quantum mechanical systems consisting of only two states.  The name harkens back to information theory roots, but the concept of a ``two level atom'' is a well established and very popular theoretical tool in physics.}), but many other concepts will be redefined.  All such redefinitions will be discussed as they are presented.  The popularity of quantum information plays a major role in our motivation; hence, most of the examples will be taken from sub-fields such as quantum computing and quantum communication.
 
@@ -42,8 +44,7 @@ We will begin with a very brief introduction to open quantum systems from the qu
 An open quantum system is a quantum system which is coupled to another quantum object (usually called the ``bath'', ``environment'', or ``reservoir'').  A simple sketch of such a system is given  in Fig. \ref{fig:sysbathdiagram}.
 
 \begin{figure}[t!]
-	\centering
-    \includegraphics[scale=0.75]{OpenSystemDiagram.png}
+    \includegraphics[scale=0.65]{OpenSystemDiagram.png}
   \caption{An ``isolated'' system is a system without any kind of bath, a ``closed'' system has a bath with which it can exchange energy (e.g.\ heat and work), an ``open'' system has a bath with which it can exchange both energy and matter, and an ``open quantum'' system has a bath with which it can exchange energy and matter but with which the boundary is not clearly defined.  See the text for further discussion of the system-bath boundary in an open quantum systems.  Notice that these definitions apply to non-relativistic systems; see \cite{Breuer2007} for a discussion of open quantum systems and relativity.}
   \label{fig:sysbathdiagram}
 \end{figure}
@@ -58,6 +59,7 @@ Such foundational issues are outside the scope of this discussion, so we will ad
 \begin{definition}
 The {\em reduced system} is the part of the experiment directly accessible (e.g.\ through measurements and preparations) by the experimenter.  
 \end{definition}
+
 See Appendix \ref{sec:redsysdef} for a discussion of this definition.  In the example above, the single electron would be called the reduced system if it is the only electron in the system under the control of the experimenter.  Naturally, the bath is then defined as the part of the experiment inaccessible to the experimenter.  This definition is a straightforward, physical way to divide the open system under investigation.  If a qubit is constructed from a double quantum dot system, then the double quantum dot system is the reduced system because the experimenter has a way to control it.  The phonon bath that impairs the performance of that qubit is the bath because the experimenter has no way to control it.  The experimenter might really want that phonon bath to be part of his reduced system, but he is always restricted by his technological capabilities\footnote{This restriction is often pointed out by proponents of open systems theories with the platitude ``There is no such thing as a closed quantum system.''}.
 
 \section{Density Matrix}
@@ -101,6 +103,7 @@ The self-adjoint property for $\rho$ (which is implied by the positivity \cite{E
 \begin{definition}
 A {\em self-adjoint operator} is an operator that is its own adjoint.  The matrix representing a self-adjoint operator is Hermitian \cite{Byron1992}, i.e.\ it is equal to its conjugate transpose.  We will only be dealing with finite dimensional systems, so self-adjoint operators for us will mean operators with a Hermitian matrix representation.
 \end{definition}
+
 The state $\rho$ can be shown to be Hermitian, but the self-adjoint requirement extends to all observables.  A self-adjoint operator can be decomposed using the spectral theorem into an orthonormal basis, and the operator will have a diagonal matrix representation on this basis (see \cite{Nielsen2010} for a discussion of the spectral decomposition of the density matrix and see \cite{Breuer2007} for a more complicated discussion of the spectral theorem for operators in the general case).  The measurement postulate of quantum mechanics is formulated in terms of projection operators.  Projection operators cannot be used to find the off-diagonal matrix elements of the matrix representation of an operator.  Notice that if an observable could not be diagonalized in some basis then the operator would always contain some information that was inaccessible to the experimenter by direct observation (i.e. ``measurement'').
 
 \section{Mathematical Structure of Open Systems}
@@ -203,10 +206,12 @@ $$
 \rho^B:=\trace_S(\rho^{SB})\;\;.
 $$
 \end{definition}
+
 The partial trace with respect to the bath is a very common operation in the study of open systems, and, for that reason, we will use special notation for tracing out the bath: If $\tau\in\mathcal{S}(\mathcal{H}^{SB})$, then $\tau^\flat\in\mathcal{S}(\mathcal{H}^S)$.  
 \begin{definition}
 The {\em flat operator} is equivalent to the partial trace with respect to the bath, i.e.\ $\tau^\flat\equiv\trace_B(\tau)$.  
 \end{definition}
+
 The reduced state is written down in this notation as
 $$
 \rho^S = (\rho^{SB})^\flat\;\;.
@@ -218,7 +223,7 @@ The utility of this notation will become clear in the the following sections.
 
 In general, a complete understanding of the behavior of the reduced system would require knowledge of the composite state.  Unfortunately, the reduced system state is defined in terms of the composite state through the use of a non-invertible operation, the partial trace.  By definition, the reduced system is the only part of the open system accessible to the experimenter, so how is the experimenter to know $\rho^{SB}$?  
 
-This problem has been addressed by Pechukas and Alicki with the introduction of an assignment map \cite{Pechukas1994}\cite{Alicki1995}\cite{Pechukas1995}.  The assignment map\footnote{It should be noted that the term ``map'' is used throughout the literature, but it is not always clear that the object being discussed is a mathematically well defined map (e.g.\ see \cite{Fraleigh2003} for a basic definition of a map).}\ acts as a kind of inverse to the partial trace.  For example, define an assignment map $A$ that acts such that if $\tau\in\mathcal{S}(\mathcal{H}^S)$ then
+This problem has been addressed by Pechukas and Alicki with the introduction of an assignment map \cite{Pechukas1994}\cite{Alicki1995}\cite{Pechukas1995}.  The assignment map\footnote{It should be noted that the term ``map'' is used throughout the literature, but it is not always clear that the object being discussed is a mathematically well defined map (e.g.\ see \cite{Fraleigh2003} for a basic definition of a map).} acts as a kind of inverse to the partial trace.  For example, define an assignment map $A$ that acts such that if $\tau\in\mathcal{S}(\mathcal{H}^S)$ then
 $$
 A(\tau)\in\mathcal{S}(\mathcal{H}^{SB})\;\;.
 $$
@@ -335,10 +340,10 @@ $$
 \tau_i^\sharp = \tau_i \otimes \sigma_1\tau_i\sigma_1
 $$
 defined (and guaranteed positive) only on $\tau_i\in\mathcal{L}(\mathcal{H}^S)$.  In the example above, $\mathcal{L}(\mathcal{H}^S) = \{\tau_0,\tau_1,\tau_2\}$; hence, by assumption, only $\mathcal{L}(\mathcal{H}^{SB}) = \{\tau_0^\sharp,\tau_1^\sharp,\tau_2^\sharp\}$ ever actually exist in the lab.  He can define a sharp operation on linear combinations of states in $\mathcal{L}(\mathcal{H}^S)$, but (as shown above) the resulting composite states are not necessarily positive. 
-
 \begin{definition}
-The {\em positivity domain} of a quantum operation $\varepsilon$ is the set of states $\tau\in\mathcal{S}(\mathcal{H}^S)$ where $\tau=\varepsilon(\rho^S)$ and $\rho^S \in\mathcal{S}(\mathcal{H}^S)$ with the reduced dynamics $\varepsilon$ (defined in the next section).
+The {\em positivity domain} of a quantum operation $\varepsilon$ is the set of states $\tau\in\mathcal{S}(\mathcal{H}^S)$ where $\tau=\varepsilon(\rho^S)$ and $\rho^S \in\mathcal{S}(\mathcal{H}^S)$ (we will primarly be concerned with the case where  $\varepsilon$ is the reduced dynamics, which is defined in the next section).
 \end{definition} 
+
 This definition will be helpful in delineating when the sharp operation yields quantities that do not have clear physical interpretations. 
 
 A quantum state represents the experimenter's knowledge of his system.  The density matrix representing his quantum state allows him to probabilistically predict the outcomes of measurements he might perform on that state.  The bath is defined by its inaccessibility to the experimenter.  He does not have full knowledge of the bath; if he did, he could (at least partially) control it through his interactions with the reduced system and the reduced system's interactions with the bath.  Hence, the bath is inaccessible to him, in part at least, due to his ignorance of it.  It is an interesting philosophical dilemma to demand a valid density matrix representation (which represents the experimenter's knowledge of possible measurement outcomes) of a system defined by the experimenter's ignorance.  Why should the composite system by represented by a valid density matrix at all?  Should there be a statistical interpretation of the bath, which, by definition, cannot be experimented on directly?  These questions point out some of the philosophical difficulties with demanding a positive assignment map.
@@ -520,6 +525,7 @@ Both types of vectors will follow all the rules outlined below.
 \begin{definition}
 A {\em transformation matrix} is a matrix of complex values that takes one vector of states to another.
 \end{definition}
+
 For example, the relationship between two vectors of states $\vec{x}$ and $\vec{y}$ might be defined by the transformation matrix $\hat{T}$ as
 $$
 \vec{y} = \vec{x}\hat{T}\;\;.
@@ -587,8 +593,9 @@ $$
 where $\vec{\tau}$ is a qubit vector of states and $\vec{c}$ is a vector of complex numbers.
 
 \begin{definition}
-A {\em superoperator} is a linear operator that takes an operator to another operator.  Specifically, we will be using superoperators represented by matrices that take an operator represented by matrix to another operator represented by a matrix (e.g.\ to take density operators to other density operators).
+A {\em superoperator} is a linear operator that takes an operator to another operator.  Specifically, we will be using superoperators represented by matrices that take an operator represented by a matrix to another operator represented by a matrix (e.g.\ to take density operators to other density operators).
 \end{definition}
+
 It will be shown in the next section that a superoperator representing a quantum channel can be completely characterized in the lab using the states in a tomography vector.  Operations acting on a vector of states to yield a new structure (other than another vector of states) are called constructors and will be denoted with boldface and the operator $\odot$.  
 \begin{definition}
 A {\em constructor} takes a vector of states to something other than a vector of states.  Specifically, we will use constructors to take vectors of states to superoperators or specific kinds of matrices.
@@ -737,7 +744,7 @@ Notice
 \tau_4 &=& \frac{\sigma_0+\sigma_2}{2},\;\mathrm{and}\\
 \tau_5 &=& \frac{\sigma_0-\sigma_2}{2}\;\;,
 \end{eqnarray*}
-are all valid density operators.  Therefore, these states can be created in the lab.  They are all projectors, so they all can be used as measurement operators.  Any experimenter can choose one of the sets of measurement operators (i.e.\ $\mathbb{M}_0$, $\mathbb{M}_+$, or $\mathbb{M}_i$) and obtain $\sigma_0$ along with one of the remaining three Pauli operators.  The other two Pauli operators can be obtained with a single member from each of the other two sets.  For example, suppose the experimenter decides to use the natural set $\mathbb{M}_0$.  He can write the Pauli vector in terms of measurement operators as
+are all valid density operators and can be created in the lab.  They are all projectors, so they all can be used as measurement operators.  Any experimenter can choose one of the sets of measurement operators (i.e.\ $\mathbb{M}_0$, $\mathbb{M}_+$, or $\mathbb{M}_i$) and obtain $\sigma_0$ along with one of the remaining three Pauli operators.  The other two Pauli operators can be obtained with a single member from each of the other two sets.  For example, suppose the experimenter decides to use the natural set $\mathbb{M}_0$.  He can write the Pauli vector in terms of measurement operators as
 $$
 \vec{\sigma} = (\sigma_0,\sigma_1,\sigma_2,\sigma_3) = (\tau_0+\tau_1,\tau_0+\tau_1-2\tau_3,\tau_0+\tau_1-2\tau_5,\tau_0-\tau_1)\;\;,
 $$
@@ -749,25 +756,25 @@ which requires $\tau_0$, $\tau_1$, $\tau_2$, and $\tau_4$.  He might also choose
 $$
 \vec{\sigma} = (\tau_4+\tau_5,2\tau_2-\tau_4-\tau_5,\tau_4-\tau_5,2\tau_0-\tau_4-\tau_5)\;\;,
 $$
-which requires $\tau_4$, $\tau_5$, $\tau_2$, and $\tau_0$.  In this way, the experimenter can express the Pauli vector (i.e.\ any qubit density operator) with a set of four measurement operators.  This set is the tomography vector (or tomography set) for a qubit channel, and will be written down as a vector of states, e.g.\
+which requires $\tau_4$, $\tau_5$, $\tau_2$, and $\tau_0$.  In this way, the experimenter can express the Pauli vector (i.e.\ any qubit density operator) with a set of four measurement operators.  This set is a tomography vector for a qubit channel, e.g.\
 $$
 \vec{\tau} = (\tau_0,\tau_3,\tau_5,\tau_1)\;\;.
 $$
 For reference, every possible tomography vector constructed from members of $\mathbb{M}_{0}$, $\mathbb{M}_{+}$, and $\mathbb{M}_{i}$ has been written in Table \ref{tab:tomosets}.
 \begin{table}[t]
-\centering
-\begin{tabular}{ccc}
-\toprule
-$\mathbb{M}_0$ & $\mathbb{M}_+$ & $\mathbb{M}_i$ \\
-\midrule
-$(\tau_0,\tau_1,\tau_2,\tau_4)$ & $(\tau_2,\tau_3,\tau_4,\tau_0)$ & $(\tau_4,\tau_5,\tau_0,\tau_2)$ \\
-$(\tau_0,\tau_1,\tau_3,\tau_4)$ & $(\tau_2,\tau_3,\tau_5,\tau_0)$ & $(\tau_4,\tau_5,\tau_1,\tau_2)$ \\
-$(\tau_0,\tau_1,\tau_2,\tau_5)$ & $(\tau_2,\tau_3,\tau_4,\tau_1)$ & $(\tau_4,\tau_5,\tau_0,\tau_3)$ \\
-$(\tau_0,\tau_1,\tau_3,\tau_5)$ & $(\tau_2,\tau_3,\tau_5,\tau_1)$ & $(\tau_4,\tau_5,\tau_1,\tau_3)$ \\
-\bottomrule
-\end{tabular}
 \caption{These are the possible tomography vectors (up to permutation) for a qubit channel formed using members of the measurement sets described in the text.  The vectors are grouped by the set of ideal measurement operators used to form $\sigma_0$.  See the text for definitions of those sets and the various states.}
 \label{tab:tomosets}
+\begin{tabular}{ccc}
+\cb
+$\mathbb{M}_0$ &\cb $\mathbb{M}_+$ &\cb $\mathbb{M}_i$ \upstrut{4mm}
+    \\
+
+\cw $(\tau_0,\tau_1,\tau_2,\tau_4)$ &\cw $(\tau_2,\tau_3,\tau_4,\tau_0)$ &\cw $(\tau_4,\tau_5,\tau_0,\tau_2)$ \\
+\cy $(\tau_0,\tau_1,\tau_3,\tau_4)$ &\cy $(\tau_2,\tau_3,\tau_5,\tau_0)$ &\cy $(\tau_4,\tau_5,\tau_1,\tau_2)$ \\
+\cw $(\tau_0,\tau_1,\tau_2,\tau_5)$ &\cw $(\tau_2,\tau_3,\tau_4,\tau_1)$ &\cw $(\tau_4,\tau_5,\tau_0,\tau_3)$ \\
+\cy $(\tau_0,\tau_1,\tau_3,\tau_5)$ &\cy $(\tau_2,\tau_3,\tau_5,\tau_1)$ &\cy $(\tau_4,\tau_5,\tau_1,\tau_3)$ \\
+\hline
+\end{tabular}
 \end{table}
 
 A qubit density matrix is a 2$\times$2 matrix, hence, following the discussion above, there is a way to write $\rho$ as
@@ -786,7 +793,8 @@ The notation for transforming between $\vec{\sigma}$ and $\vec{\tau}$ would be
 $$
 \vec{\sigma} = \vec{\tau}\hat{R}\;\;.
 $$
-For example, given $\vec{\tau} = (\tau_0,\tau_2,\tau_4,\tau_1)$,
+\begin{example}
+Given $\vec{\tau} = (\tau_0,\tau_2,\tau_4,\tau_1)$,
 $$
 \hat{R} = \begin{pmatrix}
 1 & -1 & -1 & 1\\
@@ -806,6 +814,7 @@ which leads to
 &=& (\tau_0+\tau_1,-\tau_0+2\tau_2-\tau_1,-\tau_0+2\tau_4-\tau_1,\tau_0-\tau_1)\\
 &=& (\sigma_0,\sigma_1,\sigma_2,\sigma_3)\;\;.
 \end{eqnarray*}
+\end{example}
 In general, the transformation matrix $\hat{R}$ can be found by recognizing that the above vector of states equation is equivalent (by a restacking procedure) to the matrix equation
 $$
 \sigma_M = \tau_M\hat{R}
@@ -822,6 +831,7 @@ with $\{\vec{\tau}\}_i$ as the $i$th element of $\vec{\tau}$.  The restacking pr
 $$
 \hat{R} = \tau_M^{-1}\sigma_M\;\;.
 $$
+\begin{example}
 Following the example above with $\vec{\tau} = (\tau_0,\tau_2,\tau_4,\tau_1)$, this expression yields
 $$
 \hat{R} = \left(\begin{pmatrix}
@@ -841,11 +851,13 @@ $$
  1 & -1 & -1 & -1
 \end{pmatrix}
 $$
+\end{example}
 
 As explained in Sec.\ \ref{sec:notation}, $\hat{R}$ has an inverse, therefore
 $$
 \vec{\tau} = \vec{\sigma}\hat{R}^{-1}\;\;.
 $$
+\begin{example}
 Following the above example,
 \begin{eqnarray*}
 \vec{\sigma}\hat{R}^{-1} &=& (\sigma_0,\sigma_1,\sigma_2,\sigma_3)\begin{pmatrix}
@@ -858,15 +870,20 @@ Following the above example,
 &=& (\tau_0,\tau_2,\tau_4,\tau_1)\\
 &\equiv& \vec{\tau}\;\;. 
 \end{eqnarray*}
+\end{example}
 This relationship can be useful in moving between the different basis representations of the qubit density matrix, e.g.\
 $$
-\rho = \vec{c}\cdot\vec{\tau} = \vec{r}\cdot\vec{\sigma} = \vec{r}\cdot\left(\vec{\tau}\hat{R}\right)\;\;,
+\rho = \vec{c}\cdot\vec{\tau} = \vec{r}\cdot\vec{\sigma} = \vec{r}\cdot\left(\vec{\tau}\hat{R}\right)\;\;.
 $$
-and, again following the above example, this would lead to 
+\begin{example}
+Again, following the above example, this would lead to 
 \begin{eqnarray*}
-c_0\tau_0+c_1\tau_2+c_2\tau_4+c_3\tau_1 &=& r_0\left(\tau_0+\tau_1\right)+r_1\left(-\tau_0+2\tau_2-\tau_1\right)+r_2\left(-\tau_0+2\tau_4-\tau_1\right)+r_3\left(\tau_0-\tau_1\right)\\
-&=& \left(r_0-r_1-r_2+r_3\right)\tau_0+2r_1\tau_2+2r_2\tau_4+\left(r_0-r_1-r_2-r_3\right)\tau_1\;\;.
+c_0\tau_0+c_1\tau_2+c_2\tau_4+c_3\tau_1 &=& r_0\left(\tau_0+\tau_1\right)+r_1\left(-\tau_0+2\tau_2-\tau_1\right)\\
+& &+r_2\left(-\tau_0+2\tau_4-\tau_1\right)+r_3\left(\tau_0-\tau_1\right)\\
+&=& \left(r_0-r_1-r_2+r_3\right)\tau_0+2r_1\tau_2\\
+& &+2r_2\tau_4+\left(r_0-r_1-r_2-r_3\right)\tau_1\;\;.
 \end{eqnarray*}
+\end{example}
 Given two qubit tomography vectors $\vec{x}$ and $\vec{y}$ related by some transformation matrix $\hat{T}$ as
 $$
 \vec{x} = \vec{y} \hat{T}\;\;,
@@ -895,9 +912,10 @@ $$
 where $\hat{R}^T$ is the transpose of $\hat{R}$.  The coefficients $\vec{r}$ are straightforward to find given $\rho$
 as
 $$
-\vec{r} = \left(\frac{\trace(\sigma_0 \rho)}{2},\frac{\trace(\sigma_1 \rho)}{2},\frac{\trace(\sigma_2 \rho)}{2},\frac{\trace(\sigma_3 \rho)}{2}\right)\;\;,
+\vec{r} = \left(\frac{\trace(\sigma_0 \rho)}{2},\frac{\trace(\sigma_1 \rho)}{2},\frac{\trace(\sigma_2 \rho)}{2},\frac{\trace(\sigma_3 \rho)}{2}\right)\;\;.
 $$
-from which $\vec{c}$ in the example would become
+\begin{example}
+$\vec{c}$ in the example would become
 \begin{eqnarray*}
 \vec{r}\hat{R}^T &=& \left(\frac{\trace(\sigma_0 \rho)}{2},\frac{\trace(\sigma_1 \rho)}{2},\frac{\trace(\sigma_2 \rho)}{2},\frac{\trace(\sigma_3 \rho)}{2}\right)\begin{pmatrix}
 1 & 0 & 0 & 1\\
@@ -905,9 +923,11 @@ from which $\vec{c}$ in the example would become
 -1 & 0 & 2 & -1\\
 1 & 0 & 0 & -1
 \end{pmatrix}\\
-&=& \left(\frac{1}{2}\trace\left(\sigma_0 \rho-\sigma_1 \rho-\sigma_2 \rho+\sigma_3 \rho\right),\frac{2\trace(\sigma_1 \rho)}{2},\frac{2\trace(\sigma_2 \rho)}{2},\frac{1}{2}\trace\left(\sigma_0 \rho-\sigma_1 \rho-\sigma_2 \rho-\sigma_3 \rho\right)\right)\\
+&=& \left(\frac{1}{2}\trace\left(\sigma_0 \rho-\sigma_1 \rho-\sigma_2 \rho+\sigma_3 \rho\right),\frac{2\trace(\sigma_1 \rho)}{2},\right. \\
+& &\left.\frac{2\trace(\sigma_2 \rho)}{2},\frac{1}{2}\trace\left(\sigma_0 \rho-\sigma_1 \rho-\sigma_2 \rho-\sigma_3 \rho\right)\right)\\
 &=&\vec{c}\;\;.
 \end{eqnarray*}
+\end{example}
 
 These simple exercises of linear algebra will prove to be useful.  The relationships between these different representations can be quite useful to the experimentalist.  If a state is written as
 $$
@@ -925,7 +945,9 @@ where $|\rho|$ is the determinant of $\rho$.  These ``valid state conditions'' o
 $$
 \frac{1}{2}\left(\trace(\rho)\pm\sqrt{(\trace(\rho))^2-4|\rho|}\right)=\frac{1}{2}\left(1\pm\sqrt{c_0^2 + c_1^2 + c_2^2 - 2 c_0 c_3 + c_3^2}\right)\ge 0\;\;.
 $$
-The main idea of tomography is to find a complete description of the qubit channel using only valid states that can be created in the lab, and this process will result in linear combinations of tomography states that are not valid density matrices.  The experimentalist might be looking for the state
+The main idea of tomography is to find a complete description of the qubit channel using only valid states that can be created in the lab.  Consider the following example:
+\begin{example}
+The experimentalist might be looking for the state
 $$
 \rho = \begin{pmatrix}
 a & b\\
@@ -999,6 +1021,7 @@ $$
 \end{pmatrix} = \vec{c}_c\cdot\vec{\tau} = \frac{-(1-i)}{2}\tau_0+\tau_2-i\tau_4+\frac{-(1-i)}{2}\tau_1
 $$
 for this example\footnote{The expansion shown in this example is the only one provided in the discussion of quantum process tomography in \cite{Nielsen2010}, but the experimenter has many other choices for a tomography basis.}.  The experimenter can use this method to find any density operator in terms of whichever $\vec{\tau}$ is easiest for him to implement in his lab.  Notice that other transformation matrices can be used to transform between different tomography bases.  All these mathematical representations and the transformations between them will prove useful to an experimentalist who is limited in what he can prepare and measure.
+\end{example}
 
 If $\rho_x$ is a valid state, then 
 $$
@@ -1022,11 +1045,17 @@ where $\Phi$ is the map described in Sec.\ \ref{sec:map} and $\rho_0\equiv\rho(0
 $$
 \rho(t) = \Phi(\vec{c}\cdot\vec{\tau}) = \vec{c}\cdot\Phi(\vec{\tau})\;\;.
 $$
-Perhaps it is now evident why the linearity of $\Phi$ was insisted upon so tenaciously.  The linearity of $\Phi$ makes the design of tomography experiments straightforward.  For example, using the above tomography vector $\vec{\tau}$,
+Perhaps it is now evident why the linearity of $\Phi$ was insisted upon so tenaciously.  The linearity of $\Phi$ makes the design of tomography experiments straightforward.  
+\begin{example}
+Using the above tomography vector $\vec{\tau}$,
 $$
 \rho(t) = c_0\Phi(\tau_0)+c_1\Phi(\tau_2)+c_2\Phi(\tau_4)+c_3\Phi(\tau_1)\;\;.
 $$
-Determining $\Phi(\tau_i)$ is not necessarily simple.  It requires an entire state tomography experiment itself, but the entire qubit process can be completely characterized with only four such experiments.  From the derivation above (following the same example),
+\end{example}
+
+Determining $\Phi(\tau_i)$ is not necessarily simple.  It requires an entire state tomography experiment itself, but the entire qubit process can be completely characterized with only four such experiments.  
+\begin{example}
+From the derivation above (following the same example),
 \begin{eqnarray*}
 \rho(t) &=& \Phi(\rho_0)\\
 &=& \Phi\left(a\begin{pmatrix}
@@ -1045,6 +1074,7 @@ Determining $\Phi(\tau_i)$ is not necessarily simple.  It requires an entire sta
 &=& a\Phi(\tau_0) + b\Phi(\vec{c}_b\cdot\vec{\tau}) + c\Phi(\vec{c}_c\cdot\vec{\tau}) + d\Phi(\tau_1)\\
 &=& a\Phi(\tau_0) + b\vec{c}_b\cdot\Phi(\vec{\tau}) + c\vec{c}_c\cdot\Phi(\vec{\tau}) + d\Phi(\tau_1)\;\;.
 \end{eqnarray*}
+\end{example}
 
 This point is an opportune time to discuss some notational issues in the study of open systems.  Most of the notation introduced above is not standard.  It is, however, quite useful.  Typically, the map $\Phi$ is represented as a matrix superoperator possessing the same mathematical properties as $\Phi$, i.e.\
 $$
@@ -1066,7 +1096,8 @@ The superoperator notation would be used as
 $$
 \rho(t) = \Phi(\rho_0) \Rightarrow \Hcol(\rho(t)) = S \Hcol(\rho_0)\;\;.
 $$
-For example, if
+\begin{example}
+If
 $$
 \rho(t) = \Phi(\rho_0) = U\rho_0 U^\dagger
 $$
@@ -1079,8 +1110,11 @@ $$
 S = U^* \otimes U\;\;,
 $$
 where $U^*$ is the complex conjugate of $U$ \cite{Havel2003}.
+\end{example}
 
-The superoperator $S$ is characterized by the process tomography described above.  Notice, for example, the first column of the superoperator can be characterized by its action on the state $\tau_0(t)$ at some initial time $t=0$, i.e.\
+The superoperator $S$ is characterized by the process tomography described above.  
+\begin{example}
+Notice the first column of the superoperator can be characterized by its action on the state $\tau_0(t)$ at some initial time $t=0$, i.e.\
 \begin{eqnarray*}
 \Hcol(\tau_0(t)) &=& S \Hcol(\tau_0(0))\\ 
 &=& \begin{pmatrix}
@@ -1128,7 +1162,10 @@ s_{21}\\
 s_{31}
 \end{pmatrix} &=& S \Hcol(\tau_1(0))\;\;,
 \end{eqnarray*}
-where $S$ is a superoperator representing some quantum operation implemented in the lab and each of the tomography states in $\vec{\tau}$ represent the state of the reduced system prepared at time $t=0$.  The experimenter can completely characterize the operation represented by the matrix $S$ by its action on $\vec{\tau}$.  The qubit channel is characterized performing four separate experiments and is represented as a matrix superoperator $S$ or the map $\Phi$.     
+where $S$ is a superoperator representing some quantum operation implemented in the lab and each of the tomography states in $\vec{\tau}$ represent the state of the reduced system prepared at time $t=0$.  The experimenter can completely characterize the operation represented by the matrix $S$ by its action on $\vec{\tau}$.    
+\end{example}
+
+The qubit channel is characterized performing four separate experiments and is represented as a matrix superoperator $S$ or the map $\Phi$.     
 
 Process tomography is the method by which the experimenter will probe his channel and is, therefore, a crucial part of quantum information theory.  The discussion of complete positivity will hinge on tomography experiments.  Complete positivity is a mathematical requirement imposed on $\Phi$ (and $S$) that needs to be verified experimentally through tomography experiments before it can be considered ``correct''.  
 
@@ -1193,11 +1230,13 @@ A superoperator for this channel can be found with the tomography vector $\vec{\
 1&1\\
 1&1
 \end{pmatrix}\;\;,\\
-\vec{c}_c\cdot\left(U:\vec{\tau}^\sharp:U^\dagger\right)^\flat &=& \frac{-(1-i)}{2}\ketbra{+}{+}+\ketbra{1}{1}-i\ketbra{0}{0}+\frac{-(1-i)}{2}\ketbra{+}{+}=\frac{1}{2}\begin{pmatrix}
+\vec{c}_c\cdot\left(U:\vec{\tau}^\sharp:U^\dagger\right)^\flat &=& \frac{-(1-i)}{2}\ketbra{+}{+}+\ketbra{1}{1}-i\ketbra{0}{0}+\frac{-(1-i)}{2}\ketbra{+}{+}\\
+&=&\frac{1}{2}\begin{pmatrix}
 -(i+1)&i-1\\
 i-1&i+1
 \end{pmatrix}\;\;,\\
-\vec{c}_b\cdot\left(U:\vec{\tau}^\sharp:U^\dagger\right)^\flat &=& \frac{-(1+i)}{2}\ketbra{+}{+}+\ketbra{1}{1}+i\ketbra{0}{0}+\frac{-(1+i)}{2}\ketbra{+}{+}=\frac{1}{2}\begin{pmatrix}
+\vec{c}_b\cdot\left(U:\vec{\tau}^\sharp:U^\dagger\right)^\flat &=& \frac{-(1+i)}{2}\ketbra{+}{+}+\ketbra{1}{1}+i\ketbra{0}{0}+\frac{-(1+i)}{2}\ketbra{+}{+}\\
+&=&\frac{1}{2}\begin{pmatrix}
 -(1-i)&-(i+1)\\
 -(i+1)&1-i
 \end{pmatrix}\;\;,\\
@@ -1370,12 +1409,13 @@ In the above example, what evidence is there that $S$, $S^\prime$, and $S^{\prim
 \end{itemize}
 It could be argued that identical bath behavior implies identical channels, i.e.\ $S$, $S^\prime$, and $S^{\prime\prime}$ are different superoperator representations of the same channel. 
 
-The evidence provided from an experimental point of view might be much different.  Suppose $S$, $S^\prime$, and $S^{\prime\prime}$ are from three tomography experiments conducted consecutively on some carefully constructed set-up in some carefully controlled environment.  It could be argued that the experimentalist has very carefully performed tomography of the same experiment three separate times in three separate ways.  ``Logic'' dictates that he has tomographically characterized the same channel three times.  Hence he, like the theorist above, believes $S$, $S^\prime$, and $S^{\prime\prime}$ are different superoperator representations of the same channel.
+The evidence provided from an experimental point of view might be much different.  Suppose $S$, $S^\prime$, and $S^{\prime\prime}$ are from three tomography experiments conducted consecutively on some carefully constructed set-up in some carefully controlled environment.  It could be argued that the experimentalist has very carefully performed tomography of the same experiment three separate times in three separate ways.  ``Logic'' dictates that he has tomographically characterized the same channel three times.  As such, he, like the theorist above, believes $S$, $S^\prime$, and $S^{\prime\prime}$ are different superoperator representations of the same channel.
 
-The interpretation of $S$, $S^\prime$, and $S^{\prime\prime}$ as different superoperator representations of the same channel is difficult to make.  The theorist's argument can be refuted on the grounds of his ``logical structure''.  Ignorance defines the bath.  The ``theoretical argument'' in this example is forced to introduce partial knowledge of the bath, which is suspect.
+The interpretation of $S$, $S^\prime$, and $S^{\prime\prime}$ as different superoperator representations of the same channel is difficult to defend.  The theorist's argument can be refuted on the grounds of his ``logical structure''.  Ignorance defines the bath.  The ``theoretical argument'' in this example is forced to introduce partial knowledge of the bath, which is suspect.
 
 The ``experimental argument'' does not fare any better.  The three tomography experiments must be made at different times, or must be made on different set-ups.  The bath is defined by ignorance, hence claiming identical baths in these three experiments is tantamount to claims of (at least) partial knowledge of the bath.  Both the theorist and experimenter must use partial knowledge of the bath to claim $S$, $S^\prime$, and $S^{\prime\prime}$ are different superoperator representations of the same channel.
 
 Partial knowledge of the bath is not necessarily a problem, but it is difficult to justify.  The most conservative interpretation is that $S$, $S^\prime$, and $S^{\prime\prime}$ represent different channels.  This interpretation implies that every new tomography experiment (leading to a new superoperator) must be considered a new, different channel.
 
-As with everything else in physics, the question of whether or not superoperators with positivity domains are good representations of channels will come from empirical data.  In this work, we will assume such superoperators are reasonable and we will show that their impact on the complete positivity assumption for quantum operations.
+As with everything else in physics, the question of whether or not superoperators with positivity domains are good representations of channels will come from empirical data.  In this work, we will assume such superoperators are reasonable and we will show their impact on the complete positivity assumption for quantum operations.
+
