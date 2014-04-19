@@ -1,0 +1,67 @@
+
+% abbreviate Sample FrontMatter
+
+% we can take care of the frontmatter for you 
+
+% we will need an Abstract and Keywords - please see a sample below
+
+\def\TITLE{Negative Quantum Channels}
+\def\SUBTITLE{{\small An Introduction to Quantum Channels that Violate the Complete Positivity Assumption}}
+\def\AUTHOR{James M. McCracken}
+\def\AFFILIATION{George Mason University}
+\def\LECTURE{\ \#1}
+\def\lcSYNTHESIS{Synthesis Lectures on SAMPLE SERIES}
+\def\SYNTHESIS{\uppercase{Synthesis Lectures on SAMPLE SERIES}}
+
+%%%%%%%%%%%% FULL TITLE 5
+
+\thispagestyle{emptyrule}
+\title{\TITLE \\ \SUBTITLE}
+
+\vspace*{2pc}
+\authorname{\AUTHOR}
+\authoraffiliation{\AFFILIATION}
+
+\vfill
+\synthesis{\SYNTHESIS\LECTURE}
+\morganlogo
+\clearpage
+
+
+%%%%%%%%%%%% ABSTRACT AND KEY TERMS ( \keywords{ ... } ) 6
+
+\thispagestyle{emptyrule}
+
+\ABSTRACT
+\noindent
+Negative Quantum Channels are not completely positive.
+
+\noindent
+
+%end ABSTRACT
+
+\keywords{%
+complete positivity, quantum process tomography, quantum information, quantum channels\\
+}
+
+\vfill
+\pagebreak
+
+\tableofcontents
+
+\newpage
+\thispagestyle{emptyrule}
+\begin{center}
+{\em Dedication line}
+\end{center}
+
+\newpage
+\section*{Preface}
+Long-winded, personal introduction.
+
+\newpage
+\section*{Aknowledgments}
+Thanks, Cesar.
+
+\newpage
+

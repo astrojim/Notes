@@ -47,17 +47,17 @@
 \contentsline {section}{\numberline {3.13}{Uses for Negative Channels}}{114}
 \contentsline {subsection}{\numberline {3.13.1}{Probing the Bath}}{114}
 \contentsline {subsubsection}{\numberline {}{Coupling Alone}}{114}
-\contentsline {subsubsection}{\numberline {}{Correlation Alone}}{115}
+\contentsline {subsubsection}{\numberline {}{Correlation Alone}}{116}
 \contentsline {subsubsection}{\numberline {}{Coupling and Correlation Together}}{118}
 \contentsline {subsubsection}{\numberline {}{Determining the Completely Positive Parameter Space}}{119}
-\contentsline {subsection}{\numberline {3.13.2}{Speculation on Utilities}}{120}
-\contentsline {chapter}{\numberline {4}{Conclusions}}{125}
-\contentsline {section}{\numberline {4.1}{Complete Positivity in Recent Years}}{125}
-\contentsline {section}{\numberline {4.2}{Closing Remarks}}{127}
-\contentsline {chapter}{\numberline {5}{Appendix}}{130}
-\contentsline {section}{\numberline {5.1}{Discussion of the Reduced System Definition}}{130}
-\contentsline {section}{\numberline {5.2}{General Reduced System Dynamics}}{133}
-\contentsline {section}{\numberline {5.3}{General Form of Initial Reduced System State}}{136}
-\contentsline {section}{\numberline {5.4}{Completeness Relation for $\mathaccentV {hat}05E{S}_{q\phi }$}}{136}
-\contentsline {section}{\numberline {5.5}{Rabi Model Derivation}}{139}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }{Author's Biography}}{148}
+\contentsline {subsection}{\numberline {3.13.2}{Speculation on Utilities}}{122}
+\contentsline {chapter}{\numberline {4}{Conclusions}}{124}
+\contentsline {section}{\numberline {4.1}{Complete Positivity in Recent Years}}{124}
+\contentsline {section}{\numberline {4.2}{Closing Remarks}}{126}
+\contentsline {chapter}{\numberline {5}{Appendix}}{129}
+\contentsline {section}{\numberline {5.1}{Discussion of the Reduced System Definition}}{129}
+\contentsline {section}{\numberline {5.2}{General Reduced System Dynamics}}{132}
+\contentsline {section}{\numberline {5.3}{General Form of Initial Reduced System State}}{135}
+\contentsline {section}{\numberline {5.4}{Completeness Relation for $\mathaccentV {hat}05E{S}_{q\phi }$}}{135}
+\contentsline {section}{\numberline {5.5}{Rabi Model Derivation}}{138}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{Author's Biography}}{147}
