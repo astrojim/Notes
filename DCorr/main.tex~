@@ -73,17 +73,17 @@ The CCM algorithm depends on the embedding dimension $E$ and the lag time step $
 \newpage
 \begin{figure}[ht]
 \label{fig:}
-\includegraphics[scale=0.5]{Figure2.eps}
+\includegraphics[scale=0.4]{Figure2.eps}
 \caption{The determination of CCM causality in a system is dependent on the CCM parameters of embedding dimension $E$ and lag time step $\tau$.  This plot show the dependence of Eqn.\ \ref{eqn:delta} on $E$ and $\tau$ for the example system discussed in the text.}
 \end{figure}
 \begin{figure}[ht]
 \label{fig:}
-\includegraphics[scale=0.5]{Figure2_alt.eps}
+\includegraphics[scale=0.4]{Figure2_alt.eps}
 \caption{ALT code comparison for Fig 2.}
 \end{figure}
 \begin{figure}[ht]
 \label{fig:}
-\includegraphics[scale=0.5]{Figure2_diff.eps}
+\includegraphics[scale=0.4]{Figure2_diff.eps}
 \caption{diff for ALT code comparison for Fig 2.}
 \end{figure}
 \newpage
