@@ -57,17 +57,21 @@ In this example, the CCM causality of this system is determined by sampling both
 Sugihara {\em et al. }consider convergence to be critically important to determining CCM causality, identifying it as ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 \begin{figure}[ht]
 \label{fig:}
-\includegraphics[scale=0.6]{Figure1.eps}
+\begin{tabular}{cc}
+\includegraphics[scale=0.9]{Figure1A.eps} & \includegraphics[scale=0.9]{Figure1B.eps}\\
+(a) & (b) \\[6pt]
+%\includegraphics[scale=0.6]{Figure1C.eps} & \includegraphics[scale=0.6]{Figure1D.eps}\\
+ & \\
+(c) & (d) \\[6pt]
+\end{tabular}
 \caption{These plots show the dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  See the text for details on how these plots were created along with a discussion of the interpretation of these plots in terms of the CCM causality.}
 \end{figure}
 \begin{figure}[ht]
 \label{fig:}
-\includegraphics[scale=0.45]{RefFigure.eps}
-\caption{Reference figure.}
-\end{figure}
-\begin{figure}[ht]
-\label{fig:}
-\includegraphics[scale=0.45]{RefFigureA.eps}
+\begin{tabular}{cc}
+\includegraphics[scale=0.9]{RefFigureA.eps} & \includegraphics[scale=0.9]{RefFigureB.eps}\\
+(a) $\beta_xy = ??,\;\beta_yx=?$ & (b) $\beta_xy = ??,\;\beta_yx=?$\\[6pt]
+\end{tabular}
 \caption{Reference figure.}
 \end{figure}
 
@@ -78,18 +82,15 @@ The CCM algorithm depends on the embedding dimension $E$ and the lag time step $
 \newpage
 \begin{figure}[ht]
 \label{fig:}
-\includegraphics[scale=0.4]{Figure2.eps}
+\begin{tabular}{c}
+\includegraphics[scale=0.45]{Figure2.eps}\\
+(a) Bug Fix \\
+\includegraphics[scale=0.45]{Figure2_alt.eps}\\
+(b) Demonstration of alternate correlation calculation \\[6pt]
+\includegraphics[scale=0.45]{Figure2_diff.eps}\\
+(c) Difference between (a) and (b)
+\end{tabular}
 \caption{The determination of CCM causality in a system is dependent on the CCM parameters of embedding dimension $E$ and lag time step $\tau$.  This plot show the dependence of Eqn.\ \ref{eqn:delta} on $E$ and $\tau$ for the example system discussed in the text.}
-\end{figure}
-\begin{figure}[ht]
-\label{fig:}
-\includegraphics[scale=0.4]{Figure2_alt.eps}
-\caption{ALT code comparison for Fig 2.}
-\end{figure}
-\begin{figure}[ht]
-\label{fig:}
-\includegraphics[scale=0.4]{Figure2_diff.eps}
-\caption{diff for ALT code comparison for Fig 2.}
 \end{figure}
 \newpage
 
@@ -269,6 +270,8 @@ It is assumed that the lag time step $\tau$ is determined (e.g.\ with the autoco
 \bibliography{main}
 
 \end{document}
+
+
 
 
 

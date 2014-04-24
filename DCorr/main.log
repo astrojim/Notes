@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  22 APR 2014 19:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  23 APR 2014 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,15 +264,6 @@ LaTeX Warning: Label `fig:' multiply defined.
 
 LaTeX Warning: Label `fig:' multiply defined.
 
-
-LaTeX Warning: Label `fig:' multiply defined.
-
-
-LaTeX Warning: Label `fig:' multiply defined.
-
-
-LaTeX Warning: Label `fig:' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -334,35 +325,33 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 
 ]
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 2 undefined on input line 55.
 
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:' on page 2 undefined on input line 57.
 
-File: Figure1.eps Graphic file (type eps)
-<Figure1.eps>
-Overfull \hbox (132.4258pt too wide) in paragraph at lines 60--61
-[][] 
- []
-
-File: RefFigure.eps Graphic file (type eps)
-<RefFigure.eps>
+File: Figure1A.eps Graphic file (type eps)
+<Figure1A.eps>
+File: Figure1B.eps Graphic file (type eps)
+ <Figure1B.eps>
 File: RefFigureA.eps Graphic file (type eps)
  <RefFigureA.eps>
+File: RefFigureB.eps Graphic file (type eps)
+ <RefFigureB.eps>
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 2 undefined on input line 77.
+LaTeX Warning: Reference `fig:' on page 2 undefined on input line 81.
 
 [2] [3]
 File: Figure2.eps Graphic file (type eps)
@@ -370,64 +359,66 @@ File: Figure2.eps Graphic file (type eps)
 File: Figure2_alt.eps Graphic file (type eps)
  <Figure2_alt.eps>
 File: Figure2_diff.eps Graphic file (type eps)
- <Figure2_diff.eps> [4] [5]
+ <Figure2_diff.eps>
 
-Package caption Warning: \label without proper \caption on input line 164.
+LaTeX Warning: Float too large for page by 85.05263pt on input line 94.
+
+
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 6 undefined on input line 118.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 119.
 
 File: Figure3.eps Graphic file (type eps)
 <Figure3.eps>
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 6 undefined on input line 124.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 125.
 
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 6 undefined on input line 144.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 145.
 
 File: Figure4.eps Graphic file (type eps)
 <Figure4.eps>
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 6 undefined on input line 150.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 151.
 
 File: Figure5.eps Graphic file (type eps)
 <Figure5.eps>
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 6 undefined on input line 154.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 155.
 
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 6 undefined on input line 154.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 155.
 
-[6]
 
-Package caption Warning: \label without proper \caption on input line 164.
+Package caption Warning: \label without proper \caption on input line 165.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:' on page 7 undefined on input line 162.
+LaTeX Warning: Reference `fig:' on page 4 undefined on input line 163.
 
-[7] [8] [9] (./main.bbl) [10] (./main.aux)
+[4] [5] [6] (./main.bbl [7]) [8] [9] [10] [11] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -436,12 +427,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4231 strings out of 494044
- 63006 string characters out of 6155041
- 144728 words of memory out of 5000000
- 7563 multiletter control sequences out of 15000+600000
+ 4233 strings out of 494044
+ 63034 string characters out of 6155041
+ 147729 words of memory out of 5000000
+ 7564 multiletter control sequences out of 15000+600000
  14033 words of font info for 50 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
- 42i,8n,38p,1076b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,10n,38p,1076b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (10 pages, 39816 bytes).
+Output written on main.dvi (11 pages, 40112 bytes).
