@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  18 APR 2014 20:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  2 MAY 2014 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1246,45 +1246,40 @@ Package natbib Warning: Citation `Wilde2013' on page 62 undefined on input line
 Chapter 3.
 [64
 
-] [65]
+]
 
-Package natbib Warning: Citation `Paris2004' on page 66 undefined on input line
+Package natbib Warning: Citation `Paris2004' on page 65 undefined on input line
  47.
 
 
-Package natbib Warning: Citation `Nielsen2010' on page 66 undefined on input li
+Package natbib Warning: Citation `Nielsen2010' on page 65 undefined on input li
 ne 47.
 
-[66] [67] [68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69]
-[70] [71]
+[65] [66] [67] [68] [69] [70] [71]
 
 Package natbib Warning: Citation `Feynman1963' on page 72 undefined on input li
 ne 321.
 
-[72] [73]
+[72]
 LaTeX Font Info:    Calculating math sizes for size <13.5> on input line 373.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9.44995> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 373.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6.75> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 373.
- [74]
-LaTeX Font Info:    Calculating math sizes for size <9.15> on input line 448.
+LaTeX Font Info:    Calculating math sizes for size <9.15> on input line 391.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9.15> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 448.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 391.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6.40495> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 448.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 391.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <4.575> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 448.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 391.
 
 Overfull \vbox (1.72256pt too high) has occurred while \output is active []
 
 
-[75]
+[73] [74]
 
-Package natbib Warning: Citation `Landau1977' on page 76 undefined on input lin
+Package natbib Warning: Citation `Landau1977' on page 75 undefined on input lin
 e 466.
 
 
@@ -1294,16 +1289,20 @@ sy/m/n/10.5 ^^B$\OT1/cmr/m/n/10.5 4 ma-trix con-structed from the eigen-vec-tor
 s of $\OML/cmm/m/it/10.5 H[]$ \OT1/cmr/m/n/10.5 and $^^C =
  []
 
-[76]
+
 Overfull \vbox (1.72256pt too high) has occurred while \output is active []
 
 
-[77] [78]
-
-Package natbib Warning: Citation `Zettili2009' on page 79 undefined on input li
-ne 599.
+[75] [76]
+Overfull \vbox (1.72256pt too high) has occurred while \output is active []
 
 
+[77]
+
+Package natbib Warning: Citation `Zettili2009' on page 78 undefined on input li
+ne 606.
+
+[78]
 Overfull \vbox (1.72256pt too high) has occurred while \output is active []
 
 
@@ -1316,573 +1315,547 @@ Overfull \vbox (1.72256pt too high) has occurred while \output is active []
 
 
 [83] [84]
-Overfull \vbox (1.72256pt too high) has occurred while \output is active []
 
+Package natbib Warning: Citation `Mikio2008' on page 85 undefined on input line
+ 856.
+
+
+Package natbib Warning: Citation `Kok2010' on page 85 undefined on input line 8
+56.
+
+
+Package natbib Warning: Citation `Barnett2002' on page 85 undefined on input li
+ne 856.
+
+
+Package natbib Warning: Citation `Mandel1995' on page 85 undefined on input lin
+e 856.
+
+
+Package natbib Warning: Citation `Loudon2000' on page 85 undefined on input lin
+e 856.
+
+
+Package natbib Warning: Citation `Loudon2000' on page 85 undefined on input lin
+e 856.
+
+
+Package natbib Warning: Citation `Orszag2008' on page 85 undefined on input lin
+e 856.
+
+
+Package natbib Warning: Citation `Suter1997' on page 85 undefined on input line
+ 856.
+
+
+Package natbib Warning: Citation `Barnett2002' on page 85 undefined on input li
+ne 856.
+
+
+Package natbib Warning: Citation `Mikio2008' on page 85 undefined on input line
+ 856.
 
 [85]
 
-Package natbib Warning: Citation `Mikio2008' on page 86 undefined on input line
- 849.
-
-
 Package natbib Warning: Citation `Kok2010' on page 86 undefined on input line 8
-49.
-
-
-Package natbib Warning: Citation `Barnett2002' on page 86 undefined on input li
-ne 849.
-
-
-Package natbib Warning: Citation `Mandel1995' on page 86 undefined on input lin
-e 849.
-
-
-Package natbib Warning: Citation `Loudon2000' on page 86 undefined on input lin
-e 849.
-
-
-Package natbib Warning: Citation `Loudon2000' on page 86 undefined on input lin
-e 849.
-
-
-Package natbib Warning: Citation `Orszag2008' on page 86 undefined on input lin
-e 849.
+58.
 
 
 Package natbib Warning: Citation `Suter1997' on page 86 undefined on input line
- 849.
+ 873.
 
 
 Package natbib Warning: Citation `Barnett2002' on page 86 undefined on input li
-ne 849.
+ne 875.
 
 
-Package natbib Warning: Citation `Mikio2008' on page 86 undefined on input line
- 849.
-
-
-Package natbib Warning: Citation `Kok2010' on page 86 undefined on input line 8
-51.
+Package natbib Warning: Citation `Barnett2002' on page 86 undefined on input li
+ne 875.
 
 [86]
 
-Package natbib Warning: Citation `Suter1997' on page 87 undefined on input line
- 866.
-
-
-Package natbib Warning: Citation `Barnett2002' on page 87 undefined on input li
-ne 868.
-
-
-Package natbib Warning: Citation `Barnett2002' on page 87 undefined on input li
-ne 868.
-
-
 Package natbib Warning: Citation `Horn1990' on page 87 undefined on input line 
-886.
+893.
 
 [87] [88] <figure1.pdf, id=370, 586.83241pt x 442.29242pt>
 File: figure1.pdf Graphic file (type pdf)
  <use figure1.pdf>
-Package pdftex.def Info: figure1.pdf used on input line 965.
+Package pdftex.def Info: figure1.pdf used on input line 972.
 (pdftex.def)             Requested size: 440.12323pt x 331.71849pt.
 
-Overfull \hbox (26.12323pt too wide) in paragraph at lines 965--966
+Overfull \hbox (26.12323pt too wide) in paragraph at lines 972--973
 [][] 
  []
 
 <figure2.pdf, id=371, 586.83241pt x 442.29242pt>
 File: figure2.pdf Graphic file (type pdf)
  <use figure2.pdf>
-Package pdftex.def Info: figure2.pdf used on input line 971.
+Package pdftex.def Info: figure2.pdf used on input line 978.
 (pdftex.def)             Requested size: 440.12323pt x 331.71849pt.
 
-Overfull \hbox (26.12323pt too wide) in paragraph at lines 971--972
+Overfull \hbox (26.12323pt too wide) in paragraph at lines 978--979
 [][] 
  []
 
-[89] <figure3.pdf, id=375, 586.83241pt x 442.29242pt>
+<figure3.pdf, id=372, 586.83241pt x 442.29242pt>
 File: figure3.pdf Graphic file (type pdf)
  <use figure3.pdf>
-Package pdftex.def Info: figure3.pdf used on input line 979.
+Package pdftex.def Info: figure3.pdf used on input line 986.
 (pdftex.def)             Requested size: 440.12323pt x 331.71849pt.
 
-Overfull \hbox (26.12323pt too wide) in paragraph at lines 979--980
+Overfull \hbox (26.12323pt too wide) in paragraph at lines 986--987
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90 <./figure1.pdf>] [91 <./figure2.pdf>] [92 <./figure3.pdf>]
+ [89]
 
-Package natbib Warning: Citation `Rodriguez2010' on page 93 undefined on input 
-line 996.
+Package natbib Warning: Citation `Rodriguez2010' on page 90 undefined on input 
+line 1003.
+
+
+Package natbib Warning: Citation `Sudarshen2007' on page 90 undefined on input 
+line 1003.
+
+
+Package natbib Warning: Citation `Sudarshen2007' on page 90 undefined on input 
+line 1003.
+
+[90 <./figure1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91 <./figure2.pdf>] [92 <./figure3.pdf>]
+
+Package natbib Warning: Citation `Devi2011' on page 93 undefined on input line 
+1028.
 
 
 Package natbib Warning: Citation `Sudarshen2007' on page 93 undefined on input 
-line 996.
+line 1030.
 
 
 Package natbib Warning: Citation `Sudarshen2007' on page 93 undefined on input 
-line 996.
+line 1030.
 
-
-Underfull \vbox (badness 1721) has occurred while \output is active []
-
- [93]
-
-Package natbib Warning: Citation `Devi2011' on page 94 undefined on input line 
-1021.
-
-
-Package natbib Warning: Citation `Sudarshen2007' on page 94 undefined on input 
-line 1023.
-
-
-Package natbib Warning: Citation `Sudarshen2007' on page 94 undefined on input 
-line 1023.
-
+[93]
 
 Package natbib Warning: Citation `Carlen2010' on page 94 undefined on input lin
-e 1029.
+e 1036.
 
 
 Package natbib Warning: Citation `Cohen1992' on page 94 undefined on input line
- 1029.
+ 1036.
 
-[94] [95] [96] [97]
+[94] [95] [96]
 
-Package natbib Warning: Citation `Breuer2007' on page 98 undefined on input lin
-e 1163.
+Package natbib Warning: Citation `Breuer2007' on page 97 undefined on input lin
+e 1170.
+
+[97]
+
+Package natbib Warning: Citation `Engel1999' on page 98 undefined on input line
+ 1191.
+
+
+Package natbib Warning: Citation `Engel1999' on page 98 undefined on input line
+ 1207.
 
 [98]
 
 Package natbib Warning: Citation `Engel1999' on page 99 undefined on input line
- 1184.
+ 1213.
 
 
 Package natbib Warning: Citation `Engel1999' on page 99 undefined on input line
- 1200.
+ 1215.
 
 
-Package natbib Warning: Citation `Engel1999' on page 99 undefined on input line
- 1206.
-
-
-Package natbib Warning: Citation `Engel1999' on page 99 undefined on input line
- 1208.
+Package natbib Warning: Citation `Breuer2007' on page 99 undefined on input lin
+e 1219.
 
 [99]
 
-Package natbib Warning: Citation `Breuer2007' on page 100 undefined on input li
-ne 1212.
-
-
 Package natbib Warning: Citation `Shaji2005' on page 100 undefined on input lin
-e 1228.
+e 1235.
+
+
+Package natbib Warning: Citation `Wood2009' on page 100 undefined on input line
+ 1242.
 
 [100]
 
-Package natbib Warning: Citation `Wood2009' on page 101 undefined on input line
- 1235.
+Package natbib Warning: Citation `Howard2006' on page 101 undefined on input li
+ne 1263.
 
 [101]
 
-Package natbib Warning: Citation `Howard2006' on page 102 undefined on input li
-ne 1253.
+Package natbib Warning: Citation `Sudarshen2007' on page 102 undefined on input
+ line 1291.
 
-[102]
+[102] [103]
 
-Package natbib Warning: Citation `Sudarshen2007' on page 103 undefined on input
- line 1282.
-
-[103] [104]
-
-Package natbib Warning: Citation `Cernoch2008' on page 105 undefined on input l
-ine 1341.
+Package natbib Warning: Citation `Cernoch2008' on page 104 undefined on input l
+ine 1350.
 
 
-Package natbib Warning: Citation `Cernoch2008' on page 105 undefined on input l
-ine 1343.
+Package natbib Warning: Citation `Cernoch2008' on page 104 undefined on input l
+ine 1352.
 
-<opticalneg1.png, id=443, 247.1634pt x 116.64378pt>
+<opticalneg1.png, id=440, 247.1634pt x 116.64378pt>
 File: opticalneg1.png Graphic file (type png)
  <use opticalneg1.png>
-Package pdftex.def Info: opticalneg1.png used on input line 1346.
+Package pdftex.def Info: opticalneg1.png used on input line 1355.
 (pdftex.def)             Requested size: 370.74417pt x 174.96524pt.
 
 
-Package natbib Warning: Citation `Cernoch2008' on page 105 undefined on input l
-ine 1347.
+Package natbib Warning: Citation `Cernoch2008' on page 104 undefined on input l
+ine 1356.
 
 
-Package natbib Warning: Citation `Cernoch2008' on page 105 undefined on input l
-ine 1347.
+Package natbib Warning: Citation `Cernoch2008' on page 104 undefined on input l
+ine 1356.
 
 
-Package natbib Warning: Citation `Cernoch2008' on page 105 undefined on input l
-ine 1350.
+Package natbib Warning: Citation `Cernoch2008' on page 104 undefined on input l
+ine 1359.
 
-[105]
+[104]
 
-Package natbib Warning: Citation `Kok2010' on page 106 undefined on input line 
-1360.
+Package natbib Warning: Citation `Kok2010' on page 105 undefined on input line 
+1369.
 
+[105 <./opticalneg1.png>]
 
 Package natbib Warning: Citation `Ralph2010' on page 106 undefined on input lin
-e 1364.
+e 1373.
 
 
-Underfull \vbox (badness 7925) has occurred while \output is active []
+Package natbib Warning: Citation `Taylor1997' on page 106 undefined on input li
+ne 1403.
 
- [106 <./opticalneg1.png>]
-
-Package natbib Warning: Citation `Taylor1997' on page 107 undefined on input li
-ne 1394.
-
+[106]
 
 Package natbib Warning: Citation `Aroya2009' on page 107 undefined on input lin
-e 1396.
+e 1405.
 
 
 Package natbib Warning: Citation `Kitaev1998' on page 107 undefined on input li
-ne 1396.
+ne 1405.
+
+
+Package natbib Warning: Citation `Cernoch2008' on page 107 undefined on input l
+ine 1419.
 
 [107]
 
-Package natbib Warning: Citation `Cernoch2008' on page 108 undefined on input l
-ine 1410.
+Package natbib Warning: Citation `Kieling2012' on page 108 undefined on input l
+ine 1462.
+
+
+Package natbib Warning: Citation `Hofmann2002' on page 108 undefined on input l
+ine 1462.
+
+
+Package natbib Warning: Citation `Kiesel2005' on page 108 undefined on input li
+ne 1462.
 
 [108]
 
-Package natbib Warning: Citation `Kieling2012' on page 109 undefined on input l
-ine 1453.
+Package natbib Warning: Citation `Boulant2004' on page 109 undefined on input l
+ine 1479.
 
 
-Package natbib Warning: Citation `Hofmann2002' on page 109 undefined on input l
-ine 1453.
+Package natbib Warning: Citation `Cory2004' on page 109 undefined on input line
+ 1481.
 
 
-Package natbib Warning: Citation `Kiesel2005' on page 109 undefined on input li
-ne 1453.
+Package natbib Warning: Citation `Cory2004' on page 109 undefined on input line
+ 1483.
+
+
+Package natbib Warning: Citation `Cory2004' on page 109 undefined on input line
+ 1483.
 
 [109]
 
-Package natbib Warning: Citation `Boulant2004' on page 110 undefined on input l
-ine 1470.
+Package natbib Warning: Citation `Havel2003' on page 110 undefined on input lin
+e 1485.
 
 
 Package natbib Warning: Citation `Cory2004' on page 110 undefined on input line
- 1472.
+ 1496.
 
 
 Package natbib Warning: Citation `Cory2004' on page 110 undefined on input line
- 1474.
+ 1498.
 
 
-Package natbib Warning: Citation `Cory2004' on page 110 undefined on input line
- 1474.
-
-[110]
-
-Package natbib Warning: Citation `Havel2003' on page 111 undefined on input lin
-e 1476.
+Package natbib Warning: Citation `Sudarshan1976' on page 110 undefined on input
+ line 1502.
 
 
-Underfull \vbox (badness 7796) has occurred while \output is active []
+Underfull \vbox (badness 2103) has occurred while \output is active []
 
- [111]
+ [110]
 
-Package natbib Warning: Citation `Cory2004' on page 112 undefined on input line
- 1487.
-
-
-Package natbib Warning: Citation `Cory2004' on page 112 undefined on input line
- 1489.
+Package natbib Warning: Citation `Sudarshan1978' on page 111 undefined on input
+ line 1507.
 
 
-Package natbib Warning: Citation `Sudarshan1976' on page 112 undefined on input
- line 1493.
+Package natbib Warning: Citation `Slichter1996' on page 111 undefined on input 
+line 1507.
 
 
-Package natbib Warning: Citation `Sudarshan1978' on page 112 undefined on input
- line 1498.
+Package natbib Warning: Citation `Bloch1946' on page 111 undefined on input lin
+e 1507.
 
 
-Package natbib Warning: Citation `Slichter1996' on page 112 undefined on input 
-line 1498.
+Package natbib Warning: Citation `Sudarshan1978' on page 111 undefined on input
+ line 1507.
 
 
-Package natbib Warning: Citation `Bloch1946' on page 112 undefined on input lin
-e 1498.
+Package natbib Warning: Citation `Slichter1996' on page 111 undefined on input 
+line 1507.
 
 
-Package natbib Warning: Citation `Sudarshan1978' on page 112 undefined on input
- line 1498.
+Package natbib Warning: Citation `Skinner1987' on page 111 undefined on input l
+ine 1507.
 
 
-Package natbib Warning: Citation `Slichter1996' on page 112 undefined on input 
-line 1498.
+Package natbib Warning: Citation `Skinner1991' on page 111 undefined on input l
+ine 1507.
 
 
-Package natbib Warning: Citation `Skinner1987' on page 112 undefined on input l
-ine 1498.
+Package natbib Warning: Citation `Schirmer2004' on page 111 undefined on input 
+line 1509.
 
 
-Package natbib Warning: Citation `Skinner1991' on page 112 undefined on input l
-ine 1498.
+Package natbib Warning: Citation `Nielsen2010' on page 111 undefined on input l
+ine 1511.
 
 
-Package natbib Warning: Citation `Schirmer2004' on page 112 undefined on input 
-line 1500.
+Package natbib Warning: Citation `Aharonov2008' on page 111 undefined on input 
+line 1511.
+
+
+Package natbib Warning: Citation `Shabani2009' on page 111 undefined on input l
+ine 1511.
+
+
+Package natbib Warning: Citation `Lidar2009' on page 111 undefined on input lin
+e 1513.
+
+
+Package natbib Warning: Citation `Lidar2009' on page 111 undefined on input lin
+e 1513.
+
+
+Package natbib Warning: Citation `Shabani2009' on page 111 undefined on input l
+ine 1513.
+
+[111]
+
+Package natbib Warning: Citation `Masillo2011' on page 112 undefined on input l
+ine 1517.
+
+
+Package natbib Warning: Citation `Carteret2008' on page 112 undefined on input 
+line 1517.
+
+
+Package natbib Warning: Citation `Havel2003' on page 112 undefined on input lin
+e 1519.
 
 [112]
-
-Package natbib Warning: Citation `Nielsen2010' on page 113 undefined on input l
-ine 1502.
-
-
-Package natbib Warning: Citation `Aharonov2008' on page 113 undefined on input 
-line 1502.
-
-
-Package natbib Warning: Citation `Shabani2009' on page 113 undefined on input l
-ine 1502.
-
-
-Package natbib Warning: Citation `Lidar2009' on page 113 undefined on input lin
-e 1504.
-
-
-Package natbib Warning: Citation `Lidar2009' on page 113 undefined on input lin
-e 1504.
-
-
-Package natbib Warning: Citation `Shabani2009' on page 113 undefined on input l
-ine 1504.
-
-
-Package natbib Warning: Citation `Masillo2011' on page 113 undefined on input l
-ine 1508.
-
-
-Package natbib Warning: Citation `Carteret2008' on page 113 undefined on input 
-line 1508.
-
-
-Package natbib Warning: Citation `Havel2003' on page 113 undefined on input lin
-e 1508.
-
-[113]
-Overfull \hbox (43.59407pt too wide) in alignment at lines 1533--1541
+Overfull \hbox (43.59407pt too wide) in alignment at lines 1544--1552
  [][][] []
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [114]
-<etathetaII.png, id=477, 1010.77625pt x 671.50874pt>
+<etathetaII.png, id=470, 1010.77625pt x 671.50874pt>
 File: etathetaII.png Graphic file (type png)
  <use etathetaII.png>
-Package pdftex.def Info: etathetaII.png used on input line 1545.
+Package pdftex.def Info: etathetaII.png used on input line 1556.
 (pdftex.def)             Requested size: 353.77698pt x 235.03159pt.
 
-[115 <./etathetaII.png (PNG copy)>]
-<etaalphaII.png, id=481, 1035.87pt x 678.535pt>
+[113] [114 <./etathetaII.png (PNG copy)>]
+<etaalphaII.png, id=478, 1035.87pt x 678.535pt>
 File: etaalphaII.png Graphic file (type png)
  <use etaalphaII.png>
-Package pdftex.def Info: etaalphaII.png used on input line 1594.
+Package pdftex.def Info: etaalphaII.png used on input line 1605.
 (pdftex.def)             Requested size: 362.55992pt x 237.4908pt.
 
 
-Package natbib Warning: Citation `Rodriguez2008' on page 116 undefined on input
- line 1599.
+Package natbib Warning: Citation `Rodriguez2008' on page 115 undefined on input
+ line 1610.
 
-[116]
+[115 <./etaalphaII.png (PNG copy)>]
 
-Package natbib Warning: Citation `Cory2004' on page 117 undefined on input line
- 1601.
+Package natbib Warning: Citation `Cory2004' on page 116 undefined on input line
+ 1612.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [117 <./etaalphaII.png (PNG copy)>]
-Overfull \hbox (36.37167pt too wide) in alignment at lines 1609--1620
+Overfull \hbox (36.37167pt too wide) in alignment at lines 1620--1631
  [][][] []
  []
 
-[118] <eatthetaalphaII.png, id=491, 1211.52625pt x 1248.665pt>
+[116] <eatthetaalphaII.png, id=485, 1211.52625pt x 1248.665pt>
 File: eatthetaalphaII.png Graphic file (type png)
 
 <use eatthetaalphaII.png>
-Package pdftex.def Info: eatthetaalphaII.png used on input line 1653.
+Package pdftex.def Info: eatthetaalphaII.png used on input line 1664.
 (pdftex.def)             Requested size: 387.69632pt x 399.58096pt.
 
-<eatthetaalphaIII.png, id=492, 1209.51875pt x 972.63374pt>
+<eatthetaalphaIII.png, id=486, 1209.51875pt x 972.63374pt>
 File: eatthetaalphaIII.png Graphic file (type png)
 
 <use eatthetaalphaIII.png>
-Package pdftex.def Info: eatthetaalphaIII.png used on input line 1659.
+Package pdftex.def Info: eatthetaalphaIII.png used on input line 1670.
 (pdftex.def)             Requested size: 387.05391pt x 311.24915pt.
-
-
-Package natbib Warning: Citation `Ralph2010' on page 119 undefined on input lin
-e 1672.
-
-
-Package natbib Warning: Citation `Hayashi2003' on page 119 undefined on input l
-ine 1672.
-
-[119]
+ [117]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [120 <./eatthetaalphaII.png (PNG copy)>]
-Underfull \vbox (badness 3281) has occurred while \output is active []
+ [118 <./eatthetaalphaII.png (PNG copy)>]
+Underfull \vbox (badness 2443) has occurred while \output is active []
 
- [121 <./eatthetaalphaIII.png (PNG copy)>] <figure9.pdf, id=503, 444.4605pt x 3
+ [119 <./eatthetaalphaIII.png (PNG copy)>] <figure9.pdf, id=496, 444.4605pt x 3
 39.66899pt>
 File: figure9.pdf Graphic file (type pdf)
 
 <use figure9.pdf>
-Package pdftex.def Info: figure9.pdf used on input line 1691.
+Package pdftex.def Info: figure9.pdf used on input line 1702.
 (pdftex.def)             Requested size: 311.12022pt x 237.76666pt.
-) (./Section4.tex [122] [123 <./figure9.pdf>]
+ [120]) (./Section4.tex [121 <./figure9.pdf>]
 Chapter 4.
 
-Package natbib Warning: Citation `Alicki2007' on page 124 undefined on input li
+Package natbib Warning: Citation `Alicki2007' on page 122 undefined on input li
 ne 7.
 
 
-Package natbib Warning: Citation `Sewell2002' on page 124 undefined on input li
+Package natbib Warning: Citation `Sewell2002' on page 122 undefined on input li
 ne 11.
 
 
-Package natbib Warning: Citation `Alicki2001' on page 124 undefined on input li
+Package natbib Warning: Citation `Alicki2001' on page 122 undefined on input li
 ne 11.
 
 
-Package natbib Warning: Citation `Alicki2007' on page 124 undefined on input li
+Package natbib Warning: Citation `Alicki2007' on page 122 undefined on input li
 ne 11.
 
 
-Package natbib Warning: Citation `Sudarshan2005' on page 124 undefined on input
+Package natbib Warning: Citation `Sudarshan2005' on page 122 undefined on input
  line 11.
 
 
-Package natbib Warning: Citation `Rodriguez2008A' on page 124 undefined on inpu
+Package natbib Warning: Citation `Rodriguez2008A' on page 122 undefined on inpu
 t line 11.
 
 
-Package natbib Warning: Citation `Sudarshan1978' on page 124 undefined on input
+Package natbib Warning: Citation `Sudarshan1978' on page 122 undefined on input
  line 11.
 
 
-Package natbib Warning: Citation `Sudarshan1976' on page 124 undefined on input
+Package natbib Warning: Citation `Sudarshan1976' on page 122 undefined on input
  line 11.
 
 
-Package natbib Warning: Citation `Terno2006' on page 124 undefined on input lin
+Package natbib Warning: Citation `Terno2006' on page 122 undefined on input lin
 e 13.
 
 
-Package natbib Warning: Citation `Buzek2001' on page 124 undefined on input lin
+Package natbib Warning: Citation `Buzek2001' on page 122 undefined on input lin
 e 13.
 
 
-Package natbib Warning: Citation `Zyczkowski2004' on page 124 undefined on inpu
+Package natbib Warning: Citation `Zyczkowski2004' on page 122 undefined on inpu
 t line 13.
 
 
-Package natbib Warning: Citation `Jordan2004' on page 124 undefined on input li
+Package natbib Warning: Citation `Jordan2004' on page 122 undefined on input li
 ne 13.
 
-[124
+[122
 
 ]
 
-Package natbib Warning: Citation `Rodriguez2008' on page 125 undefined on input
+Package natbib Warning: Citation `Rodriguez2008' on page 123 undefined on input
  line 15.
 
 
-Package natbib Warning: Citation `Wood2009' on page 125 undefined on input line
+Package natbib Warning: Citation `Wood2009' on page 123 undefined on input line
  15.
 
 
-Package natbib Warning: Citation `Shabani2009' on page 125 undefined on input l
+Package natbib Warning: Citation `Shabani2009' on page 123 undefined on input l
 ine 15.
 
 
-Package natbib Warning: Citation `Fleming2012' on page 125 undefined on input l
+Package natbib Warning: Citation `Fleming2012' on page 123 undefined on input l
 ine 17.
 
 
-Underfull \vbox (badness 2635) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [125]
+ [123]
 
-Package natbib Warning: Citation `Yuen2005' on page 126 undefined on input line
+Package natbib Warning: Citation `Yuen2005' on page 124 undefined on input line
  24.
 
-[126]
+[124]
 
-Package natbib Warning: Citation `Preskill2004' on page 127 undefined on input 
+Package natbib Warning: Citation `Preskill2004' on page 125 undefined on input 
 line 36.
 
 
-Package natbib Warning: Citation `Royer1996' on page 127 undefined on input lin
+Package natbib Warning: Citation `Royer1996' on page 125 undefined on input lin
 e 36.
 
 LaTeX Font Info:    Try loading font information for U+euf on input line 40.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Overfull \hbox (42.04388pt too wide) detected at line 54
-[]
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [127]
+ [125]
 
-Package natbib Warning: Citation `Breuer2007' on page 128 undefined on input li
+Package natbib Warning: Citation `Breuer2007' on page 126 undefined on input li
 ne 61.
 
 
-Package natbib Warning: Citation `Busch1990' on page 128 undefined on input lin
+Package natbib Warning: Citation `Busch1990' on page 126 undefined on input lin
 e 61.
 
 
-Package natbib Warning: Citation `Benatti1996' on page 128 undefined on input l
+Package natbib Warning: Citation `Benatti1996' on page 126 undefined on input l
 ine 63.
 
 
-Package natbib Warning: Citation `Benatti1997' on page 128 undefined on input l
+Package natbib Warning: Citation `Benatti1997' on page 126 undefined on input l
 ine 63.
 
 
-Package natbib Warning: Citation `Benatti1998' on page 128 undefined on input l
+Package natbib Warning: Citation `Benatti1998' on page 126 undefined on input l
 ine 63.
 
 
-Package natbib Warning: Citation `Benatti1999' on page 128 undefined on input l
+Package natbib Warning: Citation `Benatti1999' on page 126 undefined on input l
 ine 63.
 
 
-Package natbib Warning: Citation `Benatti1997a' on page 128 undefined on input 
+Package natbib Warning: Citation `Benatti1997a' on page 126 undefined on input 
 line 63.
 
-) (./AppendixORD.tex [128]
+) (./AppendixORD.tex [126]
 Chapter 5.
-[129
+[127
 
-] [130]
+] [128]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [131]
-[132]
+ [129]
+[130]
 Overfull \hbox (40.18018pt too wide) in alignment at lines 145--154
  [][][] []
  []
@@ -1890,11 +1863,11 @@ Overfull \hbox (40.18018pt too wide) in alignment at lines 145--154
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [133]
-[134]
+ [131]
+[132]
 Underfull \vbox (badness 2443) has occurred while \output is active []
 
- [135]
+ [133]
 Overfull \hbox (56.40083pt too wide) in alignment at lines 219--223
  [][][] []
  []
@@ -1902,91 +1875,91 @@ Overfull \hbox (56.40083pt too wide) in alignment at lines 219--223
 
 Underfull \vbox (badness 1142) has occurred while \output is active []
 
- [136]
+ [134]
 
-Package natbib Warning: Citation `Choi1975' on page 137 undefined on input line
+Package natbib Warning: Citation `Choi1975' on page 135 undefined on input line
  243.
 
 
-Package natbib Warning: Citation `Cohen1997' on page 137 undefined on input lin
+Package natbib Warning: Citation `Cohen1997' on page 135 undefined on input lin
 e 253.
 
 
 Underfull \vbox (badness 3049) has occurred while \output is active []
 
- [137]
-[138]
+ [135]
+[136]
 
-Package natbib Warning: Citation `Cohen1997' on page 139 undefined on input lin
+Package natbib Warning: Citation `Cohen1997' on page 137 undefined on input lin
 e 311.
 
 
-Package natbib Warning: Citation `Cohen1997' on page 139 undefined on input lin
+Package natbib Warning: Citation `Cohen1997' on page 137 undefined on input lin
 e 322.
 
-[139]
+[137]
 
-Package natbib Warning: Citation `Faisal1987' on page 140 undefined on input li
+Package natbib Warning: Citation `Faisal1987' on page 138 undefined on input li
 ne 330.
+
+
+Package natbib Warning: Citation `Mandel1995' on page 138 undefined on input li
+ne 330.
+
+
+Package natbib Warning: Citation `Schwabl2007' on page 138 undefined on input l
+ine 335.
+
+[138] [139]
+
+Package natbib Warning: Citation `Loudon2000' on page 140 undefined on input li
+ne 429.
 
 
 Package natbib Warning: Citation `Mandel1995' on page 140 undefined on input li
-ne 330.
-
-
-Package natbib Warning: Citation `Schwabl2007' on page 140 undefined on input l
-ine 335.
-
-[140] [141]
-
-Package natbib Warning: Citation `Loudon2000' on page 142 undefined on input li
 ne 429.
 
 
-Package natbib Warning: Citation `Mandel1995' on page 142 undefined on input li
-ne 429.
-
-
-Package natbib Warning: Citation `Cohen1997' on page 142 undefined on input lin
+Package natbib Warning: Citation `Cohen1997' on page 140 undefined on input lin
 e 429.
 
-[142]
+[140]
 
-Package natbib Warning: Citation `Faisal1987' on page 143 undefined on input li
+Package natbib Warning: Citation `Faisal1987' on page 141 undefined on input li
 ne 445.
 
 
-Package natbib Warning: Citation `Loudon2000' on page 143 undefined on input li
+Package natbib Warning: Citation `Loudon2000' on page 141 undefined on input li
 ne 445.
 
 
-Package natbib Warning: Citation `Kok2010' on page 143 undefined on input line 
+Package natbib Warning: Citation `Kok2010' on page 141 undefined on input line 
 462.
 
-[143]
+[141]
 
-Package natbib Warning: Citation `Mikio2008' on page 144 undefined on input lin
+Package natbib Warning: Citation `Mikio2008' on page 142 undefined on input lin
 e 512.
 
 )
 No file JMMcCracken_book.bbl.
-[144] [145] (./bio.tex [146
+[142] [143] (./bio.tex [144
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[147
+[145
 
 ] (./JMMcCracken_book.aux) ) 
 Here is how much of TeX's memory you used:
- 14231 strings out of 494043
- 257094 string characters out of 6155015
- 313678 words of memory out of 5000000
- 17211 multiletter control sequences out of 15000+600000
+ 14232 strings out of 494043
+ 257116 string characters out of 6155015
+ 314678 words of memory out of 5000000
+ 17212 multiletter control sequences out of 15000+600000
  53589 words of font info for 211 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
- 56i,15n,73p,1960b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,73p,1979b,556s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
@@ -2022,10 +1995,10 @@ fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on JMMcCracken_book.pdf (154 pages, 2289482 bytes).
+Output written on JMMcCracken_book.pdf (152 pages, 2283589 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
- 478 compressed objects within 5 object streams
+ 709 PDF objects out of 1000 (max. 8388607)
+ 474 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  164 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -29,35 +29,35 @@
 \contentsline {section}{\numberline {3.1}{Definitions}}{64}
 \contentsline {section}{\numberline {3.2}{Sharp Operations for Negative Channels}}{65}
 \contentsline {section}{\numberline {3.3}{Negative Climates with Diagonal Composite Dynamics}}{67}
-\contentsline {section}{\numberline {3.4}{Specific Negative Channel Example: $\mathbf {(\mathaccentV {vec}17E{\tau },\mathaccentV {vec}17E{\tau }\otimes \left ( H_d:\mathaccentV {vec}17E{\tau }:H_d^\dagger \right ),D)}$}}{74}
-\contentsline {section}{\numberline {3.5}{$\mathbf {(\mathaccentV {vec}17E{\tau },\mathaccentV {vec}17E{\tau }\otimes \left ( H_d:\mathaccentV {vec}17E{\tau }:H_d^\dagger \right ),D)}$ Basis Dependence}}{79}
-\contentsline {section}{\numberline {3.6}{Rabi Channels}}{86}
-\contentsline {subsection}{\numberline {3.6.1}{Rabi Model}}{86}
+\contentsline {section}{\numberline {3.4}{Specific Negative Channel Example: $\mathbf {(\mathaccentV {vec}17E{\tau },\mathaccentV {vec}17E{\tau }\otimes \left ( H_d:\mathaccentV {vec}17E{\tau }:H_d^\dagger \right ),D)}$}}{73}
+\contentsline {section}{\numberline {3.5}{$\mathbf {(\mathaccentV {vec}17E{\tau },\mathaccentV {vec}17E{\tau }\otimes \left ( H_d:\mathaccentV {vec}17E{\tau }:H_d^\dagger \right ),D)}$ Basis Dependence}}{78}
+\contentsline {section}{\numberline {3.6}{Rabi Channels}}{85}
+\contentsline {subsection}{\numberline {3.6.1}{Rabi Model}}{85}
 \contentsline {subsection}{\numberline {3.6.2}{Rabi Channels with No Coupling}}{87}
 \contentsline {subsection}{\numberline {3.6.3}{Rabi Channels with Coupling}}{88}
-\contentsline {section}{\numberline {3.7}{Physical Motivations for Sharp Operations}}{93}
-\contentsline {section}{\numberline {3.8}{Negative Qubit Channel Examples With Multi-Qubit Baths}}{95}
-\contentsline {section}{\numberline {3.9}{Proposed Experimental Demonstration of Negativity}}{101}
-\contentsline {section}{\numberline {3.10}{Photonic Root-Swap Operation}}{104}
-\contentsline {section}{\numberline {3.11}{Photonic CZ Operation}}{108}
-\contentsline {section}{\numberline {3.12}{Implications of Negative Channels}}{110}
-\contentsline {subsection}{\numberline {3.12.1}{Existing Experimental Evidence of Negative Channels}}{110}
-\contentsline {subsection}{\numberline {3.12.2}{Restrictions Implied by Complete Positivity}}{112}
-\contentsline {subsection}{\numberline {3.12.3}{Expanding the Definition of ``Physically Reasonable''}}{113}
-\contentsline {section}{\numberline {3.13}{Uses for Negative Channels}}{114}
-\contentsline {subsection}{\numberline {3.13.1}{Probing the Bath}}{114}
-\contentsline {subsubsection}{\numberline {}{Coupling Alone}}{114}
-\contentsline {subsubsection}{\numberline {}{Correlation Alone}}{116}
-\contentsline {subsubsection}{\numberline {}{Coupling and Correlation Together}}{118}
+\contentsline {section}{\numberline {3.7}{Physical Motivations for Sharp Operations}}{90}
+\contentsline {section}{\numberline {3.8}{Negative Qubit Channel Examples With Multi-Qubit Baths}}{94}
+\contentsline {section}{\numberline {3.9}{Proposed Experimental Demonstration of Negativity}}{100}
+\contentsline {section}{\numberline {3.10}{Photonic Root-Swap Operation}}{103}
+\contentsline {section}{\numberline {3.11}{Photonic CZ Operation}}{107}
+\contentsline {section}{\numberline {3.12}{Implications of Negative Channels}}{109}
+\contentsline {subsection}{\numberline {3.12.1}{Existing Experimental Evidence of Negative Channels}}{109}
+\contentsline {subsection}{\numberline {3.12.2}{Restrictions Implied by Complete Positivity}}{111}
+\contentsline {subsection}{\numberline {3.12.3}{Expanding the Definition of ``Physically Reasonable''}}{112}
+\contentsline {section}{\numberline {3.13}{Uses for Negative Channels}}{112}
+\contentsline {subsection}{\numberline {3.13.1}{Probing the Bath}}{113}
+\contentsline {subsubsection}{\numberline {}{Coupling Alone}}{113}
+\contentsline {subsubsection}{\numberline {}{Correlation Alone}}{113}
+\contentsline {subsubsection}{\numberline {}{Coupling and Correlation Together}}{116}
 \contentsline {subsubsection}{\numberline {}{Determining the Completely Positive Parameter Space}}{119}
-\contentsline {subsection}{\numberline {3.13.2}{Speculation on Utilities}}{122}
-\contentsline {chapter}{\numberline {4}{Conclusions}}{124}
-\contentsline {section}{\numberline {4.1}{Complete Positivity in Recent Years}}{124}
-\contentsline {section}{\numberline {4.2}{Closing Remarks}}{126}
-\contentsline {chapter}{\numberline {5}{Appendix}}{129}
-\contentsline {section}{\numberline {5.1}{Discussion of the Reduced System Definition}}{129}
-\contentsline {section}{\numberline {5.2}{General Reduced System Dynamics}}{132}
-\contentsline {section}{\numberline {5.3}{General Form of Initial Reduced System State}}{135}
-\contentsline {section}{\numberline {5.4}{Completeness Relation for $\mathaccentV {hat}05E{S}_{q\phi }$}}{135}
-\contentsline {section}{\numberline {5.5}{Rabi Model Derivation}}{138}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }{Author's Biography}}{147}
+\contentsline {subsection}{\numberline {3.13.2}{Speculation on Utilities}}{120}
+\contentsline {chapter}{\numberline {4}{Conclusions}}{122}
+\contentsline {section}{\numberline {4.1}{Complete Positivity in Recent Years}}{122}
+\contentsline {section}{\numberline {4.2}{Closing Remarks}}{124}
+\contentsline {chapter}{\numberline {5}{Appendix}}{127}
+\contentsline {section}{\numberline {5.1}{Discussion of the Reduced System Definition}}{127}
+\contentsline {section}{\numberline {5.2}{General Reduced System Dynamics}}{130}
+\contentsline {section}{\numberline {5.3}{General Form of Initial Reduced System State}}{133}
+\contentsline {section}{\numberline {5.4}{Completeness Relation for $\mathaccentV {hat}05E{S}_{q\phi }$}}{133}
+\contentsline {section}{\numberline {5.5}{Rabi Model Derivation}}{136}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{Author's Biography}}{145}
