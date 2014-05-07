@@ -66,7 +66,7 @@ These sharp operations represent ``reasonable'' (or ``justifiable'') assumptions
 
 Eqn.\ \ref{eqn:sharp1} is linear by definition.  It is also consistent and positive on some domain of states because the tensor product of two valid density matrices will always be another valid density matrix and $\vec{b}$ is a vector of valid density matrices.  Eqn.\ \ref{eqn:sharp1} meets all three mathematical requirements demanded of it, and it can be justified as reasonable assumptions about the preparation of the reduced system.  This form of the sharp operation (specifically Eqn.\ \ref{eqn:sharp2}) will be the form used in the examples of the next few sections.  
 
-\section{Negative Climates with Diagonal Composite Dynamics}
+\chapter{Negative Climates with Diagonal Composite Dynamics}
 \label{sec:negclimate}
 
 In an effort to study a tractable case of negative climates, consider a sharp operation defined by Eqn.\ \ref{eqn:sharp2} and composite dynamics defined as
@@ -837,12 +837,12 @@ Defining the partial trace in such a way that the reduced dynamics (and hence, t
 
 At this point in the discussion, it suffices to recognize that negativity is a property of a very specific channel, and it is basis independent (with the understanding that care must be taken to define the partial trace in new rotated basis).
 
-\section{Rabi Channels}
+\chapter{Rabi Channels}
 \label{sec:rabi}
 
 The negativity has thus far been a mathematical concept with, at best, a nebulous physical interpretation as some measure of the system-bath correlation and coupling.  It is important to consider examples of negative channels in situations where there is already some established physical understanding of the system so we can attempt to gain some physical intuition about the negativity.  To that end, we will be discussing negative channels using the Rabi model of a two level atom.  This discussion necessarily begins with a brief introduction to the Rabi model.
 
-\subsection{Rabi Model}
+\section{Rabi Model}
 
 We will refer to the following Hamiltonian as the ``Rabi model'':
 \begin{eqnarray*}
@@ -876,7 +876,7 @@ Investigating the dynamics of the atom and external field is straightforward in 
 
 We will be using the Rabi Hamiltonian to model the reduced system qubit, and the bath qubit, in an effort to understand negativity in terms of the physical parameters of the Hamiltonian.  A {\em Rabi channel} will refer to the single qubit channel where the bath qubits and the reduced system are all described by individual Rabi models.  The simplest such channel will have a single qubit bath and no coupling terms in the composite Hamiltonian, and this channel will be discussed in the next subsection.
 
-\subsection{Rabi Channels with No Coupling}
+\section{Rabi Channels with No Coupling}
 \label{sec:rabinocoup}
 Suppose the universe consists of two Rabi atoms.  One atom will be the reduced system and the other will be the bath.  The composite dynamics of this universe can be understood in terms of the composite Hamiltonian
 $$
@@ -911,7 +911,7 @@ U^B = \exp\left(\frac{-it}{\hbar} H_b \right) \in\mathcal{B}\left(\mathcal{H}^B\
 $$
 Therefore, the composite evolution (in the original basis of $H_u$) can written down in a local unitary form.  As was already shown, this result implies that the reduced system dynamics always have a vanishing negativity.
 
-\subsection{Rabi Channels with Coupling}
+\section{Rabi Channels with Coupling}
 \label{sec:rabisub}
 Suppose the two atoms in the Rabi channel example of the last subsection were coupled in some way.  The physical mechanism for their coupling will not be important to this discussion, but the coupling terms in the Hamiltonian will change the behaviour of the negativity.  The negativity will now depend on the coupling as well as the energy of the composite system and the initial rotation of the bath qubit.
 
@@ -995,7 +995,7 @@ The double Rabi atom universe presented here shows that theoretically negative c
 Is it possible to create negative channels in the lab?  This question is of paramount importance.  The theoretical work presented so far seems to imply such a claim, but an experiment that measures the negativity of some channel in the lab (and compares it to the theoretical predictions presented here) is the only way to really answer this question.  Before exactly such an experiment is proposed, an important theoretical issue needs to be addressed:  Every channel presented so far has depended on the sharp operation $\vec{\tau}^\sharp=\vec{\tau}\otimes\left(R:\vec{\tau}:R^\dagger\right)$ where $R$ is some unitary rotation.  Is such a sharp operation physically reasonable?  Is it possible such a sharp operation might occur in nature?  Both of these questions will be answered in the next section.
 
 
-\section{Physical Motivations for Sharp Operations}
+\chapter{Physical Motivations for Sharp Operations}
 \label{sec:sharp}
 
 Sharp operations can be thought of as a by-product of the preparation procedure.  Every quantum experiment must begin with a preparation in some way at some point in time, and preparing the reduced system will only leave the bath completely unaffected if the reduced system is isolated.  In such cases, there is no need to discuss baths, complete positivity, or sharp operations.
@@ -1037,7 +1037,7 @@ The conclusion is that sharp operations can be implemented in the lab as prepara
 
 Sharp operations represent preparation procedures in the open systems setting.  Negative channels can arise if the preparation procedure is not perfect or if the reduced system and bath are entangled prior to the preparation procedure.  Both situations can (and probably do) happen in nature.  It will be shown in later sections that a controlled ``bath'' will allow an experimenter to engineer a desired sharp operation and experimentally measure the negativity of a channel.  
  
-\section{Negative Qubit Channel Examples With Multi-Qubit Baths}
+\chapter{Negative Qubit Channel Examples With Multi-Qubit Baths}
 \label{sec:multibath}
 
 The example channel $(\vec{\tau},\vec{\tau}\otimes \left( H_d:\vec{\tau}:H_d^\dagger\right),D)$ can be extended by redefining the $4\times4$ matrix $D$ as an $2^M\times 2^M$ matrix $D^\prime$.  This new channel describes a qubit channel with a bath of $M-1$ qubits as opposed to the single qubit bath of all the previous examples.  The larger bath will also require a different sharp operation.  Suppose,
@@ -1236,7 +1236,7 @@ assumes composability of the dynamical maps $V(t)$.  Any two completely positive
 
 The composition of negative channels is an open question.  Without an answer to this question, more complicated questions about the mathematical structure of the set of all negative channels will not have very satisfactory answers.  Completely positive dynamical maps have nice mathematical features beyond the Kraus representation, not the least of which is their amenability to the powerful mathematical techniques of semigroup theory.  These features need to be better understood for negative channels, but until that understanding arrives, the Liouville-von Neumann equation is the best method for modelling negative channels with continuous baths.
 
-\section{Proposed Experimental Demonstration of Negativity}
+\chapter{Proposed Experimental Demonstration of Negativity}
 \label{sec:proposedexp}
 
 One of the main ideas of the previous section is to illustrate {\em gedanken} experiments with non-zero negativity, and diagonal channels were used for the express purpose of creating examples that would be amenable to theoretical analysis.  Those experiments did not involve statistical errors or systematic errors due to experimental limitations.  The authors of \cite{Wood2009} provide a nice discussion of how statistical errors in a process tomography experiment might lead to non-zero negativities, but no such considerations were given to the gendanken experiments presented in the previous sections.  Hence, the negativity of those example channels cannot be a product of such experimental error.  
@@ -1467,13 +1467,13 @@ These experiments provide exactly the desired ``controlled bath'' situation need
 
 The next logical step in understanding negative channels would be comparing the quantum process tomography data (without any kind of complete positivity forcing post processing) to simple models of more realistic baths.  The theoretical task in this process would be quite difficult because the sharp operations could only be assumed (or randomly guessed).  Negative channels should still be expected in these more ``realistic'' experiments (i.e.\ experiments without controlled baths), but the theoretical analysis of these experiment suffers the same problem that any open system analysis would suffer: finding the proper form for the bath.  Of course, such theoretical difficulties are irrelevant to the data collection process, and it can safely be assumed that experimental process tomography of negative channels has already happened in the literature.  This topic is explored further in the next section.
 
-\section{Implications of Negative Channels}
+\chapter{Implications of Negative Channels}
 
 The negativity of complicated experiments without controlled baths can be measured, and if the negativity were found to be non-zero in experiments predicted to have non-zero negativity, then the evidence for negative channels would be convincing, even if the exact negativity of such complicated experiments could not be predicted.  Such complicated experiments are actually common in the quantum information community and negative channels have probably already been observed (and promptly ``corrected'' in most cases).
 
 Acceptance of the idea of negative channels might not change the field of quantum information in a fundamental sense; e.g.\ fundamental results such as no cloning and no signalling will still hold in general.  But, several small changes will need to be made in current experimental methods and some theoretical ideas will need to be changed to incorporate negativity.  This section aims to highlight a few examples of such changes and is a brief outline of some open questions about negative channels.
 
-\subsection{Existing Experimental Evidence of Negative Channels}
+\section{Existing Experimental Evidence of Negative Channels}
 \label{sec:Havel}
 
 Environmental noise is considered a major obstacle to NMR systems as viable quantum information processing technologies \cite{Boulant2004}.  Such strong ties between the reduced system and the bath\footnote{For most NMR systems, the reduced system would be the individual nuclear spins addressed during the experiment and the bath would be the spin bath created by all the background spins of the material.} might be expected to lead to negative channels.
@@ -1495,9 +1495,9 @@ The authors probably very much desired a preparation procedure that would be rep
 
 The point of this subsection is to illustrate an impact of accepting negative channels as physically reasonable (i.e.\ not ``mistakes'').  An experiment similar to the one in \cite{Cory2004} could be performed with numerical simulations which predict the observed negativities.  Such experiments would provide deeper insight not only into the experimental preparation procedure (and perhaps how to fix them) but also into the relationship between the reduced system and the bath.  
 
-The authors of \cite{Cory2004} have not been singled out due to the ``CP-filtering technique''.  They were singled out because their work is clear, in depth, and thorough.  The paper referenced here an example of something that is pervasive in process tomography experiments: post processing of experimental data to force complete positivity.  
+This paper \cite{Cory2004} is clear, in depth, and thorough.  It is also an example of something that is pervasive in process tomography experiments: post processing of experimental data to force complete positivity.  
 
-\subsection{Restrictions Implied by Complete Positivity}
+\section{Restrictions Implied by Complete Positivity}
 
 An a priori requirement of a vanishing negativity puts strong restrictions on theoretical models of quantum dynamics.  Perhaps most famously, Sudarshan \cite{Sudarshan1976} showed that complete positivity implies 
 \begin{equation}
@@ -1512,7 +1512,7 @@ Quantum error correction was introduced into the field of quantum computing to a
 
 Shabani and Lidar \cite{Lidar2009} have pointed out that most fault tolerant error correction schemes assume the entire system starts out in a product state and can be defined as a product state after every error correction step.  The assumption of an initial product state might be wrong because of faulty preparation procedures, but the assumption of a product state after every error correction would only be true if the error correction step was ``perfect''.  As Shabani and Lidar state ``However, FT-QEC [fault tolerant quantum error correction] allows for the fact that the error correction step is almost never perfect, which means that there is a residual correlation between system and bath at $t_1$ [the time step at which the ``instantaneous error correction'' procedure takes place].'' \cite{Lidar2009}  This ``residual correlation'' after the error correction steps implies that the composite system state cannot be described as a product state and the single qubit channel under investigation cannot be assumed to be completely positive.  For a detailed discussion of these issues see \cite{Shabani2009}.  
 
-\subsection{Expanding the Definition of ``Physically Reasonable''}
+\section{Expanding the Definition of ``Physically Reasonable''}
 
 Enumerating all the possible fallouts from incorporating negative channels into the current theory of quantum information is not the goal here.  For example, it has recently been argued that negative channels can violate the Holevo bound \cite{Masillo2011}, which is an interesting and important result that was not addressed above.  Negative maps can also be used to improve distinguishability \cite{Carteret2008}, which is not possible with completely positive maps.  
 
@@ -1520,12 +1520,12 @@ The idea of this section is two fold.  First, acceptance of negative channels wi
 
 The issue of negativity was not something that concerned a lot of physicists until quantum information became prevalent.  The expansion of quantum information theory into quantum information experiments began to force theorist and experimentalist alike to consider ``noisy'' quantum systems.  This new found interest in open quantum systems has lead to a renewed interest in negative channels, including their causes and implications.  This section is meant merely to illustrate that negative channels will lead to some changes in the current theory of quantum information and these changes are not completely unexpected.
 
-\section{Uses for Negative Channels}
+\chapter{Uses for Negative Channels}
 
 So far, one of the most important questions about negativity has been completely ignored in this work.  Is negativity useful?  This section will focus on that question.
 
-\subsection{Probing the Bath}
-\subsubsection{Coupling Alone}
+\section{Probing the Bath}
+\subsection{Coupling Alone}
 \label{sec:couplingalone}
 Consider a two qubit composite system with composite dynamics defined as
 $$
@@ -1544,12 +1544,30 @@ where $H_d$ is the Hadamard operation, and is defined on the canonical tomograph
 \begin{eqnarray*}
 C_\theta &=& \mathbf{C}\odot \left(U_\theta:\vec{\tau}^\sharp :U_\theta^\dagger\right)^\flat\\
 &=& \begin{pmatrix}
- \frac{1}{4} (3+\cos\left(2 \theta\right)) & -\frac{\sin\theta}{2} & \frac{1}{2} \sin\theta (-i \cos\theta+\sin\theta) & \cos\theta+\left(\frac{1}{2}+\frac{i}{2}\right) \sin\theta \\
- -\frac{\sin\theta}{2} & \frac{\sin^2\theta}{2} & \left(\frac{1}{2}+\frac{i}{2}\right) \sin\theta & \frac{1}{4} \left(-1+e^{2 i \theta}\right) \\
- \frac{1}{2} \sin\theta (i \cos\theta+\sin\theta) & \left(\frac{1}{2}-\frac{i}{2}\right) \sin\theta & \frac{\sin^2\theta}{2} & -\frac{\sin\theta}{2} \\
- \cos\theta+\left(\frac{1}{2}-\frac{i}{2}\right) \sin\theta & \frac{1}{4} \left(-1+e^{-2 i \theta}\right) & -\frac{\sin\theta}{2} & \frac{1}{4} (3+\cos\left(2 \theta\right))
-\end{pmatrix}\;\;.
+A & B\\
+B^\dagger & C
+\end{pmatrix}\;\;,
 \end{eqnarray*}
+where
+$$
+A =\begin{pmatrix}
+ \frac{1}{4} (3+\cos\left(2 \theta\right)) & -\frac{\sin\theta}{2}  \\
+ -\frac{\sin\theta}{2} & \frac{\sin^2\theta}{2} \\
+\end{pmatrix}\;\;,
+$$
+$$
+B = \begin{pmatrix}
+ \frac{1}{2} \sin\theta (-i \cos\theta+\sin\theta) & \cos\theta+\left(\frac{1}{2}+\frac{i}{2}\right) \sin\theta \\
+ \left(\frac{1}{2}+\frac{i}{2}\right) \sin\theta & \frac{1}{4} \left(-1+e^{2 i \theta}\right) 
+\end{pmatrix}\;\;,
+$$
+and
+$$
+C = \begin{pmatrix}
+ \frac{\sin^2\theta}{2} & -\frac{\sin\theta}{2} \\
+ \frac{1}{4} \left(-1+e^{-2 i \theta}\right) & -\frac{\sin\theta}{2} & \frac{1}{4} (3+\cos\left(2 \theta\right))
+\end{pmatrix}\;\;.
+$$
 Notice, $\theta=0$ and $\theta=2\pi$ leads to $U_\theta=I$ where $I$ is the two qubit identity operator, and $\theta=\pi$ leads to $U_\theta=\sigma_3\otimes\sigma_3$.  Both of these composite dynamics are in local unitary form, so these three angles lead to a vanishing negativity.  Notice that $U_\theta$ is cyclic in the sense that it will be in local unitary form (and, therefore, lead to a vanishing negativity) if $\theta=n\pi$ for $n\in\mathbb{Z}$.  Define, $\eta_\theta$ to be the negativity of the channel represented by $C_\theta$.  The negativity can be plotted as function of $\theta$ (see Fig.\ \ref{fig:etatheta}) to reveal a maximum negativity of $\eta_\theta\approx 0.24$.  
 \begin{figure}[h!t]
 \centering
@@ -1560,7 +1578,7 @@ Notice, $\theta=0$ and $\theta=2\pi$ leads to $U_\theta=I$ where $I$ is the two 
 
 The negativity $\eta_\theta$ is a function of $\theta$ and can, in principle, be used to gain information about $\theta$.  The negativity can be measured and if the above theoretical definition of the channel is assumed to be true, then $\theta$ can simply be read off Fig.\ \ref{fig:etatheta}.  The negativity $\eta_\theta$ is measured in a single qubit tomography experiment, but $U_\theta$ cannot be directly measured in any such experiment because the composite system contains a qubit defined to be beyond the reach of the experimenter (i.e.\ the bath qubit).   
 
-\subsubsection{Correlation Alone}
+\subsection{Correlation Alone}
 Consider a similar, but different, example:  The new composite dynamics are defined by the controlled phase gate, i.e.\
 $$
 CZ = \begin{pmatrix}
@@ -1611,7 +1629,7 @@ Again, the negativity $\eta_\alpha$ can be measured and if the above theoretical
 
 The above examples are artificial in the sense of comparing the experimentally measured negativity to some known analytical definition of the channel (i.e.\ $C_\theta$ and $C_\alpha$).  Typically, the experimenter will not have very detailed expectations about the form of the channel in the tomography experiment.  Some assumptions might be made about the form of the sharp operation or composite dynamics, but it is rare to have a model of the channel complete enough (or which the experimenter has enough confidence in) to do the type of direct comparison between theory and experiment described in the examples.  Typically, the experimenter would be doing tomography experiments precisely to figure out which assumptions about the sharp and composite dynamics are reasonable.  Nevertheless, even without precise, confidence-worthy models of the experimental channels, measurement of the negativity will provide information about the composite system.  A good example of this point is the experiment conducted in \cite{Cory2004}, which has already been discussed in Sec.\ \ref{sec:Havel}, where the authors used the negativity (which they called the ``positivity'') to try to determine possible problems with their experimental setup. 
 
-\subsubsection{Coupling and Correlation Together}
+\subsection{Coupling and Correlation Together}
 Consider a slightly more complicated example with the composite dynamics given by $U_\theta$ and the sharp operation from the above example, i.e. consider the channel\
 $$
 \varepsilon(\vec{\tau}) = \left(U_\theta:\vec{\tau}^{\sharp_\alpha}:U_\theta^\dagger\right)^\flat\;\;.
@@ -1620,15 +1638,30 @@ This single qubit channel combines the two above examples and will yield a negat
 \begin{eqnarray*}
 C_{\theta\alpha} &=& \mathbf{C}\odot \varepsilon(\vec{\tau})\\
  &=& \begin{pmatrix}
- 1-\alpha^2+\alpha^2 \cos^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta & c_1 & c_2 \\
- 
- -\alpha \sqrt{1-\alpha^2} \sin\theta & \alpha^2 \sin^2\theta & (1+i) \alpha \sqrt{1-\alpha^2} \sin\theta & c_3 \\
- 
-c_1^* & (1-i) \alpha \sqrt{1-\alpha^2} \sin\theta & \alpha^2 \sin^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta \\
- 
-c_2^* & c_3^* & -\alpha \sqrt{1-\alpha^2} \sin\theta & 1-\alpha^2+\alpha^2 \cos^2\theta
-\end{pmatrix}
+ A & B \\
+ B^\dagger & C 
+\end{pmatrix}\;\;,
 \end{eqnarray*}
+where 
+$$
+A = \begin{pmatrix}
+ 1-\alpha^2+\alpha^2 \cos^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta\\
+  -\alpha \sqrt{1-\alpha^2} \sin\theta & \alpha^2 \sin^2\theta 
+\end{pmatrix}
+$$
+$$
+B = \begin{pmatrix}
+c_1 & c_2 \\
+(1+i) \alpha \sqrt{1-\alpha^2} \sin\theta & c_3 
+\end{pmatrix}\;\;,
+$$
+and
+$$
+C = \begin{pmatrix}
+ \alpha^2 \sin^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta \\
+ -\alpha \sqrt{1-\alpha^2} \sin\theta & 1-\alpha^2+\alpha^2 \cos^2\theta
+\end{pmatrix}
+$$
 with
 \begin{eqnarray*}
 c_1 &=& \frac{1}{2} \sin\theta \left(\left((-1-i)+2 \alpha^2\right) \cos\theta+2 \alpha \sqrt{1-\alpha^2} \sin\theta\right)\;\;,\\
@@ -1678,7 +1711,7 @@ If the experimenter were able to measure both the negativity and the initial sys
 
 Notice that the measured negativity will limit the possible values of $\theta$ and $\alpha$ to some subset of the total parameter space which may be substantially smaller and might be helpful to the experimenter.  For example, if the experimenter is attempting to use the measured negativity to develop an empirical model of the coupling and correlation, then this smaller parameter space may make the task of comparing numerical simulations to measured data easier.
 
-\subsubsection{Determining the Completely Positive Parameter Space}
+\subsection{Determining the Completely Positive Parameter Space}
 
 Consider a ``controlled bath'' type experiment implemented in the lab using the polarization of two maximally entangled photons as qubits.  One photon would act as the reduced system and the other as the bath.  It would be possible to implement the sharp operation presented in Section \ref{sec:couplingalone} as a projective measurement on the reduced system photon after applying a rotation to the bath qubit photon.  The negativity could then be plotted as a function of time.  Repeating this experiment multiple times with different initial rotation angles for the bath qubit would indicate to the experimenter when the composite dynamics are described by local unitaries.  As such, empirically determining when the negativity is zero for a large number of different initial system-bath correlations will allow the experimenter to be reasonably confident of when the composite dynamics are described by local unitaries.  It follows that an experiment that measures the changes in negativity over time for several different initial rotation angles of the bath (i.e.\ $\phi$) can be used to determine when the composite dynamics are in local unitary form without ever knowing anything about the bath dynamics directly.  Such ``controlled bath'' experiments could also be used to understand preparation procedures.
  
@@ -1704,8 +1737,7 @@ Notice that $yy^*=0$ and $xx^*\le 1$ are sufficient conditions for this channel 
  \label{fig:CPspace}
 \end{figure} 
 
-
-\subsection{Speculation on Utilities}
+\section{Speculation on Utilities}
 
 The ``controlled bath'' situation described in the previous subsection allows the experimenter to circumvent the correlation-coupling deliniation problem in the negativity measurement.  If the correlation is precisely controlled, then the negativity can be related directly to the coupling.  The inverse is also true: if an experimenter precisely knows the composite dynamics implemented in a ``controlled bath'' experiment, then the negativity can be related directly to the correlation.  Such an experiment might be used to study preparation procedures or measure correlations in multi-qubit initial states.  
 

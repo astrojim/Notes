@@ -6,7 +6,7 @@
 % we will need an Abstract and Keywords - please see a sample below
 
 \def\TITLE{Negative Quantum Channels}
-\def\SUBTITLE{{\small An Introduction to Quantum Channels that Violate the Complete Positivity Assumption}}
+\def\SUBTITLE{{\normalsize An Introduction to Quantum Maps that Are Not Complete Positivity}}
 \def\AUTHOR{James M. McCracken}
 \def\AFFILIATION{George Mason University}
 \def\LECTURE{\ \#1}
@@ -56,11 +56,11 @@ complete positivity, quantum process tomography, quantum information, quantum ch
 \end{center}
 
 \newpage
-\section*{Preface}
+\chapter*{Preface}
 Long-winded, personal introduction.
 
 \newpage
-\section*{Aknowledgments}
+\chapter*{Aknowledgments}
 Thanks, Cesar.
 
 \newpage

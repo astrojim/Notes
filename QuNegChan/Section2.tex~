@@ -31,6 +31,7 @@ $$
 $$
 Additionally, any map that can be written in the form of Eqn.\ \ref{eqn:opsumform} is completely positive, trace-preserving, and convex linear.
 \end{theorem}
+
 Proofs of this theorem can be found in \cite{Breuer2007,Kraus1983}, and discussions of this theorem can be found in most standard quantum information textbooks, including \cite{Nielsen2010} and \cite{Preskill2004}.  This operator sum form of a completely positive map (i.e.\ Eqn.\ \ref{eqn:opsumform}) is referred to as ``Choi's form'', ``Kraus' form'' (or, alternatively the ``Kraus decomposition'' of the operator), or sometimes even ``Sudarshan's form''.   
 
 The Kraus decomposition can be used to describe a completely positive map.  However, the practicality of the decomposition is restricted to finite dimensional system-environment Hilbert spaces.  For systems with high (or infinite) dimensional Hilbert spaces, the Kraus decomposition will lead to an impractically large number of Kraus operators.  Examples of infinite dimensional environments occur quite often in the study of thermodynamics and include heat baths and baths of harmonic oscillators (e.g.\ to model electromagnetic noise in transmission lines).  In such cases, completely positive maps are usually dealt with using dynamical semigroup methods.  Infinite dimensional baths and semigroup methods will be discussed in Sec.\ \ref{sec:multibath}.
@@ -102,14 +103,14 @@ $$
 $$
 Hence, the general evolution of the reduced system is not necessarily completely positive according to the representation theorem of quantum operations.  It should be noted that the most general form of reduced dynamics is not only not completely positive but also not linear and not unique \cite{Lendi2000,Carteret2008}.  We are, however, assuming linearity throughout for simplicity and to maintain the direct link with standard tomography experiments.   
 
-\section{Physical Motivation of Complete Positivity}
+\chapter{Physical Motivation of Complete Positivity}
 \label{sec:physmot}
 
 The argument that all physically reasonable operations are completely positive seems to put strict bounds on the types of operations allowed in nature.  As always, rigorous experiments are required to test the complete positivity assumption of quantum operations, but as far as we are aware, no such experiments have yet been conducted\footnote{It should be made clear that negative channels have already been observed in the lab \cite{MAJORPAPERFROMCORYREF}.  However, without the testing of complete positivity assumptions being the focus point of the experiment, such observations are not considered ``rigorous'' for our purposes; i.e.\ they do not provide rigorous validation of a given theory of negative channels.}.  Until such experiments are performed, we are left with a mathematical theory that seems to allow negative channels (as shown above) but argues that such channels are not physically reasonable.  There are plenty of examples in theoretical physics of mathematical models being restricted by physically motivated assumptions.  So, it is important to understand such arguments for complete positivity.
 
 The current arguments for completely positivity as a physical requirement of all quantum operations can be grouped into two categories which will be called the ``total domain argument for complete positivity'' and the ``product state argument for complete positivity''.
 
-\subsection{Total Domain Argument}
+\section{Total Domain Argument}
 
 The thought process behind the total domain argument is as follows: Any known Hilbert space cannot be known to be isolated, i.e.\ given only $\mathcal{H}^A$, it is not possible to rule out the existence of $\mathcal{H}^{AC} = \mathcal{H}^A \otimes \mathcal{H}^C$ where $\mathcal{H}^C$ is some arbitrary Hilbert space.  In fact, it is clear that the system of interest can always be thought of as part of a composite system with a trivial bath.  Empirically and mathematically, having no bath is the same has having a trivial bath with respect to the dynamics of the reduced system.  In both cases, the dynamics of the reduced system are explained completely in terms of the reduced system.
 
@@ -126,7 +127,7 @@ It follows that
 
 The total domain argument for complete positivity seems reasonable at first glance.  If a map is a valid quantum map, then it must take valid density matrices to valid density matrices.  A trivial extension of the map is physically reasonable and must result in a valid quantum map, i.e.\ the trivial extension of the quantum map must also take valid density matrices to valid density matrices.  Therefore, the quantum map must be completely positive.  But, notice that the positivity domain is the domain of states in which a map $\Gamma$ will be positive.  On the positivity domain, $\Gamma$ will take valid initial states to valid final states.  Such a requirement is identical in spirit to the requirement of complete positivity except that it is not extended to states which are not actually created in the lab\footnote{This idea is why the tomography vector is used to define the sharp operation introduced in Section \ref{sec:sharpop}.}. 
 
-\subsection{Product State Argument}
+\section{Product State Argument}
 
 Complete positivity can be imposed on physical grounds without using the total domain argument.  Some authors instead choose to argue that the reduced system and bath must initially be uncorrelated.  Such a situation will always lead to completely positive reduced dynamics. 
 
@@ -144,11 +145,11 @@ It is not reasonable to assume the preparation procedure has such a feature with
 
 Methods for dealing with negative (i.e.\ not completely positive) dynamics in the lab will be discussed in later sections, but first, there will be some discussion of how to determine complete positivity.
 
-\section{Measures of Complete Positivity}
+\chapter{Measures of Complete Positivity}
 
 The operator sum representation theorem is the key to the mathematical convenience of completely positive dynamics, and it can be used to prove a few simple conditions.  If the composite dynamics are described by ``local unitaries'' or if the initial composite state has ``zero discord'', then completely positive dynamics are guaranteed.  These proofs are shown below.  Other cases require directly testing the system for complete positivity.
 
-\subsection{Local Unitary Composite Evolution}
+\section{Local Unitary Composite Evolution}
 
 The term ``locally unitary'' composite evolution refers to a composite unitary evolution that is of the form
 \begin{equation*}
@@ -179,7 +180,7 @@ Any local unitary composite evolution will be completely positive.  Notice that 
 
 The key idea is that local unitary composite evolution will lead to completely positive reduced dynamics independent of the form of the initial composite state. 
 
-\subsection{Product Composite States}
+\section{Product Composite States}
 \label{sec:prodstates}
 Initial composite states that have no correlation between the reduced system and the bath can be written as a product state, i.e.\
 \begin{equation*}
@@ -220,7 +221,7 @@ as required by the unit trace requirement on the density matrix, i.e.
 \end{eqnarray}
 where, by definition, $\trace(\rho^S) = 1$.
 
-\subsection{Zero Discord Initial Composite States}
+\section{Zero Discord Initial Composite States}
 The initial correlations between the reduced system and the bath can be formulated in a information theoretical sense using concepts such as the classical and quantum mutual information\footnote{A discussion of these concepts would be a little off-topic here, but a good introduction can be found in \cite{Zurek2003}, \cite{Zurek2002}, \cite{Ollivier2001}, \cite{Rodriguez2010} and \cite{Rodriguez2008A}.}.  
 \begin{definition}
 A {\em zero discord} state is a state with only classical correlations.  It is enough to note here that a state with only classical correlations between the subsystems of $\mathcal{H}^X$ and $\mathcal{H}^Y$ can be written in the form \cite{Rodriguez2008}
@@ -280,7 +281,7 @@ To see this point, notice that a tomography vector $\vec{\tau}^{\;\sharp}$ might
 
 It should be noted that a recent result in the literature (which has turned out to be very popular) makes the claim that a vanishing quantum discord is necessary and sufficient for a map to be completely positive given any composite dynamics \cite{Lidar2009a}.  This result is currently not completely accepted within the community \cite{Cesar2013,Simon2013}. {\bf FIX THIS PARAGRAPH TO MEET CESAR"S COMMENT!!!}
 
-\subsection{Completely Positive Reduced Dynamics Without A Special Form}
+\section{Completely Positive Reduced Dynamics Without A Special Form}
 The results of the previous subsections spell out situations in which completely positive reduced dynamics are guaranteed:
 \begin{itemize}
 \item Regardless of initial correlations (i.e.\ for any initial composite state), local unitary composite evolution always lead to completely positive reduced dynamics.
@@ -420,7 +421,7 @@ which is not equal to $\sigma_0$ for any $\phi$.  Also notice that $R^\dagger\si
 
 This example illustrates the fact that if the composite dynamics or initial composite state are not in the previously discussed specific forms, then whatever form the initial composite state takes will put restrictions on the possible forms of the composite dynamics that guarantee completely positive reduced dynamics, and vice versa.  These results rely on the Kraus representation theorem of completely positive maps, but the next section will introduce another way of determining the complete positivity of a channel.
 
-\subsection{Choi's Matrix}
+\section{Choi's Matrix}
 \label{sec:choi}
 
 Suppose an experiment is conducted and the map describing the dynamics is not completely positive.  How can an experimenter understand the lack of complete positivity?
@@ -577,7 +578,7 @@ which contradicts the definition of $\epsilon$ as trace preserving.  Therefore, 
 
 Choi's theorem reduces the question of complete positivity for a channel to the question of positive semi-definiteness of the Choi matrix.  This question is not easy, but it is straightforward.  As such, the Choi matrix representation of a channel will be our preferred representation, although both the superoperator and operator sum representations will be used when it is convenient.
 
-\subsection{Negativity}
+\section{Negativity}
 \label{sec:neg}
 
 The lack of complete positivity of a quantum channel will be called the negativity of the map $\epsilon$, denoted as $\eta_\epsilon$.  This quantity will be defined in terms of the total sum of the eigenvalues and the sum of the negative eigenvalues of the Choi matrix representation of the channel as follows
