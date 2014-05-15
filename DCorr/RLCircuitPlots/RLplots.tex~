@@ -5,6 +5,8 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{epstopdf}
+\usepackage{verbatim}
+\usepackage{amssymb}
 
 % Start the document
 \begin{document}
@@ -12,9 +14,43 @@
 \noindent{\huge {\bf How is CCM useful?}}
 
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-
-
-\section{Example System}
+\section{Linear Example}
+Consider the linear example dynamical system of
+\begin{eqnarray}
+X_t &=& \sin(t)\\
+Y_t &=& AX_{t-1}+B\eta_t,
+\end{eqnarray}
+with $A,B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B\in[0,10]$ step through in increments of 0.1.  Figure \ref{fig1} shows $C_{XY}$ and $C{YX}$.  
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+\includegraphics[scale=0.5]{LinearEx_CXY.eps} \\
+(a) $C_{XY}$ \\[6pt]
+\includegraphics[scale=0.5]{LinearEx_CYX.eps} \\
+(b) $C_{YX}$ \\[6pt]
+\end{tabular}
+\caption{Changing $A$ and $B$.  $C_{XY}$ and $C_{YX}$}
+\label{fig1}
+\end{figure}
+\end{center}
+Figure \ref{fig2} shows $\Delta$ for this example.
+\begin{center}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{LinearEx_Delta.eps} \\
+\caption{Changing $A$ and $B$. $\Delta$}
+\label{fig2}
+\end{figure}
+\end{center}
+Consider the convergence of two specific points in the above plots $(A,B) = (2.6,2.6)$ and $(A,B)=(3.0,2.6)$.
+\begin{center}
+\begin{figure}[H]
+\includegraphics[scale=0.7]{LinearEx_ChangeL.eps} \\
+\caption{}
+\label{fig2}
+\end{figure}
+\end{center}
+---
+\section{RL Circuit Example}
 The continuous system is
 \begin{equation}
 \label{eqn:it}
@@ -148,6 +184,7 @@ Figure \ref{fig:Ov1} shows the effect of increasing the library length from $2\t
 \label{fig:Ov2}
 \end{figure}
 
+\begin{comment}
 \section{Changing R(t)}
 Consider the situation where $V(t)$ is constant.
 \begin{center}
@@ -242,24 +279,25 @@ The CCM correlations are each plotted in Figure \ref{fig:fr} along with the corr
 Figure \ref{fig:fr1} shows the effect of increasing the library length from $2\times10^3$ (i.e.\ {\tt tspan = [0:0.5:1000];}) to $10^4$ (i.e.\ {\tt tspan = [0:0.5:5000];}), and Figure \ref{fig:fr2} extends the above plots to $f_r\in[0.01,10.0]$ in steps of $0.05$.
 \begin{figure}[H]
 \begin{tabular}{cc}
-%\includegraphics{} & %\includegraphics{} \\
-(a) $C_{VI}$ & (b) $C_{IV}$ \\[6pt]
-%\includegraphics{} & %\includegraphics{} \\
-(c) $P_\theta$ & (d) $|P|$ \\[6pt]
+\includegraphics[scale=0.5]{RLcirc_varyR_freqLup2.eps} \\
+(a) $C_{VI}$ and $C_{IV}$ \\[6pt]
+\includegraphics[scale=0.5]{RLcirc_varyR_freqLup.eps} \\
+(b) $P_\theta$ and $|P|$ \\[6pt]
 \end{tabular}
 \caption{Changing $f_r$ (longer library length).}
 \label{fig:fr1}
 \end{figure}
 \begin{figure}[H]
 \begin{tabular}{cc}
-%\includegraphics{} & %\includegraphics{} \\
-(a) $C_{VI}$ & (b) $C_{IV}$ \\[6pt]
-%\includegraphics{} & %\includegraphics{} \\
-(c) $P_\theta$ & (d) $|P|$ \\[6pt]
+\includegraphics[scale=0.5]{RLcirc_varyR_freqlong2.eps} \\
+(a) $C_{VI}$ and $C_{IV}$ \\[6pt]
+\includegraphics[scale=0.5]{RLcirc_varyR_freqlong.eps} \\
+(b) $P_\theta$ and $|P|$ \\[6pt]
 \end{tabular}
 \caption{Changing $f_r$ (larger domain for $f_r$).}
 \label{fig:fr2}
 \end{figure}
+\end{comment}
 
 \end{document}
 

@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{verbatim}
+\usepackage{amssymb}
 
 % Start the document
 \begin{document}
@@ -13,9 +14,43 @@
 \noindent{\huge {\bf How is CCM useful?}}
 
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-
-
-\section{Example System}
+\section{Linear Example}
+Consider the linear example dynamical system of
+\begin{eqnarray}
+X_t &=& \sin(t)\\
+Y_t &=& AX_{t-1}+B\eta_t,
+\end{eqnarray}
+with $A,B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B\in[0,10]$ step through in increments of 0.1.  Figure \ref{fig1} shows $C_{XY}$ and $C{YX}$.  
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+\includegraphics[scale=0.5]{LinearEx_CXY.eps} \\
+(a) $C_{XY}$ \\[6pt]
+\includegraphics[scale=0.5]{LinearEx_CYX.eps} \\
+(b) $C_{YX}$ \\[6pt]
+\end{tabular}
+\caption{Changing $A$ and $B$.  $C_{XY}$ and $C_{YX}$}
+\label{fig1}
+\end{figure}
+\end{center}
+Figure \ref{fig2} shows $\Delta$ for this example.
+\begin{center}
+\begin{figure}[H]
+\includegraphics[scale=0.7]{LinearEx_Delta.eps} \\
+\caption{Changing $A$ and $B$. $\Delta$}
+\label{fig2}
+\end{figure}
+\end{center}
+Consider the convergence of two specific points in the above plots $(A,B) = (2.6,2.6)$ and $(A,B)=(3.0,2.6)$.
+\begin{center}
+\begin{figure}[H]
+\includegraphics[scale=0.7]{LinearEx_ChangeL.eps} \\
+\caption{}
+\label{fig2}
+\end{figure}
+\end{center}
+---
+\section{RL Circuit Example}
 The continuous system is
 \begin{equation}
 \label{eqn:it}
