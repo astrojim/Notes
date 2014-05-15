@@ -299,5 +299,67 @@ Figure \ref{fig:fr1} shows the effect of increasing the library length from $2\t
 \end{figure}
 \end{comment}
 
+---
+\section{PAI}
+Consider the system (Sugihara Figure 3 C and D)
+\begin{eqnarray}
+X_{t+1} &=& X_t\left(r_x-r_xX_t-\beta_{xy}Y_t\right)\\
+Y_{t+1} &=& Y_t\left(r_y-r_yY_t-\beta_{yx}X_t\right),
+\end{eqnarray}
+with $r_y=r_y=3.7$, $X_0 = 0.2$, $Y_0=0.4$, $\beta_{xy}=0$, and $\beta_{yx}=0.32$.  Plots of the correlation between $X$ and $X|Y$, as well as, $Y$ and $Y|X$ are shown below.
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+\includegraphics[scale=0.5]{SugFig3_XgY.eps} \\
+(a) $C_{XY}$ \\[6pt]
+\includegraphics[scale=0.5]{SugFig3_YgX.eps} \\
+(b) $C_{YX}$ \\[6pt]
+\end{tabular}
+\caption{Changing $A$ and $B$.  $C_{XY}$ and $C_{YX}$}
+\label{fig1}
+\end{figure}
+\end{center}
+This leads to
+
+\begin{tabular}{c|c|c}
+$C_{XY}$ & $C_{YX}$ & $\Delta=C_{YX}-C_{XY}$ \\
+\hline \\
+0.973921 & 0.110698 & -0.8632
+\end{tabular}
+
+But, these are not the only correlations that can be tested:
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+\includegraphics[scale=0.5]{SugFig3_XgX.eps} \\
+(a) $C_{XX}$ \\[6pt]
+\includegraphics[scale=0.5]{SugFig3_XgXY.eps} \\
+(b) $C_{X(XY)}$ \\[6pt]
+\end{tabular}
+\caption{Changing $A$ and $B$.  $C_{XY}$ and $C_{YX}$}
+\label{fig1}
+\end{figure}
+\end{center}
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+\includegraphics[scale=0.5]{SugFig3_YgY.eps} \\
+(c) $C_{XX}$ \\[6pt]
+\includegraphics[scale=0.5]{SugFig3_YgYX.eps} \\
+(d) $C_{X(XY)}$ \\[6pt]
+\end{tabular}
+\caption{Changing $A$ and $B$.  $C_{XY}$ and $C_{YX}$}
+\label{fig1}
+\end{figure}
+\end{center}
+This leads to
+
+\begin{tabular}{c|c|c|c|c}
+$C_{XX}$ & $C_{X(XY)}$ & $C_{YY}$ & $C_{Y(YX)}$ & $\Delta=C_{Y(YX)}-C_{X(XY)}$ \\
+\hline \\
+0.999841 & 0.998989 & 0.999908 & 0.998693 & -2.9548e-04
+\end{tabular}
+
+
 \end{document}
 
