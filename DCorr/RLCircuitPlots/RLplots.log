@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  15 MAY 2014 12:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  21 MAY 2014 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,6 +375,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Warning: Label `fig2' multiply defined.
 
 
+LaTeX Warning: Label `fig2' multiply defined.
+
+
+LaTeX Warning: Label `fig2' multiply defined.
+
+
+LaTeX Warning: Label `fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig1' multiply defined.
+
+
 LaTeX Warning: Label `fig1' multiply defined.
 
 
@@ -539,8 +551,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[2 <./LinearEx_Delta-eps-converted-to.pdf>] [3 <./LinearEx_ChangeL-eps-converte
-d-to.pdf>]
+[2 <./LinearEx_Delta-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <LinearXYZEx.eps>
+(epstopdf)                    date: 2014-05-21 14:28:52
+(epstopdf)                    size: 30099 bytes
+(epstopdf)             Output file: <LinearXYZEx-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-05-21 14:34:08
+(epstopdf)                    size: 14576 bytes
+(epstopdf)             Command: <repstopdf --outfile=LinearXYZEx-eps-converted-
+to.pdf LinearXYZEx.eps>
+(epstopdf)             \includegraphics on input line 62.
+Package epstopdf Info: Output file is already uptodate.
+
+<LinearXYZEx-eps-converted-to.pdf, id=47, 1096.095pt x 554.07pt>
+File: LinearXYZEx-eps-converted-to.pdf Graphic file (type pdf)
+
+<use LinearXYZEx-eps-converted-to.pdf>
+Package pdftex.def Info: LinearXYZEx-eps-converted-to.pdf used on input line 62
+.
+(pdftex.def)             Requested size: 657.66208pt x 332.44456pt.
+
+Overfull \hbox (79.50206pt too wide) in paragraph at lines 62--63
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+[3 <./LinearEx_ChangeL-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <NonLinearEx.eps>
+(epstopdf)                    date: 2014-05-21 19:43:00
+(epstopdf)                    size: 48055 bytes
+(epstopdf)             Output file: <NonLinearEx-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-05-21 19:46:10
+(epstopdf)                    size: 15324 bytes
+(epstopdf)             Command: <repstopdf --outfile=NonLinearEx-eps-converted-
+to.pdf NonLinearEx.eps>
+(epstopdf)             \includegraphics on input line 75.
+Package epstopdf Info: Output file is already uptodate.
+
+<NonLinearEx-eps-converted-to.pdf, id=61, 1096.095pt x 554.07pt>
+File: NonLinearEx-eps-converted-to.pdf Graphic file (type pdf)
+
+<use NonLinearEx-eps-converted-to.pdf>
+Package pdftex.def Info: NonLinearEx-eps-converted-to.pdf used on input line 75
+.
+(pdftex.def)             Requested size: 657.66208pt x 332.44456pt.
+
+Overfull \hbox (79.50206pt too wide) in paragraph at lines 75--76
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+[4 <./LinearXYZEx-eps-converted-to.pdf>] [5 <./NonLinearEx-eps-converted-to.pdf
+>]
 Package epstopdf Info: Source file: <RLcirc_varyV_amp2.eps>
 (epstopdf)                    date: 2014-04-30 19:03:33
 (epstopdf)                    size: 30509 bytes
@@ -549,15 +619,14 @@ Package epstopdf Info: Source file: <RLcirc_varyV_amp2.eps>
 (epstopdf)                    size: 12940 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_amp2-eps-conv
 erted-to.pdf RLcirc_varyV_amp2.eps>
-(epstopdf)             \includegraphics on input line 96.
+(epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
-
-<RLcirc_varyV_amp2-eps-converted-to.pdf, id=62, 1096.095pt x 554.07pt>
+ <RLcirc_varyV_amp2-eps-converted-to.pdf, id=93, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_amp2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_amp2-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_amp2-eps-converted-to.pdf used on input l
-ine 96.
+ine 124.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
 Package epstopdf Info: Source file: <RLcirc_varyV_amp.eps>
 (epstopdf)                    date: 2014-04-29 19:35:20
@@ -567,17 +636,17 @@ Package epstopdf Info: Source file: <RLcirc_varyV_amp.eps>
 (epstopdf)                    size: 32492 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_amp-eps-conve
 rted-to.pdf RLcirc_varyV_amp.eps>
-(epstopdf)             \includegraphics on input line 98.
+(epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_amp-eps-converted-to.pdf, id=63, 1096.095pt x 554.07pt>
+<RLcirc_varyV_amp-eps-converted-to.pdf, id=94, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_amp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_amp-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_amp-eps-converted-to.pdf used on input li
-ne 98.
+ne 126.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
- [4]
+ [6]
 Package epstopdf Info: Source file: <RLcirc_varyV_freq2.eps>
 (epstopdf)                    date: 2014-04-30 19:10:20
 (epstopdf)                    size: 30356 bytes
@@ -586,15 +655,15 @@ Package epstopdf Info: Source file: <RLcirc_varyV_freq2.eps>
 (epstopdf)                    size: 13430 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_freq2-eps-con
 verted-to.pdf RLcirc_varyV_freq2.eps>
-(epstopdf)             \includegraphics on input line 116.
+(epstopdf)             \includegraphics on input line 144.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_freq2-eps-converted-to.pdf, id=69, 1096.095pt x 554.07pt>
+<RLcirc_varyV_freq2-eps-converted-to.pdf, id=100, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_freq2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_freq2-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_freq2-eps-converted-to.pdf used on input 
-line 116.
+line 144.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
 Package epstopdf Info: Source file: <RLcirc_varyV_freq.eps>
 (epstopdf)                    date: 2014-04-29 19:51:10
@@ -604,17 +673,17 @@ Package epstopdf Info: Source file: <RLcirc_varyV_freq.eps>
 (epstopdf)                    size: 33335 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_freq-eps-conv
 erted-to.pdf RLcirc_varyV_freq.eps>
-(epstopdf)             \includegraphics on input line 118.
+(epstopdf)             \includegraphics on input line 146.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_freq-eps-converted-to.pdf, id=70, 1096.095pt x 554.07pt>
+<RLcirc_varyV_freq-eps-converted-to.pdf, id=101, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_freq-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_freq-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_freq-eps-converted-to.pdf used on input l
-ine 118.
+ine 146.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
- [5 <./RLcirc_varyV_amp2-eps-converted-to.pdf> <./RLcirc_varyV_amp-eps-converte
+ [7 <./RLcirc_varyV_amp2-eps-converted-to.pdf> <./RLcirc_varyV_amp-eps-converte
 d-to.pdf>]
 Package epstopdf Info: Source file: <RLcirc_varyV_phase2.eps>
 (epstopdf)                    date: 2014-04-30 19:07:03
@@ -624,15 +693,15 @@ Package epstopdf Info: Source file: <RLcirc_varyV_phase2.eps>
 (epstopdf)                    size: 13729 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_phase2-eps-co
 nverted-to.pdf RLcirc_varyV_phase2.eps>
-(epstopdf)             \includegraphics on input line 136.
+(epstopdf)             \includegraphics on input line 164.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_phase2-eps-converted-to.pdf, id=88, 1096.095pt x 554.07pt>
+<RLcirc_varyV_phase2-eps-converted-to.pdf, id=120, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_phase2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_phase2-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_phase2-eps-converted-to.pdf used on input
- line 136.
+ line 164.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
 Package epstopdf Info: Source file: <RLcirc_varyV_phase.eps>
 (epstopdf)                    date: 2014-04-29 19:48:55
@@ -642,17 +711,17 @@ Package epstopdf Info: Source file: <RLcirc_varyV_phase.eps>
 (epstopdf)                    size: 33233 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_phase-eps-con
 verted-to.pdf RLcirc_varyV_phase.eps>
-(epstopdf)             \includegraphics on input line 138.
+(epstopdf)             \includegraphics on input line 166.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_phase-eps-converted-to.pdf, id=89, 1096.095pt x 554.07pt>
+<RLcirc_varyV_phase-eps-converted-to.pdf, id=121, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_phase-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_phase-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_phase-eps-converted-to.pdf used on input 
-line 138.
+line 166.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
- [6 <./RLcirc_varyV_freq2-eps-converted-to.pdf> <./RLcirc_varyV_freq-eps-conver
+ [8 <./RLcirc_varyV_freq2-eps-converted-to.pdf> <./RLcirc_varyV_freq-eps-conver
 ted-to.pdf>]
 Package epstopdf Info: Source file: <RLcirc_varyV_offset2.eps>
 (epstopdf)                    date: 2014-04-30 19:05:06
@@ -663,15 +732,15 @@ Package epstopdf Info: Source file: <RLcirc_varyV_offset2.eps>
 (epstopdf)                    size: 13438 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_offset2-eps-c
 onverted-to.pdf RLcirc_varyV_offset2.eps>
-(epstopdf)             \includegraphics on input line 156.
+(epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_offset2-eps-converted-to.pdf, id=107, 1096.095pt x 554.07pt>
+<RLcirc_varyV_offset2-eps-converted-to.pdf, id=139, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_offset2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_offset2-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_offset2-eps-converted-to.pdf used on inpu
-t line 156.
+t line 184.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
 Package epstopdf Info: Source file: <RLcirc_varyV_offset.eps>
 (epstopdf)                    date: 2014-04-29 19:46:52
@@ -681,17 +750,17 @@ Package epstopdf Info: Source file: <RLcirc_varyV_offset.eps>
 (epstopdf)                    size: 32324 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_offset-eps-co
 nverted-to.pdf RLcirc_varyV_offset.eps>
-(epstopdf)             \includegraphics on input line 158.
+(epstopdf)             \includegraphics on input line 186.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_offset-eps-converted-to.pdf, id=108, 1096.095pt x 554.07pt>
+<RLcirc_varyV_offset-eps-converted-to.pdf, id=140, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_offset-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_offset-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_offset-eps-converted-to.pdf used on input
- line 158.
+ line 186.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
- [7 <./RLcirc_varyV_phase2-eps-converted-to.pdf> <./RLcirc_varyV_phase-eps-conv
+ [9 <./RLcirc_varyV_phase2-eps-converted-to.pdf> <./RLcirc_varyV_phase-eps-conv
 erted-to.pdf>]
 Package epstopdf Info: Source file: <RLcirc_varyV_offsetLup2.eps>
 (epstopdf)                    date: 2014-04-30 19:46:05
@@ -702,15 +771,15 @@ df>
 (epstopdf)                    size: 13558 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_offsetLup2-ep
 s-converted-to.pdf RLcirc_varyV_offsetLup2.eps>
-(epstopdf)             \includegraphics on input line 168.
+(epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_offsetLup2-eps-converted-to.pdf, id=127, 1096.095pt x 554.07pt>
+<RLcirc_varyV_offsetLup2-eps-converted-to.pdf, id=158, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_offsetLup2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_offsetLup2-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_offsetLup2-eps-converted-to.pdf used on i
-nput line 168.
+nput line 196.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
 Package epstopdf Info: Source file: <RLcirc_varyV_offsetLup.eps>
 (epstopdf)                    date: 2014-04-30 19:45:34
@@ -721,15 +790,15 @@ f>
 (epstopdf)                    size: 33233 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_offsetLup-eps
 -converted-to.pdf RLcirc_varyV_offsetLup.eps>
-(epstopdf)             \includegraphics on input line 170.
+(epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_offsetLup-eps-converted-to.pdf, id=128, 1096.095pt x 554.07pt>
+<RLcirc_varyV_offsetLup-eps-converted-to.pdf, id=159, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_offsetLup-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_offsetLup-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_offsetLup-eps-converted-to.pdf used on in
-put line 170.
+put line 198.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
 Package epstopdf Info: Source file: <RLcirc_varyV_offsetlong2.eps>
 (epstopdf)                    date: 2014-04-30 19:44:14
@@ -740,15 +809,15 @@ pdf>
 (epstopdf)                    size: 13445 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_offsetlong2-e
 ps-converted-to.pdf RLcirc_varyV_offsetlong2.eps>
-(epstopdf)             \includegraphics on input line 178.
+(epstopdf)             \includegraphics on input line 206.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_offsetlong2-eps-converted-to.pdf, id=129, 1096.095pt x 554.07pt>
+<RLcirc_varyV_offsetlong2-eps-converted-to.pdf, id=160, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_offsetlong2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_offsetlong2-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_offsetlong2-eps-converted-to.pdf used on 
-input line 178.
+input line 206.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
 Package epstopdf Info: Source file: <RLcirc_varyV_offsetlong.eps>
 (epstopdf)                    date: 2014-04-30 19:42:59
@@ -759,19 +828,19 @@ df>
 (epstopdf)                    size: 91119 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLcirc_varyV_offsetlong-ep
 s-converted-to.pdf RLcirc_varyV_offsetlong.eps>
-(epstopdf)             \includegraphics on input line 180.
+(epstopdf)             \includegraphics on input line 208.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLcirc_varyV_offsetlong-eps-converted-to.pdf, id=130, 1096.095pt x 554.07pt>
+<RLcirc_varyV_offsetlong-eps-converted-to.pdf, id=161, 1096.095pt x 554.07pt>
 File: RLcirc_varyV_offsetlong-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLcirc_varyV_offsetlong-eps-converted-to.pdf>
 Package pdftex.def Info: RLcirc_varyV_offsetlong-eps-converted-to.pdf used on i
-nput line 180.
+nput line 208.
 (pdftex.def)             Requested size: 548.04616pt x 277.03432pt.
- [8 <./RLcirc_varyV_offset2-eps-converted-to.pdf> <./RLcirc_varyV_offset-eps-co
-nverted-to.pdf>] [9 <./RLcirc_varyV_offsetLup2-eps-converted-to.pdf> <./RLcirc_
-varyV_offsetLup-eps-converted-to.pdf>]
+ [10 <./RLcirc_varyV_offset2-eps-converted-to.pdf> <./RLcirc_varyV_offset-eps-c
+onverted-to.pdf>] [11 <./RLcirc_varyV_offsetLup2-eps-converted-to.pdf> <./RLcir
+c_varyV_offsetLup-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <SugFig3_XgY.eps>
 (epstopdf)                    date: 2014-05-15 11:56:21
 (epstopdf)                    size: 31473 bytes
@@ -780,14 +849,15 @@ Package epstopdf Info: Source file: <SugFig3_XgY.eps>
 (epstopdf)                    size: 60030 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3_XgY-eps-converted-
 to.pdf SugFig3_XgY.eps>
-(epstopdf)             \includegraphics on input line 313.
+(epstopdf)             \includegraphics on input line 342.
 Package epstopdf Info: Output file is already uptodate.
- <SugFig3_XgY-eps-converted-to.pdf, id=166, 499.8675pt x 367.3725pt>
+
+<SugFig3_XgY-eps-converted-to.pdf, id=198, 499.8675pt x 367.3725pt>
 File: SugFig3_XgY-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3_XgY-eps-converted-to.pdf>
-Package pdftex.def Info: SugFig3_XgY-eps-converted-to.pdf used on input line 31
-3.
+Package pdftex.def Info: SugFig3_XgY-eps-converted-to.pdf used on input line 34
+2.
 (pdftex.def)             Requested size: 249.93314pt x 183.68579pt.
 Package epstopdf Info: Source file: <SugFig3_YgX.eps>
 (epstopdf)                    date: 2014-05-15 11:51:28
@@ -797,17 +867,17 @@ Package epstopdf Info: Source file: <SugFig3_YgX.eps>
 (epstopdf)                    size: 23665 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3_YgX-eps-converted-
 to.pdf SugFig3_YgX.eps>
-(epstopdf)             \includegraphics on input line 315.
+(epstopdf)             \includegraphics on input line 344.
 Package epstopdf Info: Output file is already uptodate.
 
-<SugFig3_YgX-eps-converted-to.pdf, id=167, 572.1375pt x 405.515pt>
+<SugFig3_YgX-eps-converted-to.pdf, id=199, 572.1375pt x 405.515pt>
 File: SugFig3_YgX-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3_YgX-eps-converted-to.pdf>
-Package pdftex.def Info: SugFig3_YgX-eps-converted-to.pdf used on input line 31
-5.
+Package pdftex.def Info: SugFig3_YgX-eps-converted-to.pdf used on input line 34
+4.
 (pdftex.def)             Requested size: 286.06804pt x 202.75699pt.
- [10 <./RLcirc_varyV_offsetlong2-eps-converted-to.pdf> <./RLcirc_varyV_offsetlo
+ [12 <./RLcirc_varyV_offsetlong2-eps-converted-to.pdf> <./RLcirc_varyV_offsetlo
 ng-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <SugFig3_XgX.eps>
 (epstopdf)                    date: 2014-05-15 12:00:50
@@ -817,15 +887,15 @@ Package epstopdf Info: Source file: <SugFig3_XgX.eps>
 (epstopdf)                    size: 57837 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3_XgX-eps-converted-
 to.pdf SugFig3_XgX.eps>
-(epstopdf)             \includegraphics on input line 334.
+(epstopdf)             \includegraphics on input line 363.
 Package epstopdf Info: Output file is already uptodate.
 
-<SugFig3_XgX-eps-converted-to.pdf, id=186, 501.875pt x 373.395pt>
+<SugFig3_XgX-eps-converted-to.pdf, id=217, 501.875pt x 373.395pt>
 File: SugFig3_XgX-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3_XgX-eps-converted-to.pdf>
-Package pdftex.def Info: SugFig3_XgX-eps-converted-to.pdf used on input line 33
-4.
+Package pdftex.def Info: SugFig3_XgX-eps-converted-to.pdf used on input line 36
+3.
 (pdftex.def)             Requested size: 250.93687pt x 186.69704pt.
 Package epstopdf Info: Source file: <SugFig3_XgXY.eps>
 (epstopdf)                    date: 2014-05-15 12:01:28
@@ -835,17 +905,17 @@ Package epstopdf Info: Source file: <SugFig3_XgXY.eps>
 (epstopdf)                    size: 59943 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3_XgXY-eps-converted
 -to.pdf SugFig3_XgXY.eps>
-(epstopdf)             \includegraphics on input line 336.
+(epstopdf)             \includegraphics on input line 365.
 Package epstopdf Info: Output file is already uptodate.
 
-<SugFig3_XgXY-eps-converted-to.pdf, id=187, 501.875pt x 372.39125pt>
+<SugFig3_XgXY-eps-converted-to.pdf, id=218, 501.875pt x 372.39125pt>
 File: SugFig3_XgXY-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3_XgXY-eps-converted-to.pdf>
 Package pdftex.def Info: SugFig3_XgXY-eps-converted-to.pdf used on input line 3
-36.
+65.
 (pdftex.def)             Requested size: 250.93687pt x 186.19516pt.
- [11 <./SugFig3_XgY-eps-converted-to.pdf> <./SugFig3_YgX-eps-converted-to.pdf>]
+ [13 <./SugFig3_XgY-eps-converted-to.pdf> <./SugFig3_YgX-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <SugFig3_YgY.eps>
 (epstopdf)                    date: 2014-05-15 12:02:04
 (epstopdf)                    size: 58450 bytes
@@ -854,15 +924,15 @@ Package epstopdf Info: Source file: <SugFig3_YgY.eps>
 (epstopdf)                    size: 23607 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3_YgY-eps-converted-
 to.pdf SugFig3_YgY.eps>
-(epstopdf)             \includegraphics on input line 346.
+(epstopdf)             \includegraphics on input line 375.
 Package epstopdf Info: Output file is already uptodate.
 
-<SugFig3_YgY-eps-converted-to.pdf, id=201, 501.875pt x 372.39125pt>
+<SugFig3_YgY-eps-converted-to.pdf, id=233, 501.875pt x 372.39125pt>
 File: SugFig3_YgY-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3_YgY-eps-converted-to.pdf>
-Package pdftex.def Info: SugFig3_YgY-eps-converted-to.pdf used on input line 34
-6.
+Package pdftex.def Info: SugFig3_YgY-eps-converted-to.pdf used on input line 37
+5.
 (pdftex.def)             Requested size: 250.93687pt x 186.19516pt.
 Package epstopdf Info: Source file: <SugFig3_YgYX.eps>
 (epstopdf)                    date: 2014-05-15 12:02:33
@@ -872,28 +942,57 @@ Package epstopdf Info: Source file: <SugFig3_YgYX.eps>
 (epstopdf)                    size: 23752 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3_YgYX-eps-converted
 -to.pdf SugFig3_YgYX.eps>
-(epstopdf)             \includegraphics on input line 348.
+(epstopdf)             \includegraphics on input line 377.
 Package epstopdf Info: Output file is already uptodate.
 
-<SugFig3_YgYX-eps-converted-to.pdf, id=202, 501.875pt x 372.39125pt>
+<SugFig3_YgYX-eps-converted-to.pdf, id=234, 501.875pt x 372.39125pt>
 File: SugFig3_YgYX-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3_YgYX-eps-converted-to.pdf>
 Package pdftex.def Info: SugFig3_YgYX-eps-converted-to.pdf used on input line 3
-48.
+77.
 (pdftex.def)             Requested size: 250.93687pt x 186.19516pt.
- [12 <./SugFig3_XgX-eps-converted-to.pdf> <./SugFig3_XgXY-eps-converted-to.pdf>
-] [13 <./SugFig3_YgY-eps-converted-to.pdf> <./SugFig3_YgYX-eps-converted-to.pdf
->] (./RLplots.aux)
+ [14 <./SugFig3_XgX-eps-converted-to.pdf> <./SugFig3_XgXY-eps-converted-to.pdf>
+]
+Package epstopdf Info: Source file: <LinearEx_PAItemp.eps>
+(epstopdf)                    date: 2014-05-21 13:48:16
+(epstopdf)                    size: 17817 bytes
+(epstopdf)             Output file: <LinearEx_PAItemp-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-05-21 13:54:06
+(epstopdf)                    size: 10171 bytes
+(epstopdf)             Command: <repstopdf --outfile=LinearEx_PAItemp-eps-conve
+rted-to.pdf LinearEx_PAItemp.eps>
+(epstopdf)             \includegraphics on input line 394.
+Package epstopdf Info: Output file is already uptodate.
+
+<LinearEx_PAItemp-eps-converted-to.pdf, id=248, 793.96625pt x 484.81125pt>
+File: LinearEx_PAItemp-eps-converted-to.pdf Graphic file (type pdf)
+
+<use LinearEx_PAItemp-eps-converted-to.pdf>
+Package pdftex.def Info: LinearEx_PAItemp-eps-converted-to.pdf used on input li
+ne 394.
+(pdftex.def)             Requested size: 635.17386pt x 387.84952pt.
+
+Overfull \hbox (57.01384pt too wide) in paragraph at lines 394--395
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+[15 <./SugFig3_YgY-eps-converted-to.pdf> <./SugFig3_YgYX-eps-converted-to.pdf>]
+[16 <./LinearEx_PAItemp-eps-converted-to.pdf>] (./RLplots.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2691 strings out of 494043
- 39122 string characters out of 6155015
- 97418 words of memory out of 5000000
- 6029 multiletter control sequences out of 15000+600000
+ 2706 strings out of 494043
+ 39633 string characters out of 6155015
+ 97422 words of memory out of 5000000
+ 6041 multiletter control sequences out of 15000+600000
  12016 words of font info for 47 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
  42i,13n,26p,410b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -910,10 +1009,10 @@ s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on RLplots.pdf (13 pages, 764322 bytes).
+Output written on RLplots.pdf (16 pages, 794433 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
+ 319 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

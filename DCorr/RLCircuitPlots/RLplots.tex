@@ -14,7 +14,7 @@
 \noindent{\huge {\bf How is CCM useful?}}
 
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-\section{Linear Example}
+\section{Linear Example \#1}
 Consider the linear example dynamical system of
 \begin{eqnarray}
 X_t &=& \sin(t)\\
@@ -49,6 +49,34 @@ Consider the convergence of two specific points in the above plots $(A,B) = (2.6
 \label{fig2}
 \end{figure}
 \end{center}
+
+\section{Linear Example \#2}
+Consider the linear example dynamical system of
+\begin{eqnarray}
+X_t &=& \sin(t)\\
+Y_t &=& AX_{t-1}+B\eta_t\\
+Z_t &=& Y_{t-1},
+\end{eqnarray}
+with $A,B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B\in[0,5]$ step through in increments of 0.1.    
+\begin{figure}[H]
+\includegraphics[scale=0.6]{LinearXYZEx.eps} \\
+\caption{}
+\label{fig2}
+\end{figure}
+
+\section{Non-Linear Example}
+Consider the nonlinear example dynamical system of
+\begin{eqnarray}
+X_t &=& \sin(t)\\
+Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
+\end{eqnarray}
+with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ step through in increments of 0.5.    
+\begin{figure}[H]
+\includegraphics[scale=0.6]{NonLinearEx.eps} \\
+\caption{}
+\label{fig2}
+\end{figure}
+
 ---
 \section{RL Circuit Example}
 The continuous system is
@@ -271,6 +299,7 @@ The CCM correlations are each plotted in Figure \ref{fig:fr} along with the corr
 (a) $C_{VI}$ and $C_{IV}$ \\[6pt]
 \includegraphics[scale=0.5]{RLcirc_varyR_freq.eps} \\
 (b) $P_\theta$ and $|P|$ \\[6pt]
+
 \end{tabular}
 \caption{Changing $f_r$.}
 \label{fig:fr}
@@ -359,6 +388,14 @@ $C_{XX}$ & $C_{X(XY)}$ & $C_{YY}$ & $C_{Y(YX)}$ & $\Delta=C_{Y(YX)}-C_{X(XY)}$ \
 \hline \\
 0.999841 & 0.998989 & 0.999908 & 0.998693 & -2.9548e-04
 \end{tabular}
+
+Consider a comparison of PAI and CCM given the linear example system from above.  
+\begin{figure}[H]
+\includegraphics[scale=0.8]{LinearEx_PAItemp.eps} \\
+\caption{Changing $A$ and $B$.}
+\label{fig1}
+\end{figure}
+
 
 
 \end{document}
