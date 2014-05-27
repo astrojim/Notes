@@ -1638,15 +1638,30 @@ This single qubit channel combines the two above examples and will yield a negat
 \begin{eqnarray*}
 C_{\theta\alpha} &=& \mathbf{C}\odot \varepsilon(\vec{\tau})\\
  &=& \begin{pmatrix}
- 1-\alpha^2+\alpha^2 \cos^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta & c_1 & c_2 \\
- 
- -\alpha \sqrt{1-\alpha^2} \sin\theta & \alpha^2 \sin^2\theta & (1+i) \alpha \sqrt{1-\alpha^2} \sin\theta & c_3 \\
- 
-c_1^* & (1-i) \alpha \sqrt{1-\alpha^2} \sin\theta & \alpha^2 \sin^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta \\
- 
-c_2^* & c_3^* & -\alpha \sqrt{1-\alpha^2} \sin\theta & 1-\alpha^2+\alpha^2 \cos^2\theta
-\end{pmatrix}
+ A & B \\
+ B^\dagger & C 
+\end{pmatrix}\;\;,
 \end{eqnarray*}
+where 
+$$
+A = \begin{pmatrix}
+ 1-\alpha^2+\alpha^2 \cos^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta\\
+  -\alpha \sqrt{1-\alpha^2} \sin\theta & \alpha^2 \sin^2\theta 
+\end{pmatrix}
+$$
+$$
+B = \begin{pmatrix}
+c_1 & c_2 \\
+(1+i) \alpha \sqrt{1-\alpha^2} \sin\theta & c_3 
+\end{pmatrix}\;\;,
+$$
+and
+$$
+C = \begin{pmatrix}
+ \alpha^2 \sin^2\theta & -\alpha \sqrt{1-\alpha^2} \sin\theta \\
+ -\alpha \sqrt{1-\alpha^2} \sin\theta & 1-\alpha^2+\alpha^2 \cos^2\theta
+\end{pmatrix}
+$$
 with
 \begin{eqnarray*}
 c_1 &=& \frac{1}{2} \sin\theta \left(\left((-1-i)+2 \alpha^2\right) \cos\theta+2 \alpha \sqrt{1-\alpha^2} \sin\theta\right)\;\;,\\

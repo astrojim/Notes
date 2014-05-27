@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: JMMcCracken_book.aux
+The style file: abbrv.bst
+Database file #1: ThesisNotes_GMUFormat.bib
+You've used 107 entries,
+            2118 wiz_defined-function locations,
+            1168 strings with 18361 characters,
+and the built_in function-call counts, 32407 in all, are:
+= -- 3136
+> -- 1431
+< -- 7
++ -- 574
+- -- 458
+* -- 2199
+:= -- 5569
+add.period$ -- 341
+call.type$ -- 107
+change.case$ -- 508
+chr.to.int$ -- 0
+cite$ -- 107
+duplicate$ -- 1267
+empty$ -- 2665
+format.name$ -- 458
+if$ -- 6760
+int.to.chr$ -- 0
+int.to.str$ -- 107
+missing$ -- 141
+newline$ -- 538
+num.names$ -- 220
+pop$ -- 551
+preamble$ -- 1
+purify$ -- 441
+quote$ -- 0
+skip$ -- 802
+stack$ -- 0
+substring$ -- 1933
+swap$ -- 154
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 354
+warning$ -- 0
+while$ -- 295
+width$ -- 110
+write$ -- 1166

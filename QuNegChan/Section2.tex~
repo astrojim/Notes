@@ -111,6 +111,7 @@ The argument that all physically reasonable operations are completely positive s
 The current arguments for completely positivity as a physical requirement of all quantum operations can be grouped into two categories which will be called the ``total domain argument for complete positivity'' and the ``product state argument for complete positivity''.
 
 \section{Total Domain Argument}
+\label{sec:totaldomain}
 
 The thought process behind the total domain argument is as follows: Any known Hilbert space cannot be known to be isolated, i.e.\ given only $\mathcal{H}^A$, it is not possible to rule out the existence of $\mathcal{H}^{AC} = \mathcal{H}^A \otimes \mathcal{H}^C$ where $\mathcal{H}^C$ is some arbitrary Hilbert space.  In fact, it is clear that the system of interest can always be thought of as part of a composite system with a trivial bath.  Empirically and mathematically, having no bath is the same has having a trivial bath with respect to the dynamics of the reduced system.  In both cases, the dynamics of the reduced system are explained completely in terms of the reduced system.
 
