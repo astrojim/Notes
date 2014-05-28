@@ -1,3 +1,17 @@
+@ARTICLE{Dominy2013,
+   author = {{Dominy}, J.~M. and {Shabani}, A. and {Lidar}, D.~A.},
+    title = "{A general framework for complete positivity}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1312.0908},
+ primaryClass = "quant-ph",
+ keywords = {Quantum Physics},
+     year = 2013,
+    month = dec,
+   adsurl = {http://adsabs.harvard.edu/abs/2013arXiv1312.0908D},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
 @article{Kraus1971,
 title = {General state changes in quantum theory},
 journal = {Annals of Physics},
@@ -49,7 +63,7 @@ language={English}
 }
 @article{Mazzola2012,
   title = {Dynamical role of system-environment correlations in non-Markovian dynamics},
-  author = {Mazzola, Laura and Rodr\'\iguez-Rosario, C\'esar A. and Modi, Kavan and Paternostro, Mauro},
+  author = {Mazzola, Laura and Rodriguez-Rosario, C\'esar A. and Modi, Kavan and Paternostro, Mauro},
   journal = {Phys. Rev. A},
   volume = {86},
   issue = {1},
@@ -188,7 +202,7 @@ language={English}
 
 @article{Gisin2001,
   title = {No-Signaling Condition and Quantum Dynamics},
-  author = {Simon, Christoph and Bu\ifmmode \check{z}\else \v{z}\fi{}ek, Vladim\'\ir and Gisin, Nicolas},
+  author = {Simon, Christoph and Buzek, Vladimir and Gisin, Nicolas},
   journal = {Phys. Rev. Lett.},
   volume = {87},
   issue = {17},
