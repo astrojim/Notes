@@ -68,7 +68,7 @@ with $A,B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Speci
 Consider the nonlinear example dynamical system of
 \begin{eqnarray}
 X_t &=& \sin(t)\\
-Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+c\eta_t,
+Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 \end{eqnarray}
 with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ step through in increments of 0.5.    
 \begin{figure}[H]
@@ -76,6 +76,7 @@ with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Spe
 \caption{}
 \label{fig2}
 \end{figure}
+
 
 ---
 \section{RL Circuit Example}
@@ -391,11 +392,22 @@ $C_{XX}$ & $C_{X(XY)}$ & $C_{YY}$ & $C_{Y(YX)}$ & $\Delta=C_{Y(YX)}-C_{X(XY)}$ \
 
 Consider a comparison of PAI and CCM given the linear example system from above.  
 \begin{figure}[H]
-\includegraphics[scale=0.8]{LinearEx_PAItemp.eps} \\
-\caption{Changing $A$ and $B$.}
+\includegraphics[scale=0.8]{LinearEx_PAI.eps} \\
+\caption{Linear Example 1 PAI}
 \label{fig1}
 \end{figure}
 
+\begin{figure}[H]
+\includegraphics[scale=0.6]{LinearXYZPAIEx.eps} \\
+\caption{Linear Example 2 PAI}
+\label{fig2}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=0.6]{NonLinearPAIEx.eps} \\
+\caption{Non Linear Example PAI}
+\label{fig2}
+\end{figure}
 
 
 \end{document}
