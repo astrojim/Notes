@@ -607,7 +607,7 @@ S = \mathbf{S}\odot \vec{\tau}\;\;.
 $$
 The columns of $S$ will be defined by ``columnized''\footnote{The concept of columnizing matrices will be discussed in depth in the next section.} versions of linear combinations of the members of $\vec{\tau}$.  The superoperator $S$ is a matrix of complex values constructed from rearranged elements of linear combinations of the members of $\vec{\tau}$.  The main idea of a constructor is to ``construct'' a new structure from a vector of states.  Constructors will prove very useful in characterizing channels.  The utility of the superoperator constructor $\mathbf{S}$ will be shown in the next section and other constructors will be introduced in the discussion of complete positivity.
 
-\section{Tomography}
+\chapter{Tomography}
 \label{sec:tomo}
 
 It is hard to have a conversation of reduced system dynamics (or quantum processes in general) without mentioning tomography.  Tomography is a tool for the study of the internal structure of an object.  For example, in geophysics, seismic tomography involves the use of data collected from the propagation of two types of waves originating from earthquake epicenters to model the interior of Earth \cite{Lo1994}, and, in biophysics, electron tomography involves the use of data collected using beams of electrons to model cellular structures \cite{Frank2006}.  The term tomography in quantum mechanics is used to mean one of several different things, including quantum state tomography, quantum process tomography, and quantum measurement tomography.  In each case, the object being modelled is different, but the basic idea is the same.
@@ -1171,12 +1171,12 @@ Process tomography is the method by which the experimenter will probe his channe
 
 Tomography is a mathematical reconstruction of the reduced dynamics and it may be confusing to consider dynamics that lead to non-positive output states. So, before the discussion turns to complete positivity, the requirement of positivity of the reduced dynamics will be discussed. 
 
-\section{Non-Positive Reduced Dynamics}
+\chapter{Non-Positive Reduced Dynamics}
 \label{sec:posdomain}
 
 Positivity is a crucial part of the density matrix, and it seems troublesome that reduced dynamics (as they have been introduced here) might give rise to non-positive matrices.  This concept is confusing enough that a conversation of generalities is best reserved for later.  First, this concept of non-positive reduced dynamics will be introduced with a simple example of a one qubit reduced system interacting with a one qubit bath.
 
-\subsection{Two Qubit SWAP Example}
+\section{Two Qubit SWAP Example}
 Let
 $$
 \vec{\tau}=\left(\ketbra{0}{0},\ketbra{+}{+},\ketbra{+_i}{+_i},\ketbra{1}{1}\right)
@@ -1400,7 +1400,7 @@ H_{dX} = \sigma_1H_d\sigma_1 = \frac{1}{\sqrt{2}}\begin{pmatrix}-1&1\\1&1\end{pm
 $$
 So, again, these two output states are similar.  It remains an open question as to whether all states in the overlapping positivity domains of different superoperators lead to output states that are similar to each other in the manner seen in the above examples.  This point is important to remember when discussing the interpretation of the given representations of negative channels.  
 
-\subsection{Positivity Domains Interpretation}
+\section{Positivity Domains Interpretation}
 In the above example, what evidence is there that $S$, $S^\prime$, and $S^{\prime\prime}$ describe the same physical operation?  From a theoretical point of view, it might be claimed that the ``consistent'' construction of the various sharp operations implies identical baths and preparation procedures.  A ``logical structure'' of the bath was provided as follows:
 \begin{itemize}
 \item If the prepared reduced state is in $\{\ketbra{0}{0},\ketbra{1}{1}\}$, then the bath is $\ketbra{+}{+}$.

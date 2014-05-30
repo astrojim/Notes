@@ -109,7 +109,7 @@ The state $\rho$ can be shown to be Hermitian, but the self-adjoint requirement 
 \section{Mathematical Structure of Open Systems}
 
 \subsection{System State Spaces}
-A quantum system in a pure state can be represented by some state vector $S$ in a Hilbert space $\mathcal{H}^S$.  A possibly mixed (i.e.\ not pure) state of the system will be represented by some density operator $\rho^S\in \mathcal{S}(\mathcal{H}^S)$.  The set $\mathcal{S}(\mathcal{H}^X)$ is the set of all valid states $\rho$ in the Hilbert space space labelled $X$, and the set $\mathcal{B}(\mathcal{H}^X)$ is the set of all bounded operators in $X$.  This notation will be important in later discussions when it is applied to both the reduced system and the bath Hilbert spaces.
+A quantum system in a pure state can be represented by some state vector $S$ in a Hilbert space $\mathcal{H}^S$.  A possibly mixed (i.e.\ not pure) state of the system will be represented by some density operator $\rho^S\in \mathcal{S}(\mathcal{H}^S)$.  The set $\mathcal{S}(\mathcal{H}^X)$ is the set of all valid states $\rho$ in the Hilbert space space labeled $X$, and the set $\mathcal{B}(\mathcal{H}^X)$ is the set of all bounded operators in $X$.  This notation will be important in later discussions when it is applied to both the reduced system and the bath Hilbert spaces.
 
 The state of the composite system is defined in a tensor product Hilbert space $\mathcal{H}^S\otimes\mathcal{H}^B$ where $\mathcal{H}^S$ is the Hilbert space of the reduced system and $\mathcal{H}^B$ is the Hilbert space of the bath.  The reduced system will have some state
 $$
@@ -341,7 +341,7 @@ $$
 $$
 defined (and guaranteed positive) only on $\tau_i\in\mathcal{L}(\mathcal{H}^S)$.  In the example above, $\mathcal{L}(\mathcal{H}^S) = \{\tau_0,\tau_1,\tau_2\}$; hence, by assumption, only $\mathcal{L}(\mathcal{H}^{SB}) = \{\tau_0^\sharp,\tau_1^\sharp,\tau_2^\sharp\}$ ever actually exist in the lab.  He can define a sharp operation on linear combinations of states in $\mathcal{L}(\mathcal{H}^S)$, but (as shown above) the resulting composite states are not necessarily positive. 
 \begin{definition}
-The {\em positivity domain} of a quantum operation $\varepsilon$ is the set of states $\tau\in\mathcal{S}(\mathcal{H}^S)$ where $\tau=\varepsilon(\rho^S)$ and $\rho^S \in\mathcal{S}(\mathcal{H}^S)$ (we will primarly be concerned with the case where  $\varepsilon$ is the reduced dynamics, which is defined in the next section).
+The {\em positivity domain} of a quantum operation $\varepsilon$ is the set of states $\tau\in\mathcal{S}(\mathcal{H}^S)$ where $\tau=\varepsilon(\rho^S)$ and $\rho^S \in\mathcal{S}(\mathcal{H}^S)$ (we will primarily be concerned with the case where  $\varepsilon$ is the reduced dynamics, which is defined in the next section).
 \end{definition} 
 
 This definition will be helpful in delineating when the sharp operation yields quantities that do not have clear physical interpretations. 
@@ -610,7 +610,7 @@ The columns of $S$ will be defined by ``columnized''\footnote{The concept of col
 \chapter{Tomography}
 \label{sec:tomo}
 
-It is hard to have a conversation of reduced system dynamics (or quantum processes in general) without mentioning tomography.  Tomography is a tool for the study of the internal structure of an object.  For example, in geophysics, seismic tomography involves the use of data collected from the propagation of two types of waves originating from earthquake epicenters to model the interior of Earth \cite{Lo1994}, and, in biophysics, electron tomography involves the use of data collected using beams of electrons to model cellular structures \cite{Frank2006}.  The term tomography in quantum mechanics is used to mean one of several different things, including quantum state tomography, quantum process tomography, and quantum measurement tomography.  In each case, the object being modelled is different, but the basic idea is the same.
+It is hard to have a conversation of reduced system dynamics (or quantum processes in general) without mentioning tomography.  Tomography is a tool for the study of the internal structure of an object.  For example, in geophysics, seismic tomography involves the use of data collected from the propagation of two types of waves originating from earthquake epicenters to model the interior of Earth \cite{Lo1994}, and, in biophysics, electron tomography involves the use of data collected using beams of electrons to model cellular structures \cite{Frank2006}.  The term tomography in quantum mechanics is used to mean one of several different things, including quantum state tomography, quantum process tomography, and quantum measurement tomography.  In each case, the object being modeled is different, but the basic idea is the same.
 
 A quantum state is represented by a density matrix and a quantum measurement is represented as a projector operator.  Suppose the basis $\{\ket{\phi_i}\}$ spans some Hilbert space $\mathcal{H}^\phi$.  The state $\tau\in\mathcal{S}(\mathcal{H}^\phi)$ can be written as 
 $$
@@ -1224,7 +1224,7 @@ then the reduced dynamics yield
 \end{eqnarray*}
 which is not a valid density matrix because, again, it is not positive\footnote{The eigenvalues of $\rho(t)$ are $\{\frac{1}{2}\left(1+\sqrt{5}\right),\frac{1}{2}\left(1-\sqrt{5}\right)\}$.}.  This result seems to imply that if an experimenter were to send the state $\ketbra{-}{-}$ through the channel described by $U$ and the sharp operation defined above, then he would get inconsistent measurement statistics.  In fact, it is not even clear how the invalid state of $\rho(t)$ should be interpreted.
 
-A superoperator for this channel can be found with the tomography vector $\vec{\tau}$ and the coefficent vectors $\vec{c}_b$ and $\vec{c}_c$ described in the previous section, i.e.\
+A superoperator for this channel can be found with the tomography vector $\vec{\tau}$ and the coefficient vectors $\vec{c}_b$ and $\vec{c}_c$ described in the previous section, i.e.\
 \begin{eqnarray*}
 \left\{\left(U:\vec{\tau}^\sharp:U^\dagger\right)^\flat\right\}_0 &=& \ketbra{+}{+}=\frac{1}{2}\begin{pmatrix}
 1&1\\

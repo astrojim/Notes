@@ -302,7 +302,7 @@ which reduces to
 $$
 2 \ge D_4 D_2^* D_3^* D_1 + D_3 D_1^* D_4^* D_2 \ge -2 \;\;.
 $$
-The elements of $D$ can be written in polar form as $D_j = \alpha_je^{i\theta_j}$, which imples
+The elements of $D$ can be written in polar form as $D_j = \alpha_je^{i\theta_j}$, which implies
 $$
 D_4 D_2^* D_3^* D_1 = \alpha_1\alpha_2\alpha_3\alpha_4e^{i(\theta_1+\theta_4-\theta_2-\theta_3)} = \alpha^\prime e^{i\theta^\prime}\;\;,
 $$
@@ -463,7 +463,7 @@ where $H^{SB}$ is the time independent Hamiltonian describing the composite dyna
 $$
 H^{SB} = V\Lambda V^{-1}\;\;,
 $$    
-where $V$ is a 4$\times$4 matrix constructed from the eigenvectors of $H^{SB}$ and $\Lambda=\operatorname{diag}(\lambda_1,\lambda_2,\lambda_3,\lambda_4)$ with $\lambda_i$ being the $i$th eigenvalue of $H^{SB}$.  The Hamiltonian operator $H^{SB}$ is diagonal in its eigenbasis with diagonal entries corresponding to its eigenvalues, and in standard quantum mechanics this eigenbais is called the ``energy basis'' or the ``energy eigenbasis''.  The eigenvalues correspond to possible energy measurement values \cite{Landau1977}.  
+where $V$ is a 4$\times$4 matrix constructed from the eigenvectors of $H^{SB}$ and $\Lambda=\operatorname{diag}(\lambda_1,\lambda_2,\lambda_3,\lambda_4)$ with $\lambda_i$ being the $i$th eigenvalue of $H^{SB}$.  The Hamiltonian operator $H^{SB}$ is diagonal in its eigenbasis with diagonal entries corresponding to its eigenvalues, and in standard quantum mechanics this eigenbasis is called the ``energy basis'' or the ``energy eigenbasis''.  The eigenvalues correspond to possible energy measurement values \cite{Landau1977}.  
 
 The matrix exponentiation of a diagonal matrix is straightforward, i.e.\
 $$
@@ -831,7 +831,7 @@ $$
 $$
 with $C^\prime(\rho) = \tilde{U}\rho^\sharp \tilde{U}^\dagger$ and $\tilde{U}=VU$, which makes it clear that the channel in the new basis could be considered a completely new channel.  As such, this statement of the basis dependence of the negativity is a statement of the channel dependence of the negativity.
 
-It is physically unreasonable to use the same partial trace function in a discussion of the basis dependence.  For example, if the composite dynamics are the identity operator, then tracing out the bath will simply yield the initial reduced system state.  If a basis change is defined by the SWAP operation (i.e.\ the operation that swaps the states of the bath and the reduced system), then ``tracing out the bath'' in the new basis will yield the initial state of the bath.  If, however, the partial trace operation itself is written in the new basis such that ``tracing over the bath'' becomes ``tracing over the reduced system'' in the new basis, then the behaviour of this channel is basis independent.  Rotating to a new basis should not provide the experimenter with previously inaccessible information.  
+It is physically unreasonable to use the same partial trace function in a discussion of the basis dependence.  For example, if the composite dynamics are the identity operator, then tracing out the bath will simply yield the initial reduced system state.  If a basis change is defined by the SWAP operation (i.e.\ the operation that swaps the states of the bath and the reduced system), then ``tracing out the bath'' in the new basis will yield the initial state of the bath.  If, however, the partial trace operation itself is written in the new basis such that ``tracing over the bath'' becomes ``tracing over the reduced system'' in the new basis, then the behavior of this channel is basis independent.  Rotating to a new basis should not provide the experimenter with previously inaccessible information.  
 
 Defining the partial trace in such a way that the reduced dynamics (and hence, the negativity) are basis independent is equivalent to rotating the observer to the new basis.  The ``basis change'' discussed in this section is more correctly thought of as a ``channel change''.  The new channel is related to the old channel because the composite channels are related by a basis change.  The flat operator (i.e.\ the partial trace operator) defines the experimenter and the system-bath divide.  As such, it must be rotated, along with everything else in the channel definition, if the channel is represented entirely in a new basis.  
 
@@ -853,7 +853,7 @@ H_q &=& \frac{\hbar}{2}\begin{pmatrix}
 \end{eqnarray*}
 where $\nu\in\mathbb{R}$ is called the detuning and $\Omega\in\mathbb{R}$ is called the Rabi frequency.  A derivation of the Hamiltonian can be found in Appendix \ref{sec:rabimodelder}.
 
-This model is commonly used in theoretical descriptions of nuclear magnetic resonance (NMR) and other quantum information experiments \cite{Mikio2008}, but this model was original developed in quantum optics as a way to understand the behaviour of an ideal two level atom interacting with a classical electromagnetic field.  Derivations of this model using ``semiclassical methods'' can be found in \cite{Kok2010,Barnett2002,Mandel1995,Loudon2000} and using perturbation theory in \cite{Loudon2000,Orszag2008,Suter1997}.  It is possible to verify this model using a fully quantum treatment of the interacting electromagnetic field \cite{Barnett2002}, but such discussions are well outside the scope of the present discussion.  The important issue for us is that the Rabi model accurately describes the behaviour of several different physical implementations of qubit systems \cite{Mikio2008}.
+This model is commonly used in theoretical descriptions of nuclear magnetic resonance (NMR) and other quantum information experiments \cite{Mikio2008}, but this model was original developed in quantum optics as a way to understand the behavior of an ideal two level atom interacting with a classical electromagnetic field.  Derivations of this model using ``semiclassical methods'' can be found in \cite{Kok2010,Barnett2002,Mandel1995,Loudon2000} and using perturbation theory in \cite{Loudon2000,Orszag2008,Suter1997}.  It is possible to verify this model using a fully quantum treatment of the interacting electromagnetic field \cite{Barnett2002}, but such discussions are well outside the scope of the present discussion.  The important issue for us is that the Rabi model accurately describes the behavior of several different physical implementations of qubit systems \cite{Mikio2008}.
 
 One reason the Rabi model is a popular model for the qubit is because the eigenvalues and eigenvectors of the Hamiltonian can be written down as simple functions of the Hamiltonian parameters.  The eigenvalues and eigenvectors are \cite{Kok2010}
 $$
@@ -913,7 +913,7 @@ Therefore, the composite evolution (in the original basis of $H_u$) can written 
 
 \section{Rabi Channels with Coupling}
 \label{sec:rabisub}
-Suppose the two atoms in the Rabi channel example of the last subsection were coupled in some way.  The physical mechanism for their coupling will not be important to this discussion, but the coupling terms in the Hamiltonian will change the behaviour of the negativity.  The negativity will now depend on the coupling as well as the energy of the composite system and the initial rotation of the bath qubit.
+Suppose the two atoms in the Rabi channel example of the last subsection were coupled in some way.  The physical mechanism for their coupling will not be important to this discussion, but the coupling terms in the Hamiltonian will change the behavior of the negativity.  The negativity will now depend on the coupling as well as the energy of the composite system and the initial rotation of the bath qubit.
 
 The channel will be governed by the Hamiltonian
 $$
@@ -967,7 +967,7 @@ This channel is not as simple as the previous examples.  The channel is dependen
 
 This example can be simplified with a few assumptions about the system.  The field is assumed to be resonant with the atoms, i.e.\ $\nu=0$. All of the parameters are scaled such that $\Omega=1$ with everything in units of $\hbar=1$.  The initial rotation of the bath atom will be fixed by a Hadamard rotation rather than more general $R(\phi)$.  These assumptions will reduce the 5-dimensional parameter space to a much simpler 2-dimensional parameter space of $(k_z,t)$.
  
-Fig.\ \ref{fig:plot1} is the behaviour of the negativity as a function of time if the coupling coefficient is fixed at $k_z=\pi/2$.  
+Fig.\ \ref{fig:plot1} is the behavior of the negativity as a function of time if the coupling coefficient is fixed at $k_z=\pi/2$.  
 \begin{figure}[th]
 \includegraphics[scale=0.75]{figure1.pdf}
 \caption{The negativity $\eta$ only depends on the elapsed time $t$ when the coupling constant $k_z$ is fixed.  This plot is for a fixed coupling coefficient of $k_z=\pi/2$ (and given the assumptions discussed in the text).}
@@ -1007,7 +1007,7 @@ It might be argued that the example sharp operation of
 \label{eqn:sharpref}
 \tau_i = \tau_i\otimes \left(H_d\tau_i H_d^\dagger \right)\;\;,
 \end{equation}
-where $\tau_i$ is the $i$th states of the tomogaphy vector $\vec{\tau}$ and $H_d$ is the Hadamarad operator (Sec.\ \ref{sec:negexample} shows this sharp operation in use), does not have a simple physical interpretation.  To address such concerns, consider the situation arising when the reduced system and the bath are initially entangled in the state
+where $\tau_i$ is the $i$th states of the tomography vector $\vec{\tau}$ and $H_d$ is the Hadamard operator (Sec.\ \ref{sec:negexample} shows this sharp operation in use), does not have a simple physical interpretation.  To address such concerns, consider the situation arising when the reduced system and the bath are initially entangled in the state
 $$
 \ket{\Psi} = \frac{\ket{0+}+\ket{1-}}{\sqrt{2}}\;\;.
 $$
@@ -1027,7 +1027,7 @@ Notice, $\tau_i^\sharp=\tau_i^{\sharp_p}$ for $i\in\{1,2,4\}$ but not for $i=3$.
 
 The above sharp operation can be explained as the reduced system and the bath initially being entangled in the pure state $\ket{\Psi}$ and then ideally preparing a tomography state on the reduced system.  The appearance of negative channels after projective measurements of reduced systems entangled with the bath is currently an active area of research \cite{Devi2011}.
 
-A sharp operation does not always need to be explained with prior entanglement between the reduced system and the bath.  As pointed out in \cite{Sudarshen2007}, the two main preparation procedures in quantum mechanics are the ``preparation by measurement'' described above and ``stochastic preparations'' \cite{Sudarshen2007}.  Stochastic preparations are preparations of a system by setting some macroscopic parameter (e.g.\ the temperature or external magnetic field) and letting the system reach some equilibrium state.  For example, if the qubit is represented by the spin of an electron in a quantum dot, then preparation of only that spin by cooling would require the spatial extent of the cooling to be bounded by the spatial extent of the quantum dot.  This experimental requirement might not be met; the entire sample containing the quantum dot might be cooled resulting in every other spin in neighbouring quantum dots to be similarly be prepared.  Every qubit would be prepared identically because every qubit is represented by a spin in the same (presumably spatially uniform) temperature field.  This situation is exactly described by the sharp operation
+A sharp operation does not always need to be explained with prior entanglement between the reduced system and the bath.  As pointed out in \cite{Sudarshen2007}, the two main preparation procedures in quantum mechanics are the ``preparation by measurement'' described above and ``stochastic preparations'' \cite{Sudarshen2007}.  Stochastic preparations are preparations of a system by setting some macroscopic parameter (e.g.\ the temperature or external magnetic field) and letting the system reach some equilibrium state.  For example, if the qubit is represented by the spin of an electron in a quantum dot, then preparation of only that spin by cooling would require the spatial extent of the cooling to be bounded by the spatial extent of the quantum dot.  This experimental requirement might not be met; the entire sample containing the quantum dot might be cooled resulting in every other spin in neighboring quantum dots to be similarly be prepared.  Every qubit would be prepared identically because every qubit is represented by a spin in the same (presumably spatially uniform) temperature field.  This situation is exactly described by the sharp operation
 $$
 \rho^\sharp = \rho\otimes\rho\otimes\rho\otimes\cdots\;\;.
 $$
@@ -1234,12 +1234,12 @@ V(t_1)V(t_2) = V(t_1+t_2),\;\;t_1,t_2\ge 0
 $$ 
 assumes composability of the dynamical maps $V(t)$.  Any two completely positive dynamical maps can be composed.  A completely positive dynamical map will have a positivity domain which includes every possible reduced system state.  This fact may also be true of a negative dynamical map, but it is not required.  Two negative dynamical maps might have different (perhaps even non-overlapping) positivity domains, and it is not clear how two such maps could be composed.  It might be assumed that the composition of two negative maps would simply result in a new negative map with a new restricted positivity domain that is a function of the positivity domains of the two original maps.  Notice, however, that it would need to be proven that this new restricted positivity domain is non-empty.  Many examples have already been given of negative channels with positivity domains that are not all of the reduced system space.  Given two channels, if the first is a constant channel that sends every input state to a state that is not in the positivity domain of the second channel, then the combined, restricted positivity domain of their composition must be empty.  This example points out a serious issue with defining composition over negative dynamical maps in a general way.  It is not clear that negative dynamical maps have any kind of semigroup structure or that they can, in general, be described in terms of a generator in the manner shown above.  It should be noted, however, that if the negative maps do form a continuous semigroup, then extending the above equations to include negative channels can be done straightforwardly \cite{Shaji2005}.
 
-The composition of negative channels is an open question.  Without an answer to this question, more complicated questions about the mathematical structure of the set of all negative channels will not have very satisfactory answers.  Completely positive dynamical maps have nice mathematical features beyond the Kraus representation, not the least of which is their amenability to the powerful mathematical techniques of semigroup theory.  These features need to be better understood for negative channels, but until that understanding arrives, the Liouville-von Neumann equation is the best method for modelling negative channels with continuous baths.
+The composition of negative channels is an open question.  Without an answer to this question, more complicated questions about the mathematical structure of the set of all negative channels will not have very satisfactory answers.  Completely positive dynamical maps have nice mathematical features beyond the Kraus representation, not the least of which is their amenability to the powerful mathematical techniques of semigroup theory.  These features need to be better understood for negative channels, but until that understanding arrives, the Liouville-von Neumann equation is the best method for modeling negative channels with continuous baths.
 
 \chapter{Proposed Experimental Demonstration of Negativity}
 \label{sec:proposedexp}
 
-One of the main ideas of the previous section is to illustrate {\em gedanken} experiments with non-zero negativity, and diagonal channels were used for the express purpose of creating examples that would be amenable to theoretical analysis.  Those experiments did not involve statistical errors or systematic errors due to experimental limitations.  The authors of \cite{Wood2009} provide a nice discussion of how statistical errors in a process tomography experiment might lead to non-zero negativities, but no such considerations were given to the gendanken experiments presented in the previous sections.  Hence, the negativity of those example channels cannot be a product of such experimental error.  
+One of the main ideas of the previous section is to illustrate {\em gedanken} experiments with non-zero negativity, and diagonal channels were used for the express purpose of creating examples that would be amenable to theoretical analysis.  Those experiments did not involve statistical errors or systematic errors due to experimental limitations.  The authors of \cite{Wood2009} provide a nice discussion of how statistical errors in a process tomography experiment might lead to non-zero negativities, but no such considerations were given to the gedanken experiments presented in the previous sections.  Hence, the negativity of those example channels cannot be a product of such experimental error.  
 
 Channels implemented in the lab, however, will have experimental error.  There will be errors associated with preparing the reduced system (which would be manifested in the theory as errors in the sharp operation), implementing the reduced dynamics (which would be manifested in the theory as errors in the composite dynamics), and in implementing the tomography of the reduced system.  The theoretical channel
 $$
@@ -1319,7 +1319,7 @@ U_{\sqrt{Sw}} = \frac{1}{\sqrt{2}}\begin{pmatrix}
 0&0&0&\sqrt{2}
 \end{pmatrix}\;\;.
 $$
-One of the input qubits will be labelled the ``reduced system'' and the other will be the ``bath''.  The sharp operation relating the initial states of these two qubits will be the familiar 
+One of the input qubits will be labeled the ``reduced system'' and the other will be the ``bath''.  The sharp operation relating the initial states of these two qubits will be the familiar 
 $$
 \vec{\tau}^\sharp = \vec{\tau}\otimes\left(H_d:\vec{\tau}:H_d^\dagger\right)\;\;,
 $$
@@ -1356,7 +1356,7 @@ Figure \ref{fig:opticalneg} shows the optical set-up used by Cernoch et al.\ \ci
 \caption{This is the optical set-up used in \cite{Cernoch2008} to implement a root swap gate.  This experiment can be conducted in a slightly different manner to verify the theoretically predicted negativity of 0.149 for the channel induced by this gate on one of the two input qubits.  This diagram is reproduced with permission from \cite{Cernoch2008}.}
 \label{fig:opticalneg}
 \end{figure}
-The yellow box in Fig.\ref{fig:opticalneg} (labelled ``Gate'') is the part of the process which implements the gate being investigated.  The gate implementation involves the Hong-Ou-Mandel effect and arbitrary phase shifts accomplished by using the motorized prisms to change the path lengths.  This optical set-up can be used to accomplish many different two qubit gates, but our interest is in the implementation of the root-swap gate.  See \cite{Cernoch2008} for all the details of this set-up, along with references to similar optical set-ups used to perform other gates.   
+The yellow box in Fig.\ref{fig:opticalneg} (labeled ``Gate'') is the part of the process which implements the gate being investigated.  The gate implementation involves the Hong-Ou-Mandel effect and arbitrary phase shifts accomplished by using the motorized prisms to change the path lengths.  This optical set-up can be used to accomplish many different two qubit gates, but our interest is in the implementation of the root-swap gate.  See \cite{Cernoch2008} for all the details of this set-up, along with references to similar optical set-ups used to perform other gates.   
 
 The authors of the above experiment performed process tomography to demonstrate that the action of the optical set-up in Fig.\ \ref{fig:opticalneg} can be made very close to the desired root swap\footnote{The experiment was far more than just the quantum process tomography.  It also involved fidelity and entanglement measurements, but those results do not concern the discussion here.}.  In principle, the raw data collected by this group was the superoperator representation of the two qubit channel implemented by Fig.\ \ref{fig:opticalneg}; i.e.\
 $$
@@ -1376,7 +1376,7 @@ $$
 $$  
 The qubit in the arm without the $\pi/4$ waveplate would then be prepared with a projective measurement (e.g.\ with a polarization filter).  This new preparation procedure would implement the desired sharp operation, although it might significantly change the behavior of the gate.
 
-Performing {\em single} qubit process tomography on one of the two qubits in this new experiment (i.e.\ with the correctly implemented sharp operation and root-swap gate) would lead to a superoperator (or Choi) representation from which the negativity could be measured.  In the introduction, one photon was labelled the ``reduced system'' and the other the ``bath'', but the distinction only matters in the value of the negativity, not in whether or not the negativity is non-zero.  This feature is important to the experimentalist who might have trouble identifying the photons in his experimental set-up.  To see this idea notice,
+Performing {\em single} qubit process tomography on one of the two qubits in this new experiment (i.e.\ with the correctly implemented sharp operation and root-swap gate) would lead to a superoperator (or Choi) representation from which the negativity could be measured.  In the introduction, one photon was labeled the ``reduced system'' and the other the ``bath'', but the distinction only matters in the value of the negativity, not in whether or not the negativity is non-zero.  This feature is important to the experimentalist who might have trouble identifying the photons in his experimental set-up.  To see this idea notice,
 $$
 \mathbf{C}\odot\left(U_{\sqrt{Sw}}:\vec{\tau}^\sharp:U_{\sqrt{Sw}}^\dagger\right)^\flat =
 \begin{pmatrix}
@@ -1430,7 +1430,7 @@ CZ = \begin{pmatrix}
 0&0&0&-1
 \end{pmatrix}\;\;.
 $$
-If one of the qubits is labelled the ``reduced system'' and the other the ``bath'', then the familiar sharp operation on the canonical tomography vector, i.e.\
+If one of the qubits is labeled the ``reduced system'' and the other the ``bath'', then the familiar sharp operation on the canonical tomography vector, i.e.\
 $$
 \vec{\tau}^\sharp = \vec{\tau} \otimes \left(H_d:\vec{\tau}:H_d\right)\;\;,
 $$
@@ -1438,7 +1438,7 @@ will lead to reduced dynamics of
 $$
 \varepsilon(\vec{\tau}) = \left(CZ:\vec{\tau}^\sharp:CZ^\dagger\right)^\flat\;\;.
 $$
-The labelling will, just as in the previous subsection, be unimportant to the main idea (i.e.\ demonstrating a negative channel) because the negativity of the single qubit channel will be non-zero independently of which qubit is traced out of the experiment.  Notice,
+The labeling will, just as in the previous subsection, be unimportant to the main idea (i.e.\ demonstrating a negative channel) because the negativity of the single qubit channel will be non-zero independently of which qubit is traced out of the experiment.  Notice,
 \begin{equation}
 \label{eqn:CZneg}
 \mathbf{C}\odot \left(CZ:\vec{\tau}^\sharp:CZ^\dagger\right)^\flat = \begin{pmatrix}
@@ -1471,7 +1471,7 @@ The next logical step in understanding negative channels would be comparing the 
 
 The negativity of complicated experiments without controlled baths can be measured, and if the negativity were found to be non-zero in experiments predicted to have non-zero negativity, then the evidence for negative channels would be convincing, even if the exact negativity of such complicated experiments could not be predicted.  Such complicated experiments are actually common in the quantum information community and negative channels have probably already been observed (and promptly ``corrected'' in most cases).
 
-Acceptance of the idea of negative channels might not change the field of quantum information in a fundamental sense; e.g.\ fundamental results such as no cloning and no signalling will still hold in general.  But, several small changes will need to be made in current experimental methods and some theoretical ideas will need to be changed to incorporate negativity.  This section aims to highlight a few examples of such changes and is a brief outline of some open questions about negative channels.
+Acceptance of the idea of negative channels might not change the field of quantum information in a fundamental sense; e.g.\ fundamental results such as no cloning and no signaling will still hold in general.  But, several small changes will need to be made in current experimental methods and some theoretical ideas will need to be changed to incorporate negativity.  This section aims to highlight a few examples of such changes and is a brief outline of some open questions about negative channels.
 
 \section{Existing Experimental Evidence of Negative Channels}
 \label{sec:Havel}
@@ -1695,7 +1695,7 @@ The negativity of the channel represented by $C_{\theta\alpha}$ can be plotted a
 \begin{figure}[h!t]
 \centering
 \includegraphics[scale=0.32]{eatthetaalphaII.png}
-\caption{The negativity $\eta_{\theta\alpha}$ can be plotted as a function of $\theta$ and $\alpha$ to show the dependency of the negativity on both the correlation and coupling in the channel.  The contours are labelled with the values of the negativity $\eta_{\theta\alpha}$.  The maximum negativity is achieved in the red area of the plot and the minimum is achieved in the blue area of the plot.  See the text for precise definitions of ``correlation'' and ``coupling''. }
+\caption{The negativity $\eta_{\theta\alpha}$ can be plotted as a function of $\theta$ and $\alpha$ to show the dependency of the negativity on both the correlation and coupling in the channel.  The contours are labeled with the values of the negativity $\eta_{\theta\alpha}$.  The maximum negativity is achieved in the red area of the plot and the minimum is achieved in the blue area of the plot.  See the text for precise definitions of ``correlation'' and ``coupling''. }
 \label{fig:etathetaalphaAlso}
 \end{figure}
 \begin{figure}[t!h]
@@ -1739,7 +1739,7 @@ Notice that $yy^*=0$ and $xx^*\le 1$ are sufficient conditions for this channel 
 
 \section{Speculation on Utilities}
 
-The ``controlled bath'' situation described in the previous subsection allows the experimenter to circumvent the correlation-coupling deliniation problem in the negativity measurement.  If the correlation is precisely controlled, then the negativity can be related directly to the coupling.  The inverse is also true: if an experimenter precisely knows the composite dynamics implemented in a ``controlled bath'' experiment, then the negativity can be related directly to the correlation.  Such an experiment might be used to study preparation procedures or measure correlations in multi-qubit initial states.  
+The ``controlled bath'' situation described in the previous subsection allows the experimenter to circumvent the correlation-coupling delineation problem in the negativity measurement.  If the correlation is precisely controlled, then the negativity can be related directly to the coupling.  The inverse is also true: if an experimenter precisely knows the composite dynamics implemented in a ``controlled bath'' experiment, then the negativity can be related directly to the correlation.  Such an experiment might be used to study preparation procedures or measure correlations in multi-qubit initial states.  
 
 The utility of the negativity is apparent in ``controlled bath'' experiments because these situations are precisely the situations which lend the negativity a straightforward relationship with the bath.  The negativity, however, may be useful beyond these experiments.  The negativity provides information about the bath.  The bath is defined by the experimenter's ignorance.  Hence, the negativity provides information about part of the quantum system traditionally considered unknowable.  The inscrutable effects of the bath through the coupling and correlation can be observed through negativity measurements.  Such information is academically interesting and might have practical use in engineering quantum technologies and/or understanding the limitations of those technologies.  A channel with a non-zero negativity has some correlation or coupling (or both) with the bath and such interactions with the bath might lead to new understanding of the information theoretic properties of quantum channels.  For example, such channels might have different capacities than their completely positive counter parts, or the security of such channels might not be understood in the same way.
 
