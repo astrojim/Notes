@@ -99,7 +99,7 @@ with $A,B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Speci
 \includegraphics[scale=0.9]{LinearEx3Color.eps} \\
 (b)
 \end{tabular}
-\caption{The sign of $\Delta$, and thus the CCM causality, depends on $A$ and $B$. (a) $\Delta$ calculated as described in the text; (b) Two color version of (a) where black indicates $\Delta>1$ and white indicates $\Delta<1$.}
+\caption{The sign of $\Delta$, and thus the CCM causality, depends on $A$ and $B$. (a) $\Delta$ calculated as described in the text; (b) Two color version of (a) where black indicates $\Delta>0$ and white indicates $\Delta<0$.}
 \label{fig:linearex1}
 \end{figure}
 The convergence of two specific points in Figure \ref{fig:linearex1}, $(A,B) = (2.6,2.6)$ and $(A,B)=(3.0,2.6)$, are shown in Figure \ref{fig:linearex1a}.
@@ -123,7 +123,7 @@ Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 \end{eqnarray}
 with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.  Figure \ref{fig:nonlinearex} shows $\Delta$ for specific values of $C$ given a library length of $L=??$.
 \begin{figure}[ht]
-%\includegraphics[scale=0.55]{RLCircuitPlots/NonLinearEx.eps} \\
+\includegraphics[scale=0.55]{NonLinearEx.eps} \\
 \caption{}
 \label{fig:nonlinearex}
 \end{figure}
@@ -206,20 +206,20 @@ But, the correlations shown in Figure \ref{fig:Sug3CDredo} are not the only corr
 \end{figure}
 \end{center}
 
-A difference in CCM correlations similar to $\Delta$ can be defined using the multivariate embedding.  Consider $\Delta^\prime = C_{Y(YX)} - C_{X(XY)}$.  It might be argued, in close parallel to the arguments given in \cite{Sugihara2012} for $\Delta$, that an intuitive definition of ``driving'' might be captured by the sign of $\Delta^\prime$.  For example, if $\Delta^\prime<0$, then the single time step of $Y$ added to the delay vectors constructed from $X$ create stronger estimators of $X$ than the single time step of $X$ added to the delay vectors constructed from $Y$ do for $Y$.  Thus, it might be argued, that $Y$ contains more ``information'' about $X$, which leads to the conclusion $X$ drives $Y$ (this logic is very similar to that given for $\Delta$ in \cite{Sugihara2012}).  The example system and parameters (including $E$, $\tau$, and $L$) described at the beginning of this section leads to $\Delta^\prime \approx -3\times 10^{-4}$ which agrees with the previously discussed conclusions of ``$X$ CCM causes $Y$'' and ``$X$ drives $Y$''.  Using the multivariate embedding described above to explore ``driving'' relationships between pairs time series will be referred to as {\em pairwise asymmetric inference} or {\em PAI}.
+A difference in CCM correlations similar to $\Delta$ can be defined using the multivariate embedding.  Consider $\Delta^\prime = C_{Y(YX)} - C_{X(XY)}$.  It might be argued, in close parallel to the arguments given in \cite{Sugihara2012} for $\Delta$, that an intuitive definition of ``driving'' might be captured by the sign of $\Delta^\prime$.  For example, if $\Delta^\prime<0$, then the single time step of $Y$ added to the delay vectors constructed from $X$ create stronger estimators of $X$ than the single time step of $X$ added to the delay vectors constructed from $Y$ do for $Y$.  Thus, it might be argued, that $Y$ contains more ``information'' about $X$, which leads to the conclusion $X$ drives $Y$ (this logic is very similar to that given for $\Delta$ in \cite{Sugihara2012}).  The example system and parameters (including $E$, $\tau$, and $L$) described at the beginning of this section leads to $\Delta^\prime \approx -3\times 10^{-4}$ which agrees with the previously discussed conclusions of ``$X$ CCM causes $Y$'' and ``$X$ drives $Y$''.  Using the multivariate embedding described above to explore ``driving'' relationships between pairs of time series will be referred to as {\em pairwise asymmetric inference} or {\em PAI}.  
 
 Consider a comparison of PAI and CCM given the linear example system from above, i.e.\ Eqn.\ \ref{eq:linearex}.  Figure \ref{fig:linearExPAI} plots $\Delta^\prime$ as a function of $A$ and $B$ using of the same $E$, $\tau$, $L$, and step sizes as was used to produce Figure \ref{fig:linearex1}.
 \begin{figure}[H]
-%\includegraphics[scale=0.6]{RLCircuitPlots/LinearEx_PAI.eps} \\
-\caption{$\Delta^\prime$ as a function of $A$ and $B$.}
+\includegraphics[scale=0.9]{LinearExPAI.eps} \\
+\caption{Reproducing Figure \ref{fig:linearex1} using PAI rather than CCM.  Notice that $\Delta^\prime<0\;\forall A,B$ implying $X$ ``PAI drives'' $Y$.}
 \label{fig:linearExPAI}
 \end{figure}
 $\Delta^\prime<0\;\forall A,B$ in the domains shown in the figure.  Thus, it appears $\Delta^\prime$ is in agreement with an intuitive definition of driving more consistently than $\Delta$.  Notice, $\Delta^\prime$ is significantly smaller than $\Delta$, which is expected since the correlation of $X$ and $Y$ with their ``self estimation'' counterparts of $X|X$ and $Y|Y$ are initially very high, even without the multivariate additions.  But, if the concept of driving is determined solely on the sign of $\Delta^\prime$, then, at least for the simple linear example presented here, PAI appears to be a consistent qualifier of ``driving''.
 
 Reproducing Figure \ref{fig:linearex1a} using PAI shows an apparent reduction in some of the erratic behavior seen in CCM.  See Figure \ref{fig:linearExPAIa}.
 \begin{figure}[H]
-%\includegraphics[scale=0.6]{RLCircuitPlots/LinearXYZPAIEx.eps} \\
-\caption{Linear Example 2 PAI}
+\includegraphics[scale=0.9]{LinearExPAIChangeL.eps} \\
+\caption{Reproducing Figure \ref{fig:linearex1} using PAI rather than CCM.  Notice that $\Delta^\prime$ does not display the apparent erratic behavior seen in $\Delta$ in Figure \ref{fig:linearex1}.}
 \label{fig:linearExPAIa}
 \end{figure}
 
