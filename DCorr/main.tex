@@ -227,42 +227,24 @@ It may be argued that the relatively small values (as compared to the previous e
 \section{PAI}
 \label{sec:PAI}
 Consider the example system of Eqn.\ \ref{eqn:2pop} with $r_y=r_y=3.7$, $X_0 = 0.2$, $Y_0=0.4$, $\beta_{xy}=0$, and $\beta_{yx}=0.32$.  These parameters correspond to Figure 3C and D of \cite{Sugihara2012} (with $E=2$, $\tau=1$, and $L=1000$).  Plots of the correlation between $X$ and $X|Y$ (i.e.\ $X$ estimated using the weights found from the shadow manifold of $Y$), as well as, $Y$ and $Y|X$ are shown below.
-\begin{center}
-\begin{figure}[H]
-\begin{tabular}{cc}
-%\includegraphics[scale=0.5]{RLCircuitPlots/SugFig3_XgY.eps} \\
-(a) Correlation between $X$ and $X|Y$ \\[6pt]
-%\includegraphics[scale=0.5]{RLCircuitPlots/SugFig3_YgX.eps} \\
-(b) Correlation between $Y$ and $Y|X$ \\[6pt]
-\end{tabular}
+\begin{figure}[ht]
+\includegraphics[scale=0.55]{SugFig3CD.eps} 
 \caption{Reproductions of Figures 3C and 3D from \cite{Sugihara2012}.}
 \label{fig:Sug3CDredo}
 \end{figure}
-\end{center}
 This leads to $\Delta=C_{YX}-C_{XY}\approx 0.11 - 0.97 = -0.86$.  Notice $\Delta<0$ implies $X$ CCM causes $Y$, which agrees with intuition because $\beta_{xy}=0 < \beta_{yx} = 0.32$.
 
 But, the correlations shown in Figure \ref{fig:Sug3CDredo} are not the only correlations that can be tested.  Consider, for example, the correlation between $X$ and the corresponding $X|X$, which is estimated using weights found from the shadow manifold of $X$ itself.  The time series $X$ may also be estimated using a multivariate shadow manifold consisting of points from both $X$ and $Y$.  For example, an $E+1$ dimensional point in the a multivariate shadow manifold constructed using both $X$ and $Y$ may be defined as $\vec{X}_t=(X_t,X_{t-\tau},X_{t-2\tau},\ldots,X_{t-(E-1)\tau,Y_t}$.  An estimate of $X$ using weights from a shadow manifold using that specific construction will be referred to as $X|(XY)$.  See Figure \ref{fig:PAIintro}.
-\begin{center}
-\begin{figure}[H]
-\begin{tabular}{cc}
-%\includegraphics[scale=0.5]{RLCircuitPlots/SugFig3_XgX.eps} \\
-(a) Correlation between $X$ and $X|X$ \\[6pt]
-%\includegraphics[scale=0.5]{RLCircuitPlots/SugFig3_XgXY.eps} \\
-(b) Correlation between $X$ and $X|(XY)$ \\[6pt]
-%\includegraphics[scale=0.5]{RLCircuitPlots/SugFig3_YgY.eps} \\
-(c) $C_{XX}$ \\[6pt]
-%\includegraphics[scale=0.5]{RLCircuitPlots/SugFig3_YgYX.eps} \\
-(d) $C_{X(XY)}$ \\[6pt]
-\end{tabular}
+\begin{figure}[ht]
+\includegraphics[scale=0.55]{SugFig3CD_AddPlot.eps}
 \caption{Stronger correlations, as compared to Figure \ref{fig:Sug3CDredo}, can be seen between a time series and its estimate when the shadow manifold includes points from the time series it is estimating.  See the text for more details.}
 \label{fig:PAIintro}
 \end{figure}
-\end{center}
 
 A difference in CCM correlations similar to $\Delta$ can be defined using the multivariate embedding.  Consider $\Delta^\prime = C_{Y(YX)} - C_{X(XY)}$.  It might be argued, in close parallel to the arguments given in \cite{Sugihara2012} for $\Delta$, that an intuitive definition of ``driving'' might be captured by the sign of $\Delta^\prime$.  For example, if $\Delta^\prime<0$, then the single time step of $Y$ added to the delay vectors constructed from $X$ create stronger estimators of $X$ than the single time step of $X$ added to the delay vectors constructed from $Y$ do for $Y$.  Thus, it might be argued, that $Y$ contains more ``information'' about $X$, which leads to the conclusion $X$ drives $Y$ (this logic is very similar to that given for $\Delta$ in \cite{Sugihara2012}).  The example system and parameters (including $E$, $\tau$, and $L$) described at the beginning of this section leads to $\Delta^\prime \approx -3\times 10^{-4}$ which agrees with the previously discussed conclusions of ``$X$ CCM causes $Y$'' and ``$X$ drives $Y$''.  Using the multivariate embedding described above to explore ``driving'' relationships between pairs of time series will be referred to as {\em pairwise asymmetric inference} or {\em PAI}.  
 
 Consider a comparison of PAI and CCM given the linear example system from above, i.e.\ Eqn.\ \ref{eq:linearex}.  Figure \ref{fig:linearExPAI} plots $\Delta^\prime$ as a function of $A$ and $B$ using of the same $E$, $\tau$, $L$, and step sizes as was used to produce Figure \ref{fig:linearex1}.
-\begin{figure}[H]
+\begin{figure}[ht]
 \includegraphics[scale=0.9]{LinearExPAI.eps} \\
 \caption{Reproducing Figure \ref{fig:linearex1} using PAI rather than CCM.  Notice that $\Delta^\prime<0\;\forall A,B$ implying $X$ ``PAI drives'' $Y$.}
 \label{fig:linearExPAI}
@@ -285,9 +267,9 @@ The conclusions that PAI agrees with intuition more consistently than CCM is als
 Again in contrast to the CCM figure, PAI seems to agree with intuition for all the plotted values of $A$, $B$, and $C$ (i.e.\ $\Delta^\prime<0\;\forall A,B,C$ in the domains shown).
 
 Finally, a comparison of PAI and CCM for the RL circuit example leads to similar conclusions.  See Figure \ref{fig:AvPAI}.
-\begin{figure}[H]
+\begin{figure}[ht]
 %\includegraphics[scale=0.5]{RLCircuitPlots/RLcirc_varyV_amp2.eps} \\
-\caption{Changing $A_v$.}
+\caption{Changing $\Omega_v$.}
 \label{fig:AvPAI}
 \end{figure}
 
@@ -304,7 +286,7 @@ Finally, care should be taken in any discussion of causality and especially in d
 
 Consider the RL circuit example of Section \ref{sec:rlcirc}.  The intuitive definition of causality was motivated by an example of the experimenter physically manipulating a voltage source to create the $V$ and $I$ times series.  Suppose instead that two such experiments where conducted in isolation: one with an experimenter, Alice, physically manipulating a voltage source and measuring the current to create the $V$ and $I$ time series (call this set $\mathbf{VI}$), and another, different experiment with an experimenter, Bob, physically manipulating the current and measuring the voltage to create the $V$ and $I$ time series (call this set $\mathbf{IV}$).  Both $\mathbf{VI}$ and $\mathbf{IV}$ are handed to a third party, Charlie, who has no {\em a priori} knowledge of how the time series and no communication channels with Alice or Bob.
 
-Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports that conclusion.  Likewise, Bob believes $\mathbf{IV}$ supports his intuition the $I$ causes $V$.  Charlie, however, must rely on time series analysis alone to determine the causality in the system.  The argument we present here is not that CCM causality is insufficient because it does not provide Charlie with a definitive answer (which it doesn't).  Such a task is difficult and may not even be possible with time series analysis alone\cite{Pearl2000}.  The main problem is that the CCM method, as it has been explored in this work, is inconsistent.  Any method Charlie uses must be consistent if it is to be useful.  Neither Alice nor Bob would change their causality conclusions if they changed their respective input frequencies (i.e.\ $\Omega_v$ in Eqn.\ \ref{eqn:vt}).  However, if Charlie used the CCM method, his causality conclusions would depend on the frequency of the signals controlled by Alice and Bob (as seen in Fig.\ \ref{fig:Av}).  Thus, CCM causality would not be a {\em consistent} tool for Charlie.  PAI attempts to remedy this inconsistency, but it remains an open to determine if PAI is consistent outside of the examples shown here.
+Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports that conclusion.  Likewise, Bob believes $\mathbf{IV}$ supports his intuition the $I$ causes $V$.  Charlie, however, must rely on time series analysis alone to determine the causality in the system.  The argument we present here is not that CCM causality is insufficient because it does not provide Charlie with a definitive answer (which it doesn't).  Such a task is difficult and may not even be possible with time series analysis alone\cite{Pearl2000}.  The main problem is that the CCM method, as it has been explored in this work, is inconsistent.  Any method Charlie uses must be consistent if it is to be useful.  Neither Alice nor Bob would change their causality conclusions if they changed their respective input frequencies (i.e.\ $\Omega_v$ in Eqn.\ \ref{eqn:vt}).  However, if Charlie used the CCM method, his causality conclusions would depend on the frequency of the signals controlled by Alice and Bob (as seen in Fig.\ \ref{fig:Av}).  Thus, CCM causality would not be a {\em consistent} tool for Charlie.  PAI attempts to remedy this inconsistency, but it remains an open question to determine if PAI is consistent outside of the examples shown here.
 
 
 \bibliographystyle{plain}
