@@ -111,13 +111,7 @@ In this example, the CCM causality of this system is determined by sampling both
 Sugihara {\em et al.\ }consider convergence to be critically important to determining CCM causality, identifying it as ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:BGridPlot} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 \begin{figure}[ht]
 \label{fig:BGirdPlot}
-\begin{tabular}{cc}
-%\includegraphics[scale=0.9]{Figure1A.eps} & \includegraphics[scale=0.9]{Figure1B.eps}\\
-(a) & (b) \\[6pt]
-%\includegraphics[scale=0.6]{Figure1C.eps} & \includegraphics[scale=0.6]{Figure1D.eps}\\
- & \\
-(c) & (d) \\[6pt]
-\end{tabular}
+\includegraphics[scale=0.55]{Figure1.eps}\\
 \caption{The dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  See the text for details on how these plots were created along with a discussion of the interpretation of these plots in terms of CCM causality.}
 \end{figure}
 
@@ -212,7 +206,7 @@ V(t) = \sin\left(\Omega_v t\right),
 \end{equation}
 where $\Omega_v$ is the frequency.
 
-Consider evaluating the CCM correlations $C_{VI}$ and $C_{IV}$ for each $\Omega_v\in[0.01,2.0]$ in steps of $0.01$.  The CCM correlations are found using $E=3$ and $\tau=1$ and both are plotted in Figure \ref{fig:Av} (along with $\Delta$).
+Consider evaluating the CCM correlations $C_{VI}$ and $C_{IV}$ for each $\Omega_v\in[0.01,2.0]$ in steps of $0.01$.  The CCM correlations are found using $E=2$ and $\tau=1$ and both are plotted in Figure \ref{fig:Av} (along with $\Delta$).
 \begin{figure}[ht]
 \includegraphics[scale=0.9]{RLCircuitVaryV_Freq.eps} \\
 \caption{Changing $\Omega_v$.}
@@ -266,9 +260,9 @@ The conclusions that PAI agrees with intuition more consistently than CCM is als
 \end{figure}
 Again in contrast to the CCM figure, PAI seems to agree with intuition for all the plotted values of $A$, $B$, and $C$ (i.e.\ $\Delta^\prime<0\;\forall A,B,C$ in the domains shown).
 
-Finally, a comparison of PAI and CCM for the RL circuit example leads to similar conclusions.  See Figure \ref{fig:AvPAI}.
+Finally, a comparison of PAI and CCM for the RL circuit example leads to similar conclusions.  The expectation is the $V$ drives $I$; thus, it is expected $\Delta^\prime = C_{V(VI)} - C_{I(IV)} > 0$ (which is what is observed).  See Figure \ref{fig:AvPAI}.
 \begin{figure}[ht]
-%\includegraphics[scale=0.5]{RLCircuitPlots/RLcirc_varyV_amp2.eps} \\
+\includegraphics[scale=0.9]{RLCircuitVaryV_FreqPAI.eps} \\
 \caption{Changing $\Omega_v$.}
 \label{fig:AvPAI}
 \end{figure}
