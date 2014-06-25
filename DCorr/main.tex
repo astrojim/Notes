@@ -1,26 +1,32 @@
-\documentclass[a4paper,11pt,twocolumn]{article}
+%\documentclass[a4paper,11pt,twocolumn]{article}
+\documentclass[twocolumn,aps,pre,groupedaddress]{revtex4-1}
 
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[margin=0.5in]{geometry}
-\usepackage{caption}
+%\usepackage[margin=0.5in]{geometry}
+%\usepackage{caption}
 \usepackage{subfig}
 \usepackage{epstopdf}
 \usepackage{amssymb}
 
-\title{Convergent Cross-Mapping and Causality Detection}
-\author{James M. McCracken,Robert S. Weigel}
-
 \begin{document}
-\maketitle
+\title{Convergent Cross-Mapping and Causality Detection}
+\author{James M. McCracken}
+\email{jmccrac1@masonlive.gmu.edu}
+\affiliation{}
+\author{Robert S. Weigel}
+\email{}
+\affiliation{}
+\date{\today}
 
-\abstract{
+\begin{abstract}
 Convergent Cross-Mapping (CCM) is a technique for finding specific kinds of correlations between sets of times series data.  It was introduced by Sugihara {\em et al.\ } \cite{Sugihara2012} and is reported to be ``a necessary condition for causation'' capable of distinguishing causality from standard correlation.  We will show that the relationships between CCM correlations proposed in \cite{Sugihara2012} do not, in general, agree with intuitive concepts of ``driving'', and as such, should not be considered indicative of causality.  It is shown that CCM causality analysis acts inconsistently in both simple linear and non-linear examples by suggesting causality is a function of the system parameters.  This inconsistency can lead to confusion in the analysis of well-understood physical systems such as RL circuits.  For example, both voltage and current can be identified as the driver of an RL circuit depending on the frequency of the voltage.  It is shown that CCM causality analysis can, however, be modified to identify asymmetric relationships between pairs of time series data that do appear consistent with inutition (for the examples presented).  To that end, we introduce ``pairwise asymmetric inference'' (PAI) and present examples of its use.  
-}
+\end{abstract}
+
+\pacs{}
+\maketitle
 
 \section{Introduction}
 Modern time series analysis includes techniques meant to discern ``driving'' relationships between different data sets.  These techniques have found application in a wide range of fields including neuroscience (e.g.\ \cite{Kaminski2001}), economics (e.g.\ \cite{dufour1998,dufour2006}), climatology (e.g.\ \cite{mosedale2006}), and others.  General casual relationships in time series data are also being studied in an effort to understand causality itself (e.g.\ \cite{eichler2012}).  
@@ -272,8 +278,7 @@ Consider the RL circuit example of Section \ref{sec:rlcirc}.  The intuitive defi
 
 Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports that conclusion.  Likewise, Bob believes $\mathbf{IV}$ supports his intuition that $I$ causes $V$.  Charlie, however, must rely on time series analysis alone to determine the causality in the system.  The argument we present here is not that CCM causality is insufficient because it does not provide Charlie with a definitive answer (which it doesn't).  Such a task is difficult and may not even be possible with time series analysis alone\cite{Pearl2000}.  The main problem is that the CCM method, as it has been explored in this work, is inconsistent.  Any method Charlie uses must be consistent if it is to be useful.  Neither Alice nor Bob would change their causality conclusions if they changed their respective input frequencies (i.e.\ $\Omega_v$ in Eqn.\ \ref{eqn:vt}).  However, if Charlie used the CCM method, his causality conclusions would depend on the frequency of the signal controlled by Alice (as seen in Fig.\ \ref{fig:Av}).  Thus, CCM causality would not be a {\em consistent} tool for Charlie.  PAI attempts to remedy this inconsistency, but it remains an open question to determine if PAI is consistent outside of the examples shown here.
 
-
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
 \bibliography{main}
 
 \end{document}
