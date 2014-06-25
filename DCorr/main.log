@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  23 JUN 2014 20:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  24 JUN 2014 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -343,22 +343,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+)
+
+Package caption Warning: \label without proper \caption on input line 114.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:BGridPlot' on page 1 undefined on input line 37.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 1102) in paragraph at lines 106--108
+
+LaTeX Warning: Citation `sec:shadow' on page 2 undefined on input line 54.
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 107--109
 \OT1/cmr/m/n/10.95 where the pa-ram-e-ters $\OML/cmm/m/it/10.95 r[]; r[]; ^^L[]
 ; ^^L[] \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 R \OMS/cmsy/m/n/10.95 ^^U \OT1/c
 mr/m/n/10.95 0$.
  []
 
 
-LaTeX Warning: Reference `fig:' on page 2 undefined on input line 109.
+Package caption Warning: \label without proper \caption on input line 114.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:BGridPlot' on page 2 undefined on input line 110.
+
 
 [2]
 
-LaTeX Warning: Reference `fig:BGridPlot' on page 3 undefined on input line 111.
+Package caption Warning: \label without proper \caption on input line 114.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:BGridPlot' on page 3 undefined on input line 112.
 
 
 Package epstopdf Info: Source file: <Figure1.eps>
@@ -369,73 +390,34 @@ Package epstopdf Info: Source file: <Figure1.eps>
 (epstopdf)                    size: 11888 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figure1-eps-converted-to.p
 df Figure1.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
-<Figure1-eps-converted-to.pdf, id=24, 460.72125pt x 256.96pt>
+<Figure1-eps-converted-to.pdf, id=26, 460.72125pt x 256.96pt>
 File: Figure1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figure1-eps-converted-to.pdf>
-Package pdftex.def Info: Figure1-eps-converted-to.pdf used on input line 114.
+Package pdftex.def Info: Figure1-eps-converted-to.pdf used on input line 115.
 (pdftex.def)             Requested size: 253.39746pt x 141.32843pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-
-Package caption Warning: \label without proper \caption on input line 123.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:Etau' on page 3 undefined on input line 121.
-
-Package epstopdf Info: Source file: <Figure2_Etau.eps>
-(epstopdf)                    date: 2014-06-11 20:39:52
-(epstopdf)                    size: 20835 bytes
-(epstopdf)             Output file: <Figure2_Etau-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-11 20:41:06
-(epstopdf)                    size: 18330 bytes
-(epstopdf)             Command: <repstopdf --outfile=Figure2_Etau-eps-converted
--to.pdf Figure2_Etau.eps>
-(epstopdf)             \includegraphics on input line 124.
-Package epstopdf Info: Output file is already uptodate.
-<Figure2_Etau-eps-converted-to.pdf, id=25, 265.99374pt x 148.555pt>
-File: Figure2_Etau-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Figure2_Etau-eps-converted-to.pdf>
-Package pdftex.def Info: Figure2_Etau-eps-converted-to.pdf used on input line 1
-24.
-(pdftex.def)             Requested size: 265.99309pt x 148.55463pt.
-
-Overfull \hbox (8.37415pt too wide) in paragraph at lines 124--125
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./Figure1-eps-converted-to.pdf> <./Figure2_Etau-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <LinearEx.eps>
-(epstopdf)                    date: 2014-06-12 19:37:03
-(epstopdf)                    size: 23106 bytes
+(epstopdf)                    date: 2014-06-24 20:12:42
+(epstopdf)                    size: 23201 bytes
 (epstopdf)             Output file: <LinearEx-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-12 19:50:30
-(epstopdf)                    size: 14114 bytes
+(epstopdf)                    date: 2014-06-24 20:15:13
+(epstopdf)                    size: 14883 bytes
 (epstopdf)             Command: <repstopdf --outfile=LinearEx-eps-converted-to.
 pdf LinearEx.eps>
-(epstopdf)             \includegraphics on input line 142.
+(epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
-
-<LinearEx-eps-converted-to.pdf, id=58, 271.0125pt x 148.555pt>
+<LinearEx-eps-converted-to.pdf, id=27, 271.0125pt x 148.555pt>
 File: LinearEx-eps-converted-to.pdf Graphic file (type pdf)
 
 <use LinearEx-eps-converted-to.pdf>
-Package pdftex.def Info: LinearEx-eps-converted-to.pdf used on input line 142.
+Package pdftex.def Info: LinearEx-eps-converted-to.pdf used on input line 136.
 (pdftex.def)             Requested size: 243.90898pt x 133.69824pt.
 Package epstopdf Info: Source file: <LinearEx3Color.eps>
 (epstopdf)                    date: 2014-06-11 19:29:42
@@ -445,38 +427,38 @@ Package epstopdf Info: Source file: <LinearEx3Color.eps>
 (epstopdf)                    size: 7392 bytes
 (epstopdf)             Command: <repstopdf --outfile=LinearEx3Color-eps-convert
 ed-to.pdf LinearEx3Color.eps>
-(epstopdf)             \includegraphics on input line 144.
+(epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
 
-<LinearEx3Color-eps-converted-to.pdf, id=59, 265.99374pt x 142.5325pt>
+<LinearEx3Color-eps-converted-to.pdf, id=28, 265.99374pt x 142.5325pt>
 File: LinearEx3Color-eps-converted-to.pdf Graphic file (type pdf)
 
 <use LinearEx3Color-eps-converted-to.pdf>
 Package pdftex.def Info: LinearEx3Color-eps-converted-to.pdf used on input line
- 144.
+ 138.
 (pdftex.def)             Requested size: 239.39215pt x 128.27805pt.
 Package epstopdf Info: Source file: <LinearExChangeL.eps>
-(epstopdf)                    date: 2014-06-12 20:03:46
-(epstopdf)                    size: 13727 bytes
+(epstopdf)                    date: 2014-06-24 19:58:23
+(epstopdf)                    size: 13434 bytes
 (epstopdf)             Output file: <LinearExChangeL-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-12 20:05:27
-(epstopdf)                    size: 10620 bytes
+(epstopdf)                    date: 2014-06-24 20:01:54
+(epstopdf)                    size: 10940 bytes
 (epstopdf)             Command: <repstopdf --outfile=LinearExChangeL-eps-conver
 ted-to.pdf LinearExChangeL.eps>
-(epstopdf)             \includegraphics on input line 153.
+(epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
 
-<LinearExChangeL-eps-converted-to.pdf, id=60, 269.005pt x 145.54375pt>
+<LinearExChangeL-eps-converted-to.pdf, id=29, 269.005pt x 145.54375pt>
 File: LinearExChangeL-eps-converted-to.pdf Graphic file (type pdf)
 
 <use LinearExChangeL-eps-converted-to.pdf>
 Package pdftex.def Info: LinearExChangeL-eps-converted-to.pdf used on input lin
-e 153.
+e 140.
 (pdftex.def)             Requested size: 242.10225pt x 130.98814pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
- []
+LaTeX Warning: Reference `fig:linearex1a' on page 3 undefined on input line 150
+.
 
 Package epstopdf Info: Source file: <NonLinearEx.eps>
 (epstopdf)                    date: 2014-06-15 20:08:53
@@ -486,22 +468,21 @@ Package epstopdf Info: Source file: <NonLinearEx.eps>
 (epstopdf)                    size: 11539 bytes
 (epstopdf)             Command: <repstopdf --outfile=NonLinearEx-eps-converted-
 to.pdf NonLinearEx.eps>
-(epstopdf)             \includegraphics on input line 171.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
-<NonLinearEx-eps-converted-to.pdf, id=61, 456.70625pt x 256.96pt>
+<NonLinearEx-eps-converted-to.pdf, id=30, 456.70625pt x 256.96pt>
 File: NonLinearEx-eps-converted-to.pdf Graphic file (type pdf)
 
 <use NonLinearEx-eps-converted-to.pdf>
-Package pdftex.def Info: NonLinearEx-eps-converted-to.pdf used on input line 17
+Package pdftex.def Info: NonLinearEx-eps-converted-to.pdf used on input line 16
 1.
 (pdftex.def)             Requested size: 251.18921pt x 141.32843pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
-[4 <./LinearEx-eps-converted-to.pdf> <./LinearEx3Color-eps-converted-to.pdf> <.
-/LinearExChangeL-eps-converted-to.pdf> <./NonLinearEx-eps-converted-to.pdf>]
+[3 <./Figure1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <RLCircuitVaryV_Freq.eps>
 (epstopdf)                    date: 2014-06-16 20:10:46
 (epstopdf)                    size: 18271 bytes
@@ -510,18 +491,18 @@ Package epstopdf Info: Source file: <RLCircuitVaryV_Freq.eps>
 (epstopdf)                    size: 10656 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLCircuitVaryV_Freq-eps-co
 nverted-to.pdf RLCircuitVaryV_Freq.eps>
-(epstopdf)             \includegraphics on input line 211.
+(epstopdf)             \includegraphics on input line 201.
 Package epstopdf Info: Output file is already uptodate.
 
-<RLCircuitVaryV_Freq-eps-converted-to.pdf, id=117, 274.02374pt x 148.555pt>
+<RLCircuitVaryV_Freq-eps-converted-to.pdf, id=48, 274.02374pt x 148.555pt>
 File: RLCircuitVaryV_Freq-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLCircuitVaryV_Freq-eps-converted-to.pdf>
 Package pdftex.def Info: RLCircuitVaryV_Freq-eps-converted-to.pdf used on input
- line 211.
+ line 201.
 (pdftex.def)             Requested size: 246.61908pt x 133.69824pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
@@ -533,15 +514,19 @@ Package epstopdf Info: Source file: <SugFig3CD.eps>
 (epstopdf)                    size: 41833 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3CD-eps-converted-to
 .pdf SugFig3CD.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
-<SugFig3CD-eps-converted-to.pdf, id=118, 461.725pt x 287.0725pt>
+<SugFig3CD-eps-converted-to.pdf, id=49, 461.725pt x 287.0725pt>
 File: SugFig3CD-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3CD-eps-converted-to.pdf>
-Package pdftex.def Info: SugFig3CD-eps-converted-to.pdf used on input line 225.
+Package pdftex.def Info: SugFig3CD-eps-converted-to.pdf used on input line 215.
 
 (pdftex.def)             Requested size: 253.94954pt x 157.89035pt.
+
+
+LaTeX Warning: Citation `????' on page 4 undefined on input line 221.
+
 Package epstopdf Info: Source file: <SugFig3CD_AddPlot.eps>
 (epstopdf)                    date: 2014-06-17 19:57:52
 (epstopdf)                    size: 211525 bytes
@@ -550,91 +535,87 @@ Package epstopdf Info: Source file: <SugFig3CD_AddPlot.eps>
 (epstopdf)                    size: 70258 bytes
 (epstopdf)             Command: <repstopdf --outfile=SugFig3CD_AddPlot-eps-conv
 erted-to.pdf SugFig3CD_AddPlot.eps>
-(epstopdf)             \includegraphics on input line 233.
+(epstopdf)             \includegraphics on input line 223.
 Package epstopdf Info: Output file is already uptodate.
-
-<SugFig3CD_AddPlot-eps-converted-to.pdf, id=119, 461.725pt x 255.95625pt>
+<SugFig3CD_AddPlot-eps-converted-to.pdf, id=50, 461.725pt x 255.95625pt>
 File: SugFig3CD_AddPlot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3CD_AddPlot-eps-converted-to.pdf>
 Package pdftex.def Info: SugFig3CD_AddPlot-eps-converted-to.pdf used on input l
-ine 233.
+ine 223.
 (pdftex.def)             Requested size: 253.94954pt x 140.77637pt.
- [5 <./RLCircuitVaryV_Freq-eps-converted-to.pdf>]
+ [4]
 Package epstopdf Info: Source file: <LinearExPAI.eps>
-(epstopdf)                    date: 2014-06-12 19:43:50
-(epstopdf)                    size: 23501 bytes
+(epstopdf)                    date: 2014-06-24 20:19:38
+(epstopdf)                    size: 23532 bytes
 (epstopdf)             Output file: <LinearExPAI-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-12 19:50:30
-(epstopdf)                    size: 14937 bytes
+(epstopdf)                    date: 2014-06-24 20:23:15
+(epstopdf)                    size: 15718 bytes
 (epstopdf)             Command: <repstopdf --outfile=LinearExPAI-eps-converted-
 to.pdf LinearExPAI.eps>
-(epstopdf)             \includegraphics on input line 242.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 
-<LinearExPAI-eps-converted-to.pdf, id=137, 270.00874pt x 148.555pt>
+<LinearExPAI-eps-converted-to.pdf, id=54, 297.11pt x 184.69pt>
 File: LinearExPAI-eps-converted-to.pdf Graphic file (type pdf)
 
 <use LinearExPAI-eps-converted-to.pdf>
-Package pdftex.def Info: LinearExPAI-eps-converted-to.pdf used on input line 24
-2.
-(pdftex.def)             Requested size: 243.00562pt x 133.69824pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
-
- []
-
+Package pdftex.def Info: LinearExPAI-eps-converted-to.pdf used on input line 23
+3.
+(pdftex.def)             Requested size: 267.39651pt x 166.21944pt.
 Package epstopdf Info: Source file: <LinearExPAIChangeL.eps>
-(epstopdf)                    date: 2014-06-12 20:03:24
-(epstopdf)                    size: 13327 bytes
+(epstopdf)                    date: 2014-06-24 20:01:17
+(epstopdf)                    size: 12849 bytes
 (epstopdf)             Output file: <LinearExPAIChangeL-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-12 20:05:28
-(epstopdf)                    size: 10154 bytes
+(epstopdf)                    date: 2014-06-24 20:01:55
+(epstopdf)                    size: 10472 bytes
 (epstopdf)             Command: <repstopdf --outfile=LinearExPAIChangeL-eps-con
 verted-to.pdf LinearExPAIChangeL.eps>
-(epstopdf)             \includegraphics on input line 250.
+(epstopdf)             \includegraphics on input line 235.
 Package epstopdf Info: Output file is already uptodate.
-<LinearExPAIChangeL-eps-converted-to.pdf, id=138, 269.005pt x 145.54375pt>
+
+<LinearExPAIChangeL-eps-converted-to.pdf, id=55, 269.005pt x 145.54375pt>
 File: LinearExPAIChangeL-eps-converted-to.pdf Graphic file (type pdf)
 
 <use LinearExPAIChangeL-eps-converted-to.pdf>
 Package pdftex.def Info: LinearExPAIChangeL-eps-converted-to.pdf used on input 
-line 250.
+line 235.
 (pdftex.def)             Requested size: 242.10225pt x 130.98814pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
-
+Overfull \hbox (21.77757pt too wide) in paragraph at lines 232--238
+[][] 
  []
 
 
-LaTeX Warning: Reference `fig:nonlinearEX' on page 6 undefined on input line 25
+LaTeX Warning: Reference `fig:linearExPAIa' on page 5 undefined on input line 2
+43.
+
+
+LaTeX Warning: Reference `fig:nonlinearEX' on page 5 undefined on input line 24
 5.
 
 Package epstopdf Info: Source file: <NonLinearPAIEx.eps>
-(epstopdf)                    date: 2014-06-16 19:25:28
-(epstopdf)                    size: 17080 bytes
+(epstopdf)                    date: 2014-06-24 19:41:52
+(epstopdf)                    size: 17170 bytes
 (epstopdf)             Output file: <NonLinearPAIEx-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-16 19:31:28
-(epstopdf)                    size: 10119 bytes
+(epstopdf)                    date: 2014-06-24 19:43:47
+(epstopdf)                    size: 10384 bytes
 (epstopdf)             Command: <repstopdf --outfile=NonLinearPAIEx-eps-convert
 ed-to.pdf NonLinearPAIEx.eps>
-(epstopdf)             \includegraphics on input line 257.
+(epstopdf)             \includegraphics on input line 247.
 Package epstopdf Info: Output file is already uptodate.
-<NonLinearPAIEx-eps-converted-to.pdf, id=139, 465.74pt x 256.96pt>
+<NonLinearPAIEx-eps-converted-to.pdf, id=56, 465.74pt x 259.97125pt>
 File: NonLinearPAIEx-eps-converted-to.pdf Graphic file (type pdf)
 
 <use NonLinearPAIEx-eps-converted-to.pdf>
 Package pdftex.def Info: NonLinearPAIEx-eps-converted-to.pdf used on input line
- 257.
-(pdftex.def)             Requested size: 256.15779pt x 141.32843pt.
+ 247.
+(pdftex.def)             Requested size: 256.15779pt x 142.98462pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-[6 <./SugFig3CD-eps-converted-to.pdf> <./SugFig3CD_AddPlot-eps-converted-to.pdf
-> <./LinearExPAI-eps-converted-to.pdf> <./LinearExPAIChangeL-eps-converted-to.p
-df>]
 Package epstopdf Info: Source file: <RLCircuitVaryV_FreqPAI.eps>
 (epstopdf)                    date: 2014-06-23 19:18:04
 (epstopdf)                    size: 18384 bytes
@@ -644,23 +625,25 @@ f>
 (epstopdf)                    size: 10964 bytes
 (epstopdf)             Command: <repstopdf --outfile=RLCircuitVaryV_FreqPAI-eps
 -converted-to.pdf RLCircuitVaryV_FreqPAI.eps>
-(epstopdf)             \includegraphics on input line 265.
+(epstopdf)             \includegraphics on input line 255.
 Package epstopdf Info: Output file is already uptodate.
-
-<RLCircuitVaryV_FreqPAI-eps-converted-to.pdf, id=188, 272.01625pt x 148.555pt>
+<RLCircuitVaryV_FreqPAI-eps-converted-to.pdf, id=57, 272.01625pt x 148.555pt>
 File: RLCircuitVaryV_FreqPAI-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RLCircuitVaryV_FreqPAI-eps-converted-to.pdf>
 Package pdftex.def Info: RLCircuitVaryV_FreqPAI-eps-converted-to.pdf used on in
-put line 265.
+put line 255.
 (pdftex.def)             Requested size: 244.81235pt x 133.69824pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-[7 <./NonLinearPAIEx-eps-converted-to.pdf> <./RLCircuitVaryV_FreqPAI-eps-conver
-ted-to.pdf>] (./main.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+(./main.bbl
 Underfull \hbox (badness 1292) in paragraph at lines 57--61
 \OT1/cmr/m/n/10.95 Truc-colo, and Steven L. Bressler.  Eval-u-at-
  []
@@ -670,40 +653,46 @@ Underfull \hbox (badness 2837) in paragraph at lines 88--92
 []\OT1/cmr/m/n/10.95 Timothy J Mosedale, David B Stephen-son,
  []
 
-[8]) [9
+[6]) [7 <./LinearEx-eps-converted-to.pdf> <./LinearEx3Color-eps-converted-to.pd
+f> <./LinearExChangeL-eps-converted-to.pdf>] [8 <./NonLinearEx-eps-converted-to
+.pdf> <./RLCircuitVaryV_Freq-eps-converted-to.pdf> <./SugFig3CD-eps-converted-t
+o.pdf> <./SugFig3CD_AddPlot-eps-converted-to.pdf> <./LinearExPAI-eps-converted-
+to.pdf> <./LinearExPAIChangeL-eps-converted-to.pdf>] [9
 
-] (./main.aux)
+ <./NonLinearPAIEx-eps-converted-to.pdf> <./RLCircuitVaryV_FreqPAI-eps-converte
+d-to.pdf>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5083 strings out of 494043
- 75465 string characters out of 6155015
- 159395 words of memory out of 5000000
- 8384 multiletter control sequences out of 15000+600000
- 14509 words of font info for 55 fonts, out of 8000000 for 9000
+ 5080 strings out of 494043
+ 75316 string characters out of 6155015
+ 167369 words of memory out of 5000000
+ 8381 multiletter control sequences out of 15000+600000
+ 14817 words of font info for 56 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
- 42i,13n,38p,1276b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,38p,1293b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (9 pages, 419442 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (9 pages, 415428 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
