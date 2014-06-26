@@ -15,36 +15,36 @@
 \title{Convergent Cross-Mapping and Causality Detection}
 \author{James M. McCracken}
 \email{jmccrac1@masonlive.gmu.edu}
-\affiliation{}
+\affiliation{School of Physics, Astronomy, and Computational Sciences \\ 203 Planetary Hall, 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
 \author{Robert S. Weigel}
-\email{}
-\affiliation{}
+\email{rweigel@gmu.edu}
+\affiliation{School of Physics, Astronomy, and Computational Sciences \\ 203 Planetary Hall, 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
 \date{\today}
 
 \begin{abstract}
-Convergent Cross-Mapping (CCM) is a technique for finding specific kinds of correlations between sets of times series data.  It was introduced by Sugihara {\em et al.\ } \cite{Sugihara2012} and is reported to be ``a necessary condition for causation'' capable of distinguishing causality from standard correlation.  We will show that the relationships between CCM correlations proposed in \cite{Sugihara2012} do not, in general, agree with intuitive concepts of ``driving'', and as such, should not be considered indicative of causality.  It is shown that CCM causality analysis acts inconsistently in both simple linear and non-linear examples by suggesting causality is a function of the system parameters.  This inconsistency can lead to confusion in the analysis of well-understood physical systems such as RL circuits.  For example, both voltage and current can be identified as the driver of an RL circuit depending on the frequency of the voltage.  It is shown that CCM causality analysis can, however, be modified to identify asymmetric relationships between pairs of time series data that do appear consistent with inutition (for the examples presented).  To that end, we introduce ``pairwise asymmetric inference'' (PAI) and present examples of its use.  
+Convergent Cross-Mapping (CCM) is a technique for finding specific kinds of correlations between sets of times series data.  It was introduced by Sugihara {\em et al.\ }\cite{Sugihara2012} and is reported to be ``a necessary condition for causation'' capable of distinguishing causality from standard correlation.  We show that the relationships between CCM correlations proposed in \cite{Sugihara2012} do not, in general, agree with intuitive concepts of ``driving'', and as such, should not be considered indicative of causality.  It is shown that CCM causality analysis implies causality is a function of system parameters for simple linear and nonlinear systems.  For example, in a RL circuit both voltage and current can be identified as the driver depending on the frequency of the voltage.  It is shown that CCM causality analysis can, however, be modified to identify asymmetric relationships between pairs of time series data that appear consistent with inutition for the systems for which CCM causality analysis provided non-intuitive driver identifications.  To that end, we introduce ``pairwise asymmetric inference'' (PAI) and present examples of its use.  
 \end{abstract}
 
 \pacs{}
 \maketitle
 
 \section{Introduction}
-Modern time series analysis includes techniques meant to discern ``driving'' relationships between different data sets.  These techniques have found application in a wide range of fields including neuroscience (e.g.\ \cite{Kaminski2001}), economics (e.g.\ \cite{dufour1998,dufour2006}), climatology (e.g.\ \cite{mosedale2006}), and others.  General casual relationships in time series data are also being studied in an effort to understand causality itself (e.g.\ \cite{eichler2012}).  
+Modern time series analysis includes techniques meant to discern ``driving'' relationships between different data sets.  These techniques have found application in a wide range of fields including neuroscience (e.g.\ \cite{Kaminski2001}), economics (e.g.\ \cite{dufour1998,dufour2006}), and climatology (e.g.\ \cite{mosedale2006}).  General casual relationships in time series data are also being studied in an effort to understand causality itself (e.g.\ \cite{eichler2012}).  
 
 To date, most techniques for ``causal inference'' in time series data fall into two broad categories, those related to transfer entropy and those related to Granger causality.  Transfer entropy (introduced in \cite{Schreiber2000}) and Granger causality (introduced in \cite{granger1969}) are known to be equivalent under certain conditions \cite{Barnett2009}.  In this article, we investigate a casual inference technique, called Convergent Cross-Mapping (CCM), that was recently introduced by Sugihara {\em et al.\ } \cite{Sugihara2012}.  (Currently, there is no evidence that CCM is related to either transfer entropy or Granger causality.)
 
-CCM is described as a technique that can be used to identify ``causality'' between time series and is intended to be useful in situations where Granger causality is known to be invalid (i.e.\ in dynamic systems that are ``nonseperable'' \cite{Sugihara2012}).  The authors state that CCM is a ``necessary condition for causation''.  It is well known \cite{Granger1980,liu2012,Roberts1985} that Granger causality is not causality as it is typically understood in physics.  Whether or not a similar conclusion can be drawn regarding CCM causality is currently open question. 
+CCM is described as a technique that can be used to identify a necessary condition for causality between time series and is intended to be useful in situations where Granger causality is known to be invalid (i.e.\ in dynamic systems that are ``nonseperable'' \cite{Sugihara2012}). Granger causality is not causality as it is typically understood in physics \cite{Granger1980,liu2012,Roberts1985}.  We show that a similar conclusion can be made regarding CCM causality. 
 
-CCM has been used to draw conclusions regarding the ``controversial sardine-anchovy-temperature'' problem \cite{Sugihara2012}, confirm predictions of climate effects on sardines \cite{Deyle2013}, compare the driving effects of precipitation, temperature, and solar radiation on the atmospheric CO$_2$ growth rate \cite{Wang2014}, and to quantify cognitive control in developmental psychology \cite{Anastas2013}.  The technique has also been presented as a useful tool in studying the causality of respiratory systems in insects \cite{Bozorgmagham2013}.  The wide range of applications already appearing for the relatively new CCM technique is testament to the importance of time series causality studies.  This work presents examples in which CCM does not provide consistent qualification of an intuitive notion of causality.  However, the domain of applicability of CCM remains an open question; i.e.\ the method may work as expected for the authors cited above despite its apparent failure in the examples presented in this article. 
+CCM has been used to draw conclusions regarding the sardine-anchovy-temperature problem \cite{Sugihara2012}, confirm predictions of climate effects on sardines \cite{Deyle2013}, compare the driving effects of precipitation, temperature, and solar radiation on the atmospheric CO$_2$ growth rate \cite{Wang2014}, and to quantify cognitive control in developmental psychology \cite{Anastas2013}.  The technique has also been used to study the causality of respiratory systems in insects \cite{Bozorgmagham2013}.  The wide range of applications already appearing for the relatively new CCM technique is testament to the importance of time series causality studies.  This work presents examples in which CCM does not provide consistent qualification of an intuitive notion of causality.  However, the domain of applicability of CCM remains an open question; i.e.\ the method may have worked as expected in the above-cited papers despite its apparent failure in the examples presented in this article. 
 
-We begin with a review of the work of Sugihara {\em et al.} \cite{Sugihara2012}, including an extended evaluation of the coupled logistic map example.  We then introduce ``pairwise asymmetric inference'' (PAI) and use it to show that, even though CCM causality may not be physical causality, it can still be a useful tool in the analysis of complex time series data.
+We begin with a review of the work of Sugihara {\em et al.} \cite{Sugihara2012}, including an extended evaluation of the coupled logistic map example.  After showing examples where CCM analysis gives results that are incosistent with intutitive notions of ``driving'', we introduce ``pairwise asymmetric inference'' (PAI) and use it to show that can be used to identify asymmetric relationships that are consistent with intuitive notions of ``driving''.
 
 \section{Convergent Cross-Mapping}
-CCM is closely related to simplex projection \cite{Sugihara1990,Sugihara1990a}, which predicts a point in the times series $X$ at a time $t+1$, labeled $X_{t+1}$, by using the points with the most similar histories to $X_t$.  Similarly, CCM uses points with the most similar histories to $X_t$ to estimate $Y_t$.  The CCM correlation is the squared correlation coefficient\footnote{This definition differs slightly from the original definition in \cite{Sugihara2012}, which just uses Pearson’s correlation coefficient.  We use the square of this value to avoid dealing with negative correlation values.  This subtle change in the definition does not affect the conclusions drawn in \cite{Sugihara2012}, as can be seen in our reproduction of key plots from that work: Figure \ref{fig:BGridPlot} and Figure \ref{fig:Sug3CDredo}.} between the original time series $Y$ and an estimate of $Y$ made using the convergent cross-mapping with $X$, which is labeled as $Y|X$; ie.\ the CCM correlation is given as 
+CCM is closely related to simplex projection \cite{Sugihara1990,Sugihara1990a}, which predicts a point in the times series $X$ at a time $t+1$, labeled $X_{t+1}$, by using the points with the most similar histories to $X_t$.  Similarly, CCM uses points with the most similar histories to $X_t$ to estimate $Y_t$.  The CCM correlation is the squared correlation coefficient \footnote{This definition differs slightly from the original definition in \cite{Sugihara2012}, which just uses Pearson’s correlation coefficient.  We use the square of this value to avoid dealing with negative correlation values.  This subtle change in the definition does not affect the conclusions drawn in \cite{Sugihara2012}, as can be seen in our reproduction of key plots from that work: Figure \ref{fig:BGridPlot} and Figure \ref{fig:Sug3CDredo}.} between the original time series $Y$ and an estimate of $Y$ made using the convergent cross-mapping with $X$, which is labeled as $Y|X$; ie.\ the CCM correlation is given as 
 $$
 C_{YX} = \left[\rho\left(Y,Y|X\right)\right]^2\;\;,
 $$
-where $\rho(A,B)$ is the Pearson correlation coefficient between $A$ and $B$ \cite{}.  Any pair of times series, $X$ and $Y$, will have two CCM correlations, $C_{YX}$ and $C_{XY}$, which are compared to determine the CCM causality.  For example, Sugihara {\em et al.\ }\cite{Sugihara2012} define a difference of CCM correlations
+where $\rho(A,B)$ is the Pearson correlation coefficient between $A$ and $B$.  Any pair of times series, $X$ and $Y$, will have two CCM correlations, $C_{YX}$ and $C_{XY}$, which are compared to determine the CCM causality.  For example, Sugihara {\em et al.\ }\cite{Sugihara2012} define a difference of CCM correlations
 \begin{equation}
 \label{eqn:delta}
 \Delta = C_{YX} - C_{XY}
@@ -57,7 +57,8 @@ If $X$ can be estimated using $Y$ better than $Y$ can be estimated using $X$ (e.
 \label{sec:appA}
 A description of this algorithm is also available in \cite{Sugihara2012} (supplementary materials).  It is elucidating to partition the five (related) steps of the CCM algorithm:
 \begin{enumerate}
-\item Create the {\em shadow manifold} (defined in Section \cite{sec:shadow}) for $X$, called $\tilde{\mathbf{X}}$
+\item 
+the {\em shadow manifold} (defined in Section \cite{sec:shadow}) for $X$, called $\tilde{\mathbf{X}}$
 \item Find the nearest neighbors to a point in the shadow manifold at time $t$, which is labeled $\tilde{\mathbf{X}}_t$
 \item Use the nearest neighbors to create weights
 \item Use the weights to estimate $Y$; that estimate is called $Y|\tilde{\mathbf{X}}$
@@ -65,7 +66,7 @@ A description of this algorithm is also available in \cite{Sugihara2012} (supple
 \end{enumerate}
 The steps vary in complexity and are explained in more detail below.
 
-\subsubsection{Create $\tilde{\mathbf{X}}$}
+\subsubsection{Create Shadow Manifold $\tilde{\mathbf{X}}$}
 \label{sec:shadow}
 Given an embedding dimension $E$, the {\em shadow manifold} of $X$, called $\tilde{\mathbf{X}}$, is created by associating an $E$-dimensional vector to each point $X_t$ that is constructed as $\tilde{\mathbf{X}}_t=\left(X_t,X_{t-\tau},X_{t-2\tau},\ldots,X_{t-(E-1)\tau}\right)$ (this vector is often called a {\em delay vector}).  The first such vector is created at $t=1+(E-1)\tau$ and the last is at $t=L$ where $L$ is the number of points in the time series (or {\em library length}).  
 
@@ -119,7 +120,7 @@ Sugihara {\em et al.\ }consider convergence to be critically important to determ
 \begin{figure}[ht]
 \label{fig:BGridPlot}
 \includegraphics[scale=0.55]{Figure1.eps}\\
-\caption{The dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  See the text for details on how these plots were created along with a discussion of the interpretation of these plots in terms of CCM causality.}
+\caption{The dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.}
 \end{figure}
 
 The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $Y$ ``drives'' $X$ more than $X$ ``drives'' $Y$.  Stated more formally, $\beta_{xy}>\beta_{yx}\Rightarrow\Delta>0$, which is reported as ``$Y$ CCM causes $X$''.  Likewise, $\beta_{xy}<\beta_{yx}$ implies $X$ CCM causes $Y$ and $\beta_{xy}=\beta_{yx}$ implies no CCM causality in the system.  It will be shown below that CCM causality is not necessarily related to causality as it is typically understood in physics.
@@ -214,8 +215,9 @@ The resistance and inductance of the circuit are fixed and the voltage is varied
 
 It may be argued that the relatively small values (as compared to the previous examples) of $\Delta$ plotted in Figure \ref{fig:Av} indicate that the correct conclusion should be either 1. there is no CCM causality in the system or 2. CCM causality is not applicable to this system.  Conclusion (1) conflicts with the intuitive notion of an RL circuit as a strongly driven system and conclusion (2) conflicts with identifying CCM causality as a general qualifier of ``driving'' in dynamical systems.
 
-\section{PAI}
+\section{Pairwise Asymmetric Inference}
 \label{sec:PAI}
+
 Consider the example system of Eqn.\ \ref{eqn:2pop} with $r_y=r_y=3.7$, $X_0 = 0.2$, $Y_0=0.4$, $\beta_{xy}=0$, and $\beta_{yx}=0.32$.  These parameters correspond to Figure 3C and D of \cite{Sugihara2012} (with $E=2$, $\tau=1$, and $L=1000$).  Plots of the correlation between $X$ and $X|\tilde{\mathbf{Y}}$ (i.e.\ $X$ estimated using the weights found from the shadow manifold of $Y$), as well as, $Y$ and $Y|\tilde{\mathbf{X}}$ are shown below.
 \begin{figure}[ht]
 \includegraphics[scale=0.55]{SugFig3CD.eps} 
@@ -224,10 +226,10 @@ Consider the example system of Eqn.\ \ref{eqn:2pop} with $r_y=r_y=3.7$, $X_0 = 0
 \end{figure}
 This leads to $\Delta=C_{YX}-C_{XY}\approx 0.11 - 0.97 = -0.86$.  Notice $\Delta<0$ implies $X$ CCM causes $Y$, which agrees with intuition because $\beta_{xy}=0 < \beta_{yx} = 0.32$.
 
-But, the correlations shown in Figure \ref{fig:Sug3CDredo} are not the only correlations that can be tested.  Consider, for example, the correlation between $X$ and the corresponding $X|X$, which is estimated using weights found from the shadow manifold of $X$ itself.  The time series $X$ may also be estimated using a multivariate shadow manifold consisting of points from both $X$ and $Y$ \cite{????}.  For example, an $E+1$ dimensional point in the a multivariate shadow manifold constructed using both $X$ and $Y$ may be defined as $\tilde{\mathbf{X}}_t=(X_t,X_{t-\tau},X_{t-2\tau},\ldots,X_{t-(E-1)\tau,Y_t}$.  An estimate of $X$ using weights from a shadow manifold using this specific construction will be referred to as $X|(XY)$ and the correlation between this estimate and the original time series will be labeled $C_{X(XY)}$.  See Figure \ref{fig:PAIintro}.
+But, the correlations shown in Figure \ref{fig:Sug3CDredo} are not the only correlations that can be tested.  Consider, for example, the correlation between $X$ and the corresponding $X|X$, which is estimated using weights found from the shadow manifold of $X$ itself.  The time series $X$ may also be estimated using a multivariate shadow manifold consisting of points from both $X$ and $Y$ \cite{????}.  For example, an $E+1$ dimensional point in the a multivariate shadow manifold constructed using both $X$ and $Y$ may be defined as $\tilde{\mathbf{X}}_t=(X_t,X_{t-\tau},X_{t-2\tau},\ldots,X_{t-(E-1)\tau},Y_t)$.  An estimate of $X$ using weights from a shadow manifold using this specific construction will be referred to as $X|(XY)$ and the correlation between this estimate and the original time series will be labeled $C_{X(XY)}$.  See Figure \ref{fig:PAIintro}.
 \begin{figure}[ht]
 \includegraphics[scale=0.55]{SugFig3CD_AddPlot.eps}
-\caption{Stronger correlations, as compared to Figure \ref{fig:Sug3CDredo}, can be seen between a time series and its estimate when the shadow manifold includes points from the time series it is estimating.  See the text for more details.}
+\caption{Stronger correlations, as compared to Figure \ref{fig:Sug3CDredo}, can be seen between a time series and its estimate when the shadow manifold includes points from the time series it is estimating.}
 \label{fig:PAIintro}
 \end{figure}
 
@@ -276,18 +278,9 @@ Finally, care should be taken in any discussion of causality and especially in d
 
 Consider the RL circuit example of Section \ref{sec:rlcirc}.  The intuitive definition of causality was motivated by an example of the experimenter physically manipulating a voltage source to create the $V$ and $I$ times series.  Suppose instead that two such experiments where conducted in isolation: one with an experimenter, Alice, physically manipulating a voltage source and measuring the current to create the $V$ and $I$ time series (call this set $\mathbf{VI}$), and another, different experiment with an experimenter, Bob, physically manipulating the current and measuring the voltage to create the $V$ and $I$ time series (call this set $\mathbf{IV}$).  Both $\mathbf{VI}$ and $\mathbf{IV}$ are handed to a third party, Charlie, who has no {\em a priori} knowledge of how the time series are created and no communication channels with Alice or Bob.
 
-Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports that conclusion.  Likewise, Bob believes $\mathbf{IV}$ supports his intuition that $I$ causes $V$.  Charlie, however, must rely on time series analysis alone to determine the causality in the system.  The argument we present here is not that CCM causality is insufficient because it does not provide Charlie with a definitive answer (which it doesn't).  Such a task is difficult and may not even be possible with time series analysis alone\cite{Pearl2000}.  The main problem is that the CCM method, as it has been explored in this work, is inconsistent.  Any method Charlie uses must be consistent if it is to be useful.  Neither Alice nor Bob would change their causality conclusions if they changed their respective input frequencies (i.e.\ $\Omega_v$ in Eqn.\ \ref{eqn:vt}).  However, if Charlie used the CCM method, his causality conclusions would depend on the frequency of the signal controlled by Alice (as seen in Fig.\ \ref{fig:Av}).  Thus, CCM causality would not be a {\em consistent} tool for Charlie.  PAI attempts to remedy this inconsistency, but it remains an open question to determine if PAI is consistent outside of the examples shown here.
+Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports that conclusion.  Likewise, Bob believes $\mathbf{IV}$ supports his intuition that $I$ causes $V$.  Charlie, however, must rely on time series analysis alone to determine the causality in the system.  The argument we present here is not that CCM causality is insufficient because it does not provide Charlie with a definitive answer (which it doesn't).  Such a task is difficult and may not even be possible with time series analysis alone \cite{Pearl2000}.  The main problem is that the CCM method, as it has been explored in this work, is inconsistent.  Any method Charlie uses must be consistent if it is to be useful.  Neither Alice nor Bob would change their causality conclusions if they changed their respective input frequencies (i.e.\ $\Omega_v$ in Eqn.\ \ref{eqn:vt}).  However, if Charlie used the CCM method, his causality conclusions would depend on the frequency of the signal controlled by Alice (as seen in Fig.\ \ref{fig:Av}).  Thus, CCM causality would not be a {\em consistent} tool for Charlie.  PAI attempts to remedy this inconsistency, but it remains an open question to determine if PAI is consistent outside of the examples shown here.
 
 %\bibliographystyle{plain}
 \bibliography{main}
 
 \end{document}
-
-
-
-
-
-
-
-
-
