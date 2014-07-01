@@ -5,8 +5,6 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{graphicx}
-%\usepackage[margin=0.5in]{geometry}
-%\usepackage{caption}
 \usepackage{subfig}
 \usepackage{epstopdf}
 \usepackage{amssymb}
@@ -15,14 +13,14 @@
 \title{Convergent Cross-Mapping and Causality Detection}
 \author{James M. McCracken}
 \email{jmccrac1@masonlive.gmu.edu}
-\affiliation{School of Physics, Astronomy, and Computational Sciences \\ 203 Planetary Hall, 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
+\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 203 Planetary Hall, 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
 \author{Robert S. Weigel}
 \email{rweigel@gmu.edu}
-\affiliation{School of Physics, Astronomy, and Computational Sciences \\ 203 Planetary Hall, 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
+\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 203 Planetary Hall, 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
 \date{\today}
 
 \begin{abstract}
-Convergent Cross-Mapping (CCM) is a technique for finding specific kinds of correlations between sets of times series data.  It was introduced by Sugihara {\em et al.\ }\cite{Sugihara2012} and is reported to be ``a necessary condition for causation'' capable of distinguishing causality from standard correlation.  We show that the relationships between CCM correlations proposed in \cite{Sugihara2012} do not, in general, agree with intuitive concepts of ``driving'', and as such, should not be considered indicative of causality.  It is shown that CCM causality analysis implies causality is a function of system parameters for simple linear and nonlinear systems.  For example, in a RL circuit both voltage and current can be identified as the driver depending on the frequency of the voltage.  It is shown that CCM causality analysis can, however, be modified to identify asymmetric relationships between pairs of time series data that appear consistent with inutition for the systems for which CCM causality analysis provided non-intuitive driver identifications.  To that end, we introduce ``pairwise asymmetric inference'' (PAI) and present examples of its use.  
+Convergent Cross-Mapping (CCM) is a technique for finding specific kinds of correlations between sets of times series data.  It was introduced by Sugihara {\em et al.\ }\cite{Sugihara2012} and is reported to be ``a necessary condition for causation'' capable of distinguishing causality from standard correlation.  We show that the relationships between CCM correlations proposed in \cite{Sugihara2012} do not, in general, agree with intuitive concepts of ``driving'', and as such, should not be considered indicative of causality.  It is shown that CCM causality analysis implies causality is a function of system parameters for simple linear and nonlinear systems.  For example, in a RL circuit both voltage and current can be identified as the driver depending on the frequency of the voltage.  It is shown that CCM causality analysis can, however, be modified to identify asymmetric relationships between pairs of time series data that appear consistent with intuition for the systems for which CCM causality analysis provided non-intuitive driver identifications.  To that end, we introduce ``pairwise asymmetric inference'' (PAI) and present examples of its use.  
 \end{abstract}
 
 \pacs{}
@@ -31,13 +29,13 @@ Convergent Cross-Mapping (CCM) is a technique for finding specific kinds of corr
 \section{Introduction}
 Modern time series analysis includes techniques meant to discern ``driving'' relationships between different data sets.  These techniques have found application in a wide range of fields including neuroscience (e.g.\ \cite{Kaminski2001}), economics (e.g.\ \cite{dufour1998,dufour2006}), and climatology (e.g.\ \cite{mosedale2006}).  General casual relationships in time series data are also being studied in an effort to understand causality itself (e.g.\ \cite{eichler2012}).  
 
-To date, most techniques for ``causal inference'' in time series data fall into two broad categories, those related to transfer entropy and those related to Granger causality.  Transfer entropy (introduced in \cite{Schreiber2000}) and Granger causality (introduced in \cite{granger1969}) are known to be equivalent under certain conditions \cite{Barnett2009}.  In this article, we investigate a casual inference technique, called Convergent Cross-Mapping (CCM), that was recently introduced by Sugihara {\em et al.\ } \cite{Sugihara2012}.  (Currently, there is no evidence that CCM is related to either transfer entropy or Granger causality.)
+To date, most techniques for ``causal inference'' in time series data fall into two broad categories, those related to transfer entropy and those related to Granger causality.  Transfer entropy (introduced in \cite{Schreiber2000}) and Granger causality (introduced in \cite{granger1969}) are known to be equivalent under certain conditions \cite{Barnett2009}.  In this article, we investigate a casual inference technique, called Convergent Cross-Mapping (CCM), that was recently introduced by Sugihara {\em et al.\ }\cite{Sugihara2012}.  (Currently, there is no evidence that CCM is related to either transfer entropy or Granger causality.)
 
 CCM is described as a technique that can be used to identify a necessary condition for causality between time series and is intended to be useful in situations where Granger causality is known to be invalid (i.e.\ in dynamic systems that are ``nonseperable'' \cite{Sugihara2012}). Granger causality is not causality as it is typically understood in physics \cite{Granger1980,liu2012,Roberts1985}.  We show that a similar conclusion can be made regarding CCM causality. 
 
 CCM has been used to draw conclusions regarding the sardine-anchovy-temperature problem \cite{Sugihara2012}, confirm predictions of climate effects on sardines \cite{Deyle2013}, compare the driving effects of precipitation, temperature, and solar radiation on the atmospheric CO$_2$ growth rate \cite{Wang2014}, and to quantify cognitive control in developmental psychology \cite{Anastas2013}.  The technique has also been used to study the causality of respiratory systems in insects \cite{Bozorgmagham2013}.  The wide range of applications already appearing for the relatively new CCM technique is testament to the importance of time series causality studies.  This work presents examples in which CCM does not provide consistent qualification of an intuitive notion of causality.  However, the domain of applicability of CCM remains an open question; i.e.\ the method may have worked as expected in the above-cited papers despite its apparent failure in the examples presented in this article. 
 
-We begin with a review of the work of Sugihara {\em et al.} \cite{Sugihara2012}, including an extended evaluation of the coupled logistic map example.  After showing examples where CCM analysis gives results that are incosistent with intutitive notions of ``driving'', we introduce ``pairwise asymmetric inference'' (PAI) and use it to show that can be used to identify asymmetric relationships that are consistent with intuitive notions of ``driving''.
+We begin with a review of the work of Sugihara {\em et al.} \cite{Sugihara2012}, including an extended evaluation of the coupled logistic map example.  After showing examples where CCM analysis gives results that are inconsistent with intuitive notions of ``driving'', we introduce ``pairwise asymmetric inference'' (PAI) and use it to show that can be used to identify asymmetric relationships that are consistent with intuitive notions of ``driving''.
 
 \section{Convergent Cross-Mapping}
 CCM is closely related to simplex projection \cite{Sugihara1990,Sugihara1990a}, which predicts a point in the times series $X$ at a time $t+1$, labeled $X_{t+1}$, by using the points with the most similar histories to $X_t$.  Similarly, CCM uses points with the most similar histories to $X_t$ to estimate $Y_t$.  The CCM correlation is the squared correlation coefficient \footnote{This definition differs slightly from the original definition in \cite{Sugihara2012}, which just uses Pearson’s correlation coefficient.  We use the square of this value to avoid dealing with negative correlation values.  This subtle change in the definition does not affect the conclusions drawn in \cite{Sugihara2012}, as can be seen in our reproduction of key plots from that work: Figure \ref{fig:BGridPlot} and Figure \ref{fig:Sug3CDredo}.} between the original time series $Y$ and an estimate of $Y$ made using the convergent cross-mapping with $X$, which is labeled as $Y|X$; ie.\ the CCM correlation is given as 
@@ -58,7 +56,7 @@ If $X$ can be estimated using $Y$ better than $Y$ can be estimated using $X$ (e.
 A description of this algorithm is also available in \cite{Sugihara2012} (supplementary materials).  It is elucidating to partition the five (related) steps of the CCM algorithm:
 \begin{enumerate}
 \item 
-the {\em shadow manifold} (defined in Section \cite{sec:shadow}) for $X$, called $\tilde{\mathbf{X}}$
+the {\em shadow manifold} (defined in Section \ref{sec:shadow}) for $X$, called $\tilde{\mathbf{X}}$
 \item Find the nearest neighbors to a point in the shadow manifold at time $t$, which is labeled $\tilde{\mathbf{X}}_t$
 \item Use the nearest neighbors to create weights
 \item Use the weights to estimate $Y$; that estimate is called $Y|\tilde{\mathbf{X}}$
@@ -118,9 +116,9 @@ In this example, the CCM causality of this system is determined by sampling both
 
 Sugihara {\em et al.\ }consider convergence to be critically important to determining CCM causality, identifying it as ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:BGridPlot} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 \begin{figure}[ht]
-\label{fig:BGridPlot}
-\includegraphics[scale=0.55]{Figure1.eps}\\
+\includegraphics[scale=0.5]{Figure1.eps}\\
 \caption{The dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.}
+\label{fig:BGridPlot}
 \end{figure}
 
 The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $Y$ ``drives'' $X$ more than $X$ ``drives'' $Y$.  Stated more formally, $\beta_{xy}>\beta_{yx}\Rightarrow\Delta>0$, which is reported as ``$Y$ CCM causes $X$''.  Likewise, $\beta_{xy}<\beta_{yx}$ implies $X$ CCM causes $Y$ and $\beta_{xy}=\beta_{yx}$ implies no CCM causality in the system.  It will be shown below that CCM causality is not necessarily related to causality as it is typically understood in physics.
@@ -139,13 +137,10 @@ Y_t &=& AX_{t-1}+B\eta_t,
 \end{eqnarray}
 with $A,B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B\in[0,10]$ in increments of 0.1.  Figure \ref{fig:linearex1} shows $\Delta$ for this example given a library length of $L=2000$.
 \begin{figure}[ht]
-\begin{tabular}{c}
-\includegraphics[scale=0.9]{LinearEx.eps} \\
-(a) \\
-\includegraphics[scale=0.9]{LinearEx3Color.eps} \\
-(b) \\
-\includegraphics[scale=0.9]{LinearExChangeL.eps} \\
-(c) \\
+\begin{tabular}{l}
+\includegraphics[scale=0.8]{LinearEx.eps} \\
+\includegraphics[scale=0.8]{LinearEx3Color.eps} \\
+\includegraphics[scale=0.8]{LinearExChangeL.eps} \\
 \end{tabular}
 \caption{The sign of $\Delta$, and thus the CCM causality, depends on $A$ and $B$. (a) $\Delta$ is calculated as described in the text; (b) Two color version of (a) where black indicates $\Delta>0$, i.e.\ $Y$ CCM causes $X$, and white indicates $\Delta<0$, i.e.\ $X$ CCM causes $Y$; (c) The convergence of points $(A,B) = (2.6,2.6)$ and $(A,B)=(3.0,2.6)$ marked in (a).}
 \label{fig:linearex1}
@@ -165,7 +160,7 @@ Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 \end{eqnarray}
 with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.  Figure \ref{fig:nonlinearex} shows $\Delta$ for specific values of $C$ given a library length of $L=2000$.
 \begin{figure}[ht]
-\includegraphics[scale=0.55]{NonLinearEx.eps} \\
+\includegraphics[scale=0.5]{NonLinearEx.eps} \\
 \caption{The sign of $\Delta$, and thus the CCM causality, depends on $A$, $B$, and $C$. The contour line indicates where $\Delta=0$ and helps illustrate how the $A$ and $B$ dependence of $\Delta$ also depends on $C$.}
 \label{fig:nonlinearex}
 \end{figure}
@@ -206,7 +201,7 @@ where $\Omega_v$ is the frequency.
 Consider evaluating the CCM correlations $C_{VI}$ and $C_{IV}$ for each $\Omega_v\in[0.01,2.0]$ in steps of $0.01$.  The CCM correlations are found using $E=2$ and $\tau=1$ and are used to calculate $\Delta = C_{VI}-C_{IV}$, which is plotted in Figure \ref{fig:Av}.
 \begin{figure}[ht]
 \includegraphics[scale=0.9]{RLCircuitVaryV_Freq.eps} \\
-\caption{$Delta$ depends on $\Omega_v$.  Notice that the sign of $\Delta$ implies both $V$ CCM causes $I$ and $I$ CCM causes $V$ for different values $\Omega_v\in[0.01,2.0]$.}
+\caption{$\Delta$ depends on $\Omega_v$.  Notice that the sign of $\Delta$ implies both $V$ CCM causes $I$ and $I$ CCM causes $V$ for different values $\Omega_v\in[0.01,2.0]$.}
 \label{fig:Av}
 \end{figure}
 It appears that $\Delta$ does not consistently agree with intuition in this example either.  Notice that, unlike the previous examples, there are no noise terms in this system.  
@@ -220,15 +215,18 @@ It may be argued that the relatively small values (as compared to the previous e
 
 Consider the example system of Eqn.\ \ref{eqn:2pop} with $r_y=r_y=3.7$, $X_0 = 0.2$, $Y_0=0.4$, $\beta_{xy}=0$, and $\beta_{yx}=0.32$.  These parameters correspond to Figure 3C and D of \cite{Sugihara2012} (with $E=2$, $\tau=1$, and $L=1000$).  Plots of the correlation between $X$ and $X|\tilde{\mathbf{Y}}$ (i.e.\ $X$ estimated using the weights found from the shadow manifold of $Y$), as well as, $Y$ and $Y|\tilde{\mathbf{X}}$ are shown below.
 \begin{figure}[ht]
-\includegraphics[scale=0.55]{SugFig3CD.eps} 
+\includegraphics[scale=0.5]{SugFig3CD.eps} 
 \caption{Correlation plots between a given time series and its convergent cross-mapped estimate.  (a) Reproduction of Figures 3C from \cite{Sugihara2012}. (b) Reproduction of Figures 3D from \cite{Sugihara2012}.}
 \label{fig:Sug3CDredo}
 \end{figure}
 This leads to $\Delta=C_{YX}-C_{XY}\approx 0.11 - 0.97 = -0.86$.  Notice $\Delta<0$ implies $X$ CCM causes $Y$, which agrees with intuition because $\beta_{xy}=0 < \beta_{yx} = 0.32$.
 
-But, the correlations shown in Figure \ref{fig:Sug3CDredo} are not the only correlations that can be tested.  Consider, for example, the correlation between $X$ and the corresponding $X|X$, which is estimated using weights found from the shadow manifold of $X$ itself.  The time series $X$ may also be estimated using a multivariate shadow manifold consisting of points from both $X$ and $Y$ \cite{????}.  For example, an $E+1$ dimensional point in the a multivariate shadow manifold constructed using both $X$ and $Y$ may be defined as $\tilde{\mathbf{X}}_t=(X_t,X_{t-\tau},X_{t-2\tau},\ldots,X_{t-(E-1)\tau},Y_t)$.  An estimate of $X$ using weights from a shadow manifold using this specific construction will be referred to as $X|(XY)$ and the correlation between this estimate and the original time series will be labeled $C_{X(XY)}$.  See Figure \ref{fig:PAIintro}.
+But, the correlations shown in Figure \ref{fig:Sug3CDredo} are not the only correlations that can be tested.  Consider, for example, the correlation between $X$ and the corresponding $X|X$, which is estimated using weights found from the shadow manifold of $X$ itself.  The time series $X$ may also be estimated using a multivariate shadow manifold consisting of points from both $X$ and $Y$ \cite{Deyle2013}.  For example, an $E+1$ dimensional point in the a multivariate shadow manifold constructed using both $X$ and $Y$ may be defined as $\tilde{\mathbf{X}}_t=(X_t,X_{t-\tau},X_{t-2\tau},\ldots,X_{t-(E-1)\tau},Y_t)$.  An estimate of $X$ using weights from a shadow manifold using this specific construction will be referred to as $X|(XY)$ and the correlation between this estimate and the original time series will be labeled $C_{X(XY)}$.  See Figure \ref{fig:PAIintro}.
 \begin{figure}[ht]
-\includegraphics[scale=0.55]{SugFig3CD_AddPlot.eps}
+\begin{tabular}{c}
+\includegraphics[scale=0.5]{SugFig3CD_AddPlotAB.eps} \\
+\includegraphics[scale=0.5]{SugFig3CD_AddPlotCD.eps}
+\end{tabular}
 \caption{Stronger correlations, as compared to Figure \ref{fig:Sug3CDredo}, can be seen between a time series and its estimate when the shadow manifold includes points from the time series it is estimating.}
 \label{fig:PAIintro}
 \end{figure}
@@ -238,21 +236,19 @@ A difference in CCM correlations similar to $\Delta$ can be defined using the mu
 Consider a comparison of PAI and CCM given the linear example system from above, i.e.\ Eqn.\ \ref{eq:linearex}.  Figure \ref{fig:linearExPAI} plots $\Delta^\prime$ as a function of $A$ and $B$ using of the same $E$, $\tau$, $L$, and step sizes as was used to produce Figure \ref{fig:linearex1}.
 \begin{figure}[ht]
 \begin{tabular}{c}
-\includegraphics[scale=0.9]{LinearExPAI.eps} \\
-(a) \\
-\includegraphics[scale=0.9]{LinearExPAIChangeL.eps} \\
-(b) \\
+\includegraphics[scale=0.8]{LinearExPAI.eps} \\
+\includegraphics[scale=0.8]{LinearExPAIChangeL.eps} \\
 \end{tabular}
 \caption{(a) Reproducing Figure \ref{fig:linearex1} (a) using PAI rather than CCM.  Notice that $\Delta^\prime<0\;\forall A,B$ implying $X$ ``PAI drives'' $Y$. (b) Reproducing Figure \ref{fig:linearex1} (c) using PAI rather than CCM.  Notice that $\Delta^\prime$ does not display the apparent erratic behavior seen in $\Delta$ in Figure \ref{fig:linearex1}.}
 \label{fig:linearExPAI}
 \end{figure}
 $\Delta^\prime<0\;\forall A,B$ in the domains shown in the figure.  Thus, it appears $\Delta^\prime$ is in agreement with an intuitive definition of driving more consistently than $\Delta$.  Notice, $\Delta^\prime$ is significantly smaller than $\Delta$, which is expected since the correlation of $X$ and $Y$ with their ``self estimation'' counterparts of $X|X$ and $Y|Y$ are initially very high, even without the multivariate additions.  But, if the concept of driving is determined solely on the sign of $\Delta^\prime$, then, at least for the simple linear example presented here, PAI appears to be a consistent qualifier of ``driving''.
 
-Reproducing Figure \ref{fig:linearex1} (c) using PAI shows an apparent reduction in some of the erratic behavior seen in CCM.  See Figure \ref{fig:linearExPAIa}.
+Reproducing Figure \ref{fig:linearex1} (c) using PAI shows an apparent reduction in some of the erratic behavior seen in CCM.  See Figure \ref{fig:linearExPAI}.
 
-The conclusions that PAI agrees with intuition more consistently than CCM is also supported by the non-linear example system, Eqn.\ \ref{eqn:nonlinearEX}.  Figure \ref{fig:nonlinearEX} plots $\Delta^\prime$ as a function of $A$, $B$ and $C$ using of the same $E$, $\tau$, $L$, and step sizes as was used to produce Figure \ref{fig:nonlinearex}.
+The conclusions that PAI agrees with intuition more consistently than CCM is also supported by the non-linear example system, Eqn.\ \ref{eqn:nonlinearEX}.  Figure \ref{fig:nonlinearEX} plots $\Delta^\prime$ as a function of $A$, $B$ and $C$ using of the same $E$, $\tau$, $L$, and step sizes as was used to produce Figure \ref{fig:nonlinearEXPAI}.
 \begin{figure}[ht]
-\includegraphics[scale=0.55]{NonLinearPAIEx.eps} \\
+\includegraphics[scale=0.5]{NonLinearPAIEx.eps} \\
 \caption{Reproducing Figure \ref{fig:nonlinearex} using PAI rather than CCM.  Notice that $\Delta^\prime<0\;\forall A,B,C$ implying $X$ ``PAI drives'' $Y$ consistently in the plotted parameter domains.}
 \label{fig:nonlinearEXPAI}
 \end{figure}
@@ -260,13 +256,13 @@ Again in contrast to the CCM figure, PAI seems to agree with intuition for all t
 
 Finally, a comparison of PAI and CCM for the RL circuit example leads to similar conclusions.  The expectation is the $V$ drives $I$; thus, it is expected that $V$ PAI drives $I$ which implies $\Delta^\prime = C_{V(VI)} - C_{I(IV)} > 0$ (which is what is observed).  See Figure \ref{fig:AvPAI}.
 \begin{figure}[ht]
-\includegraphics[scale=0.9]{RLCircuitVaryV_FreqPAI.eps} \\
+\includegraphics[scale=0.8]{RLCircuitVaryV_FreqPAI.eps} \\
 \caption{Reproducing Figure \ref{fig:Av} using PAI rather than CCM.  Notice that $\Delta^\prime<0\;\forall \Omega_v$ implying $V$ ``PAI drives'' $I$ consistently across the plotted domain for $\Omega_v$.}
 \label{fig:AvPAI}
 \end{figure}
 
 \section{Conclusion}
-The examples presented in this article have shown that CCM and, more consistently, PAI can be used to indicate ``driving'' relationships that agree with intuition.  Such information can be useful, but should not be confused with physical causality.  However, even without notions of causality, PAI may be useful exploratory data analysis.  For example, PAI may help guide the development of physical causality models (e.g.\ by suggesting future experiments) in scenarios involving a large collection of simultaneous time series measurements of different variables in a system but no {\em a priori} notions of causality in the system.
+The examples presented in this article have shown that PAI can be used to indicate ``driving'' relationships that agree with intuition.  Such information can be useful, but should not be confused with physical causality.  However, even without notions of causality, PAI may be useful exploratory data analysis.  For example, PAI may help guide the development of physical causality models (e.g.\ by suggesting future experiments) in scenarios involving a large collection of simultaneous time series measurements of different variables in a system but no {\em a priori} notions of causality in the system.
 
 It should also noted that the basic idea behind CCM may be useful in studying time series driving independently of the specific implementation using $\Delta$ (or the sign of $\Delta$). SSR methods are model-independent, which may be seen as a benefit over the popular Granger causality measures.  
 

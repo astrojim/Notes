@@ -13,9 +13,6 @@ Database file #1: mainNotes.bib
 Database file #2: main.bib
 Warning--I'm ignoring Sugihara2012's extra "volume" field
 --line 15 of file main.bib
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "sec:shadow"
-Warning--I didn't find a database entry for "????"
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -30,37 +27,37 @@ Control: year (1) truncated
 Control: production of eprint (0) enabled
 You've used 27 entries,
             5847 wiz_defined-function locations,
-            1807 strings with 20956 characters,
-and the built_in function-call counts, 24245 in all, are:
-= -- 1500
+            1790 strings with 20087 characters,
+and the built_in function-call counts, 24041 in all, are:
+= -- 1484
 > -- 633
 < -- 184
 + -- 211
 - -- 167
-* -- 3731
-:= -- 2389
+* -- 3671
+:= -- 2377
 add.period$ -- 25
 call.type$ -- 27
 change.case$ -- 101
 chr.to.int$ -- 35
 cite$ -- 27
-duplicate$ -- 2331
-empty$ -- 1771
+duplicate$ -- 2307
+empty$ -- 1755
 format.name$ -- 374
-if$ -- 4740
+if$ -- 4708
 int.to.chr$ -- 1
 int.to.str$ -- 34
 missing$ -- 304
 newline$ -- 127
 num.names$ -- 72
-pop$ -- 1021
+pop$ -- 1013
 preamble$ -- 1
 purify$ -- 124
 quote$ -- 0
-skip$ -- 860
+skip$ -- 856
 stack$ -- 0
 substring$ -- 535
-swap$ -- 2157
+swap$ -- 2129
 text.length$ -- 74
 text.prefix$ -- 0
 top$ -- 10
@@ -68,5 +65,5 @@ type$ -- 360
 warning$ -- 1
 while$ -- 74
 width$ -- 0
-write$ -- 244
-(There were 5 warnings)
+write$ -- 240
+(There were 2 warnings)

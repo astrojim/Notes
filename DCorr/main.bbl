@@ -63,10 +63,8 @@
   {M.}~\bibnamefont {Fogarty}}, \ and\ \bibinfo {author} {\bibfnamefont
   {S.}~\bibnamefont {Munch}},\ }\href {\doibase 10.1126/science.1227079}
   {\bibfield  {journal} {\bibinfo  {journal} {Science}\ }\textbf {\bibinfo
-  {volume} {338}},\ \bibinfo {pages} {496} (\bibinfo {year} {2012})},\ \Eprint
-  {http://arxiv.org/abs/http://www.sciencemag.org/content/338/6106/496.full.pdf}
-  {http://www.sciencemag.org/content/338/6106/496.full.pdf} \BibitemShut
-  {NoStop}%
+  {volume} {338}},\ \bibinfo {pages} {496} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kaminski}\ \emph {et~al.}(2001)\citenamefont
   {Kaminski}, \citenamefont {Ding}, \citenamefont {Truccolo},\ and\
   \citenamefont {Bressler}}]{Kaminski2001}%
@@ -159,10 +157,7 @@
   {Roberts}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Nord}},\
   }\href {\doibase 10.1080/00036848500000011} {\bibfield  {journal} {\bibinfo
   {journal} {Applied Economics}\ }\textbf {\bibinfo {volume} {17}},\ \bibinfo
-  {pages} {135} (\bibinfo {year} {1985})},\ \Eprint
-  {http://arxiv.org/abs/http://www.tandfonline.com/doi/pdf/10.1080/00036848500000011}
-  {http://www.tandfonline.com/doi/pdf/10.1080/00036848500000011} \BibitemShut
-  {NoStop}%
+  {pages} {135} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Deyle}\ \emph {et~al.}(2013)\citenamefont {Deyle},
   \citenamefont {Fogarty}, \citenamefont {Hsieh}, \citenamefont {Kaufman},
   \citenamefont {MacCall}, \citenamefont {Munch}, \citenamefont {Perretti},
@@ -179,10 +174,8 @@
   {\bibfnamefont {G.}~\bibnamefont {Sugihara}},\ }\href {\doibase
   10.1073/pnas.1215506110} {\bibfield  {journal} {\bibinfo  {journal}
   {Proceedings of the National Academy of Sciences}\ }\textbf {\bibinfo
-  {volume} {110}},\ \bibinfo {pages} {6430} (\bibinfo {year} {2013})},\ \Eprint
-  {http://arxiv.org/abs/http://www.pnas.org/content/110/16/6430.full.pdf+html}
-  {http://www.pnas.org/content/110/16/6430.full.pdf+html} \BibitemShut
-  {NoStop}%
+  {volume} {110}},\ \bibinfo {pages} {6430} (\bibinfo {year}
+  {2013})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Wang}\ \emph {et~al.}(2014)\citenamefont {Wang},
   \citenamefont {Piao}, \citenamefont {Ciais}, \citenamefont {Friedlingstein},
   \citenamefont {Myneni}, \citenamefont {Cox}, \citenamefont {Heimann},
@@ -229,10 +222,7 @@
   10.1098/rstb.1990.0195} {\bibfield  {journal} {\bibinfo  {journal}
   {Philosophical Transactions of the Royal Society of London. Series B:
   Biological Sciences}\ }\textbf {\bibinfo {volume} {330}},\ \bibinfo {pages}
-  {235} (\bibinfo {year} {1990})},\ \Eprint
-  {http://arxiv.org/abs/http://rstb.royalsocietypublishing.org/content/330/1257/235.full.pdf+html}
-  {http://rstb.royalsocietypublishing.org/content/330/1257/235.full.pdf+html}
-  \BibitemShut {NoStop}%
+  {235} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {{Sugihara}}\ and\ \citenamefont
   {{May}}(1990)}]{Sugihara1990a}%
   \BibitemOpen
