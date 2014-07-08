@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  7 JUL 2014 19:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.19)  8 JUL 2014 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,11 +353,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-Package natbib Warning: Citation `Note2' on page 1 undefined on input line 41.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 3128) in paragraph at lines 69--70
 []\OT1/cmr/m/n/10 Given an em-bed-ding di-men-sion $\OML/cmm/m/it/10 E$\OT1/cmr
 /m/n/10 , the \OT1/cmr/m/it/10 shadow
@@ -380,10 +376,6 @@ Underfull \hbox (badness 2261) in paragraph at lines 69--70
 \OT1/cmr/m/it/10 lay vec-tor\OT1/cmr/m/n/10 ) to each point $\OML/cmm/m/it/10 X
 []$ \OT1/cmr/m/n/10 in $\OML/cmm/m/it/10 X$\OT1/cmr/m/n/10 , i.e., $[] =
  []
-
-
-Package natbib Warning: Citation `Note3' on page 2 undefined on input line 111.
-
 
 [2]
 Package epstopdf Info: Source file: <Figure1A.eps>
@@ -515,12 +507,8 @@ File: RLCircuitVaryV_Freq-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: RLCircuitVaryV_Freq-eps-converted-to.pdf used on input
  line 178.
 (pdftex.def)             Requested size: 243.00562pt x 133.69824pt.
-
-
-LaTeX Warning: Reference `eqn:vt' on page 4 undefined on input line 184.
-
-[4 <./NonLinearEx-eps-converted-to.pdf> <./RLCircuitVaryV_Freq-eps-converted-to
-.pdf>]
+ [4 <./NonLinearEx-eps-converted-to.pdf> <./RLCircuitVaryV_Freq-eps-converted-t
+o.pdf>]
 Package epstopdf Info: Source file: <SugFig3CD.eps>
 (epstopdf)                    date: 2014-07-07 19:40:50
 (epstopdf)                    size: 302971 bytes
@@ -531,7 +519,8 @@ Package epstopdf Info: Source file: <SugFig3CD.eps>
 .pdf SugFig3CD.eps>
 (epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
- <SugFig3CD-eps-converted-to.pdf, id=139, 464.73625pt x 240.9pt>
+
+<SugFig3CD-eps-converted-to.pdf, id=139, 464.73625pt x 240.9pt>
 File: SugFig3CD-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SugFig3CD-eps-converted-to.pdf>
@@ -659,11 +648,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
 [6 <./LinearExPAI-eps-converted-to.pdf> <./LinearExPAIChangeL-eps-converted-to.
 pdf> <./NonLinearPAIEx-eps-converted-to.pdf> <./RLCircuitVaryV_FreqPAI-eps-conv
-erted-to.pdf>]
-
-LaTeX Warning: Reference `eqn:vt' on page 7 undefined on input line 251.
-
-(./main.bbl
+erted-to.pdf>] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 112--114
  []\OT1/cmr/m/n/9 M. Eich-ler and V. Didelez, arXiv preprint
  []
@@ -671,46 +656,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--114
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no ™ in font cmr9!
-)
 
-Package natbib Warning: There were undefined citations.
+Underfull \hbox (badness 1990) in paragraph at lines 298--299
+ []\OT1/cmr/m/n/9 In terms of $^^A$, con-ver-gence to a value $\OML/cmm/m/it/9 
+^^T$ \OT1/cmr/m/n/9 means
+ []
 
-[7] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[7]) [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5770 strings out of 494043
- 83112 string characters out of 6155015
- 173524 words of memory out of 5000000
- 9089 multiletter control sequences out of 15000+600000
+ 5775 strings out of 494043
+ 83193 string characters out of 6155015
+ 164566 words of memory out of 5000000
+ 9094 multiletter control sequences out of 15000+600000
  12827 words of font info for 49 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
- 44i,12n,42p,1423b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (7 pages, 748011 bytes).
+ 44i,12n,42p,1623b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (8 pages, 757613 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
+ 328 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
