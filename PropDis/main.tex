@@ -11,38 +11,41 @@
 \author{J. McCracken}
 
 \begin{document}
-\noindent {\Huge Dissertation Proposal for J. McCracken}
+\noindent {\Huge Dissertation Proposal {\bf NOTES}}
 
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 
 \section*{Proposed Title}
-{\em Geomagnetic Storm Forecasting with Directionally Correlated Model Parameters}
+{\em Time Series Causality with Applications in Space Weather}
 
 \section*{Topic Overview}
-Geomagnetic storms can have measurable, sometimes serious, impacts on many different human systems, including power transmission grids and satelite communications.  As such, geomagnetic storm forecasting has become an important topic in the study of space weather.  Current forecasting techniques in space weather are varied in both method, scope, and accuracy.  Some forecasts aim to predict storms days ahead of time while others work with predicition windows of minutes.  Some forecasts rely on purely computational techniques like neural nets and others use combine computational techniques with theoretical models of magnetohydrodynamics.  This thesis will focus on forecasting geomagnetic storms using only time series analysis on various solar data sets.  A forecasting model will be produced for the storm-disturbance index $D_{st}$ that includes exogenous parameters found during a ``directed correlation'' study of the data sets.  The concept of ``directed correlation'' will be intrdouced and explored as a way to understand driving influences between concurrent time series.  Applying the concept of directed correlation to the solar data sets may lead to new insights (or confirm old assumptions) about the space weather system.  Such a result is scientifcally interesting in its own right, but the hope is that the directed correlation study will identify exogenous parameters that can used to achieve a more reliable and computationally efficient $D_{st}$ forecasting model than is currently available.
+$\ldots$
 
 \section*{Proposed Table of Contents}
 \begin{enumerate}
-\item Introduction
-\item Directional Correlation
-\begin{enumerate}
-\item Convergent Cross Mapping
-\item Transfer Entropy
-\item Directional Correlation Definition
-\end{enumerate}
-\item Directionally Correlated Solar Weather Parameters
-\begin{enumerate}
-\item Understanding Solar Data Sets
-\item Directional Correlation Among Solar Data Sets
-\item Directional Correlations with $D_{st}$
-\end{enumerate}
-\item $D_{st}$ Forecasting Model
-\begin{enumerate}
-\item Forecasting Models Overview
-\item $D_{st}$ Model with Directionally Correlated Exogenous Parameters
-\item Model Evalution and Comparison
-\end{enumerate}
-\item Conclusions
+	\item Introduction
+	\begin{enumerate}
+		\item Brief history of the causality studies
+		\item Causality studies occur in many different fields including philosophy, physics, artificial intelligence, statistics, signal analysis, graph theory, and econometrics.  How are these fields split regarding techniques and terminology?
+		\item Try to group the field into ``causality foundations", ``statistical causality", ``probabilistic causality", and ``time series causality".  The terms appear confusingly redundant, but it may be worthwhile to try to explain their use within the field.
+		\item Where does this work fit into the scheme described above?  Answer: time series causality; i.e.\ dealing with the fact that correlation is not causation in existing data sets.
+	\end{enumerate}
+	\item Time Series Causality (TSC) Background
+	\begin{enumerate}
+		\item Basic assumptions
+		\item Granger causality
+		\item Transfer entropy
+		\item Equivalence of Granger causality and transfer entropy (under assumptions of Gaussian noise)
+		\item Pairwise asymmetric inference
+	\end{enumerate}
+	\item Proposed TSC Algorithm 
+	\begin{enumerate}
+		\item $\ldots$
+	\end{enumerate}
+	\item Applications of Proposed TSC Algorithm
+	\begin{enumerate}
+		\item $\ldots$
+	\end{enumerate}
 \end{enumerate}
 
 
