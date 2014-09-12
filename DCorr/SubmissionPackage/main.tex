@@ -55,7 +55,7 @@ If $X$ can be estimated using $Y$ better than $Y$ can be estimated using $X$ (e.
 
 \subsection{CCM Algorithm}
 \label{sec:appA}
-The CCM algorithm may be written in terms of five steps:
+The CCM algorithm\footnote{The software used to implement both the CCM and the PAI algorithms is available at \protect\url{https://github.com/jmmccracken/PAI}.} may be written in terms of five steps:
 \begin{enumerate}
 \item 
 Create the {\em shadow manifold} for $X$, called $\tilde{\mathbf{X}}$;
@@ -125,14 +125,16 @@ Sugihara {\em et al.\ }consider convergence to be critically important for deter
 The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $Y$ ``drives'' $X$ more than $X$ ``drives'' $Y$.  Stated more formally, $\beta_{xy}>\beta_{yx}\Rightarrow\Delta>0$, which is reported as ``$Y$ CCM causes $X$''.  Likewise, $\beta_{xy}<\beta_{yx}$ implies $X$ CCM causes $Y$ and $\beta_{xy}=\beta_{yx}$ implies no CCM causality in the system.  It will be shown below that CCM causality is not necessarily related to causality as it is typically understood in physics.
 
 \section{Simple Example Systems}
-The usefulness of the CCM algorithm in identifying drivers among sets of time series can be explored by using simple example systems.  Each of the following examples intuitively supports the conclusion that $X$ drives $Y$, and CCM analysis (with $E=3$ and $\tau=1$) yields values of $\Delta$ that support conclusions that do not agree with intuition for all parameter choices.
+The usefulness of the CCM algorithm in identifying drivers among sets of time series can be explored by using simple example systems.  The benefit to this approach is that the driver is known beforehand.  Thus, CCM causality can be validated by comparison against intuition in simple system where intuition can be trusted.  Intuitively identifying the driving signal in the coupled logistic map presented in \cite{Sugihara2012} is difficult due to the complexity of the system.  Commonly used chaotic dynamic systems such as the Lorentz system present similar difficulties.  Thus, the examples here are intended to explore (and validate) the CCM method by comparing the results to expected conclusions.
+
+Each of the following examples intuitively supports the conclusion that $X$ drives $Y$, and CCM analysis (with $E=3$ and $\tau=1$) yields values of $\Delta$ that support conclusions that do not agree with intuition for all parameter choices.
 
 \subsection{Linear Example}
 Consider the linear example dynamical system of
 \begin{eqnarray}
 \label{eq:linearex}
 X_t &=& \sin(t)\\
-Y_t &=& AX_{t-1}+B\eta_t,
+Y_t &=& X_{t-1}+B\eta_t,
 \end{eqnarray}
 with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The noise term $B\eta_t$ is used to show how the conclusions drawn with the CCM algorithm depend on the parameters of the system.  In this case, the response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  Figure \ref{fig:linearex1} shows $\Delta$ for this example given a library length of $L=2000$.
 \begin{figure}[ht]
@@ -146,9 +148,9 @@ with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifi
 
 Figure \ref{fig:linearex1} (b) shows (for $B = 1.66$) that $\Delta$ is more negative at shorter library lengths but converges to a point near zero as the library length is increased.  The convergence of CCM correlations is emphasized \cite{Sugihara2012}, so the seemingly counter-intuitive behavior of $\Delta$ (and $C_{XY}$ and $C_{YX}$) in Figure \ref{fig:linearex1} implies that the CCM correlations may not be a reliable measure of ``driving'' (at least not the intuitive definition) for this simple linear example system.
 
-The expected conclusion that $X$ drives $Y$, corresponding to $X$ CCM causes $Y$ requires $\Delta<0$.  But, it can be seen from Figure \ref{fig:linearex1} (a), the sign of $\Delta$ depends on $B$.  Given that the intuitive conclusion of $X$ drives $Y$ in Eqn.\ \ref{eq:linearex} does not depend on $B$, it would seem that $\Delta$ does not reliably reflect the intuitive conclusion in this linear example system. 
+The expected conclusion that $X$ drives $Y$, corresponding to $X$ CCM causes $Y$ requires $\Delta<0$.  But, it can be seen from Figure \ref{fig:linearex1} (a), the sign of $\Delta$ depends on $B$.  Given that the intuitive conclusion of $X$ drives $Y$ in Eqn.\ \ref{eq:linearex} does not depend on $B$, it would seem that $\Delta$ does not consistently reflect the intuitive conclusion in this linear example system. 
 
-It may seem as though these results imply that CCM causality is not reliable at certain signal-to-noise ratios.  Perhaps the domain of applicability for CCM techniques is restricted to low noise systems.  While such conclusions may be true, the results of later sections show that the failure of CCM causality to agree with intuition is not a simple matter of noise levels alone.  The value of $\Delta$ is strongly dependent on the system parameters even in noise-free systems (see the following sections). 
+These results do not imply that the primary failure of CCM causality is not being reliable at certain signal-to-noise ratios.  The Eqn.\ \ref{eq:linearex} system with no noise, i.e.\ $B=0$, leads to $\Delta=2.5\times 10^{-3}$, which does not agree with intuition.  However, Fig.\ \ref{fig:linearex1} shows CCM causality for this example does agree with intuition for certain noise levels.  The key idea is that the agreement of CCM causality with intuition depends on the system parameters.  The value of $\Delta$ is strongly dependent on the system parameters even in noise-free systems (see Section \ref{sec:rlcirc}). 
 
 \subsection{Non-Linear Example}
 Consider the non-linear dynamical system of
@@ -167,7 +169,7 @@ As in the previous example, the expectation for this system is that $\Delta$ sho
 
 \subsection{RL Circuit Example}
 \label{sec:rlcirc}
-Both of the previous examples included a noise term, $\eta_t$.  The failure of CCM analysis to give expected conclusions about the drivers in the previous examples may be due to a limitation of the algorithm with respect to noise.  This can be investigated by considering a system without noise.  Consider a series circuit containing a resistor, inductor, and time varying voltage source related by
+Both of the previous examples included a noise term, $\eta_t$.  The failure of CCM analysis to give expected conclusions about the drivers in the previous examples is not due to a limitation of the algorithm with respect to noise.  This can be investigated by considering a system without noise.  Consider a series circuit containing a resistor, inductor, and time varying voltage source related by
 \begin{equation}
 \label{eqn:it}
 \frac{dI}{dt} = \frac{V(t)}{L} - \frac{R}{L} I,
@@ -240,7 +242,7 @@ Finally, a comparison of PAI and CCM for the RL circuit example leads to similar
 \end{figure}
 
 \section{Empirical Data}
-The CCM and PAI methods can also be tested using empirical datasets with known causal relationships.  Consider the measurements of altitude (in meters) paired with the mean temperature (from 1961 to 1990) at that altitude (in Celsius)\footnote{This data is available online as measurements from 349 different locations \cite{bache2013}.}.  Intuition is that the altitude drives the temperature in this scenario.  Let $A$ indicate the altitude and $T$ indicate the mean temperature.  For the CCM algorithm, it is expected that $\Delta = C_{TA}-C_{AT} < 0$.  Similarly for the PAI technique, it is expected that $\Delta^\prime = C_{T(TA)}-C_{A(AT)} < 0$.  Figure \ref{fig:alttempdata} shows $\Delta$ and $\Delta^\prime$ calculated for various library lengths, $L$, using $E=4$ and $\tau=1$.  
+The CCM and PAI methods can also be tested using empirical datasets with known causal relationships.  Consider the measurements of altitude (in meters) paired with the mean temperature (from 1961 to 1990) at that altitude (in Celsius)\footnote{This data is available online (\cite{bache2013} cf.\ \protect\url{http://webdav.tuebingen.mpg.de/cause-effect/}[pair0001]) as measurements from 349 different locations across Germany (\protect\url{http://www.dwd.de/}).}.  Intuition is that the altitude drives the temperature in this scenario.  Let $A$ indicate the altitude and $T$ indicate the mean temperature.  For the CCM algorithm, it is expected that $\Delta = C_{TA}-C_{AT} < 0$.  Similarly for the PAI technique, it is expected that $\Delta^\prime = C_{T(TA)}-C_{A(AT)} < 0$.  Figure \ref{fig:alttempdata} shows $\Delta$ and $\Delta^\prime$ calculated for various library lengths, $L$, using $E=4$ and $\tau=1$.  
 \begin{figure}[ht]
 \begin{tabular}{l}
 \includegraphics[scale=0.8]{alttempdataCCM.eps} \\
@@ -252,7 +254,7 @@ The CCM and PAI methods can also be tested using empirical datasets with known c
 The CCM algorithm converges to $\Delta = 7.7\times10^{-3} > 0$ as the library length is increased, and the PAI algorithm converges to $\Delta^\prime = -8.4\times10^{-3} < 0$ as the library length is increased.  Thus, for the empirical data sets investigated here, PAI agrees with intuition and CCM does not.  This is a similar conclusion to those seen in the examples presented in the previous subsections.
 
 \section{Conclusion}
-In this work we have shown that the recently introduced and frequently used Convergent Cross Mapping (CCM) method can lead to conclusions about a driver in a system that does not agree with intuition and the identified driver can depend on system parameters.  For the examples presented in this article, PAI better indicates ``driving'' relationships that both agree with intuition and are consistent in the sense that the driver identified does not depend on system parameters.  
+In this work we have shown that the recently introduced and frequently used Convergent Cross Mapping (CCM) method can lead to conclusions about a driver in a system that does not agree with intuition and the identified driver can depend on system parameters.  For the examples presented in this article, PAI better indicates ``driving'' relationships that both agree with intuition and are consistent in the sense that the driver identification does not depend on system parameters.  
 
 The introduced Pairwise Asymmetric Inference method (PAI) attempts to keep the model-independent benefits of CCM while making it more robust. (SSR methods such as CCM and PAI are model-independent, which may be seen as a benefit over Granger causality methods.) PAI may be useful exploratory data analysis.  For example, PAI may help guide the development of physical causality models (e.g., by suggesting future experiments) in scenarios involving a large collection of simultaneous time series measurements of different variables in a system for which no {\em a priori} notions of causality in the system exist. 
 
@@ -262,7 +264,7 @@ Finally, care should be taken in any discussion of causality and especially in d
 
 Consider the RL circuit example of Section \ref{sec:rlcirc}.  The intuitive definition of causality was motivated by an example of the experimenter physically manipulating a voltage source to create the $V$ and $I$ times series.  Suppose instead that two such experiments where conducted in isolation: one with an experimenter, Alice, physically manipulating a voltage source and measuring the current to create the $V$ and $I$ time series (call this set $\mathbf{VI}$), and another, different experiment with an experimenter, Bob, physically manipulating a current source and measuring the voltage to create the $V$ and $I$ time series (call this set $\mathbf{IV}$).  Both $\mathbf{VI}$ and $\mathbf{IV}$ are handed to a third party, Charlie, who has no {\em a priori} knowledge of how the time series are created.
 
-Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports that conclusion.  Likewise, Bob believes $\mathbf{IV}$ supports his intuition that $I$ causes $V$.  Charlie, however, must rely on time series analysis alone to determine the causality in the system.  The argument we present here is not that CCM causality is insufficient because it does not provide Charlie with a definitive answer (which it does not).  Such a task is difficult and may not even be possible with time series analysis alone \cite{Pearl2000}.  The main problem is that the CCM method, as it has been explored in this work, is inconsistent.  Any method Charlie uses must be consistent if it is to be useful.  Neither Alice nor Bob would change their causality conclusions if they changed their respective input frequencies (i.e., $\Omega$ in Eqn.\ \ref{eqn:it}).  However, if Charlie used the CCM method, his causality conclusions would depend on the frequency of the signal controlled by Alice (as seen in Fig.\ \ref{fig:Av}).  Thus, CCM causality would not be a {\em consistent} tool for Charlie.  PAI was shown to give consistent results for the considered examples but does not address the ambiguity identified in this example.
+Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports that conclusion.  Likewise, Bob believes $\mathbf{IV}$ supports his intuition that $I$ causes $V$.  Charlie, however, must rely on time series analysis alone to determine the causality in the system.  The argument we present here is not that CCM causality is insufficient because it does not provide Charlie with a definitive answer (which it does not).  Such a task is difficult and may not even be possible with time series analysis alone \cite{Pearl2000}.  The main problem is that the CCM method, as it has been explored in this work, is inconsistent.  Any method Charlie uses must be consistent if it is to be useful.  Neither Alice nor Bob would change their causality conclusions if they changed their respective input frequencies (i.e., $\Omega$ in Eqn.\ \ref{eqn:it}).  However, if Charlie used the CCM method, his causality conclusions would depend on the frequency of the signal controlled by Alice (as seen in Fig.\ \ref{fig:Av}).  Thus, CCM causality would not be a {\em consistent} tool for Charlie.  PAI was shown to give consistent results for the considered examples but does not address the ambiguity identified in this example (i.e.\ PAI may not help Charlie determine if it was Alice or Bob that created his time series).
 
 %\bibliographystyle{plain}
 \bibliography{main}
