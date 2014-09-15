@@ -1,0 +1,35 @@
+\documentclass[]{article}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+We have edited our manuscript, and we believe we have addressed all the criticisms raised by the referee.  I appreciate the ref taking the time to review our work.  Our responses to each critique are below:
+
+Major Point 1: ``It is not clear why their first two models (discrete models) have noise term but their last model doesn't have a noise term. It looks like the noise term was introduced in those two models to work their benefit (i.e.) to show the limitation of CCM. A clear justification for the noise term should be provided.''
+
+Response 1: In response to this point, text has been added to the new manuscript at the end of Section 3A.  The noise term was added to the examples of Section 3A and 3B to explore the dependence of the CCM algorithm on the system parameters.  The CCM algorithm does fail without the noise term, but our point was to explore the failure of the CCM algorithm in more depth.  This reason is also why there was no noise term in the example of Section 3C.  Here the CCM algorithm is still strongly dependent on the system parameters, but now none of the parameters are noise terms.  Thus, the failure of the CCM algorithm in not due to noise alone.  The text added to the new manuscript addresses these points.
+
+Major Point 2: ``Their presentation of results was poor. It is not clear why more than one coupling coefficient have been used in their first two models. No justification was provided for those coefficients. It looks like they were introduced so the results can be presented as contour plots.  Can't the limitation of CCM be shown just with one coupling parameter
+in the first two models? The results would also look simpler. There won't be a need to use a contour diagram unnecessarily in this case.''
+
+Response 2: We had previously considered using a single parameter in the examples but decided the two-parameter space better illustrated the unexpected behavior of the CCM algorithm (see Response 1).  However, we appreciate the ref's point of an unnecessarily cluttered presentation.  We have compromised by changing the example of Section 3A to eliminate one of the parameters.  Figure 2 (and 7) have been changed correspondingly, but the conclusions remain the same.
+
+Major Point 3: ``Examples from physical/physiological/meteorological system would strengthen their claims.''
+
+Response 3:  We have interpreted this comment in two different ways, as a lack of testing the algorithms with empirical data and as a lack of testing the algorithm with complex physical dynamical systems like the Lorentz system.  In response to the former interpretation, we have added a new short section (Section 5 in the new manuscript) that applied both the CCM and the PAI algorithms to altitude/temperature data.  In response to the latter interpretation, we have added text to the beginning of Section 3.  We had previously tested the CCM algorithm using the Lorentz system but found it difficult to determine what we expected the algorithm to tell us.  The point of this study is to validate the CCM algorithm as a tool for causal inference.  Complex dynamical systems like the Lorentz system are less useful for this task than simple example systems with clear driving signals (or empirical data sets with known causal relationships).  We ultimately determined that applying the CCM or PAI algorithms to dynamical systems or empirical data without known causal relationships was outside the scope of this study.
+
+Minor Point 1: ``There are several methods to look at the driver-response relationships (partial directed coherence and similar frequency domain methods).  This being the case, why would one want to use the work proposed here  (i.e.) a good motivation is lacking.''
+
+Response 4:  We agree with the ref that the motivation could have been clearer.  In response to this point, we have added text to the introduction that better explains both time series causality and the original motivation for the CCM methods.
+
+Minor Point 2:  ``x-axis label is missing for Figure 2b.''
+
+Response 5:  Figure 2b has been replaced by a new plot (see Response 2).
+
+
+\end{document}
