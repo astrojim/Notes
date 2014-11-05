@@ -20,7 +20,7 @@
 \date{\today}
 
 \begin{abstract}
-Convergent Cross-Mapping (CCM) is a technique for computing specific kinds of correlations between sets of times series.  It was introduced by Sugihara {\em et al.\ }\cite{Sugihara2012} and is reported to be ``a necessary condition for causation'' capable of distinguishing causality from standard correlation.  We show that the relationships between CCM correlations proposed in \cite{Sugihara2012} do not, in general, agree with intuitive concepts of ``driving'', and as such, should not be considered indicative of causality.  It is shown that CCM causality analysis implies causality is a function of system parameters for simple linear and nonlinear systems.  For example, in a RL circuit, both voltage and current can be identified as the driver depending on the frequency of the source voltage.  It is shown that CCM causality analysis can, however, be modified to identify asymmetric relationships between pairs of time series that are consistent with intuition for the considered example systems for which CCM causality analysis provided non-intuitive driver identifications.  This modification of the CCM causality analysis is introduced as ``pairwise asymmetric inference'' (PAI) and examples of its use are presented.  
+Convergent Cross-Mapping (CCM) is a technique for computing specific kinds of correlations between sets of times series.  It was introduced by Sugihara {\em et al.\ }\cite{Sugihara2012} and is reported to be ``a necessary condition for causation'' capable of distinguishing causality from standard correlation.  We show that the relationships between CCM correlations proposed in \cite{Sugihara2012} do not, in general, agree with intuitive concepts of ``driving'', and as such, should not be considered indicative of causality.  It is shown that CCM algorithm implies causality is a function of system parameters for simple linear and nonlinear systems.  For example, in a RL circuit, both voltage and current can be identified as the driver depending on the frequency of the source voltage.  It is shown that the CCM algorithm can, however, be modified to identify relationships between pairs of time series that are consistent with intuition for the considered example systems for which CCM causality analysis provided non-intuitive driver identifications.  This modification of the CCM algorithm is introduced as ``pairwise asymmetric inference'' (PAI) and examples of its use are presented.  
 \end{abstract}
 
 \pacs{}
@@ -31,7 +31,7 @@ Modern time series analysis includes techniques meant to discern ``driving'' rel
 
 To date, most techniques for ``causal inference'' in time series data fall into three broad categories, those related to transfer entropy, those related to Granger causality, and those related to lagged cross-correlation.  Transfer entropy (introduced in \cite{Schreiber2000}) and Granger causality (introduced in \cite{granger1969}) are known to be equivalent under certain conditions \cite{Barnett2009}.  In this article, we investigate a casual inference technique, called Convergent Cross-Mapping (CCM), that was recently introduced by Sugihara {\em et al.\ } \cite{Sugihara2012}.  (Currently, there is no evidence that CCM is related to either transfer entropy or Granger causality.)
 
-Statements of causality beyond simple correlation that are derived from time series data alone fall under the broad term of ``time series causality''.  Most known time series causality measures have well-documented shortcomings.  Granger causality (and its extensions) are model-based approaches that depend on, among other things, the validity of the model \cite{Kaminski2001,Granger1980} and separability \cite{Sugihara2012}.  Transfer entropy, mutual information, and other information theoretic techniques rely on estimating entropies from empirical data, which may involve the computationally difficult task of estimating transition probability densities, and generally require large amounts of data \cite{Kaiser2002,Schindler2007}.  Lagged cross-correlation techniques can be unreliable in the presence of strongly autocorrelated data \cite{box2013}, and partial directed coherence (which is related to lagged cross-correlation techniques) can lead to spurious conclusions given realistic data \cite{pascual2014}.  The results documented here show that the recently introduced CCM techniques have similar shortcomings.  
+Statements of causality beyond simple correlation that are derived from time series data alone fall under the broad term of ``time series causality''.  Most known time series causality measures have well-documented shortcomings.  Granger causality (and its extensions) are model-based approaches that depend on, among other things, the validity of the model \cite{Kaminski2001,Granger1980} and separability \cite{Sugihara2012}.  Transfer entropy, mutual information, and other information theoretic techniques rely on estimating entropies from empirical data, which may involve the computationally difficult task of estimating transition probability densities, and generally require large amounts of data \cite{Kaiser2002,Schindler2007}.  Lagged cross-correlation techniques can be unreliable in the presence of strongly autocorrelated data \cite{box2013}, and partial directed coherence (which is related to lagged cross-correlation techniques) can lead to spurious conclusions given both simulated time series with known dynamics and empirical data \cite{pascual2014}.  The results documented here show that the recently introduced CCM techniques also has shortcomings; in particular, the CCM technique may lead to conclusions that do not agree with intuitive notions of causality.  
 
 CCM is described as a technique that can be used to identify ``causality'' between time series and is intended to be useful in situations where Granger causality is known to be invalid (i.e.\ in dynamic systems that are ``nonseparable'' \cite{Sugihara2012}).  CCM is also intended to useful in determining causality in systems that experience ``mirage'' correlations \cite{Sugihara2012} (i.e.\ correlations that are a function of time).  Thus, CCM is introduced as a time series causality technique that specifically addresses some of the shortcomings discussed in the previous paragraph.  The authors state that CCM is a ``necessary condition for causation''.  It is well known that Granger causality is not causality as it is typically understood in physics \cite{Granger1980,liu2012,Roberts1985}.  Whether or not a similar conclusion can be drawn regarding CCM causality is currently open question. 
 
@@ -118,7 +118,7 @@ Sugihara {\em et al.\ }consider convergence to be critically important for deter
 \includegraphics[scale=0.5]{Figure1A.eps}\\
 \includegraphics[scale=0.5]{Figure1B.eps}
 \end{tabular}
-\caption{The dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  The white line is a contour for $\Delta=0$; Black lines are contours for $\Delta=\pm 0.01$.}
+\caption{The dependence of Eqn.\ \ref{eqn:delta} on the dimensionless parameters $\beta_{xy}$ and $\beta_{yx}$.  The white line is a contour for $\Delta=0$; Black lines are contours for $\Delta=\pm 0.01$.}
 \label{fig:BGridPlot}
 \end{figure}
 
@@ -142,7 +142,7 @@ with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifi
 \includegraphics[scale=0.8]{LinearEx.eps} \\
 \includegraphics[scale=0.8]{LinearExChangeL.eps} \\
 \end{tabular}
-\caption{Dependence of the sign of $\Delta$ from Eqn.\ \ref{eqn:delta} on $B$. (a) $\Delta$ is calculated as described in the text; (b) The dependence of $\Delta$ on library length $L$ is shown for the points $B = 1.66$.}
+\caption{Dependence of the sign of $\Delta$ from Eqn.\ \ref{eqn:delta} on the dimensionless parameter $B$. (a) The dimensionless $\Delta$ is calculated as described in the text; (b) The dependence of $\Delta$ on library length $L$ (dimensionless) is shown for the points $B = 1.66$.}
 \label{fig:linearex1}
 \end{figure}
 
@@ -161,8 +161,8 @@ Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 \end{eqnarray}
 with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.  Figure \ref{fig:nonlinearex} shows $\Delta$ for specific values of $C$ for a library length of $L=2000$.
 \begin{figure}[ht]
-\includegraphics[scale=0.5]{NonLinearEx.eps} \\
-\caption{The sign of $\Delta$, and thus the CCM causality, depends on $A$, $B$, and $C$. Contour lines indicate where $\Delta=0$.}
+\includegraphics[scale=0.6]{NonLinearEx.eps} \\
+\caption{(Color online) The sign of $\Delta$, and thus the CCM causality, depends on the dimensionless parameters $A$, $B$, and $C$. Contour lines indicate where $\Delta=0$.}
 \label{fig:nonlinearex}
 \end{figure}
 As in the previous example, the expectation for this system is that $\Delta$ should be negative, independent of the parameters $A$, $B$, and $C$.  However, it can be seen from the plots that the sign of $\Delta$ can depend on all three parameters.  Thus, this simple non-linear example leads to a conclusion similar to the previous linear example; i.e., $\Delta$ does not reliably reflect intuitive notions of driving.
@@ -228,7 +228,7 @@ Reproducing Figure \ref{fig:linearex1} (c) using PAI shows an apparent reduction
 
 The conclusions that PAI agrees with intuition more consistently than CCM is also supported by the non-linear example system, Eqn.\ \ref{eqn:nonlinearEX}.  Figure \ref{fig:nonlinearEXPAI} plots $\Delta^\prime$ as a function of $A$, $B$ and $C$ using of the same $E$, $\tau$, $L$, and step sizes that were used to produce Figure \ref{fig:nonlinearEXPAI}.
 \begin{figure}[ht]
-\includegraphics[scale=0.5]{NonLinearPAIEx.eps} \\
+\includegraphics[scale=0.55]{NonLinearPAIEx.eps} \\
 \caption{Reproducing Figure \ref{fig:nonlinearex} using PAI rather than CCM.  $\Delta^\prime<0\;\forall A,B,C$ implying $X$ ``PAI drives'' $Y$ consistently in the plotted parameter domains.}
 \label{fig:nonlinearEXPAI}
 \end{figure}

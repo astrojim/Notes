@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: apsrev4-1.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: mainNotes.bib
+Database file #2: main.bib
+Warning--I'm ignoring box2013's extra "isbn" field
+--line 21 of file main.bib
+Warning--I'm ignoring Granger1980's extra "volume" field
+--line 31 of file main.bib
+Warning--I'm ignoring Schindler2007's extra "volume" field
+--line 46 of file main.bib
+Warning--I'm ignoring Pearl2000's extra "isbn" field
+--line 75 of file main.bib
+Warning--I'm ignoring Sugihara2012's extra "volume" field
+--line 86 of file main.bib
+Repeated entry---line 94 of file main.bib
+ : @article{Granger1980
+ :                     ,
+I'm skipping whatever remains of this entry
+control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (-1) disabled
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+You've used 35 entries,
+            5847 wiz_defined-function locations,
+            1838 strings with 22347 characters,
+and the built_in function-call counts, 29908 in all, are:
+= -- 1886
+> -- 791
+< -- 217
++ -- 265
+- -- 205
+* -- 4598
+:= -- 2966
+add.period$ -- 34
+call.type$ -- 35
+change.case$ -- 137
+chr.to.int$ -- 43
+cite$ -- 35
+duplicate$ -- 2836
+empty$ -- 2179
+format.name$ -- 469
+if$ -- 5863
+int.to.chr$ -- 1
+int.to.str$ -- 42
+missing$ -- 364
+newline$ -- 151
+num.names$ -- 87
+pop$ -- 1233
+preamble$ -- 1
+purify$ -- 161
+quote$ -- 0
+skip$ -- 1063
+stack$ -- 0
+substring$ -- 674
+swap$ -- 2623
+text.length$ -- 93
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 466
+warning$ -- 1
+while$ -- 88
+width$ -- 0
+write$ -- 291
+(There was 1 error message)

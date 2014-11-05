@@ -1,0 +1,367 @@
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{33}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Sugihara}\ \emph {et~al.}(2012)\citenamefont
+  {Sugihara}, \citenamefont {May}, \citenamefont {Ye}, \citenamefont {Hsieh},
+  \citenamefont {Deyle}, \citenamefont {Fogarty},\ and\ \citenamefont
+  {Munch}}]{Sugihara2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Sugihara}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {May}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Ye}}, \bibinfo {author}
+  {\bibfnamefont {C.-h.}\ \bibnamefont {Hsieh}}, \bibinfo {author}
+  {\bibfnamefont {E.}~\bibnamefont {Deyle}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Fogarty}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Munch}},\ }\href {\doibase 10.1126/science.1227079}
+  {\bibfield  {journal} {\bibinfo  {journal} {Science}\ }\textbf {\bibinfo
+  {volume} {338}},\ \bibinfo {pages} {496} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kaminski}\ \emph {et~al.}(2001)\citenamefont
+  {Kaminski}, \citenamefont {Ding}, \citenamefont {Truccolo},\ and\
+  \citenamefont {Bressler}}]{Kaminski2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Kaminski}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ding}},
+  \bibinfo {author} {\bibfnamefont {W.~A.}\ \bibnamefont {Truccolo}}, \ and\
+  \bibinfo {author} {\bibfnamefont {S.~L.}\ \bibnamefont {Bressler}},\ }\href
+  {\doibase 10.1007/s004220000235} {\bibfield  {journal} {\bibinfo  {journal}
+  {Biological Cybernetics}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo
+  {pages} {145} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dufour}\ and\ \citenamefont
+  {Renault}(1998)}]{dufour1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-M.}\ \bibnamefont
+  {Dufour}}\ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Renault}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Econometrica}\ ,\ \bibinfo {pages} {1099}} (\bibinfo {year}
+  {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dufour}\ \emph {et~al.}(2006)\citenamefont {Dufour},
+  \citenamefont {Pelletier},\ and\ \citenamefont {Renault}}]{dufour2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-M.}\ \bibnamefont
+  {Dufour}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Pelletier}}, \
+  and\ \bibinfo {author} {\bibfnamefont {{\'E}.}~\bibnamefont {Renault}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Journal of
+  Econometrics}\ }\textbf {\bibinfo {volume} {132}},\ \bibinfo {pages} {337}
+  (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mosedale}\ \emph {et~al.}(2006)\citenamefont
+  {Mosedale}, \citenamefont {Stephenson}, \citenamefont {Collins},\ and\
+  \citenamefont {Mills}}]{mosedale2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~J.}\ \bibnamefont
+  {Mosedale}}, \bibinfo {author} {\bibfnamefont {D.~B.}\ \bibnamefont
+  {Stephenson}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Collins}},
+  \ and\ \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont {Mills}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Journal of
+  climate}\ }\textbf {\bibinfo {volume} {19}} (\bibinfo {year}
+  {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Eichler}\ and\ \citenamefont
+  {Didelez}(2012)}]{eichler2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Eichler}}\ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Didelez}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {arXiv
+  preprint arXiv:1206.5246}\ } (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schreiber}(2000)}]{Schreiber2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Schreiber}},\ }\href {\doibase 10.1103/PhysRevLett.85.461} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {85}},\ \bibinfo {pages} {461} (\bibinfo {year} {2000})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Granger}(1969)}]{granger1969}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+  {Granger}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Econometrica: Journal of the Econometric Society}\ ,\ \bibinfo {pages}
+  {424}} (\bibinfo {year} {1969})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barnett}\ \emph {et~al.}(2009)\citenamefont
+  {Barnett}, \citenamefont {Barrett},\ and\ \citenamefont
+  {Seth}}]{Barnett2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Barnett}}, \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Barrett}}, \ and\ \bibinfo {author} {\bibfnamefont {A.~K.}\ \bibnamefont
+  {Seth}},\ }\href {\doibase 10.1103/PhysRevLett.103.238701} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {103}},\ \bibinfo {pages} {238701} (\bibinfo {year}
+  {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Granger}(1980)}]{Granger1980}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Granger}},\ }\href {\doibase http://dx.doi.org/10.1016/0165-1889(80)90069-X}
+  {\bibfield  {journal} {\bibinfo  {journal} {Journal of Economic Dynamics and
+  Control}\ }\textbf {\bibinfo {volume} {2}},\ \bibinfo {pages} {329 }
+  (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kaiser}\ and\ \citenamefont
+  {Schreiber}(2002)}]{Kaiser2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kaiser}}\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Schreiber}},\ }\href {\doibase
+  http://dx.doi.org/10.1016/S0167-2789(02)00432-3} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physica D: Nonlinear Phenomena}\ }\textbf {\bibinfo
+  {volume} {166}},\ \bibinfo {pages} {43 } (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hlavackova-Schindler}\ \emph
+  {et~al.}(2007)\citenamefont {Hlavackova-Schindler}, \citenamefont {Palus},
+  \citenamefont {Vejmelka},\ and\ \citenamefont
+  {Bhattacharya}}]{Schindler2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hlavackova-Schindler}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Palus}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Vejmelka}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Bhattacharya}},\
+  }\href {\doibase http://dx.doi.org/10.1016/j.physrep.2006.12.004} {\bibfield
+  {journal} {\bibinfo  {journal} {Physics Reports}\ }\textbf {\bibinfo {volume}
+  {441}},\ \bibinfo {pages} {1 } (\bibinfo {year} {2007})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Box}\ \emph {et~al.}(2013)\citenamefont {Box},
+  \citenamefont {Jenkins},\ and\ \citenamefont {Reinsel}}]{box2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Box}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Jenkins}}, \ and\
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Reinsel}},\ }\href@noop
+  {} {\emph {\bibinfo {title} {Time Series Analysis: Forecasting and
+  Control}}},\ Wiley Series in Probability and Statistics\ (\bibinfo
+  {publisher} {Wiley},\ \bibinfo {year} {2013})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pascual-Marqui}\ \emph {et~al.}(2014)\citenamefont
+  {Pascual-Marqui}, \citenamefont {Biscay}, \citenamefont {Bosch-Bayard},
+  \citenamefont {Lehmann}, \citenamefont {Kochi}, \citenamefont {Kinoshita},
+  \citenamefont {Yamada},\ and\ \citenamefont {Sadato}}]{pascual2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~D.}\ \bibnamefont
+  {Pascual-Marqui}}, \bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Biscay}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Bosch-Bayard}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Lehmann}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Kochi}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Kinoshita}}, \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Yamada}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Sadato}},\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Name: Frontiers in Human Neuroscience}\
+  }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {448} (\bibinfo {year}
+  {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Liu}\ and\ \citenamefont {Bahadori}(2012)}]{liu2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Liu}}\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Bahadori}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {University of
+  Southern California}\ ,\ \bibinfo {pages} {1}} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Roberts}\ and\ \citenamefont
+  {Nord}(1985)}]{Roberts1985}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~L.}\ \bibnamefont
+  {Roberts}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Nord}},\
+  }\href {\doibase 10.1080/00036848500000011} {\bibfield  {journal} {\bibinfo
+  {journal} {Applied Economics}\ }\textbf {\bibinfo {volume} {17}},\ \bibinfo
+  {pages} {135} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Deyle}\ \emph {et~al.}(2013)\citenamefont {Deyle},
+  \citenamefont {Fogarty}, \citenamefont {Hsieh}, \citenamefont {Kaufman},
+  \citenamefont {MacCall}, \citenamefont {Munch}, \citenamefont {Perretti},
+  \citenamefont {Ye},\ and\ \citenamefont {Sugihara}}]{Deyle2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~R.}\ \bibnamefont
+  {Deyle}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Fogarty}},
+  \bibinfo {author} {\bibfnamefont {C.-h.}\ \bibnamefont {Hsieh}}, \bibinfo
+  {author} {\bibfnamefont {L.}~\bibnamefont {Kaufman}}, \bibinfo {author}
+  {\bibfnamefont {A.~D.}\ \bibnamefont {MacCall}}, \bibinfo {author}
+  {\bibfnamefont {S.~B.}\ \bibnamefont {Munch}}, \bibinfo {author}
+  {\bibfnamefont {C.~T.}\ \bibnamefont {Perretti}}, \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Ye}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Sugihara}},\ }\href {\doibase
+  10.1073/pnas.1215506110} {\bibfield  {journal} {\bibinfo  {journal}
+  {Proceedings of the National Academy of Sciences}\ }\textbf {\bibinfo
+  {volume} {110}},\ \bibinfo {pages} {6430} (\bibinfo {year}
+  {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wang}\ \emph {et~al.}(2014)\citenamefont {Wang},
+  \citenamefont {Piao}, \citenamefont {Ciais}, \citenamefont {Friedlingstein},
+  \citenamefont {Myneni}, \citenamefont {Cox}, \citenamefont {Heimann},
+  \citenamefont {Miller}, \citenamefont {Peng}, \citenamefont {Wang} \emph
+  {et~al.}}]{Wang2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.}~\bibnamefont
+  {Wang}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Piao}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Ciais}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Friedlingstein}}, \bibinfo {author}
+  {\bibfnamefont {R.~B.}\ \bibnamefont {Myneni}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Cox}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Heimann}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Miller}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Peng}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Wang}},  \emph {et~al.},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature}\ } (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Anastas}(2013)}]{Anastas2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
+  {Anastas}},\ }\emph {\bibinfo {title} {Individual Differences on Multi-Scale
+  Measures of Executive Function}},\ \href@noop {} {Ph.D. thesis},\ \bibinfo
+  {school} {University of Connecticut} (\bibinfo {year} {2013})\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Bozorgmagham}\ and\ \citenamefont
+  {Ross}(2013)}]{Bozorgmagham2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Bozorgmagham}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Ross}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {SIAM (Society for
+  Industrial and Applied Mathematics), Student Chapter at Virginia Tech, Oct
+  2013}}}\ (\bibinfo {year} {2013})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sugihara}\ \emph {et~al.}(1990)\citenamefont
+  {Sugihara}, \citenamefont {Grenfell}, \citenamefont {May}, \citenamefont
+  {Chesson}, \citenamefont {Platt},\ and\ \citenamefont
+  {Williamson}}]{Sugihara1990}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Sugihara}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Grenfell}},
+  \bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont {May}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Chesson}}, \bibinfo {author}
+  {\bibfnamefont {H.~M.}\ \bibnamefont {Platt}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Williamson}},\ }\href {\doibase
+  10.1098/rstb.1990.0195} {\bibfield  {journal} {\bibinfo  {journal}
+  {Philosophical Transactions of the Royal Society of London. Series B:
+  Biological Sciences}\ }\textbf {\bibinfo {volume} {330}},\ \bibinfo {pages}
+  {235} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Sugihara}}\ and\ \citenamefont
+  {{May}}(1990)}]{Sugihara1990a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {{Sugihara}}}\ and\ \bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont
+  {{May}}},\ }\href {\doibase 10.1038/344734a0} {\bibfield  {journal} {\bibinfo
+   {journal} {Nature}\ }\textbf {\bibinfo {volume} {344}},\ \bibinfo {pages}
+  {734} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {This definition differs slightly from the definition in
+  \cite {Sugihara2012}, which uses the un-squared Pearson’s correlation
+  coefficient. We use the square of this value to avoid dealing with negative
+  correlation values. This subtle change in the definition does not affect the
+  conclusions drawn in \cite {Sugihara2012}, as can be seen in our reproduction
+  of key plots from that work: Figure \ref {fig:BGridPlot} and Figure \ref
+  {fig:Sug3CDredo}.}\BibitemShut {Stop}%
+\bibitem [{Note2()}]{Note2}%
+  \BibitemOpen
+  \bibinfo {note} {The software used to implement both the CCM and the PAI
+  algorithms is available at \protect \url
+  {https://github.com/jmmccracken/PAI}.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Ma}\ and\ \citenamefont {Han}(2006)}]{Hong2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.-g.}\ \bibnamefont
+  {Ma}}\ and\ \bibinfo {author} {\bibfnamefont {C.-z.}\ \bibnamefont {Han}},\
+  }\href {\doibase 10.1007/s11460-005-0023-7} {\bibfield  {journal} {\bibinfo
+  {journal} {Frontiers of Electrical and Electronic Engineering in China}\
+  }\textbf {\bibinfo {volume} {1}},\ \bibinfo {pages} {111} (\bibinfo {year}
+  {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vlachos}\ and\ \citenamefont
+  {Kugiumtzis}(2009)}]{vlachos2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Vlachos}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kugiumtzis}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Topics on
+  Chaotic Systems: Selected Papers from Chaos 2008 International Conference}}}\
+  (\bibinfo {organization} {World Scientific},\ \bibinfo {year} {2009})\ p.\
+  \bibinfo {pages} {378}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Small}\ and\ \citenamefont {Tse}(2004)}]{Small2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Small}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Tse}},\
+  }\href {\doibase http://dx.doi.org/10.1016/j.physd.2004.03.006} {\bibfield
+  {journal} {\bibinfo  {journal} {Physica D: Nonlinear Phenomena}\ }\textbf
+  {\bibinfo {volume} {194}},\ \bibinfo {pages} {283 } (\bibinfo {year}
+  {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kennel}\ \emph {et~al.}(1992)\citenamefont {Kennel},
+  \citenamefont {Brown},\ and\ \citenamefont {Abarbanel}}]{Kennel1992}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~B.}\ \bibnamefont
+  {Kennel}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Brown}}, \
+  and\ \bibinfo {author} {\bibfnamefont {H.~D.~I.}\ \bibnamefont {Abarbanel}},\
+  }\href {\doibase 10.1103/PhysRevA.45.3403} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {45}},\ \bibinfo
+  {pages} {3403} (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lloyd}(1995)}]{Lloyd1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~L.}\ \bibnamefont
+  {Lloyd}},\ }\href {\doibase http://dx.doi.org/10.1006/jtbi.1995.0058}
+  {\bibfield  {journal} {\bibinfo  {journal} {Journal of Theoretical Biology}\
+  }\textbf {\bibinfo {volume} {173}},\ \bibinfo {pages} {217 } (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{Note3()}]{Note3}%
+  \BibitemOpen
+  \bibinfo {note} {In terms of $\Delta $, convergence to a value $\kappa $
+  means $\protect \qopname \relax m{lim}_{L\rightarrow \infty }|\Delta -\kappa
+  | = 0$. As the ``estimation skill'' of the CCM algorithm increases, each of
+  the CCM correlations, $C_{XY}$ and $C_{YX}$, converge to some fixed value.
+  Thus, $\Delta $ converges to some fixed value $\kappa $. $\Delta $ depends on
+  the library length $L$ because the CCM algorithm depends on $L$. However, the
+  complicated algorithmic dependence makes formally solving this limit
+  difficult. As such, convergence is determined from plots, following the
+  method used in \cite {Sugihara2012}.}\BibitemShut {Stop}%
+\bibitem [{Note4()}]{Note4}%
+  \BibitemOpen
+  \bibinfo {note} {This data is available online (\cite {bache2013} cf.\
+  \protect \url {http://webdav.tuebingen.mpg.de/cause-effect/}[pair0001]) as
+  measurements from 349 different locations across Germany (\protect \url
+  {http://www.dwd.de/}).}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Pearl}(2000)}]{Pearl2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Pearl}},\ }\href@noop {} {\emph {\bibinfo {title} {Causality: Models,
+  Reasoning, and Inference}}}\ (\bibinfo  {publisher} {Cambridge University
+  Press},\ \bibinfo {year} {2000})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bache}\ and\ \citenamefont
+  {Lichman}(2013)}]{bache2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Bache}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Lichman}},\ }\href {http://archive.ics.uci.edu/ml} {\enquote {\bibinfo
+  {title} {{UCI} machine learning repository},}\ } (\bibinfo {year}
+  {2013})\BibitemShut {NoStop}%
+\end{thebibliography}%
