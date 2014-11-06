@@ -115,8 +115,8 @@ In this example, the CCM causality relationship between $X$ and $Y$ is determine
 Sugihara {\em et al.\ }consider convergence to be critically important for determining CCM causality, and note that it is ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:BGridPlot} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 \begin{figure}[ht]
 \begin{tabular}{l}
-\includegraphics[scale=0.5]{Figure1A.eps}\\
-\includegraphics[scale=0.5]{Figure1B.eps}
+%\includegraphics[scale=0.5]{Figure1A.eps}\\
+%\includegraphics[scale=0.5]{Figure1B.eps}
 \end{tabular}
 \caption{The dependence of Eqn.\ \ref{eqn:delta} on $\beta_{xy}$ and $\beta_{yx}$.  The white line is a contour for $\Delta=0$; Black lines are contours for $\Delta=\pm 0.01$.}
 \label{fig:BGridPlot}
@@ -139,8 +139,8 @@ Y_t &=& X_{t-1}+B\eta_t,
 with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The noise term $B\eta_t$ is used to show how the conclusions drawn with the CCM algorithm depend on the parameters of the system.  In this case, the response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  Figure \ref{fig:linearex1} shows $\Delta$ for this example given a library length of $L=2000$.
 \begin{figure}[ht]
 \begin{tabular}{l}
-\includegraphics[scale=0.8]{LinearEx.eps} \\
-\includegraphics[scale=0.8]{LinearExChangeL.eps} \\
+%\includegraphics[scale=0.8]{LinearEx.eps} \\
+%\includegraphics[scale=0.8]{LinearExChangeL.eps} \\
 \end{tabular}
 \caption{Dependence of the sign of $\Delta$ from Eqn.\ \ref{eqn:delta} on $B$. (a) $\Delta$ is calculated as described in the text; (b) The dependence of $\Delta$ on library length $L$ is shown for the points $B = 1.66$.}
 \label{fig:linearex1}
@@ -161,7 +161,7 @@ Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 \end{eqnarray}
 with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.  Figure \ref{fig:nonlinearex} shows $\Delta$ for specific values of $C$ for a library length of $L=2000$.
 \begin{figure}[ht]
-\includegraphics[scale=0.5]{NonLinearEx.eps} \\
+%\includegraphics[scale=0.5]{NonLinearEx.eps} \\
 \caption{The sign of $\Delta$, and thus the CCM causality, depends on $A$, $B$, and $C$. Contour lines indicate where $\Delta=0$.}
 \label{fig:nonlinearex}
 \end{figure}
@@ -180,7 +180,7 @@ Consider the situation where $L=10$ Henries and $R=5$ Ohms are constant.  Physic
 
 Consider evaluating the CCM correlations $C_{VI}$ and $C_{IV}$ for each $\Omega\in[0.01,2.0]$ in steps of $0.01$.  The CCM correlations are found using $E=2$ and $\tau=1$ and are used to calculate $\Delta = C_{VI}-C_{IV}$, which is plotted in Figure \ref{fig:Av}.
 \begin{figure}[ht]
-\includegraphics[scale=0.9]{RLCircuitVaryV_Freq.eps} \\
+%\includegraphics[scale=0.9]{RLCircuitVaryV_Freq.eps} \\
 \caption{$\Delta$ dependence on $\Omega$ for a series RL circuit with a sinusoidal voltage source.  The sign of $\Delta$ implies $V$ CCM causes $I$ and $I$ CCM causes $V$ depending on the voltage frequency.}
 \label{fig:Av}
 \end{figure}
@@ -195,7 +195,7 @@ It may be argued that the relatively small values (as compared to the previous e
 
 Consider the example system of Eqn.\ \ref{eqn:2pop} with $r_y=r_y=3.7$, $X_0 = 0.2$, $Y_0=0.4$, $\beta_{xy}=0$, and $\beta_{yx}=0.32$.  These parameters correspond to Figure 3C and D of \cite{Sugihara2012} (with $E=2$, $\tau=1$, and $L=1000$).  Plots of the correlation between $X$ and $X|\tilde{\mathbf{Y}}$ (i.e., $X$ estimated using the weights found from the shadow manifold of $Y$), as well as, $Y$ and $Y|\tilde{\mathbf{X}}$ are shown in Figure \ref{fig:Sug3CDredo}.
 \begin{figure}[ht]
-\includegraphics[scale=0.5]{SugFig3CD.eps} 
+%\includegraphics[scale=0.5]{SugFig3CD.eps} 
 \caption{Correlation plots between a given time series and its convergent cross-mapped estimate.  (a) Reproduction of Figures 3C from \cite{Sugihara2012}. (b) Reproduction of Figures 3D from \cite{Sugihara2012}.}
 \label{fig:Sug3CDredo}
 \end{figure}
@@ -204,8 +204,8 @@ This leads to $\Delta=C_{YX}-C_{XY}\approx 0.11 - 0.97 = -0.86 <0$, which implie
 The correlations shown in Figure \ref{fig:Sug3CDredo} are not the only correlations that can be tested.  Consider, for example, the correlation between $X$ and the corresponding $X|\mathbf{X}$, which is estimated using weights found from the shadow manifold of $X$ itself.  The time series $X$ may also be estimated using a multivariate shadow manifold consisting of points from both $X$ and $Y$ \cite{Deyle2013}.  For example, an $E+1$ dimensional point in the a multivariate shadow manifold constructed using both $X$ and $Y$ may be defined as $\tilde{\mathbf{X}}_t=(X_t,X_{t-\tau},X_{t-2\tau},\ldots,X_{t-(E-1)\tau},Y_t)$.  An estimate of $X$ using weights from a shadow manifold using this specific construction will be referred to as $X|(XY)$ and the correlation between this estimate and the original time series will be labeled $C_{X(XY)}$.  See Figure \ref{fig:PAIintro}.
 \begin{figure}[ht]
 \begin{tabular}{c}
-\includegraphics[scale=0.5]{SugFig3CD_AddPlotAB.eps} \\
-\includegraphics[scale=0.5]{SugFig3CD_AddPlotCD.eps}
+%\includegraphics[scale=0.5]{SugFig3CD_AddPlotAB.eps} \\
+%\includegraphics[scale=0.5]{SugFig3CD_AddPlotCD.eps}
 \end{tabular}
 \caption{Stronger correlations, as compared to Figure \ref{fig:Sug3CDredo}, can be seen between a time series and its estimate when the shadow manifold includes points from the time series it is estimating.}
 \label{fig:PAIintro}
@@ -216,8 +216,8 @@ A difference in CCM correlations similar to $\Delta$ can be defined using the mu
 Consider a comparison of PAI and CCM given the linear example system from above, i.e., Eqn.\ \ref{eq:linearex}.  Figure \ref{fig:linearExPAI} shows $\Delta^\prime$ as a function of $B$ using of the same $E$, $\tau$, $L$, and step sizes as was used to produce Figure \ref{fig:linearex1}.
 \begin{figure}[ht]
 \begin{tabular}{c}
-\includegraphics[scale=0.8]{LinearExPAI.eps} \\
-\includegraphics[scale=0.8]{LinearExPAIChangeL.eps} \\
+%\includegraphics[scale=0.8]{LinearExPAI.eps} \\
+%\includegraphics[scale=0.8]{LinearExPAIChangeL.eps} \\
 \end{tabular}
 \caption{(a) Reproducing Figure \ref{fig:linearex1} (a) using PAI rather than CCM.  $\Delta^\prime<0\;\forall B$ implying $X$ ``PAI drives'' $Y$. (b) Reproducing Figure \ref{fig:linearex1} (c) using PAI rather than CCM.  $\Delta^\prime$ does not display the apparent erratic behavior seen in $\Delta$ in Figure \ref{fig:linearex1}.}
 \label{fig:linearExPAI}
@@ -228,7 +228,7 @@ Reproducing Figure \ref{fig:linearex1} (c) using PAI shows an apparent reduction
 
 The conclusions that PAI agrees with intuition more consistently than CCM is also supported by the non-linear example system, Eqn.\ \ref{eqn:nonlinearEX}.  Figure \ref{fig:nonlinearEXPAI} plots $\Delta^\prime$ as a function of $A$, $B$ and $C$ using of the same $E$, $\tau$, $L$, and step sizes that were used to produce Figure \ref{fig:nonlinearEXPAI}.
 \begin{figure}[ht]
-\includegraphics[scale=0.5]{NonLinearPAIEx.eps} \\
+%\includegraphics[scale=0.5]{NonLinearPAIEx.eps} \\
 \caption{Reproducing Figure \ref{fig:nonlinearex} using PAI rather than CCM.  $\Delta^\prime<0\;\forall A,B,C$ implying $X$ ``PAI drives'' $Y$ consistently in the plotted parameter domains.}
 \label{fig:nonlinearEXPAI}
 \end{figure}
@@ -236,7 +236,7 @@ Again in contrast to the CCM figure, PAI agrees with intuition for all the plott
 
 Finally, a comparison of PAI and CCM for the RL circuit example leads to similar conclusions.  The expectation is the $V$ drives $I$; thus, it is expected that $V$ PAI drives $I$ which implies $\Delta^\prime = C_{V(VI)} - C_{I(IV)} > 0$ (which is what is observed).  See Figure \ref{fig:AvPAI}.
 \begin{figure}[ht]
-\includegraphics[scale=0.8]{RLCircuitVaryV_FreqPAI.eps} \\
+%\includegraphics[scale=0.8]{RLCircuitVaryV_FreqPAI.eps} \\
 \caption{Reproducing Figure \ref{fig:Av} using PAI rather than CCM.  $\Delta^\prime<0\;\forall \Omega$ implying $V$ ``PAI drives'' $I$ consistently across the plotted domain for $\Omega$.}
 \label{fig:AvPAI}
 \end{figure}
@@ -245,8 +245,8 @@ Finally, a comparison of PAI and CCM for the RL circuit example leads to similar
 The CCM and PAI methods can also be tested using empirical datasets with known causal relationships.  Consider the measurements of altitude (in meters) paired with the mean temperature (from 1961 to 1990) at that altitude (in Celsius) \footnote{This data is available online (\cite{bache2013} cf.\ \protect\url{http://webdav.tuebingen.mpg.de/cause-effect/}[pair0001]) as measurements from 349 different locations across Germany (\protect\url{http://www.dwd.de/}).}.  Intuition is that the altitude drives the temperature in this scenario.  Let $A$ indicate the altitude and $T$ indicate the mean temperature.  For the CCM algorithm, the intuitive result is that $\Delta = C_{TA}-C_{AT} < 0$ and for PAI that $\Delta^\prime = C_{T(TA)}-C_{A(AT)} < 0$.  Figure \ref{fig:alttempdata} shows $\Delta$ and $\Delta^\prime$ calculated for various library lengths, $L$, using $E=4$ and $\tau=1$.  
 \begin{figure}[ht]
 \begin{tabular}{l}
-\includegraphics[scale=0.8]{alttempdataCCM.eps} \\
-\includegraphics[scale=0.8]{alttempdataPAI.eps} \\
+%\includegraphics[scale=0.8]{alttempdataCCM.eps} \\
+%\includegraphics[scale=0.8]{alttempdataPAI.eps} \\
 \end{tabular}
 \caption{The sign of $\Delta$ ($\Delta^\prime$) indicates the CCM (PAI) driving between the altitude and mean temperature. The CCM algorithm converges to $\Delta>0$ as the library length is increased, and the PAI algorithm converges to $\Delta^\prime<0$ as the library length is increased.}
 \label{fig:alttempdata}
@@ -270,41 +270,27 @@ Intuition for Alice is $V$ causes $I$ and she believes $\mathbf{VI}$ supports th
 \bibliography{main}
 
 \newpage 
-We have edited our manuscript, and we believe that we have addressed all the criticisms raised by the referee.  We appreciate the referee taking the time to review our work and to provide insightful observations and critiques.  Our responses to each critique are enumarated below.\newline
+We have edited our manuscript, and we believe that we have addressed the two criticisms raised by the referee.  Our responses to each critique are enumerated below.\newline
 
-\textbf{Major Point 1:} ``It is not clear why their first two models (discrete models) have noise term but their last model doesn't have a noise term. It looks like the noise term was introduced in those two models to work their benefit (i.e.) to show the limitation of CCM. A clear justification for the noise term should be provided.''
+\textbf{Point 1:} ``In the introduction, the authors state that ``Lagged cross-correlation techniques can be unreliable in the presence of strongly autocorrelated data [13], and partial directed coherence (which is related to lagged cross-correlation techniques) can lead to
+spurious conclusions given realistic data [14]. The results documented here show that the recently introduced CCM techniques have similar shortcomings.''
 
-\textbf{Response 1:} In response to this observation, text has been added to the new manuscript at the end of Section 3A.  In summary, the failure of the CCM algorithm in not due to noise alone.  The following text has been added to Section 3A, (paragraph 4) in the revised manuscript to make this point:\newline
+Not sure that the authors have enough grounds to state that the shortcomings of CCM are due to strong autocorrelation in the data or some similar (which is again a vague term) problem. Since most of their examples are discrete system (except for the last example), it is difficult to conceive the manifestation of autocorrelation in discrete systems. Either authors should rephrase this sentence or provide enough evidence to support this statement.''
 
-``These results do not imply that the primary failure of CCM causality is not being reliable at certain signal-to-noise ratios.  The Eqn.\ \ref{eq:linearex} system with no noise, i.e.\ $B=0$, leads to $\Delta=2.5\times 10^{-3}$, which does not agree with intuition.  However, Fig.\ \ref{fig:linearex1} shows CCM causality for this example does agree with intuition for certain noise levels.  The key idea is that the agreement of CCM causality with intuition depends on the system parameters.  The value of $\Delta$ is strongly dependent on the system parameters even in noise-free systems (see Section \ref{sec:rlcirc}). ''\newline
+\textbf{Response 1:} Our intention was not to imply that the shortcomings of CCM are related to autocorrelation in the data.  We appreciate the referee's point that the use of the word ``similar'' may imply such a conclusion, so we have changed the final sentence of that paragraph to read as follows:\newline
 
-The noise term was used for the examples of Section 3A and 3B to explore the dependence of the CCM algorithm on the system parameters.  The CCM algorithm does fail without the noise term, but our objective was to explore the failure of the CCM algorithm in more depth.  This reason is also why there was no noise term in the example of Section 3C.  Here the CCM algorithm is still strongly dependent on the system parameters, but now none of the parameters are noise terms. \newline
+``The results documented here show that the recently introduced CCM techniques also has shortcomings; in particular, the CCM technique may lead to conclusions that do not agree with intuitive notions of causality.''\newline
 
-\textbf{Major Point 2:} ``Their presentation of results was poor. It is not clear why more than one coupling coefficient have been used in their first two models. No justification was provided for those coefficients. It looks like they were introduced so the results can be presented as contour plots.  Can't the limitation of CCM be shown just with one coupling parameter in the first two models? The results would also look simpler. There won't be a need to use a contour diagram unnecessarily in this case.''
+\textbf{Point 2:} ``It is not clear what the authors mean by `realistic data'.''
 
-\textbf{Response 2:} In an early draft, we used a single parameter in the examples but later decided the two-parameter space better illustrated the unexpected behavior of the CCM algorithm (see Response 1).  However, we appreciate that this choice had a potential to make the presentation more difficult to follow or that it could seem unecessarily complicated.  We have compromised by changing the example of Section 3A to eliminate one of the parameters.  Figure 2 (and 7) have been changed correspondingly, but our conclusions remain the same.\newline
+\textbf{Response 2:} The phrase ``realistic'' was taken from the immediately following reference in that sentence (i.e. reference 14).  We appreciate that the phrase may be confusing, so the sentence has been changed as follows:\newline
 
-\textbf{Major Point 3:} ``Examples from physical/physiological/meteorological system would strengthen their claims.''
+``Lagged cross-correlation techniques can be unreliable in the presence of strongly autocorrelated data [13], and partial directed coherence (which is related to lagged cross-correlation techniques) can lead to spurious conclusions given both simulated time series with known dynamics and empirical data [14].''\newline
 
-\textbf{Response 3:}  We have interpreted this comment in two different ways, (1) as a lack of testing the algorithms with empirical data, and (2) as a lack of testing the algorithm with complex physical dynamical systems like the Lorentz system.  To address (1), we have added Section 5, which applies both the CCM and the PAI algorithms to altitude/temperature data.  To address (2), we have added the following text to the beginning of Section 3:\newline
+This sentence in our introduction refers to the conclusions made in reference 14.  Parts of the abstract of that reference are shown below:\newline 
 
-``The usefulness of the CCM algorithm in identifying drivers among sets of time series can be explored by using simple example systems.  The benefit to this approach is that the driver is known beforehand.  Thus, CCM causality can be validated by comparison against intuition in simple systems where intuition can be trusted.  Intuitively identifying the driving signal in the coupled logistic map presented in \cite{Sugihara2012} is difficult due to the complexity of the system.  Commonly used chaotic dynamic systems such as the Lorentz system present similar difficulties.  Thus, the examples here are intended to explore (and validate) the CCM method by comparing the results to expected conclusions.''\newline
+``...The three aims of this study are: (1) To show that the PDC can misrepresent the frequency response under plausible realistic conditions, thus defeating the main purpose for which the measure was developed; (2) To provide...To illustrate the severity of the problem with the PDC, and the solution achieved by the iCoh, three examples are given, based on: (1) Simulated time series with known dynamics; (2) Simulated cortical sources with known dynamics, used for generating EEG recordings, which are then used for estimating (with eLORETA) the source signals for the final connectivity assessment; and (3) EEG recordings in rats....''
 
-We had previously tested the CCM algorithm using the Lorentz system but found it difficult to interpret and validate the results.  This difficulty lead us to consider simpler systems in which the CCM algorithm could be better validated as a tool for causal inference.  Complex dynamical systems like the Lorentz system are less useful for this task than simple  systems with clear driving signals (or empirical data sets with known causal relationships).   The current literature contains many examples of the use of CCM on complex physical systems.  The work presented here was a direct result of difficulties that we had when attempting to interpret CCM results for complex physical systems.  We decided that applying the CCM or PAI algorithms to dynamical systems and empirical data without known causal relationships is better omitted from the results presented in this manuscript for which the focus is on a better understanding the CCM algorithm.\newline
-
-\textbf{Minor Point 1:} ``There are several methods to look at the driver-response relationships (partial directed coherence and similar frequency domain methods).  This being the case, why would one want to use the work proposed here  (i.e.) a good motivation is lacking.''
-
-\textbf{Response 4:}  In response to this, we have added text to the introduction that better explains both time series causality and the original motivation for the CCM methods.  The new text reads: \newline
-
-``To date, most techniques for ``causal inference'' in time series data fall into three broad categories, those related to transfer entropy, those related to Granger causality, and those related to lagged cross-correlation.  Transfer entropy (introduced in \cite{Schreiber2000}) and Granger causality (introduced in \cite{granger1969}) are known to be equivalent under certain conditions \cite{Barnett2009}.  In this article, we investigate a casual inference technique, called Convergent Cross-Mapping (CCM), that was recently introduced by Sugihara {\em et al.\ } \cite{Sugihara2012}.  (Currently, there is no evidence that CCM is related to either transfer entropy or Granger causality.)
-
-Statements of causality beyond simple correlation that are derived from time series data alone fall under the broad term of ``time series causality''.  Most known time series causality measures have well-documented shortcomings.  Granger causality (and its extensions) are model-based approaches that depend on, among other things, the validity of the model \cite{Kaminski2001,Granger1980} and separability \cite{Sugihara2012}.  Transfer entropy, mutual information, and other information theoretic techniques rely on estimating entropies from empirical data, which may involve the computationally difficult task of estimating transition probability densities, and generally require large amounts of data \cite{Kaiser2002,Schindler2007}.  Lagged cross-correlation techniques can be unreliable in the presence of strongly autocorrelated data \cite{box2013}, and partial directed coherence (which is related to lagged cross-correlation techniques) can lead to spurious conclusions given realistic data \cite{pascual2014}.  The results documented here show that the recently introduced CCM techniques have similar shortcomings.  
-
-CCM is described as a technique that can be used to identify ``causality'' between time series and is intended to be useful in situations where Granger causality is known to be invalid (i.e.\ in dynamic systems that are ``nonseparable'' \cite{Sugihara2012}).  CCM is also intended to useful in determining causality in systems that experience ``mirage'' correlations \cite{Sugihara2012} (i.e.\ correlations that are a function of time).  Thus, CCM is introduced as a time series causality technique that specifically addresses some of the shortcomings discussed in the previous paragraph.  The authors state that CCM is a ``necessary condition for causation''.  It is well known that Granger causality is not causality as it is typically understood in physics \cite{Granger1980,liu2012,Roberts1985}.  Whether or not a similar conclusion can be drawn regarding CCM causality is currently an open question.''\newline
-
-\textbf{Minor Point 2:}  ``x-axis label is missing for Figure 2b.''
-
-\textbf{Response 5:}  Figure 2b has been replaced by a new plot (see Response 2).
 
 
 \end{document}
