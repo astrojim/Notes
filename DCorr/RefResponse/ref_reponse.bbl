@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{33}%
+\begin{thebibliography}{32}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -356,12 +356,4 @@
   {Pearl}},\ }\href@noop {} {\emph {\bibinfo {title} {Causality: Models,
   Reasoning, and Inference}}}\ (\bibinfo  {publisher} {Cambridge University
   Press},\ \bibinfo {year} {2000})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Bache}\ and\ \citenamefont
-  {Lichman}(2013)}]{bache2013}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
-  {Bache}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Lichman}},\ }\href {http://archive.ics.uci.edu/ml} {\enquote {\bibinfo
-  {title} {{UCI} machine learning repository},}\ } (\bibinfo {year}
-  {2013})\BibitemShut {NoStop}%
 \end{thebibliography}%

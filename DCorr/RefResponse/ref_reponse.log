@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  5 NOV 2014 19:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.3.19)  29 SEP 2014 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**ref_reponse.tex
+(./ref_reponse.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 46 languages loaded.
 (./revtex4-1.cls
@@ -302,8 +302,9 @@ Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 12.
 Class revtex4-1 Info: cite was not loaded (OK!) on input line 12.
 Class revtex4-1 Info: mcite was not loaded (OK!) on input line 12.
 Class revtex4-1 Info: multicol was not loaded (OK!) on input line 12.
- (./main.aux)
-\openout1 = `main.aux'.
+
+(./ref_reponse.aux)
+\openout1 = `ref_reponse.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -320,11 +321,10 @@ LaTeX Font Info:    ... okay on input line 12.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-\openout3 = `mainNotes.bib'.
+\openout3 = `ref_reponseNotes.bib'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 27.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 27.
@@ -360,7 +360,7 @@ File: Figure1A.eps Graphic file (type eps)
  <Figure1A.eps>
 File: Figure1B.eps Graphic file (type eps)
  <Figure1B.eps>
-Overfull \hbox (7.43188pt too wide) in paragraph at lines 117--121
+Overfull \hbox (3.91876pt too wide) in paragraph at lines 117--121
  []$[]$ 
  []
 
@@ -368,35 +368,20 @@ File: LinearEx.eps Graphic file (type eps)
 <LinearEx.eps>
 File: LinearExChangeL.eps Graphic file (type eps)
  <LinearExChangeL.eps> [3]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 150.
-
 File: NonLinearEx.eps Graphic file (type eps)
-<NonLinearEx.eps>
-Overfull \hbox (48.50323pt too wide) in paragraph at lines 164--164
- [][] 
- []
-
-[4]
+ <NonLinearEx.eps>
 File: RLCircuitVaryV_Freq.eps Graphic file (type eps)
- <RLCircuitVaryV_Freq.eps>
+
+<RLCircuitVaryV_Freq.eps> [4]
 File: SugFig3CD.eps Graphic file (type eps)
  <SugFig3CD.eps>
-Overfull \hbox (6.44312pt too wide) in paragraph at lines 198--199
- [][] 
- []
-
 File: SugFig3CD_AddPlotAB.eps Graphic file (type eps)
-<SugFig3CD_AddPlotAB.eps>
+ <SugFig3CD_AddPlotAB.eps>
 File: SugFig3CD_AddPlotCD.eps Graphic file (type eps)
- <SugFig3CD_AddPlotCD.eps>
-Overfull \hbox (8.43562pt too wide) in paragraph at lines 206--210
- []$[]$ 
- []
 
+<SugFig3CD_AddPlotCD.eps>
 File: LinearExPAI.eps Graphic file (type eps)
-<LinearExPAI.eps>
+ <LinearExPAI.eps>
 File: LinearExPAIChangeL.eps Graphic file (type eps)
  <LinearExPAIChangeL.eps> [5]
 
@@ -405,16 +390,13 @@ LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
 
 File: NonLinearPAIEx.eps Graphic file (type eps)
 <NonLinearPAIEx.eps>
-Overfull \hbox (32.7931pt too wide) in paragraph at lines 231--231
- [][] 
- []
-
 File: RLCircuitVaryV_FreqPAI.eps Graphic file (type eps)
-<RLCircuitVaryV_FreqPAI.eps>
+ <RLCircuitVaryV_FreqPAI.eps>
 File: alttempdataCCM.eps Graphic file (type eps)
  <alttempdataCCM.eps>
 File: alttempdataPAI.eps Graphic file (type eps)
- <alttempdataPAI.eps> [6]
+
+<alttempdataPAI.eps> [6]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 255.
@@ -424,7 +406,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--260
 []\OT1/cmr/m/n/10 The in-tro-duced Pair-wise Asym-met-ric In-fer-ence
  []
 
-[7] (./main.bbl
+[7] (./ref_reponse.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 112--114
  []\OT1/cmr/m/n/9 M. Eich-ler and V. Didelez, arXiv preprint
  []
@@ -439,19 +421,106 @@ Underfull \hbox (badness 1990) in paragraph at lines 346--347
  []
 
 
+Package natbib Warning: Citation `bache2013' on page 8 undefined on input line 
+352.
+
+
 Underfull \hbox (badness 1881) in paragraph at lines 352--353
  \OT1/cmtt/m/n/9 tuebingen . mpg . de / cause-[]effect/$\OT1/cmr/m/n/9 [pair000
 1]) as mea-
  []
 
-[8]) [9] (./main.aux) ) 
+) [8]
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 285--286
+\OT1/cmr/m/n/10 be-hav-ior of the CCM al-go-rithm (see Re-sponse 1).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+[]\OT1/cmr/bx/n/10 Major Point 3: \OT1/cmr/m/n/10 ``Ex-am-ples from phys-i-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+\OT1/cmr/m/n/10 cal/physiological/meteorological sys-tem would
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
+
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 291--292
+\OT1/cmr/m/n/10 in-tu-ition in sim-ple sys-tems where in-tu-ition can be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 293--294
+\OT1/cmr/m/n/10 sys-tems and em-pir-i-cal data with-out known causal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+[9]
+Underfull \hbox (badness 1264) in paragraph at lines 303--304
+\OT1/cmr/m/n/10 se-ries causal-ity tech-nique that specif-i-cally ad-dresses
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
+
+ []
+
+
+Package natbib Warning: There were undefined citations.
+
+[10] (./ref_reponse.aux) ) 
 Here is how much of TeX's memory you used:
- 5258 strings out of 494044
- 74686 string characters out of 6155041
+ 5254 strings out of 494044
+ 74704 string characters out of 6155041
  154487 words of memory out of 5000000
- 8585 multiletter control sequences out of 15000+600000
+ 8581 multiletter control sequences out of 15000+600000
  12994 words of font info for 50 fonts, out of 8000000 for 9000
  466 hyphenation exceptions out of 8191
- 44i,9n,42p,1623b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,9n,42p,1630b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (9 pages, 55216 bytes).
+Output written on ref_reponse.dvi (10 pages, 66524 bytes).

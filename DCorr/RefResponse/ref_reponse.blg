@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: main.aux
+The top-level auxiliary file: ref_reponse.aux
 The style file: apsrev4-1.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -9,7 +9,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Database file #1: mainNotes.bib
+Database file #1: ref_reponseNotes.bib
 Database file #2: main.bib
 Warning--I'm ignoring box2013's extra "isbn" field
 --line 21 of file main.bib
@@ -37,45 +37,45 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-You've used 35 entries,
+You've used 34 entries,
             5847 wiz_defined-function locations,
-            1838 strings with 22347 characters,
-and the built_in function-call counts, 29908 in all, are:
-= -- 1886
-> -- 791
-< -- 217
-+ -- 265
-- -- 205
-* -- 4598
-:= -- 2966
-add.period$ -- 34
-call.type$ -- 35
-change.case$ -- 137
-chr.to.int$ -- 43
-cite$ -- 35
-duplicate$ -- 2836
-empty$ -- 2179
-format.name$ -- 469
-if$ -- 5863
+            1834 strings with 22201 characters,
+and the built_in function-call counts, 29185 in all, are:
+= -- 1833
+> -- 773
+< -- 213
++ -- 259
+- -- 201
+* -- 4487
+:= -- 2887
+add.period$ -- 32
+call.type$ -- 34
+change.case$ -- 132
+chr.to.int$ -- 42
+cite$ -- 34
+duplicate$ -- 2769
+empty$ -- 2129
+format.name$ -- 456
+if$ -- 5726
 int.to.chr$ -- 1
-int.to.str$ -- 42
-missing$ -- 364
-newline$ -- 151
-num.names$ -- 87
-pop$ -- 1233
+int.to.str$ -- 41
+missing$ -- 358
+newline$ -- 148
+num.names$ -- 84
+pop$ -- 1205
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 156
 quote$ -- 0
-skip$ -- 1063
+skip$ -- 1036
 stack$ -- 0
-substring$ -- 674
-swap$ -- 2623
-text.length$ -- 93
+substring$ -- 660
+swap$ -- 2563
+text.length$ -- 91
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 466
+type$ -- 453
 warning$ -- 1
-while$ -- 88
+while$ -- 86
 width$ -- 0
-write$ -- 291
+write$ -- 284
 (There was 1 error message)
