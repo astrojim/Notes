@@ -1,0 +1,84 @@
+%\documentclass[a4paper,11pt,twocolumn]{article}
+\documentclass[twocolumn,aps,pre,groupedaddress]{revtex4-1}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+
+\begin{document}
+\title{Time Series Leanings}
+\author{James M. McCracken}
+\email{jmccrac1@masonlive.gmu.edu}
+\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
+\author{Robert S. Weigel}
+\email{rweigel@gmu.edu}
+\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
+\date{\today}
+
+\begin{abstract}
+\end{abstract}
+
+\pacs{}
+\maketitle
+
+\section{Introduction}
+
+\section{Penchant Derivation}
+
+\section{Mean Observed Leaning}
+
+\subsection{Algorithm}
+
+\section{Simple Example Systems}
+
+\subsection{Impulse with Noisy Response Linear Example}
+Consider the linear example dynamical system of
+\begin{eqnarray}
+\label{eq:linearex1}
+X_t &=& \{0,2,0,0,2,0,0,2,0,0\}\\
+Y_t &=& X_{t-1}+B\eta_t,
+\end{eqnarray}
+with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
+
+\subsection{Cyclic Linear Example}
+Consider the linear example dynamical system of
+\begin{eqnarray}
+\label{eq:linearex}
+X_t &=& \sin(t)\\
+Y_t &=& X_{t-1}+B\eta_t,
+\end{eqnarray}
+with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
+
+\subsection{Non-Linear Example}
+Consider the non-linear dynamical system of
+\begin{eqnarray}
+\label{eqn:nonlinearEX}
+X_t &=& \sin(t)\\
+Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
+\end{eqnarray}
+with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.  
+
+\subsection{RL Circuit Example}
+\label{sec:rlcirc}
+Both of the previous examples included a noise term, $\eta_t$.  Consider a series circuit containing a resistor, inductor, and time varying voltage source related by
+\begin{equation}
+\label{eqn:it}
+\frac{dI}{dt} = \frac{V(t)}{L} - \frac{R}{L} I,
+\end{equation}
+where $I$ is the current at time $t$, $V(t)= \sin\left(\Omega t\right)$ is the voltage at time $t$, $R$ is the resistance, and $L$ is the inductance.  Eqn. \ref{eqn:it} was solved using the {\em ode45} integration function in MATLAB.  The time series $V(t)$ is created by defining values at fixed points and using linear interpolation to find the time steps required by the ODE solver.  
+
+Consider the situation where $L=10$ Henries and $R=5$ Ohms are constant.  Physical intuition is that $V$ drives $I$, and so we expect to find that $V$ CCM causes $I$ (i.e., $C_{VI}>C_{IV}$ or $\Delta = C_{VI}-C_{IV} > 0$). 
+
+
+\section{Empirical Data}
+
+\section{Conclusion}
+
+%\bibliographystyle{plain}
+%\bibliography{main}
+
+\end{document}
