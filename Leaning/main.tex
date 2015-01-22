@@ -72,12 +72,31 @@ but, more importantly for the calculations in the following sections, the pencha
 
 The philosophical concerns are perhaps not as important as an answer to the straightforward question of whether or not the penchant is a useful tool for time series causality.  The rest of this article will focus on answering that question.
 
-\section{Mean Observed Leaning}
+\section{Causal Leaning}
+Given a pair of times series $\{\mathbf{X},\mathbf{Y}\}$, it is difficult to use the penchant directly for causal inference between the pair.  Consider the assignment of $\mathbf{X}$ as the cause, $C$, and $\mathbf{Y}$ as the effect, $E$, i.e.\ $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  If $\rho_{EC}>0$, then the probability that $\mathbf{X}$ drives $\mathbf{Y}$ is higher than the probability that it does not, which is stated more sufficiently as $\mathbf{X}$ has a penchant to drive $\mathbf{Y}$ or $\mathbf{X}\hookrightarrow\mathbf{Y}$.  It is possible, however, that the same penchant could be positive with the opposite cause-effect assignment, i.e.\ $\rho_{EC}>0\;|\; \{C,E\}=\{\mathbf{Y},\mathbf{X}\}\Rightarrow \mathbf{Y}\hookrightarrow\mathbf{X}$.  Even though it is possible that $\mathbf{X}\hookrightarrow\mathbf{Y}$ and $\mathbf{Y}\hookrightarrow\mathbf{X}$ are both true, such information does not provide information about the causal relationship within the pair $\{\mathbf{X},\mathbf{Y}\}$.  
+
+The {\em leaning} is meant to address this problem and is defined as
+\begin{equation}
+\label{eq:leaning}
+\lambda_{EC} := \rho_{EC} - \rho_{CE}\;\;.
+\end{equation}
+A positive leaning implies the cause $C$ drives the effect $E$ more than the effect drives the cause, a negative leaning implies the effect $E$ drives the cause $C$ more than the cause drives the effect, and a null leaning (i.e.\ $\lambda_{EC} = 0$) yields no causal information for the cause-effect pair $\{C,E\}$.  
+
+Consider again the assignment of $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  If $\lambda_{EC}>0$, then $\mathbf{X}$ has a larger penchant to drive $\mathbf{Y}$ than $\mathbf{Y}$ does to drive $\mathbf{X}$.  More verbosely, $\lambda_{EC}>0$ implies the difference between the probability that $\mathbf{X}$ drives $\mathbf{Y}$ and the probability that it does not is higher than the difference between the probability that $\mathbf{Y}$ drives $\mathbf{X}$ and the probability that it does not.  For convenience, this language is boiled down to $\mathbf{X}\rightarrow\mathbf{Y}$, as in
+$\lambda_{EC}>0\;|\; \{C,E\}=\{\mathbf{X},\mathbf{Y}\}\Rightarrow\mathbf{X}\rightarrow\mathbf{Y}$, $\lambda_{EC}<0\;|\; \{C,E\}=\{\mathbf{X},\mathbf{Y}\}\Rightarrow\mathbf{Y}\rightarrow\mathbf{X}$, and $\lambda_{EC}=0\;|\; \{C,E\}=\{\mathbf{X},\mathbf{Y}\}\Rightarrow$ no conclusion.
+
+It follows from Eqn.\ \ref{eq:leaning} and the bound for the penchant that $\lambda_{EC}\in\left[-2,2\right]$.  The leaning is a function of four probabilities, $P(C)$, $P(E)$, $P(C|E)$ and $P(E|C)$.  The usefulness of the leaning for causal inference will depend on an effective method for estimating these probabilities from times series data and a more careful definition of the cause-effect assignment within the time series pair.  These topics will be discussed with a motivating toy model of a dynamical system for which the penchant and leaning calculations are simple enough to perform without any computational aid.
+
+\section{Motivating Toy Model}
 Consider
 \begin{eqnarray*}
-x &=& \left\{0,0,2,0,0,2,0,0,2,0\right\}\\
-y &=& \left\{0,0,0,2,0,0,2,0,0,2\right\}
+\mathbf{X} &=& \{x_t\; | \; t\in[0,9]\} = \left\{0,0,2,0,0,2,0,0,2,0\right\}\\
+\mathbf{Y} &=& \{y_t\; | \; t\in[0,9]\} = \left\{0,0,0,2,0,0,2,0,0,2\right\}\;\;.
 \end{eqnarray*}
+
+It seems intuative to say that $\mathbf{X}$ drives $\mathbf{Y}$ because $y_t=x_{t-1}$.  However, to show this result using a leaning calculation requires specification of the cause-effect assignment $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  A cause must precede an effect in the cause-effect assignment for consistency with the intuitive definition of causality.  It follows that a natural assignment may be $\{C,E\}=\{x_{t-l},y_t\}$ where $l\in[1,9]$.
+
+
 and a penchant defined as
 $$
 \rho_{y_{t}x_{t-1}} = P\left( y_t = 2 | x_{t-1} = 2\right) - P\left( y_t = 2 | x_{t-1} \neq 2\right)
@@ -161,8 +180,8 @@ Y_t &=& X_{t-1}+B\eta_t,
 \end{eqnarray}
 with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{SimpleIRexample_plot.eps}
-\caption{Leaning as a function of both the noise and the y-tolerance.}
+\includegraphics[scale=0.65]{SimpleIRexample_plot.eps}
+\caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
 
 \subsection{Cyclic Linear Example}
