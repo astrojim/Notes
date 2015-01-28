@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  21 JAN 2015 19:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  27 JAN 2015 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -314,18 +314,47 @@ Underfull \hbox (badness 1163) in paragraph at lines 174--174
  []
 
 File: SimpleIRexample_plot.eps Graphic file (type eps)
-<SimpleIRexample_plot.eps> [4] [5] (./main.aux)
+<SimpleIRexample_plot.eps>
+File: SimpleIRexample_diffLpart1.eps Graphic file (type eps)
+ <SimpleIRexample_diffLpart1.eps>
+File: SimpleIRexample_diffLpart2.eps Graphic file (type eps)
+
+<SimpleIRexample_diffLpart2.eps>
+File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
+ <SimpleIRexample_diffLpart3.eps>
+File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
+
+<SimpleIRexample_diffLpart4.eps>
+Overfull \hbox (44.70718pt too wide) in paragraph at lines 187--193
+[][] 
+ []
+
+File: SimpleIRexample_Bxytol.eps Graphic file (type eps)
+<SimpleIRexample_Bxytol.eps>
+Overfull \hbox (36.96375pt too wide) in paragraph at lines 196--197
+[][] 
+ []
+
+File: SimpleIRexample_difflags.eps Graphic file (type eps)
+<SimpleIRexample_difflags.eps>
+Overfull \hbox (38.46938pt too wide) in paragraph at lines 200--201
+[][] 
+ []
+
+[4] [5] [6
+
+] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3105 strings out of 495029
- 46129 string characters out of 6181522
+ 3117 strings out of 495029
+ 46477 string characters out of 6181522
  112406 words of memory out of 5000000
- 6281 multiletter control sequences out of 15000+600000
+ 6287 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,9n,42p,1061b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,42p,1061b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (5 pages, 26656 bytes).
+Output written on main.dvi (6 pages, 28088 bytes).
