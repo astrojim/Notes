@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  27 JAN 2015 19:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  27 JAN 2015 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,21 +226,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-LaTeX Warning: Reference `eq:pencal' on page 1 undefined on input line 60.
-
-
-Overfull \hbox (1.57968pt too wide) detected at line 62
-[]\OML/cmm/m/it/10.95 ^^Z[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 P\OT1/cmr/
-m/n/10.95 (\OML/cmm/m/it/10.95 E\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 C\OT1/
-cmr/m/n/10.95 ) [] \OMS/cmsy/m/n/10.95 ^^@ []
- []
-
-
-LaTeX Warning: Reference `eq:pencal' on page 1 undefined on input line 71.
-
-[1
+) [1
 
 
 ]
@@ -249,67 +235,71 @@ Overfull \hbox (20.65182pt too wide) in alignment at lines 92--95
  []
 
 [2]
-Overfull \hbox (16.85286pt too wide) detected at line 103
-\OML/cmm/m/it/10.95 ^^Z[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 P [] \OMS/cm
-sy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 P []
+Underfull \hbox (badness 5519) in paragraph at lines 104--106
+\OT1/cmr/m/n/10.95 be the coore-spond-ing term with $\OML/cmm/m/it/10.95 ^^T \O
+T1/cmr/m/n/10.95 =
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
+
+Underfull \vbox (badness 3942) has occurred while \output is active []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 122.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
-
-Overfull \hbox (120.60156pt too wide) detected at line 124
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 122.
+ [3]
+Overfull \hbox (120.60156pt too wide) detected at line 132
 \OML/cmm/m/it/10.95 P [] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 ^^@ \OML/c
 mm/m/it/10.95 P [] []  :
  []
 
 
-Overfull \hbox (35.04987pt too wide) detected at line 128
+Overfull \hbox (35.04987pt too wide) detected at line 136
 \OML/cmm/m/it/10.95 P [] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 ^^@ [][] \
 OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 ^^@ [][] \OT1/cmr/m/n/10.95 = 0  \OM
 L/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (149.19322pt too wide) detected at line 132
+Overfull \hbox (149.19322pt too wide) detected at line 140
 \OML/cmm/m/it/10.95 P [] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 ^^@ \OML/c
 mm/m/it/10.95 P [] []
  []
 
 
-Overfull \hbox (62.45148pt too wide) detected at line 136
+Overfull \hbox (62.45148pt too wide) detected at line 144
 \OML/cmm/m/it/10.95 P [] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 ^^@ [][] \
 OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 ^^@ [][] \OT1/cmr/m/n/10.95 = 0  \OM
 L/cmm/m/it/10.95 :
  []
 
 
-Overfull \hbox (207.8503pt too wide) in paragraph at lines 141--149
+Overfull \hbox (207.8503pt too wide) in paragraph at lines 149--157
  [] 
  []
 
-[3]
-Underfull \hbox (badness 7451) in paragraph at lines 160--161
+
+Underfull \hbox (badness 7451) in paragraph at lines 168--169
 []\OT1/cmr/m/n/10.95 The al-go-rithm used to cal-cu-late the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 \OT1/cmr/m/n/10.95 pen-chants cal-cu-lates only $\OML/cmm/m/it/10.95 ^^Z[]$
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 160--161
+Underfull \hbox (badness 1917) in paragraph at lines 168--169
 \OT1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 ^^Z[]$ \OT1/cmr/m/n/10.95 but not $
 \OML/cmm/m/it/10.95 ^^Z[]$ \OT1/cmr/m/n/10.95 and
  []
 
-
-Underfull \hbox (badness 1163) in paragraph at lines 174--174
+[4]
+Underfull \hbox (badness 1163) in paragraph at lines 182--182
 []\OT1/cmr/bx/n/12 Impulse with Noisy Re-sponse
  []
 
@@ -325,36 +315,30 @@ File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
 File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
 
 <SimpleIRexample_diffLpart4.eps>
-Overfull \hbox (44.70718pt too wide) in paragraph at lines 187--193
+Overfull \hbox (44.70718pt too wide) in paragraph at lines 195--201
 [][] 
  []
 
 File: SimpleIRexample_Bxytol.eps Graphic file (type eps)
 <SimpleIRexample_Bxytol.eps>
-Overfull \hbox (36.96375pt too wide) in paragraph at lines 196--197
+Overfull \hbox (36.96375pt too wide) in paragraph at lines 204--205
 [][] 
  []
 
 File: SimpleIRexample_difflags.eps Graphic file (type eps)
 <SimpleIRexample_difflags.eps>
-Overfull \hbox (38.46938pt too wide) in paragraph at lines 200--201
+Overfull \hbox (38.46938pt too wide) in paragraph at lines 208--209
 [][] 
  []
 
-[4] [5] [6
-
-] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[5] [6] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  3117 strings out of 495029
  46477 string characters out of 6181522
- 112406 words of memory out of 5000000
+ 109406 words of memory out of 5000000
  6287 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,10n,42p,1061b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,42p,1061b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (6 pages, 28088 bytes).
+Output written on main.dvi (6 pages, 30792 bytes).
