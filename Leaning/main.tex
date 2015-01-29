@@ -90,8 +90,8 @@ It follows from Eqn.\ \ref{eq:leaning} and the bound for the penchant that $\lam
 \section{Motivating Toy Model}
 Consider a time series pair $\bar{\mathbf{T}}=\{\mathbf{X},\mathbf{Y}\}$ with
 \begin{eqnarray*}
-\mathbf{X} &=& \{x_t\; | \; t\in[0,9]\} = \left\{0,0,1,0,0,2,0,0,1,0\right\}\\
-\mathbf{Y} &=& \{y_t\; | \; t\in[0,9]\} = \left\{0,0,0,1,0,0,2,0,0,1\right\}\;\;.
+\mathbf{X} &=& \{x_t\; | \; t\in[0,9]\} = \left\{0,0,1,0,0,1,0,0,1,0\right\}\\
+\mathbf{Y} &=& \{y_t\; | \; t\in[0,9]\} = \left\{0,0,0,1,0,0,1,0,0,1\right\}.
 \end{eqnarray*}
 
 It seems intuitive to say that $\mathbf{X}$ drives $\mathbf{Y}$ because $y_t=x_{t-1}$.  However, to show this result using a leaning calculation requires specification of the cause-effect assignment $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  A cause must precede an effect in the cause-effect assignment for consistency with the intuitive definition of causality.  It follows that a natural assignment may be $\{C,E\}=\{x_{t-l},y_t\}$ where $l\in[1,9]$.  This cause-effect assignment will be referred to as the $l$-standard assignment.
@@ -107,42 +107,30 @@ with $\kappa = P\left( y_t = 1 | x_{t-1} = 1\right)$.  Another penchant defined 
 Equations for the unobserved penchants corresponding to $\kappa = P\left( y_t = 0 | x_{t-1} = 1\right)$ and $\kappa = P\left( y_t = 1 | x_{t-1} = 0\right)$ can be written down.  These penchants are defined, but in both cases $\kappa=0\Rightarrow \rho_{y_{t}x_{t-1}} < 0$.  Thus unobserved penchants imply the effect, $y_t = 0$ or $1$ (for this toy model) is most likely not caused by the postulated cause, $x_{t-1} = 1$ or $0$, respectively.  Using these unobserved penchants to define leanings becomes a comparison of how unlikely postulated causes are to cause given effects.  Such comparisons are not as easily interpreted in the intuitive framework of causality, and as such, are not explored as tools for causal inference in this article. 
 
 \subsection{Finding the penchants from the data}
----
+The probabilities in the penchant calculations can be estimated from the time series data with frequency counts, e.g.\
+$$
+P\left( y_t = 1 | x_{t-1} = 1\right) = \frac{n_{EC}}{n_C} = \frac{3}{3} = 1\;\;,
+$$
+where $n_{EC}$ is the number of times $y_t=1$ and $x_{t-1}=1$ appears in $\bar{\mathbf{T}}$, and $n_{C}$ is related to the number of times the assumed cause, $x_{t-1}=1$, has appeared in $\bar{\mathbf{T}}$ and is defined in more detail below.      
 
-Estimating the probabilities with frequency counts is straightforward for the first term, i.e.\
-$$
-P\left( y_t = 2 | x_{t-1} = 2\right) = \frac{n_{EC}}{n_C} = \frac{3}{3} = 1\;\;,
-$$
-where $n_{EC}$ is the number of times $y_t=2$ and $x_{t-1}=2$ appears in the pair of time series (where, in this case, $y_t$ is assumed to be the effect $E$ caused by the cause $C$, $x_{t-1}=2$) and $n_{C}$ is the number of times the assumed cause, $x_{t-1}=2$, has appeared.  The conditional probability $P(A|B)$ is not defined if $P(B) = 0$, thus $n_C >0$ by definition, and $n_{EC}<=n_C$ because even though the assumed effect, $y_t=2$, might occur without the assumed cause, $x_{t-1}=2$ in the data, the count $n_{EC}$ is defined to be when they occur together.  It follows that this definition of $P\left( y_t = 2 | x_{t-1} = 2\right)$ can be interpreted as a probability.  
-
-The second term in the penchant is trickier.  Consider the following frequency count,
-$$
-P\left( y_t = 2 | x_{t-1} \neq 2\right) = \frac{n_{EnC}}{n_{nC}} = \frac{0}{6} = 0\;\;,
-$$
-where $n_{EnC}$ is the number of times the assumed effect, $y_t=2$ appears given that the assumed cause $x_{t-1}=2$ has {\em not} occurred, i.e.\ $x_{t-1}\neq 2$, and $n_{nC}$ is the number of times the assumed cause $x_{t-1}=2$ has {\em not} occurred, i.e.\ the number of times $x_{t-1}\neq 2$.  There are seven zeros in $\{x_t$\}, so it may be assumed that $n_{nC}=7$ rather than $n_{nC}=6$ as used above.  But, the condition is on $x_{t-1}$, not $x_t$.  Thus, the time series actually being compared are
-\begin{eqnarray*}
-\tilde{x} &=& \left\{0,0,2,0,0,2,0,0,2\right\}\\
-\tilde{y} &=& \left\{0,0,2,0,0,2,0,0,2\right\}
-\end{eqnarray*}
-which are both shorter than there counterparts above by a single value.  It follows that $\tilde{x}_t = x_{t-1}$ and $\tilde{y}_t=y_t$.  This subsetting of the time series will be discussed again later.
-
-Again, this definition can be interpreted as a probability (for very similar reason to those mentioned above).  However, this term can be rewritten using Bayes' theorem or the law of total probability as
-$$
-P\left( y_t = 2 | x_{t-1} \neq 2\right) = \frac{P\left( y_t = 2 \right)}{P\left( x_{t-1} \neq 2 \right)} - P\left( y_t = 2 | x_{t-1} = 2\right)\frac{P\left( x_{t-1} = 2 \right)}{P\left( x_{t-1} \neq 2 \right)}\;\;.
-$$
-Substituting the frequency counts leads to
-$$
-P\left( y_t = 2 | x_{t-1} \neq 2\right) = \frac{n_E}{n_{nC}} - \frac{n_{EC}}{n_C}\frac{n_C}{n_{nC}} = \frac{3}{6} - \frac{3}{3}\frac{3}{6} = 0\;\;,
-$$
-where the only frequency seen here but not used above is $n_E$ the number of times the assumed effect $y_t=2$ has appeared.  Also consider the completeness relation $P\left( x_{t-1} \neq 2 \right) = 1 - P\left( x_{t-1} = 2 \right)$.  This substitution leads to
-$$
-P\left( y_t = 2 | x_{t-1} \neq 2\right) = \frac{P\left( y_t = 2 \right)}{1-P\left( x_{t-1} = 2 \right)} - P\left( y_t = 2 | x_{t-1} = 2\right)\frac{P\left( x_{t-1} = 2 \right)}{1-P\left( x_{t-1} = 2 \right)}
-$$
+Estimating the other two probabilities in this penchant calculation using frequency counts from $\bar{\mathbf{T}}$ is slightly more subtle.  The underlying assumption that the assumed cause must precede the assumed effect must be considered when defining the frequency counts.  This concern is addressed by subsetting $\mathbf{X}$ and $\mathbf{Y}$ into $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$ such that, for any given $t$, $\tilde{\mathbf{X}}_t$ precedes $\tilde{\mathbf{Y}}_t$, and defining 
+\begin{equation}
+P\left( y_t = 1\right) = \frac{n_E}{L} = \frac{3}{9}
+\end{equation}
 and
-$$
-P\left( y_t = 2 | x_{t-1} \neq 2\right) = \frac{n_E}{1-n_{C}} - \frac{n_{EC}}{n_C}\frac{n_C}{1-n_{C}} = \frac{3}{3} - \frac{3}{3}\frac{3}{3} = 0\;\;.
-$$
-The last expression has removed any reference to $P\left( x_{t-1} \neq 2 \right)$ and $n_{nC}$, which might be considered unobservable.  This particular penchant is the same for both calculation methods.
+\begin{equation}
+P\left( x_{t-1} = 1\right) = \frac{n_C}{L} = \frac{3}{9}\;\;,
+\end{equation}
+where $n_C$ is the number of times $\tilde{x}_t = 1$, $n_E$ is the number of times $\tilde{y}_t = 1$, and $L$ is the library length of $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$ (which are assumed to be the same length).  For this toy model, those subsets are
+\begin{eqnarray*}
+\tilde{x} &=& \left\{0,0,1,0,0,1,0,0,1\right\}\\
+\tilde{y} &=& \left\{0,0,1,0,0,1,0,0,1\right\}
+\end{eqnarray*}
+which are both shorter than there counterparts above by a single value because the penchants are being calculated using the 1-standard cause-effect assignment.  It follows that $\tilde{x}_t = x_{t-1}$ and $\tilde{y}_t=y_t$.  
+
+\subsection{Mean observed leaning for $\bar{\mathbf{T}}$}
+
+---
 
 Consider both these calculation methods for all the possible penchants in this pair of time series, i.e.\
 \begin{center}
@@ -201,12 +189,16 @@ with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifi
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance for different library lengths.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
 \begin{figure}[ht]
-\includegraphics[scale=0.5]{SimpleIRexample_Bxytol.eps}
+\includegraphics[scale=0.45]{SimpleIRexample_Bxytol.eps}
 \caption{(Color available online.) The leaning agrees with intuition for most noise levels when the y-tolerance is set to the noise level (i.e.\ $B=\delta_y$).}
 \end{figure}
 \begin{figure}[ht]
-\includegraphics[scale=0.5]{SimpleIRexample_difflags.eps}
+\includegraphics[scale=0.45]{SimpleIRexample_difflags.eps}
 \caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{SimpleIRexample_lagcorr.eps}
+\caption{(Color available online.) Lagged cross correlations for reference.}
 \end{figure}
 
 \subsection{Cyclic Linear Example}
