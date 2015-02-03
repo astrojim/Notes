@@ -48,19 +48,21 @@ or Bayes theorem, i.e.\
 P(E|\bar{C}) = P(\bar{C}|E)\frac{P(E)}{P(\bar{C})}\;\;.
 \end{equation}
 The definition of probability complements implies $P(\bar{C}) = 1-P(C)$ and $P(\bar{C}|E) = 1-P(C|E)$.  Applying Eqn.\ \ref{eq:bayes} leads to
-\begin{equation}
-P(\bar{C}|E) = 1-P(E|C)\frac{P(C)}{P(E)}
-\end{equation}
+\begin{eqnarray*}
+P(\bar{C}|E) &=& 1-P(C|E)\\
+&=& 1-P(E|C)\frac{P(C)}{P(E)}
+\end{eqnarray*}
 Thus,
-\begin{equation}
-P(E|\bar{C}) = \left(1-P(E|C)\frac{P(C)}{P(E)}\right)\frac{P(E)}{1-P(C)}\;\;.
-\end{equation}
-This expression implies
+\begin{eqnarray*}
+P(E|\bar{C}) &=& P(\bar{C}|E)\frac{P(E)}{P(\bar{C})}\\
+&=&\left(1-P(E|C)\frac{P(C)}{P(E)}\right)\frac{P(E)}{1-P(C)}\;\;,
+\end{eqnarray*}
+and the second term in Eqn.\ \ref{eq:pen} has been written in terms of the of the first term.  This expression implies a penchant calculation containing only the conditional probability that is directly observed from the data, i.e.\
 \begin{equation}
 \label{eq:pencal}
 \rho_{EC} = P(E|C)\left(1+\frac{P(C)}{1-P(C)}\right)-\frac{P(E)}{1-P(C)}
 \end{equation}
-This same expression can be derived without Eqn.\ \ref{eq:bayes} by using Eqn.\ \ref{eq:totp} to make the appropriate substitution for $P(E|\bar{C})$ into Eqn.\ \ref{eq:pen}.
+This same expression can be derived without Eqn.\ \ref{eq:bayes} by using Eqn.\ \ref{eq:totp} to make the appropriate substitution for $P(E|\bar{C})$ into Eqn.\ \ref{eq:pen}.  This penchant calculation requires only a single conditional probability be estimated from the data.
 
 The use of either Eqn.\ \ref{eq:totp} or Eqn.\ \ref{eq:bayes} may eliminate the concern that $P(E|\bar{C})$ is fundamentally unobservable.  It may also, however, introduce new philosophical concerns in the definition of the penchant.  For example, $\ldots$ {\em {\bf expand this discussion}}
 
@@ -90,8 +92,10 @@ It follows from Eqn.\ \ref{eq:leaning} and the bound for the penchant that $\lam
 \section{Motivating Toy Model}
 Consider a time series pair $\bar{\mathbf{T}}=\{\mathbf{X},\mathbf{Y}\}$ with
 \begin{eqnarray*}
-\mathbf{X} &=& \{x_t\; | \; t\in[0,9]\} = \left\{0,0,1,0,0,1,0,0,1,0\right\}\\
-\mathbf{Y} &=& \{y_t\; | \; t\in[0,9]\} = \left\{0,0,0,1,0,0,1,0,0,1\right\}.
+\mathbf{X} &=& \{x_t\; | \; t\in[0,9]\}\\
+&=& \left\{0,0,1,0,0,1,0,0,1,0\right\}\\
+\mathbf{Y} &=& \{y_t\; | \; t\in[0,9]\}\\
+&=& \left\{0,0,0,1,0,0,1,0,0,1\right\}.
 \end{eqnarray*}
 
 It seems intuitive to say that $\mathbf{X}$ drives $\mathbf{Y}$ because $y_t=x_{t-1}$.  However, to show this result using a leaning calculation requires specification of the cause-effect assignment $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  A cause must precede an effect in the cause-effect assignment for consistency with the intuitive definition of causality.  It follows that a natural assignment may be $\{C,E\}=\{x_{t-l},y_t\}$ where $l\in[1,9]$.  This cause-effect assignment will be referred to as the $l$-standard assignment.
@@ -99,7 +103,7 @@ It seems intuitive to say that $\mathbf{X}$ drives $\mathbf{Y}$ because $y_t=x_{
 \subsection{Defining the penchants}
 Given $\bar{\mathbf{T}}$, one possible penchant that can be defined using the 1-standard assignment is
 \begin{eqnarray*}
-\rho_{y_{t}x_{t-1}} &=& \kappa \left(1+\frac{P\left(x_{t-1} = 1\right)}{1-P\left(x_{t-1} = 1\right)}\right)\\
+\rho_{y_{t}=1,x_{t-1}=1} &=& \kappa \left(1+\frac{P\left(x_{t-1} = 1\right)}{1-P\left(x_{t-1} = 1\right)}\right)\\
 & & -\frac{P\left(y_{t} = 1\right)}{1-P\left(x_{t-1} = 1\right)}\;\;,
 \end{eqnarray*}
 with $\kappa = P\left( y_t = 1 | x_{t-1} = 1\right)$.  Another penchant defined using this assignment would be the cooresponding term with $\kappa = P\left( y_t = 0 | x_{t-1} = 0\right)$.  These two penchants are called the {\em observed} penchants because $\kappa$ can be found directly from the time series data.  
@@ -129,41 +133,50 @@ where $n_C$ is the number of times $\tilde{x}_t = 1$, $n_E$ is the number of tim
 which are both shorter than there counterparts above by a single value because the penchants are being calculated using the 1-standard cause-effect assignment.  It follows that $\tilde{x}_t = x_{t-1}$ and $\tilde{y}_t=y_t$.  
 
 \subsection{Mean observed leaning for $\bar{\mathbf{T}}$}
+The two observed penchants in this toy model that assume $\mathbf{X}$ causes $\mathbf{Y}$ (i.e. using the 1-standard assignment) are found from the data to be
+\begin{equation}
+\rho_{y_t=1,x_{t-1}=1}=1
+\end{equation}
+and
+\begin{equation}
+\rho_{y_t=0,x_{t-1}=0}=1\;\;.
+\end{equation}
 
----
+There are two other observed penchants in this system found using the complentary 1-standard assignment of $\{C,E\}=\{y_{t-1},x_t\}$, and they are found from the data to be
+\begin{equation}
+\rho_{x_t=1,y_{t-1}=1}=-\frac{3}{7}
+\end{equation}
+and
+\begin{equation}
+\rho_{x_t=0,y_{t-1}=0}=-\frac{3}{7}\;\;.
+\end{equation}
 
-Consider both these calculation methods for all the possible penchants in this pair of time series, i.e.\
-\begin{center}
-\begin{tabular}{c|c|c|c|c|c}
-$\rho_{y_{t}x_{t-1}}$ & $P(E|C)$ & $P(E|\bar{C})$ method 1 & $P(E|\bar{C})$ method 2 & result 1 & result 2\\
-\hline
- $y_{t}=2,x_{t-1}=2$& 1 & 0 & 0 & 1 & 1\\
- $y_{t}=2,x_{t-1}=0$& 0 & 1 & 1 & -1 & -1\\
- $y_{t}=0,x_{t-1}=2$& 0 & 1 & 1 & -1 & -1\\
- $y_{t}=0,x_{t-1}=0$& 1 & 0 & 0 & 1 & 1
-\end{tabular}
-\end{center}
-For this example, both methods are equal for all the penchants.  The main concern here is that the second conditional probability term in the definition of the penchant has been replaced with probabilities of the assumed causes and effects.  This substitution addresses the argument that this second conditional probability term is not observable (e.g.\ Pearl's argument that there's no way to know what an effect given ``no cause'' actually is supposed to mean).  However, it introduces concerns about the underlying assumption that the assumed cause must precede the assumed effect.  This concern is partially addressed by subsetting $\{x\}$ and $\{y\}$ into $\{\tilde{x}\}$ and $\{\tilde{y}\}$ because for any given $t$, $\tilde{x}_t$ precedes $\tilde{y}_t$.  But, once is this assumptions still true when frequency counts are used to estimate the necessary probabilities; e.g.\ when $P(x_{t-1}=0)$ and $P(y_t=0)$ are estimated above, is it sufficient to use   
-$$
-P(x_{t-1}=0) = \frac{n_{x0}}{L}
-$$ 
-and 
-$$
-P(y_t=0) = \frac{n_{y0}}{L}\;\;,
-$$
-where $n_{x0}$ is the number of times $\tilde{x}_t = 0$, $n_{y0}$ is the number of times $\tilde{y}_t = 0$, and $L$ is the library length of both $\{\tilde{x}\}$ and $\{\tilde{y}\}$?  The working assumption is yes, but the issue will be addressed primarily by testing the algorithm.
+The {\em mean observed penchant} is the algebraic mean of the observed penchants, i.e.\
+\begin{eqnarray*}
+\langle \rho_{y_t,x_{t-1}} \rangle &=& \frac{1}{2}\left(\rho_{y_t=1,x_{t-1}=1} + \rho_{y_t=0,x_{t-1}=0}\right)\\
+&=& 1
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\langle \rho_{x_t,y_{t-1}} \rangle &=& \frac{1}{2}\left(\rho_{x_t=1,y_{t-1}=1} + \rho_{x_t=0,y_{t-1}=0}\right)\\
+&=& -\frac{3}{7}\;\;.
+\end{eqnarray*}
+The {\em mean observed leaning} follows from the definition of the mean observed penchants as
+\begin{eqnarray}
+\langle \lambda_{y_t,x_{t-1}} \rangle &=& \langle \rho_{y_t,x_{t-1}} \rangle - \langle \rho_{x_t,y_{t-1}} \rangle\\
+&=& \frac{10}{7}\;\;.
+\end{eqnarray}
 
-The algorithm used to calculate the penchants calculates only $\rho_{y_{t}=2,x_{t-1}=2}$ and $\rho_{y_{t}=0,x_{t-1}=0}$ but not $\rho_{y_{t}=2,x_{t-1}=0}$ and $\rho_{y_{t}=0,x_{t-1}=2}$ because the former are the only $(y_{t},x_{t-1})$ pairs that actually appear in the data.  The observed mean penchant is then 
-$$
-\bar{\rho}_{y_{t},x_{t-1}} = \frac{1}{2}\left( \rho_{y_{t}=2,x_{t-1}=2} + \rho_{y_{t}=0,x_{t-1}=0} \right) = 1\;\;,
-$$
-which implies the probability that $x_{t-1}$ drives $y_{t}$ is higher than the probability that it does not.  The observed mean leaning is then
-$$
-\bar{l}_{xy} = \bar{\rho}_{y_{t},x_{t-1}} - \bar{\rho}_{x_{t},y_{t-1}}\;\;,
-$$
-and the casual inference would be $\bar{l}>0\Rightarrow \mathbf{x}\rightarrow\mathbf{y}$, $\bar{l}<0\Rightarrow \mathbf{y}\rightarrow\mathbf{x}$, and $\bar{l}=0\Rightarrow ??$; i.e.\ a positive observed mean leaning implies $\mathbf{x}$ drives $\mathbf{y}$ more than $\mathbf{y}$ drives $\mathbf{x}$ with an analogous conclusion for a negative observed mean leaning.   
+The positive leaning implies the probability that $x_{t-1}$ drives $y_t$ is higher than the probability that $y_{t-1}$ drives $x_{t}$; i.e.\ $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ given the 1-standard cause-effect assignment.  This result is expected and agrees with the intuitive definition of causality in this toy model.  
+
+The point of this section was simply to motivate the most basic leaning calculations, but there is still much that can be done to use the concepts of penchants and leanings to explore time series causality within this toy model.  For example, there are many other $l$-standard assignments that can be used to find other mean observed leanings and other definitions of "mean" observed penchants can be used to define other mean observed leanings.  Averaging techniques for the different possible mean leanings can also be explored.  Some of these topics will be discussed as they appear in the examples below. 
 
 \subsection{Algorithm}
+Most empirical data sets make observed leaning calculations either tedious, or prohibitively difficult, to do.  The calculation itself can be done with a simple algorithm as follows:
+\begin{enumerate}
+\item 
+\end{enumerate}
+
 
 \section{Simple Example Systems}
 
@@ -176,15 +189,15 @@ Y_t &=& X_{t-1}+B\eta_t,
 \end{eqnarray}
 with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
 \begin{figure}[ht]
-\includegraphics[scale=0.65]{SimpleIRexample_plot.eps}
+%\includegraphics[scale=0.65]{SimpleIRexample_plot.eps}
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
 \begin{figure}[ht]
 \begin{tabular}{cc}
-\includegraphics[scale=0.35]{SimpleIRexample_diffLpart1.eps} &
-\includegraphics[scale=0.35]{SimpleIRexample_diffLpart2.eps} \\
-\includegraphics[scale=0.35]{SimpleIRexample_diffLpart3.eps} &
-\includegraphics[scale=0.35]{SimpleIRexample_diffLpart4.eps}
+\includegraphics[scale=0.30]{SimpleIRexample_diffLpart1.eps} &
+\includegraphics[scale=0.30]{SimpleIRexample_diffLpart2.eps} \\
+\includegraphics[scale=0.30]{SimpleIRexample_diffLpart3.eps} &
+\includegraphics[scale=0.30]{SimpleIRexample_diffLpart4.eps}
 \end{tabular}
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance for different library lengths.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
@@ -194,7 +207,7 @@ with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifi
 \end{figure}
 \begin{figure}[ht]
 \includegraphics[scale=0.45]{SimpleIRexample_difflags.eps}
-\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
+\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.  The autocorrelation of $\mathbf{X}$, i.e.\ $a_x$, is shown in red for reference.}
 \end{figure}
 \begin{figure}[ht]
 \includegraphics[scale=0.45]{SimpleIRexample_lagcorr.eps}

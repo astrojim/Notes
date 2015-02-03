@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  28 JAN 2015 19:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  2 FEB 2015 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,96 +226,74 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-]
-Overfull \hbox (14.5686pt too wide) in alignment at lines 92--95
+)
+Overfull \hbox (3.42897pt too wide) in alignment at lines 56--59
  [][][] []
  []
 
-[2]
-Underfull \hbox (badness 5519) in paragraph at lines 104--106
+[1
+
+
+]
+Underfull \vbox (badness 1960) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 5519) in paragraph at lines 108--110
 \OT1/cmr/m/n/10.95 be the coore-spond-ing term with $\OML/cmm/m/it/10.95 ^^T \O
 T1/cmr/m/n/10.95 =
  []
 
 
-Underfull \vbox (badness 3942) has occurred while \output is active []
-
-
-Underfull \hbox (badness 2932) in paragraph at lines 116--117
+Underfull \hbox (badness 2932) in paragraph at lines 120--121
 \OT1/cmr/m/n/10.95 this pen-chant cal-cu-la-tion us-ing fre-quency
  []
 
 [3]
-Overfull \hbox (207.8503pt too wide) in paragraph at lines 137--145
- [] 
- []
-
-
-Underfull \hbox (badness 7451) in paragraph at lines 156--157
-[]\OT1/cmr/m/n/10.95 The al-go-rithm used to cal-cu-late the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
-\OT1/cmr/m/n/10.95 pen-chants cal-cu-lates only $\OML/cmm/m/it/10.95 ^^Z[]$
- []
-
-
-Underfull \hbox (badness 1917) in paragraph at lines 156--157
-\OT1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 ^^Z[]$ \OT1/cmr/m/n/10.95 but not $
-\OML/cmm/m/it/10.95 ^^Z[]$ \OT1/cmr/m/n/10.95 and
- []
-
-
-Underfull \hbox (badness 1163) in paragraph at lines 170--170
+Underfull \hbox (badness 1163) in paragraph at lines 183--183
 []\OT1/cmr/bx/n/12 Impulse with Noisy Re-sponse
  []
 
-File: SimpleIRexample_plot.eps Graphic file (type eps)
-<SimpleIRexample_plot.eps>
 File: SimpleIRexample_diffLpart1.eps Graphic file (type eps)
- <SimpleIRexample_diffLpart1.eps>
+<SimpleIRexample_diffLpart1.eps>
 File: SimpleIRexample_diffLpart2.eps Graphic file (type eps)
-
-<SimpleIRexample_diffLpart2.eps>
+ <SimpleIRexample_diffLpart2.eps>
 File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
- <SimpleIRexample_diffLpart3.eps>
-File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
 
-<SimpleIRexample_diffLpart4.eps>
-Overfull \hbox (44.70718pt too wide) in paragraph at lines 183--189
+<SimpleIRexample_diffLpart3.eps>
+File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
+ <SimpleIRexample_diffLpart4.eps>
+Overfull \hbox (10.17609pt too wide) in paragraph at lines 196--202
 [][] 
  []
 
 File: SimpleIRexample_Bxytol.eps Graphic file (type eps)
 <SimpleIRexample_Bxytol.eps>
-Overfull \hbox (11.16579pt too wide) in paragraph at lines 192--193
+Overfull \hbox (11.16579pt too wide) in paragraph at lines 205--206
 [][] 
  []
 
 File: SimpleIRexample_difflags.eps Graphic file (type eps)
 <SimpleIRexample_difflags.eps>
-Overfull \hbox (12.52084pt too wide) in paragraph at lines 196--197
+Overfull \hbox (11.1658pt too wide) in paragraph at lines 209--210
 [][] 
  []
 
 File: SimpleIRexample_lagcorr.eps Graphic file (type eps)
 <SimpleIRexample_lagcorr.eps>
-Overfull \hbox (11.1658pt too wide) in paragraph at lines 200--201
+Overfull \hbox (11.1658pt too wide) in paragraph at lines 213--214
 [][] 
  []
 
-[4] [5] [6] (./main.aux) ) 
+[4] [5] [6
+
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3102 strings out of 495029
- 46232 string characters out of 6181522
- 110406 words of memory out of 5000000
- 6274 multiletter control sequences out of 15000+600000
+ 3100 strings out of 495029
+ 46184 string characters out of 6181522
+ 108406 words of memory out of 5000000
+ 6273 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,12n,42p,1061b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (6 pages, 27848 bytes).
+Output written on main.dvi (6 pages, 27376 bytes).
