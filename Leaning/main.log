@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  2 FEB 2015 19:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  4 FEB 2015 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -253,15 +253,18 @@ Underfull \hbox (badness 1163) in paragraph at lines 183--183
 []\OT1/cmr/bx/n/12 Impulse with Noisy Re-sponse
  []
 
+File: SimpleIRexample_plot.eps Graphic file (type eps)
+<SimpleIRexample_plot.eps>
 File: SimpleIRexample_diffLpart1.eps Graphic file (type eps)
-<SimpleIRexample_diffLpart1.eps>
+ <SimpleIRexample_diffLpart1.eps>
 File: SimpleIRexample_diffLpart2.eps Graphic file (type eps)
- <SimpleIRexample_diffLpart2.eps>
-File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
 
-<SimpleIRexample_diffLpart3.eps>
+<SimpleIRexample_diffLpart2.eps>
+File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
+ <SimpleIRexample_diffLpart3.eps>
 File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
- <SimpleIRexample_diffLpart4.eps>
+
+<SimpleIRexample_diffLpart4.eps>
 Overfull \hbox (10.17609pt too wide) in paragraph at lines 196--202
 [][] 
  []
@@ -284,16 +287,37 @@ Overfull \hbox (11.1658pt too wide) in paragraph at lines 213--214
 [][] 
  []
 
-[4] [5] [6
+[4]
+File: SimpleCyclicexample_Bdy.eps Graphic file (type eps)
+ <SimpleCyclicexample_Bdy.eps>
+File: SimpleCyclicexample_Bxytol.eps Graphic file (type eps)
+ <SimpleCyclicexample_Bxytol.eps>
+Overfull \hbox (7.10063pt too wide) in paragraph at lines 230--231
+[][] 
+ []
+
+File: SimpleCyclicexample_difflags.eps Graphic file (type eps)
+<SimpleCyclicexample_difflags.eps>
+Overfull \hbox (11.1658pt too wide) in paragraph at lines 234--235
+[][] 
+ []
+
+File: SimpleCyclicexample_lagcorr.eps Graphic file (type eps)
+<SimpleCyclicexample_lagcorr.eps>
+Overfull \hbox (11.1658pt too wide) in paragraph at lines 238--239
+[][] 
+ []
+
+[5] [6] [7
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3100 strings out of 495029
- 46184 string characters out of 6181522
+ 3110 strings out of 495029
+ 46472 string characters out of 6181522
  108406 words of memory out of 5000000
- 6273 multiletter control sequences out of 15000+600000
+ 6278 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,12n,42p,1061b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (6 pages, 27376 bytes).
+Output written on main.dvi (7 pages, 29032 bytes).

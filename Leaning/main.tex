@@ -172,7 +172,7 @@ The positive leaning implies the probability that $x_{t-1}$ drives $y_t$ is high
 The point of this section was simply to motivate the most basic leaning calculations, but there is still much that can be done to use the concepts of penchants and leanings to explore time series causality within this toy model.  For example, there are many other $l$-standard assignments that can be used to find other mean observed leanings and other definitions of "mean" observed penchants can be used to define other mean observed leanings.  Averaging techniques for the different possible mean leanings can also be explored.  Some of these topics will be discussed as they appear in the examples below. 
 
 \subsection{Algorithm}
-Most empirical data sets make observed leaning calculations either tedious, or prohibitively difficult, to do.  The calculation itself can be done with a simple algorithm as follows:
+Most empirical data sets make observed leaning calculations either tedious, or prohibitively difficult, to do without a computational aid.  Consider the following simple algorithm to calculate the observed penchants:
 \begin{enumerate}
 \item 
 \end{enumerate}
@@ -189,7 +189,7 @@ Y_t &=& X_{t-1}+B\eta_t,
 \end{eqnarray}
 with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
 \begin{figure}[ht]
-%\includegraphics[scale=0.65]{SimpleIRexample_plot.eps}
+\includegraphics[scale=0.65]{SimpleIRexample_plot.eps}
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
 \begin{figure}[ht]
@@ -222,6 +222,23 @@ X_t &=& \sin(t)\\
 Y_t &=& X_{t-1}+B\eta_t,
 \end{eqnarray}
 with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
+\begin{figure}[ht]
+\includegraphics[scale=0.65]{SimpleCyclicexample_Bdy.eps}
+\caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{SimpleCyclicexample_Bxytol.eps}
+\caption{(Color available online.) The leaning agrees with intuition for most noise levels when the y-tolerance is set to the noise level (i.e.\ $B=\delta_y$).}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{SimpleCyclicexample_difflags.eps}
+\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.  The autocorrelation of $\mathbf{X}$ and $\mathbf{Y}$, i.e.\ $a_x$ and $a_y$, is shown in red and green for reference.}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{SimpleCyclicexample_lagcorr.eps}
+\caption{(Color available online.) Lagged cross correlations for reference.}
+\end{figure}
+
 
 \subsection{Non-Linear Example}
 Consider the non-linear dynamical system of
