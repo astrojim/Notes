@@ -26,6 +26,7 @@
 \maketitle
 
 \section{Introduction}
+$\ldots$TBD$\ldots$
 
 \section{Causal Penchant}
 Define the {\em causal penchant} as
@@ -89,7 +90,7 @@ $\lambda_{EC}>0\;|\; \{C,E\}=\{\mathbf{X},\mathbf{Y}\}\Rightarrow\mathbf{X}\xrig
 
 It follows from Eqn.\ \ref{eq:leaning} and the bound for the penchant that $\lambda_{EC}\in\left[-2,2\right]$.  The leaning is a function of four probabilities, $P(C)$, $P(E)$, $P(C|E)$ and $P(E|C)$.  The usefulness of the leaning for causal inference will depend on an effective method for estimating these probabilities from times series data and a more careful definition of the cause-effect assignment within the time series pair.  These topics will be discussed with a motivating toy model of a dynamical system for which the penchant and leaning calculations are simple enough to perform without any computational aid.
 
-\section{Motivating Toy Model}
+\section{Motivating Example}
 Consider a time series pair $\bar{\mathbf{T}}=\{\mathbf{X},\mathbf{Y}\}$ with
 \begin{eqnarray*}
 \mathbf{X} &=& \{x_t\; | \; t\in[0,9]\}\\
@@ -117,7 +118,7 @@ P\left( y_t = 1 | x_{t-1} = 1\right) = \frac{n_{EC}}{n_C} = \frac{3}{3} = 1\;\;,
 $$
 where $n_{EC}$ is the number of times $y_t=1$ and $x_{t-1}=1$ appears in $\bar{\mathbf{T}}$, and $n_{C}$ is related to the number of times the assumed cause, $x_{t-1}=1$, has appeared in $\bar{\mathbf{T}}$ and is defined in more detail below.      
 
-Estimating the other two probabilities in this penchant calculation using frequency counts from $\bar{\mathbf{T}}$ is slightly more subtle.  The underlying assumption that the assumed cause must precede the assumed effect must be considered when defining the frequency counts.  This concern is addressed by subsetting $\mathbf{X}$ and $\mathbf{Y}$ into $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$ such that, for any given $t$, $\tilde{\mathbf{X}}_t$ precedes $\tilde{\mathbf{Y}}_t$, and defining 
+Estimating the other two probabilities in this penchant calculation using frequency counts from $\bar{\mathbf{T}}$ is slightly more subtle.  The underlying assumption that the assumed cause must precede the assumed effect must be considered when defining the frequency counts.  This concern is addressed by shifting $\mathbf{X}$ and $\mathbf{Y}$ into $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$ such that, for any given $t$, $\tilde{\mathbf{X}}_t$ precedes $\tilde{\mathbf{Y}}_t$, and defining 
 \begin{equation}
 P\left( y_t = 1\right) = \frac{n_E}{L} = \frac{3}{9}
 \end{equation}
@@ -125,15 +126,15 @@ and
 \begin{equation}
 P\left( x_{t-1} = 1\right) = \frac{n_C}{L} = \frac{3}{9}\;\;,
 \end{equation}
-where $n_C$ is the number of times $\tilde{x}_t = 1$, $n_E$ is the number of times $\tilde{y}_t = 1$, and $L$ is the library length of $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$ (which are assumed to be the same length).  For this toy model, those subsets are
+where $n_C$ is the number of times $\tilde{x}_t = 1$, $n_E$ is the number of times $\tilde{y}_t = 1$, and $L$ is the library length of $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$ (which are assumed to be the same length).  For this example, those subsets are
 \begin{eqnarray*}
-\tilde{x} &=& \left\{0,0,1,0,0,1,0,0,1\right\}\\
-\tilde{y} &=& \left\{0,0,1,0,0,1,0,0,1\right\}
+\tilde{\mathbf{X}} &=& \left\{0,0,1,0,0,1,0,0,1\right\}\\
+\tilde{\mathbf{Y}} &=& \left\{0,0,1,0,0,1,0,0,1\right\}
 \end{eqnarray*}
 which are both shorter than there counterparts above by a single value because the penchants are being calculated using the 1-standard cause-effect assignment.  It follows that $\tilde{x}_t = x_{t-1}$ and $\tilde{y}_t=y_t$.  
 
 \subsection{Mean observed leaning for $\bar{\mathbf{T}}$}
-The two observed penchants in this toy model that assume $\mathbf{X}$ causes $\mathbf{Y}$ (i.e. using the 1-standard assignment) are found from the data to be
+The two observed penchants in this example that assume $\mathbf{X}$ causes $\mathbf{Y}$ (i.e. using the 1-standard assignment) are found from the data to be
 \begin{equation}
 \rho_{y_t=1,x_{t-1}=1}=1
 \end{equation}
@@ -142,10 +143,11 @@ and
 \rho_{y_t=0,x_{t-1}=0}=1\;\;.
 \end{equation}
 
-There are two other observed penchants in this system found using the complentary 1-standard assignment of $\{C,E\}=\{y_{t-1},x_t\}$, and they are found from the data to be
-\begin{equation}
-\rho_{x_t=1,y_{t-1}=1}=-\frac{3}{7}
-\end{equation}
+The complements of these observed penchants are found using the complementary 1-standard assignment of $\{C,E\}=\{y_{t-1},x_t\}$ and are found from the data to be
+\begin{eqnarray}
+\rho_{x_t=1,y_{t-1}=0} &=& \frac{3}{7}\\
+\rho_{x_t=0,y_{t-1}=1} &=& \frac{3}{7}\;\;.
+\end{eqnarray}
 and
 \begin{equation}
 \rho_{x_t=0,y_{t-1}=0}=-\frac{3}{7}\;\;.
@@ -158,25 +160,107 @@ The {\em mean observed penchant} is the algebraic mean of the observed penchants
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-\langle \rho_{x_t,y_{t-1}} \rangle &=& \frac{1}{2}\left(\rho_{x_t=1,y_{t-1}=1} + \rho_{x_t=0,y_{t-1}=0}\right)\\
-&=& -\frac{3}{7}\;\;.
+\langle \rho_{x_t,y_{t-1}} \rangle &=& \frac{1}{3}\left(\rho_{x_t=1,y_{t-1}=0} \right.\\
+& &\left. +\rho_{x_t=0,y_{t-1}=1} + \rho_{x_t=0,y_{t-1}=0}\right)\\
+&=& \frac{1}{7}\;\;.
 \end{eqnarray*}
 The {\em mean observed leaning} follows from the definition of the mean observed penchants as
 \begin{eqnarray}
+\label{eqn:meanlean}
 \langle \lambda_{y_t,x_{t-1}} \rangle &=& \langle \rho_{y_t,x_{t-1}} \rangle - \langle \rho_{x_t,y_{t-1}} \rangle\\
-&=& \frac{10}{7}\;\;.
+&=& \frac{6}{7}\;\;.
 \end{eqnarray}
 
-The positive leaning implies the probability that $x_{t-1}$ drives $y_t$ is higher than the probability that $y_{t-1}$ drives $x_{t}$; i.e.\ $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ given the 1-standard cause-effect assignment.  This result is expected and agrees with the intuitive definition of causality in this toy model.  
+The positive leaning implies the probability that $x_{t-1}$ drives $y_t$ is higher than the probability that $y_{t-1}$ drives $x_{t}$; i.e.\ $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ given the 1-standard cause-effect assignment.  This result is expected and agrees with the intuitive definition of causality in this example.  
 
-The point of this section was simply to motivate the most basic leaning calculations, but there is still much that can be done to use the concepts of penchants and leanings to explore time series causality within this toy model.  For example, there are many other $l$-standard assignments that can be used to find other mean observed leanings and other definitions of "mean" observed penchants can be used to define other mean observed leanings.  Averaging techniques for the different possible mean leanings can also be explored.  Some of these topics will be discussed as they appear in the examples below. 
+\subsection{Unobserved penchants}
+The {\em unobserved} penchants (using the 1-standard assignment from the beginning of the subsection) for this example are
+\begin{eqnarray}
+\rho_{y_t=1,x_{t-1}=0} &=& -1\\
+\rho_{y_t=0,x_{t-1}=1} &=& -1
+\end{eqnarray}
+and their complements are
+\begin{equation}
+\rho_{x_t=1,y_{t-1}=1}=-\frac{3}{7}
+\end{equation}
+These values can incorporated into the averaging calculation to yield a {\em mean total penchant}; i.e.\ 
+\begin{eqnarray*}
+\langle\langle \rho_{y_t,x_{t-1}} \rangle\rangle &=& \frac{1}{4}\left(\rho_{y_t=1,x_{t-1}=1} + \rho_{y_t=0,x_{t-1}=0}\right.\\
+& &\left. \rho_{y_t=1,x_{t-1}=0} + \rho_{y_t=0,x_{t-1}=1}\right) \\
+&=& 0
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\langle\langle \rho_{x_t,y_{t-1}} \rangle\rangle &=& \frac{1}{4}\left(\rho_{x_t=1,y_{t-1}=1} + \rho_{x_t=0,y_{t-1}=0}\right.\\
+& &\left. \rho_{x_t=1,y_{t-1}=0} + \rho_{x_t=0,y_{t-1}=1}\right)\\
+&=& 0\;\;.
+\end{eqnarray*}
+Thus, the {\em mean total leaning} (defined analogous to Eqn.\ \ref{eqn:meanlean}) would be $\langle\langle \lambda_{y_t,x_{t-1}} \rangle\rangle = \langle\langle \rho_{y_t,x_{t-1}} \rangle\rangle -  \langle\langle \rho_{x_t,y_{t-1}} \rangle\rangle = 0$ and would not be useful for casual inference in this example.
+
+\subsection{Cause-effect assignment independence}
+It may be argued that the causal inference above was a little disingenuous in that the assumed cause-effect relationship was known to be correct.  It can be shown, however, that causal inference is independent of the assumed cause-effect relationship.  For example, consider the 1-standard cause-effect assignment $\{C,E\}=\{y_{t-l},x_t\}$. The mean observed leaning would be
+\begin{eqnarray}
+\langle \lambda_{x_t,y_{t-1}} \rangle &=& \langle \rho_{x_t,y_{t-1}} \rangle - \langle \rho_{y_t,x_{t-1}} \rangle\\
+&=& -\frac{6}{7}\;\;,
+\end{eqnarray}
+which implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$, as expected for this example.
+
+In general, $\lambda_{AB} := \rho_{AB} - \rho_{BA}\Rightarrow -\lambda_{AB} = \rho_{BA} - \rho_{AB} := \lambda_{BA}$.  Thus, the causal inference is independent of which times series is initially assumed to be the cause (or effect).  
+
+\subsection{Weighted Mean Observed Leaning}
+\label{sec:wmean}
+The {\em weighted mean observed penchant} is defined similarly to the mean observed penchant but each term is weighted by the number of times that penchant appears in the data; e.g.\
+\begin{eqnarray*}
+\langle \rho_{y_t,x_{t-1}} \rangle_w &=& \frac{1}{L-l}\left(n_{y_t=1,x_{t-1}=1}\rho_{y_t=1,x_{t-1}=1} \right.\\
+& & \left.+ n_{y_t=0,x_{t-1}=0}\rho_{y_t=0,x_{t-1}=0}\right)\\
+&=& 1
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\langle \rho_{x_t,y_{t-1}} \rangle_w &=& \frac{1}{L-l}\left(n_{x_t=1,y_{t-1}=0}\rho_{x_t=1,y_{t-1}=0} \right.\\
+& & +n_{x_t=0,y_{t-1}=1}\rho_{x_t=0,y_{t-1}=1}\\
+& & \left.+ n_{x_t=0,y_{t-1}=0}\rho_{x_t=0,y_{t-1}=0}\right)\\
+&=& \frac{3}{63}\;\;,
+\end{eqnarray*}
+where $n_{ab}$ is the number of times the assumed cause $a$ appears with the assumed effect $b$ in the data, $L$ is the library length of the times series data, and $l$ is the lag used in the $l$-standard cause-effect assignment under which these penchants are being calculated.  
+
+The {\em weighted mean observed leaning} follows naturally as
+\begin{eqnarray*}
+\langle \lambda_{y_t,x_{t-1}} \rangle_w &=& \langle \rho_{y_t,x_{t-1}} \rangle_w - \langle \rho_{x_t,y_{t-1}} \rangle_w\\
+&=& \frac{60}{63}\;\;.
+\end{eqnarray*}
+For this example, $\langle \lambda_{y_t,x_{t-1}} \rangle_w\Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{Y}$ as expected.
+
+Conceptually, the weighted mean observed penchant is preferred to the mean penchant because it accounts for the frequency of observed cause-effect pairs within the data, which is assumed to be a predictor of causal influence.  For example, given some pair $\{\mathbf{A},\mathbf{B}\}$, if it is known that $a_{t-1}$ causes $b_{t}$ and both $b_t = 0 | a_{t-1} = 0$ and $b_t = 0 | a_{t-1} = 1$ are observed in the data, then comparison of the frequencies with which the pair occur would be used to determine which of the two pairs represents the true cause-effect relationship and which pair represents, e.g., the effects of noise in the system.
+
+For this example, the weighted mean observed leaning provides the same causal inference as the mean observed leaning.  The weighted mean calculation, however, can be made computationally less expensive than the mean calculation, which will be of practical concern for empirical data sets.
 
 \subsection{Algorithm}
-Most empirical data sets make observed leaning calculations either tedious, or prohibitively difficult, to do without a computational aid.  Consider the following simple algorithm to calculate the observed penchants:
+Most empirical data sets make observed leaning calculations either tedious, or prohibitively difficult, to do without a computational aid.  Consider the following algorithm to calculate the observed penchants of a time series pair $\bar{\mathbf{T}}=\{\mathbf{X},\mathbf{Y}\} = \{\{x_t\},\{y_t\}\}$ for some time step $t\in[0,L]$ where $L$ is the library length of both times series\footnote{The library length is assumed to be the same for both time series as a simplifying assumption.  The algorithm would not need to be altered significantly to account for slightly different library lengths.  However, if the two time series have dramatically different library lengths (e.g.\ $L_y = L_x/2$), then the algorithm would need to change; e.g. by sampling shorter time series from the longer one and running the equal-length leaning algorithm using the shorter time series and each of the sampled time series.}:
 \begin{enumerate}
-\item 
+\item Initialize three counters, e.g.\ $N_{EC} = N_{C} = N_{E} = 0$
+\item Initialize two iterators, e.g.\ $m=l$ and $n=l$
+\item If $y_m = y_n \pm \delta_y$, then increment one of the counters, e.g.\ $N_E = N_E+1$ 
+\item If $x_{m-l} = x_{n-l} \pm \delta_x$, then increment another of the counters, e.g.\ $N_C = N_C+1$
+\item If both $y_m = y_n \pm \delta_y$ and $x_{m-l} = x_{n-l} \pm \delta_x$, then increment the last counters, e.g.\ $N_{EC} = N_{EC}+1$
+\item Increment one of the iterators, e.g.\ $n = n+1$
+\item Repeat steps 3-6 $\forall\;n\in[l,L]$
+\item If $N_C = 0$, issue a warning and skip to the final step 
+\item Calculate the estimated $P(E|C)$, e.g.\ $P_{EC} = \frac{N_{EC}}{N_C}$
+\item Calculate the estimated $P(C)$, e.g.\ $P_{C} = \frac{N_{C}}{L-l}$
+\item Calculate the estimated $P(E)$, e.g.\ $P_{E} = \frac{N_{E}}{L-l}$
+\item Calculated and record the observed penchant, i.e.\ $\rho_{EC} = P_{EC}\left[1+P_C\left(1-P_C\right)^{-1}\right]-P_E\left(1-P_C\right)^{-1}$
+\item Repeat step 1
+\item Repeat steps 3-13 $\forall\;m\in[l,L]$
 \end{enumerate}
 
+This algorithm will be labeled {\sc PEN}$(\mathbf{X},\mathbf{Y},l,\delta_x,\delta_y)$, and it calculates the observed penchant $\rho_{y_t,x_{t-l}}\;\forall\;t\in[0,L]$.  There are $L-l$ penchants returned by this algorithm, and the arithmetic mean of this set of penchants corresponds to the weighted mean observed penchant calculation discussed in Section \ref{sec:wmean}.  
+
+{\sc PEN}$(\mathbf{X},\mathbf{Y},l,\delta_x,\delta_y)$ depends on five parameters, the time series pair, $\{\mathbf{X},\mathbf{Y}\}$, the lag $l$ used to define the $l$-standard cause-effect assignment and the tolerances, $\delta_x$ and $\delta_y$, used to determine if two data points in the time series should be considered equal.  The lag is part of the definition of the penchant, but the tolerances have been explicitly added to the algorithm to deal with noise in the data.  The effect of these tolerance on the causal inference for a given times series set will be explored in the following sections.
+
+Assume there exists a single-valued algorithm that returns the arithmetic mean of a set of numbers, i.e.\ {\sc MEAN}$(\cdot)$, then the weighted mean observed leaning algorithm, {\sc LEAN}$(\mathbf{X},\mathbf{Y},l,\delta_x,\delta_y)$, is defined as the difference between {\sc MEAN}$(${\sc PEN}$(\mathbf{X},\mathbf{Y},l,\delta_x,\delta_y))$ and {\sc MEAN}$(${\sc PEN}$(\mathbf{Y},\mathbf{X},l,\delta_x,\delta_y))$, in that order.   
+
+A {\sc MATLAB} implementation of {\sc LEAN}$(\mathbf{X},\mathbf{Y},l,\delta_x,\delta_y)$ is used in all of the results shown below and is available at {\it github}$\backslash\ldots$.
 
 \section{Simple Example Systems}
 
@@ -207,11 +291,7 @@ with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifi
 \end{figure}
 \begin{figure}[ht]
 \includegraphics[scale=0.45]{SimpleIRexample_difflags.eps}
-\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.  The autocorrelation of $\mathbf{X}$, i.e.\ $a_x$, is shown in red for reference.}
-\end{figure}
-\begin{figure}[ht]
-\includegraphics[scale=0.45]{SimpleIRexample_lagcorr.eps}
-\caption{(Color available online.) Lagged cross correlations for reference.}
+\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
 \end{figure}
 
 \subsection{Cyclic Linear Example}
@@ -232,13 +312,8 @@ with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifi
 \end{figure}
 \begin{figure}[ht]
 \includegraphics[scale=0.45]{SimpleCyclicexample_difflags.eps}
-\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.  The autocorrelation of $\mathbf{X}$ and $\mathbf{Y}$, i.e.\ $a_x$ and $a_y$, is shown in red and green for reference.}
+\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
 \end{figure}
-\begin{figure}[ht]
-\includegraphics[scale=0.45]{SimpleCyclicexample_lagcorr.eps}
-\caption{(Color available online.) Lagged cross correlations for reference.}
-\end{figure}
-
 
 \subsection{Non-Linear Example}
 Consider the non-linear dynamical system of
@@ -247,7 +322,36 @@ Consider the non-linear dynamical system of
 X_t &=& \sin(t)\\
 Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 \end{eqnarray}
-with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.  
+with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.
+\begin{figure*}[ht]
+\begin{tabular}{cccc}
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A20B20.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A20B45.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A20B70.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A20B100.eps} \\
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B20.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B45.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B70.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B100.eps} \\
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A70B20.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A70B45.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A70B70.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A70B100.eps} \\
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B20.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B45.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B70.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B100.eps} \\
+\end{tabular}
+\caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance for values of $A$ and $B$.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
+\end{figure*}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{NonlinearCyclicexample_Bxytol.eps}
+\caption{(Color available online.) The leaning agrees with intuition for most noise levels when the y-tolerance is set to the noise level (i.e.\ $B=\delta_y$).}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{NonlinearCyclicexample_difflags.eps}
+\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
+\end{figure}  
 
 \subsection{RL Circuit Example}
 \label{sec:rlcirc}
