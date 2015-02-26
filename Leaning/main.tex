@@ -107,7 +107,7 @@ Given $\bar{\mathbf{T}}$, one possible penchant that can be defined using the 1-
 \rho_{y_{t}=1,x_{t-1}=1} &=& \kappa \left(1+\frac{P\left(x_{t-1} = 1\right)}{1-P\left(x_{t-1} = 1\right)}\right)\\
 & & -\frac{P\left(y_{t} = 1\right)}{1-P\left(x_{t-1} = 1\right)}\;\;,
 \end{eqnarray*}
-with $\kappa = P\left( y_t = 1 | x_{t-1} = 1\right)$.  Another penchant defined using this assignment would be the cooresponding term with $\kappa = P\left( y_t = 0 | x_{t-1} = 0\right)$.  These two penchants are called the {\em observed} penchants because $\kappa$ can be found directly from the time series data.  
+with $\kappa = P\left( y_t = 1 | x_{t-1} = 1\right)$.  Another penchant defined using this assignment would be the corresponding term with $\kappa = P\left( y_t = 0 | x_{t-1} = 0\right)$.  These two penchants are called the {\em observed} penchants because $\kappa$ can be found directly from the time series data.  
 
 Equations for the unobserved penchants corresponding to $\kappa = P\left( y_t = 0 | x_{t-1} = 1\right)$ and $\kappa = P\left( y_t = 1 | x_{t-1} = 0\right)$ can be written down.  These penchants are defined, but in both cases $\kappa=0\Rightarrow \rho_{y_{t}x_{t-1}} < 0$.  Thus unobserved penchants imply the effect, $y_t = 0$ or $1$ (for this toy model) is most likely not caused by the postulated cause, $x_{t-1} = 1$ or $0$, respectively.  Using these unobserved penchants to define leanings becomes a comparison of how unlikely postulated causes are to cause given effects.  Such comparisons are not as easily interpreted in the intuitive framework of causality, and as such, are not explored as tools for causal inference in this article. 
 
@@ -236,7 +236,7 @@ Conceptually, the weighted mean observed penchant is preferred to the mean pench
 
 For this example, the weighted mean observed leaning provides the same causal inference as the mean observed leaning.  The weighted mean calculation, however, can be made computationally less expensive than the mean calculation, which will be of practical concern for empirical data sets.
 
-\subsection{Noise tolerances}
+\subsection{Tolerance Domains}
 If the example time series was the expected time series but the data points were measured in the presence of noise, then the result may be the noisy time series pair $\bar{\mathbf{T}}^\prime=\{\mathbf{X}^\prime,\mathbf{Y}^\prime\}$ with
 \begin{eqnarray*}
 \mathbf{X}^\prime &=& \{x_t^\prime\; | \; t\in[0,9]\}\\
@@ -251,9 +251,39 @@ The effects of noise on the leaning calculations can be addressed by using the t
 
 If the tolerances, $\delta_x$ and $\delta_y$, are made large enough, then the noisy system (i.e.\ $\bar{\mathbf{T}}^\prime$) weighted mean observed leaning, $\langle \lambda_{y_t^\prime\pm\delta_y,x_{t-1}^\prime\pm\delta_x} \rangle_w$, can, at least in the simple examples considered here, be made equal to the noiseless system (i.e.\ $\bar{\mathbf{T}}$) weighted mean observed leaning, i.e.\ $\langle \lambda_{y_t^\prime\pm\delta_y,x_{t-1}^\prime\pm\delta_x} \rangle_w = \langle \lambda_{y_t,x_{t-1}} \rangle_w$.
 
-The noise in this example did not affect the causal inference, i.e.\ $\langle \lambda_{y_t^\prime,x_{t-1}^\prime} \rangle_w \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{Y}$ as expected.  However, it will be shown in the following sections that noise in the time series can lead to counterintuative causal inferences.  Thus, the tolerances described here will be used with all leaning calculations with the tolerances set to the estimated (or known if possible) noise levels for the individual time series.
+The noise in this example did not affect the causal inference, i.e.\ $\langle \lambda_{y_t^\prime,x_{t-1}^\prime} \rangle_w \Rightarrow \mathbf{X}^\prime\xrightarrow{lean}\mathbf{Y}^\prime$ as expected.  However, consider the time series pair $\bar{\mathbf{T}}^{\prime\prime}=\{\mathbf{X},\mathbf{Y}^\prime\}$, which is a clean impulse $\mathbf{X}$ with a noisy response $\mathbf{Y}^\prime$. The 1-standard assignment mean observed penchants for $\bar{\mathbf{T}}^{\prime\prime}$ are $\langle \rho_{y_t^\prime=a,x_{t-1}=b} \rangle$ with $\{a,b\} = \{0,0\}$, $\{0,-0.2\}$, $\{0,-0.1\}$, $\{0,-0.1\}$, $\{1,1.2\}$, $\{1,0.9\}$, and $\{1,1\}$, and $\langle \rho_{x_t=c,y_{t-1}^\prime=d} \rangle$ with $\{c,d\} = \{0,0\}$, $\{-0.2,1\}$, $\{0.1,0\}$, $\{1.2,0\}$, $\{0,1\}$, $\{0.9,0\}$, and $\{0,0\}$, which lead to a weighted mean observed leaning of $\langle \lambda_{y_t^\prime,x_{t-1}} \rangle_w \approx -0.05$.  This value implies $\mathbf{Y}^\prime\xrightarrow{lean}\mathbf{X}$, which disagrees with intuition.  The signal $x_{t-1} = 1$ is known to cause the response $y_t=1$, but in the noisy response $x_{t-1}=1$ is observed to precede three different possible effects (i.e.\ $y_t = 1.2$, $0.9$, or $1$).  This effect of the noise in $\mathbf{Y}^\prime$ makes it more difficult to correctly infer how $x_t$ might be related to $y_t$, which is illustrated sharply by the counterintuitive leaning calculation in this example.  These ideas will be explored further in the discussion on stationarity.
+
+It is not always true that a clean impulse and noisy response lead to leanings that disagree with intuition (e.g.\ the pair $\{\mathbf{X},\mathbf{Y}^{\prime\prime} = \{0,0,0,1.2,0,0,0.9,-0.1,0,1\}\}$ has a weighted mean observed leaning of $\langle \lambda_{y_t^{\prime\prime},x_{t-1}} \rangle_w \approx 0.43 \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{Y}^{\prime\prime}$ as expected).  However, the above example of this scenario does leads to leaning calculations that do not agree with intuition, which implies tolerance domains are an important part of using leaning calculations for causal inference.  
+
+It follows that the use of leaning calculations for causal inference depends on an understanding on the noise in the data, which can be troublesome if very little is known about the data sources.  One strategy is to calculate the leanings with several different tolerances, increasing the size of the tolerance domains to the point where the penchants become undefined, and finding the tolerance domains for which the leaning changes sign.  The sizes of these domains can then be compared to suspected noise levels.  This strategy, and others, will be discussed in more detail in the example data sections below.  If the noise level is known, then the task becomes much simpler and the tolerances should just be set to the known (or estimated) noise levels for the individual time series.
 
 \subsection{Stationarity Dependence}
+Both $\mathbf{X}$ and $\mathbf{Y}$ are stationary in the original example time series pair $\bar{\mathbf{T}}$.  Given a time series pair $\bar{\mathbf{\tau}}_{10} = \{\mathbf{X},\mathbf{R} = \{0,0,0,1,1,1,2,2,2,3\}\}$ containing a non-stationary response signal $\mathbf{R}$, the weighted mean observed leaning calculated under the 1-standard assignment with no tolerance domains still leads to a causal inference that agrees with intuition; i.e.\ $\langle \lambda_{r_t,x_{t-1}} \rangle_w \approx 0.11 \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ as expected.  This result, however, depends on the library length of the data.
+
+$\bar{\mathbf{\tau}}_{10}$ is a specific instance of the following time series pair:
+\begin{eqnarray}
+\bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{R}\right\} = \left\{\{x_t\},\{r_t\}\right\}
+\end{eqnarray}
+where $t\in[0,L]$,
+\begin{equation}
+x_t = \left\{
+  \begin{array}{lr}
+    0 & \forall\; t\in\{t\;|\;t\bmod 3 \neq 0\}\\
+    1 & \forall\; t\in\{t\;|\;t\bmod 3 = 0\}
+  \end{array}
+\right.
+\end{equation}
+and
+\begin{equation}
+r_t = x_{t-1}+r_{t-1}
+\end{equation}
+with $r_0 = 0$.  The weighted mean observed leaning, under the 1-standard assignment with no tolerance domains, for $\bar{\mathbf{\tau}}_L$ depends on $L$.  As $L$ is increased, the leaning calculation will eventually lead to causal inferences that do not agree with intuition; e.g.\ $L = 20 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx 1.8\times10^{-3} \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ and $L = 50 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx -2.5\times10^{-3} \Rightarrow \mathbf{R}\xrightarrow{lean}\mathbf{X}$.  This dependence of the causal inference on the library length of the time series was not seen in the stationary data.
+
+As the $L$ is increased, the number of possible observed effects for a given observed cause increases.  Thus, under the 1-standard assignment $\{C,E\} = \{x_{t-1},r_t\}$, $x_{t-1}=1$ precedes three different values, $r_t = 1$, $2$, ans $3$, if $L=10$, but it precedes fifteen different values if $L=50$.  Conceptually, the leaning calculations are methods for counting (in a specific way) the number of times (and ways in which) an observed cause-effect pair appears in the data.  The causal inference becomes more difficult for non-stationary time series pairs because repeated cause-effect pairs in the data are more rare than in the stationary examples.  This effect is very similar to the effect seen when the impulse signal was clean but the response was noisy.  Unfortunately, it cannot be remedied with tolerance domains for the non-stationary case.  For example, for $\bar{\mathbf{\tau}}_L$, the cardinality of the set $\{r_t\;|\;x_{t-1}=1\}\rightarrow\infty$ as $L\rightarrow\infty$, and penchants are not defined given a tolerance domain for $\mathbf{R}$ of $\delta_r=\infty$.
+
+These shortcomings of the weighted mean observed leaning when applied to non-stationary data, however, do not imply that causal inference of non-stationary data cannot be done using a different application of the observed penchants.  For example, replacing the weighted mean calculation in the weighted mean observed leaning calculation with a median calculation leads to a {\em median observed leaning}, $[\lambda_{r_t,x_{t-1}}] \approx 5.3\times 10^{-3}\Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ for $L=50$ as expected, where $[\cdot]$ is used to denote the median.  Of course, even though the median leaning calculation agrees with intuition for a library length where the mean leaning calculation did not, there is no reason to believe the median leaning calculation will not also eventually provide counterintuitive causal inferences as $L$ is increased.  
+
+A more basic strategy to deal with non-stationary data would be to define the observed penchant using a different cause-effect assignment.  For example, the $l$-standard assignment (with $l=1$) used above, i.e.\ $\{C,E\}=\{x_{t-1},r_t\}$, might be replaced with an $l$-AR (autoregressive) assignment with $l=1$ of $\{C,E\}=\{(x_{t-1},r_{t-1}),r_t\}$.  An observed penchant may be calculated with an assumed cause of $(x_{t-1}=1,r_{t-1}=0)$ and an assumed effect of $r_t = 1$.  The algorithms to compute the observed penchants from the data become more complicated as the cause-effect assignment becomes more complicated, but the basic definition of the penchant provides a very general conceptual framework for causal inference.  This work will only use the $l$-standard cause-effect assignment in the examples that follow.
 
 \section{Simple Example Systems}
 
