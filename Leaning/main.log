@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  25 FEB 2015 19:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  11 MAR 2015 20:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -376,16 +376,16 @@ Overfull \hbox (11.1658pt too wide) in paragraph at lines 351--352
 [][] 
  []
 
-[9] [10
+[9] [10] [11
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3115 strings out of 495029
- 46659 string characters out of 6181522
- 109406 words of memory out of 5000000
- 6282 multiletter control sequences out of 15000+600000
+ 3117 strings out of 495029
+ 46682 string characters out of 6181522
+ 113406 words of memory out of 5000000
+ 6284 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,12n,42p,1517b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (10 pages, 48412 bytes).
+Output written on main.dvi (11 pages, 51780 bytes).
