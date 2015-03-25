@@ -237,6 +237,7 @@ Conceptually, the weighted mean observed penchant is preferred to the mean pench
 For this example, the weighted mean observed leaning provides the same causal inference as the mean observed leaning.  The weighted mean calculation, however, can be made computationally less expensive than the mean calculation, which will be of practical concern for empirical data sets.
 
 \subsection{Tolerance Domains}
+\label{sec:tol}
 If the example time series was the expected time series but the data points were measured in the presence of noise, then the result may be the noisy time series pair $\bar{\mathbf{T}}^\prime=\{\mathbf{X}^\prime,\mathbf{Y}^\prime\}$ with
 \begin{eqnarray*}
 \mathbf{X}^\prime &=& \{x_t^\prime\; | \; t\in[0,9]\}\\
@@ -251,9 +252,11 @@ The effects of noise on the leaning calculations can be addressed by using the t
 
 If the tolerances, $\delta_x$ and $\delta_y$, are made large enough, then the noisy system (i.e.\ $\bar{\mathbf{T}}^\prime$) weighted mean observed leaning, $\langle \lambda_{y_t^\prime\pm\delta_y,x_{t-1}^\prime\pm\delta_x} \rangle_w$, can, at least in the simple examples considered here, be made equal to the noiseless system (i.e.\ $\bar{\mathbf{T}}$) weighted mean observed leaning, i.e.\ $\langle \lambda_{y_t^\prime\pm\delta_y,x_{t-1}^\prime\pm\delta_x} \rangle_w = \langle \lambda_{y_t,x_{t-1}} \rangle_w$.
 
-The noise in this example did not affect the causal inference, i.e.\ $\langle \lambda_{y_t^\prime,x_{t-1}^\prime} \rangle_w \Rightarrow \mathbf{X}^\prime\xrightarrow{lean}\mathbf{Y}^\prime$ as expected.  However, consider the time series pair $\bar{\mathbf{T}}^{\prime\prime}=\{\mathbf{X},\mathbf{Y}^\prime\}$, which is a clean impulse $\mathbf{X}$ with a noisy response $\mathbf{Y}^\prime$. The 1-standard assignment mean observed penchants for $\bar{\mathbf{T}}^{\prime\prime}$ are $\langle \rho_{y_t^\prime=a,x_{t-1}=b} \rangle$ with $\{a,b\} = \{0,0\}$, $\{0,-0.2\}$, $\{0,-0.1\}$, $\{0,-0.1\}$, $\{1,1.2\}$, $\{1,0.9\}$, and $\{1,1\}$, and $\langle \rho_{x_t=c,y_{t-1}^\prime=d} \rangle$ with $\{c,d\} = \{0,0\}$, $\{-0.2,1\}$, $\{0.1,0\}$, $\{1.2,0\}$, $\{0,1\}$, $\{0.9,0\}$, and $\{0,0\}$, which lead to a weighted mean observed leaning of $\langle \lambda_{y_t^\prime,x_{t-1}} \rangle_w \approx -0.05$.  This value implies $\mathbf{Y}^\prime\xrightarrow{lean}\mathbf{X}$, which disagrees with intuition.  The signal $x_{t-1} = 1$ is known to cause the response $y_t=1$, but in the noisy response $x_{t-1}=1$ is observed to precede three different possible effects (i.e.\ $y_t = 1.2$, $0.9$, or $1$).  This effect of the noise in $\mathbf{Y}^\prime$ makes it more difficult to correctly infer how $x_t$ might be related to $y_t$, which is illustrated sharply by the counterintuitive leaning calculation in this example.  These ideas will be explored further in the discussion on stationarity.
+The noise in this example did not affect the causal inference, i.e.\ $\langle \lambda_{y_t^\prime,x_{t-1}^\prime} \rangle_w \Rightarrow \mathbf{X}^\prime\xrightarrow{lean}\mathbf{Y}^\prime$ as expected.  However, consider the time series pair $\bar{\mathbf{T}}^{\prime\prime}=\{\mathbf{X},\mathbf{Y}^\prime\}$, which is a clean impulse $\mathbf{X}$ with a noisy response $\mathbf{Y}^\prime$. The 1-standard assignment mean observed penchants for $\bar{\mathbf{T}}^{\prime\prime}$ are $\langle \rho_{y_t^\prime=a,x_{t-1}=b} \rangle$ with $\{a,b\} = \{0,0\}$, $\{0,-0.2\}$, $\{0,-0.1\}$, $\{0,-0.1\}$, $\{1,1.2\}$, $\{1,0.9\}$, and $\{1,1\}$, and $\langle \rho_{x_t=c,y_{t-1}^\prime=d} \rangle$ with $\{c,d\} = \{0,0\}$, $\{-0.2,1\}$, $\{0.1,0\}$, $\{1.2,0\}$, $\{0,1\}$, $\{0.9,0\}$, and $\{0,0\}$, which lead to a weighted mean observed leaning of $\langle \lambda_{y_t^\prime,x_{t-1}} \rangle_w \approx -0.05$.  This value implies $\mathbf{Y}^\prime\xrightarrow{lean}\mathbf{X}$, which disagrees with intuition.  The signal $x_{t-1} = 1$ is known to cause the response $y_t=1$, but in the noisy response $x_{t-1}=1$ is observed to precede three different possible effects (i.e.\ $y_t = 1.2$, $0.9$, or $1$).  This effect of the noise in $\mathbf{Y}^\prime$ makes it more difficult to correctly infer how $x_t$ might be related to $y_t$, which is illustrated sharply by the counterintuitive leaning calculation in this example.  
 
-It is not always true that a clean impulse and noisy response lead to leanings that disagree with intuition (e.g.\ the pair $\{\mathbf{X},\mathbf{Y}^{\prime\prime} = \{0,0,0,1.2,0,0,0.9,-0.1,0,1\}\}$ has a weighted mean observed leaning of $\langle \lambda_{y_t^{\prime\prime},x_{t-1}} \rangle_w \approx 0.43 \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{Y}^{\prime\prime}$ as expected).  However, the above example of this scenario does leads to leaning calculations that do not agree with intuition, which implies tolerance domains are an important part of using leaning calculations for causal inference.  
+It is not always true that a clean impulse and noisy response lead to leanings that disagree with intuition (e.g.\ the pair $\{\mathbf{X},\mathbf{Y}^{\prime\prime} = \{0,0,0,1.2,0,0,0.9,-0.1,0,1\}\}$ has a weighted mean observed leaning of $\langle \lambda_{y_t^{\prime\prime},x_{t-1}} \rangle_w \approx 0.43 \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{Y}^{\prime\prime}$ as expected).  However, tolerance domains are an important part of using leaning calculations for causal inference.  
+
+Tolerance domains, however, can be set too large.  If the tolerance domain is large enough to encompass every point in the time series, then the probability of the assumed cause becomes one, which leads to undefined penchants.  For example, given the symmetric definition of the tolerance domain used in this section, $\delta_x = 2$ implies $P(x_{t-1} = 1\pm\delta_x) = 1$, which implies $\langle \lambda_{y_t^\prime,x_{t-1}} \rangle_w$ is undefined.
 
 It follows that the use of leaning calculations for causal inference depends on an understanding on the noise in the data, which can be troublesome if very little is known about the data sources.  One strategy is to calculate the leanings with several different tolerances, increasing the size of the tolerance domains to the point where the penchants become undefined, and finding the tolerance domains for which the leaning changes sign.  The sizes of these domains can then be compared to suspected noise levels.  This strategy, and others, will be discussed in more detail in the example data sections below.  If the noise level is known, then the task becomes much simpler and the tolerances should just be set to the known (or estimated) noise levels for the individual time series.
 
@@ -277,37 +280,52 @@ and
 \begin{equation}
 r_t = x_{t-1}+r_{t-1}
 \end{equation}
-with $r_0 = 0$.  The weighted mean observed leaning, under the 1-standard assignment with no tolerance domains, for $\bar{\mathbf{\tau}}_L$ depends on $L$.  As $L$ is increased, the leaning calculation will eventually lead to causal inferences that do not agree with intuition; e.g.\ $L = 20 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx 1.8\times10^{-3} \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ and $L = 50 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx -2.5\times10^{-3} \Rightarrow \mathbf{R}\xrightarrow{lean}\mathbf{X}$.  This dependence of the causal inference on the library length of the time series was not seen in the stationary data.
+with $r_0 = 0$.  The weighted mean observed leaning, under the 1-standard assignment with no tolerance domains, for $\bar{\mathbf{\tau}}_L$ depends on $L$.  As $L$ is increased, the leaning calculation will eventually lead to causal inferences that do not agree with intuition; e.g.\ $L = 20 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx 1.8\times10^{-3} \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ and $L = 50 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx -2.5\times10^{-3} \Rightarrow \mathbf{R}\xrightarrow{lean}\mathbf{X}$.  
 
-As the $L$ is increased, the number of possible observed effects for a given observed cause increases.  Thus, under the 1-standard assignment $\{C,E\} = \{x_{t-1},r_t\}$, $x_{t-1}=1$ precedes three different values, $r_t = 1$, $2$, ans $3$, if $L=10$, but it precedes fifteen different values if $L=50$.  Conceptually, the leaning calculations are methods for counting (in a specific way) the number of times (and ways in which) an observed cause-effect pair appears in the data.  The causal inference becomes more difficult for non-stationary time series pairs because repeated cause-effect pairs in the data are more rare than in the stationary examples.  This effect is very similar to the effect seen when the impulse signal was clean but the response was noisy.  Unfortunately, it cannot be remedied with tolerance domains for the non-stationary case.  For example, for $\bar{\mathbf{\tau}}_L$, the cardinality of the set $\{r_t\;|\;x_{t-1}=1\}\rightarrow\infty$ as $L\rightarrow\infty$, and penchants are not defined given a tolerance domain for $\mathbf{R}$ of $\delta_r=\infty$.
+As the $L$ is increased, the number of possible observed effects for a given observed cause increases.  Thus, under the 1-standard assignment $\{C,E\} = \{x_{t-1},r_t\}$, $x_{t-1}=1$ precedes three different values, $r_t = 1$, $2$, ans $3$, if $L=10$, but it precedes fifteen different values if $L=50$.  Conceptually, the leaning calculations are methods for counting (in a specific way) the number of times (and ways in which) an observed cause-effect pair appears in the data.  The causal inference becomes more difficult for non-stationary time series pairs because repeated cause-effect pairs in the data may be more rare than in the cyclic stationary examples.  This effect is very similar to the effect seen when the impulse signal was clean but the response was noisy.  Unfortunately, it cannot be remedied with tolerance domains for the non-stationary case.  For example, for $\bar{\mathbf{\tau}}_L$, the cardinality of the set $\{r_t\;|\;x_{t-1}=1\}\rightarrow\infty$ as $L\rightarrow\infty$, and penchants are not defined given a tolerance domain for $\mathbf{R}$ of $\delta_r=\infty$.
 
 These shortcomings of the weighted mean observed leaning when applied to non-stationary data, however, do not imply that causal inference of non-stationary data cannot be done using a different application of the observed penchants.  For example, replacing the weighted mean calculation in the weighted mean observed leaning calculation with a median calculation leads to a {\em median observed leaning}, $[\lambda_{r_t,x_{t-1}}] \approx 5.3\times 10^{-3}\Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ for $L=50$ as expected, where $[\cdot]$ is used to denote the median.  Of course, even though the median leaning calculation agrees with intuition for a library length where the mean leaning calculation did not, there is no reason to believe the median leaning calculation will not also eventually provide counterintuitive causal inferences as $L$ is increased.  
 
 A more basic strategy to deal with non-stationary data would be to define the observed penchant using a different cause-effect assignment.  For example, the $l$-standard assignment (with $l=1$) used above, i.e.\ $\{C,E\}=\{x_{t-1},r_t\}$, might be replaced with an $l$-AR (autoregressive) assignment with $l=1$ of $\{C,E\}=\{(x_{t-1},r_{t-1}),r_t\}$.  An observed penchant may be calculated with an assumed cause of $(x_{t-1}=1,r_{t-1}=0)$ and an assumed effect of $r_t = 1$.  The algorithms to compute the observed penchants from the data become more complicated as the cause-effect assignment becomes more complicated, but the basic definition of the penchant provides a very general conceptual framework for causal inference.  This work will only use the $l$-standard cause-effect assignment in the examples that follow.
 
 \section{Simple Example Systems}
+In this section, the leaning, specifically the weighted mean observed leaning using the $l$-standard cause-effect assignment for various $l$, will be applied to dynamical systems and empirical data sets with known causal relationships.  The usefulness of the leaning as a tool for causal inference is tested directly with empirical and synthetic time series data sets for which there is an intuitive understanding of the driving relationships within the system.
 
 \subsection{Impulse with Noisy Response Linear Example}
 Consider the linear example dynamical system of
 \begin{eqnarray}
-\label{eq:linearex1}
-X_t &=& \{0,2,0,0,2,0,0,2,0,0\}\\
-Y_t &=& X_{t-1}+B\eta_t,
+\bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{Y}\right\} = \left\{\{x_t\},\{y_t\}\right\}
 \end{eqnarray}
-with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
+where $t\in[0,L]$,
+\begin{equation*}
+x_t = \left\{
+  \begin{array}{lr}
+    2 & t = 1\\
+    0 & \forall\; t\in\{t\;|\;t\neq 1 \;\mathrm{and}\; t\bmod 5 \neq 0\}\\
+    2 & \forall\; t\in\{t\;|\;t\bmod 5 = 0\}
+  \end{array}
+\right.
+\end{equation*}
+and
+\begin{equation*}
+y_t = x_{t-1} + B\eta_t
+\end{equation*}
+with $y_0 = 0$, $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,1]$.  The driving system $\mathbf{X}$ is a periodic impulse with a signal amplitude above the maximum noise level of the response system, and the response system $\mathbf{Y}$ is a lagged version of the driving signal with standard Gaussian noise of amplitude $B$ applied at each time step.  
 \begin{figure}[ht]
+\label{fig:IRexChangeL}
 \begin{tabular}{cc}
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart1.eps} &
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart2.eps} \\
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart3.eps} &
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart4.eps}
 \end{tabular}
-\caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance for different library lengths.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
+\caption{(Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf{Y}$, and the library length of the signals.  This synthetic data is used to explore the leaning, so $\mathbf{X}$ and $\mathbf{Y}$ do not have explicit units, from which it follows that both $\delta_y$ and $B$ are unitless.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
-\begin{figure}[ht]
-\includegraphics[scale=0.45]{SimpleIRexample_Bxytol.eps}
-\caption{(Color available online.) The leaning agrees with intuition for most noise levels when the y-tolerance is set to the noise level (i.e.\ $B=\delta_y$).}
-\end{figure}
+
+Figure \ref{fig:IRexChangeL} shows how the weighted mean observed leaning using the 1-standard cause-effect assignment, $\tilde{\lambda}$, changes as the noise amplitude $B$ and tolerance $\delta_y$ in increments of 0.01.  The synthetic data sets $\mathbf{X}$ and $\mathbf{Y}$ are constructed such that intuitively $\mathbf{X}$ drives $\mathbf{Y}$.  Thus, it is expected that $\mathbf{X}\overrightarrow{lean}\mathbf{Y}$ which implies $\tilde{\lambda} > 0$.  Figure \ref{fig:IRexChangeL} shows that this expectation is met except when $\delta_y < B$ even for a short library length of $L=10$.  Examples of undefined penchants due to large tolerance domains, as discussed in section \ref{sec:tol}, are seen as $\delta_y$ is increased in the $L=10$ example.
+
+Figure \ref{fig:IRexChangeL} shows using the strategy of $\delta_y = B$ always leads to causal inferences that agree with intuition for this example.  However, as discussed in section \ref{sec:tol}, knowing $B$ {\em a priori} may be unrealistic with empirical data sets.
+
 \begin{figure}[ht]
 \includegraphics[scale=0.45]{SimpleIRexample_difflags.eps}
 \caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
@@ -366,36 +384,41 @@ Consider the situation where $L=10$ Henries and $R=5$ Ohms are constant.  Physic
 I = \frac{L}{D}e^{-\frac{R}{L}t}+\frac{R}{D}\sin(t)-\frac{L}{D}\cos(t)
 \end{equation}
 with $D = L^2 + R^2$.   
-\begin{table*}
-\begin{tabular}{l|ccccccc|r}
- &0 & $10^{-6}$ & $10^{-5}$ & $10^{-4}$  & $10^{-3}$  & $10^{-2}$  & $10^{-1}$  & $L$ \\
-$2\pi$ &-0.04	& -0.04& -0.04&-0.04 & 0.37 & 0.27 & 20\\
-$4\pi$ &-0.11 & -0.11 & -0.11 & -0.07 & 0.09 &	0.53 & 0.29 & 40 \\
-$6\pi$ &-0.14 & -0.14 & -0.14 & -0.09 & 0.23 &	0.62 & 0.30 & 60\\
-$8\pi$ &-0.13 & -0.13 & -0.09 & 0.09 &	0.38 &	0.67 & 0.31 & 80\\
-$10\pi$ &-0.13 & -0.06 & 0.07 &	0.24 &	0.46 &	0.70 & 0.31 & 100\\
-$12\pi$ &-0.16 & 0.05 &	0.17 & 0.31 & 0.50 & 0.70 &	0.32 & 120\\
-$14\pi$ &-0.15 & 0.16 &	0.26 & 0.38 & 0.54 & 0.71 &	0.32 & 140\\
-$16\pi$ &-0.19 & 0.20 &	0.29 & 0.40 & 0.54 & 0.68 &	0.31 & 160\\
-$18\pi$ &-0.23 & 0.23 &	0.31 & 0.40 & 0.53 & 0.66 &	0.28 & 180\\
-$20\pi$ &-0.25 & 0.25 &	0.33 & 0.41 & 0.52 & 0.64 &	0.28 & 200
-\end{tabular}
-\caption{$T$ down, $\delta_Y$ across ($\Delta t=\pi/10$)}
-\end{table*}
-\begin{table*}
-\begin{tabular}{l|ccccccc|r}
- &0 & $10^{-6}$ & $10^{-5}$ & $10^{-4}$  & $10^{-3}$  & $10^{-2}$  & $10^{-1}$  & $L$ \\
-$\pi$ & 0 & 0 & 0 & 0 & 0 & 0 & NaN & 3 \\ 
-$\pi/2$ & 0 & 0 & 0 & 0 & 0 & 0 & NaN & 5 \\
-$\pi/4$ & 0 & 0 & 0 & 0 & 0 & -0.035 & 0.27 & 8 \\ 
-$\pi/10$ & -0.04 & -0.04 & -0.04 & -0.04 & 0 & 0.37 & 0.27 & 20 \\
-$\pi/50$ & -0.07 & -0.07 & -0.05 & -0.00 & 0.24 & 0.71 & NaN & 100 \\
-$\pi/100$ & -0.08 & -0.08 & -0.06 & 0.02 & 0.39 & 0.75 & NaN & 200 \\
-$\pi/1000$ & -0.11 & -0.10 & -0.01 & 0.39 & 0.81 & 0.77 & NaN & 2000 \\
-$\pi/10000$ & -0.11 & -0.010 & 0.39 & 0.83 & 0.86 & 0.78 & NaN & 20000
-\end{tabular}
-\caption{$\Delta T$ down, $\delta_Y$ across ($T=2\pi$)}
-\end{table*}
+
+
+\subsection{Impulse with Multiple Noisy Responses Example}
+\begin{eqnarray}
+\bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{Y},\mathbf{Z}\right\} = \left\{\{x_t\},\{y_t\},\{z_t\}\right\}
+\end{eqnarray}
+where $t\in[0,L]$,
+\begin{equation*}
+x_t = \left\{
+  \begin{array}{lr}
+    2 & t = 1\\
+    0 & \forall\; t\in\{t\;|\;t\neq 1 \;\mathrm{and}\; t\bmod 5 \neq 0\}\\
+    2 & \forall\; t\in\{t\;|\;t\bmod 5 = 0\}
+  \end{array}
+\right.
+\end{equation*}
+\begin{eqnarray*}
+y_t &=& x_{t-1} + B\eta_t\\
+z_t &=& y_{t-1}\\
+z_t^\prime &=& y_{t-1} + y_t = y_{t-1} + x_{t-1} + B\eta_t\\
+z_t^{\prime\prime} &=& y_{t-1} + x_{t-1} + z_{t-1}
+\end{eqnarray*}
+with $y_0 = 0$, $B\in\mathbb{R}\ge 0$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, and $L=500$.
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{XYZIRexample_Bxytol.eps}
+\caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}\right\}$}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandY.eps}
+\caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^\prime\right\}$}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandYandZ.eps}
+\caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^{\prime\prime}\right\}$}
+\end{figure}
 
 \section{Empirical Data}
 

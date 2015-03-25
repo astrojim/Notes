@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  11 MAR 2015 20:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  25 MAR 2015 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -267,57 +267,57 @@ Overfull \hbox (4.81694pt too wide) in alignment at lines 220--225
  []
 
 
-Overfull \hbox (2.65732pt too wide) in alignment at lines 241--246
+Overfull \hbox (2.65732pt too wide) in alignment at lines 242--247
  [][][] []
  []
 
 [5]
-Underfull \hbox (badness 1107) in paragraph at lines 252--253
+Underfull \hbox (badness 1107) in paragraph at lines 253--254
 []\OT1/cmr/m/n/10.95 If the tol-er-ances, $\OML/cmm/m/it/10.95 ^^N[]$ \OT1/cmr/
 m/n/10.95 and $\OML/cmm/m/it/10.95 ^^N[]$\OT1/cmr/m/n/10.95 , are made
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 \OT1/cmr/m/n/10.95 large enough, then the noisy sys-tem
  []
 
 
-Underfull \hbox (badness 6428) in paragraph at lines 252--253
+Underfull \hbox (badness 6428) in paragraph at lines 253--254
 \OT1/cmr/m/n/10.95 (i.e. $[]$) weighted mean ob-served lean-
  []
 
 
-Underfull \hbox (badness 6445) in paragraph at lines 252--253
+Underfull \hbox (badness 6445) in paragraph at lines 253--254
 \OT1/cmr/m/n/10.95 ing, $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 ^^U[]\OMS/cms
 y/m/n/10.95 i[]$\OT1/cmr/m/n/10.95 , can, at least in
  []
 
 
-Underfull \hbox (badness 2809) in paragraph at lines 252--253
+Underfull \hbox (badness 2809) in paragraph at lines 253--254
 \OT1/cmr/m/n/10.95 the sim-ple ex-am-ples con-sid-ered here, be
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 252--253
+Underfull \hbox (badness 2512) in paragraph at lines 253--254
 \OT1/cmr/m/n/10.95 made equal to the noise-less sys-tem (i.e.
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 252--253
+Underfull \hbox (badness 2961) in paragraph at lines 253--254
 []$\OT1/cmr/m/n/10.95 ) weighted mean ob-served lean-ing, i.e.
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1158) has occurred while \output is active []
 
  [6]
-Underfull \hbox (badness 6428) in paragraph at lines 284--285
+Underfull \hbox (badness 6428) in paragraph at lines 287--288
 \OT1/cmr/m/n/10.95 ob-served lean-ing when ap-plied to non-
  []
 
 [7]
-Underfull \hbox (badness 1163) in paragraph at lines 290--290
+Underfull \hbox (badness 1163) in paragraph at lines 294--294
 []\OT1/cmr/bx/n/12 Impulse with Noisy Re-sponse
  []
 
@@ -330,33 +330,55 @@ File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
 <SimpleIRexample_diffLpart3.eps>
 File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
  <SimpleIRexample_diffLpart4.eps>
-Overfull \hbox (10.17609pt too wide) in paragraph at lines 299--305
+Overfull \hbox (10.17609pt too wide) in paragraph at lines 316--322
 [][] 
  []
 
-File: SimpleIRexample_Bxytol.eps Graphic file (type eps)
-<SimpleIRexample_Bxytol.eps>
-Overfull \hbox (11.16579pt too wide) in paragraph at lines 308--309
-[][] 
- []
+
+Package caption Warning: \label without proper \caption on input line 315.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:IRexChangeL' on page 8 undefined on input line 32
+5.
+
+
+Package caption Warning: \label without proper \caption on input line 315.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:IRexChangeL' on page 8 undefined on input line 32
+5.
+
+
+Package caption Warning: \label without proper \caption on input line 315.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:IRexChangeL' on page 8 undefined on input line 32
+7.
 
 File: SimpleIRexample_difflags.eps Graphic file (type eps)
 <SimpleIRexample_difflags.eps>
-Overfull \hbox (6.19727pt too wide) in paragraph at lines 312--313
+Overfull \hbox (6.19727pt too wide) in paragraph at lines 330--331
 [][] 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
 File: SimpleCyclicexample_Bdy.eps Graphic file (type eps)
+
 <SimpleCyclicexample_Bdy.eps>
 File: SimpleCyclicexample_difflags.eps Graphic file (type eps)
  <SimpleCyclicexample_difflags.eps>
-Overfull \hbox (11.1658pt too wide) in paragraph at lines 329--330
+Overfull \hbox (11.1658pt too wide) in paragraph at lines 347--348
 [][] 
  []
 
-[8]
 File: NonlinearCyclicexample_Bdy_A45B70.eps Graphic file (type eps)
- <NonlinearCyclicexample_Bdy_A45B70.eps>
+<NonlinearCyclicexample_Bdy_A45B70.eps>
 File: NonlinearCyclicexample_Bdy_A45B100.eps Graphic file (type eps)
 
 <NonlinearCyclicexample_Bdy_A45B100.eps>
@@ -366,26 +388,49 @@ File: NonlinearCyclicexample_Bdy_A100B70.eps Graphic file (type eps)
 File: NonlinearCyclicexample_Bdy_A100B100.eps Graphic file (type eps)
 
 <NonlinearCyclicexample_Bdy_A100B100.eps>
-Overfull \hbox (4.75577pt too wide) in paragraph at lines 342--348
+Overfull \hbox (4.75577pt too wide) in paragraph at lines 360--366
 [][] 
  []
 
 File: NonlinearCyclicexample_difflags.eps Graphic file (type eps)
 <NonlinearCyclicexample_difflags.eps>
-Overfull \hbox (11.1658pt too wide) in paragraph at lines 351--352
+Overfull \hbox (11.1658pt too wide) in paragraph at lines 369--370
 [][] 
  []
 
-[9] [10] [11
+[9]
+File: XYZIRexample_Bxytol.eps Graphic file (type eps)
+ <XYZIRexample_Bxytol.eps>
+Overfull \hbox (11.16579pt too wide) in paragraph at lines 411--412
+[][] 
+ []
 
-] (./main.aux) ) 
+File: XYZIRexample_BxytolZXandY.eps Graphic file (type eps)
+<XYZIRexample_BxytolZXandY.eps>
+Overfull \hbox (7.10063pt too wide) in paragraph at lines 415--416
+[][] 
+ []
+
+File: XYZIRexample_BxytolZXandYandZ.eps Graphic file (type eps)
+<XYZIRexample_BxytolZXandYandZ.eps>
+Overfull \hbox (11.16579pt too wide) in paragraph at lines 419--420
+[][] 
+ []
+
+[10] [11
+
+] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3117 strings out of 495029
- 46682 string characters out of 6181522
- 113406 words of memory out of 5000000
- 6284 multiletter control sequences out of 15000+600000
+ 3120 strings out of 495029
+ 46789 string characters out of 6181522
+ 108406 words of memory out of 5000000
+ 6285 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,12n,42p,1517b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,14n,42p,1444b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (11 pages, 51780 bytes).
+Output written on main.dvi (11 pages, 53100 bytes).
