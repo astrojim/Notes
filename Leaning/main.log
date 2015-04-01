@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  31 MAR 2015 20:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  1 APR 2015 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,7 +393,7 @@ File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
 <SimpleIRexample_diffLpart3.eps>
 File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
  <SimpleIRexample_diffLpart4.eps>
-Overfull \hbox (10.17609pt too wide) in paragraph at lines 320--326
+Overfull \hbox (10.17609pt too wide) in paragraph at lines 321--327
 [][] 
  []
 
@@ -403,12 +403,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3117 strings out of 495029
- 46295 string characters out of 6181522
+ 3118 strings out of 495029
+ 46306 string characters out of 6181522
  108406 words of memory out of 5000000
- 6293 multiletter control sequences out of 15000+600000
+ 6294 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,12n,42p,1444b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (12 pages, 58848 bytes).
+Output written on main.dvi (12 pages, 62316 bytes).

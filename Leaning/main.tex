@@ -20,7 +20,7 @@
 \date{\today}
 
 \begin{abstract}
-...TBD...
+Many scientific disciplines rely on observational data alone.  For example, there is no current technology that can control the interaction between the solar wind and the Earth's magnetic field, so space weather studies rely on data collected without performing controlled experiments (i.e.\ without interventions to the system dynamics).  Unfortunately, causal inference with such observational data sets is difficult.  It is well known that correlation does not imply causation, which has lead to the development of several different time series causality tools.  In this article, we introduce new tools for exploratory causal inference of a pair of time series data sets that are believed to be causally related.  The tools, called penchants and leanings, do not depend on any assumed models for the times series, do not rely on any embedding procedures, are computationally straightforward to apply, and follow directly from assumptions of probabilistic causality, which may provide a clearer interpretation of the results than other existing time series causality tools.
 \end{abstract}
 
 %\pacs{}
@@ -287,7 +287,7 @@ r_t = x_{t-1}+r_{t-1}
 \end{equation}
 with $r_0 = 0$.  The weighted mean observed leaning, under the 1-standard assignment with no tolerance domains, for $\bar{\mathbf{\tau}}_L$ depends on $L$.  As $L$ is increased, the leaning calculation will eventually lead to causal inferences that do not agree with intuition; e.g.\ $L = 20 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx 1.8\times10^{-3} \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ and $L = 50 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx -2.5\times10^{-3} \Rightarrow \mathbf{R}\xrightarrow{lean}\mathbf{X}$.  
 
-As the $L$ is increased, the number of possible observed effects for a given observed cause increases.  Thus, under the 1-standard assignment $\{C,E\} = \{x_{t-1},r_t\}$, $x_{t-1}=1$ precedes three different values, $r_t = 1$, $2$, ans $3$, if $L=10$, but it precedes fifteen different values if $L=50$.  Conceptually, the leaning calculations are methods for counting (in a specific way) the number of times (and ways in which) an observed cause-effect pair appears in the data.  The causal inference becomes more difficult for non-stationary time series pairs because repeated cause-effect pairs in the data may be more rare than in the cyclic stationary examples.  This effect is very similar to the effect seen when the impulse signal was clean but the response was noisy.  Unfortunately, it cannot be remedied with tolerance domains for the non-stationary case.  For example, for $\bar{\mathbf{\tau}}_L$, the cardinality of the set $\{r_t\;|\;x_{t-1}=1\}\rightarrow\infty$ as $L\rightarrow\infty$, and penchants are not defined given a tolerance domain for $\mathbf{R}$ of $\delta_r=\infty$.
+As the $L$ is increased, the number of possible observed effects for a given observed cause increases.  Thus, under the 1-standard assignment $\{C,E\} = \{x_{t-1},r_t\}$, $x_{t-1}=1$ precedes three different values, $r_t = 1$, $2$, ans $3$, if $L=10$, but it precedes fifteen different values if $L=50$.  The leaning calculations are methods for counting (in a specific way) the number of times (and ways in which) an observed cause-effect pair appears in the data.  The causal inference becomes more difficult for non-stationary time series pairs because repeated cause-effect pairs in the data may be more rare than in the cyclic stationary examples.  This effect is very similar to the effect seen when the impulse signal was clean but the response was noisy.  Unfortunately, it cannot be remedied with tolerance domains for the non-stationary case.  For example, for $\bar{\mathbf{\tau}}_L$, the cardinality of the set $\{r_t\;|\;x_{t-1}=1\}\rightarrow\infty$ as $L\rightarrow\infty$, and penchants are not defined given a tolerance domain for $\mathbf{R}$ of $\delta_r=\infty$.
 
 These shortcomings of the weighted mean observed leaning when applied to non-stationary data, however, do not imply that causal inference of non-stationary data cannot be done using a different application of the observed penchants.  For example, replacing the weighted mean calculation in the weighted mean observed leaning calculation with a median calculation leads to a {\em median observed leaning}, $[\lambda_{r_t,x_{t-1}}] \approx 5.3\times 10^{-3}\Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ for $L=50$ as expected, where $[\cdot]$ is used to denote the median.  Of course, even though the median leaning calculation agrees with intuition for a library length where the mean leaning calculation did not, there is no reason to believe the median leaning calculation will not also eventually provide counterintuitive causal inferences as $L$ is increased.  
 
@@ -299,6 +299,7 @@ In this section, the leaning, specifically the weighted mean observed leaning us
 \subsection{Impulse with Noisy Response Linear Example}
 Consider the linear example dynamical system of
 \begin{eqnarray}
+\label{eqn:IReqn}
 \bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{Y}\right\} = \left\{\{x_t\},\{y_t\}\right\}
 \end{eqnarray}
 where $t\in[0,L]$,
@@ -323,7 +324,7 @@ with $y_0 = 0$, $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart3.eps} &
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart4.eps}
 \end{tabular}
-\caption{(Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf{Y}$, and the library length of the signals.  This synthetic data is used to explore the leaning, so $\mathbf{X}$ and $\mathbf{Y}$ do not have explicit units, from which it follows that both $\delta_y$ and $B$ are unitless.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
+\caption{(Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf{Y}$, and the library length of the signals.  This synthetic data is used to explore the leaning, so $\mathbf{X}$ and $\mathbf{Y}$ do not have explicit units, from which it follows that both $\delta_y$ and $B$ are unitless.  The red dashed line is the zero contour.  See the text for an explanation of the missing data for large $\delta_y$.}
 \label{fig:IRexChangeL}
 \end{figure}
 
@@ -332,29 +333,26 @@ Figure \ref{fig:IRexChangeL} shows how the weighted mean observed leaning using 
 Figure \ref{fig:IRexChangeL} shows using the strategy of $\delta_y = B$ always leads to causal inferences that agree with intuition for $L>10$ in this example.  However, as discussed in section \ref{sec:tol}, knowing $B$ {\em a priori} may be unrealistic with empirical data sets.  Consider the following three methods for estimating $\delta_y$ from the data:
 \begin{enumerate}
 \item {\em lagged linear response deviation} - The y-tolerance is set to the mean absolute deviation of $y_t$ from $x_{t-1}$; i.e.\ $\delta_y = \langle|y_t-x_{t-1}|\rangle$.
-\item {\em normalized standard deviation} - The y-tolerance is set to the standard deviation of $\{\mathbf{Y}-\langle\mathbf{Y}\rangle\}$ where $\langle\mathbf{Y}\rangle$ is the mean of $\mathbf{Y}$; i.e.\ $\delta_y = \sigma_{|y-\langle y\rangle|}$.
-\item {\em n-bin mean standard deviation} - The y-tolerance is set to the mean standard deviation of $n$ bins of $\mathbf{Y}$; i.e.\ $\delta_y = \langle \sigma_{B_i}\rangle$ where $B_i$ is the $i$th bin of an $n$-bin histogram of $\mathbf{Y}$.
+\item {\em normalized standard deviation} - The y-tolerance is set to the standard deviation of $\{|\mathbf{Y}-\langle\mathbf{Y}\rangle|\}$ where $\langle\mathbf{Y}\rangle$ is the mean of $\mathbf{Y}$; i.e.\ $\delta_y = \sigma_{|y_t-\langle y_t\rangle|}$.
+\item {\em n-bin mean standard deviation} - The y-tolerance is set to the mean standard deviation of $n$ bins of $\mathbf{Y}$; i.e.\ $\delta_y = \langle \sigma_{B_i}\rangle$ where $B_i$ is the $i$th bin of an $n$-bin histogram of $\mathbf{Y}$.    
 \end{enumerate}  
-
-$L=100$, $B=0.5$, and $n=5$
+Table \ref{tab:IRlagTolComp} shows $\tilde{\lambda}$ for instances of Eqn.\ \ref{eqn:IReqn} with $B = 0$, $0.1$, $0.5$, and $0.8$ given $L=100$, and $n=5$ in method 3 listed above.
 \begin{table}
 \begin{tabular}{lccc}
-lag & method 1 & method 2 & method 3\\
+$B$ & method 1 & method 2 & method 3\\
 \hline
-1 & 0.39 & 0.79 & 0.18\\
-2 & -0.03 & -8.0\times 10^{-5} & -0.05\\
-3 & -0.38 & -0.58 & -0.33 \\
-4 & -0.04 & 0 & -0.04 \\
-5 &  
+0.0 & 1.0 & 1.0 & 1.0\\
+0.1 & 0.40 & 1.0 & 0.48\\
+0.5 & 0.39 & 0.79 & 0.26\\
+0.8 & 0.30 & 0.44 & 0.10\\
 \end{tabular}
-\caption{TBD}
+\caption{$\tilde{\lambda}$ using three different estimation methods for $\delta_y$.}
 \label{tab:IRlagTolComp}
 \end{table}
 
-\begin{figure}[ht]
-%\includegraphics[scale=0.45]{SimpleIRexample_difflags.eps}
-\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
-\end{figure}
+The three different methods yield different values for the leaning, but all the methods lead to the same causal inference, $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$, which agrees with intuition for this example.  These methods are meant to be examples of using the data to set $\delta_y$ if $B$ is not known.  These methods are not expected to be reasonable estimates for $\delta_x$ and $\delta_y$ in general.  For example, method 1 assumes a linear relationship between $\mathbf{X}$ and $\mathbf{Y}$ that may be unreasonable to assume in general.  However, Table \ref{tab:IRlagTolComp} shows different methods for setting $\delta_y$ can lead to the same causal inference.  Setting the tolerances requires an understanding of the noise in the times series data.  The leaning is meant to be part of an exploratory causal analysis of the time series data and cannot exist independently of other exploratory analysis of the data, including noise level analysis.  
+
+This linear impulse response example has only included calculations of leaning using the 1-standard assignment.  The 1-standard assignment is expected to be useful for causal inference given Eqn.\ \ref{eqn:IReqn}.  However, deciding which $l$-standard assignment to use given empirical, rather than synthetic, data sets may be more difficult.  This question will be explored in the next example.
 
 \subsection{Cyclic Linear Example}
 Consider the linear example dynamical system of
