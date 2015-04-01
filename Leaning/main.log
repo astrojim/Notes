@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  25 MAR 2015 19:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  31 MAR 2015 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -217,107 +217,170 @@ LaTeX Font Info:    ... okay on input line 12.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (3.42897pt too wide) in alignment at lines 57--60
- [][][] []
- []
 
 [1
 
 
-] [2]
-Underfull \hbox (badness 6078) in paragraph at lines 109--111
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Citation `Granger1980' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `liu2012' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Roberts1985' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Schreiber2000' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `granger1969' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Sugihara2012' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `box2013' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `pascual2014' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Kaminski2001' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `dufour1998' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `dufour2006' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `mosedale2006' on page 2 undefined on input line 30.
+
+
+Underfull \vbox (badness 2970) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `Pearl' on page 2 undefined on input line 42.
+
+
+LaTeX Warning: Citation `Bunge' on page 2 undefined on input line 42.
+
+
+LaTeX Warning: Citation `Suppes' on page 2 undefined on input line 42.
+
+[2
+
+]
+Overfull \hbox (3.42897pt too wide) in alignment at lines 60--63
+ [][][] []
+ []
+
+
+LaTeX Warning: Citation `Sugihara' on page 3 undefined on input line 71.
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 73--74
+[]\OT1/cmr/m/n/10.95 Assuming $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cm
+m/m/it/10.95 E\OT1/cmr/m/n/10.95 )$ and $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 )$ can be es-ti-
+ []
+
+[3]
+Underfull \vbox (badness 1960) has occurred while \output is active []
+
+ [4]
+Underfull \hbox (badness 6078) in paragraph at lines 114--116
 \OT1/cmr/m/n/10.95 be the cor-re-spond-ing term with $\OML/cmm/m/it/10.95 ^^T \
 OT1/cmr/m/n/10.95 =
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 121--122
+Underfull \hbox (badness 2932) in paragraph at lines 126--127
 \OT1/cmr/m/n/10.95 this pen-chant cal-cu-la-tion us-ing fre-quency
  []
 
-[3]
-Underfull \hbox (badness 3758) in paragraph at lines 178--179
+[5]
+Underfull \hbox (badness 3758) in paragraph at lines 183--184
 \OT1/cmr/m/n/10.95 The \OT1/cmr/m/it/10.95 un-ob-served \OT1/cmr/m/n/10.95 pen-
 chants (us-ing the 1-
  []
 
 
-Underfull \hbox (badness 4156) in paragraph at lines 201--201
+Underfull \hbox (badness 4156) in paragraph at lines 206--206
 []\OT1/cmr/bx/n/12 Cause-effect as-sign-ment in-de-
  []
 
-[4]
-Overfull \hbox (4.81694pt too wide) in alignment at lines 214--218
+[6]
+Overfull \hbox (4.81694pt too wide) in alignment at lines 219--223
  [][][] []
  []
 
 
-Overfull \hbox (4.81694pt too wide) in alignment at lines 220--225
+Overfull \hbox (4.81694pt too wide) in alignment at lines 225--230
  [][][] []
  []
 
 
-Overfull \hbox (2.65732pt too wide) in alignment at lines 242--247
+Overfull \hbox (2.65732pt too wide) in alignment at lines 247--252
  [][][] []
  []
 
-[5]
-Underfull \hbox (badness 1107) in paragraph at lines 253--254
+[7]
+Underfull \hbox (badness 1107) in paragraph at lines 258--259
 []\OT1/cmr/m/n/10.95 If the tol-er-ances, $\OML/cmm/m/it/10.95 ^^N[]$ \OT1/cmr/
 m/n/10.95 and $\OML/cmm/m/it/10.95 ^^N[]$\OT1/cmr/m/n/10.95 , are made
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 \OT1/cmr/m/n/10.95 large enough, then the noisy sys-tem
  []
 
 
-Underfull \hbox (badness 6428) in paragraph at lines 253--254
+Underfull \hbox (badness 6428) in paragraph at lines 258--259
 \OT1/cmr/m/n/10.95 (i.e. $[]$) weighted mean ob-served lean-
  []
 
 
-Underfull \hbox (badness 6445) in paragraph at lines 253--254
+Underfull \hbox (badness 6445) in paragraph at lines 258--259
 \OT1/cmr/m/n/10.95 ing, $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 ^^U[]\OMS/cms
 y/m/n/10.95 i[]$\OT1/cmr/m/n/10.95 , can, at least in
  []
 
 
-Underfull \hbox (badness 2809) in paragraph at lines 253--254
+Underfull \hbox (badness 2809) in paragraph at lines 258--259
 \OT1/cmr/m/n/10.95 the sim-ple ex-am-ples con-sid-ered here, be
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 253--254
+Underfull \hbox (badness 2512) in paragraph at lines 258--259
 \OT1/cmr/m/n/10.95 made equal to the noise-less sys-tem (i.e.
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 253--254
+Underfull \hbox (badness 2961) in paragraph at lines 258--259
 []$\OT1/cmr/m/n/10.95 ) weighted mean ob-served lean-ing, i.e.
  []
 
-
-Underfull \vbox (badness 1158) has occurred while \output is active []
-
- [6]
-Underfull \hbox (badness 6428) in paragraph at lines 287--288
+[8]
+Underfull \hbox (badness 6428) in paragraph at lines 292--293
 \OT1/cmr/m/n/10.95 ob-served lean-ing when ap-plied to non-
  []
 
-[7]
-Underfull \hbox (badness 1163) in paragraph at lines 294--294
+[9]
+Underfull \hbox (badness 1163) in paragraph at lines 299--299
 []\OT1/cmr/bx/n/12 Impulse with Noisy Re-sponse
  []
 
@@ -330,107 +393,22 @@ File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
 <SimpleIRexample_diffLpart3.eps>
 File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
  <SimpleIRexample_diffLpart4.eps>
-Overfull \hbox (10.17609pt too wide) in paragraph at lines 316--322
+Overfull \hbox (10.17609pt too wide) in paragraph at lines 320--326
 [][] 
  []
 
-
-Package caption Warning: \label without proper \caption on input line 315.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:IRexChangeL' on page 8 undefined on input line 32
-5.
-
-
-Package caption Warning: \label without proper \caption on input line 315.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:IRexChangeL' on page 8 undefined on input line 32
-5.
-
-
-Package caption Warning: \label without proper \caption on input line 315.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:IRexChangeL' on page 8 undefined on input line 32
-7.
-
-File: SimpleIRexample_difflags.eps Graphic file (type eps)
-<SimpleIRexample_difflags.eps>
-Overfull \hbox (6.19727pt too wide) in paragraph at lines 330--331
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-File: SimpleCyclicexample_Bdy.eps Graphic file (type eps)
-
-<SimpleCyclicexample_Bdy.eps>
-File: SimpleCyclicexample_difflags.eps Graphic file (type eps)
- <SimpleCyclicexample_difflags.eps>
-Overfull \hbox (11.1658pt too wide) in paragraph at lines 347--348
-[][] 
- []
-
-File: NonlinearCyclicexample_Bdy_A45B70.eps Graphic file (type eps)
-<NonlinearCyclicexample_Bdy_A45B70.eps>
-File: NonlinearCyclicexample_Bdy_A45B100.eps Graphic file (type eps)
-
-<NonlinearCyclicexample_Bdy_A45B100.eps>
-File: NonlinearCyclicexample_Bdy_A100B70.eps Graphic file (type eps)
-
-<NonlinearCyclicexample_Bdy_A100B70.eps>
-File: NonlinearCyclicexample_Bdy_A100B100.eps Graphic file (type eps)
-
-<NonlinearCyclicexample_Bdy_A100B100.eps>
-Overfull \hbox (4.75577pt too wide) in paragraph at lines 360--366
-[][] 
- []
-
-File: NonlinearCyclicexample_difflags.eps Graphic file (type eps)
-<NonlinearCyclicexample_difflags.eps>
-Overfull \hbox (11.1658pt too wide) in paragraph at lines 369--370
-[][] 
- []
-
-[9]
-File: XYZIRexample_Bxytol.eps Graphic file (type eps)
- <XYZIRexample_Bxytol.eps>
-Overfull \hbox (11.16579pt too wide) in paragraph at lines 411--412
-[][] 
- []
-
-File: XYZIRexample_BxytolZXandY.eps Graphic file (type eps)
-<XYZIRexample_BxytolZXandY.eps>
-Overfull \hbox (7.10063pt too wide) in paragraph at lines 415--416
-[][] 
- []
-
-File: XYZIRexample_BxytolZXandYandZ.eps Graphic file (type eps)
-<XYZIRexample_BxytolZXandYandZ.eps>
-Overfull \hbox (11.16579pt too wide) in paragraph at lines 419--420
-[][] 
- []
-
-[10] [11
-
-] (./main.aux)
+[10] [11] [12] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3120 strings out of 495029
- 46789 string characters out of 6181522
+ 3117 strings out of 495029
+ 46295 string characters out of 6181522
  108406 words of memory out of 5000000
- 6285 multiletter control sequences out of 15000+600000
+ 6293 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,14n,42p,1444b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,42p,1444b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (11 pages, 53100 bytes).
+Output written on main.dvi (12 pages, 58848 bytes).

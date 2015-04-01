@@ -10,7 +10,7 @@
 \usepackage{amssymb}
 
 \begin{document}
-\title{Time Series Leanings}
+\title{Non-parametric casual inference in bivariate time series data}
 \author{James M. McCracken}
 %\email{jmccrac1@masonlive.gmu.edu}
 %\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
@@ -19,14 +19,17 @@
 %\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
 \date{\today}
 
-%\begin{abstract}
-%\end{abstract}
+\begin{abstract}
+...TBD...
+\end{abstract}
 
 %\pacs{}
 \maketitle
 
 \section{Introduction}
-$\ldots$TBD$\ldots$
+Casual inference in time series analysis centers on finding ``driving'' relationships between different time series data sets.  Showing the existence, rather than the exact nature, of the ``driving'' relationship between the sets is often the primary goal.  Thus, words like ``driving'', ``causality'', and related terms usually do not have straightforward analogs to the same terms used in other fields \cite{Granger1980,liu2012,Roberts1985}, e.g.\ , theoretical quantum or classical mechanics.  The development and study of such causal inference techniques is often called {\em time series causality}.  Most of these techniques fall into four broad categories, those related to transfer entropy \cite{Schreiber2000}, those related to Granger causality \cite{granger1969}, those related to state space reconstruction (SSR) techniques \cite{Sugihara2012}, and those related to lagged cross-correlation \cite{box2013,pascual2014}.  These techniques have found application in a wide range of fields including neuroscience (e.g.\ \cite{Kaminski2001}), economics (e.g.\ \cite{dufour1998,dufour2006}), climatology (e.g.\ \cite{mosedale2006}), and others.  
+
+In this article, we introduce another time series causality technique derived directly from the definition of probabilistic causality \cite{}.  The new technique is then applied to synthetic and empirical time series data sets with known, or intuitive, causal structure.  We will discuss the strengths and weaknesses of the technique and try to frame how the technique may be useful for causal inference with empirical data.  Formal relationships to the other well known time series causality techniques, such as Granger causality or transfer entropy, will be the subject of future work.
 
 \section{Causal Penchant}
 Define the {\em causal penchant} as
@@ -34,11 +37,11 @@ Define the {\em causal penchant} as
 \label{eq:pen}
 \rho_{EC} := P\left(E|C\right) - P\left(E|\bar{C}\right)\;\;.
 \end{equation}
-The motivation for this expression is in te interpretation of $\rho_{EC}$ as a causal indicator; i.e.\ if $C$ causes (or {\em drives}) $E$, then $\rho_{EC} > 0$, and if $\rho_{EC} \le 0$, then the direction of causal influence in the system is undetermined.  If the effect $E$ is assumed to be recorded in one time series and the cause $C$ is assumed to be recorded in a different time series, then the direction of causal influence in the system can be determined by comparing various penchants calculated using both time series.  The details of these comparison is discuss in the following sections, but some potential philosophical issues with this definition will be addressed first.
+The motivation for this expression is in te interpretation of $\rho_{EC}$ as a causal indicator; i.e.\ if $C$ causes (or {\em drives}) $E$, then $\rho_{EC} > 0$, and if $\rho_{EC} \le 0$, then the direction of causal influence in the system is undetermined.  If the effect $E$ is assumed to be recorded in one time series and the cause $C$ is assumed to be recorded in a different time series, then the direction of causal influence in the system can be determined by comparing various penchants calculated using both time series.  
 
-$\ldots$ {\em {\bf Add discussion of Pearl argument that $P(E|\bar{C})$ is ''unobservable''.}}
+The penchant definition includes the probability of an assumed effect occurring given a lack of the assumed cause,i.e.\ $P(E|\bar{C})$.  It may be argued that the lack of an assumed cause is unobservable, and thus, the penchant definition is not practically useful.  Pearl, and others, argue that causality depends on intervention, which implies the occurrence probability of the assumed effect should be conditioned on performing or not performing an action rather than on the presence or lack of an assumed cause \cite{Pearl}.  Bunge defines a causal relation as ``a relation among events'' \cite{Bunge}, again implying the lack of an assumed cause cannot be used to find causal relations.  These issues have been a part of probabilistic definitions of causality at least since the 1960s \cite{Suppes}, and we will not attempt to solve them in this article.  Our goal is the define a practical tool for causal inference.  As such, we will circumvent these philosophical issues in the definition of the penchant by deriving an expression that removes any conditioning on a lack of the assumed cause.
 
-Pearl's concerns can be addressed by rewriting Eqn.\ \ref{eq:pen} using the law of total probability, i.e
+Eqn.\ \ref{eq:pen} can be rewritten using the law of total probability, i.e
 \begin{equation}
 \label{eq:totp}
 P(E) = P(E|C)P(C) + P(E|\bar{C})P(\bar{C})\;\;,
@@ -65,7 +68,9 @@ and the second term in Eqn.\ \ref{eq:pen} has been written in terms of the of th
 \end{equation}
 This same expression can be derived without Eqn.\ \ref{eq:bayes} by using Eqn.\ \ref{eq:totp} to make the appropriate substitution for $P(E|\bar{C})$ into Eqn.\ \ref{eq:pen}.  This penchant calculation requires only a single conditional probability be estimated from the data.
 
-The use of either Eqn.\ \ref{eq:totp} or Eqn.\ \ref{eq:bayes} may eliminate the concern that $P(E|\bar{C})$ is fundamentally unobservable.  It may also, however, introduce new philosophical concerns in the definition of the penchant.  For example, $\ldots$ {\em {\bf expand this discussion}}
+The use of either Eqn.\ \ref{eq:totp} or Eqn.\ \ref{eq:bayes} may eliminate the concern that $P(E|\bar{C})$ is fundamentally unobservable.  It may also, however, introduce new philosophical concerns in the definition of the penchant.  For example, there has been no discussion of confounding.  Assuming, e.g.\  $P(\bar{C})=1-P(C)$ where $P(C)$ can be estimated from the data alone may be seen as an oversimplification of the dynamics generating the time series data; i.e.\ it may be seen as an assumption that the assumed effect is only caused by the assumed cause.  Thus, it may be argued that the penchant is an indication of predictability rather than causality (similar to arguments made regarding Granger causality \cite{Sugihara}).  These concerns will not be addressed directly in this article.  We emphasize, however, that we use terms like cause, effect, causal inference, and related terms to specifically refer to the expressions presented in this article and not to the general, or intuitive, meanings these terms are given elsewhere.
+
+Assuming $P(E)$ and $P(C)$ can be estimated from the data alone is a key part of the penchant definition.  The penchant is non-parametric in the sense that there is no assumed functional relationship between the times series being investigated.  It will be shown below that the penchant is, essentially, a structured method for counting the data and using the those counts, along with notions from probabilistic causality, to infer which time series in a given pair might be seen as ``driving'' the other.  Motivation for the penchant is the need for a times series causality tool that relies only on the data.  It is often impossible to design experiments, or control interventions into the dynamics as discussed above, for many systems of interest, and it may be difficult to determine functional relationships between the time series data sets.
 
 It follows from Eqn.\ \ref{eq:pen} that
 \begin{equation}
@@ -234,7 +239,7 @@ For this example, $\langle \lambda_{y_t,x_{t-1}} \rangle_w\Rightarrow \mathbf{X}
 
 Conceptually, the weighted mean observed penchant is preferred to the mean penchant because it accounts for the frequency of observed cause-effect pairs within the data, which is assumed to be a predictor of causal influence.  For example, given some pair $\{\mathbf{A},\mathbf{B}\}$, if it is known that $a_{t-1}$ causes $b_{t}$ and both $b_t = 0 | a_{t-1} = 0$ and $b_t = 0 | a_{t-1} = 1$ are observed in the data, then comparison of the frequencies with which the pair occur would be used to determine which of the two pairs represents the true cause-effect relationship and which pair represents, e.g., the effects of noise in the system.
 
-For this example, the weighted mean observed leaning provides the same causal inference as the mean observed leaning.  The weighted mean calculation, however, can be made computationally less expensive than the mean calculation, which will be of practical concern for empirical data sets.
+For this example, the weighted mean observed leaning provides the same causal inference as the mean observed leaning.  The weighted mean calculation will be used in the examples of the following sections.
 
 \subsection{Tolerance Domains}
 \label{sec:tol}
@@ -246,7 +251,7 @@ If the example time series was the expected time series but the data points were
 &=& \left\{0,-0.2,0.1,1.2,0,0.1,0.9,-0.1,0,1\right\}.
 \end{eqnarray*}
 
-The previous time series pair, $\bar{\mathbf{T}}$ had only five observed penchants, but $\bar{\mathbf{T}}^\prime$ nessicarily has more due to the noise.  It can be seen in the time series definitions that $x_t^\prime = x_t \pm 0.1 := x_t \pm \delta_x$ and $x_t^\prime = x_t \pm 0.2 := x_t \pm \delta_y$.  The weighted mean observed leaning for $\bar{\mathbf{T}}^\prime$ is $\langle \lambda_{y_t^\prime,x_{t-1}^\prime} \rangle_w \approx 0.19$. 
+The previous time series pair, $\bar{\mathbf{T}}$ had only five observed penchants, but $\bar{\mathbf{T}}^\prime$ has more due to the noise.  It can be seen in the time series definitions that $x_t^\prime = x_t \pm 0.1 := x_t \pm \delta_x$ and $x_t^\prime = x_t \pm 0.2 := x_t \pm \delta_y$.  The weighted mean observed leaning for $\bar{\mathbf{T}}^\prime$ is $\langle \lambda_{y_t^\prime,x_{t-1}^\prime} \rangle_w \approx 0.19$. 
 
 The effects of noise on the leaning calculations can be addressed by using the tolerances $\delta_x$ and $\delta_y$ in the probability estimations from the data.  For example, the penchant calculation in Eqn.\ \ref{eqn:rhoex1} relied on estimating $P(y_t=1|x_{t-1}=1)$ from the data, but if, instead, the data is known to be noisy, then the relevant probability estimate may be $P(y_t\in[1-\delta_y,1+\delta_y]|x_{t-1}\in[1-\delta_x,1+\delta_x])$.  
 
@@ -312,7 +317,6 @@ y_t = x_{t-1} + B\eta_t
 \end{equation*}
 with $y_0 = 0$, $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,1]$.  The driving system $\mathbf{X}$ is a periodic impulse with a signal amplitude above the maximum noise level of the response system, and the response system $\mathbf{Y}$ is a lagged version of the driving signal with standard Gaussian noise of amplitude $B$ applied at each time step.  
 \begin{figure}[ht]
-\label{fig:IRexChangeL}
 \begin{tabular}{cc}
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart1.eps} &
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart2.eps} \\
@@ -320,14 +324,35 @@ with $y_0 = 0$, $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart4.eps}
 \end{tabular}
 \caption{(Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf{Y}$, and the library length of the signals.  This synthetic data is used to explore the leaning, so $\mathbf{X}$ and $\mathbf{Y}$ do not have explicit units, from which it follows that both $\delta_y$ and $B$ are unitless.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
+\label{fig:IRexChangeL}
 \end{figure}
 
-Figure \ref{fig:IRexChangeL} shows how the weighted mean observed leaning using the 1-standard cause-effect assignment, $\tilde{\lambda}$, changes as the noise amplitude $B$ and tolerance $\delta_y$ in increments of 0.01.  The synthetic data sets $\mathbf{X}$ and $\mathbf{Y}$ are constructed such that intuitively $\mathbf{X}$ drives $\mathbf{Y}$.  Thus, it is expected that $\mathbf{X}\overrightarrow{lean}\mathbf{Y}$ which implies $\tilde{\lambda} > 0$.  Figure \ref{fig:IRexChangeL} shows that this expectation is met except when $\delta_y < B$ even for a short library length of $L=10$.  Examples of undefined penchants due to large tolerance domains, as discussed in section \ref{sec:tol}, are seen as $\delta_y$ is increased in the $L=10$ example.
+Figure \ref{fig:IRexChangeL} shows how the weighted mean observed leaning using the 1-standard cause-effect assignment, $\tilde{\lambda}$, changes as the noise amplitude $B$ and tolerance $\delta_y$ in increments of 0.01.  The synthetic data sets $\mathbf{X}$ and $\mathbf{Y}$ are constructed such that intuitively $\mathbf{X}$ drives $\mathbf{Y}$.  Thus, it is expected that $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ which implies $\tilde{\lambda} > 0$.  Figure \ref{fig:IRexChangeL} shows that this expectation is met except when $\delta_y < B$ even for a short library length of $L=10$.  Examples of undefined penchants due to large tolerance domains, as discussed in section \ref{sec:tol}, are seen as $\delta_y$ is increased in the $L=10$ example.
 
-Figure \ref{fig:IRexChangeL} shows using the strategy of $\delta_y = B$ always leads to causal inferences that agree with intuition for this example.  However, as discussed in section \ref{sec:tol}, knowing $B$ {\em a priori} may be unrealistic with empirical data sets.
+Figure \ref{fig:IRexChangeL} shows using the strategy of $\delta_y = B$ always leads to causal inferences that agree with intuition for $L>10$ in this example.  However, as discussed in section \ref{sec:tol}, knowing $B$ {\em a priori} may be unrealistic with empirical data sets.  Consider the following three methods for estimating $\delta_y$ from the data:
+\begin{enumerate}
+\item {\em lagged linear response deviation} - The y-tolerance is set to the mean absolute deviation of $y_t$ from $x_{t-1}$; i.e.\ $\delta_y = \langle|y_t-x_{t-1}|\rangle$.
+\item {\em normalized standard deviation} - The y-tolerance is set to the standard deviation of $\{\mathbf{Y}-\langle\mathbf{Y}\rangle\}$ where $\langle\mathbf{Y}\rangle$ is the mean of $\mathbf{Y}$; i.e.\ $\delta_y = \sigma_{|y-\langle y\rangle|}$.
+\item {\em n-bin mean standard deviation} - The y-tolerance is set to the mean standard deviation of $n$ bins of $\mathbf{Y}$; i.e.\ $\delta_y = \langle \sigma_{B_i}\rangle$ where $B_i$ is the $i$th bin of an $n$-bin histogram of $\mathbf{Y}$.
+\end{enumerate}  
+
+$L=100$, $B=0.5$, and $n=5$
+\begin{table}
+\begin{tabular}{lccc}
+lag & method 1 & method 2 & method 3\\
+\hline
+1 & 0.39 & 0.79 & 0.18\\
+2 & -0.03 & -8.0\times 10^{-5} & -0.05\\
+3 & -0.38 & -0.58 & -0.33 \\
+4 & -0.04 & 0 & -0.04 \\
+5 &  
+\end{tabular}
+\caption{TBD}
+\label{tab:IRlagTolComp}
+\end{table}
 
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{SimpleIRexample_difflags.eps}
+%\includegraphics[scale=0.45]{SimpleIRexample_difflags.eps}
 \caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
 \end{figure}
 
@@ -340,11 +365,11 @@ Y_t &=& X_{t-1}+B\eta_t,
 \end{eqnarray}
 with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
 \begin{figure}[ht]
-\includegraphics[scale=0.65]{SimpleCyclicexample_Bdy.eps}
+%\includegraphics[scale=0.65]{SimpleCyclicexample_Bdy.eps}
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{SimpleCyclicexample_difflags.eps}
+%\includegraphics[scale=0.45]{SimpleCyclicexample_difflags.eps}
 \caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
 \end{figure}
 
@@ -358,15 +383,15 @@ Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.
 \begin{figure}[ht]
 \begin{tabular}{cc}
-\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B70.eps} &
-\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B100.eps} \\
-\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B70.eps} &
-\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B100.eps} \\
+%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B70.eps} &
+%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B100.eps} \\
+%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B70.eps} &
+%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B100.eps} \\
 \end{tabular}
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance for values of $A$ and $B$.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{NonlinearCyclicexample_difflags.eps}
+%\includegraphics[scale=0.45]{NonlinearCyclicexample_difflags.eps}
 \caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
 \end{figure}  
 
@@ -408,15 +433,15 @@ z_t^{\prime\prime} &=& y_{t-1} + x_{t-1} + z_{t-1}
 \end{eqnarray*}
 with $y_0 = 0$, $B\in\mathbb{R}\ge 0$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, and $L=500$.
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{XYZIRexample_Bxytol.eps}
+%\includegraphics[scale=0.45]{XYZIRexample_Bxytol.eps}
 \caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}\right\}$}
 \end{figure}
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandY.eps}
+%\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandY.eps}
 \caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^\prime\right\}$}
 \end{figure}
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandYandZ.eps}
+%\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandYandZ.eps}
 \caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^{\prime\prime}\right\}$}
 \end{figure}
 
