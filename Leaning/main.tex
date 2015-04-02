@@ -350,18 +350,25 @@ $B$ & method 1 & method 2 & method 3\\
 \label{tab:IRlagTolComp}
 \end{table}
 
-The three different methods yield different values for the leaning, but all the methods lead to the same causal inference, $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$, which agrees with intuition for this example.  These methods are meant to be examples of using the data to set $\delta_y$ if $B$ is not known.  These methods are not expected to be reasonable estimates for $\delta_x$ and $\delta_y$ in general.  For example, method 1 assumes a linear relationship between $\mathbf{X}$ and $\mathbf{Y}$ that may be unreasonable to assume in general.  However, Table \ref{tab:IRlagTolComp} shows different methods for setting $\delta_y$ can lead to the same causal inference.  Setting the tolerances requires an understanding of the noise in the times series data.  The leaning is meant to be part of an exploratory causal analysis of the time series data and cannot exist independently of other exploratory analysis of the data, including noise level analysis.  
+The three different methods yield different values for the leaning, but all the methods lead to the same causal inference, $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$, which agrees with intuition for this example.  These methods are meant to be examples of using the data to set $\delta_y$ if $B$ is not known.  These methods are not expected to be reasonable estimates for $\delta_x$ and $\delta_y$ in general.  For example, method 1 assumes a linear relationship between $\mathbf{X}$ and $\mathbf{Y}$ that may be unreasonable to assume in general.  However, Table \ref{tab:IRlagTolComp} shows different methods for setting $\delta_y$ can lead to the same causal inference.  Setting the tolerances requires an understanding of the noise in the times series data.  The leaning is meant to be part of an exploratory causal analysis of the time series data and cannot exist independently of other exploratory analysis of the data, including analysis of the noise levels.  
 
 This linear impulse response example has only included calculations of leaning using the 1-standard assignment.  The 1-standard assignment is expected to be useful for causal inference given Eqn.\ \ref{eqn:IReqn}.  However, deciding which $l$-standard assignment to use given empirical, rather than synthetic, data sets may be more difficult.  This question will be explored in the next example.
 
 \subsection{Cyclic Linear Example}
 Consider the linear example dynamical system of
 \begin{eqnarray}
-\label{eq:linearex}
-X_t &=& \sin(t)\\
-Y_t &=& X_{t-1}+B\eta_t,
+\label{eqn:IReqn}
+\bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{Y}\right\} = \left\{\{x_t\},\{y_t\}\right\}
 \end{eqnarray}
-with $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $B\in[0,2]$ in increments of 0.02.  The response system $Y$ is just a lagged version of the driving signal with varying levels of standard Gaussian noise applied at each time step.  
+where $t\in[0,L]$,
+\begin{equation*}
+x_t = \sin(t)
+\end{equation*}
+and
+\begin{equation*}
+y_t = x_{t-1} + B\eta_t
+\end{equation*}
+with $y_0 = 0$, $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  This example, like the previous one, will restrict only consider $B\in[0,1]$.  This example is very similar to the previous one, except that the driving system $\mathbf{X}$ is sinusoidal.  
 \begin{figure}[ht]
 %\includegraphics[scale=0.65]{SimpleCyclicexample_Bdy.eps}
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
