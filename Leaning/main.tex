@@ -412,18 +412,71 @@ where $I$ is the current at time $t$, $V(t)= \sin\left(t\right)$ is the voltage 
 \label{eqn:RLcirceqn}
 \bar{\mathbf{\tau}}_L = \left\{\mathbf{V},\mathbf{I}\right\} = \left\{\{V_t\},\{I_t\}\right\}
 \end{eqnarray}
-where $\mathbf{V}$ is the set of discrete values of $V(t)$ evaluated using $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,2\pi\}$ with $f=1/10$ and $\mathbf{I}$ is the set of discrete values found either by solving Eqn.\ \ref{eqn:it} numerically or by evaluting the analyitical solution, i.e.\
+where $\mathbf{V}$ is the set of discrete values of $V(t)$ evaluated using $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,2\pi\}$ with $f=1/10$ and $\mathbf{I}$ is the set of discrete values found either by solving Eqn.\ \ref{eqn:it} numerically or by evaluating the analyitical solution, i.e.\
 \begin{equation}
 I(t) = \frac{L}{D}e^{-\frac{R}{L}t}+\frac{R}{D}\sin(t)-\frac{L}{D}\cos(t)
 \end{equation}
 with $D = L^2 + R^2$, for the same time set used for $\mathbf{V}$.
 
-Consider the situation where $L=10$ Henries and $R=5$ Ohms are constant.  Physical intuition is that $V$ drives $I$, and so we expect to find that $V\xrightarrow{lean}I$.  The weighted mean observed leaning using the 1-standard assignement, $\lambda_1$, can be used to test this expectation.  Unlikely, the previous examples, however, there is no noise term in the dynamics (such as $B$ in Eqn.\ \ref{eqn:IReqn} and \ref{eqn:cyceqn}), so setting $\delta_y$ will not be as straightforward.  
+Consider the situation where $L=10$ Henries and $R=5$ Ohms are constant.  Physical intuition is that $V$ drives $I$, and so we expect to find that $V\xrightarrow{lean}I$.  The weighted mean observed leaning using the 1-standard assignment, $\lambda_1$, can be used to test this expectation.  Unlikely, the previous examples, however, there is no noise term in the dynamics (such as $B$ in Eqn.\ \ref{eqn:IReqn} and \ref{eqn:cyceqn}), so setting $\delta_y$ will not be as straightforward.  
 
 Eqn. \ref{eqn:it} was solved using the {\em ode45} integration function in MATLAB.  The time series $V(t)$ is created by defining values at fixed points and using linear interpolation to find the time steps required by the ODE solver.  
 
- 
+ytol = [0,1e-6,1e-5,1e-4,1e-3,1e-2,1e-1];
+odetol = 1e-3;
+lag = 1;
+Tt = 8*pi;
+Ttstep = pi/10;
 
+R = 20 and L = 5:
+>> reshape(leans_storedVI_ode45(1,1,1,1,:),7,1)
+
+ans =
+
+   -0.1321
+   -0.1321
+   -0.1084
+    0.1879
+    0.5820
+    0.7297
+       NaN
+and
+>> reshape(leans_storedVI_an(1,1,1,1,:),7,1)
+
+ans =
+
+   -0.0890
+    0.4928
+    0.5484
+    0.5643
+    0.5808
+    0.7269
+       NaN
+       
+R = 5 and L = 10:
+>> reshape(leans_storedVI_ode45(1,1,1,1,:),7,1)
+
+ans =
+
+   -0.1321
+   -0.1321
+   -0.1199
+    0.0109
+    0.3979
+    0.6759
+    0.3139
+and
+>> reshape(leans_storedVI_an(1,1,1,1,:),7,1)
+
+ans =
+
+   -0.1321
+   -0.1321
+   -0.0959
+    0.0984
+    0.3856
+    0.6753
+    0.3152
 
 \subsection{Non-Linear Example}
 \label{sec:nonli}
