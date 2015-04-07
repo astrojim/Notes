@@ -388,7 +388,7 @@ where $\mathrm{E}[z_t]$ is the expectation value of $\{z_t\}$, $\mu_{x(y)}$ is t
 The sign of $\delta\chi_{xy}^l$ is used, similar to the leaning approach, to determine the causal inference; i.e.\  $\delta\chi_{xy}^l>0$ implies $\mathbf{X}$ ``causes'' $\mathbf{Y}$ and $\delta\chi_{xy}^l<0$ implies $\mathbf{Y}$ ``causes'' $\mathbf{X}$ \cite{Rogosa}.  
 
 \begin{figure}[ht]
-\includegraphics[scale=0.45]{SimpleCyclicexample_difflags.eps}
+\includegraphics[scale=0.40]{SimpleCyclicexample_difflags.eps}
 \caption{(Color available online.) The unitless, normalized leaning, $\lambda^\prime$, can be plotted for different $l$-standard cause-effect assignments along with the cross correlation, $\chi$ for the same lags, $l$, to show how the two values compare for this simple cyclic example.}
 \label{fig:cyc2}
 \end{figure}
@@ -412,71 +412,52 @@ where $I$ is the current at time $t$, $V(t)= \sin\left(t\right)$ is the voltage 
 \label{eqn:RLcirceqn}
 \bar{\mathbf{\tau}}_L = \left\{\mathbf{V},\mathbf{I}\right\} = \left\{\{V_t\},\{I_t\}\right\}
 \end{eqnarray}
-where $\mathbf{V}$ is the set of discrete values of $V(t)$ evaluated using $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,2\pi\}$ with $f=1/10$ and $\mathbf{I}$ is the set of discrete values found either by solving Eqn.\ \ref{eqn:it} numerically or by evaluating the analyitical solution, i.e.\
+where $\mathbf{V}$ is the set of discrete values of $V(t)$ evaluated using $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,8\pi\}$ with $f=1/10$ and $\mathbf{I}$ is the set of discrete values found either by solving Eqn.\ \ref{eqn:it} numerically or by evaluating the analytical solution, i.e.\
 \begin{equation}
-I(t) = \frac{L}{D}e^{-\frac{R}{L}t}+\frac{R}{D}\sin(t)-\frac{L}{D}\cos(t)
+I(t) = \frac{L}{D}e^{-\frac{t}{\tau}}+\frac{R}{D}\sin(t)-\frac{L}{D}\cos(t)
 \end{equation}
-with $D = L^2 + R^2$, for the same time set used for $\mathbf{V}$.
+with $D = L^2 + R^2$ and $\tau = L/R$, for the same time set used for $\mathbf{V}$.
 
-Consider the situation where $L=10$ Henries and $R=5$ Ohms are constant.  Physical intuition is that $V$ drives $I$, and so we expect to find that $V\xrightarrow{lean}I$.  The weighted mean observed leaning using the 1-standard assignment, $\lambda_1$, can be used to test this expectation.  Unlikely, the previous examples, however, there is no noise term in the dynamics (such as $B$ in Eqn.\ \ref{eqn:IReqn} and \ref{eqn:cyceqn}), so setting $\delta_y$ will not be as straightforward.  
+Physical intuition is that $V$ drives $I$, and so we expect to find that $V\xrightarrow{lean}I$.  The weighted mean observed leaning using the 1-standard assignment, $\lambda_1$, can be used to test this expectation.  Unlikely, the previous examples, however, there is no noise term in the dynamics (such as $B$ in Eqn.\ \ref{eqn:IReqn} and \ref{eqn:cyceqn}), so setting $\delta_I$ will not be as straightforward.  
 
-Eqn. \ref{eqn:it} was solved using the {\em ode45} integration function in MATLAB.  The time series $V(t)$ is created by defining values at fixed points and using linear interpolation to find the time steps required by the ODE solver.  
+Table \ref{tab:rl} shows $\lambda_1$ for both the analytical solution and a numerical solution to Eqn. \ref{eqn:it} was using the {\em ode45} integration function in MATLAB.  The time series $V(t)$ is created by defining values at fixed points and using linear interpolation to find the time steps required by the ODE solver.  Two different physical scenarios are considered in which $L$ and $R$ are constant, $L=10$ Henries and $R=5$ Ohms and $L=5$ Henries and $R=20$ Ohms.  
+\begin{table*}
+\begin{tabular}{cc}
+\begin{tabular}{lcc}
+$\delta_I$ & $\lambda_1$ ({\em ode45}) & $\lambda_1$ (analytical)\\
+\hline
+0 & -0.132 & -0.089 \\
+$10^{-6}$ & -0.132 & 0.493 \\
+$10^{-5}$ & -0.108 & 0.548 \\
+$10^{-4}$ & 0.188 & 0.564 \\
+$10^{-3}$ & 0.582 & 0.581 \\ 
+$10^{-2}$ & 0.730 & 0.727 \\
+$10^{-1}$ & {\em undefined} & {\em undefined}\\
+\end{tabular} &
+\begin{tabular}{lcc}
+$\delta_y$ & $\lambda_1$ ({\em ode45}) & $\lambda_1$ (analytical)\\
+\hline
+0 & -0.132 & -0.132 \\
+$10^{-6}$ & -0.132 & -0.132 \\
+$10^{-5}$ & -0.120 & -0.096 \\
+$10^{-4}$ & 0.011 & 0.098 \\
+$10^{-3}$ & 0.398 & 0.386 \\
+$10^{-2}$ & 0.676 & 0.675 \\
+$10^{-1}$ & 0.314 & 0.315 \\
+\end{tabular} \\
+(a) $R = 20$ $\Omega$, $L = 5$ H & (b) $R = 5$ $\Omega$, $L = 10$ H\\
+\end{tabular}
+\caption{The leaning $\lambda_1$ depends on both $\delta_I$ and the method for evaluating $\mathbf{I}$ in this example.  These two tables show that the values of $\delta_I$ for which the leaning starts to agree with intuition can also depend on the physical system parameters (e.g., $\tau$).}
+\label{tab:rl}
+\end{table*}
 
-ytol = [0,1e-6,1e-5,1e-4,1e-3,1e-2,1e-1];
-odetol = 1e-3;
-lag = 1;
-Tt = 8*pi;
-Ttstep = pi/10;
+The previously discussed strategy of increasing $\delta_I$ until the leaning becomes undefined and then reporting the leaning calculated using the largest $\delta_I$ for which it is defined would lead to the a causal inference that agrees with intuition for this example.  Specifically, from Table \ref{tab:rl}(a) $\delta_I=10^{-2}\Rightarrow\lambda_1\approx 0.7\Rightarrow\mathbf{V}\xrightarrow{lean}\mathbf{I}$, as expected.  
 
-R = 20 and L = 5:
->> reshape(leans_storedVI_ode45(1,1,1,1,:),7,1)
+Discussion on setting the tolerance domains has centered on understanding the noise in the system.  This example illustrates that the ``noise'' being considered does not need to be a physical noise source in the system (there are no explicit noise terms in Eqn.\ \ref{eqn:RLcirceqn}).  For example, the numerical tolerance of the ODE solver was set to $10^{-3}$ in both Table \ref{tab:rl}(a) and (b), and the table shows setting $\delta_y=10^{-3}$ would lead to causal inferences that agree with intuition in both cases.  However, $\delta_y=0$ leads to causal inferences that do not agree with intuition in both cases even for the analytical solution.  
 
-ans =
-
-   -0.1321
-   -0.1321
-   -0.1084
-    0.1879
-    0.5820
-    0.7297
-       NaN
-and
->> reshape(leans_storedVI_an(1,1,1,1,:),7,1)
-
-ans =
-
-   -0.0890
-    0.4928
-    0.5484
-    0.5643
-    0.5808
-    0.7269
-       NaN
-       
-R = 5 and L = 10:
->> reshape(leans_storedVI_ode45(1,1,1,1,:),7,1)
-
-ans =
-
-   -0.1321
-   -0.1321
-   -0.1199
-    0.0109
-    0.3979
-    0.6759
-    0.3139
-and
->> reshape(leans_storedVI_an(1,1,1,1,:),7,1)
-
-ans =
-
-   -0.1321
-   -0.1321
-   -0.0959
-    0.0984
-    0.3856
-    0.6753
-    0.3152
+Consider, for example, the peak values of $\mathbf{V}$.  The time steps of these peaks are $\mathbf{T}_{peak} = \{t|V_t =1\} = \{6,26,46,66\}$.  The values of $\mathbf{I}$ given $\tau = 0.25$ that immediately follow these peaks are $\mathbf{I}^{peak}_{0.25} = \{I_t|t\in\{7,27,47,67\}\}$.  The same values given $\tau=2$ will be labeled $\mathbf{I}^{peak}_2$.  The standard deviation of the first set $\sigma_{0.25}^{peak} \approx 10^{-6}$ and the standard deviation of the second set $\sigma_{2}^{peak} \approx 10^{-2}$.  Table \ref{tab:rl}(a) (for $\sigma_{0.25}^{peak}$) and (b) (for $\sigma_{2}^{peak}$) shows setting $\delta_I$ to the appropriate standard deviation of the peaks would lead to causal inferences that agree with intuition.  Rather than physical noise levels, the exploratory analysis of noise levels used to set the tolerance domains for the exploratory leaning analysis is better thought of as the spread in the possible values of an assumed effect that may reasonably be considered due to the same assumed cause.  
+    
+This example can also illustrate the importance of sample frequency and periods.  The leaning calculation requires an assumed cause and effect pair to appear in the data enough times to provide a good estimate of the probability.  Thus, data that is sampled for too few periods or too sparsely can lead to counter-intuitive leanings.  For example, if there is only a single peak in the assumed driving time series because of poor sampling, then there can only be a single response value, which would be insufficient to reliably provide the conditional probabilities in the leaning calculation for that assumed cause-effect pair.  For Eqn.\ \ref{eqn:RLcirceqn} with the analytical solution for $\mathbf{I}$, if $\delta_I=10^{-3}$ and $\tau = 0.25$, then $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,2\pi\}$ with $f=1/10$ leads to $\lambda_1 = -0.045$ and $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,3\pi\}$ with $f=2/3$ leads to $\lambda_1 = -0.167$, both of which disagree with intuition.
 
 \subsection{Non-Linear Example}
 \label{sec:nonli}
@@ -486,20 +467,16 @@ Consider the non-linear dynamical system of
 X_t &=& \sin(t)\\
 Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
 \end{eqnarray}
-with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,5]$ in increments of 0.5.
+with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,1]$.
 \begin{figure}[ht]
 \begin{tabular}{cc}
-%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B70.eps} &
-%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A45B100.eps} \\
-%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B70.eps} &
-%\includegraphics[scale=0.30]{NonlinearCyclicexample_Bdy_A100B100.eps} \\
+\includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC02.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC04.eps} \\
+\includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC06.eps} &
+\includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC08.eps} \\
 \end{tabular}
 \caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance for values of $A$ and $B$.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
 \end{figure}
-\begin{figure}[ht]
-%\includegraphics[scale=0.45]{NonlinearCyclicexample_difflags.eps}
-\caption{(Color available online.) Different $l$-standard cause-effect assignments lead to different leanings.}
-\end{figure}  
 
   
 
