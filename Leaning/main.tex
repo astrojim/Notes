@@ -321,8 +321,10 @@ with $y_0 = 0$, $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)
 \begin{tabular}{cc}
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart1.eps} &
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart2.eps} \\
+(a) $L=10$ & (b) $L=50$ \\
 \includegraphics[scale=0.30]{SimpleIRexample_diffLpart3.eps} &
-\includegraphics[scale=0.30]{SimpleIRexample_diffLpart4.eps}
+\includegraphics[scale=0.30]{SimpleIRexample_diffLpart4.eps} \\
+(c) $L=250$ & (d) $L=1750$ \\
 \end{tabular}
 \caption{(Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf{Y}$, and the library length of the signals.  This synthetic data is used to explore the leaning, so $\mathbf{X}$ and $\mathbf{Y}$ do not have explicit units, from which it follows that both $\delta_y$ and $B$ are unitless.  The red dashed line is the zero contour.  See the text for an explanation of the missing data for large $\delta_y$.}
 \label{fig:IRexChangeL}
@@ -455,31 +457,68 @@ The previously discussed strategy of increasing $\delta_I$ until the leaning bec
 
 Discussion on setting the tolerance domains has centered on understanding the noise in the system.  This example illustrates that the ``noise'' being considered does not need to be a physical noise source in the system (there are no explicit noise terms in Eqn.\ \ref{eqn:RLcirceqn}).  For example, the numerical tolerance of the ODE solver was set to $10^{-3}$ in both Table \ref{tab:rl}(a) and (b), and the table shows setting $\delta_y=10^{-3}$ would lead to causal inferences that agree with intuition in both cases.  However, $\delta_y=0$ leads to causal inferences that do not agree with intuition in both cases even for the analytical solution.  
 
-Consider, for example, the peak values of $\mathbf{V}$.  The time steps of these peaks are $\mathbf{T}_{peak} = \{t|V_t =1\} = \{6,26,46,66\}$.  The values of $\mathbf{I}$ given $\tau = 0.25$ that immediately follow these peaks are $\mathbf{I}^{peak}_{0.25} = \{I_t|t\in\{7,27,47,67\}\}$.  The same values given $\tau=2$ will be labeled $\mathbf{I}^{peak}_2$.  The standard deviation of the first set $\sigma_{0.25}^{peak} \approx 10^{-6}$ and the standard deviation of the second set $\sigma_{2}^{peak} \approx 10^{-2}$.  Table \ref{tab:rl}(a) (for $\sigma_{0.25}^{peak}$) and (b) (for $\sigma_{2}^{peak}$) shows setting $\delta_I$ to the appropriate standard deviation of the peaks would lead to causal inferences that agree with intuition.  Rather than physical noise levels, the exploratory analysis of noise levels used to set the tolerance domains for the exploratory leaning analysis is better thought of as the spread in the possible values of an assumed effect that may reasonably be considered due to the same assumed cause.  
+Consider, for example, the peak values of $\mathbf{V}$.  The time steps of these peaks are $\mathbf{T}_{peak} = \{t|V_t =1\} = \{6,26,46,66\}$.  The values of $\mathbf{I}$ given $\tau = 0.25$ that immediately follow these peaks are $\mathbf{I}^{peak}_{0.25} = \{I_t|t\in\{7,27,47,67\}\}$.  The same values given $\tau=2$ will be labeled $\mathbf{I}^{peak}_2$.  The standard deviation of the first set is $\sigma_{0.25}^{peak} \approx 10^{-6}$ and the standard deviation of the second set is $\sigma_{2}^{peak} \approx 10^{-2}$.  Table \ref{tab:rl}(a) (for $\sigma_{0.25}^{peak}$) and (b) (for $\sigma_{2}^{peak}$) shows setting $\delta_I$ to the appropriate standard deviation of the peaks would lead to causal inferences that agree with intuition.  Rather than physical noise levels, the noise levels used to set the tolerance domains for the leaning calculations is better thought of as the spread in the possible values of an assumed effect that may reasonably be considered due to the same assumed cause.  
     
 This example can also illustrate the importance of sample frequency and periods.  The leaning calculation requires an assumed cause and effect pair to appear in the data enough times to provide a good estimate of the probability.  Thus, data that is sampled for too few periods or too sparsely can lead to counter-intuitive leanings.  For example, if there is only a single peak in the assumed driving time series because of poor sampling, then there can only be a single response value, which would be insufficient to reliably provide the conditional probabilities in the leaning calculation for that assumed cause-effect pair.  For Eqn.\ \ref{eqn:RLcirceqn} with the analytical solution for $\mathbf{I}$, if $\delta_I=10^{-3}$ and $\tau = 0.25$, then $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,2\pi\}$ with $f=1/10$ leads to $\lambda_1 = -0.045$ and $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,3\pi\}$ with $f=2/3$ leads to $\lambda_1 = -0.167$, both of which disagree with intuition.
 
-\subsection{Non-Linear Example}
+The examples so far have all had a linear relationship between the driving signal and the response signal.  Of the four broad categories of time series causality tools, transfer entropy \cite{} and SSR methods \cite{} are the two categories that can be applied to nonlinear datasets without modification.  The conceptual framework of granger causality is not restricted by the linearity of the data set \cite{}, but the original formulation by Granger must be modified to do so \cite{}.  Lagged cross-correlation techniques are known to be unreliable if the data sets are generated by nonlinear dynamics \cite{Rogosa,??}.  The next example explores the use of leaning calculations in nonlinear systems.
+
+\subsection{Nonlinear Example}
 \label{sec:nonli}
-Consider the non-linear dynamical system of
+Consider the nonlinear dynamical system of
 \begin{eqnarray}
 \label{eqn:nonlinearEX}
-X_t &=& \sin(t)\\
-Y_t &=& AX_{t-1}\left(1-BX_{t-1}\right)+C\eta_t,
+\bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{Y}\right\} = \left\{\{x_t\},\{y_t\}\right\}
 \end{eqnarray}
-with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,1]$.
+where $t\in[0,L]$,
+\begin{equation*}
+x_t = \sin(t)
+\end{equation*}
+and
+\begin{equation*}
+y_t = Ax_{t-1}\left(1-Bx_{t-1}\right)+C\eta_t,
+\end{equation*}
+with $y_0 = 0$, with $A,B,C\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A,B,C\in[0,1]$ and $t\in\{0,f\pi,2f\pi,3f\pi,\ldots,6\pi\}$ with $f=1/30$, which implies $L=181$.
+
+Figure \ref{fig:nonlin1} shows the weighted mean observed leaning using the 1-standard assignment, i.e.\ $\lambda_1$, agrees with intuition over the considered domains of $A$, $B$, and $C$ if the tolerance domain for $\mathbf{Y}$ is set to the noise level, i.e.\ $\delta_y = C$.  The result of $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ shows that causal inference using leanings on data sets generated from nonlinear dynamics can be performed similarly, and can lead to similarly intuitive results, as the data sets generated from linear dynamics.
 \begin{figure}[ht]
 \begin{tabular}{cc}
 \includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC02.eps} &
 \includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC04.eps} \\
+(a) $C=0.2$ & (b) $C=0.4$ \\
 \includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC06.eps} &
 \includegraphics[scale=0.30]{NonlinearCyclicexample_BxytolC08.eps} \\
+(c) $C=0.6$ & (d) $C=0.8$ \\
 \end{tabular}
-\caption{(Color available online.) Leaning as a function of both the noise and the y-tolerance for values of $A$ and $B$.  The red dashed line is the zero contour.  See the text for am explanation of the missing data for large $\delta_y$.}
+\caption{Leaning, $\lambda_1$, is a function of all three unitless parameters in Eqn.\ \ref{eqn:nonlinearEX}, $A$, $B$, and $C$.  The leaning agrees with intuition in this example for all the tested values of $A$, $B$, and $C$ given $\delta_y=C$.}
+\label{fig:nonlin1}
 \end{figure}
 
-  
+Proponents of SSR time series causality tools have pointed out the limitations of tools like lagged cross-correlation and Granger causality when the dynamics exhibit chaotic behavior \cite{Sugihara}.  Chaotic dynamics are explore in the next section.
 
+\subsection{Coupled Logistic Map Example}
+\label{sec:2Pop}
+Consider the nonlinear dynamical system of
+\begin{eqnarray}
+\label{eqn:2pop}
+\bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{Y}\right\} = \left\{\{x_t\},\{y_t\}\right\}
+\end{eqnarray}
+where $t\in[0,L]$,
+\begin{equation*}
+x_t = x_{t-1}\left(r_x-r_x x_{t-1}-\beta_{xy} y_{t-1}\right)
+\end{equation*}
+and
+\begin{equation*}
+y_t = y_{t-1}\left(r_y-r_y y_{t-1}-\beta_{yx} x_{t-1}\right)
+\end{equation*}
+where the parameters $r_x,r_y,\beta_{xy},\beta_{yx}\in\mathbb{R}\ge 0$.  This pair of equations is a specific form of the two-dimensional coupled logistic map system often used to model population dynamics \cite{Lloyd1995} and it was the example system used by Sugihara {\em et al.\ } in their introduction of cross convergent mapping (CCM; an SSR method time series causality tool) \cite{Sugihara2012}.
+
+The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``drives'' $\mathbf{X}$ more than $\mathbf{X}$ ``drives'' $\mathbf{Y}$, and vice versa.Thus, it is expected that the exploratory causal inference of this system should show $\beta_{xy}>\beta_{yx}\Rightarrow\mathbf{Y}\xrightarrow{lean}\mathbf{X}$ and $\beta_{xy}<\beta_{yx}\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}$.  There is no expectation for $\beta_{xy}=\beta_{yx}$.
+
+
+%In this example, the CCM causality relationship between $X$ and $Y$ is determined using a sampling of both the initial conditions and the system parameters, calculating $\Delta$, and demonstrating the necessary convergence.  The term {\em convergence} is used here in the same sense as it was used in \cite{Sugihara2012}; i.e., ``convergence means that cross-mapped estimates improve in estimation skill with time-series length $L$'' \footnote{In terms of $\Delta$, convergence to a value $\kappa$ means $\lim_{L\rightarrow\infty}|\Delta-\kappa| = 0$.  As the ``estimation skill'' of the CCM algorithm increases, each of the CCM correlations, $C_{XY}$ and $C_{YX}$, converge to some fixed value.  Thus, $\Delta$ converges to some fixed value $\kappa$.  $\Delta$ depends on the library length $L$ because the CCM algorithm depends on $L$.  However, the complicated algorithmic dependence makes formally solving this limit difficult.  As such, convergence is determined from plots, following the method used in  \cite{Sugihara2012}.}.  The dynamic parameters $r_x$ and $r_y$ are sampled from normal distributions $\mathcal{N}\left(\mu_{rx},\sigma_{rx}\right)$ and $\mathcal{N}\left(\mu_{ry},\sigma_{ry}\right)$, respectively.  The initial conditions $X_0$ and $Y_0$ are also sampled from normal distributions, specifically $\mathcal{N}\left(\mu_{x0},\sigma_{x0}\right)$ and $\mathcal{N}\left(\mu_{y0},\sigma_{y0}\right)$.  The coupling parameters $\beta_{xy}$ and $\beta_{yx}$ are then varied over the interval $[10^{-6},1]$ in steps of 0.02 to produce the plots seen in Figure \ref{fig:BGridPlot}.
+
+%Sugihara {\em et al.\ }consider convergence to be critically important for determining CCM causality, and note that it is ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:BGridPlot} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 
 \subsection{Impulse with Multiple Noisy Responses Example}
 \begin{eqnarray}
