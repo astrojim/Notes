@@ -511,14 +511,26 @@ and
 \begin{equation*}
 y_t = y_{t-1}\left(r_y-r_y y_{t-1}-\beta_{yx} x_{t-1}\right)
 \end{equation*}
-where the parameters $r_x,r_y,\beta_{xy},\beta_{yx}\in\mathbb{R}\ge 0$.  This pair of equations is a specific form of the two-dimensional coupled logistic map system often used to model population dynamics \cite{Lloyd1995} and it was the example system used by Sugihara {\em et al.\ } in their introduction of cross convergent mapping (CCM; an SSR method time series causality tool) \cite{Sugihara2012}.
+where the parameters $r_x,r_y,\beta_{xy},\beta_{yx}\in\mathbb{R}\ge 0$.  This pair of equations is a specific form of the two-dimensional coupled logistic map system often used to model population dynamics \cite{Lloyd1995} and it was the example system used by Sugihara {\em et al.\ }in their introduction of cross convergent mapping (CCM; an SSR time series causality tool) \cite{Sugihara2012}.
 
-The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``drives'' $\mathbf{X}$ more than $\mathbf{X}$ ``drives'' $\mathbf{Y}$, and vice versa.Thus, it is expected that the exploratory causal inference of this system should show $\beta_{xy}>\beta_{yx}\Rightarrow\mathbf{Y}\xrightarrow{lean}\mathbf{X}$ and $\beta_{xy}<\beta_{yx}\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}$.  There is no expectation for $\beta_{xy}=\beta_{yx}$.
+The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``drives'' $\mathbf{X}$ more than $\mathbf{X}$ ``drives'' $\mathbf{Y}$, and vice versa.  Such intuition, however, can be difficult to justify for all instances of Eqn.\ \ref{eqn:2pop}.  The $x_{t-1}$ term that appears in $y_t$ can be seen as a fuction of $x_{t-2}$ with coefficents of $\beta_{yx}r_x$.  These product coefficients suggest that if $r_x>r_y$, then $\mathbf{X}$ may be seen as the stronger driver in the system even if $\beta_{yx}<\beta_{xy}$.  The same argument can be made, with the appropriate substituions, to show that $\mathbf{Y}$ may be seen as the stronger driver in the system even if $\beta_{xy}<\beta_{yx}$.  As such, there is no clear intuitive causal inference for this system.  The conjectures presented in this paragraph, however, are supported by the leaning calculations (using the 1-standard assignment).
+
+\begin{figure}[ht]
+\begin{tabular}{cc}
+\includegraphics[scale=0.30]{CoupLogexample_rx35ry35.eps} &
+\includegraphics[scale=0.30]{CoupLogexample_rx40ry20.eps} \\
+(a) $r_x = r_y = 3.5$ & (b) $r_x = 4.0$, $r_y = 2.0$ \\
+\includegraphics[scale=0.30]{CoupLogexample_rx20ry40.eps} &
+\includegraphics[scale=0.30]{CoupLogexample_rx38ry32.eps} \\
+(c) $r_x = 2.0$, $r_y = 4.0$ & (d) $r_x = 3.8$, $r_y = 3.2$ \\
+\end{tabular}
+\caption{Leaning, $\lambda_1$, is a function of four unitless parameters in Eqn.\ \ref{eqn:2pop}, $r_x$, $r_y$, $\beta_{xy}$, and $\beta_{yx}$ (along with the initial conditions $x_0$ and $y_0$, which are fixed in this example).  The tolerance domains are set as $\delta_x = \sigma_{x_t-\langle x_t \rangle}$ and $\delta_y = \sigma_{y_t-\langle y_t \rangle}$.  The leaning is defined using the 1-standard assignment, so $\lambda_1>0\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}$.}
+\label{fig:2pop}
+\end{figure}
+Figure \ref{fig:2pop} shows four instances of Eqn.\ \ref{eqn:2pop} with different values for $r_x$ and $r_y$.  Each instance has a library length of $L=500$ and initial conditions of $x_0 = 0.4$ and $y_0 = 0.4$.  There is no clear, intuitive driver in this example, so both tolerance domains must be set in the leaning calculation.  The leaning is calculated using the 1-standard cause-effect assignment and estimated tolerance domains of $\delta_x = \sigma_{x_t-\langle x_t \rangle}$ and $\delta_y = \sigma_{y_t-\langle y_t \rangle}$.
 
 
-%In this example, the CCM causality relationship between $X$ and $Y$ is determined using a sampling of both the initial conditions and the system parameters, calculating $\Delta$, and demonstrating the necessary convergence.  The term {\em convergence} is used here in the same sense as it was used in \cite{Sugihara2012}; i.e., ``convergence means that cross-mapped estimates improve in estimation skill with time-series length $L$'' \footnote{In terms of $\Delta$, convergence to a value $\kappa$ means $\lim_{L\rightarrow\infty}|\Delta-\kappa| = 0$.  As the ``estimation skill'' of the CCM algorithm increases, each of the CCM correlations, $C_{XY}$ and $C_{YX}$, converge to some fixed value.  Thus, $\Delta$ converges to some fixed value $\kappa$.  $\Delta$ depends on the library length $L$ because the CCM algorithm depends on $L$.  However, the complicated algorithmic dependence makes formally solving this limit difficult.  As such, convergence is determined from plots, following the method used in  \cite{Sugihara2012}.}.  The dynamic parameters $r_x$ and $r_y$ are sampled from normal distributions $\mathcal{N}\left(\mu_{rx},\sigma_{rx}\right)$ and $\mathcal{N}\left(\mu_{ry},\sigma_{ry}\right)$, respectively.  The initial conditions $X_0$ and $Y_0$ are also sampled from normal distributions, specifically $\mathcal{N}\left(\mu_{x0},\sigma_{x0}\right)$ and $\mathcal{N}\left(\mu_{y0},\sigma_{y0}\right)$.  The coupling parameters $\beta_{xy}$ and $\beta_{yx}$ are then varied over the interval $[10^{-6},1]$ in steps of 0.02 to produce the plots seen in Figure \ref{fig:BGridPlot}.
 
-%Sugihara {\em et al.\ }consider convergence to be critically important for determining CCM causality, and note that it is ``a key property that distinguishes causation from simple correlation'' \cite{Sugihara2012}.  Figure \ref{fig:BGridPlot} shows plots created with several different library lengths to illustrate the convergence of $\Delta$ for this example.  Typically, for convenience, the (approximately) converged CCM correlation values will be reported and proof of convergence will be implied, rather than shown.
 
 \subsection{Impulse with Multiple Noisy Responses Example}
 \begin{eqnarray}
