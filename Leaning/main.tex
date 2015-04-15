@@ -513,7 +513,7 @@ y_t = y_{t-1}\left(r_y-r_y y_{t-1}-\beta_{yx} x_{t-1}\right)
 \end{equation*}
 where the parameters $r_x,r_y,\beta_{xy},\beta_{yx}\in\mathbb{R}\ge 0$.  This pair of equations is a specific form of the two-dimensional coupled logistic map system often used to model population dynamics \cite{Lloyd1995} and it was the example system used by Sugihara {\em et al.\ }in their introduction of cross convergent mapping (CCM; an SSR time series causality tool) \cite{Sugihara2012}.
 
-The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``drives'' $\mathbf{X}$ more than $\mathbf{X}$ ``drives'' $\mathbf{Y}$, and vice versa.  Such intuition, however, can be difficult to justify for all instances of Eqn.\ \ref{eqn:2pop}.  The $x_{t-1}$ term that appears in $y_t$ can be seen as a fuction of $x_{t-2}$ with coefficents of $\beta_{yx}r_x$.  These product coefficients suggest that if $r_x>r_y$, then $\mathbf{X}$ may be seen as the stronger driver in the system even if $\beta_{yx}<\beta_{xy}$.  The same argument can be made, with the appropriate substituions, to show that $\mathbf{Y}$ may be seen as the stronger driver in the system even if $\beta_{xy}<\beta_{yx}$.  As such, there is no clear intuitive causal inference for this system.  The conjectures presented in this paragraph, however, are supported by the leaning calculations (using the 1-standard assignment).
+The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``drives'' $\mathbf{X}$ more than $\mathbf{X}$ ``drives'' $\mathbf{Y}$, and vice versa.  Such intuition, however, can be difficult to justify for all instances of Eqn.\ \ref{eqn:2pop}.  The $x_{t-1}$ term that appears in $y_t$ can be seen as a function of $x_{t-2}$ with coefficients of $\beta_{yx}r_x$.  These product coefficients suggest that if $r_x>r_y$, then $\mathbf{X}$ may be seen as the stronger driver in the system even if $\beta_{yx}<\beta_{xy}$.  The same argument can be made, with the appropriate substitutions, to show that $\mathbf{Y}$ may be seen as the stronger driver in the system even if $\beta_{xy}<\beta_{yx}$.  As such, there is no clear intuitive causal inference for this system.  The conjectures presented in this paragraph, however, are supported by the leaning calculations (using the 1-standard assignment).
 
 \begin{figure}[ht]
 \begin{tabular}{cc}
@@ -529,11 +529,16 @@ The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``driv
 \end{figure}
 Figure \ref{fig:2pop} shows four instances of Eqn.\ \ref{eqn:2pop} with different values for $r_x$ and $r_y$.  Each instance has a library length of $L=500$ and initial conditions of $x_0 = 0.4$ and $y_0 = 0.4$.  There is no clear, intuitive driver in this example, so both tolerance domains must be set in the leaning calculation.  The leaning is calculated using the 1-standard cause-effect assignment and estimated tolerance domains of $\delta_x = \sigma_{x_t-\langle x_t \rangle}$ and $\delta_y = \sigma_{y_t-\langle y_t \rangle}$.
 
-Figure \ref{fig:2pop}(a) shows Figure \ref{fig:2pop}(b) shows Figure \ref{fig:2pop}(c) shows Figure \ref{fig:2pop}(d) shows
+Figure \ref{fig:2pop}(a) shows the intuition of $\beta_{xy}<\beta_{yx}\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ can be true if $r_x=r_y$.  However, Figure \ref{fig:2pop}(b) and (c) shows $r_x>r_y\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ and $r_x<r_y\Rightarrow\mathbf{Y}\xrightarrow{lean}\mathbf{X}$ can be strong enough implications to make the values of $\beta_{xy}$ and $\beta_{yx}$ irrelevant over the considered domains.  Figure \ref{fig:2pop}(d) shows this effect can be pronounced even in instances of Eqn.\ \ref{eqn:2pop} where $r_x$ and $r_y$ are close.  
 
+The complexity of determining causal relationships in this system may make the system less of a convincing example of the leaning calculation than the previous examples.  However, Figure \ref{fig:2pop} shows the weighted mean observed leaning using the 1-standard cause-effect assignment can provide causal inferences that may be considered intuitively justifiable, even if the system does not have an unequivocal driver. 
+
+All of the previous examples have ignored the concept of causal confounders.  The presence of confounders in the system is a serious problem for causal inference in general \cite{Rubin,Pearl}.  Time series causality usually seeks to answer the less general causal inference question of ``Given these two times series, which may be considered the stronger driver?'' Nevertheless, some bivariate time series causality tools consider causal inference in systems with potential confouders by trying to relate the estimated bivariate driving relationships within a collection of more than two time series data sets (e.g., see CCM \cite{Sugihara}).  The next example explores in the use of leaning calculations in such a scenario.
 
 \subsection{Impulse with Multiple Noisy Responses Example}
+Consider the multivariate system of
 \begin{eqnarray}
+\label{eqn:3var}
 \bar{\mathbf{\tau}}_L = \left\{\mathbf{X},\mathbf{Y},\mathbf{Z}\right\} = \left\{\{x_t\},\{y_t\},\{z_t\}\right\}
 \end{eqnarray}
 where $t\in[0,L]$,
@@ -546,77 +551,58 @@ x_t = \left\{
   \end{array}
 \right.
 \end{equation*}
-\begin{eqnarray*}
-y_t &=& x_{t-1} + B\eta_t\\
-z_t &=& y_{t-1}\\
-z_t^\prime &=& y_{t-1} + y_t = y_{t-1} + x_{t-1} + B\eta_t\\
-z_t^{\prime\prime} &=& y_{t-1} + x_{t-1} + z_{t-1}
-\end{eqnarray*}
+and
+\begin{equation*}
+y_t = x_{t-1} + B\eta_t\;\;,
+\end{equation*}
+and either (case 0)
+\begin{equation}
+z_t = y_{t-1}
+\end{equation}
+or (case 1)
+\begin{equation}
+z_t^\prime = y_{t-1} + y_t = y_{t-1} + x_{t-1} + B\eta_t
+\end{equation}
+or (case 2)
+\begin{equation}
+z_t^{\prime\prime} = y_{t-1} + x_{t-1} + z_{t-1}
+\end{equation}
 with $y_0 = 0$, $B\in\mathbb{R}\ge 0$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, and $L=500$.
-\begin{figure}[ht]
-\includegraphics[scale=0.45]{XYZIRexample_Bxytol.eps}
-\caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}\right\}$}
-\end{figure}
-\begin{figure}[ht]
-\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandY.eps}
-\caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^\prime\right\}$}
-\end{figure}
-\begin{figure}[ht]
-\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandYandZ.eps}
-\caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^{\prime\prime}\right\}$}
-\end{figure}
 
-Figure 3:
->> leans_keepXY
+In case 0, $\mathbf{Z}$ depends directly on $\mathbf{Y}$ and indirectly on $\mathbf{X}$ (through $\mathbf{Y}$, which depends directly on $\mathbf{X}$).  The intuitive causal inference is then $\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ and $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  Case 1, despite the additional $\mathbf{Y}$ dependence in $\mathbf{Z}$, has the same intuitive causal inference as case 0.  In case 2, however, $\mathbf{Z}$ depends directly on itself and both $\mathbf{Y}$ and $\mathbf{X}$.  Case 2 also has the same intuitive causal inference.
 
-leans_keepXY =
+\begin{figure*}[ht]
+\begin{tabular}{cc}
+\includegraphics[scale=0.40]{XYZIRexample_Bxytol.eps} & \includegraphics[scale=0.40]{XYZIRexample_BxytolZXandY.eps} \\
+(a) $\mathbf{Z} = \{z_t\}$ & (b) $\mathbf{Z} = \{z^\prime_t\}$ \\
+\multicolumn{2}{c}{\includegraphics[scale=0.40]{XYZIRexample_BxytolZXandYandZ.eps}} \\
+\multicolumn{2}{c}{(c) $\mathbf{Z} = \{z^{\prime\prime}_t\}$}\\
+\end{tabular}
+\caption{The (unitless) weighted mean observed leaning using the 1-standard cause-effect assignment, $\lambda_1$ only leads to causal inferences that agree with intuition for all points within the considered noise level domain, $B$, in this example for case 1.  $B$ is the unitless noise parameter found in Eqn.\ \ref{eqn:3var}, and the symmetric tolerance domains for $\mathbf{Y}$ and $\mathbf{Z}$ are set to this value.}
+\label{fig:3var}
+\end{figure*}
+Figure \ref{fig:3var} shows the weighted mean observed leaning using the 1-standard cause-effect assignment (with $\delta_x = 0$ and $\delta_y = \delta_z = B$), $\lambda_1$, may lead to causal inferences that do not agree with intuition for case 0 and case 2, even though case 1 agrees with intuition for all points within the considered noise levels domain.  For case 0, the leaning calculation implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ and $\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ as expected, but it also seem to imply that no causal inference can be made about the relationship between $\mathbf{X}$ and $\mathbf{Z}$.  For case 2, the leaning calculation also implies no causal inference can be made about the relationship between $\mathbf{X}$ and $\mathbf{Z}$, but, unlike case 0, it also implies $\mathbf{Z}\xrightarrow{lean}\mathbf{Y}$, which is counter-intuitive.
 
-    0.1688
+These results may imply that $\lambda_1$ is unable identify confounded driving (i.e., situations in which the effect of the drivering variable is mediated by another variable).  For example, in case 0, the driving of $\mathbf{Z}$ by $\mathbf{X}$ is occurs through the interaction of $\mathbf{Y}$ and $\mathbf{Z}$.  For case 0, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ but does not imply $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  For case 2, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xleftarrow{lean}\mathbf{Z}$, which may imply that $\lambda_1$ is not a reliable causal inference tool in autoregressive systems.
 
->> leans_keepXZ
+The results of Figure \ref{fig:3var} may also be considered any indication that the cause-effect assignment is insufficient.  It was previously mentioned that exploratory causal analysis using the leaning would involve comparing several different cause-effect assignments.  The set of tested cause-effect assignment need not only include $l$-standard assignment.  Consider the weighted mean observed leaning, $\lambda_{AR}^{xy}$ using the 1-AR cause-effect assignment, i.e., $\{C,E\} = \{x_{t-1}\;\mathrm{ and }\;y_{t-1},y_t\}$.  Table \ref{tab:3var} shows this leaning calculation, using $\delta_y=\delta_z=B=0.6$, for the same bivariate relationships shown in Figure \ref{fig:3var}.
+\begin{table}
+\begin{tabular}{lccc}
+ & case 0 & case 1 & case 2\\
+ \hline
+ $\lambda_{AR}^{xy}$ & 0.150 & 0.159 & 0.169\\
+ $\lambda_{AR}^{yz}$ & -0.002 & 0.133 & 0.447\\
+ $\lambda_{AR}^{xz}$ & 0.691 & 0.030 & 0.735\\
+\end{tabular}
+\caption{The leaning calculation depends strongly on the cause-effect assignment.  The table shows the weighted mean observed leaning using the 1-AR assignment and may be compared with Figure \ref{fig:3var}, which showed this leaning calculation using the 1-standard assignment.}
+\label{tab:3var}
+\end{table}
 
-leans_keepXZ =
-
-    0.7347
-
->> leans_keepYZ
-
-leans_keepYZ =
-
-    0.4466
-
-Figure 2:
-leans_keepXY =
-
-    0.1588
-
-
-leans_keepXZ =
-
-    0.0301
-
-
-leans_keepYZ =
-
-    0.1330
-    
-Figure 1:
-
-leans_keepXY =
-
-    0.1502
-
-
-leans_keepXZ =
-
-   -0.0019
-
-
-leans_keepYZ =
-
-    0.6917
+Table \ref{tab:3var} implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ for case 1 and 2, as expected, but not for case 0 (which $\lambda_1$ did imply).  Thus, the leaning calculations are part of an exploratory causal analysis and must be considered using several different cause-effect assignments when trying to understand the potential causal structure of a set of times series data.  The cause-effect assignments can also be expanded beyond the bivariate and autoregressive definitions, e.g., $\{C,E\} = \{x_{t-1}\;\mathrm{ and }\;y_{t-1}\;\mathrm{ and }\;z_{t-1},y_t\}$, but such extensions will not be considered in this article.
 
 \section{Empirical Data}
+
+
 
 \section{Conclusion}
 
