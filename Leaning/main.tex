@@ -529,7 +529,7 @@ The idea is that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``driv
 \end{figure}
 Figure \ref{fig:2pop} shows four instances of Eqn.\ \ref{eqn:2pop} with different values for $r_x$ and $r_y$.  Each instance has a library length of $L=500$ and initial conditions of $x_0 = 0.4$ and $y_0 = 0.4$.  There is no clear, intuitive driver in this example, so both tolerance domains must be set in the leaning calculation.  The leaning is calculated using the 1-standard cause-effect assignment and estimated tolerance domains of $\delta_x = \sigma_{x_t-\langle x_t \rangle}$ and $\delta_y = \sigma_{y_t-\langle y_t \rangle}$.
 
-
+Figure \ref{fig:2pop}(a) shows Figure \ref{fig:2pop}(b) shows Figure \ref{fig:2pop}(c) shows Figure \ref{fig:2pop}(d) shows
 
 
 \subsection{Impulse with Multiple Noisy Responses Example}
@@ -554,17 +554,68 @@ z_t^{\prime\prime} &=& y_{t-1} + x_{t-1} + z_{t-1}
 \end{eqnarray*}
 with $y_0 = 0$, $B\in\mathbb{R}\ge 0$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, and $L=500$.
 \begin{figure}[ht]
-%\includegraphics[scale=0.45]{XYZIRexample_Bxytol.eps}
+\includegraphics[scale=0.45]{XYZIRexample_Bxytol.eps}
 \caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}\right\}$}
 \end{figure}
 \begin{figure}[ht]
-%\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandY.eps}
+\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandY.eps}
 \caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^\prime\right\}$}
 \end{figure}
 \begin{figure}[ht]
-%\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandYandZ.eps}
+\includegraphics[scale=0.45]{XYZIRexample_BxytolZXandYandZ.eps}
 \caption{$\left\{\mathbf{X},\mathbf{Y},\mathbf{Z}^{\prime\prime}\right\}$}
 \end{figure}
+
+Figure 1:
+leans_keepXY =
+
+    0.5004    0.5448    0.4814
+   -0.0261   -0.0203   -0.0210
+   -0.0379   -0.0337   -0.0282
+leans_keepYZ =
+
+    0.9924    0.9997    0.9988
+    0.0028    0.0024   -0.0025
+    0.0074    0.0042    0.0084
+leans_keepXZ =
+
+   -0.0311   -0.0360   -0.0150
+    0.4995    0.4854    0.5286
+   -0.0269   -0.0119   -0.0313
+   
+Figure 2:
+leans_keepXY =
+
+    0.4741    0.4956    0.4675
+   -0.0230   -0.0326   -0.0131
+   -0.0289   -0.0327   -0.0279
+leans_keepYZ =
+
+    0.1770    0.1467    0.1537
+    0.0112    0.0033   -0.0053
+    0.0054    0.0041    0.0014
+leans_keepXZ =
+
+    0.1319    0.1311    0.1302
+    0.1293    0.1293    0.1178
+   -0.0179   -0.0121   -0.0172
+
+Figure 3:
+leans_keepXY =
+
+    0.4722    0.5168    0.4878
+   -0.0205   -0.0189   -0.0250
+   -0.0252   -0.0178   -0.0295
+leans_keepYZ =
+
+   -0.2370   -0.2039   -0.2218
+   -0.2206   -0.2148   -0.2104
+   -0.2175   -0.2460   -0.1997
+leans_keepXZ =
+
+   -0.0441   -0.0433   -0.0383
+   -0.0395   -0.0387   -0.0420
+   -0.0519   -0.0595   -0.0344
 
 \section{Empirical Data}
 
