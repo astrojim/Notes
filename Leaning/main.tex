@@ -297,6 +297,7 @@ A more basic strategy to deal with non-stationary data would be to define the ob
 In this section, the leaning, specifically the weighted mean observed leaning using the $l$-standard cause-effect assignment for various $l$, will be applied to dynamical systems and empirical data sets with known causal relationships.  The usefulness of the leaning as a tool for causal inference is tested directly with empirical and synthetic time series data sets for which there is an intuitive understanding of the driving relationships within the system.
 
 \subsection{Impulse with Noisy Response Linear Example}
+\label{sec:IR}
 Consider the linear example dynamical system of
 \begin{eqnarray}
 \label{eqn:IReqn}
@@ -583,7 +584,7 @@ In case 0, $\mathbf{Z}$ depends directly on $\mathbf{Y}$ and indirectly on $\mat
 \end{figure*}
 Figure \ref{fig:3var} shows the weighted mean observed leaning using the 1-standard cause-effect assignment (with $\delta_x = 0$ and $\delta_y = \delta_z = B$), $\lambda_1$, may lead to causal inferences that do not agree with intuition for case 0 and case 2, even though case 1 agrees with intuition for all points within the considered noise levels domain.  For case 0, the leaning calculation implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ and $\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ as expected, but it also seem to imply that no causal inference can be made about the relationship between $\mathbf{X}$ and $\mathbf{Z}$.  For case 2, the leaning calculation also implies no causal inference can be made about the relationship between $\mathbf{X}$ and $\mathbf{Z}$, but, unlike case 0, it also implies $\mathbf{Z}\xrightarrow{lean}\mathbf{Y}$, which is counter-intuitive.
 
-These results may imply that $\lambda_1$ is unable identify confounded driving (i.e., situations in which the effect of the drivering variable is mediated by another variable).  For example, in case 0, the driving of $\mathbf{Z}$ by $\mathbf{X}$ is occurs through the interaction of $\mathbf{Y}$ and $\mathbf{Z}$.  For case 0, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ but does not imply $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  For case 2, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xleftarrow{lean}\mathbf{Z}$, which may imply that $\lambda_1$ is not a reliable causal inference tool in autoregressive systems.
+These results may imply that $\lambda_1$ is unable identify confounded driving (i.e., situations in which the effect of the driving variable is mediated by another variable).  For example, in case 0, the driving of $\mathbf{Z}$ by $\mathbf{X}$ is occurs through the interaction of $\mathbf{Y}$ and $\mathbf{Z}$.  For case 0, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ but does not imply $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  For case 2, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xleftarrow{lean}\mathbf{Z}$, which may imply that $\lambda_1$ is not a reliable causal inference tool in autoregressive systems.
 
 The results of Figure \ref{fig:3var} may also be considered any indication that the cause-effect assignment is insufficient.  It was previously mentioned that exploratory causal analysis using the leaning would involve comparing several different cause-effect assignments.  The set of tested cause-effect assignment need not only include $l$-standard assignment.  Consider the weighted mean observed leaning, $\lambda_{AR}^{xy}$ using the 1-AR cause-effect assignment, i.e., $\{C,E\} = \{x_{t-1}\;\mathrm{ and }\;y_{t-1},y_t\}$.  Table \ref{tab:3var} shows this leaning calculation, using $\delta_y=\delta_z=B=0.6$, for the same bivariate relationships shown in Figure \ref{fig:3var}.
 \begin{table}
@@ -601,10 +602,65 @@ The results of Figure \ref{fig:3var} may also be considered any indication that 
 Table \ref{tab:3var} implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ for case 1 and 2, as expected, but not for case 0 (which $\lambda_1$ did imply).  Thus, the leaning calculations are part of an exploratory causal analysis and must be considered using several different cause-effect assignments when trying to understand the potential causal structure of a set of times series data.  The cause-effect assignments can also be expanded beyond the bivariate and autoregressive definitions, e.g., $\{C,E\} = \{x_{t-1}\;\mathrm{ and }\;y_{t-1}\;\mathrm{ and }\;z_{t-1},y_t\}$, but such extensions will not be considered in this article.
 
 \section{Empirical Data}
+Empirical data sets with known (or assumed) causal relationships may be used to understand how exploratory causal inference using leanings might be done if the system dynamics are unknown (or sufficiently complicated to make first principle numerical comparisons cumbersome).
 
+Figure \ref{fig:empdata} shows three time series pairs with casual ``truths'' from the UCI Machine Learning Repository (MLR) \cite{}.  This data repository is a collection of data sets (not necessarily time series data) with known, intuitive, or assumed causal relationships meant for use in the testing of causal discovery algorithms in machine learning \cite{}.  
 
+\begin{figure*}[ht]
+\begin{tabular}{cc}
+%\includegraphics[scale=0.30]{EmpiricalData_p65X.eps} &
+%\includegraphics[scale=0.30]{EmpiricalData_p65Y.eps} \\
+(a) Hang Seng Bank stock returns (X) & (b) HSBC Hldgs stock returns (Y) \\
+%\includegraphics[scale=0.30]{EmpiricalData_p87X.eps} &
+%\includegraphics[scale=0.30]{EmpiricalData_p87X.eps} \\
+(c) mean temperature (X) & (d) snow fall (Y) \\
+\end{tabular}
+\caption{These times series data pairs are expected to have the causal relationships of $X\rightarrow Y$ for each pair of subplots [(a),(b)] and [(c),(d)], where $X$ or $Y$ is marked in parenthesis for each time series.}
+\label{fig:empdata}
+\end{figure*}
+Figure \ref{fig:empdata}(a) and (b) are times series of the stock returns of Hang Seng Bank (the expected response) and HSBC Holdings (the expected driver) from January 4, 2000 to June 17, 2005.  HSBC Holdings is the expected response because it owns 60\% of Hang Seng Bank.  This data is pair 65 of the MLR \cite{}, and the data collection procedure is described there.
+
+Figure \ref{fig:empdata}(c) and (d) are times series of the daily snowfall (the expected response) and mean temperature (the expected driver) from July 1 1972 to December 31 2009 at Whistler, BC, Canada (Latitude: 50$^\circ$04$^\prime$04.000$^{\prime\prime}$ N, Longitude: 122$^\circ$56$^\prime$50.000$^{\prime\prime}$ W, Elevation: 1835.00 meters).  From \cite{}, ``Common sense tells us that X [mean temperature] causes Y [snow fall] (with maybe very small feedback of Y on X). Confounders are present (e.g., day of the year).''  This data is pair 87 of the MLR \cite{}, and the data collection procedure is described there.
+
+As stated previously, the primary difficulty in using the leaning for exploratory causal analysis is the determination of the cause-effect assignment and tolerance domains.  The above data is meant only to illustrate the use of the leanings, so while a thorough analysis of the noise in the system should precede the leaning calculations, such a step is avoided here for brevity.  
+
+The symmetric tolerance domains are estimated using the maximum standard deviations of the $n$ sets of binned points of an $n$-bin histogram of the normalized the time series data $\mathbf{X}^\prime$ and $\mathbf{Y}^\prime$, where $\mathbf{X}^\prime = \frac{\mathbf{X}-\langle \mathbf{X} \rangle}{\sigma_\mathbf{X}}$, $\mathbf{Y}^\prime = \frac{\mathbf{Y}-\langle \mathbf{Y} \rangle}{\sigma_\mathbf{Y}}$, and $n=\lfloor 0.1L\rfloor$ (i.e., $n$ is the closest integer that is not larger than 10\% of the library length $L$).  This estimation is similar to the {\em n-bin mean standard deviation} technique discussed in Sec.\ \ref{sec:IR}).
+
+The cause-effect assignment will be set naively because, again, the purpose of this article in not to study these particular time series in detail.  To reiterate the previous comment regarding tolerance domains, detailed study would be required to have confidence in using leanings for exploratory causal analysis.  However, the convenience of having causal ``truths'' is that we can take the naive approach of simply testing many different cause-effect assignments and compare the results to the expected causal inference.
+
+Table \ref{tab:emp} shows the weighted mean observed leaning, $\lambda_l^{xy}$, using the $1$-standard cause-effect assignment with $l\in[0,15]$ and using $\sigma_x$ and $\sigma_y$ estimated in the manner described above.  The first two times series pairs in the table, $\mathbf{\tau}_1$ and $\mathbf{\tau}_2$, are shown in Figure \ref{fig:empdata}.  The last two time series pairs in the table, $\mathbf{\tau}_3$ and $\mathbf{\tau}_4$, are similar to $
+\mathbf{\tau}_2$.  $\mathbf{\tau}_3$ is times series of the stock returns of Cheung Kong (the expected response) and Hutchison (the expected driver) from January 4, 2000 to June 17, 2005.  Cheung Kong is the expected response because it owns 50\% of Hutchison.  This data is pair 66 of the MLR \cite{}.  $\mathbf{\tau}_4$ is times series of the stock returns of Sun Hung Kai Properties (the expected response) and Cheung kong (the expected driver) from January 4, 2000 to June 17, 2005.  Sun Hung Kai Properties is the expected response because ``Sun Hung Kai Prop. is a typical stock in the Hang Seng Property subindex'' \cite{}.  This data is pair 67 of the MLR \cite{}.
+\begin{table*}
+\begin{tabular}{l|cccc}
+ $l$ & $\mathbf{\tau}_1$ & $\mathbf{\tau}_2$ & $\mathbf{\tau}_3$ & $\mathbf{\tau}_4$\\
+\hline
+ 1 & 0.040 & 0.025 & 0.008 & 0.007 \\
+ 2 & 0.036 & -0.006 & -0.004 & 0.018 \\
+ 3 & 0.032 & 0.007 & -0.013 & 0.020 \\
+ 4 & 0.030 & 0.045 & -0.003 & 0.024 \\
+ 5 & 0.028 & -0.030 & -0.002 & 0.016 \\
+ 6 & 0.025 & 0.038 & -0.037 & 0.011 \\
+ 7 & 0.024 & 0.006 & -0.019 & 0.036 \\
+ 8 & 0.024 & 0.014 & -0.004 & 0.030 \\
+ 9 & 0.023 & 0.009 & -0.023 & 0.017 \\
+ 10 & 0.022 & -0.001 & -0.021 & 0.033 \\
+ 11 & 0.020 & -0.008 & -0.005 & 0.055 \\
+ 12 & 0.018 & 0.058 & 0.003 & 0.024 \\
+ 13 & 0.018 & 0.015 & -0.015 & 0.019 \\
+ 14 & 0.019 & 0.024 & -0.020 & 0.042 \\
+ 15 & 0.017 & 0.002 & -0.013 & 0.025\\
+\end{tabular} 
+\caption{The weighted mean observed leaning, $\lambda_l^{xy}$, using the $1$-standard cause-effect assignment for $l\in[0,15]$.  The time series pairs $\mathbf{\tau}_1 = (\mathbf{X},\mathbf{Y})$ with $\mathbf{X}$ and $\mathbf{Y}$ shown in Figure \ref{fig:empdata}(c) and (d), respectively, and $\mathbf{\tau}_2 = (\mathbf{X},\mathbf{Y})$ with $\mathbf{X}$ and $\mathbf{Y}$ shown in Figure \ref{fig:empdata}(a) and (b), respectively.  The last two time series pairs $\mathbf{\tau}_3$ and $\mathbf{\tau}_4$ are similar to $\mathbf{\tau}_2$ and are described in more detail in the text.  The expected causal inference for all the time series pairs is $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$; i.e., the expectation is $\lambda_l^{xy} > 0$ for every entry in this table.}
+\label{tab:emp}
+\end{table*}
+
+Table \ref{tab:emp} shows the leanings, using the given tolerance domains, imply causal inferences that agree with the causal truths for all the tested pairs with $1$-standard assignments.  However, only the $\mathbf{\tau}_1$ and $\mathbf{\tau}_2$ leanings agree with the causal truths with all the tested $l$-standard assignments.  The $\mathbf{\tau}_2$ leanings agree with the casual truth for most of the $l$-standard assignments. But, $\mathbf{\tau}_3$ only agrees with the truth for two of the tested $l$-standard assignments, despite its similarities with $\mathbf{\tau}_2$ and $\mathbf{\tau}_3$.
+
+The different causal inferences implied by the leanings shown in Table \ref{tab:emp} illustrate the need to consider leaning calculations as part of an exploratory causal analysis.  The naive approach shown here has made no attempt to determine the most appropriate cause-effect assignment or tolerance domains for each individual time series pair.  Yet, the causal truth is still recovered for some of the tested leaning calculations.  
 
 \section{Conclusion}
+
+
 
 %\bibliographystyle{plain}
 %\bibliography{main}

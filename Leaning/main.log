@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  15 APR 2015 19:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  22 APR 2015 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,43 +393,43 @@ File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
 <SimpleIRexample_diffLpart3.eps>
 File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
  <SimpleIRexample_diffLpart4.eps>
-Overfull \hbox (12.58511pt too wide) in paragraph at lines 321--329
+Overfull \hbox (12.58511pt too wide) in paragraph at lines 322--330
 [][] 
  []
 
 [10]
 File: SimpleCyclicexample_Bxytol.eps Graphic file (type eps)
  <SimpleCyclicexample_Bxytol.eps>
-Overfull \hbox (9.35905pt too wide) in paragraph at lines 377--378
+Overfull \hbox (9.35905pt too wide) in paragraph at lines 378--379
 [][] 
  []
 
 
-LaTeX Warning: Citation `McNamesIEEE' on page 11 undefined on input line 382.
+LaTeX Warning: Citation `McNamesIEEE' on page 11 undefined on input line 383.
 
 
-Underfull \hbox (badness 2529) in paragraph at lines 382--383
+Underfull \hbox (badness 2529) in paragraph at lines 383--384
 []\OT1/cmr/m/n/10.95 It has been ar-gued that lagged cross-
  []
 
 
-LaTeX Warning: Citation `Rogosa' on page 11 undefined on input line 386.
+LaTeX Warning: Citation `Rogosa' on page 11 undefined on input line 387.
 
 [11]
 
-LaTeX Warning: Citation `Rogosa' on page 12 undefined on input line 390.
+LaTeX Warning: Citation `Rogosa' on page 12 undefined on input line 391.
 
 File: SimpleCyclicexample_difflags.eps Graphic file (type eps)
 <SimpleCyclicexample_difflags.eps>
 
-LaTeX Warning: Citation `Rogosa' on page 12 undefined on input line 403.
+LaTeX Warning: Citation `Rogosa' on page 12 undefined on input line 404.
 
 [12]
 
-LaTeX Warning: Citation `Rogosa' on page 13 undefined on input line 464.
+LaTeX Warning: Citation `Rogosa' on page 13 undefined on input line 465.
 
 
-LaTeX Warning: Citation `??' on page 13 undefined on input line 464.
+LaTeX Warning: Citation `??' on page 13 undefined on input line 465.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -445,18 +445,18 @@ File: NonlinearCyclicexample_BxytolC06.eps Graphic file (type eps)
 <NonlinearCyclicexample_BxytolC06.eps>
 File: NonlinearCyclicexample_BxytolC08.eps Graphic file (type eps)
  <NonlinearCyclicexample_BxytolC08.eps>
-Overfull \hbox (13.78964pt too wide) in paragraph at lines 485--493
+Overfull \hbox (13.78964pt too wide) in paragraph at lines 486--494
 [][] 
  []
 
 
-LaTeX Warning: Citation `Sugihara' on page 14 undefined on input line 497.
+LaTeX Warning: Citation `Sugihara' on page 14 undefined on input line 498.
 
 
-LaTeX Warning: Citation `Lloyd1995' on page 14 undefined on input line 514.
+LaTeX Warning: Citation `Lloyd1995' on page 14 undefined on input line 515.
 
 
-LaTeX Warning: Citation `Sugihara2012' on page 14 undefined on input line 514.
+LaTeX Warning: Citation `Sugihara2012' on page 14 undefined on input line 515.
 
 [14]
 Underfull \vbox (badness 6412) has occurred while \output is active []
@@ -471,19 +471,19 @@ File: CoupLogexample_rx20ry40.eps Graphic file (type eps)
 <CoupLogexample_rx20ry40.eps>
 File: CoupLogexample_rx38ry32.eps Graphic file (type eps)
  <CoupLogexample_rx38ry32.eps>
-Overfull \hbox (19.51106pt too wide) in paragraph at lines 519--527
+Overfull \hbox (19.51106pt too wide) in paragraph at lines 520--528
 [][] 
  []
 
 [15]
 
-LaTeX Warning: Citation `Rubin' on page 16 undefined on input line 536.
+LaTeX Warning: Citation `Rubin' on page 16 undefined on input line 537.
 
 
-LaTeX Warning: Citation `Pearl' on page 16 undefined on input line 536.
+LaTeX Warning: Citation `Pearl' on page 16 undefined on input line 537.
 
 
-LaTeX Warning: Citation `Sugihara' on page 16 undefined on input line 536.
+LaTeX Warning: Citation `Sugihara' on page 16 undefined on input line 537.
 
 File: XYZIRexample_Bxytol.eps Graphic file (type eps)
 <XYZIRexample_Bxytol.eps>
@@ -498,20 +498,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 4954) has occurred while \output is active []
 
  [17]
-[18
+Underfull \hbox (badness 1803) in paragraph at lines 629--630
+[]\OT1/cmr/m/n/10.95 The cause-effect as-sign-ment will be set
+ []
 
-] (./main.aux)
+[18] [19]
+Underfull \hbox (badness 1158) in paragraph at lines 657--658
+\OT1/cmr/m/n/10.95 tol-er-ance do-mains, im-ply causal in-fer-ences
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 657--658
+\OT1/cmr/m/n/10.95 that agree with the causal truths for all
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+(./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3161 strings out of 495029
- 47273 string characters out of 6181522
- 111406 words of memory out of 5000000
- 6324 multiletter control sequences out of 15000+600000
+ 3164 strings out of 495029
+ 47303 string characters out of 6181522
+ 112406 words of memory out of 5000000
+ 6327 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,16n,42p,1444b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (18 pages, 90636 bytes).
+Output written on main.dvi (20 pages, 100348 bytes).
