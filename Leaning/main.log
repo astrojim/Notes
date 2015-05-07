@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  23 APR 2015 11:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  6 MAY 2015 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -498,62 +498,123 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 4954) has occurred while \output is active []
 
  [17]
-File: EmpiricalData_p65X.eps Graphic file (type eps)
-
-<EmpiricalData_p65X.eps>
-File: EmpiricalData_p65Y.eps Graphic file (type eps)
- <EmpiricalData_p65Y.eps>
 File: EmpiricalData_p87X.eps Graphic file (type eps)
- <EmpiricalData_p87X.eps>
-File: EmpiricalData_p87Y.eps Graphic file (type eps)
 
-<EmpiricalData_p87Y.eps>
-Underfull \hbox (badness 1803) in paragraph at lines 629--630
+<EmpiricalData_p87X.eps>
+File: EmpiricalData_p87Y.eps Graphic file (type eps)
+ <EmpiricalData_p87Y.eps>
+Overfull \hbox (25.42421pt too wide) in paragraph at lines 610--616
+[][] 
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 625--626
 []\OT1/cmr/m/n/10.95 The cause-effect as-sign-ment will be set
  []
 
-[18] [19]
-Underfull \hbox (badness 1158) in paragraph at lines 657--658
+
+Underfull \vbox (badness 3590) has occurred while \output is active []
+
+ [18]
+Underfull \hbox (badness 1158) in paragraph at lines 652--653
 \OT1/cmr/m/n/10.95 tol-er-ance do-mains, im-ply causal in-fer-ences
  []
 
+[19]
 
-Underfull \hbox (badness 1383) in paragraph at lines 657--658
-\OT1/cmr/m/n/10.95 that agree with the causal truths for all
+LaTeX Warning: Citation `omniweb.gsfc.nasa.gov/html/ow_data.html' on page 20 un
+defined on input line 666.
+
+
+LaTeX Warning: Citation `IAGA Bulletin 40' on page 20 undefined on input line 6
+66.
+
+
+LaTeX Warning: Citation `M. A. Hapgood' on page 20 undefined on input line 666.
+
+
+
+LaTeX Warning: Citation `"Space physics coordinate transformations: A user guid
+e"' on page 20 undefined on input line 666.
+
+
+LaTeX Warning: Citation `in Planetary and Space Science' on page 20 undefined o
+n input line 666.
+
+
+LaTeX Warning: Citation `Vol. 40' on page 20 undefined on input line 666.
+
+
+LaTeX Warning: Citation `No. 5' on page 20 undefined on input line 666.
+
+
+LaTeX Warning: Citation `pp. 711-717' on page 20 undefined on input line 666.
+
+
+LaTeX Warning: Citation `1992' on page 20 undefined on input line 666.
+
+
+LaTeX Warning: Citation `spaceweathertextbook' on page 20 undefined on input li
+ne 666.
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 666--667
+[]\OT1/cmr/m/n/10.95 The NASA OMNI data set con-sists of
  []
+
+
+Underfull \hbox (badness 1596) in paragraph at lines 666--667
+\OT1/cmr/m/n/10.95 sev-eral dif-fer-ent space weather pa-ram-e-ters
+ []
+
+File: SolarDataBxDst.eps Graphic file (type eps)
+<SolarDataBxDst.eps>
+File: SolarDataByDst.eps Graphic file (type eps)
+ <SolarDataByDst.eps>
+File: SolarDataBzDst.eps Graphic file (type eps)
+ <SolarDataBzDst.eps>
+File: NoCauseplot.eps Graphic file (type eps)
+
+<NoCauseplot.eps>
+
+LaTeX Warning: Citation `http://www.tylervigen.com/view_correlation?id=97' on p
+age 20 undefined on input line 711.
+
+[20]
+
+LaTeX Warning: Citation `Pearl' on page 21 undefined on input line 713.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-LaTeX Warning: Citation `UCI' on page 20 undefined on input line 659.
-
-
-LaTeX Warning: Citation `NASA' on page 20 undefined on input line 659.
-
-
-LaTeX Warning: Citation `both' on page 20 undefined on input line 659.
-
-
-Underfull \hbox (badness 3364) in paragraph at lines 659--660
-[]\OT1/cmr/m/n/10.95 Estimating the tol-er-ance do-mains with
+Underfull \hbox (badness 2894) in paragraph at lines 716--717
+\OT1/cmr/m/n/10.95 Causal in-fer-ence us-ing ob-ser-va-tional data
  []
 
-[20] [21
+[21]
+Underfull \hbox (badness 1769) in paragraph at lines 718--719
+\OT1/cmr/m/n/10.95 niques, in-clud-ing Granger causal-ity (GC),
+ []
 
-] (./main.aux)
+
+LaTeX Warning: Citation `Pearl' on page 22 undefined on input line 720.
+
+
+LaTeX Warning: Citation `Klienberg' on page 22 undefined on input line 720.
+
+[22] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3175 strings out of 495029
- 47496 string characters out of 6181522
- 112406 words of memory out of 5000000
- 6334 multiletter control sequences out of 15000+600000
+ 3191 strings out of 495029
+ 47847 string characters out of 6181522
+ 111406 words of memory out of 5000000
+ 6348 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,16n,42p,1444b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,42p,1444b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (21 pages, 103256 bytes).
+Output written on main.dvi (22 pages, 111856 bytes).
