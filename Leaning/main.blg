@@ -8,10 +8,9 @@ Warning--I'm ignoring Granger1980's extra "volume" field
 Warning--I'm ignoring Sugihara2012's extra "volume" field
 --line 62 of file main.bib
 Warning--I didn't find a database entry for "spaceweathertextbook"
-Warning--I didn't find a database entry for "http://www.tylervigen.com/view_correlation?id=97"
 You've used 28 entries,
             2118 wiz_defined-function locations,
-            699 strings with 8522 characters,
+            698 strings with 8474 characters,
 and the built_in function-call counts, 9022 in all, are:
 = -- 880
 > -- 394
@@ -50,4 +49,4 @@ warning$ -- 0
 while$ -- 86
 width$ -- 30
 write$ -- 305
-(There were 4 warnings)
+(There were 3 warnings)

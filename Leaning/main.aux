@@ -35,7 +35,7 @@
 \newlabel{sec:wmean}{{4.6}{7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Tolerance Domains}{7}}
 \newlabel{sec:tol}{{4.7}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Stationarity Dependence}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Stationarity Dependence}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Simple Example Systems}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Impulse with Noisy Response Linear Example}{10}}
 \newlabel{sec:IR}{{5.1}{10}}
@@ -43,11 +43,11 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces (Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf  {Y}$, and the library length of the signals. This synthetic data is used to explore the leaning, so $\mathbf  {X}$ and $\mathbf  {Y}$ do not have explicit units, from which it follows that both $\delta _y$ and $B$ are unitless. The red dashed line is the zero contour. See the text for an explanation of the missing data for large $\delta _y$.\relax }}{10}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:IRexChangeL}{{1}{10}}
+\citation{McNames2007}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces $\mathaccentV {tilde}07E{\lambda }$ using three different estimation methods for $\delta _y$.\relax }}{11}}
 \newlabel{tab:IRlagTolComp}{{1}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Cyclic Linear Example}{11}}
 \newlabel{eqn:cyceqn}{{25}{11}}
-\citation{McNames2007}
 \citation{Rogosa1980}
 \citation{Rogosa1980}
 \citation{Rogosa1980}
@@ -57,7 +57,7 @@
 \newlabel{fig:cyc2}{{3}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}RL Circuit Example}{12}}
 \newlabel{sec:rlcirc}{{5.3}{12}}
-\newlabel{eqn:it}{{29}{13}}
+\newlabel{eqn:it}{{29}{12}}
 \newlabel{eqn:RLcirceqn}{{30}{13}}
 \citation{kaiser2002}
 \citation{Sugihara2012}
@@ -70,18 +70,18 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Nonlinear Example}{14}}
 \newlabel{sec:nonli}{{5.4}{14}}
 \newlabel{eqn:nonlinearEX}{{32}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Coupled Logistic Map Example}{14}}
+\newlabel{sec:2Pop}{{5.5}{14}}
+\newlabel{eqn:2pop}{{33}{14}}
 \citation{Lloyd1995}
 \citation{Sugihara2012}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Leaning, $\lambda _1$, is a function of all three unitless parameters in Eqn.\ 32\hbox {}, $A$, $B$, and $C$. The leaning agrees with intuition in this example for all the tested values of $A$, $B$, and $C$ given $\delta _y=C$.\relax }}{15}}
 \newlabel{fig:nonlin1}{{4}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Coupled Logistic Map Example}{15}}
-\newlabel{sec:2Pop}{{5.5}{15}}
-\newlabel{eqn:2pop}{{33}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Leaning, $\lambda _1$, is a function of four unitless parameters in Eqn.\ 33\hbox {}, $r_x$, $r_y$, $\beta _{xy}$, and $\beta _{yx}$ (along with the initial conditions $x_0$ and $y_0$, which are fixed in this example). The tolerance domains are set as $\delta _x = \sigma _{x_t-\delimiter "426830A x_t \delimiter "526930B }$ and $\delta _y = \sigma _{y_t-\delimiter "426830A y_t \delimiter "526930B }$. The leaning is defined using the 1-standard assignment, so $\lambda _1>0\Rightarrow \mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$.\relax }}{15}}
+\newlabel{fig:2pop}{{5}{15}}
 \citation{Rubin2015}
 \citation{Pearl2000}
 \citation{Sugihara2012}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Leaning, $\lambda _1$, is a function of four unitless parameters in Eqn.\ 33\hbox {}, $r_x$, $r_y$, $\beta _{xy}$, and $\beta _{yx}$ (along with the initial conditions $x_0$ and $y_0$, which are fixed in this example). The tolerance domains are set as $\delta _x = \sigma _{x_t-\delimiter "426830A x_t \delimiter "526930B }$ and $\delta _y = \sigma _{y_t-\delimiter "426830A y_t \delimiter "526930B }$. The leaning is defined using the 1-standard assignment, so $\lambda _1>0\Rightarrow \mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$.\relax }}{16}}
-\newlabel{fig:2pop}{{5}{16}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Impulse with Multiple Noisy Responses Example}{16}}
 \newlabel{eqn:3var}{{34}{16}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The (unitless) weighted mean observed leaning using the 1-standard cause-effect assignment, $\lambda _1$ only leads to causal inferences that agree with intuition for all points within the considered noise level domain, $B$, in this example for case 1. $B$ is the unitless noise parameter found in Eqn.\ 34\hbox {}, and the symmetric tolerance domains for $\mathbf  {Y}$ and $\mathbf  {Z}$ are set to this value.\relax }}{17}}
@@ -99,14 +99,15 @@
 \citation{IAGA}
 \citation{Hapgood1992}
 \citation{spaceweathertextbook}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The weighted mean observed leaning, $\lambda _l^{xy}$, using the $1$-standard cause-effect assignment for $l\in [0,15]$. The time series pair $\mathbf  {\tau }_1 = (\mathbf  {X},\mathbf  {Y})$ with $\mathbf  {X}$ and $\mathbf  {Y}$ shown in Figure 7\hbox {}(a) and (b), respectively. The expected causal inference is $\mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$; i.e., the expectation is $\lambda _l^{xy} > 0$ for every point in the plotted domain.\relax }}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The weighted mean observed leaning, $\lambda _l^{xy}$, using the $1$-standard cause-effect assignment for $l\in [0,21]$. The time series pair $\mathbf  {\tau }_1 = (\mathbf  {X},\mathbf  {Y})$ with $\mathbf  {X}$ and $\mathbf  {Y}$ shown in Figure 7\hbox {}(a) and (b), respectively. The expected causal inference is $\mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$; i.e., the expectation is $\lambda _l^{xy} > 0$ for every point in the plotted domain.\relax }}{19}}
 \newlabel{fig:emp}{{8}{19}}
-\citation{http://www.tylervigen.com/view_correlation?id=97}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Spurious Leanings}{20}}
-\newlabel{eqn:Spur}{{40}{20}}
+\citation{Pearl2000}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces (Color available online) A histogram of the $(B_z^\prime ,D_{st})$ set of $n=10^4$ (unitless) weighted mean observed leanings, using the 1-standard cause-effect assignment, i.e., $\lambda ^1_{z}$, show causal inferences that agree with intuition for the OMNI data set. The red dashed lines show the algebraic means of the sets. The geomagnetic field component $B_z^\prime $ is calculated by taking the $B_z$ times series in the OMNI data set and then setting $B_z^\prime = 0$ if $B_z>0$.\relax }}{20}}
 \newlabel{fig:dsthist}{{9}{20}}
-\citation{Pearl2000}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Spurious Leanings}{20}}
+\newlabel{eqn:Spur}{{40}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Eqn.\ 40\hbox {} leads to spurious leanings, i.e.\ weighted mean observed leanings using the 1-standard assignment, $\lambda _1$, that depend on both the tolerance domain $\sigma _y$ and the library length $L$.\relax }}{20}}
+\newlabel{fig:nocause}{{10}{20}}
 \citation{kleinberg2012}
 \citation{kaiser2002}
 \citation{Rogosa1980}
@@ -115,10 +116,8 @@
 \citation{Pearl2000}
 \citation{kleinberg2012}
 \citation{kleinberg2012}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Eqn.\ 40\hbox {} leads to spurious leanings, i.e.\ weighted mean observed leanings using the 1-standard assignment, $\lambda _1$, that depend on both the tolerance domain $\sigma _y$ and the library length $L$.\relax }}{21}}
-\newlabel{fig:nocause}{{10}{21}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{21}}
 \citation{Pierce1977}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{21}}
 \bibstyle{plain}
 \bibdata{main}
 \bibcite{bache2013}{1}
