@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  6 MAY 2015 20:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  12 MAY 2015 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -231,64 +231,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 27.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: Citation `Granger1980' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `liu2012' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Roberts1985' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Schreiber2000' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `granger1969' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Sugihara2012' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `box2013' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `pascual2014' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Kaminski2001' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `dufour1998' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `dufour2006' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `mosedale2006' on page 2 undefined on input line 30.
-
-
 Underfull \vbox (badness 2970) has occurred while \output is active []
 
-
-
-LaTeX Warning: Citation `Pearl' on page 2 undefined on input line 42.
-
-
-LaTeX Warning: Citation `Bunge' on page 2 undefined on input line 42.
-
-
-LaTeX Warning: Citation `Suppes' on page 2 undefined on input line 42.
-
-[2
+ [2
 
 ]
 Overfull \hbox (3.42897pt too wide) in alignment at lines 60--63
  [][][] []
  []
-
-
-LaTeX Warning: Citation `Sugihara' on page 3 undefined on input line 71.
 
 
 Underfull \hbox (badness 1127) in paragraph at lines 73--74
@@ -297,10 +247,7 @@ m/m/it/10.95 E\OT1/cmr/m/n/10.95 )$ and $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.9
 5 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 )$ can be es-ti-
  []
 
-[3]
-Underfull \vbox (badness 1960) has occurred while \output is active []
-
- [4]
+[3] [4]
 Underfull \hbox (badness 6078) in paragraph at lines 114--116
 \OT1/cmr/m/n/10.95 be the cor-re-spond-ing term with $\OML/cmm/m/it/10.95 ^^T \
 OT1/cmr/m/n/10.95 =
@@ -337,7 +284,10 @@ Overfull \hbox (2.65732pt too wide) in alignment at lines 247--252
  [][][] []
  []
 
-[7]
+
+Underfull \vbox (badness 4995) has occurred while \output is active []
+
+ [7]
 Underfull \hbox (badness 1107) in paragraph at lines 258--259
 []\OT1/cmr/m/n/10.95 If the tol-er-ances, $\OML/cmm/m/it/10.95 ^^N[]$ \OT1/cmr/
 m/n/10.95 and $\OML/cmm/m/it/10.95 ^^N[]$\OT1/cmr/m/n/10.95 , are made
@@ -374,7 +324,10 @@ Underfull \hbox (badness 2961) in paragraph at lines 258--259
 []$\OT1/cmr/m/n/10.95 ) weighted mean ob-served lean-ing, i.e.
  []
 
-[8]
+
+Underfull \vbox (badness 2393) has occurred while \output is active []
+
+ [8]
 Underfull \hbox (badness 6428) in paragraph at lines 292--293
 \OT1/cmr/m/n/10.95 ob-served lean-ing when ap-plied to non-
  []
@@ -397,44 +350,29 @@ Overfull \hbox (12.58511pt too wide) in paragraph at lines 322--330
 [][] 
  []
 
-[10]
+
+Underfull \vbox (badness 3291) has occurred while \output is active []
+
+ [10]
 File: SimpleCyclicexample_Bxytol.eps Graphic file (type eps)
- <SimpleCyclicexample_Bxytol.eps>
+
+<SimpleCyclicexample_Bxytol.eps>
 Overfull \hbox (9.35905pt too wide) in paragraph at lines 378--379
 [][] 
  []
 
-
-LaTeX Warning: Citation `McNamesIEEE' on page 11 undefined on input line 383.
-
-
+[11]
 Underfull \hbox (badness 2529) in paragraph at lines 383--384
 []\OT1/cmr/m/n/10.95 It has been ar-gued that lagged cross-
  []
 
-
-LaTeX Warning: Citation `Rogosa' on page 11 undefined on input line 387.
-
-[11]
-
-LaTeX Warning: Citation `Rogosa' on page 12 undefined on input line 391.
-
 File: SimpleCyclicexample_difflags.eps Graphic file (type eps)
-<SimpleCyclicexample_difflags.eps>
-
-LaTeX Warning: Citation `Rogosa' on page 12 undefined on input line 404.
-
-[12]
-
-LaTeX Warning: Citation `Rogosa' on page 13 undefined on input line 465.
-
-
-LaTeX Warning: Citation `??' on page 13 undefined on input line 465.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<SimpleCyclicexample_difflags.eps> [12]
+Underfull \vbox (badness 1552) has occurred while \output is active []
 
  [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: NonlinearCyclicexample_BxytolC02.eps Graphic file (type eps)
 
 <NonlinearCyclicexample_BxytolC02.eps>
@@ -449,21 +387,9 @@ Overfull \hbox (13.78964pt too wide) in paragraph at lines 486--494
 [][] 
  []
 
-
-LaTeX Warning: Citation `Sugihara' on page 14 undefined on input line 498.
-
-
-LaTeX Warning: Citation `Lloyd1995' on page 14 undefined on input line 515.
-
-
-LaTeX Warning: Citation `Sugihara2012' on page 14 undefined on input line 515.
-
 [14]
-Underfull \vbox (badness 6412) has occurred while \output is active []
-
 File: CoupLogexample_rx35ry35.eps Graphic file (type eps)
-
-<CoupLogexample_rx35ry35.eps>
+ <CoupLogexample_rx35ry35.eps>
 File: CoupLogexample_rx40ry20.eps Graphic file (type eps)
  <CoupLogexample_rx40ry20.eps>
 File: CoupLogexample_rx20ry40.eps Graphic file (type eps)
@@ -476,16 +402,10 @@ Overfull \hbox (19.51106pt too wide) in paragraph at lines 520--528
  []
 
 [15]
-
-LaTeX Warning: Citation `Rubin' on page 16 undefined on input line 537.
-
-
-LaTeX Warning: Citation `Pearl' on page 16 undefined on input line 537.
-
-
-LaTeX Warning: Citation `Sugihara' on page 16 undefined on input line 537.
+Underfull \vbox (badness 1577) has occurred while \output is active []
 
 File: XYZIRexample_Bxytol.eps Graphic file (type eps)
+
 <XYZIRexample_Bxytol.eps>
 File: XYZIRexample_BxytolZXandY.eps Graphic file (type eps)
  <XYZIRexample_BxytolZXandY.eps>
@@ -495,7 +415,7 @@ File: XYZIRexample_BxytolZXandYandZ.eps Graphic file (type eps)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 4954) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
 File: EmpiricalData_p87X.eps Graphic file (type eps)
@@ -507,114 +427,157 @@ Overfull \hbox (25.42421pt too wide) in paragraph at lines 610--616
 [][] 
  []
 
-
+[18]
 Underfull \hbox (badness 1803) in paragraph at lines 625--626
 []\OT1/cmr/m/n/10.95 The cause-effect as-sign-ment will be set
  []
 
-
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
- [18]
-Underfull \hbox (badness 1158) in paragraph at lines 652--653
-\OT1/cmr/m/n/10.95 tol-er-ance do-mains, im-ply causal in-fer-ences
+File: EmpiricalData_p87leans.eps Graphic file (type eps)
+<EmpiricalData_p87leans.eps>
+Overfull \hbox (16.58601pt too wide) in paragraph at lines 629--630
+[][] 
  []
 
-[19]
 
-LaTeX Warning: Citation `omniweb.gsfc.nasa.gov/html/ow_data.html' on page 20 un
-defined on input line 666.
+LaTeX Warning: Reference `tab:emp' on page 19 undefined on input line 634.
 
 
-LaTeX Warning: Citation `IAGA Bulletin 40' on page 20 undefined on input line 6
-66.
+Underfull \hbox (badness 1067) in paragraph at lines 634--635
+[]\OT1/cmr/m/n/10.95 Table [] shows the lean-ings, us-ing the
+ []
 
 
-LaTeX Warning: Citation `M. A. Hapgood' on page 20 undefined on input line 666.
+LaTeX Warning: Reference `tab:emp' on page 19 undefined on input line 636.
 
 
-
-LaTeX Warning: Citation `"Space physics coordinate transformations: A user guid
-e"' on page 20 undefined on input line 666.
+LaTeX Warning: Reference `tab:emp' on page 19 undefined on input line 646.
 
 
-LaTeX Warning: Citation `in Planetary and Space Science' on page 20 undefined o
-n input line 666.
+LaTeX Warning: Citation `spaceweathertextbook' on page 19 undefined on input li
+ne 648.
 
 
-LaTeX Warning: Citation `Vol. 40' on page 20 undefined on input line 666.
-
-
-LaTeX Warning: Citation `No. 5' on page 20 undefined on input line 666.
-
-
-LaTeX Warning: Citation `pp. 711-717' on page 20 undefined on input line 666.
-
-
-LaTeX Warning: Citation `1992' on page 20 undefined on input line 666.
-
-
-LaTeX Warning: Citation `spaceweathertextbook' on page 20 undefined on input li
-ne 666.
-
-
-Underfull \hbox (badness 1603) in paragraph at lines 666--667
+Underfull \hbox (badness 1603) in paragraph at lines 648--649
 []\OT1/cmr/m/n/10.95 The NASA OMNI data set con-sists of
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 666--667
+Underfull \hbox (badness 1596) in paragraph at lines 648--649
 \OT1/cmr/m/n/10.95 sev-eral dif-fer-ent space weather pa-ram-e-ters
  []
 
-File: SolarDataBxDst.eps Graphic file (type eps)
-<SolarDataBxDst.eps>
-File: SolarDataByDst.eps Graphic file (type eps)
- <SolarDataByDst.eps>
-File: SolarDataBzDst.eps Graphic file (type eps)
- <SolarDataBzDst.eps>
+[19]
+File: SolarDataBzNormDst.eps Graphic file (type eps)
+ <SolarDataBzNormDst.eps>
 File: NoCauseplot.eps Graphic file (type eps)
+ <NoCauseplot.eps>
+Underfull \hbox (badness 1005) in paragraph at lines 681--687
+[]\OT1/cmr/m/n/10.95 There is no in-tu-itive causal re-la-tion-ship
+ []
 
-<NoCauseplot.eps>
 
 LaTeX Warning: Citation `http://www.tylervigen.com/view_correlation?id=97' on p
-age 20 undefined on input line 711.
+age 20 undefined on input line 688.
 
 [20]
-
-LaTeX Warning: Citation `Pearl' on page 21 undefined on input line 713.
+Underfull \hbox (badness 2894) in paragraph at lines 693--694
+\OT1/cmr/m/n/10.95 Causal in-fer-ence us-ing ob-ser-va-tional data
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 716--717
-\OT1/cmr/m/n/10.95 Causal in-fer-ence us-ing ob-ser-va-tional data
- []
-
-[21]
-Underfull \hbox (badness 1769) in paragraph at lines 718--719
+Underfull \hbox (badness 1769) in paragraph at lines 695--696
 \OT1/cmr/m/n/10.95 niques, in-clud-ing Granger causal-ity (GC),
  []
 
+[21] (./main.bbl
+Underfull \hbox (badness 1661) in paragraph at lines 23--26
+[]\OT1/cmr/m/n/10.95 Jean-Marie Du-four and Eric Re-nault.
+ []
 
-LaTeX Warning: Citation `Pearl' on page 22 undefined on input line 720.
+
+Underfull \hbox (badness 2080) in paragraph at lines 28--32
+[]\OT1/cmr/m/n/10.95 Mahmoud El-Gohary and James Mc-
+ []
 
 
-LaTeX Warning: Citation `Klienberg' on page 22 undefined on input line 720.
+Underfull \hbox (badness 3343) in paragraph at lines 28--32
+\OT1/cmr/m/n/10.95 Names.  Es-tab-lish-ing causal-ity with
+ []
 
-[22] (./main.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\OT1/cmr/m/n/10.95 whitened cross-correlation anal-y-sis.
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 34--39
+\OT1/cmr/m/n/10.95 re-la-tions by econo-met-ric mod-els and
+ []
+
+[22]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+
+Underfull \hbox (badness 1152) in paragraph at lines 63--67
+\OT1/cmr/m/n/10.95 fer func-tion and sta-tis-ti-cal as-sess-ment
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 98--103
+\OT1/cmr/m/n/10.95 Bis-cay, Jorge Bosch-Bayard, Di-et-rich
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 115--118
+[]\OT1/cmr/m/n/10.95 David L. Roberts and Stephen Nord.
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 120--123
+[]\OT1/cmr/m/n/10.95 David Ro-gosa.  A cri-tique of cross-
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+
+Underfull \hbox (badness 1215) in paragraph at lines 130--133
+[]\OT1/cmr/m/n/10.95 Michael Small and C.K. Tse.  Op-ti-
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 146--152
+\OT1/cmr/m/n/10.95 In Wal-ter Daele-mans, Bart Goethals,
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 146--152
+\OT1/cmr/m/it/10.95 Learn-ing and Knowl-edge Dis-cov-ery in
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 146--152
+\OT1/cmr/m/it/10.95 in Com-puter Sci-ence\OT1/cmr/m/n/10.95 , pages 440--455.
+ []
+
+[23]) [24
+
+] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
  3191 strings out of 495029
- 47847 string characters out of 6181522
+ 47769 string characters out of 6181522
  111406 words of memory out of 5000000
- 6348 multiletter control sequences out of 15000+600000
+ 6346 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,16n,42p,1444b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,42p,1444b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (22 pages, 111856 bytes).
+Output written on main.dvi (24 pages, 118456 bytes).

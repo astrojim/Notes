@@ -1,0 +1,158 @@
+\begin{thebibliography}{10}
+
+\bibitem{bache2013}
+K.~Bache and M.~Lichman.
+\newblock {UCI} machine learning repository, 2013.
+
+\bibitem{box2013}
+G.E.P. Box, G.M. Jenkins, and G.C. Reinsel.
+\newblock {\em Time Series Analysis: Forecasting and Control}.
+\newblock Wiley Series in Probability and Statistics. Wiley, 2013.
+
+\bibitem{Bunge1979}
+Mario Bunge.
+\newblock {\em Causality and modern science}.
+\newblock Courier Corporation, 1979.
+
+\bibitem{dufour2006}
+Jean-Marie Dufour, Denis Pelletier, and {\'E}ric Renault.
+\newblock Short run and long run causality in time series: inference.
+\newblock {\em Journal of Econometrics}, 132(2):337--362, 2006.
+
+\bibitem{dufour1998}
+Jean-Marie Dufour and Eric Renault.
+\newblock Short run and long run causality in time series: theory.
+\newblock {\em Econometrica}, pages 1099--1125, 1998.
+
+\bibitem{McNames2007}
+Mahmoud El-Gohary and James McNames.
+\newblock Establishing causality with whitened cross-correlation analysis.
+\newblock {\em Biomedical Engineering, IEEE Transactions on},
+  54(12):2214--2222, 2007.
+
+\bibitem{granger1969}
+Clive~WJ Granger.
+\newblock Investigating causal relations by econometric models and
+  cross-spectral methods.
+\newblock {\em Econometrica: Journal of the Econometric Society}, pages
+  424--438, 1969.
+
+\bibitem{Granger1980}
+C.W.J. Granger.
+\newblock Testing for causality: A personal viewpoint.
+\newblock {\em Journal of Economic Dynamics and Control}, 2(0):329 -- 352,
+  1980.
+
+\bibitem{Hapgood1992}
+MA~Hapgood.
+\newblock Space physics coordinate transformations: A user guide.
+\newblock {\em Planetary and Space Science}, 40(5):711--717, 1992.
+
+\bibitem{Rubin2015}
+G.W. Imbens and D.B. Rubin.
+\newblock {\em Causal Inference in Statistics, Social, and Biomedical Sciences:
+  An Introduction}.
+\newblock Cambridge University Press, 2015.
+
+\bibitem{kaiser2002}
+A.~Kaiser and T.~Schreiber.
+\newblock Information transfer in continuous processes.
+\newblock {\em Physica D: Nonlinear Phenomena}, 166(1–2):43 -- 62, 2002.
+
+\bibitem{Kaminski2001}
+Maciej Kaminski, Mingzhou Ding, Wilson~A. Truccolo, and Steven~L. Bressler.
+\newblock Evaluating causal relations in neural systems: Granger causality,
+  directed transfer function and statistical assessment of significance.
+\newblock {\em Biological Cybernetics}, 85(2):145--157, 2001.
+
+\bibitem{King2005}
+JH~King and NE~Papitashvili.
+\newblock Solar wind spatial scales in and comparisons of hourly wind and ace
+  plasma and magnetic field data.
+\newblock {\em Journal of Geophysical Research: Space Physics (1978--2012)},
+  110(A2), 2005.
+
+\bibitem{kleinberg2012}
+S.~Kleinberg.
+\newblock {\em Causality, Probability, and Time}.
+\newblock Causality, Probability, and Time. Cambridge University Press, 2012.
+
+\bibitem{liu2012}
+Yan Liu and TM~Bahadori.
+\newblock A survey on granger causality: A conputational view.
+\newblock {\em University of Southern California}, pages 1--13, 2012.
+
+\bibitem{Lloyd1995}
+Alun~L. Lloyd.
+\newblock The coupled logistic map: a simple model for the effects of spatial
+  heterogeneity on population dynamics.
+\newblock {\em Journal of Theoretical Biology}, 173(3):217 -- 230, 1995.
+
+\bibitem{mosedale2006}
+Timothy~J Mosedale, David~B Stephenson, Matthew Collins, and Terence~C Mills.
+\newblock Granger causality of coupled climate processes: Ocean feedback on the
+  north atlantic oscillation.
+\newblock {\em Journal of climate}, 19(7), 2006.
+
+\bibitem{pascual2014}
+Roberto~D Pascual-Marqui, Rolando~J Biscay, Jorge Bosch-Bayard, Dietrich
+  Lehmann, Kieko Kochi, Toshihiko Kinoshita, Naoto Yamada, and Norihiro Sadato.
+\newblock Assessing direct paths of intracortical causal information flow of
+  oscillatory activity with the isolated effective coherence (icoh).
+\newblock {\em Name: Frontiers in Human Neuroscience}, 8:448, 2014.
+
+\bibitem{Pearl2000}
+Judea Pearl.
+\newblock {\em Causality: models, reasoning and inference}, volume~29.
+\newblock Cambridge Univ Press, 2000.
+
+\bibitem{Pierce1977}
+David~A. Pierce and Larry~D. Haugh.
+\newblock Causality in temporal systems: Characterization and a survey.
+\newblock {\em Journal of Econometrics}, 5(3):265 -- 293, 1977.
+
+\bibitem{Roberts1985}
+David~L. Roberts and Stephen Nord.
+\newblock Causality tests and functional form sensitivity.
+\newblock {\em Applied Economics}, 17(1):135--141, 1985.
+
+\bibitem{Rogosa1980}
+David Rogosa.
+\newblock A critique of cross-lagged correlation.
+\newblock {\em Psychological Bulletin}, 88(2):245, 1980.
+
+\bibitem{Schreiber2000}
+Thomas Schreiber.
+\newblock Measuring information transfer.
+\newblock {\em Phys. Rev. Lett.}, 85:461--464, Jul 2000.
+
+\bibitem{Small2004}
+Michael Small and C.K. Tse.
+\newblock Optimal embedding parameters: a modelling paradigm.
+\newblock {\em Physica D: Nonlinear Phenomena}, 194(3–4):283 -- 296, 2004.
+
+\bibitem{Sugihara2012}
+George Sugihara, Robert May, Hao Ye, Chih-hao Hsieh, Ethan Deyle, Michael
+  Fogarty, and Stephan Munch.
+\newblock Detecting causality in complex ecosystems.
+\newblock {\em Science}, 338(6106):496--500, 2012.
+
+\bibitem{IAGA}
+M~Sugiura and T~Kamei.
+\newblock {\em IAGA Bulletin N 40}.
+\newblock International Association of Geomagnetism and Aeronomy, 1991.
+
+\bibitem{Sun2008}
+Xiaohai Sun.
+\newblock Assessing nonlinear granger causality from multivariate time series.
+\newblock In Walter Daelemans, Bart Goethals, and Katharina Morik, editors,
+  {\em Machine Learning and Knowledge Discovery in Databases}, volume 5212 of
+  {\em Lecture Notes in Computer Science}, pages 440--455. Springer Berlin
+  Heidelberg, 2008.
+
+\bibitem{Suppes1970}
+Patrick Suppes.
+\newblock {\em A Probablistic Theory of Causality}.
+\newblock North Holland Publishing Company, 1970.
+
+\end{thebibliography}
