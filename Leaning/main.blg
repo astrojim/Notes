@@ -2,51 +2,53 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
-Database file #1: main.bib
+Database file #1: mainNotes.bib
+Warning--entry type for "Note1" isn't style-file defined
+--line 1 of file mainNotes.bib
+Database file #2: main.bib
 Warning--I'm ignoring Granger1980's extra "volume" field
 --line 5 of file main.bib
 Warning--I'm ignoring Sugihara2012's extra "volume" field
 --line 62 of file main.bib
-Warning--I didn't find a database entry for "spaceweathertextbook"
-You've used 28 entries,
+You've used 31 entries,
             2118 wiz_defined-function locations,
-            698 strings with 8474 characters,
-and the built_in function-call counts, 9022 in all, are:
-= -- 880
-> -- 394
+            718 strings with 9852 characters,
+and the built_in function-call counts, 9990 in all, are:
+= -- 971
+> -- 440
 < -- 6
-+ -- 159
-- -- 127
-* -- 622
-:= -- 1513
-add.period$ -- 86
-call.type$ -- 28
-change.case$ -- 139
++ -- 178
+- -- 143
+* -- 697
+:= -- 1665
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 156
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 348
-empty$ -- 728
-format.name$ -- 127
-if$ -- 1896
+cite$ -- 31
+duplicate$ -- 377
+empty$ -- 810
+format.name$ -- 143
+if$ -- 2097
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 34
-newline$ -- 142
-num.names$ -- 58
-pop$ -- 144
+int.to.str$ -- 31
+missing$ -- 36
+newline$ -- 155
+num.names$ -- 62
+pop$ -- 165
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 133
 quote$ -- 0
-skip$ -- 247
+skip$ -- 269
 stack$ -- 0
-substring$ -- 579
-swap$ -- 65
+substring$ -- 658
+swap$ -- 68
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 98
+type$ -- 110
 warning$ -- 0
-while$ -- 86
-width$ -- 30
-write$ -- 305
+while$ -- 93
+width$ -- 33
+write$ -- 332
 (There were 3 warnings)

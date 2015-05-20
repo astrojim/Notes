@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  13 MAY 2015 19:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  20 MAY 2015 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,26 +6,104 @@ entering extended mode
 (./main.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 2 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(./revtex4-1.cls
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
+ex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+\eqncolsep=\skip41
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\footins@recovered=\box32
+\column@recovered=\box33
+\pagesofar=\box34
+\footsofar=\box35
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5578.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count91
+\fbox@1=\box36
+\c@table=\count92
+\fbox@2=\box37
+\c@video=\count93
+\fbox@4=\box38
+\@bibdataout=\write3
+\widetext@top=\box39
+\widetext@bot=\box40
+Class revtex4-1 Info: Selecting society aps on input line 7542.
+(./aps4-1.rtx
+File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
+mentation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+Class revtex4-1 Info: Selecting journal pre on input line 7544.
+Class revtex4-1 Info: APS journal PRE selected on input line 7545.
+
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+(./aps10pt4-1.rtx
+File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
+documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip44
+\bibsep=\skip45
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+ (./revsymb4-1.sty
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
+or documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -33,51 +111,53 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks14
-\ex@=\dimen103
-))
+\@emptytoks=\toks16
+\ex@=\dimen102
+)
+LaTeX Info: Redefining \text on input line 39.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen104
+\pmbraise@=\dimen103
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count87
+\inf@bad=\count95
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count88
-\leftroot@=\count89
+\uproot@=\count96
+\leftroot@=\count97
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count90
-\DOTSCASE@=\count91
+\classnum@=\count98
+\DOTSCASE@=\count99
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen105
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen104
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
-\dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
-\tag@help=\toks15
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
-\andhelp@=\toks16
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
-\@envbody=\toks17
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks18
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip11
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks17
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks18
+\eqnshift@=\dimen105
+\alignsep@=\dimen106
+\tagshift@=\dimen107
+\tagwidth@=\dimen108
+\totwidth@=\dimen109
+\lineht@=\dimen110
+\@envbody=\toks19
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -86,7 +166,7 @@ Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks19
+\KV@toks@=\toks21
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -102,8 +182,8 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
@@ -114,31 +194,43 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen114
-\captionmargin@=\dimen115
-\captionwidth=\dimen116
-\caption@tempdima=\dimen117
-\caption@indent=\dimen118
-\caption@parindent=\dimen119
-\caption@hangindent=\dimen120
+\captionmargin=\dimen113
+\captionmargin@=\dimen114
+\captionwidth=\dimen115
+\caption@tempdima=\dimen116
+\caption@indent=\dimen117
+\caption@parindent=\dimen118
+\caption@hangindent=\dimen119
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
 )
-\c@ContinuedFloat=\count99
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecapti
+onskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr \@make
+@capt@title {#1}{#2}}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \f
+lushing \let \footnote \@footnotemark@gobble \@make@capt@title {#1}{#2}\par \en
+dgroup }{\global \@minipagefalse \hb@xt@ \hsize {\hfil \unhbox \@tempboxa \hfil
+ }}\endgroup \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count107
 )
-\c@KVtest=\count100
-\sf@farskip=\skip46
-\sf@captopadj=\dimen121
-\sf@capskip=\skip47
-\sf@nearskip=\skip48
-\c@subfigure=\count101
-\c@subfigure@save=\count102
-\c@lofdepth=\count103
-\c@subtable=\count104
-\c@subtable@save=\count105
-\c@lotdepth=\count106
-\sf@top=\skip49
-\sf@bottom=\skip50
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+\c@KVtest=\count108
+\sf@farskip=\skip49
+\sf@captopadj=\dimen120
+\sf@capskip=\skip50
+\sf@nearskip=\skip51
+\c@subfigure=\count109
+\c@subfigure@save=\count110
+\c@lofdepth=\count111
+\c@subtable=\count112
+\c@subtable@save=\count113
+\c@lotdepth=\count114
+\sf@top=\skip52
+\sf@bottom=\skip53
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -199,7 +291,16 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (./main.aux)
+LaTeX Info: Redefining \frak on input line 111.
+LaTeX Info: Redefining \Bbb on input line 113.
+))
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 12.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 12.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 12.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 12.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 12.
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -217,300 +318,130 @@ LaTeX Font Info:    ... okay on input line 12.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+\openout3 = `mainNotes.bib'.
 
-[1
-
-
-]
 LaTeX Font Info:    Try loading font information for U+msa on input line 27.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \vbox (badness 2970) has occurred while \output is active []
-
- [2
-
-]
-Overfull \hbox (3.42897pt too wide) in alignment at lines 60--63
- [][][] []
+) [1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+[]\OT1/cmr/m/n/10 Two other pen-chants, for which, $\OML/cmm/m/it/10 ^^T \OT1/c
+mr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 73--74
-[]\OT1/cmr/m/n/10.95 Assuming $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cm
-m/m/it/10.95 E\OT1/cmr/m/n/10.95 )$ and $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.9
-5 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 )$ can be es-ti-
+Underfull \hbox (badness 6063) in paragraph at lines 134--135
+\OML/cmm/m/it/10 P []$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 ^^T \OT1/cmr/m/n/1
+0 = \OML/cmm/m/it/10 P []$
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 134--135
+\OT1/cmr/m/n/10 are also pos-si-ble. These pen-chants are as-so-ci-ated
  []
 
 [3] [4]
-Underfull \hbox (badness 6078) in paragraph at lines 114--116
-\OT1/cmr/m/n/10.95 be the cor-re-spond-ing term with $\OML/cmm/m/it/10.95 ^^T \
-OT1/cmr/m/n/10.95 =
- []
-
-
-Underfull \hbox (badness 2932) in paragraph at lines 126--127
-\OT1/cmr/m/n/10.95 this pen-chant cal-cu-la-tion us-ing fre-quency
+Underfull \hbox (badness 1320) in paragraph at lines 280--281
+\OT1/cmr/m/n/10 in-fer-ence, i.e. $\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 ^^U[]\OMS
+/cmsy/m/n/10 i[] ) \OT1/cmr/bx/n/10 X[] [] Y[]$ \OT1/cmr/m/n/10 as ex-
  []
 
 [5]
-Underfull \hbox (badness 3758) in paragraph at lines 183--184
-\OT1/cmr/m/n/10.95 The \OT1/cmr/m/it/10.95 un-ob-served \OT1/cmr/m/n/10.95 pen-
-chants (us-ing the 1-
- []
-
-
-Underfull \hbox (badness 4156) in paragraph at lines 206--206
-[]\OT1/cmr/bx/n/12 Cause-effect as-sign-ment in-de-
- []
-
-[6]
-Overfull \hbox (4.81694pt too wide) in alignment at lines 219--223
- [][][] []
- []
-
-
-Overfull \hbox (4.81694pt too wide) in alignment at lines 225--230
- [][][] []
- []
-
-
-Overfull \hbox (2.65732pt too wide) in alignment at lines 247--252
- [][][] []
- []
-
-[7]
-Underfull \hbox (badness 1931) in paragraph at lines 269--270
-\OT1/cmr/bx/n/10.95 R[]$\OT1/cmr/m/n/10.95 , the weighted mean ob-served lean-i
-ng
- []
-
-[8]
-Underfull \hbox (badness 6428) in paragraph at lines 292--293
-\OT1/cmr/m/n/10.95 ob-served lean-ing when ap-plied to non-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Underfull \hbox (badness 1163) in paragraph at lines 299--299
-[]\OT1/cmr/bx/n/12 Impulse with Noisy Re-sponse
- []
-
 File: SimpleIRexample_diffLpart1.eps Graphic file (type eps)
-<SimpleIRexample_diffLpart1.eps>
+ <SimpleIRexample_diffLpart1.eps>
 File: SimpleIRexample_diffLpart2.eps Graphic file (type eps)
  <SimpleIRexample_diffLpart2.eps>
 File: SimpleIRexample_diffLpart3.eps Graphic file (type eps)
 
 <SimpleIRexample_diffLpart3.eps>
 File: SimpleIRexample_diffLpart4.eps Graphic file (type eps)
- <SimpleIRexample_diffLpart4.eps>
-Overfull \hbox (12.58511pt too wide) in paragraph at lines 322--330
-[][] 
- []
-
-[10]
+ <SimpleIRexample_diffLpart4.eps> [6]
 File: SimpleCyclicexample_Bxytol.eps Graphic file (type eps)
- <SimpleCyclicexample_Bxytol.eps>
-Overfull \hbox (9.35905pt too wide) in paragraph at lines 378--379
-[][] 
- []
 
-
-Underfull \hbox (badness 2529) in paragraph at lines 383--384
-[]\OT1/cmr/m/n/10.95 It has been ar-gued that lagged cross-
- []
-
-[11]
+<SimpleCyclicexample_Bxytol.eps> [7]
 File: SimpleCyclicexample_difflags.eps Graphic file (type eps)
- <SimpleCyclicexample_difflags.eps> [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-File: NonlinearCyclicexample_BxytolC02.eps Graphic file (type eps)
-
-<NonlinearCyclicexample_BxytolC02.eps>
-File: NonlinearCyclicexample_BxytolC04.eps Graphic file (type eps)
- <NonlinearCyclicexample_BxytolC04.eps>
-File: NonlinearCyclicexample_BxytolC06.eps Graphic file (type eps)
-
-<NonlinearCyclicexample_BxytolC06.eps>
-File: NonlinearCyclicexample_BxytolC08.eps Graphic file (type eps)
- <NonlinearCyclicexample_BxytolC08.eps>
-Overfull \hbox (13.78964pt too wide) in paragraph at lines 486--494
-[][] 
+ <SimpleCyclicexample_difflags.eps>
+Underfull \hbox (badness 2469) in paragraph at lines 424--425
+[]\OT1/cmr/m/n/10 The cross-correlation dif-fer-ence tech-nique is also
  []
 
-[14]
+[8]
+File: NonlinearCyclicexample_BxytolC02.eps Graphic file (type eps)
+ <NonlinearCyclicexample_BxytolC02.eps>
+File: NonlinearCyclicexample_BxytolC04.eps Graphic file (type eps)
+
+<NonlinearCyclicexample_BxytolC04.eps>
+File: NonlinearCyclicexample_BxytolC06.eps Graphic file (type eps)
+ <NonlinearCyclicexample_BxytolC06.eps>
+File: NonlinearCyclicexample_BxytolC08.eps Graphic file (type eps)
+
+<NonlinearCyclicexample_BxytolC08.eps> [9]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 536.
+
 File: CoupLogexample_rx35ry35.eps Graphic file (type eps)
- <CoupLogexample_rx35ry35.eps>
+<CoupLogexample_rx35ry35.eps>
 File: CoupLogexample_rx40ry20.eps Graphic file (type eps)
  <CoupLogexample_rx40ry20.eps>
 File: CoupLogexample_rx20ry40.eps Graphic file (type eps)
 
 <CoupLogexample_rx20ry40.eps>
 File: CoupLogexample_rx38ry32.eps Graphic file (type eps)
- <CoupLogexample_rx38ry32.eps>
-Overfull \hbox (19.51106pt too wide) in paragraph at lines 520--528
-[][] 
- []
-
-[15]
+ <CoupLogexample_rx38ry32.eps> [10]
 File: XYZIRexample_Bxytol.eps Graphic file (type eps)
- <XYZIRexample_Bxytol.eps>
+
+<XYZIRexample_Bxytol.eps>
 File: XYZIRexample_BxytolZXandY.eps Graphic file (type eps)
  <XYZIRexample_BxytolZXandY.eps>
 File: XYZIRexample_BxytolZXandYandZ.eps Graphic file (type eps)
 
-<XYZIRexample_BxytolZXandYandZ.eps> [16]
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
- [17]
+<XYZIRexample_BxytolZXandYandZ.eps>
 File: EmpiricalData_p87X.eps Graphic file (type eps)
-
-<EmpiricalData_p87X.eps>
+ <EmpiricalData_p87X.eps>
 File: EmpiricalData_p87Y.eps Graphic file (type eps)
- <EmpiricalData_p87Y.eps>
-Overfull \hbox (25.42421pt too wide) in paragraph at lines 610--616
-[][] 
- []
 
-
-Underfull \vbox (badness 1515) has occurred while \output is active []
-
- [18]
-Underfull \hbox (badness 1803) in paragraph at lines 625--626
-[]\OT1/cmr/m/n/10.95 The cause-effect as-sign-ment will be set
- []
-
+<EmpiricalData_p87Y.eps> [11]
 File: EmpiricalData_p87leans.eps Graphic file (type eps)
-<EmpiricalData_p87leans.eps>
-Underfull \hbox (badness 1158) in paragraph at lines 634--635
-\OT1/cmr/m/n/10.95 tol-er-ance do-mains, im-ply causal in-fer-ences
+ <EmpiricalData_p87leans.eps>
+Underfull \hbox (badness 1454) in paragraph at lines 666--667
+\OT1/cmr/m/n/10 time se-ries mea-sure-ments of sev-eral dif-fer-ent space
  []
 
+[12]
 
-LaTeX Warning: Citation `spaceweathertextbook' on page 19 undefined on input li
-ne 646.
-
-
-Underfull \hbox (badness 1603) in paragraph at lines 646--647
-[]\OT1/cmr/m/n/10.95 The NASA OMNI data set con-sists of
- []
-
-
-Underfull \hbox (badness 1596) in paragraph at lines 646--647
-\OT1/cmr/m/n/10.95 sev-eral dif-fer-ent space weather pa-ram-e-ters
- []
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 668.
 
 File: SolarDataBzNormDst.eps Graphic file (type eps)
-<SolarDataBzNormDst.eps> [19]
+<SolarDataBzNormDst.eps>
 File: NoCauseplot.eps Graphic file (type eps)
- <NoCauseplot.eps>
-Underfull \hbox (badness 1005) in paragraph at lines 679--685
-[]\OT1/cmr/m/n/10.95 There is no in-tu-itive causal re-la-tion-ship
+ <NoCauseplot.eps> [13]
+Underfull \hbox (badness 2158) in paragraph at lines 711--712
+\OT1/cmr/m/n/10 here, in-volves many dif-fer-ent tech-niques, in-clud-ing
  []
 
-[20]
-Underfull \hbox (badness 2894) in paragraph at lines 689--690
-\OT1/cmr/m/n/10.95 Causal in-fer-ence us-ing ob-ser-va-tional data
- []
-
-
-Underfull \hbox (badness 1769) in paragraph at lines 691--692
-\OT1/cmr/m/n/10.95 niques, in-clud-ing Granger causal-ity (GC),
- []
-
-[21] (./main.bbl
-Underfull \hbox (badness 1661) in paragraph at lines 23--26
-[]\OT1/cmr/m/n/10.95 Jean-Marie Du-four and Eric Re-nault.
- []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 28--32
-[]\OT1/cmr/m/n/10.95 Mahmoud El-Gohary and James Mc-
- []
-
-
-Underfull \hbox (badness 3343) in paragraph at lines 28--32
-\OT1/cmr/m/n/10.95 Names.  Es-tab-lish-ing causal-ity with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10.95 whitened cross-correlation anal-y-sis.
- []
-
-
-Underfull \hbox (badness 3291) in paragraph at lines 34--39
-\OT1/cmr/m/n/10.95 re-la-tions by econo-met-ric mod-els and
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-
-Underfull \hbox (badness 1152) in paragraph at lines 63--67
-\OT1/cmr/m/n/10.95 fer func-tion and sta-tis-ti-cal as-sess-ment
- []
-
-[22]
-Underfull \hbox (badness 3601) in paragraph at lines 98--103
-\OT1/cmr/m/n/10.95 Bis-cay, Jorge Bosch-Bayard, Di-et-rich
- []
-
-
-Underfull \hbox (badness 1248) in paragraph at lines 115--118
-[]\OT1/cmr/m/n/10.95 David L. Roberts and Stephen Nord.
- []
-
-
-Underfull \hbox (badness 1748) in paragraph at lines 120--123
-[]\OT1/cmr/m/n/10.95 David Ro-gosa.  A cri-tique of cross-
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-
-Underfull \hbox (badness 1215) in paragraph at lines 130--133
-[]\OT1/cmr/m/n/10.95 Michael Small and C.K. Tse.  Op-ti-
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 146--152
-\OT1/cmr/m/n/10.95 In Wal-ter Daele-mans, Bart Goethals,
- []
-
-
-Underfull \hbox (badness 1648) in paragraph at lines 146--152
-\OT1/cmr/m/it/10.95 Learn-ing and Knowl-edge Dis-cov-ery in
- []
-
-
-Underfull \hbox (badness 2158) in paragraph at lines 146--152
-\OT1/cmr/m/it/10.95 in Com-puter Sci-ence\OT1/cmr/m/n/10.95 , pages 440--455.
- []
-
-) [23] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(./main.bbl [14]
+Missing character: There is no â in font cmr9!
+Missing character: There is no € in font cmr9!
+Missing character: There is no “ in font cmr9!
+Missing character: There is no â in font cmr9!
+Missing character: There is no € in font cmr9!
+Missing character: There is no “ in font cmr9!
+) [15] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3189 strings out of 495029
- 47710 string characters out of 6181522
- 111406 words of memory out of 5000000
- 6344 multiletter control sequences out of 15000+600000
- 12319 words of font info for 46 fonts, out of 8000000 for 9000
+ 5260 strings out of 495029
+ 74766 string characters out of 6181522
+ 177370 words of memory out of 5000000
+ 8386 multiletter control sequences out of 15000+600000
+ 12827 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,16n,42p,1414b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,42p,1487b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (23 pages, 116116 bytes).
+Output written on main.dvi (15 pages, 114552 bytes).

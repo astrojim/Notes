@@ -1,5 +1,5 @@
-\documentclass[a4paper,11pt,twocolumn]{article}
-%\documentclass[twocolumn,aps,pre,groupedaddress]{revtex4-1}
+%\documentclass[a4paper,11pt,twocolumn]{article}
+\documentclass[twocolumn,aps,pre,groupedaddress]{revtex4-1}
 
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -12,88 +12,105 @@
 \begin{document}
 \title{Non-parametric causal inference in bivariate time series data}
 \author{James M. McCracken}
-%\email{jmccrac1@masonlive.gmu.edu}
-%\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
+\email{jmccrac1@masonlive.gmu.edu}
+\affiliation{Department of Physics and Astronomy \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
 \author{Robert S. Weigel}
-%\email{rweigel@gmu.edu}
-%\affiliation{School of Physics, Astronomy, and Computational Sciences \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
+\email{rweigel@gmu.edu}
+\affiliation{Department of Physics and Astronomy \\ George Mason University \\ 4400 University Drive MS 3F3, Fairfax,VA. 22030-4444}
 \date{\today}
 
 \begin{abstract}
-Many scientific disciplines rely on observational data alone.  For example, there is no current technology that can control the interaction between the solar wind and the Earth's magnetic field, so space weather studies rely on data collected without performing controlled experiments (i.e.\ without interventions to the system dynamics).  Unfortunately, causal inference with such observational data sets is difficult.  It is well known that correlation does not imply causation, which has lead to the development of several different time series causality tools.  In this article, we introduce new tools for exploratory causal inference of a pair of time series data sets that are believed to be causally related.  The tools, called penchants and leanings, do not depend on any assumed models for the times series, do not rely on any embedding procedures, are computationally straightforward to apply, and follow directly from assumptions of probabilistic causality, which may provide a clearer interpretation of the results than other existing time series causality tools.
+We introduce new quantities for exploratory causal inference between bivariate time series.  The quantities, called penchants and leanings, do not depend on any assumed models for the times series, do not rely on any embedding procedures, are computationally straightforward to apply, and follow directly from assumptions of probabilistic causality, which may provide a clearer interpretation of the results than other existing time series causality tools.  The penchant and leaning are computed based on a structured method for computing probabilities.
 \end{abstract}
 
 %\pacs{}
 \maketitle
 
 \section{Introduction}
+Many scientific disciplines rely on observational data alone.  For example, there is no current technology that can control the interaction between the solar wind and the Earth's magnetic field, so space weather studies rely on data collected without performing controlled experiments (i.e.\ without interventions to the system dynamics).  Unfortunately, causal inference with such observational data sets is difficult.  It is well known that correlation does not imply causation, which has lead to the development of several different time series causality tools \cite{Schreiber2000,granger1969,Rogosa1980,Pearl2000,kleinberg2012}.
+
 Casual inference in time series analysis centers on finding ``driving'' relationships between different time series data sets.  Showing the existence, rather than the exact nature, of the ``driving'' relationship between the sets is often the primary goal.  Thus, words like ``driving'', ``causality'', and related terms usually do not have straightforward analogs to the same terms used in other fields \cite{Granger1980,liu2012,Roberts1985}, e.g.\ , theoretical quantum or classical mechanics.  The development and study of such causal inference techniques is often called {\em time series causality}.  Most of these techniques fall into four broad categories, those related to transfer entropy \cite{Schreiber2000}, those related to Granger causality \cite{granger1969}, those related to state space reconstruction (SSR) techniques \cite{Sugihara2012}, and those related to lagged cross-correlation \cite{box2013,pascual2014}.  These techniques have found application in a wide range of fields including neuroscience (e.g.\ \cite{Kaminski2001}), economics (e.g.\ \cite{dufour1998,dufour2006}), climatology (e.g.\ \cite{mosedale2006}), and others.  
 
-In this article, we introduce another time series causality technique derived directly from the definition of probabilistic causality \cite{}.  The new technique is then applied to synthetic and empirical time series data sets with known, or intuitive, causal structure.  We will discuss the strengths and weaknesses of the technique and try to frame how the technique may be useful for causal inference with empirical data.  Formal relationships to the other well known time series causality techniques, such as Granger causality or transfer entropy, will be the subject of future work.
+In this article, we introduce another time series causality technique derived directly from the definition of probabilistic causality \cite{Suppes1970}.  The new technique is then applied to synthetic and empirical time series data sets with known, or intuitive, causal structure.  We will discuss the strengths and weaknesses of the technique and try to frame how the technique may be useful for causal inference with empirical data.  Formal relationships to the other well known time series causality techniques, such as Granger causality or transfer entropy, will be the subject of future work.
 
 \section{Causal Penchant}
-Define the {\em causal penchant} as
+We define the {\em causal penchant} $\rho_{EC}\in\left[1,-1\right]$ as
 \begin{equation}
 \label{eq:pen}
-\rho_{EC} := P\left(E|C\right) - P\left(E|\bar{C}\right)\;\;.
+\rho_{EC} := P\left(E|C\right) - P\left(E|\bar{C}\right).
 \end{equation}
-The motivation for this expression is in the interpretation of $\rho_{EC}$ as a causal indicator; i.e.\ if $C$ causes (or {\em drives}) $E$, then $\rho_{EC} > 0$, and if $\rho_{EC} \le 0$, then the direction of causal influence in the system is undetermined.  If the effect $E$ is assumed to be recorded in one time series and the cause $C$ is assumed to be recorded in a different time series, then the direction of causal influence in the system can be determined by comparing various penchants calculated using both time series.  
 
-The penchant definition includes the probability of an assumed effect occurring given a lack of the assumed cause,i.e.\ $P(E|\bar{C})$.  It may be argued that the lack of an assumed cause is unobservable, and thus, the penchant definition is not practically useful.  It has been argued that causality depends on intervention, which implies the occurrence probability of the assumed effect should be conditioned on performing or not performing an action rather than on the presence or lack of an assumed cause \cite{Pearl2000}.  Causal relations have been described as ``a relation among events'' \cite{Bunge1979}, again implying the lack of an assumed cause cannot be used to find causal relations.  These issues have been a part of probabilistic definitions of causality at least since the 1960s \cite{Suppes1970}, and we will not attempt to solve them in this article.  Our primary goal is to define a practical tool for causal inference.  We will circumvent these philosophical issues by deriving an expression that removes any conditioning on a lack of the assumed cause.
+The motivation for this expression is in the straightforward interpretation of $\rho_{EC}$ as a causal indicator\footnote{Eqn.\ \ref{eq:pen} may appear related to the {\em weight of evidence} proposed by Good in his work on probabilistic casualty \cite{Good1984}.  The two quantities, however, are fundamentally different, both mathematically and conceptually.  A requirement of weight of evidence is that the posterior probability should be recoverable provided probability of the evidence alone; i.e., $P(C|E)$ should be derivable from $\rho_{EC}$ and $P(E)$ if $\rho_{EC}$ can be considered weight of evidence as Good describes (see Eqn.\ (2) of \cite{Good1984}).  This requirement is not met by the penchant, as the probability of the cause, $P(C)$, is also required to derive the posterior.  The intended scope of the penchant is also much more restricted than that of the weight of evidence.  Most of the examples presented by Good in \cite{Good1984} cannot be addressed directly with any times series causality tools.}; i.e.\ if $C$ causes (or {\em drives}) $E$, then $\rho_{EC} > 0$, and if $\rho_{EC} \le 0$, then the direction of causal influence in the system is undetermined.  If the effect $E$ is assumed to be recorded in one time series and the cause $C$ is assumed to be recorded in a different time series, then the direction of causal influence in the system can be determined by comparing various penchants calculated using both time series.
 
-Eqn.\ \ref{eq:pen} can be rewritten using the law of total probability, i.e
-\begin{equation}
-\label{eq:totp}
-P(E) = P(E|C)P(C) + P(E|\bar{C})P(\bar{C})\;\;,
-\end{equation}
-or Bayes theorem, i.e.\ 
+Eqn.\ \ref{eq:pen} can be rewritten using Bayes' theorem 
 \begin{equation}
 \label{eq:bayes}
-P(E|\bar{C}) = P(\bar{C}|E)\frac{P(E)}{P(\bar{C})}\;\;.
+P(E|C) = P(C|E)\frac{P(E)}{P(C)}
 \end{equation}
-The definition of probability complements implies $P(\bar{C}) = 1-P(C)$ and $P(\bar{C}|E) = 1-P(C|E)$.  Applying Eqn.\ \ref{eq:bayes} leads to
+and the definitions of probability complements
+\begin{equation}
+\label{eq:comp1}
+P(\bar{C}) = 1-P(C)
+\end{equation}
+\begin{equation}
+\label{eq:comp2}
+P(\bar{C}|E) = 1-P(C|E).  
+\end{equation}
+Using Eqn.\ \ref{eq:comp2} with Eqn.\ \ref{eq:bayes} gives 
 \begin{eqnarray*}
-P(\bar{C}|E) &=& 1-P(C|E)\\
-&=& 1-P(E|C)\frac{P(C)}{P(E)}
+P(\bar{C}|E) &=& 1-P(E|C)\frac{P(C)}{P(E)}
 \end{eqnarray*}
-Thus,
+Inserting this into Eq.\ \ref{eq:bayes} written in terms of $\bar{C}$
 \begin{eqnarray*}
 P(E|\bar{C}) &=& P(\bar{C}|E)\frac{P(E)}{P(\bar{C})}\\
-&=&\left(1-P(E|C)\frac{P(C)}{P(E)}\right)\frac{P(E)}{1-P(C)}\;\;,
 \end{eqnarray*}
-and the second term in Eqn.\ \ref{eq:pen} has been written in terms of the of the first term.  This expression implies a penchant calculation containing only the conditional probability that is directly observed from the data, i.e.\
+yields the alternative for of the second term in Eqn.\ \ref{eq:pen}
+\begin{eqnarray*}
+P(E|\bar{C}) &=&\left(1-P(E|C)\frac{P(C)}{P(E)}\right)\frac{P(E)}{1-P(C)}\;\;,
+\end{eqnarray*}
+This expression gives a penchant that requires only a single conditional probability be estimated from the data:
 \begin{equation}
 \label{eq:pencal}
 \rho_{EC} = P(E|C)\left(1+\frac{P(C)}{1-P(C)}\right)-\frac{P(E)}{1-P(C)}
 \end{equation}
-This same expression can be derived without Eqn.\ \ref{eq:bayes} by using Eqn.\ \ref{eq:totp} to make the appropriate substitution for $P(E|\bar{C})$ into Eqn.\ \ref{eq:pen}.  This penchant calculation requires only a single conditional probability be estimated from the data.
 
-The use of either Eqn.\ \ref{eq:totp} or Eqn.\ \ref{eq:bayes} may eliminate the concern that $P(E|\bar{C})$ is fundamentally unobservable.  It may also, however, introduce new philosophical concerns in the definition of the penchant.  For example, there has been no discussion of confounding.  Assuming, e.g.\  $P(\bar{C})=1-P(C)$ where $P(C)$ can be estimated from the data alone may be seen as an oversimplification of the dynamics generating the time series data; i.e.\ it may be seen as an assumption that the assumed effect is only caused by the assumed cause.  Thus, it may be argued that the penchant is an indication of predictability rather than causality (similar to arguments made regarding Granger causality \cite{Sugihara2012}).  These concerns will not be addressed in this article.  We emphasize, however, that we use terms like cause, effect, causal inference, and related terms to specifically refer to the expressions presented in this article and not to the general, or intuitive, meanings of these terms.
+The penchant is non-parametric in the sense that there is no assumed functional relationship between the time series being investigated.  This definition of a penchant will be used along with a structured method for counting, along with notions from probabilistic causality, to infer which time series in a given pair might be seen as ``driving'' the other.  Our motivation for the penchant is the need for a times series causality quantity that can be directly computed from the data.  It is often impossible to design experiments, or control interventions into the dynamics as discussed above, for many systems of interest, and it may be difficult to determine functional relationships between the time series data sets.
 
-Assuming $P(E)$ and $P(C)$ can be estimated from the data alone is a key part of the penchant definition.  The penchant is non-parametric in the sense that there is no assumed functional relationship between the times series being investigated.  It will be shown below that the penchant is, essentially, a structured method for counting the data and using the those counts, along with notions from probabilistic causality, to infer which time series in a given pair might be seen as ``driving'' the other.  Our motivation for the penchant is the need for a times series causality tool that relies only on the data.  It is often impossible to design experiments, or control interventions into the dynamics as discussed above, for many systems of interest, and it may be difficult to determine functional relationships between the time series data sets.
+For the calculations in the following sections, the penchant is not defined if $P(C)$ or $P(\bar{C})$ are zero (because the conditionals in Eqn.\ \ref{eq:pen} would be undefined).  Thus, the penchant is not defined if $P(C)=0$ or if $P(C)=1$.  The former condition is interpreted as an inability to determine causal influence between two time series using points that do not appear in one of the series, and the latter condition is interpreted as an inability to determine causal influence between two time series if one of the data series is constant.  The use of Bayes' theorem in the derivation of Eqn.\ \ref{eq:pencal} implies that same conditions apply to $P(E)$.
 
-It follows from Eqn.\ \ref{eq:pen} that
-\begin{equation}
-\rho_{EC}\in\left[1,-1\right]\;\;,
-\end{equation}
-but, more importantly for the calculations in the following sections, the penchant is not defined if $P(C)$ or $P(\bar{C})$ are zero (because the conditionals in Eqn.\ \ref{eq:pen} would be undefined).  Thus, the penchant is not defined if $P(C)=0$ or if $P(C)=1$.  The former condition is interpreted intuitively as an inability to determine causal influence between two time series using points that do not appear in one of the series, and the latter condition is interpreted intuitively as an inability to determine causal influence between two time series if one of the data series is constant.  The use of Bayes theorem in the derivation of Eqn.\ \ref{eq:pencal} implies that same conditions apply to $P(E)$.  It will be seen below that there is no {\em a priori} assignments of ''cause'' or ''effect'' to a given time series pair when using penchants for causal inference.  So, operationally, these conditions of $P(C)$ and $P(E)$ only mean that the penchant is undefined between pairs of time series where one series is constant. 
+The method given in this work uses no {\em a priori} assignment of ''cause'' or ''effect'' to a given time series pair when using penchants for causal inference.  So, operationally, these conditions of $P(C)$ and $P(E)$ only mean that the penchant is undefined between pairs of time series where one series is constant. 
 
-The philosophical concerns are perhaps not as important as an answer to the straightforward question of whether or not the penchant is a useful tool for time series causality.  The rest of this article will focus on answering that question.
+The penchant definition includes the probability of an assumed effect occurring given a absence of the assumed cause, i.e.\ $P(E|\bar{C})$.  It has been argued that causality depends on intervention, and the absence of an assumed cause is unobservable, which implies the occurrence probability of the assumed effect should be conditioned on performing or not performing an action rather than on the presence or lack of an assumed cause \cite{Pearl2000}.  Causal relations have been described as ``a relation among events'' \cite{Bunge1979}, again implying the absence of an assumed cause cannot be used to identify causal relationships.  These issues have been a part of probabilistic definitions of causality at least since the 1960s \cite{Suppes1970}, and we will not attempt to solve them in this article.  We will circumvent these philosophical issues by deriving an expression that removes any conditioning on the absence of an assumed cause and the condition that the penchant is undefined when $P(C)=0$, $P(C)=1$, $P(E)=0$, or $P(E)=1$. 
+
+Although Eqn.\ \ref{eq:pencal} circumvents the issue of $P(E|\bar{C})$ being unobservable, it does not account for confounding.  The assumption  that $P(C)$ can be estimated from a scalar time series may be seen as an oversimplification of the dynamics.  That is, it may be seen as an assumption that the assumed effect is only caused by the assumed cause.  In this case, the penchant may be better interpreted as an indication of predictability rather than causality (similar to arguments made regarding Granger causality \cite{Sugihara2012}).  These concerns will not be addressed in this article.  We emphasize, however, that we use terms like cause, effect, causal inference, and related terms to specifically refer to the penchant and leaning quantities and do not attempt to resolve the long-standing philosophical concerns.  Instead we seek to determine if the penchant is a useful quantity for the exploration of causality relationships between time series.
 
 \section{Causal Leaning}
-Given a pair of times series $\{\mathbf{X},\mathbf{Y}\}$, it is difficult to use the penchant directly for causal inference between the pair.  Consider the assignment of $\mathbf{X}$ as the cause, $C$, and $\mathbf{Y}$ as the effect, $E$, i.e.\ $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  If $\rho_{EC}>0$, then the probability that $\mathbf{X}$ drives $\mathbf{Y}$ is higher than the probability that it does not, which is stated more sufficiently as $\mathbf{X}$ has a penchant to drive $\mathbf{Y}$ or $\mathbf{X}\xrightarrow{pen}\mathbf{Y}$.  It is possible, however, that the same penchant could be positive with the opposite cause-effect assignment, i.e.\ $\rho_{EC}>0\;|\; \{C,E\}=\{\mathbf{Y},\mathbf{X}\}\Rightarrow \mathbf{Y}\xrightarrow{pen}\mathbf{X}$.  Even though it is possible that $\mathbf{X}\xrightarrow{pen}\mathbf{Y}$ and $\mathbf{Y}\xrightarrow{pen}\mathbf{X}$ are both true, such information does not provide information about the causal relationship within the pair $\{\mathbf{X},\mathbf{Y}\}$.  
+Consider the assignment of $\mathbf{X}$ as the cause, $C$, and $\mathbf{Y}$ as the effect, $E$.  If $\rho_{EC}>0$, then the probability that $\mathbf{X}$ drives $\mathbf{Y}$ is higher than the probability that it does not, which is stated more sufficiently as $\mathbf{X}$ has a penchant to drive $\mathbf{Y}$ or $\mathbf{X}\xrightarrow{pen}\mathbf{Y}$.  
 
-The {\em leaning} is meant to address this problem and is defined as
+It is possible, however, that the same penchant could be positive when $\mathbf{X}$ is assumed as the effect and $\mathbf{Y}$ is assumed as the cause.  An example of this is given in Section \ref{sec:meanlean}.
+
+The {\em leaning} addresses this via
 \begin{equation}
 \label{eq:leaning}
-\lambda_{EC} := \rho_{EC} - \rho_{CE}\;\;.
+\lambda_{EC} := \rho_{EC} - \rho_{CE}
 \end{equation}
-A positive leaning implies the cause $C$ drives the effect $E$ more than the effect drives the cause, a negative leaning implies the effect $E$ drives the cause $C$ more than the cause drives the effect, and a null leaning (i.e.\ $\lambda_{EC} = 0$) yields no causal information for the cause-effect pair $\{C,E\}$.  
+for which $\lambda_{EC}\in\left[-2,2\right]$. A positive leaning implies the assumed cause $C$ drives the assumed effect $E$ more than the assumed effect drives the assumed cause, a negative leaning implies the effect $E$ drives the assumed cause $C$ more than the assumed cause drives the assumed effect, and a zero leaning yields no causal information.  
 
-Consider again the assignment of $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  If $\lambda_{EC}>0$, then $\mathbf{X}$ has a larger penchant to drive $\mathbf{Y}$ than $\mathbf{Y}$ does to drive $\mathbf{X}$.  More verbosely, $\lambda_{EC}>0$ implies the difference between the probability that $\mathbf{X}$ drives $\mathbf{Y}$ and the probability that it does not is higher than the difference between the probability that $\mathbf{Y}$ drives $\mathbf{X}$ and the probability that it does not.  For convenience, this language is boiled down to $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$, as in
-$\lambda_{EC}>0\;|\; \{C,E\}=\{\mathbf{X},\mathbf{Y}\}\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}$, $\lambda_{EC}<0\;|\; \{C,E\}=\{\mathbf{X},\mathbf{Y}\}\Rightarrow\mathbf{Y}\xrightarrow{lean}\mathbf{X}$, and $\lambda_{EC}=0\;|\; \{C,E\}=\{\mathbf{X},\mathbf{Y}\}\Rightarrow$ no conclusion.
+If $\lambda_{EC}>0$ with $\mathbf{X}$ as the assumed cause and $\mathbf{Y}$ as the assumed effect, then $\mathbf{X}$ has a larger penchant to drive $\mathbf{Y}$ than $\mathbf{Y}$ does to drive $\mathbf{X}$.  That is, $\lambda_{EC}>0$ implies that the difference between the probability that $\mathbf{X}$ drives $\mathbf{Y}$ and the probability that it does not is higher than the difference between the probability that $\mathbf{Y}$ drives $\mathbf{X}$ and the probability that it does not.  
 
-It follows from Eqn.\ \ref{eq:leaning} and the bound for the penchant that $\lambda_{EC}\in\left[-2,2\right]$.  The leaning is a function of four probabilities, $P(C)$, $P(E)$, $P(C|E)$ and $P(E|C)$.  The usefulness of the leaning for causal inference will depend on an effective method for estimating these probabilities from times series data and a more careful definition of the cause-effect assignment within the time series pair.  These topics will be discussed with a motivating example of a dynamical system for which the penchant and leaning calculations are simple enough to perform by hand.
+The possible outcomes are notated as
+\begin{equation*}
+\lambda_{EC}>0 \quad\{C,E\} = \{\mathbf{X},\mathbf{Y}\}\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}
+\end{equation*}
+\begin{equation*}
+\lambda_{EC}<0\quad\{C,E\} = \{\mathbf{X},\mathbf{Y}\}\Rightarrow\mathbf{Y}\xrightarrow{lean}\mathbf{X}
+\end{equation*}
+\begin{equation*}
+\lambda_{EC}=0\quad\{C,E\} = \{\mathbf{X},\mathbf{Y}\}\Rightarrow \mbox{no conclusion}
+\end{equation*}
+with $\{C,E\} = \{\mathbf{A},\mathbf{B}\}$ meaning $\mathbf{A}$ is the assumed cause and $\mathbf{B}$ as the assumed effect.
+
+The leaning is a function of four probabilities, $P(C)$, $P(E)$, $P(C|E)$ and $P(E|C)$.  The usefulness of the leaning for causal inference will depend on an effective method for estimating these probabilities from times series data and a more careful definition of the cause-effect assignment within the time series pair as given in the following section.
 
 \section{Motivating Example}
 Consider a time series pair $\{\mathbf{X},\mathbf{Y}\}$ with
@@ -104,7 +121,7 @@ Consider a time series pair $\{\mathbf{X},\mathbf{Y}\}$ with
 &=& \left\{0,0,0,1,0,0,1,0,0,1\right\}.
 \end{eqnarray*}
 
-It seems intuitive to say that $\mathbf{X}$ drives $\mathbf{Y}$ because $y_t=x_{t-1}$.  However, to show this result using a leaning calculation requires specification of the cause-effect assignment $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$.  A cause must precede an effect in the cause-effect assignment for consistency with the intuitive definition of causality.  It follows that a natural assignment may be $\{C,E\}=\{x_{t-l},y_t\}$ where $l\in[1,9]$.  This cause-effect assignment will be referred to as the $l$-standard assignment.
+Because $y_t=x_{t-1}$, one may conclude that $\mathbf{X}$ drives $\mathbf{Y}$.  However, to show this result using a leaning calculation requires a cause-effect assignment $\{C,E\}=\{\mathbf{X},\mathbf{Y}\}$. For consistency with the intuitive definition of causality, we require that a cause must precede an effect.  It follows that a natural assignment may be $\{C,E\}=\{x_{t-l},y_t\}$ for $1 \leq l < t \leq 9$.  This cause-effect assignment will be referred to as the $l$-standard assignment.
 
 \subsection{Defining the penchants}
 Given $\{\mathbf{X},\mathbf{Y}\}$, one possible penchant that can be defined using the 1-standard assignment is
@@ -112,16 +129,18 @@ Given $\{\mathbf{X},\mathbf{Y}\}$, one possible penchant that can be defined usi
 \rho_{y_{t}=1,x_{t-1}=1} &=& \kappa \left(1+\frac{P\left(x_{t-1} = 1\right)}{1-P\left(x_{t-1} = 1\right)}\right)\\
 & & -\frac{P\left(y_{t} = 1\right)}{1-P\left(x_{t-1} = 1\right)}\;\;,
 \end{eqnarray*}
-with $\kappa = P\left( y_t = 1 | x_{t-1} = 1\right)$.  Another penchant defined using this assignment would be the corresponding term with $\kappa = P\left( y_t = 0 | x_{t-1} = 0\right)$.  These two penchants are called {\em observed} penchants because $\kappa$ can be found directly from the time series data.  
+with $\kappa = P\left( y_t = 1 | x_{t-1} = 1\right)$.  Another penchant defined using this assignment is $\rho_{y_t=0,x_{t-1}=0}$ with  $\kappa = P\left( y_t = 0 | x_{t-1} = 0\right)$.  These two penchants are called {\em observed} penchants because they correspond to conditions that were found in the measurements.  
 
-Equations for the unobserved penchants corresponding to $\kappa = P\left( y_t = 0 | x_{t-1} = 1\right)$ and $\kappa = P\left( y_t = 1 | x_{t-1} = 0\right)$ can also be written down.  These penchants are defined, but in both cases $\kappa=0\Rightarrow \rho_{y_{t}x_{t-1}} < 0$.  Thus, unobserved penchants imply the effect, $y_t = 0$ or $1$ (for this example) is most likely not caused by the postulated cause, $x_{t-1} = 1$ or $0$, respectively.  Using these unobserved penchants to define leanings becomes a comparison of how unlikely postulated causes are to cause given effects.  Such comparisons are not as easily interpreted in the intuitive framework of causality, and as such, are not explored as tools for causal inference in this article. 
+Two other penchants, for which, $\kappa = P\left( y_t = 0 | x_{t-1} = 1\right)$ and $\kappa = P\left( y_t = 1 | x_{t-1} = 0\right)$ are also possible.  These penchants are associated with unobserved conditions.  For these two penchants, $\kappa=0\Rightarrow \rho_{y_{t}x_{t-1}} < 0$ and the effect, $y_t = 0$ or $1$ (for this example) is most likely not caused by the postulated cause, $x_{t-1} = 1$ or $0$, respectively.  
+
+%Using these unobserved penchants in the leaning calculation would involve a comparison of how unlikely postulated causes are to cause given effects.  Such comparisons are not as easily interpreted in the intuitive framework of causality, and as such, are not explored as tools for causal inference in this article. 
 
 \subsection{Finding the penchants from the data}
 The probabilities in the penchant calculations can be estimated from the time series data with frequency counts, e.g.\
 $$
 P\left( y_t = 1 | x_{t-1} = 1\right) = \frac{n_{EC}}{n_C} = \frac{3}{3} = 1\;\;,
 $$
-where $n_{EC}$ is the number of times $y_t=1$ and $x_{t-1}=1$ appears in $\{\mathbf{X},\mathbf{Y}\}$, and $n_{C}$ is related to the number of times the assumed cause, $x_{t-1}=1$, has appeared in $\{\mathbf{X},\mathbf{Y}\}$ and is defined in more detail below.      
+where $n_{EC}$ is the number of times $y_t=1$ and $x_{t-1}=1$ appears in $\{\mathbf{X},\mathbf{Y}\}$, and $n_{C}$ is the number of times the assumed cause, $x_{t-1}=1$, has appeared in $\{\mathbf{X},\mathbf{Y}\}$ and is defined in more detail below.      
 
 Estimating the other two probabilities in this penchant calculation using frequency counts from $\{\mathbf{X},\mathbf{Y}\}$ is slightly more subtle.  The underlying assumption that the assumed cause must precede the assumed effect must be considered when defining the frequency counts.  This concern is addressed by shifting $\mathbf{X}$ and $\mathbf{Y}$ into $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$ such that, for any given $t$, $\tilde{\mathbf{X}}_t$ precedes $\tilde{\mathbf{Y}}_t$, and defining 
 \begin{equation}
@@ -138,8 +157,9 @@ where $n_C$ is the number of times $\tilde{x}_t = 1$, $n_E$ is the number of tim
 \end{eqnarray*}
 which are both shorter than there counterparts above by a single value because the penchants are being calculated using the 1-standard cause-effect assignment.  It follows that $\tilde{x}_t = x_{t-1}$ and $\tilde{y}_t=y_t$.  
 
-\subsection{Mean observed leaning for $\bar{\mathbf{T}}$}
-The two observed penchants in this example that assume $\mathbf{X}$ causes $\mathbf{Y}$ (i.e. using the 1-standard assignment) are found from the data to be
+\subsection{Mean observed leaning}
+\label{sec:meanlean}
+The two observed penchants in this example that assume $\mathbf{X}$ causes $\mathbf{Y}$ (using the 1-standard assignment) are found from the data to be
 \begin{equation}
 \label{eqn:rhoex1}
 \rho_{y_t=1,x_{t-1}=1}=1
@@ -149,7 +169,7 @@ and
 \rho_{y_t=0,x_{t-1}=0}=1\;\;.
 \end{equation}
 
-The complements of these observed penchants are found using the complementary 1-standard assignment of $\{C,E\}=\{y_{t-1},x_t\}$ and are found from the data to be
+The observed penchants when $\mathbf{Y}$ is assumed to cause $\mathbf{X}$ are
 \begin{eqnarray}
 \rho_{x_t=1,y_{t-1}=0} &=& \frac{3}{7}\\
 \rho_{x_t=0,y_{t-1}=1} &=& \frac{3}{7}\;\;.
@@ -287,11 +307,11 @@ r_t = x_{t-1}+r_{t-1}
 \end{equation}
 with $r_0 = 0$.  The weighted mean observed leaning, under the 1-standard assignment with no tolerance domains, for $\bar{\mathbf{\tau}}_L$ depends on $L$.  As $L$ is increased, the leaning calculation will eventually lead to causal inferences that do not agree with intuition; e.g.\ $L = 20 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx 1.8\times10^{-3} \Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ and $L = 50 \Rightarrow \langle \lambda_{r_t,x_{t-1}} \rangle_w \approx -2.5\times10^{-3} \Rightarrow \mathbf{R}\xrightarrow{lean}\mathbf{X}$.  
 
-As $L$ is increased, the number of possible observed effects for a given observed cause increases.  Thus, under the 1-standard assignment $\{C,E\} = \{x_{t-1},r_t\}$, $x_{t-1}=1$ precedes three different values, $r_t = 1$, $2$, ans $3$, if $L=10$, but it precedes fifteen different values if $L=50$.  The leaning calculations are methods for counting (in a specific way) the number of times (and ways in which) an observed cause-effect pair appears in the data.  The causal inference becomes more difficult for non-stationary time series pairs because repeated cause-effect pairs in the data may be more rare than in the stationary examples.  This effect is very similar to the effect seen when the impulse signal was clean but the response was noisy.  Unfortunately, it cannot be remedied with tolerance domains for the non-stationary case.  For example, for $\{\mathbf{X},\mathbf{R}\}$, the cardinality of the set $\{r_t\;|\;x_{t-1}=1\}\rightarrow\infty$ as $L\rightarrow\infty$, and penchants would not be defined given a tolerance domain for $\mathbf{R}$ of $\delta_r=\infty$.
+As $L$ is increased, the number of possible observed effects for a given observed cause increases.  Thus, under the 1-standard assignment $\{C,E\} = \{x_{t-1},r_t\}$, $x_{t-1}=1$ precedes three different values, $r_t = 1$, $2$, and $3$, if $L=10$, but it precedes fifteen different values if $L=50$.  The leaning calculations are methods for counting (in a specific way) the number of times (and ways in which) an observed cause-effect pair appears in the data.  The causal inference becomes more difficult for non-stationary time series pairs because repeated cause-effect pairs in the data may be more rare than in the stationary examples.  This effect is very similar to the effect seen when the impulse signal was clean but the response was noisy.  Unfortunately, it cannot be remedied with tolerance domains for the non-stationary case.  For example, for $\{\mathbf{X},\mathbf{R}\}$, the cardinality of the set $\{r_t\;|\;x_{t-1}=1\}\rightarrow\infty$ as $L\rightarrow\infty$, and penchants would not be defined given a tolerance domain for $\mathbf{R}$ of $\delta_r=\infty$.
 
 These shortcomings of the weighted mean observed leaning when applied to non-stationary data, however, do not imply that causal inference of non-stationary data cannot be done using a different application of the observed penchants.  For example, replacing the weighted mean calculation in the weighted mean observed leaning calculation with a median calculation leads to a {\em median observed leaning}, $[\lambda_{r_t,x_{t-1}}] \approx 5.3\times 10^{-3}\Rightarrow \mathbf{X}\xrightarrow{lean}\mathbf{R}$ for $L=50$ as expected, where $[\cdot]$ is used to denote the median.  Of course, even though the median leaning calculation agrees with intuition for a library length where the mean leaning calculation did not, there is no reason to believe the median leaning calculation will not also eventually provide counterintuitive causal inferences as $L$ is increased.  
 
-A more basic strategy to deal with non-stationary data would be to define the observed penchant using a different cause-effect assignment.  For example, the $l$-standard assignment (with $l=1$) used above, i.e.\ $\{C,E\}=\{x_{t-1},r_t\}$, might be replaced with an $l$-AR (autoregressive) assignment with $l=1$ of $\{C,E\}=\{(x_{t-1},r_{t-1}),r_t\}$.  An observed penchant may be calculated with an assumed cause of $(x_{t-1}=1,r_{t-1}=0)$ and an assumed effect of $r_t = 1$.  The algorithms to compute the observed penchants from the data become more complicated as the cause-effect assignment becomes more complicated, but the basic definition of the penchant provides a very general conceptual framework for causal inference.  This work will only use the $l$-standard cause-effect assignment in the examples that follow.
+A more basic strategy to deal with non-stationary data would be to define the observed penchant using a different cause-effect assignment.  For example, the $l$-standard assignment (with $l=1$) used above, i.e.\ $\{C,E\}=\{x_{t-1},r_t\}$, might be replaced with an $l$-AR (autoregressive) assignment with $l=1$ of $\{C,E\}=\{(x_{t-1},r_{t-1}),r_t\}$.  An observed penchant may be calculated with an assumed cause of $(x_{t-1}=1,r_{t-1}=0)$ and an assumed effect of $r_t = 1$.  The algorithms to compute the observed penchants from the data become more complicated as the cause-effect assignment becomes more complicated, but the basic definition of the penchant provides a very general conceptual framework for causal inference.  This work will primarily use the $l$-standard cause-effect assignment in the examples that follow.
 
 \section{Simple Example Systems}
 In this section, the leaning, specifically the weighted mean observed leaning using the $l$-standard cause-effect assignment for various $l$, will be applied to dynamical systems and empirical data sets with known causal relationships.  The usefulness of the leaning as a tool for causal inference is tested directly with empirical and synthetic time series data sets for which there is an intuitive understanding of the driving relationships within the system.
@@ -331,7 +351,7 @@ with $y_0 = 0$, $B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)
 \label{fig:IRexChangeL}
 \end{figure}
 
-Figure \ref{fig:IRexChangeL} shows how the weighted mean observed leaning using the 1-standard cause-effect assignment, $\tilde{\lambda}$, changes as the noise amplitude $B$ and tolerance $\delta_y$ are increased in increments of 0.01.  The synthetic data sets $\mathbf{X}$ and $\mathbf{Y}$ are constructed such that intuitively $\mathbf{X}$ drives $\mathbf{Y}$.  Thus, it is expected that $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ which implies $\tilde{\lambda} > 0$.  Figure \ref{fig:IRexChangeL} shows that this expectation is met except when $\delta_y < B$ even for a short library length of $L=10$.  Examples of undefined penchants due to large tolerance domains, as discussed in section \ref{sec:tol}, are seen as $\delta_y$ is increased in the $L=10$ example.
+Figure \ref{fig:IRexChangeL} shows how the weighted mean observed leaning using the 1-standard cause-effect assignment, $\tilde{\lambda}$, changes as the noise amplitude $B$ and tolerance $\delta_y$ are increased in increments of 0.01.  The synthetic data sets $\mathbf{X}$ and $\mathbf{Y}$ are constructed such that intuitively $\mathbf{X}$ drives $\mathbf{Y}$.  Thus, it is expected that $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ which implies $\tilde{\lambda} > 0$.  Figure \ref{fig:IRexChangeL} shows that this expectation is met except when $\delta_y > B$ even for a short library length of $L=10$.  Examples of undefined penchants due to large tolerance domains, as discussed in section \ref{sec:tol}, are seen as $\delta_y$ is increased in the $L=10$ example.
 
 Figure \ref{fig:IRexChangeL} shows using the strategy of $\delta_y = B$ always leads to causal inferences that agree with intuition for $L>10$ in this example.  However, as discussed in section \ref{sec:tol}, knowing $B$ {\em a priori} may be unrealistic with empirical data sets.  Consider the following three methods for estimating $\delta_y$ from the data:
 \begin{enumerate}
@@ -397,7 +417,7 @@ The sign of $\delta\chi_{xy}^l$ is used, similar to the leaning approach, to det
 \end{figure}
 Figure \ref{fig:cyc2} shows how $\delta\chi_{xy}^l$ compares to the leaning given $l\in[1,21]$ for instances of Eqn.\ \ref{eqn:cyceqn} with $B=0.5$.  In Figure \ref{fig:cyc2}, the leaning has been normalized for presentation clarity as
 \begin{equation}
-\lambda^\prime = \frac{\lambda_l}{\max_{l\in[1,15]} \lambda_l}\;\;,
+\lambda^\prime = \frac{\lambda_l}{\max_{l\in[1,21]} \lambda_l}\;\;,
 \end{equation}
 where $\lambda_l$ is the weighted mean observed leaning using the $l$-standard assignment ($\lambda_1$ is plotted in Figure \ref{fig:cyc1}).  Both $\lambda^\prime$ and $\delta\chi_{xy}^l$ lead to the same causal inference, i.e.\ $\mathbf{X}$ ``drives'' $\mathbf{Y}$, for $l\in[1,19]$, although only the leaning agrees with intuition for $l=20$ and $l=21$ in this example.  Thus, both tools agree with intuition for small lags in this simple cyclic example.  The leaning, however, has its maximum values near the smallest lags, which is expected given Eqn.\ \ref{eqn:cyceqn}, while the cross-correlation difference has its maximum values at lags that do not explicitly appear in Eqn.\ \ref{eqn:cyceqn}.  
 
@@ -534,7 +554,7 @@ Figure \ref{fig:2pop}(a) shows the intuition of $\beta_{xy}<\beta_{yx}\Rightarro
 
 The complexity of determining causal relationships in this system may make the system less of a convincing example of the leaning calculation than the previous examples.  However, Figure \ref{fig:2pop} shows the weighted mean observed leaning using the 1-standard cause-effect assignment can provide causal inferences that may be considered intuitively justifiable, even if the system does not have an unequivocal driver. 
 
-All of the previous examples have ignored the concept of causal confounders.  The presence of confounders in the system is a serious problem for causal inference in general \cite{Rubin2015,Pearl2000}.  Time series causality usually seeks to answer the less general causal inference question of ``Given these two times series, which may be considered the stronger driver?'' Nevertheless, some bivariate time series causality tools consider causal inference in systems with potential confouders by trying to relate the estimated bivariate driving relationships within a collection of more than two time series data sets (e.g., see CCM \cite{Sugihara2012}).  The next example explores in the use of leaning calculations in such a scenario.
+All of the previous examples have ignored the concept of causal confounders.  The presence of confounders in the system is a serious problem for causal inference in general \cite{Rubin2015,Pearl2000}.  Time series causality usually seeks to answer the less general causal inference question of ``Given these two times series, which may be considered the stronger driver?'' Nevertheless, some bivariate time series causality tools consider causal inference in systems with potential confouders by trying to relate the estimated bivariate driving relationships within a collection of more than two time series data sets (e.g., see CCM \cite{Sugihara2012}).  The next example explores the use of leaning calculations in such a scenario.
 
 \subsection{Impulse with Multiple Noisy Responses Example}
 Consider the multivariate system of
@@ -570,7 +590,7 @@ z_t^{\prime\prime} = y_{t-1} + x_{t-1} + z_{t-1}
 \end{equation}
 with $y_0 = 0$, $B\in\mathbb{R}\ge 0$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, and $L=500$.
 
-In case 0, $\mathbf{Z}$ depends directly on $\mathbf{Y}$ and indirectly on $\mathbf{X}$ (through $\mathbf{Y}$, which depends directly on $\mathbf{X}$).  The intuitive causal inference is then $\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ and $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  Case 1, despite the additional $\mathbf{Y}$ dependence in $\mathbf{Z}$, has the same intuitive causal inference as case 0.  In case 2 $\mathbf{Z}$ depends directly on itself and both $\mathbf{Y}$ and $\mathbf{X}$.  Case 2 also has the same intuitive causal inference.
+In case 0, $\mathbf{Z}$ depends directly on $\mathbf{Y}$ and indirectly on $\mathbf{X}$ (through $\mathbf{Y}$, which depends directly on $\mathbf{X}$).  The intuitive causal inference is then $\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ and $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  Case 1, despite the additional $\mathbf{Y}$ dependence in $\mathbf{Z}$, has the same intuitive causal inference as case 0.  In case 2, $\mathbf{Z}$ depends directly on itself and both $\mathbf{Y}$ and $\mathbf{X}$.  Case 2 also has the same intuitive causal inference.
 
 \begin{figure*}[ht]
 \begin{tabular}{cc}
@@ -643,9 +663,9 @@ where
 \end{equation}
 then $\lambda^{xy}_{max}=0.040\Rightarrow\mathbf{X}\xrightarrow{lean}\mathbf{Y}$, which agrees with the causal truth.   
 
-The NASA OMNI data set consists of hourly-averaged time series measurements of several different space weather parameters from 1963 to present, collected from more than twenty different satellites, along with sunspot number and several different geomagnetic indices, including $D_{st}$, collected from the NOAA National Geophysical Data Center \cite{King2005}.  The disturbance storm time, $D_{st}$, is a measure of geomagnetic activity \cite{IAGA}.  The magnetic field measurements in OMNI data sets, i.e., $B_z$ in GSE coordinates \cite{Hapgood1992}, is believed to be a driver of $D_{st}$ \cite{spaceweathertextbook}.
+The NASA OMNI data set consists of hourly-averaged time series measurements of several different space weather parameters from 1963 to present, collected from more than twenty different satellites, along with sunspot number and several different geomagnetic indices, including $D_{st}$, collected from the NOAA National Geophysical Data Center \cite{King2005}.  The disturbance storm time, $D_{st}$, is a measure of geomagnetic activity \cite{IAGA}.  The magnetic field measurements in the OMNI data sets, specifically $B_z$ in GSE coordinates \cite{Hapgood1992}, is believed to be a driver of $D_{st}$ \cite{Gonz1994}.
 
-Let $\mathbf{P_{z}^L}=\{\{B_z(t^\prime)\},\{D_{st}(t^\prime)\}\;|\;t^\prime\in[t^\prime_0,L]\}$ be an ordered subset of the available time series data $\{\{B_z(t)\},\{D_{st}(t)\}\;|\;t\in[0,N]\}$ where $N$ is the number of hourly data points in the OMNI data set.  If $\lambda_1^{z}$ is the weighted mean observed leaning for $\mathbf{P_{z}^L}$ using the 1-standard cause-effect assignment, then $n$ samples of $\mathbf{P_{z}^L}$, each with a different $t^\prime_0$,  would produce a set of $n$ leanings, $\{\lambda_1^{z}\}$ from which the causal inference could be drawn.
+Let $\mathbf{P_{z}^L}=\{\{B_z(t^\prime)\},\{D_{st}(t^\prime)\}\;|\;t^\prime\in[t^\prime_0,L]\}$ be an ordered subset of the available time series data $\{\{B_z(t)\},\{D_{st}(t)\}\;|\;t\in[0,N]\}$ where $N$ is the number of hourly data points in the OMNI data set.  If $\lambda_1^{z}$ is the weighted mean observed leaning for $\mathbf{P_{z}^L}$ using the 1-standard cause-effect assignment, then $n$ samples of $\mathbf{P_{z}^L}$, each with a different $t^\prime_0$,  would produce a set of $n$ leanings, $\{\lambda_1^{z}\}$, from which the causal inference could be drawn.
 
 Let $L=500$ and $n=10^4$.  The symmetric tolerance domains are naively set with $f\sigma_{|B_{z}^\prime-\langle B_{z}^\prime\rangle|}$ and $f\sigma_{|D_{st}-\langle D_{st}\rangle|}$ for each sampled times series of length $L$ with f=0.05.  The starting points for each sampled time series are sampled from a uniform distribution over $[0,N-L]$.  Figure \ref{fig:dsthist} shows the causal inference drawn from each set of leanings agrees with intuition, i.e., $B_{z}\xrightarrow{lean}D_{st}$, if the causal inference is based on, e.g., the mean value from the set of leanings.  
 \begin{figure}[ht]
@@ -683,16 +703,16 @@ There is no intuitive causal relationship in Eqn.\ \ref{eqn:Spur}.  However, Fig
 \label{fig:nocause}
 \end{figure}
 
-The spurious leanings shown in thi example may imply causal relationships that do not exist in the system.  Leaning calculations may be part of an exploratory causal inference analysis, but care must to be taken to ensure a causal relationship is actually present in the data, even if the directionality (or other features) of that relationship are unknown.  The relationship between leanings and causality as it is typically understood in physics (i.e., involving interventions into the systems under investigation, e.g., through experiments \cite{Pearl2000}) is not currently known.  This article is exploring the use of leanings as part of an exploratory causal analysis in times series data, not as a definition or proof of causality in a dynamical system.   
+The spurious leanings shown in this example may imply causal relationships that do not exist in the system.  Leaning calculations may be part of an exploratory causal inference analysis, but care must to be taken to ensure a causal relationship is actually present in the data, even if the directionality (or other features) of that relationship are unknown.  The relationship between leanings and causality as it is typically understood in physics (i.e., involving interventions into the systems under investigation, e.g., through experiments \cite{Pearl2000}) is not currently known.  This article is exploring the use of leanings as part of an exploratory causal analysis in times series data, not as a definition or proof of causality in a dynamical system.   
 
 \section{Conclusion}
 Causal inference using observational data alone is a difficult task \cite{kleinberg2012}.  This problem is important in may fields, but in physics in particular, there are often subfields for which direct experimentation is not technologically feasible.  For example, studying space weather relies entirely on observation data for both forecasting events and understanding the dynamics of the system.  The exploratory causal inference proposed in this article is meant to be one of the first steps in understanding such data.  
 
 Exploratory causal analysis, as it as been described here, involves many different techniques, including Granger causality (GC), transfer entropy (TE), cross correlation (CC), and state space reconstruction (SSR) techniques.  As was discussed in the introduction, each of these techniques has well known shortcomings.  For example, GC is parametric, TE can be computationally difficult \cite{kaiser2002}, CC can be unreliable \cite{Rogosa1980}, and SSR relies on correctly setting lag times and embedding dimensions \cite{Small2004}.  Causal leaning has been introduced to overcome many of these shortcomings, however, it relies on setting tolerance domains and cause-effect assignments, which, as discussed above, may require in-depth data analysis to determine.  Thus, there is no single {\em correct} technique for causal inference in time series data, and it is posited that exploratory causal analysis of time series data sets should require the use and comparison of several different techniques.
 
-No attempt has been made to understand causal leanings in term of current philosophical causality studies.   For example, there is no exploration of how causal leanings are associated with token or {\em prima facie} causality \cite{kleinberg2012}.  Leanings have also been grouped under the broad term of time series causality studies, which implies the technique is distinct from other data causality studies, including direct acyclic graph (DAG) \cite{Pearl2000} and temporal logic \cite{kleinberg2012} techniques.  Causal leanings have been introduced only as a practical tool and connections with the broader fields of data causality and causality foundations are left for future work.  For example, leanings may be a subset of the more general temporal logic presented by Kleinberg \cite{kleinberg2012}.
+No attempt has been made to understand causal leanings in term of current philosophical causality studies.   For example, there is no exploration of how causal leanings are associated with token or {\em prima facie} causality \cite{kleinberg2012}.  Leanings have also been grouped under the broad term of time series causality studies, which implies the technique is distinct from other data causality studies, including direct acyclic graph (DAG) \cite{Pearl2000} and temporal logic \cite{kleinberg2012} techniques.  Causal leanings have been introduced only as a practical tool and connections with the broader fields of data causality and causality foundations are left for future work.  For example, leanings may be a subset of the more general temporal logic presented by Kleinberg \cite{kleinberg2012} and may have interpretations within Good's probabilistic causal framework of propensities and weights of evidence \cite{Good1984}.
 
-There are many open questions regarding the use of leanings for causal inference that have not been explored in this article.  There has been no discussion of how to interpret the magnitude of the leaning calculations.  For example, if there are two weighted mean observed leanings $\lambda_1$ and $\lambda_2$ with different cause-effect assignments such that $\lambda_1 > \lambda_2$, then does the first cause-effect assignment represent a ``stronger'' driver than the second?  How should leanings of $0$, $2$, or $-2$ be interpreted with respect to the cause-effect assignments?  Can leanings calculated using different cause-effect assignment even be compared?  Such questions are still open.
+There are many open questions regarding the use of leanings for causal inference that have not been explored in this article.  There has been no discussion of how to interpret the magnitude of the leaning calculations.  For example, if there are two weighted mean observed leanings $\lambda_1$ and $\lambda_2$ with different cause-effect assignments such that $\lambda_1 > \lambda_2$, then does the first cause-effect assignment represent a ``stronger'' driver than the second?  How should leanings of $0$, $2$, or $-2$ be interpreted with respect to the cause-effect assignments?  Can leanings calculated using different cause-effect assignments even be compared?  Such questions are still open.
 
 There has also been no exploration of using leanings as part of statistical tests, as is often done with GC \cite{Pierce1977}.  The use of histograms in Figure \ref{fig:dsthist} may be considered a first step toward statistical interpretations of leanings, but there are still many open questions to be addressed in future work.
 
