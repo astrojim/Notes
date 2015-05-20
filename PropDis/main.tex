@@ -1,54 +1,44 @@
-\documentclass[letter,11pt]{article}
+\documentclass{article}[10pt]
 
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage[margin=1in]{geometry}
-
-\title{Dissertation Proposal}
-\author{J. McCracken}
+\usepackage[cm]{fullpage}
 
 \begin{document}
-\noindent {\Huge Dissertation Proposal {\bf NOTES}}
 
-\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\Large{{\sc Thesis Outline}}
 
-\section*{Proposed Title}
-{\em Time Series Causality with Applications in Space Weather}
+\rule{10cm}{1mm}
 
-\section*{Topic Overview}
-$\ldots$
-
-\section*{Proposed Table of Contents}
 \begin{enumerate}
-	\item Introduction
+\item {\em Introduction} Why is this work needed, where does it fit in the grand scheme of causality studies, what exactly is the goal, what is not the goal, etc.?
+\item {\em Causality Studies} Literature review.  This taxonomy will not be complete, nor will the boundaries be clean.  Several authors, particularly in theoretical physics, blur boundaries, e.g., between science and philosophy.
+\begin{enumerate}
+	\item {\em Foundational Causality} 
 	\begin{enumerate}
-		\item Brief history of the causality studies
-		\item Causality studies occur in many different fields including philosophy, physics, artificial intelligence, statistics, signal analysis, graph theory, and econometrics.  How are these fields split regarding techniques and terminology?
-		\item Try to group the field into ``causality foundations", ``statistical causality", ``probabilistic causality", and ``time series causality".  The terms appear confusingly redundant, but it may be worthwhile to try to explain their use within the field.
-		\item Where does this work fit into the scheme described above?  Answer: time series causality; i.e.\ dealing with the fact that correlation is not causation in existing data sets.
-	\end{enumerate}
-	\item Time Series Causality (TSC) Background
-	\begin{enumerate}
-		\item Basic assumptions
-		\item Granger causality
-		\item Transfer entropy
-		\item Equivalence of Granger causality and transfer entropy (under assumptions of Gaussian noise)
-		\item Pairwise asymmetric inference
-	\end{enumerate}
-	\item Proposed TSC Algorithm 
-	\begin{enumerate}
-		\item $\ldots$
-	\end{enumerate}
-	\item Applications of Proposed TSC Algorithm
-	\begin{enumerate}
-		\item $\ldots$
-	\end{enumerate}
+		\item {\em Philosophical Studies} Aristole, Hume, $\ldots$, Good, Suppes
+		\item {\em Natural Science Studies} causality in physics, etc.
+        \item {\em Pyschological Studies} perceptions of causality
+    \end{enumerate}
+    \item {\em Phenomenal Causality}
+    \begin{enumerate}
+    	\item {\em Statistical Causality} Fisher, Dawid, Rubin, Pearson, $\ldots$
+        \item {\em Data Causality} Pearl, Kleinberg, $\ldots$
+        \item {\em Time Series Causality} This is just an explanation of where these techniques fit in the taxonomy.  In-depth descriptions are the next chapter.
+    \end{enumerate}
 \end{enumerate}
-
-
-
+\item {\em Time Series Causality} Introduction and (brief) exploration of the five main classes of times series causality techniques
+\begin{enumerate}
+	\item {\em Granger Causality}
+    \item {\em Transfer Entropy}
+    \item {\em State Space Reconstruction Causality}
+    \item {\em Lagged Cross-Correlation}
+    \item {\em Penchants and Leanings}
+\end{enumerate}
+\item {\em Exploratory Causal Analysis} Applying the time series causality tools
+\begin{enumerate}
+	\item {\em Synthetic data examples}
+    \item {\em Empirical data example}
+\end{enumerate}
+\item {\em Conclusions} Future work, etc.\
+\end{enumerate}
 
 \end{document}
