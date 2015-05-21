@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  20 MAY 2015 19:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  21 MAY 2015 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,28 +402,37 @@ File: XYZIRexample_BxytolZXandY.eps Graphic file (type eps)
  <XYZIRexample_BxytolZXandY.eps>
 File: XYZIRexample_BxytolZXandYandZ.eps Graphic file (type eps)
 
-<XYZIRexample_BxytolZXandYandZ.eps>
-File: EmpiricalData_p87X.eps Graphic file (type eps)
- <EmpiricalData_p87X.eps>
-File: EmpiricalData_p87Y.eps Graphic file (type eps)
+<XYZIRexample_BxytolZXandYandZ.eps> [11]
 
-<EmpiricalData_p87Y.eps> [11]
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 625.
+
+File: EmpiricalData_p87X.eps Graphic file (type eps)
+<EmpiricalData_p87X.eps>
+File: EmpiricalData_p87Y.eps Graphic file (type eps)
+ <EmpiricalData_p87Y.eps>
 File: EmpiricalData_p87leans.eps Graphic file (type eps)
  <EmpiricalData_p87leans.eps>
-Underfull \hbox (badness 1454) in paragraph at lines 666--667
-\OT1/cmr/m/n/10 time se-ries mea-sure-ments of sev-eral dif-fer-ent space
- []
-
 [12]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 668.
+ on input line 665.
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 668--669
+\OT1/cmr/m/n/10 time se-ries mea-sure-ments of sev-eral dif-fer-ent space
+ []
 
 File: SolarDataBzNormDst.eps Graphic file (type eps)
 <SolarDataBzNormDst.eps>
 File: NoCauseplot.eps Graphic file (type eps)
  <NoCauseplot.eps> [13]
-Underfull \hbox (badness 2158) in paragraph at lines 711--712
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 709.
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 713--714
 \OT1/cmr/m/n/10 here, in-volves many dif-fer-ent tech-niques, in-clud-ing
  []
 
@@ -437,11 +446,11 @@ Missing character: There is no “ in font cmr9!
 ) [15] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  5260 strings out of 495029
- 74766 string characters out of 6181522
- 177370 words of memory out of 5000000
+ 74767 string characters out of 6181522
+ 174370 words of memory out of 5000000
  8386 multiletter control sequences out of 15000+600000
  12827 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,16n,42p,1487b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,42p,1487b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (15 pages, 114552 bytes).
+Output written on main.dvi (15 pages, 114540 bytes).

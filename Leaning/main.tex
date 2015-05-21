@@ -592,16 +592,18 @@ with $y_0 = 0$, $B\in\mathbb{R}\ge 0$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, 
 
 In case 0, $\mathbf{Z}$ depends directly on $\mathbf{Y}$ and indirectly on $\mathbf{X}$ (through $\mathbf{Y}$, which depends directly on $\mathbf{X}$).  The intuitive causal inference is then $\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ and $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  Case 1, despite the additional $\mathbf{Y}$ dependence in $\mathbf{Z}$, has the same intuitive causal inference as case 0.  In case 2, $\mathbf{Z}$ depends directly on itself and both $\mathbf{Y}$ and $\mathbf{X}$.  Case 2 also has the same intuitive causal inference.
 
-\begin{figure*}[ht]
-\begin{tabular}{cc}
-\includegraphics[scale=0.40]{XYZIRexample_Bxytol.eps} & \includegraphics[scale=0.40]{XYZIRexample_BxytolZXandY.eps} \\
-(a) $\mathbf{Z} = \{z_t\}$ & (b) $\mathbf{Z} = \{z^\prime_t\}$ \\
-\multicolumn{2}{c}{\includegraphics[scale=0.40]{XYZIRexample_BxytolZXandYandZ.eps}} \\
-\multicolumn{2}{c}{(c) $\mathbf{Z} = \{z^{\prime\prime}_t\}$}\\
+\begin{figure}[ht]
+\begin{tabular}{c}
+\includegraphics[scale=0.40]{XYZIRexample_Bxytol.eps} \\ 
+(a) $\mathbf{Z} = \{z_t\}$ \\
+\includegraphics[scale=0.40]{XYZIRexample_BxytolZXandY.eps} \\
+(b) $\mathbf{Z} = \{z^\prime_t\}$ \\
+\includegraphics[scale=0.40]{XYZIRexample_BxytolZXandYandZ.eps} \\
+(c) $\mathbf{Z} = \{z^{\prime\prime}_t\}$\\
 \end{tabular}
 \caption{The (unitless) weighted mean observed leaning using the 1-standard cause-effect assignment, $\lambda_1$ only leads to causal inferences that agree with intuition for all points within the considered noise level domain, $B$, in this example for case 1.  $B$ is the unitless noise parameter found in Eqn.\ \ref{eqn:3var}, and the symmetric tolerance domains for $\mathbf{Y}$ and $\mathbf{Z}$ are set to this value.}
 \label{fig:3var}
-\end{figure*}
+\end{figure}
 Figure \ref{fig:3var} shows the weighted mean observed leaning using the 1-standard cause-effect assignment (with $\delta_x = 0$ and $\delta_y = \delta_z = B$), $\lambda_1$, may lead to causal inferences that do not agree with intuition for case 0 and case 2, even though case 1 agrees with intuition for all points within the considered noise levels domain.  For case 0, the leaning calculation implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}$ and $\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ as expected, but it also seem to imply that no causal inference can be made about the relationship between $\mathbf{X}$ and $\mathbf{Z}$.  For case 2, the leaning calculation also implies no causal inference can be made about the relationship between $\mathbf{X}$ and $\mathbf{Z}$, but, unlike case 0, it also implies $\mathbf{Z}\xrightarrow{lean}\mathbf{Y}$, which is counter-intuitive.
 
 These results may imply that $\lambda_1$ is unable identify confounded driving (i.e., situations in which the effect of the driving variable is mediated by another variable).  For example, in case 0, the driving of $\mathbf{Z}$ by $\mathbf{X}$ occurs through the interaction of $\mathbf{Y}$ and $\mathbf{Z}$.  For case 0, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xrightarrow{lean}\mathbf{Z}$ but does not imply $\mathbf{X}\xrightarrow{lean}\mathbf{Z}$.  For case 2, $\lambda_1$ implies $\mathbf{X}\xrightarrow{lean}\mathbf{Y}\xleftarrow{lean}\mathbf{Z}$, which may imply that $\lambda_1$ is not a reliable causal inference tool in autoregressive systems.
@@ -633,7 +635,7 @@ Figure \ref{fig:empdata} shows a time series pair with casual ``truth'' from the
 \includegraphics[scale=0.45]{EmpiricalData_p87Y.eps} \\
 (b) snow fall (Y) \\
 \end{tabular}
-\caption{(Color available online.) This times series data pair is expected to have the causal relationship of $X\rightarrow Y$ for the pair of subplots [(a),(b)], where $X$ or $Y$ is marked in parenthesis for each time series.}
+\caption{This times series data pair is expected to have the causal relationship of $X\rightarrow Y$, where $X$ or $Y$ is marked in parenthesis for each time series.}
 \label{fig:empdata}
 \end{figure}
 Figure \ref{fig:empdata}(a) and (b)  are times series of the daily snowfall (the expected response) and mean temperature (the expected driver) from July 1 1972 to December 31 2009 at Whistler, BC, Canada (Latitude: 50$^\circ$04$^\prime$04.000$^{\prime\prime}$ N, Longitude: 122$^\circ$56$^\prime$50.000$^{\prime\prime}$ W, Elevation: 1835.00 meters).  From \cite{bache2013}, ``Common sense tells us that X [mean temperature] causes Y [snow fall] (with maybe very small feedback of Y on X). Confounders are present (e.g., day of the year).''  This data is pair 87 of the MLR \cite{bache2013}, and the data collection procedure is described there.
