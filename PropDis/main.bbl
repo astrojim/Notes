@@ -1,0 +1,63 @@
+\begin{thebibliography}{10}
+
+\bibitem{Amblard2012}
+Pierre-Olivier Amblard and Olivier J.~J. Michel.
+\newblock The relation between granger causality and directed information
+  theory: A review.
+\newblock {\em Entropy}, 15(1):113, 2012.
+
+\bibitem{Barnett2009}
+Lionel Barnett, Adam~B. Barrett, and Anil~K. Seth.
+\newblock Granger causality and transfer entropy are equivalent for gaussian
+  variables.
+\newblock {\em Phys. Rev. Lett.}, 103:238701, Dec 2009.
+
+\bibitem{Kullback1987}
+Subir Ghosh, Kenneth~P. Burnham, Nico~F. Laubscher, Gerard~E. Dallal, Leland
+  Wilkinson, Donald~F. Morrison, Milton~W. Loyer, Bennett Eisenberg, Solomon
+  Kullback, Ian~T. Jolliffe, and Jeffrey~S. Simonoff.
+\newblock Letters to the editor.
+\newblock {\em The American Statistician}, 41(4):pp. 338--341, 1987.
+
+\bibitem{Hlav2007}
+Katerina Hlaváčková-Schindler, Milan Paluš, Martin Vejmelka, and Joydeep
+  Bhattacharya.
+\newblock Causality detection based on information-theoretic approaches in time
+  series analysis.
+\newblock {\em Physics Reports}, 441(1):1 -- 46, 2007.
+
+\bibitem{Hlavackova2007}
+Katerina Hlaváčková-Schindler, Milan Paluš, Martin Vejmelka, and Joydeep
+  Bhattacharya.
+\newblock Causality detection based on information-theoretic approaches in time
+  series analysis.
+\newblock {\em Physics Reports}, 441(1):1 -- 46, 2007.
+
+\bibitem{Kaiser2002}
+A.~Kaiser and T.~Schreiber.
+\newblock Information transfer in continuous processes.
+\newblock {\em Physica D: Nonlinear Phenomena}, 166(1–2):43 -- 62, 2002.
+
+\bibitem{Kullback1951}
+S.~Kullback and R.~A. Leibler.
+\newblock On information and sufficiency.
+\newblock {\em Ann. Math. Statist.}, 22(1):79--86, 03 1951.
+
+\bibitem{Lungarella2007}
+M.~LUNGARELLA, K.~ISHIGURO, Y.~KUNIYOSHI, and N.~OTSU.
+\newblock Methods for quantifying the causal structure of bivariate time
+  series.
+\newblock {\em International Journal of Bifurcation and Chaos},
+  17(03):903--921, 2007.
+
+\bibitem{Schreiber2000}
+Thomas Schreiber.
+\newblock Measuring information transfer.
+\newblock {\em Phys. Rev. Lett.}, 85:461--464, Jul 2000.
+
+\bibitem{Shannon1948}
+C.E. Shannon.
+\newblock A mathematical theory of communication.
+\newblock {\em Bell System Technical Journal, The}, 27(3):379--423, July 1948.
+
+\end{thebibliography}

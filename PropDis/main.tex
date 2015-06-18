@@ -2,43 +2,101 @@
 
 \usepackage[cm]{fullpage}
 
+\title{Exploratory time series causality (working title)}
+\author{}
+\date{\today}
+
 \begin{document}
 
-\Large{{\sc Thesis Outline}}
+\maketitle
+\tableofcontents
 
-\rule{10cm}{1mm}
 
-\begin{enumerate}
-\item {\em Introduction} Why is this work needed, where does it fit in the grand scheme of causality studies, what exactly is the goal, what is not the goal, etc.?
-\item {\em Causality Studies} Literature review.  This taxonomy will not be complete, nor will the boundaries be clean.  Several authors, particularly in theoretical physics, blur boundaries, e.g., between science and philosophy.
-\begin{enumerate}
-	\item {\em Foundational Causality} 
-	\begin{enumerate}
-		\item {\em Philosophical Studies} Aristole, Hume, $\ldots$, Good, Suppes
-		\item {\em Natural Science Studies} causality in physics, etc.
-        \item {\em Pyschological Studies} perceptions of causality
-    \end{enumerate}
-    \item {\em Phenomenal Causality}
-    \begin{enumerate}
-    	\item {\em Statistical Causality} Fisher, Dawid, Rubin, Pearson, $\ldots$
-        \item {\em Data Causality} Pearl, Kleinberg, $\ldots$
-        \item {\em Time Series Causality} This is just an explanation of where these techniques fit in the taxonomy.  In-depth descriptions are the next chapter.
-    \end{enumerate}
-\end{enumerate}
-\item {\em Time Series Causality} Introduction and (brief) exploration of the five main classes of times series causality techniques
-\begin{enumerate}
-	\item {\em Granger Causality}
-    \item {\em Transfer Entropy}
-    \item {\em State Space Reconstruction Causality}
-    \item {\em Lagged Cross-Correlation}
-    \item {\em Penchants and Leanings}
-\end{enumerate}
-\item {\em Exploratory Causal Analysis} Applying the time series causality tools
-\begin{enumerate}
-	\item {\em Synthetic data examples}
-    \item {\em Empirical data example}
-\end{enumerate}
-\item {\em Conclusions} Future work, etc.\
-\end{enumerate}
+\section{Introduction} 
+Why is this work needed, where does it fit in the grand scheme of causality studies, what exactly is the goal, what is not the goal, etc.?
+
+\section{Causality Studies} 
+Literature review.  This taxonomy will not be complete, nor will the boundaries be clean.  Several authors, particularly in theoretical physics, blur boundaries, e.g., between science and philosophy.
+
+\subsection{Foundational Causality} 
+\subsubsection{Philosophical Studies} 
+Aristole, Hume, $\ldots$, Good, Suppes
+
+\subsubsection{Natural Science Studies} 
+causality in physics, etc.
+
+\subsubsection{Psychological (and other Social Science) Studies} 
+perceptions of causality
+
+\subsection{Phenomenal Causality}
+\subsubsection{Statistical Causality} 
+Fisher, Dawid, Rubin, Pearson, $\ldots$
+
+\subsubsection{Data Causality} 
+Pearl, Kleinberg, $\ldots$
+
+\subsubsection{Time Series Causality} 
+This is just an explanation of where these techniques fit in the taxonomy.  In-depth descriptions are the next chapter.
+
+\section{Time Series Causality} 
+Introduction and (brief) exploration of the five main classes of times series causality techniques
+\subsection{Granger Causality}
+\subsection{Transfer Entropy}
+In 2000, Schreiber introduced transfer entropy as ``an information theoretic measure is derived that quantifies the statistical coherence between systems evolving in time'' \cite{Schreiber2000}.  The quantity has become one of the primary tools of information theoretic times series causality \cite{Hlav2007,Kaiser2002}, which focuses on using entropies and mutual information for causal inference between times series data.  
+
+\subsubsection{Background}
+Consider a random variable $\mathbf{X}$ that takes value $X_n$ with probability $p_n$ with $n = 1,2,\ldots,N_X$.  The probability distribution $P(\mathbf{X}=X_n) = p_n\;\forall X_n$ has a discrete Shannon entropy,$H_X$ defined as
+\begin{equation}
+H_X = -\sum_{n=1}^{N_X} p_n \log_2 p_n\;\;,
+\end{equation}
+where the logarithm base determines the entropy units, which, in this case, is ``bits'' \cite{Shannon1948,Schreiber2000,Hlav2007,Kaiser2002}.  The Shannon entropy was developed as a measure of ``of how uncertain we are of the outcome'' $\mathbf{X}=X_n$ \cite{Shannon1948}.
+
+The error made by incorrectly assuming $P(\mathbf{X}=X_n) = q_n$ (rather than $p_n$) is the Kullback entropy\footnote{This quantity is also known as the Kullback-Leibler divergence, relative entropy, and discrimination information, among others.  Kullback noted in 1987 that this quantity could be found under nine different names in the literature \cite{Kullback1987}.}
+\begin{equation}
+K_X =  \sum_{n=1}^{N_X} p_n \log_2 \frac{p_n}{q_n}\;\;,
+\end{equation}
+where, again, the base of the logarithm is due to the unit choice \cite{Kullback1951,Schreiber2000,Hlav2007,Kaiser2002}.  Henceforth throughout this subsection, the logarithm base notation will be dropped and all logarithms should be assumed base 2 (i.e., everything is in units of bits) unless otherwise noted.
+
+Consider a second random variable $\mathbf{Y}$ that takes value $Y_m$ with probability $p_m$ with $m = 1,2,\ldots,N_Y$.  The joint entropy is defined as
+\begin{equation}
+H_{X,Y} = -\sum_{n=1}^{N_X} \sum_{m=1}^{N_Y} p_{n,m} \log p_{n,m}\;\;,
+\end{equation}
+where $p_{n,m}$ is the joint probability $P(\mathbf{X}=X_n,\mathbf{Y}=Y_m)$.  If the two random variables are statistically independent, then $H_{X,Y} = H_X+H_Y$ \cite{Hlav2007}, which is motivation for the introduction of the mutual information $I_{X;Y}$ as
+\begin{equation}
+I_{X;Y} = H_X + H_Y - H_{X,Y} = \sum_{n=1}^{N_X} \sum_{m=1}^{N_Y} p_{n,m} \log \frac{p_{n,m}}{p_n p_m}\;\;,
+\end{equation}
+where the last equality can also be seen as the Kullback entropy due to assuming $P(\mathbf{X}=X_n,\mathbf{Y}=Y_m)=p_n p_m$ \cite{Kaiser2002}.  The mutual information is symmetric and is, therefore, not much use as a time series causality tool.  Time lags and conditional entropies, i.e., $H_{X|Y} = H_{X,Y} - H_{Y}$, can be used to make the mutual information non-symmetric, but such modifications are not easily interpreted in terms of information flow \cite{Schreiber2000} (the assumption is that a flow of information from one time series to another may be indicative of a driving relationship).  
+
+Schreiber's approach for using entropies to study dynamical structure of data was to focus on transitional probabilities in the system \cite{Schreiber2000}.  Suppose at time $t$, $\mathbf{X}(t) = X_n$ with some probability $P(\mathbf{X}(t) = X_n^{(t)})=p_n$.  The additional temporal structure allows for more complicated questions such as ``what is the uncertainty in $\mathbf{X}(t)$ given some value of $\mathbf{X}(t-1)$?''  The more basic question is how to define the transitional probabilities themselves, i.e., what is $P(\mathbf{X}(t) = X_n | \mathbf{X}(t-1) = X_{n-1},\mathbf{X}(t-2) = X_{n-2},\ldots,\mathbf{X}(0) = X_{0}) = p_{n|n-1,n-2,\ldots,0}$?
+
+Assume $\mathbf{X}(t)$ is governed by a Markov process; i.e.,$p_{n|n-1,n-2,\ldots,0} = p_{n|n-1}$ \cite{statstextbook_placeholder}.  The basic concept of transfer entropy is to measure the error made by assuming the Markov process generating $\mathbf{X}$ does not depend at all on the second time series $\mathbf{Y}$.  This error is quantified, in analogy to the mutual information expression shown above, with the Kullback entropy as
+\begin{equation}
+T_{Y\rightarrow X} = \sum_{n=1}^{N_X} \sum_{m=1}^{N_Y} p_{n+1,n,m}\log \frac{p_{n+1|n,m}}{p_{n+1|n}}\;\;,
+\end{equation}
+where $p_{n+1,n,m} = P(\mathbf{X}(t+1)=X_{n+1},\mathbf{X}(t)=X_n,\mathbf{Y}(\tau)=Y_m)$ is the joint probability of $\mathbf{X}$ at times $t$ and $t+1$ with $\mathbf{Y}$ at time $\tau$, and the two conditional probabilities are $p_{n+1|n,m} = P(\mathbf{X}(t+1)=X_{n+1}|\mathbf{X}(t)=X_n,\mathbf{Y}(\tau)=Y_m)$ and $p_{n+1|n} = P(\mathbf{X}(t+1)=X_{n+1}|\mathbf{X}(t)=X_n)$.  Schrieber notes that the ``most natural choices'' for $\tau$ are $\tau=t$ and $\tau=0$ \cite{Schreiber2000}.  The quantity $T_{Y\rightarrow X}$ is called the transfer entropy.  If $H_{X(t+1)|X(t)}$ is the conditional Shannon entropy at time $t+1$ given $t$, then the above expression can be rewritten as $T_{Y\rightarrow X} = H_{X(t+1)|X(t)}-H_{X(t+1)|X(t),Y(\tau)}$ \cite{Kaiser2002}. 
+
+Transfer entropy is often considered just one part of an information-theoretic approach to time series causality \cite{Hlavackova2007}, but it will be the primary information-theoretic time series causality tool used in this work.
+
+\subsubsection{Practical Usage}
+It can be shown that the transfer entropy is equivalent to Granger causality (up to a factor of 2) if $\mathbf{X}$ and $\mathbf{Y}$ are jointly multivariate Gaussian (i.e., both variables follow normal (Gaussian) distributions individually and jointly) \cite{Barnett2009}.  As Barnett et al.\ point out in their paper, this result provided ``for the first time a unified framework for data-driven causal inference that bridges information-theoretic and autoregressive methods.''  The Gaussian restriction of the result implies the use of Granger causality and transfer entropy for exploratory causal analysis, in general, still depends on the data under consideration.  Other authors have also explored to relationship between Granger causality and information-theoretic causality measures such as transfer entropy; e.g., see \cite{Amblard2012,Lungarella2007}.
+
+
+
+
+
+\subsection{State Space Reconstruction Causality}
+\subsection{Lagged Cross-Correlation}
+\subsection{Penchants and Leanings}
+
+\section{Exploratory Causal Analysis} 
+Applying the time series causality tools
+\subsection{Synthetic data examples}
+\subsection{Empirical data example}
+
+\section{Conclusions} 
+Future work, etc.\
+
+\bibliographystyle{plain}
+\bibliography{main}
 
 \end{document}
