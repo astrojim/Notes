@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  21 MAY 2015 19:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  18 JUN 2015 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -294,62 +294,60 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Info: Redefining \frak on input line 111.
 LaTeX Info: Redefining \Bbb on input line 113.
 ))
-Class revtex4-1 Info: Patching LaTeX tabular. on input line 12.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 12.
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen121
+)
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 13.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 13.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 12.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 12.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 12.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 13.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 13.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 13.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 \openout3 = `mainNotes.bib'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
-[]\OT1/cmr/m/n/10 Two other pen-chants, for which, $\OML/cmm/m/it/10 ^^T \OT1/c
-mr/m/n/10 =
+) [1] [2] [3] [4]
+Underfull \hbox (badness 2913) in paragraph at lines 283--284
+\OT1/cmr/m/n/10 less sys-tem weighted mean ob-served lean-ing, i.e.,
  []
 
 
-Underfull \hbox (badness 6063) in paragraph at lines 134--135
-\OML/cmm/m/it/10 P []$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 ^^T \OT1/cmr/m/n/1
-0 = \OML/cmm/m/it/10 P []$
+Underfull \hbox (badness 1122) in paragraph at lines 298--300
+\OML/cmm/m/it/10 ^^Z[]$\OT1/cmr/m/n/10 . De-spite the ad-di-tional ze-ros, $\OT
+1/cmr/bx/n/10 Y$ \OT1/cmr/m/n/10 can
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 134--135
-\OT1/cmr/m/n/10 are also pos-si-ble. These pen-chants are as-so-ci-ated
- []
-
-[3] [4]
-Underfull \hbox (badness 1320) in paragraph at lines 280--281
-\OT1/cmr/m/n/10 in-fer-ence, i.e. $\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 ^^U[]\OMS
-/cmsy/m/n/10 i[] ) \OT1/cmr/bx/n/10 X[] [] Y[]$ \OT1/cmr/m/n/10 as ex-
+Underfull \hbox (badness 2065) in paragraph at lines 298--300
+\OT1/cmr/m/n/10 ap-pended ze-ros, $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^Z[]\OMS
+/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^Z[]\OMS/c
+msy/m/n/10 j \OT1/cmr/m/n/10 =
  []
 
 [5]
@@ -367,7 +365,7 @@ File: SimpleCyclicexample_Bxytol.eps Graphic file (type eps)
 <SimpleCyclicexample_Bxytol.eps> [7]
 File: SimpleCyclicexample_difflags.eps Graphic file (type eps)
  <SimpleCyclicexample_difflags.eps>
-Underfull \hbox (badness 2469) in paragraph at lines 424--425
+Underfull \hbox (badness 2469) in paragraph at lines 440--441
 []\OT1/cmr/m/n/10 The cross-correlation dif-fer-ence tech-nique is also
  []
 
@@ -384,7 +382,7 @@ File: NonlinearCyclicexample_BxytolC08.eps Graphic file (type eps)
 <NonlinearCyclicexample_BxytolC08.eps> [9]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 536.
+ on input line 553.
 
 File: CoupLogexample_rx35ry35.eps Graphic file (type eps)
 <CoupLogexample_rx35ry35.eps>
@@ -405,7 +403,7 @@ File: XYZIRexample_BxytolZXandYandZ.eps Graphic file (type eps)
 <XYZIRexample_BxytolZXandYandZ.eps> [11]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 625.
+ on input line 642.
 
 File: EmpiricalData_p87X.eps Graphic file (type eps)
 <EmpiricalData_p87X.eps>
@@ -416,27 +414,32 @@ File: EmpiricalData_p87leans.eps Graphic file (type eps)
 [12]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 665.
+ on input line 682.
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 668--669
+Underfull \hbox (badness 1454) in paragraph at lines 685--686
 \OT1/cmr/m/n/10 time se-ries mea-sure-ments of sev-eral dif-fer-ent space
  []
 
 File: SolarDataBzNormDst.eps Graphic file (type eps)
 <SolarDataBzNormDst.eps>
+File: SolarDataBzNormDst_difflags.eps Graphic file (type eps)
+ <SolarDataBzNormDst_difflags.eps>
 File: NoCauseplot.eps Graphic file (type eps)
- <NoCauseplot.eps> [13]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 709.
-
-
-Underfull \hbox (badness 2158) in paragraph at lines 713--714
+ <NoCauseplot.eps>
+[13]
+Underfull \hbox (badness 2158) in paragraph at lines 735--736
 \OT1/cmr/m/n/10 here, in-volves many dif-fer-ent tech-niques, in-clud-ing
  []
 
-(./main.bbl [14]
+(./main.bbl
+Overfull \vbox (1.18056pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (1.18056pt too high) has occurred while \output is active []
+
+
+[14]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
@@ -445,12 +448,12 @@ Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
 ) [15] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5260 strings out of 495029
- 74767 string characters out of 6181522
- 174370 words of memory out of 5000000
- 8386 multiletter control sequences out of 15000+600000
+ 5283 strings out of 495029
+ 75255 string characters out of 6181522
+ 177370 words of memory out of 5000000
+ 8404 multiletter control sequences out of 15000+600000
  12827 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,16n,42p,1487b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,18n,42p,1475b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (15 pages, 114540 bytes).
+Output written on main.dvi (15 pages, 114056 bytes).

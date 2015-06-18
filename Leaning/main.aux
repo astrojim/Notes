@@ -1,6 +1,8 @@
 \relax 
 \citation{Schreiber2000,granger1969,Rogosa1980,Pearl2000,kleinberg2012}
 \citation{Granger1980,liu2012,Roberts1985}
+\citation{Peres1995}
+\citation{Bunge1979}
 \citation{Schreiber2000}
 \citation{granger1969}
 \citation{Sugihara2012}
@@ -11,7 +13,7 @@
 \citation{Suppes1970}
 \citation{Note1}
 \newlabel{FirstPage}{{}{1}{}{}{}}
-\@writefile{toc}{\contentsline {title}{Non-parametric causal inference in bivariate time series data}{1}{}}
+\@writefile{toc}{\contentsline {title}{Non-parametric causal inference for bivariate time series}{1}{}}
 \@writefile{toc}{\contentsline {abstract}{Abstract}{1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Causal Penchant}{1}{}}
@@ -27,33 +29,34 @@
 \@writefile{toc}{\contentsline {section}{\numberline {III}Causal Leaning}{2}{}}
 \newlabel{eq:leaning}{{6}{2}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Motivating Example}{3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Defining the penchants}{3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Finding the penchants from the data}{3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Defining penchants}{3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Computing penchants}{3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Mean observed leaning}{3}{}}
 \newlabel{sec:meanlean}{{IV\tmspace  +\thinmuskip {.1667em}C}{3}{}{}{}}
 \newlabel{eqn:rhoex1}{{9}{3}{}{}{}}
-\newlabel{eqn:meanlean}{{14}{4}{}{}{}}
+\newlabel{eqn:meanlean}{{10}{4}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {D}Unobserved penchants}{4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {E}Cause-effect assignment independence}{4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {F}Weighted Mean Observed Leaning}{4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {F}Weighted mean observed leaning}{4}{}}
 \newlabel{sec:wmean}{{IV\tmspace  +\thinmuskip {.1667em}F}{4}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {G}Tolerance Domains}{5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {G}Tolerance domains}{5}{}}
 \newlabel{sec:tol}{{IV\tmspace  +\thinmuskip {.1667em}G}{5}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {H}Stationarity Dependence}{5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {H}Stationarity dependence}{5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Simple Example Systems}{6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Impulse with Noisy Response Linear Example}{6}{}}
 \newlabel{sec:IR}{{V\tmspace  +\thinmuskip {.1667em}A}{6}{}{}{}}
-\newlabel{eqn:IReqn}{{24}{6}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces (Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf  {Y}$, and the library length of the signals. This synthetic data is used to explore the leaning, so $\mathbf  {X}$ and $\mathbf  {Y}$ do not have explicit units, from which it follows that both $\delta _y$ and $B$ are unitless. The red dashed line is the zero contour. See the text for an explanation of the missing data for large $\delta _y$.\relax }}{6}{}}
+\newlabel{eqn:IReqn}{{15}{6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces (Color available online.) The unitless leaning is a function of both the noise, the tolerance used for terms from $\mathbf  {Y}$, and the length of the signals and both $\delta _y$ and $B$ are unitless. See the text for an explanation of the missing data for large $\delta _y$.\relax }}{6}{}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:IRexChangeL}{{1}{6}{}{}{}}
+\citation{Weigel2014}
 \citation{McNames2007}
 \citation{Rogosa1980}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces $\mathaccentV {tilde}07E{\lambda }$ using three different estimation methods for $\delta _y$.\relax }}{7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces $\mathaccentV {tilde}07E{\lambda }$ using three different estimation methods for $\delta _y$: (1) lagged linear response deviation, (2) normalized standard deviation, and (3) n-bin mean standard deviation.\relax }}{7}{}}
 \newlabel{tab:IRlagTolComp}{{I}{7}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B}Cyclic Linear Example}{7}{}}
-\newlabel{eqn:cyceqn}{{25}{7}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Given $\delta _y=B$, the leaning $\lambda $ is always positive.\relax }}{7}{}}
+\newlabel{eqn:cyceqn}{{16}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Weighted mean observed leaning for $\left \{\mathbf  {X},\mathbf  {Y}\right \} = \left \{\qopname  \relax o{sin}(t), x_{t-1} + B\eta _t\right \}$ and a tolerance for the leaning calculation set to $\delta _y=B$. $\lambda $ is always positive, which implies $\mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$.\relax }}{7}{}}
 \newlabel{fig:cyc1}{{2}{7}{}{}{}}
 \citation{Rogosa1980}
 \citation{Rogosa1980}
@@ -61,8 +64,8 @@
 \newlabel{fig:cyc2}{{3}{8}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}RL Circuit Example}{8}{}}
 \newlabel{sec:rlcirc}{{V\tmspace  +\thinmuskip {.1667em}C}{8}{}{}{}}
-\newlabel{eqn:it}{{29}{8}{}{}{}}
-\newlabel{eqn:RLcirceqn}{{30}{8}{}{}{}}
+\newlabel{eqn:it}{{20}{8}{}{}{}}
+\newlabel{eqn:RLcirceqn}{{21}{8}{}{}{}}
 \citation{kaiser2002}
 \citation{Sugihara2012}
 \citation{Granger1980}
@@ -71,23 +74,24 @@
 \citation{Sugihara2012}
 \citation{Lloyd1995}
 \citation{Sugihara2012}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces The leaning $\lambda _1$ depends on both $\delta _I$ and the method for evaluating $\mathbf  {I}$ in this example. These two tables show that the values of $\delta _I$ for which the leaning starts to agree with intuition can also depend on the physical system parameters (e.g., $\tau $).\relax }}{9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces The leaning $\lambda _1$ depends on both $\delta _I$ and the method for computing $\mathbf  {I}$ in this example. These two cases show that the values of $\delta _I$ for which the leaning starts to agree with intuition can also depend on the physical system parameters (e.g., $\tau $).\relax }}{9}{}}
 \newlabel{tab:rl}{{II}{9}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {D}Nonlinear Example}{9}{}}
 \newlabel{sec:nonli}{{V\tmspace  +\thinmuskip {.1667em}D}{9}{}{}{}}
-\newlabel{eqn:nonlinearEX}{{32}{9}{}{}{}}
+\newlabel{eqn:nonlinearEX}{{23}{9}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {E}Coupled Logistic Map Example}{9}{}}
 \newlabel{sec:2Pop}{{V\tmspace  +\thinmuskip {.1667em}E}{9}{}{}{}}
-\newlabel{eqn:2pop}{{33}{9}{}{}{}}
+\newlabel{eqn:2pop}{{24}{9}{}{}{}}
+\citation{Sugihara2012}
 \citation{Rubin2015,Pearl2000}
 \citation{Sugihara2012}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Leaning, $\lambda _1$, is a function of all three unitless parameters in Eqn.\ 32{}{}{}\hbox {}, $A$, $B$, and $C$. The leaning agrees with intuition in this example for all the tested values of $A$, $B$, and $C$ given $\delta _y=C$.\relax }}{10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Leaning, $\lambda _1$, computed $\delta _y=C$ as function of all three unitless parameters in Eqn.\ 23{}{}{}\hbox {}, $A$, $B$, and $C$. The leaning agrees with intuition in this example for all the tested parameter values.\relax }}{10}{}}
 \newlabel{fig:nonlin1}{{4}{10}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Leaning, $\lambda _1$, is a function of four unitless parameters in Eqn.\ 33{}{}{}\hbox {}, $r_x$, $r_y$, $\beta _{xy}$, and $\beta _{yx}$ (along with the initial conditions $x_0$ and $y_0$, which are fixed in this example). The tolerance domains are set as $\delta _x = \sigma _{x_t-\delimiter "426830A x_t \delimiter "526930B }$ and $\delta _y = \sigma _{y_t-\delimiter "426830A y_t \delimiter "526930B }$. The leaning is defined using the 1-standard assignment, so $\lambda _1>0\Rightarrow \mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$.\relax }}{10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Leaning, $\lambda _1$, is a function of four unitless parameters in Eqn.\ 24{}{}{}\hbox {}, $r_x$, $r_y$, $\beta _{xy}$, and $\beta _{yx}$ (along with the initial conditions $x_0$ and $y_0$, which are fixed in this example). The tolerance domains are set as $\delta _x = \sigma _{x_t-\delimiter "426830A x_t \delimiter "526930B }$ and $\delta _y = \sigma _{y_t-\delimiter "426830A y_t \delimiter "526930B }$. The leaning is defined using the 1-standard assignment, so $\lambda _1>0\Rightarrow \mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$.\relax }}{10}{}}
 \newlabel{fig:2pop}{{5}{10}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {F}Impulse with Multiple Noisy Responses Example}{11}{}}
-\newlabel{eqn:3var}{{34}{11}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The (unitless) weighted mean observed leaning using the 1-standard cause-effect assignment, $\lambda _1$ only leads to causal inferences that agree with intuition for all points within the considered noise level domain, $B$, in this example for case 1. $B$ is the unitless noise parameter found in Eqn.\ 34{}{}{}\hbox {}, and the symmetric tolerance domains for $\mathbf  {Y}$ and $\mathbf  {Z}$ are set to this value.\relax }}{11}{}}
+\newlabel{eqn:3var}{{25}{11}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The (unitless) weighted mean observed leaning using the 1-standard cause-effect assignment, $\lambda _1$ only leads to causal inferences that agree with intuition for all points within the considered noise level domain, $B$, in this example for case 1. $B$ is the unitless noise parameter found in Eqn.\ 25{}{}{}\hbox {}, and the symmetric tolerance domains for $\mathbf  {Y}$ and $\mathbf  {Z}$ are set to this value.\relax }}{11}{}}
 \newlabel{fig:3var}{{6}{11}{}{}{}}
 \citation{bache2013}
 \citation{bache2013}
@@ -102,13 +106,13 @@
 \citation{IAGA}
 \citation{Hapgood1992}
 \citation{Gonz1994}
-\citation{Pearl2000}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The weighted mean observed leaning, $\lambda _l^{xy}$, using the $1$-standard cause-effect assignment for $l\in [0,21]$. The time series pair $\mathbf  {\tau }_1 = (\mathbf  {X},\mathbf  {Y})$ with $\mathbf  {X}$ and $\mathbf  {Y}$ shown in Figure 7{}{}{}\hbox {}(a) and (b), respectively. The expected causal inference is $\mathbf  {X}\xrightarrow {lean}\mathbf  {Y}$; i.e., the expectation is $\lambda _l^{xy} > 0$ for every point in the plotted domain.\relax }}{13}{}}
 \newlabel{fig:emp}{{8}{13}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces (Color available online) A histogram of the $(B_z^\prime ,D_{st})$ set of $n=10^4$ (unitless) weighted mean observed leanings, using the 1-standard cause-effect assignment, i.e., $\lambda ^1_{z}$, show causal inferences that agree with intuition for the OMNI data set. The red dashed lines show the algebraic means of the sets. The geomagnetic field component $B_z^\prime $ is calculated by taking the $B_z$ times series in the OMNI data set and then setting $B_z^\prime = 0$ if $B_z>0$.\relax }}{13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces (Color available online) (a) A histogram of the $(B_z^\prime ,D_{st})$ set of $n=10^4$ (unitless) weighted mean observed leanings, using the 1-standard cause-effect assignment, i.e., $\lambda ^1_{z}$, show causal inferences that agree with intuition for the OMNI data set. The red dashed lines show the algebraic mean of the sets. The geomagnetic field component $B_z^\prime $ is calculated by taking the $B_z$ times series in the OMNI data set and then setting $B_z^\prime = 0$ if $B_z>0$. (b) The algebraic means of the aforementioned sets of weighted mean observed leanings, i.e., $\delimiter "426830A \lambda ^z_l\delimiter "526930B $, are positive for all leanings calculated using $l$-standard assignment given $l\in [1,20]$.\relax }}{13}{}}
 \newlabel{fig:dsthist}{{9}{13}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {VII}Spurious Leanings}{13}{}}
-\newlabel{eqn:Spur}{{40}{13}{}{}{}}
+\newlabel{eqn:Spur}{{31}{13}{}{}{}}
+\citation{Pearl2000}
 \citation{kleinberg2012}
 \citation{kaiser2002}
 \citation{Rogosa1980}
@@ -122,11 +126,11 @@
 \bibdata{mainNotes,main}
 \bibcite{bache2013}{{1}{}{{}}{{}}}
 \bibcite{box2013}{{2}{}{{}}{{}}}
-\bibcite{Bunge1979}{{3}{}{{}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Eqn.\ 40{}{}{}\hbox {} leads to spurious leanings, i.e.\ weighted mean observed leanings using the 1-standard assignment, $\lambda _1$, that depend on both the tolerance domain $\sigma _y$ and the library length $L$.\relax }}{14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Eqn.\ 31{}{}{}\hbox {} leads to spurious leanings, i.e.\ weighted mean observed leanings using the 1-standard assignment, $\lambda _1$, that depend on both the tolerance domain $\sigma _y$ and the library length $L$.\relax }}{14}{}}
 \newlabel{fig:nocause}{{10}{14}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{14}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {}References}{14}{}}
+\bibcite{Bunge1979}{{3}{}{{}}{{}}}
 \bibcite{dufour2006}{{4}{}{{}}{{}}}
 \bibcite{dufour1998}{{5}{}{{}}{{}}}
 \bibcite{McNames2007}{{6}{}{{}}{{}}}
@@ -142,23 +146,25 @@
 \bibcite{kleinberg2012}{{16}{}{{}}{{}}}
 \bibcite{liu2012}{{17}{}{{}}{{}}}
 \bibcite{Lloyd1995}{{18}{}{{}}{{}}}
-\bibcite{mosedale2006}{{19}{}{{}}{{}}}
-\bibcite{Note1}{{20}{}{{}}{{}}}
+\bibcite{Weigel2014}{{19}{}{{}}{{}}}
+\bibcite{mosedale2006}{{20}{}{{}}{{}}}
+\bibcite{Note1}{{21}{}{{}}{{}}}
 \citation{Good1984}
 \citation{Good1984}
 \citation{Good1984}
-\bibcite{pascual2014}{{21}{}{{}}{{}}}
-\bibcite{Pearl2000}{{22}{}{{}}{{}}}
-\bibcite{Pierce1977}{{23}{}{{}}{{}}}
-\bibcite{Roberts1985}{{24}{}{{}}{{}}}
-\bibcite{Rogosa1980}{{25}{}{{}}{{}}}
-\bibcite{Schreiber2000}{{26}{}{{}}{{}}}
-\bibcite{Small2004}{{27}{}{{}}{{}}}
-\bibcite{Sugihara2012}{{28}{}{{}}{{}}}
-\bibcite{IAGA}{{29}{}{{}}{{}}}
-\bibcite{Sun2008}{{30}{}{{}}{{}}}
-\bibcite{Suppes1970}{{31}{}{{}}{{}}}
+\bibcite{pascual2014}{{22}{}{{}}{{}}}
+\bibcite{Pearl2000}{{23}{}{{}}{{}}}
+\bibcite{Peres1995}{{24}{}{{}}{{}}}
+\bibcite{Pierce1977}{{25}{}{{}}{{}}}
+\bibcite{Roberts1985}{{26}{}{{}}{{}}}
+\bibcite{Rogosa1980}{{27}{}{{}}{{}}}
+\bibcite{Schreiber2000}{{28}{}{{}}{{}}}
+\bibcite{Small2004}{{29}{}{{}}{{}}}
+\bibcite{Sugihara2012}{{30}{}{{}}{{}}}
+\bibcite{IAGA}{{31}{}{{}}{{}}}
+\bibcite{Sun2008}{{32}{}{{}}{{}}}
+\bibcite{Suppes1970}{{33}{}{{}}{{}}}
 \bibstyle{plain}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\newlabel{LastBibItem}{{31}{15}{}{}{}}
+\newlabel{LastBibItem}{{33}{15}{}{}{}}
 \newlabel{LastPage}{{}{15}{}{}{}}

@@ -101,6 +101,11 @@ Alun~L. Lloyd.
   heterogeneity on population dynamics.
 \newblock {\em Journal of Theoretical Biology}, 173(3):217 -- 230, 1995.
 
+\bibitem{Weigel2014}
+James~M. McCracken and Robert~S. Weigel.
+\newblock Convergent cross-mapping and pairwise asymmetric inference.
+\newblock {\em Phys. Rev. E}, 90:062903, Dec 2014.
+
 \bibitem{mosedale2006}
 Timothy~J Mosedale, David~B Stephenson, Matthew Collins, and Terence~C Mills.
 \newblock Granger causality of coupled climate processes: Ocean feedback on the
@@ -109,18 +114,17 @@ Timothy~J Mosedale, David~B Stephenson, Matthew Collins, and Terence~C Mills.
 
 \bibitem{Note1}
 Eqn.\ \ref {eq:pen} may appear related to the {\protect \em weight of evidence}
-  proposed by Good in his work on probabilistic casualty \cite {Good1984}. The
-  two quantities, however, are fundamentally different, both mathematically and
-  conceptually. A requirement of weight of evidence is that the posterior
-  probability should be recoverable provided probability of the evidence alone;
-  i.e., $P(C|E)$ should be derivable from $\rho _{EC}$ and $P(E)$ if $\rho
-  _{EC}$ can be considered weight of evidence as Good describes (see Eqn.\ (2)
-  of \cite {Good1984}). This requirement is not met by the penchant, as the
-  probability of the cause, $P(C)$, is also required to derive the posterior.
-  The intended scope of the penchant is also much more restricted than that of
-  the weight of evidence. Most of the examples presented by Good in \cite
-  {Good1984} cannot be addressed directly with any times series causality
-  tools.
+  \cite {Good1984}. The two quantities, however, are fundamentally different,
+  both mathematically and conceptually. A requirement of weight of evidence is
+  that the posterior probability should be recoverable provided probability of
+  the evidence alone; i.e., $P(C|E)$ should be derivable from $\rho _{EC}$ and
+  $P(E)$ if $\rho _{EC}$ can be considered weight of evidence as Good describes
+  (see Eqn.\ (2) of \cite {Good1984}). This requirement is not met by the
+  penchant, as the probability of the cause, $P(C)$, is also required to derive
+  the posterior. The intended scope of the penchant is also much more
+  restricted than that of the weight of evidence. Most of the examples
+  presented by Good in \cite {Good1984} cannot be addressed directly with any
+  times series causality tools.
 
 \bibitem{pascual2014}
 Roberto~D Pascual-Marqui, Rolando~J Biscay, Jorge Bosch-Bayard, Dietrich
@@ -133,6 +137,11 @@ Roberto~D Pascual-Marqui, Rolando~J Biscay, Jorge Bosch-Bayard, Dietrich
 Judea Pearl.
 \newblock {\em Causality: models, reasoning and inference}, volume~29.
 \newblock Cambridge Univ Press, 2000.
+
+\bibitem{Peres1995}
+A.~Peres.
+\newblock {\em Quantum Theory: Concepts and Methods}.
+\newblock Fundamental Theories of Physics. Springer, 1995.
 
 \bibitem{Pierce1977}
 David~A. Pierce and Larry~D. Haugh.
