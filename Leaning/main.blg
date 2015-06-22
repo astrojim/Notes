@@ -10,45 +10,45 @@ Warning--I'm ignoring Granger1980's extra "volume" field
 --line 5 of file main.bib
 Warning--I'm ignoring Sugihara2012's extra "volume" field
 --line 62 of file main.bib
-You've used 33 entries,
+You've used 34 entries,
             2118 wiz_defined-function locations,
-            732 strings with 10041 characters,
-and the built_in function-call counts, 10525 in all, are:
-= -- 1024
-> -- 460
+            741 strings with 10726 characters,
+and the built_in function-call counts, 10871 in all, are:
+= -- 1054
+> -- 484
 < -- 6
-+ -- 186
-- -- 149
-* -- 729
-:= -- 1759
-add.period$ -- 100
-call.type$ -- 33
-change.case$ -- 164
++ -- 194
+- -- 156
+* -- 752
+:= -- 1822
+add.period$ -- 104
+call.type$ -- 34
+change.case$ -- 169
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 400
-empty$ -- 857
-format.name$ -- 149
-if$ -- 2210
+cite$ -- 34
+duplicate$ -- 415
+empty$ -- 886
+format.name$ -- 156
+if$ -- 2284
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 39
-newline$ -- 165
-num.names$ -- 66
-pop$ -- 174
+int.to.str$ -- 34
+missing$ -- 40
+newline$ -- 170
+num.names$ -- 70
+pop$ -- 182
 preamble$ -- 1
-purify$ -- 140
+purify$ -- 144
 quote$ -- 0
-skip$ -- 283
+skip$ -- 289
 stack$ -- 0
-substring$ -- 686
-swap$ -- 70
+substring$ -- 691
+swap$ -- 71
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
+type$ -- 120
 warning$ -- 0
-while$ -- 98
-width$ -- 35
-write$ -- 354
+while$ -- 101
+width$ -- 36
+write$ -- 366
 (There were 3 warnings)

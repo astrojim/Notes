@@ -30,6 +30,12 @@ Mahmoud El-Gohary and James McNames.
 \newblock {\em Biomedical Engineering, IEEE Transactions on},
   54(12):2214--2222, 2007.
 
+\bibitem{Illari2011}
+Brandon Fitelson and Christopher Hitchcock.
+\newblock Probabilistic measures of causal strength.
+\newblock In Phyllis~McKay Illari, Federica Russo, and Jon Williamson, editors,
+  {\em Causality in the Sciences}. Oxford University Press, Oxford, 2011.
+
 \bibitem{Gonz1994}
 W.~D. Gonzalez, J.~A. Joselyn, Y.~Kamide, H.~W. Kroehl, G.~Rostoker, B.~T.
   Tsurutani, and V.~M. Vasyliunas.
@@ -124,7 +130,13 @@ Eqn.\ \ref {eq:pen} may appear related to the {\protect \em weight of evidence}
   the posterior. The intended scope of the penchant is also much more
   restricted than that of the weight of evidence. Most of the examples
   presented by Good in \cite {Good1984} cannot be addressed directly with any
-  times series causality tools.
+  times series causality tools. Eqn.\ \ref {eq:pen} is, however, identical in
+  form to the {\protect \em Eells measure of causal strength} (also called the
+  {\protect \em probability contrast}) \cite {Illari2011}. Eqn.\ \ref {eq:pen}
+  will not be used as a measure of causal strength in this work. Rather, it
+  will be used as a measure indicative of driving without any concern for
+  notions of the ``strength'' of such driving. As such, we will used the term
+  {\protect \em penchant} to avoid confusion.
 
 \bibitem{pascual2014}
 Roberto~D Pascual-Marqui, Rolando~J Biscay, Jorge Bosch-Bayard, Dietrich

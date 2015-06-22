@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  18 JUN 2015 12:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  22 JUN 2015 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -432,14 +432,7 @@ Underfull \hbox (badness 2158) in paragraph at lines 735--736
 \OT1/cmr/m/n/10 here, in-volves many dif-fer-ent tech-niques, in-clud-ing
  []
 
-(./main.bbl
-Overfull \vbox (1.18056pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (1.18056pt too high) has occurred while \output is active []
-
-
-[14]
+(./main.bbl [14]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
@@ -448,12 +441,12 @@ Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
 ) [15] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5283 strings out of 495029
- 75255 string characters out of 6181522
- 177370 words of memory out of 5000000
- 8404 multiletter control sequences out of 15000+600000
+ 5286 strings out of 495029
+ 75317 string characters out of 6181522
+ 181370 words of memory out of 5000000
+ 8407 multiletter control sequences out of 15000+600000
  12827 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,18n,42p,1475b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,18n,42p,1862b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (15 pages, 114056 bytes).
+Output written on main.dvi (15 pages, 114620 bytes).
