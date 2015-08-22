@@ -1,0 +1,128 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ancona2004}
+Nicola Ancona, Daniele Marinazzo, and Sebastiano Stramaglia.
+\newblock Radial basis function approach to nonlinear granger causality of time
+  series.
+\newblock {\em Phys. Rev. E}, 70:056221, Nov 2004.
+
+\bibitem{Box2013}
+G.E.P. Box, G.M. Jenkins, and G.C. Reinsel.
+\newblock {\em Time Series Analysis: Forecasting and Control}.
+\newblock Wiley Series in Probability and Statistics. Wiley, 2013.
+
+\bibitem{Casella2002}
+G.~Casella and R.L. Berger.
+\newblock {\em Statistical Inference}.
+\newblock Duxbury advanced series in statistics and decision sciences. Thomson
+  Learning, 2002.
+
+\bibitem{Efron1994}
+B.~Efron and R.J. Tibshirani.
+\newblock {\em An Introduction to the Bootstrap}.
+\newblock Chapman \& Hall/CRC Monographs on Statistics \& Applied Probability.
+  Taylor \& Francis, 1994.
+
+\bibitem{Mcnames2007}
+Mahmoud El-Gohary and James McNames.
+\newblock Establishing causality with whitened cross-correlation analysis.
+\newblock {\em Biomedical Engineering, IEEE Transactions on},
+  54(12):2214--2222, 2007.
+
+\bibitem{Granger1969}
+C.~W.~J. Granger.
+\newblock Investigating causal relations by econometric models and
+  cross-spectral methods.
+\newblock {\em Econometrica}, 37(3):pp. 424--438, 1969.
+
+\bibitem{Granger1963}
+C.W.J. Granger.
+\newblock Economic processes involving feedback.
+\newblock {\em Information and Control}, 6(1):28 -- 48, 1963.
+
+\bibitem{Granger1980}
+C.W.J. Granger.
+\newblock Testing for causality: A personal viewpoint.
+\newblock {\em Journal of Economic Dynamics and Control}, 2(0):329 -- 352,
+  1980.
+
+\bibitem{Illari2014}
+P.~Illari and F.~Russo.
+\newblock {\em Causality: Philosophical Theory Meets Scientific Practice}.
+\newblock Oxford University Press, 2014.
+
+\bibitem{Rubin2015}
+G.W. Imbens and D.B. Rubin.
+\newblock {\em Causal Inference in Statistics, Social, and Biomedical Sciences:
+  An Introduction}.
+\newblock Cambridge University Press, 2015.
+
+\bibitem{Jacobs1979}
+Rodney~L. Jacobs, Edward~E. Leamer, and Michael~P. Ward.
+\newblock Difficulties with testing for causation*.
+\newblock {\em Economic Inquiry}, 17(3):401--413, 1979.
+
+\bibitem{Kantz2004}
+H.~Kantz and T.~Schreiber.
+\newblock {\em Nonlinear Time Series Analysis}.
+\newblock Cambridge nonlinear science series. Cambridge University Press, 2004.
+
+\bibitem{Kleinberg2012}
+S.~Kleinberg.
+\newblock {\em Causality, Probability, and Time}.
+\newblock Causality, Probability, and Time. Cambridge University Press, 2012.
+
+\bibitem{Weigel2014}
+James~M. McCracken and Robert~S. Weigel.
+\newblock Convergent cross-mapping and pairwise asymmetric inference.
+\newblock {\em Phys. Rev. E}, 90:062903, Dec 2014.
+
+\bibitem{Pearl2000}
+J.~Pearl.
+\newblock {\em Causality: Models, Reasoning, and Inference}.
+\newblock Cambridge University Press, 2000.
+
+\bibitem{Pierce1977}
+David~A. Pierce and Larry~D. Haugh.
+\newblock Causality in temporal systems.
+\newblock {\em Journal of Econometrics}, 5(3):265 -- 293, 1977.
+
+\bibitem{Rogosa1980}
+David Rogosa.
+\newblock A critique of cross-lagged correlation.
+\newblock {\em Psychological Bulletin}, 88(2):245, 1980.
+
+\bibitem{Schreiber2000}
+Thomas Schreiber.
+\newblock Measuring information transfer.
+\newblock {\em Phys. Rev. Lett.}, 85:461--464, Jul 2000.
+
+\bibitem{Schwert1979}
+G.~William Schwert.
+\newblock Tests of causality.
+\newblock {\em Carnegie-Rochester Conference Series on Public Policy}, 10:55 --
+  96, 1979.
+
+\bibitem{Sugihara2012}
+George Sugihara, Robert May, Hao Ye, Chih-hao Hsieh, Ethan Deyle, Michael
+  Fogarty, and Stephan Munch.
+\newblock Detecting causality in complex ecosystems.
+\newblock {\em Science}, 338(6106):496--500, 2012.
+
+\bibitem{Suppes1970}
+Patrick Suppes.
+\newblock {\em A Probablistic Theory of Causality}.
+\newblock North Holland Publishing Company, 1970.
+
+\bibitem{Toda1994}
+Hiro~Y. Toda and Peter C.~B. Phillips.
+\newblock Vector autoregression and causality: a theoretical overview and
+  simulation study.
+\newblock {\em Econometric Reviews}, 13(2):259--285, 1994.
+
+\bibitem{Wand1997}
+M.~P. Wand.
+\newblock Data-based choice of histogram bin width.
+\newblock {\em The American Statistician}, 51(1):59--64, 1997.
+
+\end{thebibliography}
