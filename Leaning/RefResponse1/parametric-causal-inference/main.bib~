@@ -388,6 +388,15 @@ year = {1994},
   publisher={Oxford University Press}
 }
 
+@book{Illari2014,
+  title={Causality: Philosophical Theory Meets Scientific Practice},
+  author={Illari, P. and Russo, F.},
+  isbn={9780199662678},
+  lccn={2014939866},
+  year={2014},
+  publisher={Oxford University Press}
+}
+
 @article{Wand1997,
 author = { M. P. Wand },
 title = {Data-Based Choice of Histogram Bin Width},

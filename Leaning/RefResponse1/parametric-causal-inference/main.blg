@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: mainNotes.bib
+Warning--entry type for "Note1" isn't style-file defined
+--line 1 of file mainNotes.bib
+Warning--entry type for "Note2" isn't style-file defined
+--line 2 of file mainNotes.bib
+Warning--entry type for "Note3" isn't style-file defined
+--line 3 of file mainNotes.bib
+Database file #2: main.bib
+Warning--I'm ignoring Granger1980's extra "volume" field
+--line 5 of file main.bib
+Warning--I'm ignoring Sugihara2012's extra "volume" field
+--line 62 of file main.bib
+You've used 43 entries,
+            2118 wiz_defined-function locations,
+            795 strings with 12227 characters,
+and the built_in function-call counts, 13099 in all, are:
+= -- 1266
+> -- 564
+< -- 6
++ -- 229
+- -- 180
+* -- 885
+:= -- 2184
+add.period$ -- 129
+call.type$ -- 43
+change.case$ -- 205
+chr.to.int$ -- 0
+cite$ -- 43
+duplicate$ -- 509
+empty$ -- 1099
+format.name$ -- 180
+if$ -- 2763
+int.to.chr$ -- 0
+int.to.str$ -- 43
+missing$ -- 50
+newline$ -- 211
+num.names$ -- 84
+pop$ -- 237
+preamble$ -- 1
+purify$ -- 176
+quote$ -- 0
+skip$ -- 354
+stack$ -- 0
+substring$ -- 805
+swap$ -- 80
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 150
+warning$ -- 0
+while$ -- 120
+width$ -- 45
+write$ -- 452
+(There were 5 warnings)
