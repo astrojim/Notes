@@ -252,18 +252,18 @@
                 \@discipline\\[0.5 in]
         \end{center}
         Committee:\\[16 pt]
-        \siglinewithspace Dr. \@advisor, \@doctype\ \\
+        \siglinewithspace Dr.\ \@advisor, \@doctype\ \\
         \phantom{\siglinewithspace\!\!} Director \\[\intercommspace]
         \siglinewithspace Dr. \@firstmember, Committee Member        \\[\intercommspace]
-        \siglinewithspace Dr. \@secondmember, Committee Member       \\[\intercommspace]
-        \siglinewithspace Dr. \@depthead, Director, School of \\
-        \phantom{\siglinewithspace\!\!} Physics, Astronomy, and \\
-        \phantom{\siglinewithspace\!\!} Computational Sciences\\[\intercommspace]
+        \siglinewithspace Dr.\ \@secondmember, Committee Member       \\[\intercommspace]
+        \siglinewithspace Dr.\ \@depthead, Acting Department \\
+       \phantom{\siglinewithspace\!\!} Chair \\[\intercommspace]
+%        \phantom{\siglinewithspace\!\!} Computational Sciences\\[\intercommspace]
         % \phantom{\siglinewithspace\!\!} of \@dept \\ % commented out as requested by thesis office (Muhammad Abdulla)
-        %\siglinewithspace Dr. Timothy L. Born, Associate Dean for \\
-        %\phantom{\siglinewithspace\!\!} Student and Academic Affairs, \\
-        %\phantom{\siglinewithspace\!\!} College of Science \\[\intercommspace]
-        \siglinewithspace Dr. \@deanITE, Dean  \\
+        \siglinewithspace Dr.\ Donna M.\ Fox, Associate Dean for \\
+        \phantom{\siglinewithspace\!\!} of Student Affairs \& Special Programs, \\
+        \phantom{\siglinewithspace\!\!} College of Science \\[\intercommspace]
+        \siglinewithspace Dr.\ \@deanITE, Dean  \\
         \phantom{\siglinewithspace\!\!} College of Science \\[\intercommspace]
 %         \siglinewithspace \@programdirector, Associate Dean \\
 %          \phantom{\siglinewithspace} for Graduate Studies and Research \\[\commdatespace]
@@ -408,7 +408,7 @@
      \lineskiplimit=1pc
 
     \noi
-    \@author
+    \@author, PhD
     \nl
 
     \noi
@@ -691,7 +691,7 @@
    \lineskip=0.25pc  %%% USE FOR WIDER SPACING LOF
 }
 
-\def\startofchapters{%
+\def\startofchapters{
     \renewcommand{\thepage}{\arabic{page}}
     \setcounter{chapter}{0}
     %\ls{2}
@@ -716,8 +716,8 @@
 
 \def\thebibliography#1{
 \ls{1}
-\chapter*{Bibliography\@mkboth
-  {BIBLIOGRAPHY}{BIBLIOGRAPHY}}
+%\chapter*{Bibliography\@mkboth
+  %{BIBLIOGRAPHY}{BIBLIOGRAPHY}}
   \markright{}
   %\thispagestyle{myheadings} % commented out to force page numbers to bottom center (8/11/07 change by C. St. Jean)
   %\thispagestyle{empty}

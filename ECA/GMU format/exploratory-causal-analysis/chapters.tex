@@ -345,6 +345,7 @@ Consider a time series pair $\{\mathbf{X},\mathbf{Y}\}$ with
 where, for convenience, the notation is $Z_t := Z(t)$. This example system obeys the joint and conditional probabilities shown in Table \ref{tab:teEx}.  The causal intuition for this system is that $\mathbf{X}$ drives $\mathbf{Y}$.  
 \begin{table}
 \begin{center}
+\caption[Conditional and joint probabilities of $\{\mathbf{X},\mathbf{Y}\}$]{Conditional and joint probabilities of $\{\mathbf{X},\mathbf{Y}\}$ in Section \ref{sec:tePUSE} (the shorthand notation $Z_t := Z(t)$ is used for convenience).}
 \begin{tabular}{ll}
 \toprule
 $P\left(X_{t+1} = 0 |X_t=0\right) = \frac{1}{2}$ & $P\left(Y_{t+1} = 0 |Y_t=0\right) = \frac{4}{7}$ \\
@@ -371,7 +372,6 @@ $P\left(X_{t+1} = 1 ,X_t=1,Y_t=0\right) = 0$ & $P\left(Y_{t+1} = 1 ,Y_t=1,X_t=0\
 $P\left(X_{t+1} = 1 ,X_t=1,Y_t=1\right) = 0$ & $P\left(Y_{t+1} = 1 ,Y_t=1,X_t=1\right) = 0$\\
 \bottomrule
 \end{tabular}
-\caption[Conditional and joint probabilities of $\{\mathbf{X},\mathbf{Y}\}$]{Conditional and joint probabilities of $\{\mathbf{X},\mathbf{Y}\}$ in Section \ref{sec:tePUSE} (the shorthand notation $Z_t := Z(t)$ is used for convenience).}
 \label{tab:teEx}
 \end{center}
 \end{table}
@@ -539,17 +539,7 @@ and
 \end{equation}
 These ordered distances are then subset to the $E+1=4$ closest non-zero\footnote{It is assumed that $d_1\neq 0$ in Eqn.\ \ref{eqn:CCMweights} for any vector in the manifold because $\lim_{x\rightarrow \infty}e^{-x} = 0$ \cite{statsbook_placeholder}, which may imply that all the weights are zero if $d_1=0$.  In practice (i.e., with empirical time series), $d_1$ is rarely identically equal to zero.  However that is not always the case in simple examples like the one presented in this section.  Only manifold vector pairs with non-zero distances are used in this example because it is only meant to be illustrative.  The basic algorithm can be altered to handle zero distance manifold vector pairs (e.g., by changing how the weights are calculated), but such alterations would be counter to the point of this example.} distances for each vector in the manifold, which are then used to calculate the weights; i.e.,
 \begin{equation}
-\left\{\begin{array}{c} 
-\left\{\left(\sqrt{2},8\right),\left(\sqrt{2},5\right),\left(\sqrt{3},4\right),\left(\sqrt{3},7\right)\right\},\\
-\left\{\left(\sqrt{3},3\right),\left(\sqrt{3},5\right),\left(\sqrt{3},6\right),\left(\sqrt{3},8\right)\right\},\\
-\left\{\left(\sqrt{2},3\right),\left(\sqrt{2},6\right),\left(\sqrt{2},9\right),\left(\sqrt{3},4\right)\right\},\\
-\left\{\left(\sqrt{2},5\right),\left(\sqrt{2},8\right),\left(\sqrt{3},4\right),\left(\sqrt{3},7\right)\right\},\\
-\left\{\left(\sqrt{3},3\right),\left(\sqrt{3},5\right),\left(\sqrt{3},6\right),\left(\sqrt{3},8\right)\right\},\\
-\left\{\left(\sqrt{2},3\right),\left(\sqrt{2},6\right),\left(\sqrt{2},9\right),\left(\sqrt{3},4\right)\right\},\\
-\left\{\left(\sqrt{2},5\right),\left(\sqrt{2},8\right),\left(\sqrt{3},4\right),\left(\sqrt{3},7\right)\right\},\\
-\left\{\left(\sqrt{3},3\right),\left(\sqrt{3},5\right),\left(\sqrt{3},6\right),\left(\sqrt{3},8\right)\right\}
-\end{array}\right\} \Longrightarrow
-\left\{\begin{array}{c} 
+\left\{w_{t}^X\right\}_o = \left\{\begin{array}{c} 
 \left\{\left(0.278,8\right),\left(0.278,5\right),\left(0.222,4\right),\left(0.222,7\right)\right\},\\
 \left\{\left(0.250,3\right),\left(0.250,5\right),\left(0.250,6\right),\left(0.250,8\right)\right\},\\
 \left\{\left(0.263,3\right),\left(0.263,6\right),\left(0.263,9\right),\left(0.210,4\right)\right\},\\
@@ -558,21 +548,11 @@ These ordered distances are then subset to the $E+1=4$ closest non-zero\footnote
 \left\{\left(0.263,3\right),\left(0.263,6\right),\left(0.263,9\right),\left(0.210,4\right)\right\},\\
 \left\{\left(0.278,5\right),\left(0.278,8\right),\left(0.222,4\right),\left(0.222,7\right)\right\},\\
 \left\{\left(0.250,3\right),\left(0.250,5\right),\left(0.250,6\right),\left(0.250,8\right)\right\}
-\end{array}\right\} = \left\{w_{t}^X\right\}_o
+\end{array}\right\}
 \end{equation}
 and
 \begin{equation}
-\left\{\begin{array}{c} 
-\left\{\left(\sqrt{2},4\right),\left(\sqrt{2},5\right),\left(\sqrt{2},7\right),\left(\sqrt{2},8\right)\right\},\\
-\left\{\left(\sqrt{2},3\right),\left(\sqrt{2},5\right),\left(\sqrt{2},8\right),\left(\sqrt{3},6\right)\right\},\\
-\left\{\left(\sqrt{2},3\right),\left(\sqrt{2},4\right),\left(\sqrt{2},7\right),\left(\sqrt{2},10\right)\right\},\\
-\left\{\left(\sqrt{3},4\right),\left(\sqrt{3},5\right),\left(\sqrt{3},7\right),\left(\sqrt{3},8\right)\right\},\\
-\left\{\left(\sqrt{2},3\right),\left(\sqrt{2},5\right),\left(\sqrt{2},8\right),\left(\sqrt{3},6\right)\right\},\\
-\left\{\left(\sqrt{2},3\right),\left(\sqrt{2},4\right),\left(\sqrt{2},7\right),\left(\sqrt{2},10\right)\right\},\\
-\left\{\left(\sqrt{3},4\right),\left(\sqrt{3},5\right),\left(\sqrt{3},7\right),\left(\sqrt{3},8\right)\right\},\\
-\left\{\left(\sqrt{2},3\right),\left(\sqrt{2},5\right),\left(\sqrt{2},8\right),\left(\sqrt{3},6\right)\right\}
-\end{array}\right\}\Longrightarrow
-\left\{\begin{array}{c} 
+\left\{w_{t}^Y\right\}_o = \left\{\begin{array}{c} 
 \left\{\left(0.250,4\right),\left(0.250,5\right),\left(0.250,7\right),\left(0.250,8\right)\right\},\\
 \left\{\left(0.263,3\right),\left(0.263,5\right),\left(0.263,8\right),\left(0.210,6\right)\right\},\\
 \left\{\left(0.250,3\right),\left(0.250,4\right),\left(0.250,7\right),\left(0.250,10\right)\right\},\\
@@ -581,7 +561,7 @@ and
 \left\{\left(0.250,3\right),\left(0.250,4\right),\left(0.250,7\right),\left(0.250,10\right)\right\},\\
 \left\{\left(0.250,4\right),\left(0.250,5\right),\left(0.250,7\right),\left(0.250,8\right)\right\},\\
 \left\{\left(0.263,3\right),\left(0.263,5\right),\left(0.263,8\right),\left(0.210,6\right)\right\}
-\end{array}\right\} = \left\{w_{t}^Y\right\}_o\;\;,
+\end{array}\right\}\;\;,
 \end{equation}
 where $\left\{w_{t}^Z\right\}_o$ is the set of $E+1$ pairs $\left(w_{t(j)}^Z,j\right)$ consisting of normalized\footnote{The weights are shown, for convenience, with only three significant digits. As such, not all of the normalized weights for a given manifold vector sum to one exactly.} weights $w_{t(j)}$ calculated from the Euclidean distances between manifold vectors $\tilde{Z}_t$ and $\tilde{Z}_j$ as described in Eqn.\ \ref{eqn:CCMweights}.  These weights can be used to estimate the original signals as
 \begin{eqnarray}
@@ -641,6 +621,7 @@ Consider a time series pair $\{\mathbf{X},\mathbf{Y}\}$ with
 The structure of this system, i.e., $Y_t=X_{t-1}$, implies $\mathbf{X}$ drives $\mathbf{Y}$.  Table \ref{tab:lccEx} can be calculated\footnote{Table \ref{tab:lccEx} is calculated using using the {\sc MATLAB} function {\em corr}, which calculates the cross-correlation as $\rho_l^{xy} = m \sum_i \tilde{X}_i \tilde{Y}_{i-l}$ with $\tilde{Z}_t = Z_t-\mu_Z$ where $m=\left(||\tilde{\mathbf{X}}||_2||\tilde{\mathbf{Y}}||_2\right)^{-1}$ is the inverse of the product of the Euclidean norms of $\tilde{\mathbf{X}}$ and $\tilde{\mathbf{Y}}$, $\mu_z$ is the mean of $\mathbf{Z}$, and $\tilde{\mathbf{Z}} = \{\tilde{Z}_t\;|\;t=0,1,\ldots,9\}$.} by considering $l\in[0,6]$.
 \begin{table}
 \begin{center}
+\caption[Lagged cross-correlation calculations]{Lagged cross-correlation calculations for the example times series pair $\{\mathbf{X},\mathbf{Y}\}$ in Section \ref{sec:lccPUSE}.}
 \begin{tabular}{ccc|r}
 $l$ & $\rho^{xy}_l$ & $\rho^{yx}_l$ & $\Delta_l$\\
 \midrule
@@ -652,7 +633,6 @@ $l$ & $\rho^{xy}_l$ & $\rho^{yx}_l$ & $\Delta_l$\\
 5 & 0.61 & 0.41 & 0.20 \\
 6 & 0.33 & 0.58 & -0.24
 \end{tabular}
-\caption[Lagged cross-correlation calculations]{Lagged cross-correlation calculations for the example times series pair $\{\mathbf{X},\mathbf{Y}\}$ in Section \ref{sec:lccPUSE}.}
 \label{tab:lccEx}
 \end{center}
 \end{table}
@@ -902,89 +882,148 @@ y_t = x_{t-1} + B\eta_t
 with $y_0 = 0$, $A,B\in\mathbb{R}\ge 0$ and $\eta_t\sim\mathcal{N}\left(0,1\right)$.  Specifically, consider $A\in[0,1]$ and $B\in[0,1]$.  The driving system $\mathbf{X}$ is a periodic impulse with a signal amplitude above the maximum noise level of both the driving and the response systems, and the response system $\mathbf{Y}$ is a lagged version of the driving signal with standard normal (i.e.,  $\mathcal{N}\left(0,1\right)$) noise of amplitude $B$ applied at each time step.  
 
 Let the instance of Eqn.\ \ref{eqn:IReqn} with $L=500$, $A=0.1$, and $B=0.4$ shown in Figure \ref{fig:IRxyplot} be considered the synthetic data set $(\mathbf{X},\mathbf{Y})$ upon which the exploratory causal analysis will be performed.  A preliminary visual inspection of Figure \ref{fig:IRxyplot} shows $\mathbf{X}$ appears less noisy than $\mathbf{Y}$ (as expected), but perhaps more importantly, both times series appear to have two major groupings for their data, around 0 and 2 for $\mathbf{X}$ and $\mathbf{Y}$, albeit with a wider spread in $\mathbf{Y}$.  This observation is supported by the histograms of these data shown in Figure \ref{fig:IRxyhist}.  This data set is synthetic, so such observations may seem pointlessly obvious.  However, if the data were not synthetic, then these observations would be useful to setting the leaning tolerance domains, $\delta_x$ and $\delta_y$.  It has been shown that if $A$ and $B$ are known {\em a priori}, then the leaning will agree with intuition if $\delta_x=A$ and $\delta_Y=B$ \cite{Weigel2014}.  It is assumed here, however, that $A$ and $B$ are unknown to the analyst.  From Figure \ref{fig:IRxyhist}, initial tolerance domains of $\pm\delta_x = 0.5$ and $\pm\delta_y=1$ will be used for the leaning calculations.  
-
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{NoisyResponseExample_X.eps} & \includegraphics[scale=0.48]{NoisyResponseExample_Y.eps} \\
+\includegraphics[scale=0.40]{NoisyResponseExample_X.eps} & \includegraphics[scale=0.40]{NoisyResponseExample_Y.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{An instance of Eqn.\ \ref{eqn:IReqn} for $L=500$, $A=0.1$, and $B=0.4$.}
+\caption[An instance of Eqn.\ \ref{eqn:IReqn}]{An instance of Eqn.\ \ref{eqn:IReqn} for $L=500$, $A=0.1$, and $B=0.4$.}
 \label{fig:IRxyplot}
 \end{figure}
-
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
+\afterpage{
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{NoisyResponseExample_Xhist.eps} & \includegraphics[scale=0.5]{NoisyResponseExample_Yhist.eps} \\
+\includegraphics[scale=0.4]{NoisyResponseExample_Xhist.eps} & \includegraphics[scale=0.4]{NoisyResponseExample_Yhist.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Histograms of the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot}.}
+\caption[Histograms of the instance of Eqn.\ \ref{eqn:IReqn}]{Histograms of the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot}.}
 \label{fig:IRxyhist}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Autocorrelations in the data are useful to understand for both potential cause-effect assignments for the leaning calculations and potential issues in drawing causal inferences from the lagged cross-correlations.  This data is synthetic, so it is known from Eqn.\ \ref{eqn:IReqn} that a reasonable cause-effect assignment for the leaning would be $\{C,E\}=\{x_{t-1},y_t\}$.  The goal here is to show how such potential cause-effect assignments can be drawn directly from the data.  Figure \ref{fig:IRxyautocorr} shows strong autocorrelations for both $\mathbf{X}$ and $\mathbf{Y}$ at $l=6,12,18,\ldots,48$.  The autocorrelations appear cyclic, which implies the leaning and lagged cross-correlation time series causality tools need not be calculated for more than $l=1,2,\ldots,6$, which is the lag after which the autocorrelations pattern seems to repeat. If $l>6$ in these calculations, then the causal inference may be strongly influenced by the autocorrelations in the data.  The similar autocorrelations pattern seen in Figure \ref{fig:IRxyautocorr} may imply a strong driving relationship within the time series pair (or perhaps a strong shared driving relationship with some outside driver) but do not immediately suggest a cause-effect assignment for the leaning calculation.  The most straightforward cause-effect assignment is the $l$-standard assignment, which will be used with $l = 1,2,\ldots,6$. 
 
-The leaning calculations using the $l$-standard cause-effect assignment and tolerance domains suggested by Figures \ref{fig:IRxyautocorr} and \ref{fig:IRxyhist}, respectively, fit naturally on a plot with the lagged cross-correlations (because both depend on some lag $l$).  These values are shown in Figure \ref{fig:IRxyLandLCC} for $l=1,2,\ldots,6$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, suggest the same causal inference for almost every lag\footnote{$\langle \lambda_l\rangle > 0$ and $\Delta_l<0\Rightarrow\mathbf{X}\rightarrow\mathbf{Y}$ and {\em vice versa}.  See Sections \ref{sec:lean} and \ref{sec:lccPUSE} for more details.}.  The causal inferences for the leanings are $\mathbf{Y}\rightarrow\mathbf{X}$ for $l=2,\ldots,6$ and $\mathbf{X}\rightarrow\mathbf{Y}$ for $l=1$ with a maximum absolute value at $l=1$, which implies $\mathbf{X}\rightarrow\mathbf{Y}$, and a mean across all the lags, $\langle\langle\lambda_l\rangle\rangle_l=6.6\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  The causal inferences for the lagged cross-correlation differences are $\mathbf{Y}\rightarrow\mathbf{X}$ for $l=2,3,5,6$ and $\mathbf{X}\rightarrow\mathbf{Y}$ for $l=1,4$ with a maximum absolute value at $l=1$, which implies $\mathbf{X}\rightarrow\mathbf{Y}$, and a mean across all the lags, $\langle\Delta_l\rangle_l=-2.8\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  Both the mean across all lags and the maximum absolute value for both tools yields the same causal inference, and that causal inference agrees with intuition for this example.  However, the second largest value of both tools in Figure \ref{fig:IRxyLandLCC} suggests the opposite (counter-intuitive) causal inference.  
-\begin{figure}[ht]
+The leaning calculations using the $l$-standard cause-effect assignment and tolerance domains suggested by Figures \ref{fig:IRxyautocorr} and \ref{fig:IRxyhist}, respectively, fit naturally on a plot with the lagged cross-correlations (because both depend on some lag $l$).  These values are shown in Figure \ref{fig:IRxyLandLCC} for $l=1,2,\ldots,6$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, suggest the same causal inference for almost every lag\footnote{$\langle \lambda_l\rangle > 0$ and $\Delta_l<0\Rightarrow\mathbf{X}\rightarrow\mathbf{Y}$ and {\em vice versa}.  See Sections \ref{sec:lean} and \ref{sec:lccPUSE} for more details.}.  The causal inferences for the leanings are $\mathbf{Y}\rightarrow\mathbf{X}$ for $l=2,\ldots,6$ and $\mathbf{X}\rightarrow\mathbf{Y}$ for $l=1$ with a maximum absolute value at $l=1$, which implies $\mathbf{X}\rightarrow\mathbf{Y}$, and a mean across all the lags, $\langle\langle\lambda_l\rangle\rangle_l=6.6\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  The causal inferences for the lagged cross-correlation differences are $\mathbf{Y}\rightarrow\mathbf{X}$ for $l=2,3,5,6$ and $\mathbf{X}\rightarrow\mathbf{Y}$ for $l=1,4$ with a maximum absolute value at $l=1$, which implies $\mathbf{X}\rightarrow\mathbf{Y}$, and a mean across all the lags, $\langle\Delta_l\rangle_l=-2.8\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  Both the mean across all lags and the maximum absolute value for both tools yields the same causal inference, and that causal inference agrees with intuition for this example.  However, the second largest value of both tools in Figure \ref{fig:IRxyLandLCC} suggests the opposite (counter-intuitive) causal inference. 
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{NoisyResponseExample_autocorrX.eps} & \includegraphics[scale=0.48]{NoisyResponseExample_autocorrY.eps} \\
+\includegraphics[scale=0.4]{NoisyResponseExample_autocorrX.eps} & \includegraphics[scale=0.4]{NoisyResponseExample_autocorrY.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
+\caption[Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$]{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
 \label{fig:IRxyautocorr}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
+\afterpage{
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.7]{NoisyResponseExample_LandLCC.eps} 
 \end{center}
-\caption{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $\pm\delta_x = 0.5$ and $\pm\delta_y=1$) for the instances of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,6$.}
+\caption[Lagged cross-correlation differences]{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $\pm\delta_x = 0.5$ and $\pm\delta_y=1$) for the instances of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,6$.}
 \label{fig:IRxyLandLCC}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 These lags can be investigated further by examining the correlation plots, i.e., plots of $(y_{t-l},x_t)$ (Figure \ref{fig:lagplotsYX}) and $(x_{t-l},y_t)$ (Figure \ref{fig:lagplotsXY}) for $l=1,2,\ldots,6$.  These figures show the data clusters around 0 and 2, as expected from Figure \ref{fig:IRxyhist}.  A notable feature is the strong linear relationship seen in Figure \ref{fig:lagplotsXY}(a) and Figure \ref{fig:lagplotsYX}(e).  These are the relationships shown by the lagged cross-correlation differences (and the leaning) in Figure \ref{fig:IRxyLandLCC}.  These relationships are not unexpected given the structure of Eqn\ \ref{eqn:IReqn}.  The $(y_t,x_{t-1})$ relationship is the explicit part of the system that accounts for, in large part, the intuitive causal structure.  The $(x_t,y_{t-5})$ relationship is a by-product of the structured pulse pattern created for $\mathbf{X}$; i.e., if the pulses of $\mathbf{X}$ were set to occur at a different interval, then it is expected that this $(x_t,y_{t-l})$ relationship would appear for a lag $l$ corresponding to that different interval.  
 
 The assumption, however, has been that the analyst doing the exploratory causal analysis of this synthetic data does not know Eqn.\ \ref{eqn:IReqn} {\em a priori}.  The question is what causal inference should such an analyst make for this example?  It has already been shown that the causal inference would be $\mathbf{X}\rightarrow\mathbf{Y}$ (which agrees with intuition) if the analyst were to use the average across all the calculated lags for either the leaning or the lagged cross-correlation difference, but the strong counter inferences provided by $l=1$ and $l=5$ may be seen as a concern that needs to be investigated further.  The most desirable path forward may be to change the impulse pattern of $\mathbf{X}$ and see if the leaning and lagged cross-correlation differences change for either $l=1$ or $l=5$.  As explained in the previous paragraph, it is expected that doing so would change the result for $l=5$ but may create a similar result for a different lag, while the $l=1$ is expected to remain unchanged.  This type of experimental result may be seen as strong evidence that the $l=1$ results are the more correct causal inferences for this example system, but such experiments may not be possible.  The analyst may only have access to the single instances of $\mathbf{X}$ and $\mathbf{Y}$ shown in Figure \ref{fig:IRxyplot}.  Another possible approach is to calculate the leaning using other tolerance domains.
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{ccc}
-\includegraphics[scale=0.55]{NoisyResponseExample_lagplotXYl1.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotXYl2.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotXYl3.eps} \\
+\includegraphics[scale=0.45]{NoisyResponseExample_lagplotXYl1.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotXYl2.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotXYl3.eps} \\
 (a) $l = 1$ & (b) $l = 2$ & (c) $l = 3$ \\
-\includegraphics[scale=0.55]{NoisyResponseExample_lagplotXYl4.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotXYl5.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotXYl6.eps} \\
+\includegraphics[scale=0.45]{NoisyResponseExample_lagplotXYl4.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotXYl5.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotXYl6.eps} \\
 (d) $l = 4$ & (e) $l = 5$ & (f) $l = 6$
 \end{tabular}
-\caption{Lagged cross-correlation plots, $(x_{t-l},y_t)$, for the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,6$.}
+\caption[Lagged cross-correlation plots]{Lagged cross-correlation plots, $(x_{t-l},y_t)$, for the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,6$.}
 \label{fig:lagplotsXY}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{ccc}
-\includegraphics[scale=0.55]{NoisyResponseExample_lagplotYXl1.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotYXl2.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotYXl3.eps} \\
+\includegraphics[scale=0.45]{NoisyResponseExample_lagplotYXl1.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotYXl2.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotYXl3.eps} \\
 (a) $l = 1$ & (b) $l = 2$ & (c) $l = 3$ \\
-\includegraphics[scale=0.55]{NoisyResponseExample_lagplotYXl4.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotYXl5.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_lagplotYXl6.eps} \\
+\includegraphics[scale=0.45]{NoisyResponseExample_lagplotYXl4.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotYXl5.eps} & \includegraphics[scale=0.45]{NoisyResponseExample_lagplotYXl6.eps} \\
 (d) $l = 4$ & (e) $l = 5$ & (f) $l = 6$
 \end{tabular}
-\caption{Lagged cross-correlation plots, $(y_{t-l},x_t)$, for the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,6$.}
+\caption[Lagged cross-correlation plots]{Lagged cross-correlation plots, $(y_{t-l},x_t)$, for the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} given lags of $l=1,2,\ldots,6$.}
 \label{fig:lagplotsYX}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Consider the tolerance domains used in Figure \ref{fig:IRxyLandLCC}, $\pm\delta_x = 0.5$ and $\pm\delta_y=1$.  These domains were found by visual inspection of Figures \ref{fig:IRxyplot} and \ref{fig:IRxyhist}.  A more computational approach is to set the tolerance domains as $\pm\delta_x=f(\max(\mathbf{X})-\min(\mathbf{X}))$ and $\pm\delta_y=f(\max(\mathbf{Y})-\min(\mathbf{Y}))$ with $f=1/4$ (see \cite{Weigel2014} for other examples of setting tolerances domains).  This method for setting the tolerance domains will be used often, so for brevity, it will be referred to as the {\em f-width} tolerance domains; i.e., this example uses the $(1/4)$-width tolerance domains.  Figure \ref{fig:IRxyLtoldomains} shows the leaning calculations using the $l$-standard assignment for $l=1$ and $l=5$ for different reasonable\footnote{``Reasonable'' is defined in reference to Figure \ref{fig:IRxyhist}.  For example, $\pm\delta_x=2$ would lead to undefined leanings as the domain would be large enough to include all possible values of $x_t$ and $\pm\delta_x=1.5$ appears equivalent to $\pm\delta_x=1.0$, so both such tolerance domains are considered ``unreasonable''.} tolerance domains of $\pm\delta_x\in[0,1]$ and $\pm\delta_y\in[0,1]$ in steps of 0.05.  This figure shows the causal inferences implied for $l=1$ and $l=5$ in Figure \ref{fig:IRxyLandLCC} are consistently implied by the leaning calculations using different tolerance domains.  Figure \ref{fig:IRxyLtoldomains} shows the leaning calculation changes sign for small tolerance domains, as expected
 \footnote{See Section \ref{sec:lean}.}, but is consistently either positive (for $l=1$) or negative (for $l=5$) as the tolerance domain increases.  This behavior implies the signs of original leaning calculations were not attributable to the specific tolerance domains used in those calculations.  At this point, causal inference for this system might be better approached by comparing the leaning and lagged cross-correlation differences to other times series causality tools.
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.70]{NoisyResponseExample_leandifftoll1.eps} & \includegraphics[scale=0.70]{NoisyResponseExample_leandifftoll5.eps} \\
+\includegraphics[scale=0.55]{NoisyResponseExample_leandifftoll1.eps} & \includegraphics[scale=0.55]{NoisyResponseExample_leandifftoll5.eps} \\
 (a) $l=1$ & (b) $l=5$
 \end{tabular}
-\caption{Leaning calculations for the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} using the $l$-standard assignment for $l=1$ and $l=5$ and tolerance domains defined as $\pm\delta_x\in[0,1]$ and $\pm\delta_y\in[0,1]$ in steps of 0.05.}
+\caption[Leaning calculations for the instance of Eqn.\ \ref{eqn:IReqn}]{Leaning calculations for the instance of Eqn.\ \ref{eqn:IReqn} shown in Figure \ref{fig:IRxyplot} using the $l$-standard assignment for $l=1$ and $l=5$ and tolerance domains defined as $\pm\delta_x\in[0,1]$ and $\pm\delta_y\in[0,1]$ in steps of 0.05.}
 \label{fig:IRxyLtoldomains}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 For this example, the MVGC toolbox returns Granger causality log-likelihood statistics of $F_{Y\rightarrow X}=4.1\times 10^{-3}$ and $F_{X\rightarrow Y}=4.5\times 10^{-1}$, or $F_{X\rightarrow Y}-F_{Y\rightarrow X}\approx4.5\times 10^{-1}$.  The JIDT transfer entropy calculation returns $T_{X\rightarrow Y}=6.0\times 10^{-1}$ and $T_{Y\rightarrow X}=6.9\times 10^{-2}$, or $T_{X\rightarrow Y}-T_{Y\rightarrow X}=5.3\times 10^{-1}$.  Both of these results imply $\mathbf{X}\rightarrow\mathbf{Y}$, which agrees with intuition.  The PAI correlation difference is $-8.3\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  If the leaning and lagged cross-correlation difference contributions to the ECA guess vector are defined as the mean across all the tested lags, then the ECA guess for this example is $|\vec{g}|^2=0\Rightarrow \mathbf{X}\rightarrow\mathbf{Y}$, which, again, is the intuitively correct answer.  
 
-Figure \ref{fig:IRxyECAguess} shows the ECA guess for different instances of Eqn.\ \ref{eqn:IReqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=500$.  The  leaning and lagged cross-correlation difference causal inferences were made with the average across all the tested lags, and the leaning calculations use the $l$-standard cause-effect assignment with $l=1,2,\ldots,6$ (which are the same lags used by the lagged cross-correlation differences).  The tolerance domains are calculated as $\pm\delta_x=f(\max(\mathbf{X})-\min(\mathbf{X}))$ and $\pm\delta_y=f(\max(\mathbf{Y})-\min(\mathbf{Y}))$ with $f=1/4$.  The maximum value of $|g|^2$ shown in Figure \ref{fig:IRxyECAguess} is 1 which implies that the ECA guess never implies the counter-intuitive causal inference of $\mathbf{Y}\rightarrow\mathbf{X}$ for this example.  The majority of the elements of $\vec{g}$, i.e., $g_1$ (transfer entropy), $g_2$ (Granger), and $g_4$ (leaning), imply the intuitive causal inference of $\mathbf{X}\rightarrow\mathbf{Y}$ for almost every point\footnote{The causal inference for $g_2$  failed to be defined for approximately 20 points in Figure \ref{fig:IRxyECAguess} because the MVGC toolbox failed to successfully fit a VAR model with the desired maximum model orders for some of the points with low noise in the impulse signal, e.g., $A=0.05$.  Every defined $g_2$, however, agreed with intuition, i.e., $g_2=0$.  Every calculated $g_1$ and $g_4$ agreed with intuition.} calculated in Figure \ref{fig:IRxyECAguess}.  Counter-intuitive inferences are implied by $g_3$ (PAI) as $A$ increases when $B$ is relatively small (i.e., as the noise level in the impulse signal increases above the noise level in the response signal), and they are implied by $g_5$ (lagged cross-correlation) as $B$ increases when $A$ is relatively small (i.e., as the noise level in the response signal increases above the noise level in the impulse signal).  Interestingly, both $g_3$ and $g_5$ imply the intuitive causal inference if $A\approx B$ for this example.  
-\begin{figure}[ht]
+Figure \ref{fig:IRxyECAguess} shows the ECA guess for different instances of Eqn.\ \ref{eqn:IReqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=500$.  The  leaning and lagged cross-correlation difference causal inferences were made with the average across all the tested lags, and the leaning calculations use the $l$-standard cause-effect assignment with $l=1,2,\ldots,6$ (which are the same lags used by the lagged cross-correlation differences).  The tolerance domains are calculated as $\pm\delta_x=f(\max(\mathbf{X})-\min(\mathbf{X}))$ and $\pm\delta_y=f(\max(\mathbf{Y})-\min(\mathbf{Y}))$ with $f=1/4$.  The maximum value of $|g|^2$ shown in Figure \ref{fig:IRxyECAguess} is 1 which implies that the ECA guess never implies the counter-intuitive causal inference of $\mathbf{Y}\rightarrow\mathbf{X}$ for this example.  The majority of the elements of $\vec{g}$, i.e., $g_1$ (transfer entropy), $g_2$ (Granger), and $g_4$ (leaning), imply the intuitive causal inference of $\mathbf{X}\rightarrow\mathbf{Y}$ for almost every point\footnote{The causal inference for $g_2$  failed to be defined for approximately 20 points in Figure \ref{fig:IRxyECAguess} because the MVGC toolbox failed to successfully fit a VAR model with the desired maximum model orders for some of the points with low noise in the impulse signal, e.g., $A=0.05$.  Every defined $g_2$, however, agreed with intuition, i.e., $g_2=0$.  Every calculated $g_1$ and $g_4$ agreed with intuition.} calculated in Figure \ref{fig:IRxyECAguess}.  Counter-intuitive inferences are implied by $g_3$ (PAI) as $A$ increases when $B$ is relatively small (i.e., as the noise level in the impulse signal increases above the noise level in the response signal), and they are implied by $g_5$ (lagged cross-correlation) as $B$ increases when $A$ is relatively small (i.e., as the noise level in the response signal increases above the noise level in the impulse signal).  Interestingly, both $g_3$ and $g_5$ imply the intuitive causal inference if $A\approx B$ for this example.
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{NoisyResponseExample_ECAguessMat.eps} 
 \end{center}
-\caption{ECA guesses for different instances of Eqn.\ \ref{eqn:IReqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=500$ with $l$-standard assignment leaning calculations and lagged cross-correlation differences given $l=1,2,\ldots,6$ and leaning tolerance domains calculated as $\pm\delta_x=f(\max(\mathbf{X})-\min(\mathbf{X}))$ and $\pm\delta_y=f(\max(\mathbf{Y})-\min(\mathbf{Y}))$ with $f=1/4$.  The black indicates $|g|^2=0\Rightarrow\mathbf{X}\rightarrow\mathbf{Y}$, as expected, and the white indicates $|g|^2 \neq 0$.}
+\caption[ECA guesses for different instances of Eqn.\ \ref{eqn:IReqn}]{ECA guesses for different instances of Eqn.\ \ref{eqn:IReqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=500$ with $l$-standard assignment leaning calculations and lagged cross-correlation differences given $l=1,2,\ldots,6$ and leaning tolerance domains calculated as $\pm\delta_x=f(\max(\mathbf{X})-\min(\mathbf{X}))$ and $\pm\delta_y=f(\max(\mathbf{Y})-\min(\mathbf{Y}))$ with $f=1/4$.  The black indicates $|g|^2=0\Rightarrow\mathbf{X}\rightarrow\mathbf{Y}$, as expected, and the white indicates $|g|^2 \neq 0$.}
 \label{fig:IRxyECAguess}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 A more rigorous exploratory causal analysis of this example might investigate further those points in Figure \ref{fig:IRxyECAguess} for which the ECA guess does not agree with intuition.  It may be possible to change the PAI and lagged cross-correlation difference calculations, e.g., by using different embedding dimensions $E$ and/or delay time steps $\tau$ in the PAI calculations or by pre-treating the data in the lagged cross-correlation difference calculations.  If, and how, such changes to the calculations change the causal inferences may provide insight into the relationship between the data sets.  Such effort may seem inconsequential or trivial on a synthetic data set, but if an analyst has very little knowledge of the system dynamics that generated a given time series pair, then anything that may be drawn from exploratory causal analysis may be considered helpful.  
 
@@ -1006,53 +1045,91 @@ y_t = x_{t-1} + B\eta_t
 with $y_0 = 0$, $A\in[0,1]$, $B\in[0,1]$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, and with the amplitude $a$, the frequency $b$, and the phase $c$ all in the appropriate units.  This example is very similar to the previous one, except that the driving system $\mathbf{X}$ is sinusoidal.
 
 Let the instance of Eqn.\ \ref{eqn:cyceqn} with $L=500$, $A=0.1$, $B=0.4$, $a=b=1$, and $c=0$ shown in Figure \ref{fig:cycxyplot} be considered the synthetic data set $(\mathbf{X},\mathbf{Y})$ for the exploratory causal analysis.  The histograms of these data shown in Figure \ref{fig:cycxyhist}.  These data have a wider spread than the data seen in Figure \ref{fig:IRxyplot}, and do not appear to be clustered about some small set of points.  This observation is supported by Figure \ref{fig:cycxyhist}.  The tolerance domains might be set by visual inspection of the histograms, as was done in Section \ref{sec:IR}, but for this example, the leaning calculation will use the $(1/4)$-width tolerance domains.
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{NoisyCyclicResponseExample_X.eps} & \includegraphics[scale=0.5]{NoisyCyclicResponseExample_Y.eps} \\
+\includegraphics[scale=0.4]{NoisyCyclicResponseExample_X.eps} & \includegraphics[scale=0.4]{NoisyCyclicResponseExample_Y.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{An instance of Eqn.\ \ref{eqn:cyceqn} for $L=500$, $A=0.1$, and $B=0.4$.}
+\caption[An instance of Eqn.\ \ref{eqn:cyceqn}]{An instance of Eqn.\ \ref{eqn:cyceqn} for $L=500$, $A=0.1$, and $B=0.4$.}
 \label{fig:cycxyplot}
 \end{figure}
-
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{NoisyCyclicResponseExample_Xhist.eps} & \includegraphics[scale=0.5]{NoisyCyclicResponseExample_Yhist.eps} \\
+\includegraphics[scale=0.4]{NoisyCyclicResponseExample_Xhist.eps} & \includegraphics[scale=0.4]{NoisyCyclicResponseExample_Yhist.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Histograms of the instance of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:cycxyplot}.}
+\caption[Histograms of the instance of Eqn.\ \ref{eqn:cyceqn}]{Histograms of the instance of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:cycxyplot}.}
 \label{fig:cycxyhist}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Figure \ref{fig:cycxyautocorr} shows strong autocorrelations for both $\mathbf{X}$ and $\mathbf{Y}$, and the autocorrelations appear cyclic.  So, the leaning and lagged cross-correlation time series causality tools will not be calculated for more than $l=1,2,\ldots,20$, which is the lag after which the autocorrelations pattern seems to repeat.  The most straightforward cause-effect assignment is the $l$-standard assignment, which will be used with $l = 1,2,\ldots,20$. 
 
-The leaning and lagged cross-correlation differences are shown in Figure \ref{fig:cycxyLandLCC} for $l=1,2,\ldots,20$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, seem to suggest different causal inferences for almost every third lag.  The causal inference for both tools at $l=1$ is the same, intuitively correct, inference of $\mathbf{X}\rightarrow\mathbf{Y}$, and the mean across all the lags is $\langle\langle\lambda_l\rangle\rangle_l=3.9\times 10^{-3}$ and $\langle\Delta_l\rangle_l=-2.9\times 10^{-2}$, which also imply $\mathbf{X}\rightarrow\mathbf{Y}$.  
-\begin{figure}[ht]
+The leaning and lagged cross-correlation differences are shown in Figure \ref{fig:cycxyLandLCC} for $l=1,2,\ldots,20$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, seem to suggest different causal inferences for almost every third lag.  The causal inference for both tools at $l=1$ is the same, intuitively correct, inference of $\mathbf{X}\rightarrow\mathbf{Y}$, and the mean across all the lags is $\langle\langle\lambda_l\rangle\rangle_l=3.9\times 10^{-3}$ and $\langle\Delta_l\rangle_l=-2.9\times 10^{-2}$, which also imply $\mathbf{X}\rightarrow\mathbf{Y}$.
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{NoisyCyclicResponseExample_autocorrX.eps} & \includegraphics[scale=0.48]{NoisyCyclicResponseExample_autocorrY.eps} \\
+\includegraphics[scale=0.4]{NoisyCyclicResponseExample_autocorrX.eps} & \includegraphics[scale=0.4]{NoisyCyclicResponseExample_autocorrY.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:cycxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
+\caption[Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$]{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:cycxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
 \label{fig:cycxyautocorr}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.7]{NoisyCyclicResponseExample_LandLCC.eps} 
 \end{center}
-\caption{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:cycxyplot} given lags of $l=1,2,\ldots,20$.}
+\caption[Lagged cross-correlation differences]{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:cycxyplot} given lags of $l=1,2,\ldots,20$.}
 \label{fig:cycxyLandLCC}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
-For this example, the MVGC toolbox returns Granger causality log-likelihood statistics of $F_{Y\rightarrow X}=2.8\times 10^{-2}$ and $F_{X\rightarrow Y}=2.4\times 10^{-1}$, or $F_{X\rightarrow Y}-F_{Y\rightarrow X}=2.1\times 10^{-1}$.  The JIDT transfer entropy calculation returns $T_{X\rightarrow Y}=7.6\times 10^{-1}$ and $T_{Y\rightarrow X}=5.7\times 10^{-1}$, or $T_{X\rightarrow Y}-T_{Y\rightarrow X}=1.9\times 10^{-1}$.  The PAI correlation difference is $-9.8\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  If the leaning and lagged cross-correlation difference contributions to the ECA guess vector are defined as the mean across all the tested lags, then the ECA guess for this example is $|\vec{g}|^2=0\Rightarrow \mathbf{X}\rightarrow\mathbf{Y}$.  All of these results imply $\mathbf{X}\rightarrow\mathbf{Y}$, which agrees with intuition.    
+For this example, the MVGC toolbox returns Granger causality log-likelihood statistics of $F_{Y\rightarrow X}=2.8\times 10^{-2}$ and $F_{X\rightarrow Y}=2.4\times 10^{-1}$, or $F_{X\rightarrow Y}-F_{Y\rightarrow X}=2.1\times 10^{-1}$.  The JIDT transfer entropy calculation returns $T_{X\rightarrow Y}=7.6\times 10^{-1}$ and $T_{Y\rightarrow X}=5.7\times 10^{-1}$, or $T_{X\rightarrow Y}-T_{Y\rightarrow X}=1.9\times 10^{-1}$.  The PAI correlation difference is $-9.8\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  If the leaning and lagged cross-correlation difference contributions to the ECA guess vector are defined as the mean across all the tested lags, then the ECA guess for this example is $|\vec{g}|^2=0\Rightarrow \mathbf{X}\rightarrow\mathbf{Y}$.  All of these results imply $\mathbf{X}\rightarrow\mathbf{Y}$, which agrees with intuition.  
 
-Figure \ref{fig:cycxyECAguess} shows the ECA guess for different instances of Eqn.\ \ref{eqn:cyceqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=250$.  The  leaning and lagged cross-correlation difference causal inferences were made with the average across all the tested lags, and the leaning calculations use the $l$-standard cause-effect assignment with $l=1,2,\ldots,20$ (which are the same lags used by the lagged cross-correlation differences).  The tolerance domains calculated as the $(1/4)$-width domains.  The maximum value of $|g|^2$ shown in Figure \ref{fig:cycxyECAguess} is 1, not 5, which implies that the ECA guess never implies the counter-intuitive causal inference of $\mathbf{Y}\rightarrow\mathbf{X}$ for this example.  However, a visual comparison of Figures \ref{fig:IRxyECAguess} and \ref{fig:cycxyECAguess} shows the ECA guess agrees with intuition less reliably for this example than for the example of Section \ref{sec:IR}.  The majority of the elements of $\vec{g}$, i.e., $g_1$ (transfer entropy), $g_2$ (Granger), and $g_5$ (lagged cross-correlation), imply the intuitive causal inference of $\mathbf{X}\rightarrow\mathbf{Y}$ for almost every point\footnote{As with the example in Section \ref{sec:IR}, the MVGC toolbox failed to successfully fit a VAR model with the desired maximum model orders for some of the points with low noise in the impulse signal (three points were undefined).  Again, every defined $g_2$ agreed with intuition, i.e., $g_2=0$.  Every calculated $g_1$ and $g_5$ agreed with intuition.} calculated in Figure \ref{fig:cycxyECAguess}.  The ECA guess failed to agree with intuition in this example for all the tested time series pairs because of counter-intuitive inferences implied by $g_3$ (PAI) and $g_4$ (leaning), which differs from the example shown in Section \ref{sec:IR} where $g_4$ implied the intuitive causal inference for every tested time series pair.  This observation helps illustrate the need for multiple types of tools in an exploratory causal analysis; the naive application of some tools may be better suited to a given system than others, and the use of different tools together can help guide the analyst in how to apply the time series causality tools differently (e.g., by changing the cause-effect assignment of the leaning or the model parameters of the Granger test statistic) for different systems. The inference implied by $g_3$ (PAI) is counter-intuitive as $A$ increases, which is similar to the behavior seen for this tool in Section \ref{sec:IR}.  The inference implied by $g_4$ (leaning) is counter-intuitive as $B$ increases, which is in contrast to the behavior of $g_3$ (PAI) and implies the ECA guess may agree with intuition for most of the test times series pairs if either $g_4$ or $g_3$ were removed from $\vec{g}$.    
-\begin{figure}[ht]
+Figure \ref{fig:cycxyECAguess} shows the ECA guess for different instances of Eqn.\ \ref{eqn:cyceqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=250$.  The  leaning and lagged cross-correlation difference causal inferences were made with the average across all the tested lags, and the leaning calculations use the $l$-standard cause-effect assignment with $l=1,2,\ldots,20$ (which are the same lags used by the lagged cross-correlation differences).  The tolerance domains calculated as the $(1/4)$-width domains.  The maximum value of $|g|^2$ shown in Figure \ref{fig:cycxyECAguess} is 1, not 5, which implies that the ECA guess never implies the counter-intuitive causal inference of $\mathbf{Y}\rightarrow\mathbf{X}$ for this example.  However, a visual comparison of Figures \ref{fig:IRxyECAguess} and \ref{fig:cycxyECAguess} shows the ECA guess agrees with intuition less reliably for this example than for the example of Section \ref{sec:IR}.  The majority of the elements of $\vec{g}$, i.e., $g_1$ (transfer entropy), $g_2$ (Granger), and $g_5$ (lagged cross-correlation), imply the intuitive causal inference of $\mathbf{X}\rightarrow\mathbf{Y}$ for almost every point\footnote{As with the example in Section \ref{sec:IR}, the MVGC toolbox failed to successfully fit a VAR model with the desired maximum model orders for some of the points with low noise in the impulse signal (three points were undefined).  Again, every defined $g_2$ agreed with intuition, i.e., $g_2=0$.  Every calculated $g_1$ and $g_5$ agreed with intuition.} calculated in Figure \ref{fig:cycxyECAguess}.  The ECA guess failed to agree with intuition in this example for all the tested time series pairs because of counter-intuitive inferences implied by $g_3$ (PAI) and $g_4$ (leaning), which differs from the example shown in Section \ref{sec:IR} where $g_4$ implied the intuitive causal inference for every tested time series pair.  This observation helps illustrate the need for multiple types of tools in an exploratory causal analysis; the naive application of some tools may be better suited to a given system than others, and the use of different tools together can help guide the analyst in how to apply the time series causality tools differently (e.g., by changing the cause-effect assignment of the leaning or the model parameters of the Granger test statistic) for different systems. The inference implied by $g_3$ (PAI) is counter-intuitive as $A$ increases, which is similar to the behavior seen for this tool in Section \ref{sec:IR}.  The inference implied by $g_4$ (leaning) is counter-intuitive as $B$ increases, which is in contrast to the behavior of $g_3$ (PAI) and implies the ECA guess may agree with intuition for most of the test times series pairs if either $g_4$ or $g_3$ were removed from $\vec{g}$. 
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{NoisyCyclicResponseExample_ECAguessMat.eps} 
 \end{center}
-\caption{ECA guesses for different instances of Eqn.\ \ref{eqn:cyceqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=250$ with $l$-standard assignment leaning calculations and lagged cross-correlation differences given $l=1,2,\ldots,20$ and $(1/4)$-width tolerance domains.  The black indicates $|g|^2=0\Rightarrow\mathbf{X}\rightarrow\mathbf{Y}$, as expected, and the white indicates $|g|^2 \neq 0$.}
+\caption[ECA guesses for different instances of Eqn.\ \ref{eqn:cyceqn}]{ECA guesses for different instances of Eqn.\ \ref{eqn:cyceqn} evaluated with $A\in[0,1]$ and $B\in[0,1]$ in steps on 0.05 and $L=250$ with $l$-standard assignment leaning calculations and lagged cross-correlation differences given $l=1,2,\ldots,20$ and $(1/4)$-width tolerance domains.  The black indicates $|g|^2=0\Rightarrow\mathbf{X}\rightarrow\mathbf{Y}$, as expected, and the white indicates $|g|^2 \neq 0$.}
 \label{fig:cycxyECAguess}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 As with the example in Section \ref{sec:IR}, a more rigorous exploratory causal analysis of this example might investigate further those points in Figure \ref{fig:cycxyECAguess} for which the ECA guess does not agree with intuition.  It may be possible to change the PAI and weighted mean observed leaning calculations, e.g., by using different embedding dimensions $E$ and/or delay time steps $\tau$ in the PAI calculations or tolerance domains in the leaning calculations.  
 
 \subsection{RL series circuit}
@@ -1075,71 +1152,104 @@ with $D = L^2 + R^2$ and $\tau = L/R$, for the same time set used for $\mathbf{V
 
 Physical intuition is that $V$ drives $I$, and so we expect to find that $\mathbf{V}\rightarrow\mathbf{I}$.  These dynamics are well-known and have been thoroughly explored experimentally \cite{Halliday2010,Knight2012}.  As such, this example presents a slightly different test of the efficacy of the exploratory causal analysis than the last two examples.  Previously, the intuitive causal inference relied on intuition about the mathematical form of the dynamics used to create the synthetic data.  Here, the intuitive causal inference may be considered physical intuition and empirical experience, rather than any specific form or structure of Eqn.\ \ref{eqn:it}.    
 
-Figure \ref{fig:VIplot} shows $\mathbf{V}$ and $\mathbf{I}$ generated with both the analytical solution and a numerical solution to Eqn. \ref{eqn:it} using the {\em ode45} integration function in {\sc MATLAB }.  The time series $\mathbf{V}$ is created by defining values at fixed points and using linear interpolation to find the time steps required by the ODE solver.  Two different physical scenarios are considered in which $L$ and $R$ are constant, $L=10$ H and $R=5$ $\Omega$ and $L=5$ H and $R=20$ $\Omega$.  Figure \ref{fig:VIplot} shows the numerical and analytical solutions are very similar, but the causal inferences will be made using both for completeness.  Figure \ref{fig:VIhist} shows the 25 bin histograms for these signals. 
-\begin{figure}[ht]
+Figure \ref{fig:VIplot} shows $\mathbf{V}$ and $\mathbf{I}$ generated with both the analytical solution and a numerical solution to Eqn. \ref{eqn:it} using the {\em ode45} integration function in {\sc MATLAB }.  The time series $\mathbf{V}$ is created by defining values at fixed points and using linear interpolation to find the time steps required by the ODE solver.  Two different physical scenarios are considered in which $L$ and $R$ are constant, $L=10$ H and $R=5$ $\Omega$ and $L=5$ H and $R=20$ $\Omega$.  Figure \ref{fig:VIplot} shows the numerical and analytical solutions are very similar, but the causal inferences will be made using both for completeness.  Figure \ref{fig:VIhist} shows the 25 bin histograms for these signals.
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_Y.eps} &
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL5R20_Y.eps} \\
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL10R5_Y.eps} &
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL5R20_Y.eps} \\
 (a) $\mathbf{I}$ ($L=10$ H and $R=5$ $\Omega$) & (b) $\mathbf{I}$ ($L=5$ H and $R=20$ $\Omega$)\\
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_X.eps} \\
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL10R5_X.eps} \\
 (c) $\mathbf{V}$
 \end{tabular}
 \end{center}
-\caption{The voltage and current signals of a circuit containing a resistor $R$ and inductor $L$ in series where the driving voltage is $V(t)=\sin(t)$ and the current response is given by the solution to Eqn.\ \ref{eqn:it}.  Eqn.\ \ref{eqn:it} is solved both numerically (represented by the open dots in (a) and (b)) and analytically (represented by the solid dots in (a) and (b)).  The signals are plotted for a sampling length of $8\pi$ seconds at a sampling interval of $10^{-1}\pi$ (or a sampling frequency of approximately 3 Hz), which corresponds to a time series length of 81 data points.}
+\caption[The voltage and current signals of a circuit]{The voltage and current signals of a circuit containing a resistor $R$ and inductor $L$ in series where the driving voltage is $V(t)=\sin(t)$ and the current response is given by the solution to Eqn.\ \ref{eqn:it}.  Eqn.\ \ref{eqn:it} is solved both numerically (represented by the open dots in (a) and (b)) and analytically (represented by the solid dots in (a) and (b)).  The signals are plotted for a sampling length of $8\pi$ seconds at a sampling interval of $10^{-1}\pi$ (or a sampling frequency of approximately 3 Hz), which corresponds to a time series length of 81 data points.}
 \label{fig:VIplot}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\vspace*{\fill}
 \begin{center}
-\begin{tabular}{cc}
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_Yhist_an.eps} &
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_Yhist_num.eps} \\
-(a) $\mathbf{I}$ ($L=10$ H and $R=5$ $\Omega$, analytical solution) & (b) $\mathbf{I}$ ($L=10$ H and $R=5$ $\Omega$, numerical solution)\\
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL5R20_Yhist_an.eps} &
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL5R20_Yhist_num.eps} \\
-(c) $\mathbf{I}$ ($L=5$ H and $R=20$ $\Omega$, analytical solution) & (d) $\mathbf{I}$ ($L=5$ H and $R=20$ $\Omega$, numerical solution)\\
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_Xhist.eps} \\
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL10R5_Yhist_an.eps} \\
+(a) $\mathbf{I}$ ($L=10$ H and $R=5$ $\Omega$, analytical solution) \\ 
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL10R5_Yhist_num.eps} \\
+(b) $\mathbf{I}$ ($L=10$ H and $R=5$ $\Omega$, numerical solution)\\
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL5R20_Yhist_an.eps} \\
+(c) $\mathbf{I}$ ($L=5$ H and $R=20$ $\Omega$, analytical solution) \\ 
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL5R20_Yhist_num.eps} \\
+(d) $\mathbf{I}$ ($L=5$ H and $R=20$ $\Omega$, numerical solution)\\
+\includegraphics[scale=0.35]{IRCircuitResponseExampleL10R5_Xhist.eps} \\
 (c) $\mathbf{V}$
 \end{tabular}
 \end{center}
-\caption{The 25 bin histograms of the signals shown in Figure \ref{fig:VIplot}.}
+\caption[The 25 bin histograms of the signals]{The 25 bin histograms of the signals shown in Figure \ref{fig:VIplot}.}
 \label{fig:VIhist}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Figure \ref{fig:VIautocorr} shows, as expected, strong cyclic autocorrelations for both $\mathbf{V}$ and $\mathbf{I}$.  The leaning and lagged cross-correlation differences are shown in Figure \ref{fig:VILandLCC} for $l=1,2,\ldots,5$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, imply the intuitive causal inferences, i.e., $\mathbf{V}\rightarrow\mathbf{I}$, for every calculated lag.  The mean across all the lags is $\langle\langle\lambda_l\rangle\rangle_l=3.9\times 10^{-1}$ and $\langle\Delta_l\rangle_l=-4.7\times 10^{-1}$, for both the numerical and analytical solutions, given $L=10$ H and $R=5$ $\Omega$, and $\langle\langle\lambda_l\rangle\rangle_l=2.2\times 10^{-1}$ and $\langle\Delta_l\rangle_l=-2.6\times 10^{-1}$, for both the numerical and analytical solutions, given $L=5$ H and $R=20$ $\Omega$.  These values all imply $\mathbf{V}\rightarrow\mathbf{I}$.  
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_autocorrY.eps} &
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL5R20_autocorrY.eps} \\
+\includegraphics[scale=0.4]{IRCircuitResponseExampleL10R5_autocorrY.eps} &
+\includegraphics[scale=0.4]{IRCircuitResponseExampleL5R20_autocorrY.eps} \\
 (a) $\mathbf{I}$ ($L=10$ H and $R=5$ $\Omega$) & (b) $\mathbf{I}$ ($L=5$ H and $R=20$ $\Omega$)\\
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_autocorrX.eps} \\
+\includegraphics[scale=0.4]{IRCircuitResponseExampleL10R5_autocorrX.eps} \\
 (c) $\mathbf{V}$
 \end{tabular}
 \end{center}
-\caption{Autocorrelations of the signals shown in Figure \ref{fig:VIplot}.  The numerical solution for $\mathbf{I}$ is represented by the open dots in (a) and (b) and the analytical solution is represented by the solid dots in (a) and (b).}
+\caption[Autocorrelations of the signals]{Autocorrelations of the signals shown in Figure \ref{fig:VIplot}.  The numerical solution for $\mathbf{I}$ is represented by the open dots in (a) and (b) and the analytical solution is represented by the solid dots in (a) and (b).}
 \label{fig:VIautocorr}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_LandLCC_an.eps} &
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL10R5_LandLCC_num.eps} \\
-(a) $L=10$ H and $R=5$ $\Omega$ (analytical solution) & (b) $L=10$ H and $R=5$ $\Omega$ (numerical solution)\\
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL5R20_LandLCC_an.eps} &
-\includegraphics[scale=0.48]{IRCircuitResponseExampleL5R20_LandLCC_num.eps} \\
-(a) $L=5$ H and $R=20$ $\Omega$ (analytical solution) & (b) $L=5$ H and $R=20$ $\Omega$ (numerical solution)
+\includegraphics[scale=0.3]{IRCircuitResponseExampleL10R5_LandLCC_an.eps} &
+\includegraphics[scale=0.3]{IRCircuitResponseExampleL10R5_LandLCC_num.eps} \\
+(a) $L=10$ H and $R=5$ $\Omega$ {\footnotesize (analytical)} & (b) $L=10$ H and $R=5$ $\Omega$ {\footnotesize (numerical)}\\
+\includegraphics[scale=0.3]{IRCircuitResponseExampleL5R20_LandLCC_an.eps} &
+\includegraphics[scale=0.3]{IRCircuitResponseExampleL5R20_LandLCC_num.eps} \\
+(a) $L=5$ H and $R=20$ $\Omega$ {\footnotesize (analytical)} & (b) $L=5$ H and $R=20$ $\Omega$ {\footnotesize (numerical)}
 \end{tabular}
 \end{center}
-\caption{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the signals shown in Figure \ref{fig:VIplot} given lags of $l=1,2,\ldots,5$.}
+\caption[Lagged cross-correlation differences]{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the signals shown in Figure \ref{fig:VIplot} given lags of $l=1,2,\ldots,5$.}
 \label{fig:VILandLCC}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 The JIDT transfer entropy calculation returns $T_{V\rightarrow I}=4.8\times 10^{-1}$ and $T_{I\rightarrow V}=4.6\times 10^{-1}$, or $T_{V\rightarrow I}-T_{I\rightarrow V}=1.7\times 10^{-2}$ given $L=10$ H and $R=5$ $\Omega$, and $T_{V\rightarrow I}=3.5\times 10^{-1}$ and $T_{I\rightarrow V}=5.0\times 10^{-2}$, or $T_{V\rightarrow I}-T_{I\rightarrow V}=3.0\times 10^{-1}$ given $L=5$ H and $R=20$ $\Omega$.  These values imply the intuitively correct causal inference, $\mathbf{V}\rightarrow\mathbf{I}$.  The leaning and lagged cross-correlation difference contributions also imply the intuitive causal inference.  The ECA guess for this example, however, is undefined for both physical scenarios because neither $g_2$ (Granger) nor $g_3$ (PAI) are defined.  The PAI difference is undefined for these examples because the algorithm used to calculate the PAI correlations fails if two points in the shadow manifold have a separation distance of zero\footnote{This scenario leads to a division by zero.  See step 2 and 3 of the algorithm outlined in Section \ref{sec:SSRC}.  The implementation of the PAI algorithm used in this work declares the correlations undefined in such scenarios.}  Likewise, the MVGC toolbox algorithms fail to return defined log-likelihood statistics for this example.  These issues may be seen as technical issues regarding the different implementation algorithms or fundamental issues regarding the use of these techniques with ``perfect'' signals (such as $\mathbf{V}$ in this example).  The use of multiple times series causality tools for the exploratory analysis, as has been done in this example, helps the analyst to understand the undefined results do not necessarily imply a lack of possible causal inferences.  
 
 This example can also illustrate the importance of sample frequency and sample length.  For example, the leaning calculation requires an assumed cause and effect pair to appear in the data enough times to provide reliable estimates of probabilities.  Thus, data that is sampled for too few periods or too sparsely may lead to leanings that do not agree with intuition.  Consider the signals shown in Figure \ref{fig:VIplot} with $L=10$ H and $R=5$ $\Omega$ sampled at the time steps $t=0,f\pi,2f\pi,3f\pi,\ldots,8\pi$ for $f = 80^{-1},60^{-1},40^{-1},20^{-1},10^{-1}$ and $5^{-1}$.  The tolerance domains for the leaning calculation will be set as the $(1/4)$-width domains, and the number of lags to average over for the ECA guess using the leaning and lagged cross-correlation difference will be set as $l=1,\ldots,l_a$, where $l_a$ is the lag for which the autocorrelation of the voltage signal is minimum in a set of autocorrelations calculated with lags from 1 to half the length of $\mathbf{V}$.  This method is not equivalent to the method used to produce Figure \ref{fig:VILandLCC} (which relied on a visual inspection of Figure \ref{fig:VIautocorr}), but it is easier to implement computationally and for $f=10^{-1}$ it provides leaning and lagged cross-correlation difference calculations that imply the same causal inference as Figure \ref{fig:VILandLCC}. Table \ref{tab:samp} shows the variation of $\vec{g}$ as $f$ changes.  The ECA guess is undefined at each sampling frequency but $g_3$ (PAI) begins to imply the intuitive causal inference as $f$ in increases. Nothing about the signals has physically changed but the times series data (upon which the causal inference is drawn) has changed because of the changing sampling procedure.  
 \begin{table}
 \begin{center}
+\caption[The ECA guess and vector]{The ECA guess and vector, $\vec{g}$, for the signals shown in Figure \ref{fig:VIplot} with $L=10$ H and $R=5$ $\Omega$ sampled at the time steps $t=0,f\pi,2f\pi,3f\pi,\ldots,8\pi$.}
 \begin{tabular}{ccc}
 $f$ & $\vec{g}$  & ECA guess\\
 \midrule
@@ -1150,7 +1260,6 @@ $20^{-1}$ & $(0,2,2,0,0)$ & undefined\\
 $10^{-1}$ & $(0,2,2,0,0)$ & undefined\\
 $5^{-1}$ & $(0,2,0,0,0)$ & undefined\\
 \end{tabular}
-\caption[The ECA guess and vector]{The ECA guess and vector, $\vec{g}$, for the signals shown in Figure \ref{fig:VIplot} with $L=10$ H and $R=5$ $\Omega$ sampled at the time steps $t=0,f\pi,2f\pi,3f\pi,\ldots,8\pi$.}
 \label{tab:samp}
 \end{center}
 \end{table}
@@ -1173,33 +1282,56 @@ y_t = Bx_{t-1}\left(1-Cx_{t-1}\right)+D\eta_t,
 with $y_0 = 0$, with $A,B,C,D\in[0,1]$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, and with the amplitude $a$, the frequency $b$, and the phase $c$ all in the appropriate units given $t=0,f\pi,2f\pi,3f\pi,\ldots,6\pi$ with $f=1/30$, which implies $L=181$.
 
 Let the instance of Eqn.\ \ref{eqn:nonlinearEX} with $A=0.1$, $B=0.3$, $C=0.4$, $D=0.5$, $a=b=1$, and $c=0$ shown in Figure \ref{fig:nonxyplot} be the time series pair $(\mathbf{X},\mathbf{Y})$ for the exploratory causal analysis.  The tolerance domains for the leaning calculation are set as the $(1/4)$-width tolerance domains.
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{NonlinearResponseExample_X.eps} & \includegraphics[scale=0.5]{NonlinearResponseExample_Y.eps} \\
+\includegraphics[scale=0.4]{NonlinearResponseExample_X.eps} & \includegraphics[scale=0.4]{NonlinearResponseExample_Y.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{An instance of Eqn.\ \ref{eqn:nonlinearEX} for $A=0.1$, $B=0.3$, $C=0.4$, $D=0.5$, $a=b=1$, and $c=0$.}
+\caption[An instance of Eqn.\ \ref{eqn:nonlinearEX}]{An instance of Eqn.\ \ref{eqn:nonlinearEX} for $A=0.1$, $B=0.3$, $C=0.4$, $D=0.5$, $a=b=1$, and $c=0$.}
 \label{fig:nonxyplot}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Figure \ref{fig:nonxyautocorr} shows strong cyclic autocorrelations for $\mathbf{X}$.  The autocorrelations of $\mathbf{Y}$ are apparently acyclic, which might make it difficult to set the number of leaning and lagged cross-correlation difference lags to calculate based on $\mathbf{Y}$ in Figure \ref{fig:nonxyautocorr}.  The leaning (using the $l$-standard assignment) and lagged cross-correlation time series causality tools will not be calculated for more than $l=1,2,\ldots,15$, which is the lag after which the autocorrelations pattern seems to repeat for $\mathbf{X}$.  
 
-The leaning and lagged cross-correlation differences are shown in Figure \ref{fig:nonxyLandLCC} for $l=1,2,\ldots,20$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, seem to suggest the intuitive causal inference, $\mathbf{X}\rightarrow\mathbf{Y}$, for the majority of the calculated lags.  The mean across all the lags is $\langle\langle\lambda_l\rangle\rangle_l=8.4\times 10^{-3}$ and $\langle\Delta_l\rangle_l=-6.8\times 10^{-2}$, which both imply $\mathbf{X}\rightarrow\mathbf{Y}$.  
-\begin{figure}[ht]
+The leaning and lagged cross-correlation differences are shown in Figure \ref{fig:nonxyLandLCC} for $l=1,2,\ldots,20$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, seem to suggest the intuitive causal inference, $\mathbf{X}\rightarrow\mathbf{Y}$, for the majority of the calculated lags.  The mean across all the lags is $\langle\langle\lambda_l\rangle\rangle_l=8.4\times 10^{-3}$ and $\langle\Delta_l\rangle_l=-6.8\times 10^{-2}$, which both imply $\mathbf{X}\rightarrow\mathbf{Y}$. 
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{NonlinearResponseExample_autocorrX.eps} & \includegraphics[scale=0.48]{NonlinearResponseExample_autocorrY.eps} \\
+\includegraphics[scale=0.4]{NonlinearResponseExample_autocorrX.eps} & \includegraphics[scale=0.4]{NonlinearResponseExample_autocorrY.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:nonlinearEX} shown in Figure \ref{fig:nonxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
+\caption[Autocorrelations of the instances]{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:nonlinearEX} shown in Figure \ref{fig:nonxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
 \label{fig:nonxyautocorr}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.7]{NonlinearResponseExample_LandLCC.eps} 
 \end{center}
-\caption{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:nonlinearEX} shown in Figure \ref{fig:nonxyplot} given lags of $l=1,2,\ldots,15$.}
+\caption[Lagged cross-correlation differences]{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:nonlinearEX} shown in Figure \ref{fig:nonxyplot} given lags of $l=1,2,\ldots,15$.}
 \label{fig:nonxyLandLCC}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 For this example, the MVGC toolbox returns Granger causality log-likelihood statistics of $F_{X\rightarrow Y}-F_{Y\rightarrow X}=2.6\times 10^{-1}$.  The JIDT transfer entropy calculation returns $T_{X\rightarrow Y}-T_{Y\rightarrow X}=2.7\times 10^{-1}$.  The PAI correlation difference is $-1.8\times 10^{-3}$, which also implies $\mathbf{X}\rightarrow\mathbf{Y}$.  If the leaning and lagged cross-correlation difference contributions to the ECA guess vector are defined as the mean across all the tested lags, then the ECA guess for this example is $|\vec{g}|^2=0\Rightarrow \mathbf{X}\rightarrow\mathbf{Y}$.  All of these results imply $\mathbf{X}\rightarrow\mathbf{Y}$, which agrees with intuition.    
 
@@ -1208,6 +1340,7 @@ A natural question is whether the data series shown in Figure \ref{fig:nonxyplot
 Consider $10^4$ instances of Eqn.\ \ref{eqn:nonlinearEX} with the coefficients shown in Figure \ref{fig:nonxyplot}.  Table \ref{tab:ECAdist} shows the ECA guess vector distribution for this collection of time series pairs.  The individual causal inferences $g_1$ (transfer entropy), $g_2$ (Granger)\footnote{It is interesting to note that the MVGC toolbox uses a linear VAR model fitting procedure that implies the intuitively correct causal inference for every instance of this nonlinear example.  This might be seen as evidence for using every available time series causality tool during exploratory causal inference, even those with well documented shortcomings.}, and $g_3$ (PAI) agree with intuition for every instance.  The two that imply counterintuitive causal inferences do so only for a minority of the tested instances, approximately 41\% of the instances for $g_4$ (leaning) and approximately 27\% of the instances for $g_5$ (lagged cross-correlation).  The leaning calculation uses $(1/4)$-width tolerance domains and both the leaning and the lagged cross-correlation differences are calculated as the mean of lags $l=1,2,\ldots,15$.  The average leaning, $\langle\langle\lambda_l\rangle\rangle$, across all $10^4$ instances is $\langle\langle\lambda_l\rangle\rangle = 4\times 10^{-3}$ and the average lagged cross-correlation difference, $\langle\Delta_l\rangle=-4.3\times 10^{-2}$, both of which imply the intuitive causal inference.  A bootstrapping \cite{Efron1994} procedure can be set up with the sample of leaning and lagged cross-correlation calculations, whereby $10^6$ means are calculated from new sets (of the same size as the original set) of leanings and lagged cross-correlations that have been sampled (with replacement) from the original set.  This procedure yields no negative means for the leaning calculation and no positive means for the lagged cross-correlation differences; the null hypothesis that the mean leaning value is negative (i.e., $\langle\langle\lambda_1^z\rangle\rangle < 0$) and the null hypothesis that the mean lagged cross-correlation difference is positive (i.e., $\langle\Delta_l\rangle > 0$) can be rejected with a $p$-value less than $10^{-6}$.  The $90\%$ confidence interval for the mean of the $10^6$ bootstrapped leaning calculation means is $[3.7\times 10^{-3},4.3\times 10^{-3}]$ and for the lagged cross-correlation means is $[-4.4\times 10^{-2},-4.1\times 10^{-2}]$.  These results imply the intuitively correct causal inference for both $g_4$ and $g_5$.
 \begin{table}
 \begin{center}
+\caption[The ECA guess distribution]{The ECA guess distribution of $10^4$ instances of Eqn.\ \ref{eqn:nonlinearEX} with the coefficients shown in Figure \ref{fig:nonxyplot}.}
 \begin{tabular}{ccc}
 $\vec{g}$  & counts & ECA guess\\
 \midrule
@@ -1216,7 +1349,6 @@ $(0,0,0,0,1)$ & 231 & undefined\\
 $(0,0,0,1,0)$ & 1608 & undefined\\
 $(0,0,0,1,1)$ & 2454 & undefined\\
 \end{tabular}
-\caption[The ECA guess distribution]{The ECA guess distribution of $10^4$ instances of Eqn.\ \ref{eqn:nonlinearEX} with the coefficients shown in Figure \ref{fig:nonxyplot}.}
 \label{tab:ECAdist}
 \end{center}
 \end{table}
@@ -1243,41 +1375,71 @@ where the parameters $r_x,r_y,\beta_{xy},\beta_{yx}\in\mathbb{R}\ge 0$.  This pa
 Sugihara et al.\ \cite{Sugihara2012} note that $\beta_{xy}>\beta_{yx}$ intuitively implies $\mathbf{Y}$ ``drives'' $\mathbf{X}$ more than $\mathbf{X}$ ``drives'' $\mathbf{Y}$, and vice versa.  Such intuition, however, can be difficult to justify for all instances of Eqn.\ \ref{eqn:2pop}.  The $x_{t-1}$ term that appears in $y_t$ can be seen as a function of $x_{t-2}$ with coefficients of $\beta_{yx}r_x$.  These product coefficients suggest that if $r_x>r_y$, then $\mathbf{X}$ may be seen as the stronger driver in the system even if $\beta_{yx}<\beta_{xy}$.  The same argument can be made, with the appropriate substitutions, to show that $\mathbf{Y}$ may be seen as the stronger driver in the system even if $\beta_{xy}<\beta_{yx}$.  As such, there is no clear intuitive causal inference for this system. 
 
 Consider the instance of Eqn.\ \ref{eqn:2pop} with $L=500$, $\beta_{xy} = 0.5$, $\beta_{yx} = 1.5$, $r_x = 3.8$, and $r_y = 3.2$ with initial conditions $x_0 = y_0 = 0.4$ shown in Figure \ref{fig:2popxyplot}.  For this example, $r_x>r_y$, $\beta_{yx}>\beta_{xy}$, and the initial conditions are the same, which implies the intuitive causal inference for this example is $\mathbf{X}\rightarrow\mathbf{Y}$.  The histograms of these data shown in Figure \ref{fig:2popxyhist}.  For this example, the leaning calculation will use the $(1/4)$-width tolerance domains.
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{CoupLogMapExample_X.eps} & \includegraphics[scale=0.5]{CoupLogMapExample_Y.eps} \\
+\includegraphics[scale=0.4]{CoupLogMapExample_X.eps} & \includegraphics[scale=0.4]{CoupLogMapExample_Y.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{An instance of Eqn.\ \ref{eqn:2pop} for $L=500$, $\beta_{xy} = 0.5$, $\beta_{yx} = 1.5$, $r_x = 3.8$, and $r_y = 3.2$ with initial conditions $x_0 = y_0 = 0.4$.}
+\caption[An instance of Eqn.\ \ref{eqn:2pop}]{An instance of Eqn.\ \ref{eqn:2pop} for $L=500$, $\beta_{xy} = 0.5$, $\beta_{yx} = 1.5$, $r_x = 3.8$, and $r_y = 3.2$ with initial conditions $x_0 = y_0 = 0.4$.}
 \label{fig:2popxyplot}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{CoupLogMapExample_Xhist.eps} & \includegraphics[scale=0.5]{CoupLogMapExample_Yhist.eps} \\
+\includegraphics[scale=0.4]{CoupLogMapExample_Xhist.eps} & \includegraphics[scale=0.4]{CoupLogMapExample_Yhist.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Histograms of the instance of Eqn.\ \ref{eqn:2pop} shown in Figure \ref{fig:2popxyplot}.}
+\caption[Histograms of the instance of Eqn.\ \ref{eqn:2pop} ]{Histograms of the instance of Eqn.\ \ref{eqn:2pop} shown in Figure \ref{fig:2popxyplot}.}
 \label{fig:2popxyhist}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Figure \ref{fig:2popxyautocorr} shows strong autocorrelations for both $\mathbf{X}$ and $\mathbf{Y}$ for a lag of $l=1$ and progressively weaker autocorrelations for $l=2,3,4$ with minimal autocorrelations for $l\ge 5$.  The autocorrelations do not appear cyclic.  The argument was made in Section \ref{sec:IR} that cyclic patterns in the autocorrelations of either times series might be used to limit the number of lags for which the leanings and lagged cross-correlation differences are calculated, i.e., it was argued that a repeating autocorrelation pattern after a given lag $l$ may imply that the leaning or cross-correlation calculations using lags greater than $l$ would be redundant information for drawing causal inferences.  This argument is not applicable for this example given that there are no apparent cyclic autocorrelation patterns.  There is no {\em a priori} reason to assume reasonable cause-effect assignments for the leaning might be drawn from autocorrelation patterns (i.e., the relationship of a signal to itself at different points in time is not necessarily related to the relationship between that signal and its potential driving or response partner signal).  However, visual inspection of the signals in Figure \ref{fig:2popxyplot} shows the signals have (roughly) similar shapes.  So, it may be reasonable to assume that if the signal $\mathbf{X}$ has a strong relationship with its own past at a given $l$, then, by a loose similarity argument, the partner signal $\mathbf{Y}$ may also have a strong relationship with $\mathbf{X}$ at lag $l$.  For this example, the leaning (with the $l$-standard assignment) and lagged cross-correlation time series causality tools will be calculated for lags $l=1,2,\ldots,4$, given the autocorrelations seem to decrease significantly for $l\ge 5$.  A cause-effect assignment must be made to calculate the leaning.  It will be shown that the leaning calculated using the $l$-standard assignment with $=1,2,\ldots,4$ implies the same causal inference as the other time series causality tools used in this example.  
 
-The leaning and lagged cross-correlation differences are shown in Figure \ref{fig:2popxyLandLCC} for $l=1,2,\ldots,4$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, imply the intuitively correct causal inference $\mathbf{X}\rightarrow\mathbf{Y}$.  The mean across all the lags is $\langle\langle\lambda_l\rangle\rangle_l=2.7\times 10^{-1}$ and $\langle\Delta_l\rangle_l=-2.6\times 10^{-1}$, both of which imply $\mathbf{X}\rightarrow\mathbf{Y}$.  
-\begin{figure}[ht]
+The leaning and lagged cross-correlation differences are shown in Figure \ref{fig:2popxyLandLCC} for $l=1,2,\ldots,4$.  This figure shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, imply the intuitively correct causal inference $\mathbf{X}\rightarrow\mathbf{Y}$.  The mean across all the lags is $\langle\langle\lambda_l\rangle\rangle_l=2.7\times 10^{-1}$ and $\langle\Delta_l\rangle_l=-2.6\times 10^{-1}$, both of which imply $\mathbf{X}\rightarrow\mathbf{Y}$. 
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{CoupLogMapExample_autocorrX.eps} & \includegraphics[scale=0.48]{CoupLogMapExample_autocorrY.eps} \\
+\includegraphics[scale=0.4]{CoupLogMapExample_autocorrX.eps} & \includegraphics[scale=0.4]{CoupLogMapExample_autocorrY.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:2pop} shown in Figure \ref{fig:2popxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
+\caption[Autocorrelations of the instances]{Autocorrelations of the instances of $\mathbf{X}$ and $\mathbf{Y}$ of Eqn.\ \ref{eqn:2pop} shown in Figure \ref{fig:2popxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
 \label{fig:2popxyautocorr}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.7]{CoupLogMapExample_LandLCC.eps} 
 \end{center}
-\caption{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:2popxyplot} given lags of $l=1,2,\ldots,4$.}
+\caption[Lagged cross-correlation differences]{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:cyceqn} shown in Figure \ref{fig:2popxyplot} given lags of $l=1,2,\ldots,4$.}
 \label{fig:2popxyLandLCC}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 For this example, the MVGC toolbox returns Granger causality log-likelihood statistics of $F_{X\rightarrow Y}-F_{Y\rightarrow X}=5.4\times 10^{-1}$.  The JIDT transfer entropy calculation returns $T_{X\rightarrow Y}-T_{Y\rightarrow X}=4.9\times 10^{-1}$.  The PAI correlation difference is $-3.9\times 10^{-3}$.  If the leaning and lagged cross-correlation difference contributions to the ECA guess vector are defined as the mean across all the tested lags, then the ECA guess for this example is $|\vec{g}|^2=0\Rightarrow \mathbf{X}\rightarrow\mathbf{Y}$.  All of these results imply $\mathbf{X}\rightarrow\mathbf{Y}$, which agrees with intuition.   
 
@@ -1321,35 +1483,53 @@ with $y_0 = 0$, $B\in\mathbb{R}\ge 0$, $\eta_t\sim\mathcal{N}\left(0,1\right)$, 
 In case 1, $\mathbf{Z}$ depends directly on $\mathbf{Y}$ and indirectly on $\mathbf{X}$ (through $\mathbf{Y}$, which depends directly on $\mathbf{X}$).  The intuitive causal inference is then $\mathbf{Y}\rightarrow\mathbf{Z}$ and $\mathbf{X}\rightarrow\mathbf{Z}$.  Case 2, despite the additional $\mathbf{Y}$ dependence in $\mathbf{Z}$, has the same intuitive causal inference as case 1.  In case 3, $\mathbf{Z}$ depends directly on itself and both $\mathbf{Y}$ and $\mathbf{X}$.  Case 3 also has the same intuitive causal inference.
 
 Consider the instance of Eqn.\ \ref{eqn:IReqn} with $L=500$, $A=0.4$, and $B=0.6$ shown in Figure \ref{fig:3varxyplot}.  The leaning calculation will use $(1/4)$-width tolerance domains.  Histograms of these data are shown in Figure \ref{fig:3varxyhist}.  Figure \ref{fig:3varxyautocorr} shows strong autocorrelations for $\mathbf{X}$, $\mathbf{Y}$, and $\mathbf{Z}$ (for cases 1 and 2) at $l=6,12,18,\ldots,48$, which is expected given the similar forms of Eqn.\ \ref{eqn:3var} and \ref{eqn:IReqn} (see Section \ref{sec:IR}).  The leaning (using the $l$-standard assignment) and lagged cross-correlation calculations will use lags $l=1,2,\ldots,6$.  
-
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_X.eps} & \includegraphics[scale=0.48]{NoisyMultiResponseExample_Y.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_X.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_Y.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$ \\
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_z1.eps} & \includegraphics[scale=0.48]{NoisyMultiResponseExample_z2.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_z1.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_z2.eps} \\
 (c) $\mathbf{Z} = \{z_t\}$ (case 1)& (d) $\mathbf{Z} = \{z_t^\prime\}$ (case 2) \\
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_z3.eps} &  \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_z3.eps} &  \\
 (e) $\mathbf{Z} = \{z_t^{\prime\prime}\}$ (case 3)& 
 \end{tabular}
-\caption{An instance of Eqn.\ \ref{eqn:3var} for $L=500$, $A=0.4$, and $B=0.6$.}
+\caption[An instance of Eqn.\ \ref{eqn:3var}]{An instance of Eqn.\ \ref{eqn:3var} for $L=500$, $A=0.4$, and $B=0.6$.}
 \label{fig:3varxyplot}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{NoisyMultiResponseExample_Xhist.eps} & \includegraphics[scale=0.5]{NoisyMultiResponseExample_Yhist.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_Xhist.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_Yhist.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$ \\
-\includegraphics[scale=0.5]{NoisyMultiResponseExample_Z1hist.eps} & \includegraphics[scale=0.5]{NoisyMultiResponseExample_Z2hist.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_Z1hist.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_Z2hist.eps} \\
 (c) $\mathbf{Z} = \{z_t\}$ (case 1)& (d) $\mathbf{Z} = \{z_t^\prime\}$ (case 2)\\
-\includegraphics[scale=0.5]{NoisyMultiResponseExample_Z3hist.eps} & \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_Z3hist.eps} & \\
 (e) $\mathbf{Z} = \{z_t^{\prime\prime}\}$ (case 3)& 
 \end{tabular}
-\caption{Histograms of the instance of Eqn.\ \ref{eqn:3var} shown in Figure \ref{fig:3varxyplot}.}
+\caption[Histograms of the instance of Eqn.\ \ref{eqn:3var}]{Histograms of the instance of Eqn.\ \ref{eqn:3var} shown in Figure \ref{fig:3varxyplot}.}
 \label{fig:3varxyhist}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Figure \ref{fig:3varxyLandLCC} shows both the weighted mean observed leaning, $\langle \lambda_l\rangle$, and the lagged cross-correlation differences, $\Delta_l$, for each of the seven time series pairs in this example, $(\mathbf{X},\mathbf{Y})$, $(\mathbf{X},\mathbf{Z})$ (for all three cases), and $(\mathbf{Y},\mathbf{Z})$ (for all three cases).  Table \ref{tab:3varEx} shows the values of each of the five time series causality tools used in this exploratory causal analysis for each of the time series pairs in this example with the mean leaning across all the lags labeled ``L'', the mean lagged cross-correlation difference labeled ``LCC'', Granger causality log-likelihood statistics difference (i.e., $F_{X\rightarrow Y}-F_{Y\rightarrow X}$, calculated by the MVGC toolbox) labeled ``GC'', the transfer entropy difference (i.e., $T_{X\rightarrow Y}-T_{Y\rightarrow X}$, calculated with the JIDT) labeled ``TE'', and the PAI correlation difference labeled ``PAI''.  Table \ref{tab:3varEx} also shows the ECA guess and vector for each pair.
+\afterpage{
+\clearpage
+\begin{landscape}
 \begin{table}
 \begin{center}
+\caption[The values of each of the five time series causality tools]{The values of each of the five time series causality tools used in this exploratory causal analysis for each of the time series pairs shown in Figure \ref{fig:3varxyplot} with the mean leaning across all the lags labeled ``L'', the mean lagged cross-correlation difference labeled ``LCC'', Granger causality log-likelihood statistics difference (i.e., $F_{X\rightarrow Y}-F_{Y\rightarrow X}$, calculated by the MVGC toolbox) labeled ``GC'', the transfer entropy difference (i.e., $T_{X\rightarrow Y}-T_{Y\rightarrow X}$, calculated with the JIDT) labeled ``TE'', and the PAI correlation difference labeled ``PAI''.  An entry of ``n/a'' in the GC column indicates the the MVGC toolbox failed to fit a VAR model to the data with the maximum request model parameters and/or within the maximum allotted computation time.}
 \begin{tabular}{lccccccc}
   & TE & GC & PAI & L & LCC & $\vec{g}$ & ECA guess\\
 \midrule
@@ -1361,12 +1541,15 @@ $(\mathbf{Y},\mathbf{Z})$ (case 1) & 1.8 & n/a & $-5.3\times 10^{-3}$ & $1.2\tim
 $(\mathbf{Y},\mathbf{Z})$ (case 2) & $3.2\times 10^{-1}$ & n/a & $-6.9\times 10^{-5}$ & $3.6\times 10^{-2}$ & $-6.0\times 10^{-2}$ & $(0,2,0,0,0)$ & undefined\\
 $(\mathbf{Y},\mathbf{Z})$ (case 3) & $-4.6\times 10^{-2}$ & n/a & $1.1\times 10^{-2}$ & $4.1\times 10^{-4}$ & $7.5\times 10^{-3}$ & $(1,2,1,0,1)$ & undefined\\
 \end{tabular}
-\caption[The values of each of the five time series causality tools]{The values of each of the five time series causality tools used in this exploratory causal analysis for each of the time series pairs shown in Figure \ref{fig:3varxyplot} with the mean leaning across all the lags labeled ``L'', the mean lagged cross-correlation difference labeled ``LCC'', Granger causality log-likelihood statistics difference (i.e., $F_{X\rightarrow Y}-F_{Y\rightarrow X}$, calculated by the MVGC toolbox) labeled ``GC'', the transfer entropy difference (i.e., $T_{X\rightarrow Y}-T_{Y\rightarrow X}$, calculated with the JIDT) labeled ``TE'', and the PAI correlation difference labeled ``PAI''.  An entry of ``n/a'' in the GC column indicates the the MVGC toolbox failed to fit a VAR model to the data with the maximum request model parameters and/or within the maximum allotted computation time.}
 \label{tab:3varEx}
 \end{center}
 \end{table}
+\end{landscape}
+\clearpage
+}
 \begin{table}
 \begin{center}
+\caption[Comparisons of the ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Figure \ref{fig:3varxyplot} with the intuitive inferences and the ``majority-vote'' inference, i.e., the causal inference implied by the majority of the times series causality tools used during the exploratory causal analysis.}
 \begin{tabular}{lccc}
   & ECA guess & Majority-vote inference & Intuitive inference\\
 \midrule
@@ -1378,40 +1561,51 @@ $(\mathbf{Y},\mathbf{Z})$ (case 1) & undefined & $\mathbf{Y}\rightarrow\mathbf{Z
 $(\mathbf{Y},\mathbf{Z})$ (case 2) & undefined & $\mathbf{Y}\rightarrow\mathbf{Z}$ & $\mathbf{Y}\rightarrow\mathbf{Z}$\\
 $(\mathbf{Y},\mathbf{Z})$ (case 3) & undefined & $\mathbf{Z}\rightarrow\mathbf{Y}$ & $\mathbf{Y}\rightarrow\mathbf{Z}$\\
 \end{tabular}
-\caption[Comparisons of the ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Figure \ref{fig:3varxyplot} with the intuitive inferences and the ``majority-vote'' inference, i.e., the causal inference implied by the majority of the times series causality tools used during the exploratory causal analysis.}
 \label{tab:3varExECAguess}
 \end{center}
 \end{table}
-
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_autocorrX.eps} & \includegraphics[scale=0.48]{NoisyMultiResponseExample_autocorrY.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_autocorrX.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_autocorrY.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$ \\
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_autocorrZ1.eps} & \includegraphics[scale=0.48]{NoisyMultiResponseExample_autocorrZ2.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_autocorrZ1.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_autocorrZ2.eps} \\
 (c) $\mathbf{Z} = \{z_t\}$ (case 1)& (d) $\mathbf{Z} = \{z_t^\prime\}$ (case 2)\\
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_autocorrZ3.eps} &  \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_autocorrZ3.eps} &  \\
 (e) $\mathbf{Z} = \{z_t^{\prime\prime}\}$ (case 3)& 
 \end{tabular}
-\caption{Autocorrelations of the instances of $\mathbf{X}$, $\mathbf{Y}$, and $\mathbf{Z}$ of Eqn.\ \ref{eqn:3var} shown in Figure \ref{fig:3varxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
+\caption[Autocorrelations of the instances]{Autocorrelations of the instances of $\mathbf{X}$, $\mathbf{Y}$, and $\mathbf{Z}$ of Eqn.\ \ref{eqn:3var} shown in Figure \ref{fig:3varxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
 \label{fig:3varxyautocorr}
 \end{figure}
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_LandLCC_XY.eps} & \includegraphics[scale=0.48]{NoisyMultiResponseExample_LandLCC_XZ1.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_LandLCC_XY.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_LandLCC_XZ1.eps} \\
 (a) $(\mathbf{X},\mathbf{Y})$ & (b) $(\mathbf{X},\mathbf{Z})$ (case 1)\\
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_LandLCC_XZ2.eps} & \includegraphics[scale=0.48]{NoisyMultiResponseExample_LandLCC_XZ3.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_LandLCC_XZ2.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_LandLCC_XZ3.eps} \\
 (c) $(\mathbf{X},\mathbf{Z})$ (case 2) & (d) $(\mathbf{X},\mathbf{Z})$ (case 3)\\
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_LandLCC_YZ1.eps} & \includegraphics[scale=0.48]{NoisyMultiResponseExample_LandLCC_YZ2.eps} \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_LandLCC_YZ1.eps} & \includegraphics[scale=0.35]{NoisyMultiResponseExample_LandLCC_YZ2.eps} \\
 (e) $(\mathbf{Y},\mathbf{Z})$ (case 1) & (f) $(\mathbf{Y},\mathbf{Z})$ (case 2)\\
-\includegraphics[scale=0.48]{NoisyMultiResponseExample_LandLCC_YZ3.eps} &  \\
+\includegraphics[scale=0.35]{NoisyMultiResponseExample_LandLCC_YZ3.eps} &  \\
 (e) $(\mathbf{Y},\mathbf{Z})$ (case 3) & 
 \end{tabular}
 \end{center}
-\caption{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:3var} shown in Figure \ref{fig:3varxyplot} given lags of $l=1,2,\ldots,6$.}
+\caption[Lagged cross-correlation differences and weighted mean observed leanings]{Lagged cross-correlation differences, $\Delta_l$, and weighted mean observed leanings, $\langle\lambda_l\rangle$, (given an $l$-standard cause-effect assignment with $(1/4)$-width tolerance domains) for the instances of Eqn.\ \ref{eqn:3var} shown in Figure \ref{fig:3varxyplot} given lags of $l=1,2,\ldots,6$.}
 \label{fig:3varxyLandLCC}
 \end{figure}
-
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 Table \ref{tab:3varEx} shows the individual values for each tool used during the exploratory analysis along with the ECA guess vector.  Table \ref{tab:3varExECAguess} shows how these ECA guesses compare both the the intuitive causal inferences for each case and to the majority-vote inference, i.e, the causal inference implied by the majority of the times series causality tools used during the analysis.  The ECA guess of $\mathbf{X}\rightarrow\mathbf{Y}$, and its agreement with the intuitive inference, may have been expected given the similarity of this example to the one discussed in Section \ref{sec:IR}, but the only two other ECA guesses that agree with the intuitive inferences are for case 1 and 2 of the pair $(\mathbf{X},\mathbf{Z})$.  The ECA guess is undefined for every other time series pair.  The ECA guess was undefined for case 1 and 2 of the pair $(\mathbf{Y},\mathbf{Z})$ because $g_2$ (Granger) was undefined.  In these scenarios, along with case 3 of both pairs, the MVGC toolbox failed to fit a VAR model to the data with the maximum request model parameters and/or within the maximum allotted computation time.  However, the majority-vote inference agrees with intuition for case 1 and 2 of the pair $(\mathbf{Y},\mathbf{Z})$.  Interestingly, the majority-vote inference for case 3 of both time series pairs in counter-intuitive.  Only $g_4$ (leaning) agrees with intuition for the case 3 pairs.  These counter-intuitive majority-vote inferences may imply case 3 of $\mathbf{Z}$ has some property that makes time series causality particularly unreliable.  Case 3 of $\mathbf{Z}$ is, e.g., apparently non-stationary\footnote{The phrase ``apparently'' is used here in indicate that the approximate stationarity of the data is drawn from visual inspections of Figure \ref{fig:3varxyplot} rather than formal tests.}.  The autoregressive term in $z_t^{\prime\prime}$ of Eqn.\ \ref{eqn:3var} is unique among all the cases of $\mathbf{Z}$ in this example.  These properties may lead to unreliable exploratory causal analysis with the time series causality tools being used in this work.  This idea might be explored by focusing on more synthetic data examples with response signals similar to case 3 of $\mathbf{Z}$, i.e., with autoregessive terms and/or non-stationary.  In this example, however, the counter-intuitive inferences illustrate that exploratory causal analysis inferences may be unreliable in the presence of confounding.  Although, if an analyst only had access to $\mathbf{Y}$ and $\mathbf{Z}$ in this example, then the majority-vote inferences would still imply the intuitive causal inference in every case except case 3, as seen in Table \ref{tab:3varExECAguess}.
 
 \section{Empirical data examples}
@@ -1422,37 +1616,57 @@ Empirical data sets with known (or assumed) causal relationships may be used to 
 Figure \ref{fig:WhistSnowxyplot} shows a time series pair with causal ``truth'' from the UCI Machine Learning Repository (MLR) \cite{bache2013}.  This data repository is a collection of data sets (some of which are time series) with known, intuitive, or assumed causal relationships meant for use in the testing of causal discovery algorithms in machine learning \cite{bache2013}.
 
 Figure \ref{fig:WhistSnowxyplot}(a) and (b)  are times series of the daily snowfall (the expected response) and mean temperature (the expected driver) from July 1, 1972 to December 31, 2009 at Whistler, BC, Canada (Latitude: 50$^\circ$04$^\prime$04.000$^{\prime\prime}$ N, Longitude: 122$^\circ$56$^\prime$50.000$^{\prime\prime}$ W, Elevation: 1835.00 meters).  From \cite{bache2013}, ``Common sense tells us that X [mean temperature] causes Y [snow fall] (with maybe very small feedback of Y on X). Confounders are present (e.g., day of the year).''  These time series correspond to data set 87 of the MLR \cite{bache2013}.  Thus, following the notation of Figure \ref{fig:WhistSnowxyplot}, the intuitive causal inference for this example is $\mathbf{X}\rightarrow\mathbf{Y}$. 
-
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{WhistlerDailyExample_X.eps} & \includegraphics[scale=0.48]{WhistlerDailyExample_Y.eps} \\
+\includegraphics[scale=0.4]{WhistlerDailyExample_X.eps} & \includegraphics[scale=0.4]{WhistlerDailyExample_Y.eps} \\
 (a) mean temperature $\mathbf{X}$ & (b) daily snowfall $\mathbf{Y}$
 \end{tabular}
-\caption{Daily snowfall (the expected response) and mean temperature (the expected driver) from July 1 1972 to December 31 2009 at Whistler, BC, Canada (Latitude: 50$^\circ$04$^\prime$04.000$^{\prime\prime}$ N, Longitude: 122$^\circ$56$^\prime$50.000$^{\prime\prime}$ W, Elevation: 1835.00 meters).}
+\caption[Daily snowfall and mean temperature]{Daily snowfall (the expected response) and mean temperature (the expected driver) from July 1 1972 to December 31 2009 at Whistler, BC, Canada (Latitude: 50$^\circ$04$^\prime$04.000$^{\prime\prime}$ N, Longitude: 122$^\circ$56$^\prime$50.000$^{\prime\prime}$ W, Elevation: 1835.00 meters).}
 \label{fig:WhistSnowxyplot}
 \end{figure}
-
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{WhistlerDailyExample_Xhist.eps} & \includegraphics[scale=0.5]{WhistlerDailyExample_Yhist.eps} \\
+\includegraphics[scale=0.4]{WhistlerDailyExample_Xhist.eps} & \includegraphics[scale=0.4]{WhistlerDailyExample_Yhist.eps} \\
 (a) mean temperature $\mathbf{X}$ & (b) daily snowfall $\mathbf{Y}$
 \end{tabular}
-\caption{Histograms of the data shown in Figure \ref{fig:WhistSnowxyplot}.}
+\caption[Histograms of the data]{Histograms of the data shown in Figure \ref{fig:WhistSnowxyplot}.}
 \label{fig:WhistSnowxyhist}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 Figure \ref{fig:WhistSnowxyautocorr} shows the autocorrelations for the data shown Figure \ref{fig:WhistSnowxyplot}, and Figure \ref{fig:WhistSnowxyhist} shows the $100$-bin histograms of the data.  The autocorrelations do not appear cyclic (within the 50 lags that were calculated) but, for the snowfall time series (i.e., $\mathbf{Y}$), the autocorrelations approach zero for $l>20$.  This observation will be used to set the lags for the leaning (with the $l$-standard assignment) and lagged cross-correlation calculations as $l=1,2,\ldots,20$.  The tolerance domains for the leaning calculation with be the $(1/4)$-width domains.
 
 The mean leaning across all the lags, $\langle\langle\lambda_l\rangle\rangle_l=3.7\times 10^{-2}$, which implies the intuitive causal inference.  The mean lagged cross-correlation across all the lags, $\langle\Delta_l\rangle_l=2.3\times 10^{-2}$, which implies the counter-intuitive causal inference.  The MVGC toolbox returns Granger causality log-likelihood statistics of $F_{X\rightarrow Y}-F_{Y\rightarrow X}=-2.6\times 10^{-3}$, which also implies the counter-intuitive causal inference.  The JIDT transfer entropy calculation returns $T_{X\rightarrow Y}-T_{Y\rightarrow X}=2.1\times 10^{-2}$, and the PAI correlation difference\footnote{For this example, the embedding dimension was set as $E=100$, rather than $E=3$, which was the embedding dimension in every previous example.  The larger embedding dimension was not set with any formal procedure (see, e.g., \cite{Ma2006,Kennel1992,Small2004,Ataei2003,Kugiumtzis1996}).  Instead, the PAI correlation difference was calculated with $E=100$ once it was discovered that the algorithm failed with $E=3$ (See footnote in Section \ref{sec:rlcirc} for a discussion of failures of the PAI algorithm).  The time delay used in this example was the same as every other example, i.e., $\tau=1$.} is $-3.4\times 10^{-2}$, both of which imply the intuitive causal inference.  If the leaning and lagged cross-correlation difference contributions to the ECA guess vector are defined as the mean across all the tested lags, then the ECA guess vector for this example is $\vec{g} = (0,1,0,0,1)$, which implies the ECA guess is undefined.  The majority-vote causal inference, however, implies $\mathbf{X}\rightarrow\mathbf{Y}$, which agrees with intuition.  
-
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{WhistlerDailyExample_autocorrX.eps} & \includegraphics[scale=0.48]{WhistlerDailyExample_autocorrY.eps} \\
+\includegraphics[scale=0.4]{WhistlerDailyExample_autocorrX.eps} & \includegraphics[scale=0.4]{WhistlerDailyExample_autocorrY.eps} \\
 (a) $\mathbf{X}$ & (b) $\mathbf{Y}$
 \end{tabular}
-\caption{Autocorrelations of the data shown in Figure \ref{fig:WhistSnowxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
+\caption[Autocorrelations of the data ]{Autocorrelations of the data shown in Figure \ref{fig:WhistSnowxyplot} given lags of $l=1,2,\ldots,50$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
 \label{fig:WhistSnowxyautocorr}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 This example illustrates the benefit of using multiple times series causality tools.  Consider $g_4$ (leaning), which implied an intuitive causal inference, and $g_5$ (cross-correlation), which implied a counter-intuitive causal inference.  If those tools are calculated as the means across all tested lags with $l=1,2,\ldots,l_{max}$, then as seen above, $l_{max}=20\Rightarrow g_4=0,\;g_5=1$.  It is also true that any $l_{max}=2,3,\ldots,20\Rightarrow g_4=0,\;g_5=1$.  The lagged cross-correlation difference with the maximum absolute value across all the tested lags is positive, which also implies the counter-intuitive inference.  The majority of the lagged cross-correlation differences implied the counter-intuitive inference (16 of the 20 calculated lags).  So, it seems most reasonable approaches to determine $g_5$ from the set of lagged cross-correlation differences would lead to $g_5=1$, which does not agree with intuition.  Likewise, $g_2$ (Granger) implies the counter-intuitive causal inference; i.e., $g_2=1$.  It may be argued that the MVGC log-likelihood of $F_{X\rightarrow Y}-F_{Y\rightarrow X}=-2.6\times 10^{-3}$ is better interpreted as $g_2=2$ because the value is two orders of magnitude closer to zero than any other MVGC log-likelihood differences calculated in this work.  But, neither conclusion, $g_2=1$ or $g_2=2$, agrees with the intuitive causal inference.  The use of either of these time series causality tools alone (i.e., $g_2$ or $g_5$) may lead an analyst to draw a counter-intuitive causal inference.  The use of these tools as part of a set, however, allows the analyst to compare and contrast the different tools.  The analyst may decide to use a majority-vote inference, which agrees with intuition for this example, or an analyst may use outside assumptions to determine certain tools, e.g., $g_5$ or $g_2$, are unreliable for the type of data being analyzed.  At a minimum, the different implications of the tools strongly suggests the analyst should consider applying each tool more careful, e.g., by changing the model parameters for $g_2$.
 
@@ -1462,95 +1676,145 @@ The NASA OMNI data set consists of hourly-averaged time series measurements of s
 Consider the available measurements for the magnetic field, $B_z$ (in nanoTesla, nT), and the disturbance storm time, $D_{st}$.  The collection and aggregation procedures used to get this data into the OMNI data set can be found in \cite{King2005}\footnote{The data itself, along with discussions of format, units, and origin, among other things, can also be found at \url{http://omniweb.gsfc.nasa.gov/}.}.  The time series pair $(\mathbf{B},\mathbf{D})$ consists of all the available measurements $\mathbf{B} =\{B_z(t)\}$ and $\mathbf{D}=\{D_{st}(t)\}$ where $\Delta t=t_{n+1}-t_n=1$ hour $\forall n=1,2,\ldots,N-1$ (with $N=438312$), the first time step $t_0=0$ represents 00:30:00 January 1, 1963 UTC, and the last time step $t_N = 438312$ represents 23:30:00 December 31, 2012 UTC.  These hourly data sets are shown in Figure \ref{fig:BzDstHOURLYxyplot}.  The 1000-bin histograms of these times series are shown in Figure \ref{fig:BzDstHOURLYxyhist}.  It is standard practice to ``rectify'' the magnetic field component $B_z$ as $B_z^\prime$ where $B_z^\prime(t) = B_z(t)$ if $B_z(t)\le 0$ and $B_z^\prime(t) = 0$ if $B_z(t)>0$ \cite{Burton1975,Dungey1961}.  This treatment leads to a second times series pair $(\mathbf{B}_r,\mathbf{D})$ with $\mathbf{B}_r = \{B_z^\prime (t)\}$.  Figure \ref{fig:BzDstHOURLYrecxyplot} shows both the times series and 1000-bin histogram of $\mathbf{B}_r$.
 
 The time series $\mathbf{B}$, $\mathbf{B}_r$, and $\mathbf{D}$ are long, with approximately 440,000 data points each, and each contains missing data (i.e., time stamps for which no measurements are present in the data set).  Both of these properties are practical concerns for the data analyst.  The length may make the calculation of certain time series causality tools computationally infeasible, and the missing data may lead to erroneous results, if the algorithm used to calculate a given time series causality tool can even handle missing data.  The magnetic field data, $\mathbf{B}$, contains 131,928 missing data points, and the storm index, $D_{st}$, contains 7,736 missing data points.  Some, but not all, of the missing data coincide within the time series pair.  Creating a new time series from the defined points of $\mathbf{B}$ and $\mathbf{D}$ will lead to nonuniform time intervals for subsequent time steps in the series, which will make causal interpretations more difficult\footnote{Consider the leaning calculated using the 1-standard cause-effect assignment for a given time series pair $(\mathbf{A},\mathbf{B})$.  If the time intervals of the time steps of $\mathbf{A}$ and $\mathbf{B}$ are not uniform, an analyst must be certain to understand the leaning is comparing time steps, not physical time intervals.  Thus, $\{C,E\}=\{a_{t-1},b_t\}$ would not be an assumption of, e.g., an hour in the past of $\mathbf{A}$ drives the present of $\mathbf{B}$ as it would be if $\Delta t = t_{n} - t_{n-1} = 1$ hour $\forall t_n$ in $\mathbf{A}$ and $\mathbf{B}$.}.  The length of the time series may be addressed by only considering contiguous subsets of the series, but there is a risk that data associated with interesting physical phenomena captured during one subset may not be present in another.  This work will address these practical issue with two different approaches, averaging and sampling.
-
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.52]{SolarExample_Bzhourly.eps} & \includegraphics[scale=0.52]{SolarExample_Dhourly.eps} \\
+\includegraphics[scale=0.4]{SolarExample_Bzhourly.eps} & \includegraphics[scale=0.4]{SolarExample_Dhourly.eps} \\
 (a) $\mathbf{B}$ & (b) $\mathbf{D}$
 \end{tabular}
-\caption{Hourly measurements of the magnetic field component, $B_z$, and disturbance storm time index, $D_{st}$ from the beginning of January 1, 1963 until the end of December 31, 2012, taken from the NASA OMNI data set.}
+\caption[Hourly measurements]{Hourly measurements of the magnetic field component, $B_z$, and disturbance storm time index, $D_{st}$ from the beginning of January 1, 1963 until the end of December 31, 2012, taken from the NASA OMNI data set.}
 \label{fig:BzDstHOURLYxyplot}
 \end{figure}
-
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{SolarExample_Bzhourlyhist.eps} & \includegraphics[scale=0.48]{SolarExample_Dhourlyhist.eps} \\
+\includegraphics[scale=0.4]{SolarExample_Bzhourlyhist.eps} & \includegraphics[scale=0.4]{SolarExample_Dhourlyhist.eps} \\
 (a) $\mathbf{B}$ & (b) $\mathbf{D}$
 \end{tabular}
-\caption{Histograms of the data shown in Figure \ref{fig:BzDstHOURLYxyplot}.}
+\caption[Histograms of the data]{Histograms of the data shown in Figure \ref{fig:BzDstHOURLYxyplot}.}
 \label{fig:BzDstHOURLYxyhist}
 \end{figure}
-
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.51]{SolarExample_Bzhourlyrec.eps} & \includegraphics[scale=0.51]{SolarExample_Bzhourlyrechist.eps} \\
+\includegraphics[scale=0.4]{SolarExample_Bzhourlyrec.eps} & \includegraphics[scale=0.4]{SolarExample_Bzhourlyrechist.eps} \\
 (a) $\mathbf{B}_r$ (time series) & (b) $\mathbf{B}_r$ (histogram)
 \end{tabular}
-\caption{Hourly measurements of the rectified magnetic field, $B_z^\prime$ from the beginning of January 1, 1963 until the end of December 31, 2012, and the 1000-bin histogram of that data.}
+\caption[Hourly measurements of the rectified magnetic field]{Hourly measurements of the rectified magnetic field, $B_z^\prime$ from the beginning of January 1, 1963 until the end of December 31, 2012, and the 1000-bin histogram of that data.}
 \label{fig:BzDstHOURLYrecxyplot}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
-There is no missing data in $\mathbf{D}$ between 00:30:00 January 1, 1997 UTC and 23:30:00 December 31, 2001 UTC.  This same time period contains 185 missing data points in $\mathbf{B}$, which can all be ``averaged out'' by finding the average value for each set of 24 points while ignoring any missing data (i.e., there are no sets of 24 consecutive missing data points in $\mathbf{B}$ within this time period).  Let $\bar{\mathbf{D}}$, $\bar{\mathbf{B}}$, and $\bar{\mathbf{B}}_r$ be the daily (i.e., 24 hour) averages of $\mathbf{D}$, $\mathbf{B}$, and $\mathbf{B}_r$, respectively, within this time period.  Each of the new time series, $\bar{\mathbf{D}}$, $\bar{\mathbf{B}}$, and $\bar{\mathbf{B}}_r$, contains 1,826 data points with no missing points.  Figures \ref{fig:BzDstDAILYxyplot}, \ref{fig:BzDstDAILYxyhist}, and \ref{fig:BzDstDAILYrecxyplot} show both the times series and the 100-bin histograms of these averaged data sets.  
-
-\begin{figure}[ht]
+There is no missing data in $\mathbf{D}$ between 00:30:00 January 1, 1997 UTC and 23:30:00 December 31, 2001 UTC.  This same time period contains 185 missing data points in $\mathbf{B}$, which can all be ``averaged out'' by finding the average value for each set of 24 points while ignoring any missing data (i.e., there are no sets of 24 consecutive missing data points in $\mathbf{B}$ within this time period).  Let $\bar{\mathbf{D}}$, $\bar{\mathbf{B}}$, and $\bar{\mathbf{B}}_r$ be the daily (i.e., 24 hour) averages of $\mathbf{D}$, $\mathbf{B}$, and $\mathbf{B}_r$, respectively, within this time period.  Each of the new time series, $\bar{\mathbf{D}}$, $\bar{\mathbf{B}}$, and $\bar{\mathbf{B}}_r$, contains 1,826 data points with no missing points.  Figures \ref{fig:BzDstDAILYxyplot}, \ref{fig:BzDstDAILYxyhist}, and \ref{fig:BzDstDAILYrecxyplot} show both the times series and the 100-bin histograms of these averaged data sets.
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{SolarExample_Bzdaily.eps} & \includegraphics[scale=0.48]{SolarExample_Ddaily.eps} \\
+\includegraphics[scale=0.4]{SolarExample_Bzdaily.eps} & \includegraphics[scale=0.4]{SolarExample_Ddaily.eps} \\
 (a) $\bar{\mathbf{B}}$ & (b) $\bar{\mathbf{D}}$
 \end{tabular}
-\caption{Daily averages of the hourly measurements of the magnetic field, $B_z$, and disturbance storm time index, $D_{st}$ from the beginning of January 1, 1997 until the end of December 31, 2001, taken from the NASA OMNI data set.}
+\caption[Daily averages of the hourly measurements]{Daily averages of the hourly measurements of the magnetic field, $B_z$, and disturbance storm time index, $D_{st}$ from the beginning of January 1, 1997 until the end of December 31, 2001, taken from the NASA OMNI data set.}
 \label{fig:BzDstDAILYxyplot}
 \end{figure}
-
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.5]{SolarExample_Bzdailyhist.eps} & \includegraphics[scale=0.5]{SolarExample_Ddailyhist.eps} \\
+\includegraphics[scale=0.4]{SolarExample_Bzdailyhist.eps} & \includegraphics[scale=0.4]{SolarExample_Ddailyhist.eps} \\
 (a) $\bar{\mathbf{B}}$ & (b) $\bar{\mathbf{D}}$
 \end{tabular}
-\caption{Histograms of the data shown in Figure \ref{fig:BzDstDAILYxyplot}.}
+\caption[Histograms of the data]{Histograms of the data shown in Figure \ref{fig:BzDstDAILYxyplot}.}
 \label{fig:BzDstDAILYxyhist}
 \end{figure}
-
-\begin{figure}[ht]
+\end{center}
+\vspace*{\fill}
+}
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{SolarExample_Bzdailyrec.eps} & \includegraphics[scale=0.48]{SolarExample_Bzdailyrechist.eps} \\
+\includegraphics[scale=0.4]{SolarExample_Bzdailyrec.eps} & \includegraphics[scale=0.4]{SolarExample_Bzdailyrechist.eps} \\
 (a) $\bar{\mathbf{B}}_r$ (time series) & (b) $\mathbf{\mathbf{B}}_r$ (histogram)
 \end{tabular}
-\caption{Daily averages of the hourly measurements of the rectified magnetic field, $B_z^\prime$ from the beginning of January 1, 1997 until the end of December 31, 2001, and the 100-bin histogram of that data.}
+\caption[Daily averages of the hourly measurements]{Daily averages of the hourly measurements of the rectified magnetic field, $B_z^\prime$ from the beginning of January 1, 1997 until the end of December 31, 2001, and the 100-bin histogram of that data.}
 \label{fig:BzDstDAILYrecxyplot}
 \end{figure}
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
 
 The autocorrelations of $\bar{\mathbf{D}}$ and $\bar{\mathbf{B}}$ are shown in Figure \ref{fig:BzDstDAILYxyautocorr}, from which the lags for the leaning (using the $l$-standard cause-effect assignment) and lagged cross-correlation difference calculations are set as $l=1,2,\ldots,30$.  The leaning calculation will use the $(1/4)$ tolerance domains.  The PAI correlation differences are calculated with $E=100$ and $\tau = 1$.  ECA guess vectors can be constructed for the two time series pairs $(\bar{\mathbf{B}},\bar{\mathbf{D}})$ and $(\bar{\mathbf{B}}_r,\bar{\mathbf{D}})$, which are shown in Tables \ref{tab:SolEx} and \ref{tab:SolExECAguess}.  The majority-vote inference agrees with intuition for both pairs, but the ECA guess only agrees with intuition for the pair $(\bar{\mathbf{B}}_r,\bar{\mathbf{D}})$.  The ECA guess for the pair $(\bar{\mathbf{B}},\bar{\mathbf{D}})$ is undefined because $g_2$ (Granger) implies $\bar{\mathbf{B}}\leftarrow\bar{\mathbf{D}}$ while every other time series causality tool implies the intuitively correct $\bar{\mathbf{B}}\rightarrow\bar{\mathbf{D}}$.  The question of whether or not $g_2$ might imply the intuitive causal inference for different VAR modeling parameters was not explored in this work.
-
-\begin{figure}[ht]
+\afterpage{
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{figure}[h]
 \begin{tabular}{cc}
-\includegraphics[scale=0.48]{SolarExample_autocorrBzdaily.eps} & \includegraphics[scale=0.48]{SolarExample_autocorrDdaily.eps} \\
+\includegraphics[scale=0.4]{SolarExample_autocorrBzdaily.eps} & \includegraphics[scale=0.4]{SolarExample_autocorrDdaily.eps} \\
 (a) $\bar{\mathbf{B}}$ & (b) $\bar{\mathbf{D}}$
 \end{tabular}
-\caption{Autocorrelations of the data shown in Figure \ref{fig:BzDstDAILYxyplot} given lags of $l=1,2,\ldots,100$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
+\caption[Autocorrelations of the data]{Autocorrelations of the data shown in Figure \ref{fig:BzDstDAILYxyplot} given lags of $l=1,2,\ldots,100$.  The autocorrelations are $|r(b_{t-l},b_t)|^2$ where $r(\cdot)$ is the Pearson correlation coefficient between the lagged $l$ series $\{b_{t-l}\}$ and the time series $\{b_{t}\}$.}
 \label{fig:BzDstDAILYxyautocorr}
 \end{figure}
-
+\end{center}
+\vspace*{\fill}
+\clearpage
+}
+\afterpage{
+\clearpage
+\begin{landscape}
 \begin{table}
 \begin{center}
+\caption[Additional values of each of the five time series causality tools]{The values of each of the five time series causality tools used in the exploratory causal analysis for each of the time series pairs shown in Figures \ref{fig:BzDstDAILYxyplot} and \ref{fig:BzDstDAILYrecxyplot} with the mean leaning across all the lags labeled ``L'', the mean lagged cross-correlation difference labeled ``LCC'', Granger causality log-likelihood statistics difference (i.e., $F_{X\rightarrow Y}-F_{Y\rightarrow X}$, calculated by the MVGC toolbox) labeled ``GC'', the transfer entropy difference (i.e., $T_{X\rightarrow Y}-T_{Y\rightarrow X}$, calculated with the JIDT) labeled ``TE'', and the PAI correlation difference labeled ``PAI''.  An entry of ``n/a'' in the GC column indicates the the MVGC toolbox failed to fit a VAR model to the data with the maximum request model parameters and/or within the maximum allotted computation time.}
 \begin{tabular}{lccccccc}
   & TE & GC & PAI & L & LCC & $\vec{g}$ & ECA guess\\
 \midrule
 $(\bar{\mathbf{B}},\bar{\mathbf{D}})$ & $3.6\times 10^{-3}$ & $-4.6\times 10^{-3}$ & $-1.2\times 10^{-1}$ & $5.0\times 10^{-3}$ & $-1.2\times 10^{-2}$ & $(0,1,0,0,0)$ & undefined\\
 $(\bar{\mathbf{B}}_r,\bar{\mathbf{D}})$ & $2.7\times 10^{-2}$ & $4.6\times 10^{-3}$ & $-1.3\times 10^{-1}$ & $7.6\times 10^{-3}$ & $-2.5\times 10^{-2}$ & $(0,0,0,0,0)$ & $\bar{\mathbf{B}}_r\rightarrow\bar{\mathbf{D}}$
 \end{tabular}
-\caption[Additional values of each of the five time series causality tools]{The values of each of the five time series causality tools used in the exploratory causal analysis for each of the time series pairs shown in Figures \ref{fig:BzDstDAILYxyplot} and \ref{fig:BzDstDAILYrecxyplot} with the mean leaning across all the lags labeled ``L'', the mean lagged cross-correlation difference labeled ``LCC'', Granger causality log-likelihood statistics difference (i.e., $F_{X\rightarrow Y}-F_{Y\rightarrow X}$, calculated by the MVGC toolbox) labeled ``GC'', the transfer entropy difference (i.e., $T_{X\rightarrow Y}-T_{Y\rightarrow X}$, calculated with the JIDT) labeled ``TE'', and the PAI correlation difference labeled ``PAI''.  An entry of ``n/a'' in the GC column indicates the the MVGC toolbox failed to fit a VAR model to the data with the maximum request model parameters and/or within the maximum allotted computation time.}
 \label{tab:SolEx}
 \end{center}
 \end{table}
+\end{landscape}
+\clearpage
+}
 \begin{table}
 \begin{center}
+\caption[Additional comparisons of the ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Figures \ref{fig:BzDstDAILYxyplot} and \ref{fig:BzDstDAILYrecxyplot} with the intuitive inferences and the ``majority-vote'' inference, i.e., the causal inference implied by the majority of the times series causality tools used during the exploratory causal analysis.}
 \begin{tabular}{lccc}
   & ECA guess & Majority-vote inference & Intuitive inference\\
 \midrule
 $(\bar{\mathbf{B}},\bar{\mathbf{D}})$ & undefined & $\bar{\mathbf{B}}\rightarrow\bar{\mathbf{D}}$ & $\bar{\mathbf{B}}\rightarrow\bar{\mathbf{D}}$\\
 $(\bar{\mathbf{B}}_r,\bar{\mathbf{D}})$ & $\bar{\mathbf{B}}_r\rightarrow\bar{\mathbf{D}}$ & $\bar{\mathbf{B}}_r\rightarrow\bar{\mathbf{D}}$ & $\bar{\mathbf{B}}_r\rightarrow\bar{\mathbf{D}}$
 \end{tabular}
-\caption[Additional comparisons of the ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Figures \ref{fig:BzDstDAILYxyplot} and \ref{fig:BzDstDAILYrecxyplot} with the intuitive inferences and the ``majority-vote'' inference, i.e., the causal inference implied by the majority of the times series causality tools used during the exploratory causal analysis.}
 \label{tab:SolExECAguess}
 \end{center}
 \end{table}
@@ -1558,34 +1822,42 @@ $(\bar{\mathbf{B}}_r,\bar{\mathbf{D}})$ & $\bar{\mathbf{B}}_r\rightarrow\bar{\ma
 Another approach to the practical issues discussed above is to sample smaller contiguous subsets of $\mathbf{D}$, $\mathbf{B}$, and $\mathbf{B}_r$.  Let $\hat{\mathbf{D}}^L=\{\{D_{st}(t^\prime)\}$, $\hat{\mathbf{B}}^L=\{\{B_{z}(t^\prime)\}$, and $\hat{\mathbf{B}}^L_r=\{\{B_{z}^\prime(t^\prime)\}$ with $t^\prime=t^\prime_0,t^\prime_1,t^\prime_2,\ldots,L$ be an ordered subset of $\mathbf{D}$, $\mathbf{B}$, and $\mathbf{B}_r$.  An ECA guess vector could be constructed for each sampled pair $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ and $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$.  A set of $n$ sampled pairs, each with a different $t^\prime_0$,  would produce a set of $n$ values for each time series causality tool.  These sets of values can then be used to develop a mean ECA guess vector to draw causal inferences.  
 
 Let $L=500$ and $n=10^4$.  The starting points for each time series are sampled from a uniform distribution over $[0,N-L]$.  The leaning calculation uses the $(1/4)$-width tolerance domains and the $l$-standard assignment where $l$ is set as $l=1,\ldots,l_a$, where $l_a$ is the lag for which the lagged autocorrelation of $\hat{\mathbf{D}}^L$ is minimum in a set of autocorrelations calculated with lags from 1 to $L/2$.  The same $l$ used in the leaning calculation will be used in the lagged cross-correlation difference calculations.  The PAI correlation differences are calculated with $E=50$ and $\tau = 1$.  Table \ref{tab:SolExSamp} shows the mean value across the $n$ calculated values of each time series causality tools, and Table \ref{tab:SolExSampECAguess} shows a comparison of the implied causal inferences of these mean values and the intuitive inferences.  Table \ref{tab:SolExSampCI} shows the 90\% confidence intervals across the $n$ calculated values of each time series causality tools, and Table \ref{tab:SolExSampECAguessCI} shows a comparison of the implied causal inferences of these confidence intervals and the intuitive inferences.  The 90\% confidence interval is defined as $[p_5,p_{95}]$ where $p_i$ is the $i$th percentile of the data; i.e., the lower bound of the 90\% confidence interval is the value that is above 5\% of the data and the upper bound of the 90\% confidence interval is the value that is above 95\% of the data.  A bootstrapping \cite{Efron1994} procedure can be set up with the sample of $n$ values for each of the time series causality tool calculations, whereby $10^5$ means are calculated from new sets (of the same size as the original set) of values that have been sampled (with replacement) from the original set.  The $90\%$ confidence interval for the mean of these bootstrapped samples, and the comparisons of the implied causal inference with intuition, are shown in Tables \ref{tab:SolExSampCIboot} and \ref{tab:SolExSampECAguessCIboot}.
-
+\afterpage{
+\clearpage
+\begin{landscape}
 \begin{table}
 \begin{center}
+\caption[The average values of each of the five time series causality tools]{The average values of each of the five time series causality tools used in this exploratory causal analysis for each of the time series pairs $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ and $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ with the mean leaning across all the lags labeled ``L'', the mean lagged cross-correlation difference labeled ``LCC'', Granger causality log-likelihood statistics difference (i.e., $F_{X\rightarrow Y}-F_{Y\rightarrow X}$, calculated by the MVGC toolbox) labeled ``GC'', the transfer entropy difference (i.e., $T_{X\rightarrow Y}-T_{Y\rightarrow X}$, calculated with the JIDT) labeled ``TE'', and the PAI correlation difference labeled ``PAI''.  An entry of ``n/a'' in the GC column indicates the the MVGC toolbox failed to fit a VAR model to the data with the maximum request model parameters and/or within the maximum allotted computation time.}
 \begin{tabular}{lccccccc}
   & TE & GC & PAI & L & LCC & $\vec{g}$ & ECA guess\\
 \midrule
 $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ & $-2.9\times 10^{-2}$ & $1.9\times 10^{-1}$ & $1.2\times 10^{-1}$ & $1.2\times 10^{-1}$ & $-1.7\times 10^{-1}$ & $(1,0,1,0,0)$ & undefined\\
 $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & $-5.3\times 10^{-3}$ & $2.2\times 10^{-1}$ & $9.8\times 10^{-2}$ & $1.1\times 10^{-1}$ & $-1.9\times 10^{-1}$ & $(1,0,1,0,0)$ & undefined
 \end{tabular}
-\caption[The average values of each of the five time series causality tools]{The average values of each of the five time series causality tools used in this exploratory causal analysis for each of the time series pairs $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ and $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ with the mean leaning across all the lags labeled ``L'', the mean lagged cross-correlation difference labeled ``LCC'', Granger causality log-likelihood statistics difference (i.e., $F_{X\rightarrow Y}-F_{Y\rightarrow X}$, calculated by the MVGC toolbox) labeled ``GC'', the transfer entropy difference (i.e., $T_{X\rightarrow Y}-T_{Y\rightarrow X}$, calculated with the JIDT) labeled ``TE'', and the PAI correlation difference labeled ``PAI''.  An entry of ``n/a'' in the GC column indicates the the MVGC toolbox failed to fit a VAR model to the data with the maximum request model parameters and/or within the maximum allotted computation time.}
 \label{tab:SolExSamp}
 \end{center}
 \end{table}
+\end{landscape}
+\clearpage
+}
 \begin{table}
 \begin{center}
+\caption[Comparisons of the average ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Table \ref{tab:SolExSamp} with the intuitive inferences and the ``majority-vote'' inference, i.e., the causal inference implied by the majority of the times series causality tools used during the exploratory causal analysis.}
 \begin{tabular}{lccc}
   & ECA guess & Majority-vote inference & Intuitive inference\\
 \midrule
 $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ & undefined & $\hat{\mathbf{B}}^L\rightarrow\hat{\mathbf{D}}^L$ & $\hat{\mathbf{B}}^L\rightarrow\hat{\mathbf{D}}^L$\\
 $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & undefined & $\hat{\mathbf{B}}^L_r\rightarrow\hat{\mathbf{D}}^L$ & $\hat{\mathbf{B}}^L_r\rightarrow\hat{\mathbf{D}}^L$
 \end{tabular}
-\caption[Comparisons of the average ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Table \ref{tab:SolExSamp} with the intuitive inferences and the ``majority-vote'' inference, i.e., the causal inference implied by the majority of the times series causality tools used during the exploratory causal analysis.}
 \label{tab:SolExSampECAguess}
 \end{center}
 \end{table}
-
+\afterpage{
+\clearpage
+\begin{landscape}
 \begin{table}
 \begin{center}
+\caption[The 90\% confidence intervals]{The 90\% confidence intervals of the average values shown in Table \ref{tab:SolExSamp}.}
 \begin{tabular}{lcccc}
   & TE & GC & PAI & L \\
 \midrule
@@ -1597,25 +1869,28 @@ $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & $[-6.5,5.5]\times 10^{-2}$ & $[6.8
 $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ & $[-2.6\times 10^{-1},-3.9\times 10^{-2}]$ & $(2,0,1,2,0)$ & undefined & \\
 $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & $[-2.9\times 10^{-1},-7.8\times 10^{-2}]$ & $(2,0,1,2,0)$ & undefined & 
 \end{tabular}
-\caption[The 90\% confidence intervals]{The 90\% confidence intervals of the average values shown in Table \ref{tab:SolExSamp}.}
 \label{tab:SolExSampCI}
 \end{center}
 \end{table}
+\end{landscape}
+\clearpage
+}
 \begin{table}
 \begin{center}
+\caption[Comparisons of the confidence interval ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Table \ref{tab:SolExSampCI}.}
 \begin{tabular}{lccc}
   & ECA guess & Majority-vote inference & Intuitive inference\\
 \midrule
 $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ & undefined & undefined & $\hat{\mathbf{B}}^L\rightarrow\hat{\mathbf{D}}^L$\\
 $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & undefined & undefined & $\hat{\mathbf{B}}^L_r\rightarrow\hat{\mathbf{D}}^L$
 \end{tabular}
-\caption[Comparisons of the confidence interval ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Table \ref{tab:SolExSampCI}.}
 \label{tab:SolExSampECAguessCI}
 \end{center}
 \end{table}
 
 \begin{table}
 \begin{center}
+\caption[The bootstrapped 90\% confidence intervals]{The 90\% confidence intervals for the set of $10^5$ bootstrap calculations of the means shown in Table \ref{tab:SolExSamp}.}
 \begin{tabular}{lcccc}
   & TE & GC & PAI & L \\
 \midrule
@@ -1627,19 +1902,18 @@ $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & $[-5.5,-5.2]\times 10^{-3}$ & $[2.
 $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ & $[-1.6,-1.6]\times 10^{-1}$ & $(1,0,1,0,0)$ & undefined & \\
 $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & $[-1.9,-1.9]\times 10^{-1}$ & $(1,0,1,0,0)$ & undefined & 
 \end{tabular}
-\caption[The bootstrapped 90\% confidence intervals]{The 90\% confidence intervals for the set of $10^5$ bootstrap calculations of the means shown in Table \ref{tab:SolExSamp}.}
 \label{tab:SolExSampCIboot}
 \end{center}
 \end{table}
 \begin{table}
 \begin{center}
+\caption[Comparisons of the bootstrapped ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Table \ref{tab:SolExSampCIboot}.}
 \begin{tabular}{lccc}
   & ECA guess & Majority-vote inference & Intuitive inference\\
 \midrule
 $(\hat{\mathbf{B}}^L,\hat{\mathbf{D}}^L)$ & undefined & $\hat{\mathbf{B}}^L\rightarrow\hat{\mathbf{D}}^L$ & $\hat{\mathbf{B}}^L\rightarrow\hat{\mathbf{D}}^L$\\
 $(\hat{\mathbf{B}}^L_r,\hat{\mathbf{D}}^L)$ & undefined & $\hat{\mathbf{B}}^L_r\rightarrow\hat{\mathbf{D}}^L$ & $\hat{\mathbf{B}}^L_r\rightarrow\hat{\mathbf{D}}^L$
 \end{tabular}
-\caption[Comparisons of the bootstrapped ECA guesses]{Comparisons of the ECA guesses for each of the time series pairs shown in Table \ref{tab:SolExSampCIboot}.}
 \label{tab:SolExSampECAguessCIboot}
 \end{center}
 \end{table}

@@ -6,6 +6,8 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{afterpage}
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{epstopdf}
@@ -58,12 +60,12 @@
 
 \dedicationpage
 
-\noindent This dissertation is dedicated to... 
+\noindent This dissertation is dedicated to Angel whose patience I have tested often but never broken. 
 
 
 \acknowledgementspage
 
-\noindent I would like to thank the following people who made this possible ...
+\noindent This work would not be have been possible without the help of many people who have supported me over the last few years, financially and otherwise.  I have, hopefully, made those people aware of how much I appreciate their help.  Most importantly though, I'd like to thank my adviser Professor Robert Weigel.  I appreciate the he was willing to let me prove that I was a serious student, despite my somewhat unusual circumstances as a doctoral candidate.  His academically-holistic advising style emphasized a deep understanding of both the background literature and the many different methods for approaching modern data analysis problems.  I believe he has helped me learn not only the material printed in this thesis but, more importantly, how to be a professional physicist.  I could not have asked for a better adviser.  
 
 \tableofcontents
 
@@ -75,7 +77,11 @@
 Many scientific disciplines rely on observational data of systems for which it is difficult (or impossible) to implement controlled experiments. For example, there is no current technology that can control the interaction between the solar wind and the magnetic field measured at the surface of Earth, so space weather studies rely on data collected without performing controlled experiments.  Causal inference with data sets from such systems is difficult.   The need to identify potential causal relationships with time series data has lead to the development of several different time series causality tools, including transfer entropy, pairwise asymmetric inference, causal leaning, and Granger causality statistics.  This work introduces the concept of exploratory causal analysis, and explores the use of time series causality tools in performing this analysis.  Given a pair of time series, can any statements be made about one potentially driving the other (for some notion of ``driving'')? 
 \pagebreak
 
-\startofchapters
+%\startofchapters
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{chapter}{0}
+%\doublespacing
+\setcounter{page}{1}
 \include{chapters}
   
 
