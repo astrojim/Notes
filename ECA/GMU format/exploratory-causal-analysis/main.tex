@@ -1,0 +1,89 @@
+\documentclass[11pt]{report}
+
+\usepackage{gmudissertation}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{morefloats}
+
+\newtheorem{ax}{Axiom}[section]
+\newtheorem{mydef}{Definition}[section]
+\def\ci{\perp\!\!\!\perp}
+
+\beforedoc
+\begin{document}
+\title{\underline{Exploratory Causal Analysis in Bivariate Time Series Data}}
+\onelinetitle{Exploratory Causal Analysis in Bivariate Time Series Data}
+\author{James M.\ McCracken}
+\degree{Doctor of Philosophy}
+\doctype{Dissertation}
+\dept{Physics}
+\discipline{Physics}
+
+\seconddeg{Master of Science}
+\seconddegschool{University of Central Florida}
+\seconddegyear{2006}
+
+\firstdeg{Bachelor of Science}
+\firstdegschool{Florida Institute of Technology}
+\firstdegyear{2004}
+
+\degreeyear{2015}
+
+\degreesemester{Fall Semester}
+
+\advisor{Robert Weigel}
+
+\firstmember{Paul So}
+
+\secondmember{Timothy Sauer}
+
+\depthead{Maria Dworzecka}
+
+\deanITE{Peggy Agouris}
+
+\signaturepage
+
+\titlepage
+
+\copyrightpage
+
+
+\dedicationpage
+
+\noindent This dissertation is dedicated to... 
+
+
+\acknowledgementspage
+
+\noindent I would like to thank the following people who made this possible ...
+
+\tableofcontents
+
+\listoftables
+
+\listoffigures
+
+\abstractpage
+Many scientific disciplines rely on observational data of systems for which it is difficult (or impossible) to implement controlled experiments. For example, there is no current technology that can control the interaction between the solar wind and the magnetic field measured at the surface of Earth, so space weather studies rely on data collected without performing controlled experiments.  Causal inference with data sets from such systems is difficult.   The need to identify potential causal relationships with time series data has lead to the development of several different time series causality tools, including transfer entropy, pairwise asymmetric inference, causal leaning, and Granger causality statistics.  This work introduces the concept of exploratory causal analysis, and explores the use of time series causality tools in performing this analysis.  Given a pair of time series, can any statements be made about one potentially driving the other (for some notion of ``driving'')? 
+\pagebreak
+
+\startofchapters
+\include{chapters}
+  
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\cvpage
+
+James M.\ McCracken graduated from Robinson Secondary School, Fairfax, Virginia in 2000.  He received his Bachelor of Science in Physics and Bachelor of Science in Astrophysics from the Florida Institute of Technology in 2004.  He received his Master of Sciences from the University of Central Florida in 2006. 
+
+\end{document}

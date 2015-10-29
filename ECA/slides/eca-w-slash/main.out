@@ -1,0 +1,13 @@
+\BOOKMARK [2][]{Outline0.1}{Causality studies}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Data causality}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Exploratory causal analysis}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Making an ECA guess}{}% 4
+\BOOKMARK [3][]{Outline0.4.1.29}{Transfer entropy difference}{Outline0.4}% 5
+\BOOKMARK [3][]{Outline0.4.2.45}{Granger causality statistic}{Outline0.4}% 6
+\BOOKMARK [3][]{Outline0.4.3.61}{Pairwise asymmetric inference}{Outline0.4}% 7
+\BOOKMARK [3][]{Outline0.4.4.75}{Weighed mean observed leaning}{Outline0.4}% 8
+\BOOKMARK [3][]{Outline0.4.5.105}{Lagged cross-correlation difference}{Outline0.4}% 9
+\BOOKMARK [2][]{Outline0.5}{Empirical examples}{}% 10
+\BOOKMARK [3][]{Outline0.5.1.112}{Cooling/Heating System Data}{Outline0.5}% 11
+\BOOKMARK [3][]{Outline0.5.2.133}{Snowfall Data}{Outline0.5}% 12
+\BOOKMARK [2][]{Outline0.6}{Times series causality as data analysis}{}% 13

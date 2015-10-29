@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Causality studies}{3}{0}{1}
+\beamer@sectionintoc {2}{Data causality}{7}{0}{2}
+\beamer@sectionintoc {3}{Exploratory causal analysis}{16}{0}{3}
+\beamer@sectionintoc {4}{Making an ECA guess}{22}{0}{4}
+\beamer@subsectionintoc {4}{1}{Transfer entropy difference}{29}{0}{4}
+\beamer@subsectionintoc {4}{2}{Granger causality statistic}{45}{0}{4}
+\beamer@subsectionintoc {4}{3}{Pairwise asymmetric inference}{61}{0}{4}
+\beamer@subsectionintoc {4}{4}{Weighed mean observed leaning}{75}{0}{4}
+\beamer@subsectionintoc {4}{5}{Lagged cross-correlation difference}{105}{0}{4}
+\beamer@sectionintoc {5}{Empirical examples}{112}{0}{5}
+\beamer@subsectionintoc {5}{1}{Cooling/Heating System Data}{112}{0}{5}
+\beamer@subsectionintoc {5}{2}{Snowfall Data}{133}{0}{5}
+\beamer@sectionintoc {6}{Times series causality as data analysis}{144}{0}{6}

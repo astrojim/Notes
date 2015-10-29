@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Reallocated field_info (elt_size=4) to 10152 items from 5000.
+Database file #1: main.bib
+Warning--can't use both volume and number fields in Aaronson2009
+Warning--there's a number but no volume in Chen2013
+Warning--empty publisher in Dawid2007
+Warning--empty publisher in Falcon2008
+Warning--empty journal in Fisher1934
+Warning--can't use both volume and number fields in Fisher1960
+Warning--empty publisher in Hitchcock2012
+Warning--empty publisher in Honore2010
+Warning--can't use both volume and number fields in Kleinberg2011
+Warning--empty journal in Montalto2014
+Warning--empty publisher in Pearson1903
+Warning--empty journal in Tukey1977
+You've used 224 entries,
+            2118 wiz_defined-function locations,
+            1937 strings with 38169 characters,
+and the built_in function-call counts, 70375 in all, are:
+= -- 6940
+> -- 3022
+< -- 23
++ -- 1229
+- -- 973
+* -- 4911
+:= -- 11906
+add.period$ -- 713
+call.type$ -- 224
+change.case$ -- 1102
+chr.to.int$ -- 0
+cite$ -- 236
+duplicate$ -- 2704
+empty$ -- 5765
+format.name$ -- 973
+if$ -- 14676
+int.to.chr$ -- 0
+int.to.str$ -- 224
+missing$ -- 262
+newline$ -- 1124
+num.names$ -- 464
+pop$ -- 1083
+preamble$ -- 1
+purify$ -- 924
+quote$ -- 0
+skip$ -- 1762
+stack$ -- 0
+substring$ -- 4530
+swap$ -- 390
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 806
+warning$ -- 12
+while$ -- 698
+width$ -- 227
+write$ -- 2448
+(There were 12 warnings)

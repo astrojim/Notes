@@ -1,0 +1,1216 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.12.14)  23 OCT 2015 19:45
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(./gmudissertation.sty
+\c@lem=\count88
+\c@prop=\count89
+\c@assum=\count90
+\c@Def=\count91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks15
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen112
+\lightrulewidth=\dimen113
+\cmidrulewidth=\dimen114
+\belowrulesep=\dimen115
+\belowbottomsep=\dimen116
+\aboverulesep=\dimen117
+\abovetopsep=\dimen118
+\cmidrulesep=\dimen119
+\cmidrulekern=\dimen120
+\defaultaddspace=\dimen121
+\@cmidla=\count104
+\@cmidlb=\count105
+\@aboverulesep=\dimen122
+\@belowrulesep=\dimen123
+\@thisruleclass=\count106
+\@lastruleclass=\count107
+\@thisrulewidth=\dimen124
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+)
+\c@ContinuedFloat=\count108
+)
+\c@KVtest=\count109
+\sf@farskip=\skip49
+\sf@captopadj=\dimen134
+\sf@capskip=\skip50
+\sf@nearskip=\skip51
+\c@subfigure=\count110
+\c@subfigure@save=\count111
+\c@lofdepth=\count112
+\c@subtable=\count113
+\c@subtable@save=\count114
+\c@lotdepth=\count115
+\sf@top=\skip52
+\sf@bottom=\skip53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+)
+
+Package epstopdf Warning: Drivers other than `pdftex.def' are not supported.
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen135
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen136
+\Hy@linkcounter=\count116
+\Hy@pagecounter=\count117
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count118
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count119
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen137
+\Fld@menulength=\count120
+\Field@Width=\dimen138
+\Fld@charsize=\dimen139
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count121
+\c@Item=\count122
+\c@Hfootnote=\count123
+)
+
+Package hyperref Message: Driver (default): hdvips.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
+File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
+File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
+\pdf@docset=\toks26
+\pdf@box=\box28
+\pdf@toks=\toks27
+\pdf@defaulttoks=\toks28
+\HyField@AnnotCount=\count124
+\Fld@listcount=\count125
+\c@bookmark@seq@number=\count126
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip54
+))
+(/usr/share/texlive/texmf-dist/tex/latex/morefloats/morefloats.sty
+Package: morefloats 2012/01/28 v1.0f Raise limit of unprocessed floats (HMM; DH
+)
+Package morefloats Info: Maximum number of possible floats asked for: 36.
+(morefloats)             LaTeX might run out of memory before this
+(morefloats)             (in which case it will notify you).
+(morefloats)              on input line 171.
+\bx@S=\insert233
+\bx@T=\insert232
+\bx@U=\insert231
+\bx@V=\insert230
+\bx@W=\insert229
+\bx@X=\insert228
+\bx@Y=\insert227
+\bx@Z=\insert226
+\bx@AA=\insert225
+\bx@AB=\insert224
+\bx@AC=\insert223
+\bx@AD=\insert222
+\bx@AE=\insert221
+\bx@AF=\insert220
+\bx@AG=\insert219
+\bx@AH=\insert218
+\bx@AI=\insert217
+\bx@AJ=\insert216
+)
+\c@ax=\count127
+\c@mydef=\count128
+ (./main.aux (./chapters.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 21.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count129
+)
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
+
+(./main.out) (./main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+
+ []
+
+[2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 56.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
+ [2] [3] [4]
+(./main.toc [5
+
+])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [6]
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 1.
+(./main.lot)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+ [7
+
+]
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 2.
+(./main.lof
+Overfull \hbox (831.66936pt too wide) in paragraph at lines 3--3
+ [][] [] []  
+ []
+
+
+Overfull \hbox (756.51454pt too wide) in paragraph at lines 4--4
+ [][] [] []  
+ []
+
+
+Overfull \hbox (184.85283pt too wide) in paragraph at lines 5--5
+ [][] [] []  
+ []
+
+
+Overfull \hbox (184.85283pt too wide) in paragraph at lines 6--6
+ [][] [] []  
+ []
+
+
+Overfull \hbox (581.97032pt too wide) in paragraph at lines 7--7
+ [][] [] []  
+ []
+
+
+Overfull \hbox (1700.42914pt too wide) in paragraph at lines 8--8
+ [][] [] []  
+ []
+
+
+Overfull \hbox (831.66936pt too wide) in paragraph at lines 11--11
+ [][] [] []  
+ []
+
+
+Overfull \hbox (797.43283pt too wide) in paragraph at lines 12--12
+ [][] [] []  
+ []
+
+
+Overfull \hbox (1294.7485pt too wide) in paragraph at lines 13--13
+ [][] [] []  
+ []
+
+
+Overfull \hbox (2233.46486pt too wide) in paragraph at lines 14--14
+ [][] [] []  
+ []
+
+
+Overfull \hbox (599.72653pt too wide) in paragraph at lines 16--16
+ [][] [] []  
+ []
+
+
+Overfull \hbox (729.7557pt too wide) in paragraph at lines 17--17
+ [][] [] []  
+ []
+
+
+Overfull \hbox (35.61188pt too wide) in paragraph at lines 18--18
+ [][] [] []  
+ []
+
+
+Overfull \hbox (837.14436pt too wide) in paragraph at lines 19--19
+ [][] [] []  
+ []
+
+
+Overfull \hbox (802.90784pt too wide) in paragraph at lines 20--20
+ [][] [] []  
+ []
+
+
+Overfull \hbox (191.38297pt too wide) in paragraph at lines 21--21
+ [][] [] []  
+ []
+
+
+Overfull \hbox (837.14436pt too wide) in paragraph at lines 23--23
+ [][] [] []  
+ []
+
+
+Overfull \hbox (797.43283pt too wide) in paragraph at lines 24--24
+ [][] [] []  
+ []
+
+
+Overfull \hbox (860.04808pt too wide) in paragraph at lines 27--27
+ [][] [] []  
+ []
+
+[8
+
+]
+Overfull \hbox (802.90784pt too wide) in paragraph at lines 28--28
+ [][] [] []  
+ []
+
+
+Overfull \hbox (760.32321pt too wide) in paragraph at lines 29--29
+ [][] [] []  
+ []
+
+
+Overfull \hbox (698.58588pt too wide) in paragraph at lines 31--31
+ [][] [] []  
+ []
+
+
+Overfull \hbox (649.4952pt too wide) in paragraph at lines 32--32
+ [][] [] []  
+ []
+
+
+Overfull \hbox (454.83963pt too wide) in paragraph at lines 34--34
+ [][] [] []  
+ []
+
+
+Overfull \hbox (695.66772pt too wide) in paragraph at lines 35--35
+ [][] [] []  
+ []
+
+
+Overfull \hbox (551.50388pt too wide) in paragraph at lines 37--37
+ [][] [] []  
+ []
+
+
+Overfull \hbox (704.06088pt too wide) in paragraph at lines 38--38
+ [][] [] []  
+ []
+
+)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+ [9]
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 3.
+[12
+
+]
+! Undefined control sequence.
+\startofchapters ...r {chapter}{0} \doublespacing 
+                                                  \setcounter {page}{1} 
+l.78 \startofchapters
+                     
+? 
+\openout2 = `chapters.aux'.
+
+(./chapters.tex
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 1.
+[1
+
+
+] [2] [3] [4] [5] [6] [7] [8] [9] [10]
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 2.
+[11
+
+] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+ [22] [23]
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 3.
+[24
+
+] [25] [26] [27] [28] [29] [30]
+Overfull \hbox (0.25914pt too wide) in paragraph at lines 303--304
+\OT1/cmr/m/n/10.95 Consider a ran-dom vari-able $\OT1/cmr/bx/n/10.95 X$ \OT1/cm
+r/m/n/10.95 that takes value $\OML/cmm/m/it/10.95 X[]$ \OT1/cmr/m/n/10.95 with 
+prob-a-bil-ity $\OML/cmm/m/it/10.95 p[]$ \OT1/cmr/m/n/10.95 with $\OML/cmm/m/it
+/10.95 n \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/c
+mm/m/it/10.95 ; [] ; N[]$\OT1/cmr/m/n/10.95 .
+ []
+
+[31] [32] [33] [34] [35] [36]
+Missing character: There is no ‚ in font cmr9!
+Missing character: There is no Ä in font cmr9!
+Missing character: There is no ô in font cmr9!
+ [37]
+Overfull \hbox (46.98573pt too wide) in paragraph at lines 410--412
+\OT1/cmr/m/n/10.95 tor (also called a \OT1/cmr/m/it/10.95 de-lay vec-tor\OT1/cm
+r/m/n/10.95 ) to each point $\OML/cmm/m/it/10.95 X[]$ \OT1/cmr/m/n/10.95 in $\O
+T1/cmr/bx/n/10.95 X$\OT1/cmr/m/n/10.95 , i.e., $[] = []$.
+ []
+
+[38] [39] [40] [41]
+Overfull \hbox (87.82089pt too wide) detected at line 562
+[] [] \OT1/cmr/m/n/10.95 =[]\OMS/cmsy/m/n/10.95 ) [] \OT1/cmr/m/n/10.95 = [][]
+ []
+
+
+Overfull \hbox (108.92078pt too wide) detected at line 585
+[] [] \OT1/cmr/m/n/10.95 =[]\OMS/cmsy/m/n/10.95 ) [] \OT1/cmr/m/n/10.95 = [][] 
+  \OML/cmm/m/it/10.95 ;
+ []
+
+[42] [43] [44] [45] [46] [47] [48] [49] [50] [51]
+Overfull \hbox (2.29784pt too wide) in paragraph at lines 750--752
+\OT1/cmr/m/n/10.95 with $\OML/cmm/m/it/10.95 ^^T \OT1/cmr/m/n/10.95 = \OML/cmm/
+m/it/10.95 P []$\OT1/cmr/m/n/10.95 . An-other pen-chant de-fined us-ing this as
+-sign-ment is $\OML/cmm/m/it/10.95 ^^Z[]$
+ []
+
+[52] [53] [54] [55] [56]
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 4.
+
+Underfull \hbox (badness 2486) in paragraph at lines 853--853
+[][][][][]\OT1/cmr/m/n/9 The scripts and func-tions used to cal-cu-late the pen
+-chants and lean-ings can be found at
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+[][][][][]\OT1/cmr/m/n/9 i.e., un-less oth-er-wise noted, the JIDT trans-fer en
+-tropy cal-cu-la-tor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+\OT1/cmr/m/n/9 will al-ways be in-stan-ti-ated in \OT1/cmr/m/sc/9 MAT-LAB \OT1/
+cmr/m/n/9 with the fol-low-ing com-mands,
+ []
+
+
+Overfull \hbox (17.61926pt too wide) in paragraph at lines 853--853
+\OT1/cmr/m/n/9 ``\OT1/cmtt/m/n/9 teCalc=javaObject('infodynamics.measures.conti
+nuous.kernel.TransferEntropyCalculatorKernel');\OT1/cmr/m/n/9 '',
+ []
+
+[57
+
+] [58] [59]
+File: NoisyResponseExample_X.eps Graphic file (type eps)
+ <NoisyResponseExample_X.eps>
+File: NoisyResponseExample_Y.eps Graphic file (type eps)
+ <NoisyResponseExample_Y.eps>
+Overfull \hbox (93.37471pt too wide) in paragraph at lines 907--911
+[][] 
+ []
+
+File: NoisyResponseExample_Xhist.eps Graphic file (type eps)
+<NoisyResponseExample_Xhist.eps>
+File: NoisyResponseExample_Yhist.eps Graphic file (type eps)
+ <NoisyResponseExample_Yhist.eps>
+Overfull \hbox (93.76062pt too wide) in paragraph at lines 916--920
+[][] 
+ []
+
+[60] [61]
+File: NoisyResponseExample_autocorrX.eps Graphic file (type eps)
+ <NoisyResponseExample_autocorrX.eps>
+File: NoisyResponseExample_autocorrY.eps Graphic file (type eps)
+
+<NoisyResponseExample_autocorrY.eps>
+Overfull \hbox (95.30188pt too wide) in paragraph at lines 928--932
+[][] 
+ []
+
+File: NoisyResponseExample_LandLCC.eps Graphic file (type eps)
+<NoisyResponseExample_LandLCC.eps> [62]
+File: NoisyResponseExample_lagplotXYl1.eps Graphic file (type eps)
+ <NoisyResponseExample_lagplotXYl1.eps>
+File: NoisyResponseExample_lagplotXYl2.eps Graphic file (type eps)
+
+<NoisyResponseExample_lagplotXYl2.eps>
+File: NoisyResponseExample_lagplotXYl3.eps Graphic file (type eps)
+ <NoisyResponseExample_lagplotXYl3.eps>
+File: NoisyResponseExample_lagplotXYl4.eps Graphic file (type eps)
+
+<NoisyResponseExample_lagplotXYl4.eps>
+File: NoisyResponseExample_lagplotXYl5.eps Graphic file (type eps)
+ <NoisyResponseExample_lagplotXYl5.eps>
+File: NoisyResponseExample_lagplotXYl6.eps Graphic file (type eps)
+
+<NoisyResponseExample_lagplotXYl6.eps>
+Overfull \hbox (76.05225pt too wide) in paragraph at lines 947--953
+[][] 
+ []
+
+File: NoisyResponseExample_lagplotYXl1.eps Graphic file (type eps)
+<NoisyResponseExample_lagplotYXl1.eps>
+File: NoisyResponseExample_lagplotYXl2.eps Graphic file (type eps)
+ <NoisyResponseExample_lagplotYXl2.eps>
+File: NoisyResponseExample_lagplotYXl3.eps Graphic file (type eps)
+
+<NoisyResponseExample_lagplotYXl3.eps>
+File: NoisyResponseExample_lagplotYXl4.eps Graphic file (type eps)
+ <NoisyResponseExample_lagplotYXl4.eps>
+File: NoisyResponseExample_lagplotYXl5.eps Graphic file (type eps)
+
+<NoisyResponseExample_lagplotYXl5.eps>
+File: NoisyResponseExample_lagplotYXl6.eps Graphic file (type eps)
+ <NoisyResponseExample_lagplotYXl6.eps>
+Overfull \hbox (76.05225pt too wide) in paragraph at lines 957--963
+[][] 
+ []
+
+File: NoisyResponseExample_leandifftoll1.eps Graphic file (type eps)
+<NoisyResponseExample_leandifftoll1.eps>
+File: NoisyResponseExample_leandifftoll5.eps Graphic file (type eps)
+
+<NoisyResponseExample_leandifftoll5.eps>
+Overfull \hbox (76.59436pt too wide) in paragraph at lines 970--974
+[][] 
+ []
+
+[63] [64]
+File: NoisyResponseExample_ECAguessMat.eps Graphic file (type eps)
+ <NoisyResponseExample_ECAguessMat.eps> [65] [66] [67] [68]
+File: NoisyCyclicResponseExample_X.eps Graphic file (type eps)
+
+<NoisyCyclicResponseExample_X.eps>
+File: NoisyCyclicResponseExample_Y.eps Graphic file (type eps)
+ <NoisyCyclicResponseExample_Y.eps>
+Overfull \hbox (108.315pt too wide) in paragraph at lines 1010--1014
+[][] 
+ []
+
+File: NoisyCyclicResponseExample_Xhist.eps Graphic file (type eps)
+<NoisyCyclicResponseExample_Xhist.eps>
+File: NoisyCyclicResponseExample_Yhist.eps Graphic file (type eps)
+ <NoisyCyclicResponseExample_Yhist.eps>
+Overfull \hbox (92.25499pt too wide) in paragraph at lines 1019--1023
+[][] 
+ []
+
+[69]
+File: NoisyCyclicResponseExample_autocorrX.eps Graphic file (type eps)
+ <NoisyCyclicResponseExample_autocorrX.eps>
+File: NoisyCyclicResponseExample_autocorrY.eps Graphic file (type eps)
+
+<NoisyCyclicResponseExample_autocorrY.eps>
+Overfull \hbox (95.30188pt too wide) in paragraph at lines 1031--1035
+[][] 
+ []
+
+File: NoisyCyclicResponseExample_LandLCC.eps Graphic file (type eps)
+<NoisyCyclicResponseExample_LandLCC.eps> [70]
+File: NoisyCyclicResponseExample_ECAguessMat.eps Graphic file (type eps)
+
+<NoisyCyclicResponseExample_ECAguessMat.eps> [71] [72]
+File: IRCircuitResponseExampleL10R5_Y.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL10R5_Y.eps>
+File: IRCircuitResponseExampleL5R20_Y.eps Graphic file (type eps)
+ <IRCircuitResponseExampleL5R20_Y.eps>
+File: IRCircuitResponseExampleL10R5_X.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL10R5_X.eps>
+Overfull \hbox (104.9378pt too wide) in paragraph at lines 1081--1088
+ [] 
+ []
+
+File: IRCircuitResponseExampleL10R5_Yhist_an.eps Graphic file (type eps)
+<IRCircuitResponseExampleL10R5_Yhist_an.eps>
+File: IRCircuitResponseExampleL10R5_Yhist_num.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL10R5_Yhist_num.eps>
+File: IRCircuitResponseExampleL5R20_Yhist_an.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL5R20_Yhist_an.eps>
+File: IRCircuitResponseExampleL5R20_Yhist_num.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL5R20_Yhist_num.eps>
+File: IRCircuitResponseExampleL10R5_Xhist.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL10R5_Xhist.eps>
+Overfull \hbox (78.92084pt too wide) in paragraph at lines 1094--1104
+ [] 
+ []
+
+[73]
+File: IRCircuitResponseExampleL10R5_autocorrY.eps Graphic file (type eps)
+ <IRCircuitResponseExampleL10R5_autocorrY.eps>
+File: IRCircuitResponseExampleL5R20_autocorrY.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL5R20_autocorrY.eps>
+File: IRCircuitResponseExampleL10R5_autocorrX.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL10R5_autocorrX.eps>
+Overfull \hbox (95.30188pt too wide) in paragraph at lines 1112--1119
+ [] 
+ []
+
+File: IRCircuitResponseExampleL10R5_LandLCC_an.eps Graphic file (type eps)
+<IRCircuitResponseExampleL10R5_LandLCC_an.eps>
+File: IRCircuitResponseExampleL10R5_LandLCC_num.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL10R5_LandLCC_num.eps>
+File: IRCircuitResponseExampleL5R20_LandLCC_an.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL5R20_LandLCC_an.eps>
+File: IRCircuitResponseExampleL5R20_LandLCC_num.eps Graphic file (type eps)
+
+<IRCircuitResponseExampleL5R20_LandLCC_num.eps>
+Overfull \hbox (67.35776pt too wide) in paragraph at lines 1125--1133
+ [] 
+ []
+
+[74] [75] [76]
+File: NonlinearResponseExample_X.eps Graphic file (type eps)
+ <NonlinearResponseExample_X.eps>
+File: NonlinearResponseExample_Y.eps Graphic file (type eps)
+
+<NonlinearResponseExample_Y.eps>
+Overfull \hbox (105.30374pt too wide) in paragraph at lines 1177--1181
+[][] 
+ []
+
+File: NonlinearResponseExample_autocorrX.eps Graphic file (type eps)
+<NonlinearResponseExample_autocorrX.eps>
+File: NonlinearResponseExample_autocorrY.eps Graphic file (type eps)
+
+<NonlinearResponseExample_autocorrY.eps>
+Overfull \hbox (99.63805pt too wide) in paragraph at lines 1189--1193
+[][] 
+ []
+
+File: NonlinearResponseExample_LandLCC.eps Graphic file (type eps)
+<NonlinearResponseExample_LandLCC.eps> [77] [78] [79] [80]
+File: CoupLogMapExample_X.eps Graphic file (type eps)
+
+<CoupLogMapExample_X.eps>
+File: CoupLogMapExample_Y.eps Graphic file (type eps)
+ <CoupLogMapExample_Y.eps>
+Overfull \hbox (111.32626pt too wide) in paragraph at lines 1247--1251
+[][] 
+ []
+
+File: CoupLogMapExample_Xhist.eps Graphic file (type eps)
+<CoupLogMapExample_Xhist.eps>
+File: CoupLogMapExample_Yhist.eps Graphic file (type eps)
+ <CoupLogMapExample_Yhist.eps>
+Overfull \hbox (95.26624pt too wide) in paragraph at lines 1255--1259
+[][] 
+ []
+
+[81]
+File: CoupLogMapExample_autocorrX.eps Graphic file (type eps)
+ <CoupLogMapExample_autocorrX.eps>
+File: CoupLogMapExample_autocorrY.eps Graphic file (type eps)
+ <CoupLogMapExample_autocorrY.eps>
+Overfull \hbox (95.30188pt too wide) in paragraph at lines 1267--1271
+[][] 
+ []
+
+File: CoupLogMapExample_LandLCC.eps Graphic file (type eps)
+<CoupLogMapExample_LandLCC.eps> [82] [83]
+File: NoisyMultiResponseExample_X.eps Graphic file (type eps)
+ <NoisyMultiResponseExample_X.eps>
+File: NoisyMultiResponseExample_Y.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_Y.eps>
+File: NoisyMultiResponseExample_z1.eps Graphic file (type eps)
+ <NoisyMultiResponseExample_z1.eps>
+File: NoisyMultiResponseExample_z2.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_z2.eps>
+File: NoisyMultiResponseExample_z3.eps Graphic file (type eps)
+ <NoisyMultiResponseExample_z3.eps>
+Overfull \hbox (97.22908pt too wide) in paragraph at lines 1326--1334
+[][] 
+ []
+
+File: NoisyMultiResponseExample_Xhist.eps Graphic file (type eps)
+<NoisyMultiResponseExample_Xhist.eps>
+File: NoisyMultiResponseExample_Yhist.eps Graphic file (type eps)
+ <NoisyMultiResponseExample_Yhist.eps>
+File: NoisyMultiResponseExample_Z1hist.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_Z1hist.eps>
+File: NoisyMultiResponseExample_Z2hist.eps Graphic file (type eps)
+ <NoisyMultiResponseExample_Z2hist.eps>
+File: NoisyMultiResponseExample_Z3hist.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_Z3hist.eps>
+Overfull \hbox (93.76062pt too wide) in paragraph at lines 1338--1346
+[][] 
+ []
+
+
+Overfull \hbox (115.73889pt too wide) in paragraph at lines 1353--1364
+ [] 
+ []
+
+[84]
+File: NoisyMultiResponseExample_autocorrX.eps Graphic file (type eps)
+ <NoisyMultiResponseExample_autocorrX.eps>
+File: NoisyMultiResponseExample_autocorrY.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_autocorrY.eps>
+File: NoisyMultiResponseExample_autocorrZ1.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_autocorrZ1.eps>
+File: NoisyMultiResponseExample_autocorrZ2.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_autocorrZ2.eps>
+File: NoisyMultiResponseExample_autocorrZ3.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_autocorrZ3.eps>
+Overfull \hbox (107.82858pt too wide) in paragraph at lines 1387--1395
+[][] 
+ []
+
+File: NoisyMultiResponseExample_LandLCC_XY.eps Graphic file (type eps)
+<NoisyMultiResponseExample_LandLCC_XY.eps>
+File: NoisyMultiResponseExample_LandLCC_XZ1.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_LandLCC_XZ1.eps>
+File: NoisyMultiResponseExample_LandLCC_XZ2.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_LandLCC_XZ2.eps>
+File: NoisyMultiResponseExample_LandLCC_XZ3.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_LandLCC_XZ3.eps>
+File: NoisyMultiResponseExample_LandLCC_YZ1.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_LandLCC_YZ1.eps>
+File: NoisyMultiResponseExample_LandLCC_YZ2.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_LandLCC_YZ2.eps>
+File: NoisyMultiResponseExample_LandLCC_YZ3.eps Graphic file (type eps)
+
+<NoisyMultiResponseExample_LandLCC_YZ3.eps>
+Overfull \hbox (67.35776pt too wide) in paragraph at lines 1400--1410
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 63.24529pt on input line 1413.
+
+[85] [86]
+File: WhistlerDailyExample_X.eps Graphic file (type eps)
+ <WhistlerDailyExample_X.eps>
+File: WhistlerDailyExample_Y.eps Graphic file (type eps)
+ <WhistlerDailyExample_Y.eps>
+Overfull \hbox (97.22906pt too wide) in paragraph at lines 1427--1431
+[][] 
+ []
+
+File: WhistlerDailyExample_Xhist.eps Graphic file (type eps)
+<WhistlerDailyExample_Xhist.eps>
+File: WhistlerDailyExample_Yhist.eps Graphic file (type eps)
+ <WhistlerDailyExample_Yhist.eps>
+Overfull \hbox (108.315pt too wide) in paragraph at lines 1436--1440
+[][] 
+ []
+
+[87]
+File: WhistlerDailyExample_autocorrX.eps Graphic file (type eps)
+ <WhistlerDailyExample_autocorrX.eps>
+File: WhistlerDailyExample_autocorrY.eps Graphic file (type eps)
+ <WhistlerDailyExample_autocorrY.eps>
+Overfull \hbox (99.63805pt too wide) in paragraph at lines 1449--1453
+[][] 
+ []
+
+[88] [89]
+File: SolarExample_Bzhourly.eps Graphic file (type eps)
+ <SolarExample_Bzhourly.eps>
+File: SolarExample_Dhourly.eps Graphic file (type eps)
+ <SolarExample_Dhourly.eps>
+Overfull \hbox (100.32932pt too wide) in paragraph at lines 1467--1471
+[][] 
+ []
+
+File: SolarExample_Bzhourlyhist.eps Graphic file (type eps)
+<SolarExample_Bzhourlyhist.eps>
+File: SolarExample_Dhourlyhist.eps Graphic file (type eps)
+ <SolarExample_Dhourlyhist.eps>
+Overfull \hbox (99.15627pt too wide) in paragraph at lines 1476--1480
+[][] 
+ []
+
+File: SolarExample_Bzhourlyrec.eps Graphic file (type eps)
+<SolarExample_Bzhourlyrec.eps>
+File: SolarExample_Bzhourlyrechist.eps Graphic file (type eps)
+ <SolarExample_Bzhourlyrechist.eps>
+Overfull \hbox (102.28697pt too wide) in paragraph at lines 1485--1489
+[][] 
+ []
+
+File: SolarExample_Bzdaily.eps Graphic file (type eps)
+<SolarExample_Bzdaily.eps>
+File: SolarExample_Ddaily.eps Graphic file (type eps)
+ <SolarExample_Ddaily.eps>
+Overfull \hbox (101.08344pt too wide) in paragraph at lines 1496--1500
+[][] 
+ []
+
+[90]
+File: SolarExample_Bzdailyhist.eps Graphic file (type eps)
+ <SolarExample_Bzdailyhist.eps>
+File: SolarExample_Ddailyhist.eps Graphic file (type eps)
+ <SolarExample_Ddailyhist.eps>
+Overfull \hbox (102.29251pt too wide) in paragraph at lines 1505--1509
+[][] 
+ []
+
+File: SolarExample_Bzdailyrec.eps Graphic file (type eps)
+<SolarExample_Bzdailyrec.eps>
+File: SolarExample_Bzdailyrechist.eps Graphic file (type eps)
+ <SolarExample_Bzdailyrechist.eps>
+Overfull \hbox (94.3383pt too wide) in paragraph at lines 1514--1518
+[][] 
+ []
+
+File: SolarExample_autocorrBzdaily.eps Graphic file (type eps)
+<SolarExample_autocorrBzdaily.eps>
+File: SolarExample_autocorrDdaily.eps Graphic file (type eps)
+ <SolarExample_autocorrDdaily.eps>
+Overfull \hbox (103.01062pt too wide) in paragraph at lines 1525--1529
+[][] 
+ []
+
+
+Overfull \hbox (80.57585pt too wide) in paragraph at lines 1535--1541
+ [] 
+ []
+
+[91]
+Overfull \hbox (80.04863pt too wide) in paragraph at lines 1564--1570
+ [] 
+ []
+
+
+Overfull \hbox (137.77939pt too wide) in paragraph at lines 1589--1600
+ [] 
+ []
+
+[92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105]
+[106] [107] [108] [109] [110]
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 5.
+[111
+
+] [112] [113] [114]) [115] (./main.bbl
+\hspace {2.225 in} \relax \fontsize {12}{14}\selectfont CHAPTER 6.
+[116
+
+
+] [117] [118] [119] [120]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+ [121]
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ∂ in font cmr10!
+ [122]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+ [123]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no î in font cmr10!
+ [124] [125]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+ [126] [127]
+[128] [129]) [130]
+
+======================== Attention ===============================
+
+The signature lines are different for each College/School of
+George Mason University.
+
+The current signature page is set according to the requirements
+of the Volgenau School of Information Technology and Engineering.
+Students of other colleges/schools may need to manipulate the
+"signaturepage" section of the gmudissertation.sty file in order
+for the signature page to be formatted correctly.
+
+==================================================================
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
+[131]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
+ (./main.aux (./chapters.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 89.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 6CF1084A5DE74229C4FF6B9A9CED1B21;3162.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
+ ) 
+Here is how much of TeX's memory you used:
+ 7638 strings out of 495029
+ 117252 string characters out of 6181522
+ 275495 words of memory out of 5000000
+ 10623 multiletter control sequences out of 15000+600000
+ 15053 words of font info for 56 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 44i,16n,42p,3846b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.dvi (142 pages, 766300 bytes).
